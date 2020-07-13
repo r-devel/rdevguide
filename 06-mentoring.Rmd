@@ -1,0 +1,36 @@
+# Mentoring
+
+- Establish core-mentorship mailing list (separate from R-devel).
+
+- Use Zulip for more interactive discussion (and modern format)?
+  - potential place for R-core/experienced contributors to offer office hours
+
+- R-core/experienced contributors to offer bookable 1-to-1 office hours (e.g. via Zoom)
+
+- Write a mentoring guide
+    - c.f. [R-Ladies mentoring guide](https://tinyurl.com/rladies-mentoring-guidelines)
+
+- Run contributor tutorials
+    - will need to be online
+
+- Develop code of conduct
+    - for contribution to R project?
+    - for mailing lists/Zulip
+
+- Offer GSoC projects
+    - scheme already established, could be used more by R Core
+    - or fund some of our own as Julia does: https://julialang.org/jsoc/archive/
+
+- Similarly Google Season of Docs
+    - https://developers.google.com/season-of-docs
+
+- Establish mentored projects (diversity scholarships)
+   - mentees invest 2-5 hours per week over 3 months
+   - expenses paid scholarship to useR! conference following year: is there some other incentive we can offer while useR! is online?
+
+- Outreachy projects
+   - paid internship, 40 hours per week over 3 months
+   - require mentor(s) to invest 5 hours per week
+
+- Data umbrella sprints (similar to tidyverse developer days)
+  - https://www.dataumbrella.org/open-source/sprints

@@ -1,0 +1,14 @@
+# Initiatives to encourage CRAN contributions
+
+- create organization on GitHub for people to put/link their repos for feedback/review/help prior to CRAN release
+   - e.g. "seeking review" tag?
+   - a bit like how Bioconductor does it but in a open, community distributed way?
+   - or more like ropensci model? This is more in-depth review, but could borrow some ideas:
+       - match people with similar interests
+       - don't go back to same person too often
+- create community of on-rampers
+    - sharing error messages from CRAN to create more user-friendly checklists, pointers to relevant parts of docs
+- Zulip chat as alternative to R-package-devel to provide ad-hoc help
+- Step-by-step guide for people to review their own package before submission?
+   - use some of tools from rOpensci?
+- Chatbot like rOpenSci one helping with package review, to help submitters?

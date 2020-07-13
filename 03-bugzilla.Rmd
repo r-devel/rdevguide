@@ -1,0 +1,11 @@
+# Improve use of Bugzilla
+
+- Use bugzilla for general issues tracking, not just bugs? (not really sure how this is done right now). Analogous to Python issue tracker. (FYI Python is moving issue tracker to GitHub.)
+
+- Establish intermediate roles e.g. people able to triage issues on issue tracker? Analagous to becoming a Developer on Python issue tracker 
+
+- Core devs/bugzilla veterans could offer mentoring/tutorial
+
+- Work with Forwards, R-Ladies, etc to reach potential contributors
+
+- Blog post by Tomas and Luke could become part of more comprehensive Developer Guide

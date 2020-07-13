@@ -1,0 +1,14 @@
+--- 
+title: "Contributing to R Core"
+author: "R Forwards"
+date: "`r Sys.Date()`"
+site: bookdown::bookdown_site
+output: bookdown::gitbook
+documentclass: book
+bibliography: [book.bib, packages.bib]
+biblio-style: apalike
+link-citations: yes
+description: "A developer's guide to contributing to R Core"
+---
+
+# {-}

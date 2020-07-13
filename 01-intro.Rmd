@@ -1,0 +1,3 @@
+# Initiatives to encourage R Core contributions
+
+Many of these ideas are inspired by the work of other developer communities as I discuss here: https://youtu.be/BbpkKzz71EY?t=1045.
