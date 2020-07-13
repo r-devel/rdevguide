@@ -28,8 +28,13 @@ a {
 
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Raleway';
+  color: #4C1476 !important;
 }
 
 .summary {
   background-color: white;
+}
+
+a {
+  color: #FF7666 !important;
 }
