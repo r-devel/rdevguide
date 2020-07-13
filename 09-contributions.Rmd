@@ -1,4 +1,6 @@
-# Initiatives to encourage CRAN contributions
+# Contributing
+
+## Initiatives to encourage CRAN contributions
 
 - create organization on GitHub for people to put/link their repos for feedback/review/help prior to CRAN release
    - e.g. "seeking review" tag?

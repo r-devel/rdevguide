@@ -4,14 +4,17 @@ p.caption {
   color: #777;
   margin-top: 10px;
 }
-p code {
+
+p, code {
   white-space: inherit;
 }
+
 pre {
   word-break: normal;
   word-wrap: normal;
 }
-pre code {
+
+pre, code {
   white-space: inherit;
 }
 
@@ -19,11 +22,14 @@ p, div {
   font-family: 'Raleway';
 }
 
+a {
+  font-family: 'Raleway';
+}
+
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Raleway';
 }
 
-div.cover_image {
-    background-image: url(img/forwards.svg), none;
-    background-size: 70px;
+.summary {
+  background-color: white;
 }

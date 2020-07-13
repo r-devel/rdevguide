@@ -1,4 +1,4 @@
-# More open development
+# Open Development
 
 - Move to git/GitHub
 

@@ -1,4 +1,4 @@
-# Improve use of Bugzilla
+# Bugzilla
 
 - Use bugzilla for general issues tracking, not just bugs? (not really sure how this is done right now). Analogous to Python issue tracker. (FYI Python is moving issue tracker to GitHub.)
 
