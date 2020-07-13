@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Slab&display=swap');
 
 p.caption {
   color: #777;
@@ -27,7 +28,7 @@ a {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Raleway';
+  font-family: 'Josefin Slab', serif;
   color: #4C1476 !important;
 }
 
