@@ -3,3 +3,7 @@
 ###  Encouraging R Core contributions
 
 Many of these ideas are inspired by the work of other developer communities as Heather Turner discussed here: https://youtu.be/BbpkKzz71EY?t=1045.
+
+:::note
+Example of a note box in case we want to alert the reader of something
+:::

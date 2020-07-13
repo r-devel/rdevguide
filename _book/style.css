@@ -39,3 +39,15 @@ h1, h2, h3, h4, h5, h6 {
 a {
   color: #FF7666 !important;
 }
+
+div.note {
+    padding: 1em;
+    margin: 2em 0;
+    padding-left: 100px;
+    background-size: 70px;
+    background-image: url("img/lightbulb.svg");
+    background-repeat: no-repeat;
+    background-position: 15px center;
+    min-height: 120px;
+    border: dashed 5px #FAEDB6;
+}
