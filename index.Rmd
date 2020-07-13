@@ -1,14 +1,15 @@
 --- 
 title: "Contributing to R Core"
 author: "R Forwards"
-date: "`r Sys.Date()`"
+date: "(updated on `r Sys.Date()`)"
 site: bookdown::bookdown_site
 output: bookdown::gitbook
 documentclass: book
 bibliography: [book.bib, packages.bib]
 biblio-style: apalike
 link-citations: yes
-description: "A developer's guide to contributing to R Core"
+github-repo: marlycormar/mastering_shiny_book_solutions
+description: "A developer's guide to contributing to R Core."
 ---
 
 # {-}

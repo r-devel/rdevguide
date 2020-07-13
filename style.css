@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+
 p.caption {
   color: #777;
   margin-top: 10px;
@@ -11,6 +13,14 @@ pre {
 }
 pre code {
   white-space: inherit;
+}
+
+p, div {
+  font-family: 'Raleway';
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Raleway';
 }
 
 div.cover_image {
