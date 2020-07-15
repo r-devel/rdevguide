@@ -3,17 +3,3 @@ language:
   ui:
     chapter_name: "Chapter "
 delete_merged_file: true
-
-rmd_files:
-  [
-    "index.Rmd",
-    "01-intro.Rmd",
-    "02-documentation.Rmd",
-    "03-bugzilla.Rmd",
-    "04-development.Rmd",
-    "05-help.Rmd",
-    "06-mentoring.Rmd",
-    "07-funding.Rmd",
-    "08-openness.Rmd",
-    "09-contributions.Rmd",
-  ]

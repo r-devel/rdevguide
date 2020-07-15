@@ -1,5 +1,0 @@
-# Funding
-
-- Funding to support above efforts?
-    - R Foundation likely to support some
-    - R Consortium + other sources to support FOSS projects?

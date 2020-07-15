@@ -78,7 +78,7 @@
 
 \title{Contributing to R Core}
 \author{R Forwards}
-\date{(updated on 2020-07-13)}
+\date{(updated on 2020-07-15)}
 
 \begin{document}
 \maketitle
@@ -91,97 +91,192 @@
 \chapter*{}\label{section}}
 \addcontentsline{toc}{chapter}{}
 
-\hypertarget{initiatives}{%
-\chapter{Initiatives}\label{initiatives}}
+\hypertarget{r-core-developers-guide}{%
+\chapter{R Core Developer's Guide}\label{r-core-developers-guide}}
 
-\hypertarget{encouraging-r-core-contributions}{%
-\subsection{Encouraging R Core contributions}\label{encouraging-r-core-contributions}}
+This guide is heavily influenced by the \href{https://devguide.python.org/appendix/\#basics-for-contributors}{Python Developer Guide}, and is a comprehensive resource for contributing to R Core -- for both new and experienced contributors. It is maintained by {[}XXX{]}. We welcome your contributions to R Core!
 
-Many of these ideas are inspired by the work of other developer communities as Heather Turner discussed here: \url{https://youtu.be/BbpkKzz71EY?t=1045}.
+This box denotes a tip for the reader.
 
-Example of a note box in case we want to alert the reader of something
+\hypertarget{quick-reference}{%
+\section{Quick Reference}\label{quick-reference}}
 
-\hypertarget{documentation}{%
-\chapter{Documentation}\label{documentation}}
+\hypertarget{quick-links}{%
+\section{Quick Links}\label{quick-links}}
 
-Dev guide like devguide.python.org
+\hypertarget{status-of-r-core-branches}{%
+\section{Status of R Core Branches}\label{status-of-r-core-branches}}
 
-\begin{itemize}
-\tightlist
-\item
-  how to find issues in bugzilla
-\item
-  how to propose a patch
-\item
-  how to do patch reviews
-\item
-  document process of ``promotion'' to R core
-\end{itemize}
+\hypertarget{contributing}{%
+\section{Contributing}\label{contributing}}
 
-c.f. \href{https://bookdown.org/lionel/contributing/}{Contributing to GNU R}, \href{https://www.r-project.org/bugs.html}{Bug Reporting}, \href{https://developer.r-project.org/Blog/public/2019/10/09/r-can-use-your-help-reviewing-bug-reports/index.html}{R can use your help reviewing bug reports}, \href{https://github.com/MichaelChirico/r-bugs}{Bugzilla mirror on GitHub}, \href{https://github.com/MichaelChirico/r-core-builder}{CI (Continuous Integration) for R-devel}, \href{https://github.com/jeroen/r-svn}{About
-Mirror of R svn server with Github actions CI for testing patches}
+\hypertarget{proposing-changes-to-r-core}{%
+\section{Proposing Changes to R Core}\label{proposing-changes-to-r-core}}
 
-\hypertarget{bugzilla}{%
-\chapter{Bugzilla}\label{bugzilla}}
+\hypertarget{other-interpreter-implementations}{%
+\section{Other Interpreter Implementations}\label{other-interpreter-implementations}}
 
-\begin{itemize}
-\item
-  Use bugzilla for general issues tracking, not just bugs? (not really sure how this is done right now). Analogous to Python issue tracker. (FYI Python is moving issue tracker to GitHub.)
-\item
-  Establish intermediate roles e.g.~people able to triage issues on issue tracker? Analagous to becoming a Developer on Python issue tracker
-\item
-  Core devs/bugzilla veterans could offer mentoring/tutorial
-\item
-  Work with Forwards, R-Ladies, etc to reach potential contributors
-\item
-  Blog post by Tomas and Luke could become part of more comprehensive Developer Guide
-\end{itemize}
+\hypertarget{key-resources}{%
+\section{Key Resources}\label{key-resources}}
 
-\hypertarget{more-open-development}{%
-\chapter{More open development}\label{more-open-development}}
+\hypertarget{additional-resources}{%
+\section{Additional Resources}\label{additional-resources}}
 
-\begin{itemize}
-\item
-  Move to git/GitHub
-\item
-  Requests for proposals on perceived deficiencies in R
+\hypertarget{code-of-conduct}{%
+\section{Code of Conduct}\label{code-of-conduct}}
 
-  \begin{itemize}
-  \tightlist
-  \item
-    community teams propose solutions
-  \end{itemize}
-\item
-  R-ideas mailing list (analagous to python-ideas mailing list)
-\item
-  Analagous process to Python Enhancement Proposal (PEP)?
+\hypertarget{getting-started}{%
+\chapter{Getting Started}\label{getting-started}}
 
-  \begin{itemize}
-  \tightlist
-  \item
-    process would be described in the dev guide.
-  \end{itemize}
-\item
-  Encourage more open developer-focused meetings
+\hypertarget{install-git}{%
+\section{Install git}\label{install-git}}
 
-  \begin{itemize}
-  \tightlist
-  \item
-    R core sessions at useR!
-  \item
-    link to developer-focused meetings e.g.~RIOT
-  \item
-    open attendance e.g.~at DSC
-  \end{itemize}
-\item
-  Post about any initiatives on R blog
+\hypertarget{get-the-source-code}{%
+\section{Get the source code}\label{get-the-source-code}}
 
-  \begin{itemize}
-  \tightlist
-  \item
-    promote via Forwards, R-Ladies, MiR
-  \end{itemize}
-\end{itemize}
+\hypertarget{compile-and-build}{%
+\section{Compile and build}\label{compile-and-build}}
+
+\hypertarget{unix}{%
+\subsection{UNIX}\label{unix}}
+
+\hypertarget{windows}{%
+\subsection{Windows}\label{windows}}
+
+\hypertarget{install-dependencies}{%
+\section{Install dependencies}\label{install-dependencies}}
+
+\hypertarget{linux}{%
+\subsection{Linux}\label{linux}}
+
+\hypertarget{maxos-and-os-x}{%
+\subsection{maxOS and OS X}\label{maxos-and-os-x}}
+
+\hypertarget{regenerate-configure}{%
+\section{\texorpdfstring{Regenerate \texttt{configure}}{Regenerate configure}}\label{regenerate-configure}}
+
+\hypertarget{troubleshoot-the-build}{%
+\section{Troubleshoot the build}\label{troubleshoot-the-build}}
+
+\hypertarget{avoid-recreating-auto-generated-files}{%
+\subsection{Avoid recreating auto-generated files}\label{avoid-recreating-auto-generated-files}}
+
+\hypertarget{editors-and-tools}{%
+\section{Editors and Tools}\label{editors-and-tools}}
+
+\hypertarget{directory-structure}{%
+\section{Directory structure}\label{directory-structure}}
+
+\hypertarget{where-to-get-help}{%
+\chapter{Where to Get Help}\label{where-to-get-help}}
+
+\hypertarget{ask-r-dev}{%
+\section{Ask r-dev}\label{ask-r-dev}}
+
+\hypertarget{zulip}{%
+\section{Zulip}\label{zulip}}
+
+\hypertarget{core-mentorship}{%
+\section{Core Mentorship}\label{core-mentorship}}
+
+\hypertarget{core-developers-office-hours}{%
+\section{Core Developers Office Hours}\label{core-developers-office-hours}}
+
+\hypertarget{mailing-lists}{%
+\section{Mailing Lists}\label{mailing-lists}}
+
+\hypertarget{file-a-bug}{%
+\section{File a Bug}\label{file-a-bug}}
+
+\hypertarget{lifecycle-of-a-pull-request}{%
+\chapter{Lifecycle of a Pull Request}\label{lifecycle-of-a-pull-request}}
+
+\hypertarget{introduction}{%
+\section{Introduction}\label{introduction}}
+
+\hypertarget{quick-guide}{%
+\section{Quick Guide}\label{quick-guide}}
+
+\hypertarget{step-by-step-guide}{%
+\section{Step-by-step Guide}\label{step-by-step-guide}}
+
+\hypertarget{resolving-merge-confilcts}{%
+\subsection{Resolving Merge Confilcts}\label{resolving-merge-confilcts}}
+
+\hypertarget{making-good-prs}{%
+\section{Making Good PRs}\label{making-good-prs}}
+
+\hypertarget{making-good-commits}{%
+\section{Making Good Commits}\label{making-good-commits}}
+
+\hypertarget{licensing}{%
+\section{Licensing}\label{licensing}}
+
+\hypertarget{submitting}{%
+\section{Submitting}\label{submitting}}
+
+\hypertarget{converting-an-existing-patch}{%
+\section{Converting an Existing Patch}\label{converting-an-existing-patch}}
+
+\hypertarget{reviewing}{%
+\section{Reviewing}\label{reviewing}}
+
+\hypertarget{how-to-review-a-pull-request}{%
+\subsection{How to Review a Pull Request}\label{how-to-review-a-pull-request}}
+
+\hypertarget{leaving-a-pull-request-review}{%
+\section{Leaving a Pull Request Review}\label{leaving-a-pull-request-review}}
+
+\hypertarget{committingrejecting}{%
+\section{Committing/Rejecting}\label{committingrejecting}}
+
+\hypertarget{crediting}{%
+\section{Crediting}\label{crediting}}
+
+\hypertarget{lifecycle-of-a-pull-request-1}{%
+\chapter{Lifecycle of a Pull Request}\label{lifecycle-of-a-pull-request-1}}
+
+\hypertarget{introduction-1}{%
+\section{Introduction}\label{introduction-1}}
+
+\hypertarget{quick-guide-1}{%
+\section{Quick Guide}\label{quick-guide-1}}
+
+\hypertarget{step-by-step-guide-1}{%
+\section{Step-by-step Guide}\label{step-by-step-guide-1}}
+
+\hypertarget{resolving-merge-confilcts-1}{%
+\subsection{Resolving Merge Confilcts}\label{resolving-merge-confilcts-1}}
+
+\hypertarget{making-good-prs-1}{%
+\section{Making Good PRs}\label{making-good-prs-1}}
+
+\hypertarget{making-good-commits-1}{%
+\section{Making Good Commits}\label{making-good-commits-1}}
+
+\hypertarget{licensing-1}{%
+\section{Licensing}\label{licensing-1}}
+
+\hypertarget{submitting-1}{%
+\section{Submitting}\label{submitting-1}}
+
+\hypertarget{converting-an-existing-patch-1}{%
+\section{Converting an Existing Patch}\label{converting-an-existing-patch-1}}
+
+\hypertarget{reviewing-1}{%
+\section{Reviewing}\label{reviewing-1}}
+
+\hypertarget{how-to-review-a-pull-request-1}{%
+\subsection{How to Review a Pull Request}\label{how-to-review-a-pull-request-1}}
+
+\hypertarget{leaving-a-pull-request-review-1}{%
+\section{Leaving a Pull Request Review}\label{leaving-a-pull-request-review-1}}
+
+\hypertarget{committingrejecting-1}{%
+\section{Committing/Rejecting}\label{committingrejecting-1}}
+
+\hypertarget{crediting-1}{%
+\section{Crediting}\label{crediting-1}}
 
 \hypertarget{help}{%
 \chapter{Help}\label{help}}
@@ -213,174 +308,593 @@ Mirror of R svn server with Github actions CI for testing patches}
   \end{itemize}
 \end{itemize}
 
-\hypertarget{mentoring}{%
-\chapter{Mentoring}\label{mentoring}}
+\hypertarget{running-writing-tests}{%
+\chapter{Running \& Writing Tests}\label{running-writing-tests}}
 
-\begin{itemize}
-\item
-  Establish core-mentorship mailing list (separate from R-devel).
-\item
-  Use Zulip for more interactive discussion (and modern format)?
+\hypertarget{running}{%
+\section{Running}\label{running}}
 
-  \begin{itemize}
-  \tightlist
-  \item
-    potential place for R-core/experienced contributors to offer office hours
-  \end{itemize}
-\item
-  R-core/experienced contributors to offer bookable 1-to-1 office hours (e.g.~via Zoom)
-\item
-  Write a mentoring guide
+\hypertarget{unexpected-skips}{%
+\subsection{Unexpected Skips}\label{unexpected-skips}}
 
-  \begin{itemize}
-  \tightlist
-  \item
-    c.f. \href{https://tinyurl.com/rladies-mentoring-guidelines}{R-Ladies mentoring guide}
-  \end{itemize}
-\item
-  Run contributor tutorials
+\hypertarget{writing}{%
+\section{Writing}\label{writing}}
 
-  \begin{itemize}
-  \tightlist
-  \item
-    will need to be online
-  \end{itemize}
-\item
-  Develop code of conduct
+\hypertarget{benchmarks}{%
+\section{Benchmarks}\label{benchmarks}}
 
-  \begin{itemize}
-  \tightlist
-  \item
-    for contribution to R project?
-  \item
-    for mailing lists/Zulip
-  \end{itemize}
-\item
-  Offer GSoC projects
+\hypertarget{increase-test-coverage}{%
+\chapter{Increase Test Coverage}\label{increase-test-coverage}}
 
-  \begin{itemize}
-  \tightlist
-  \item
-    scheme already established, could be used more by R Core
-  \item
-    or fund some of our own as Julia does: \url{https://julialang.org/jsoc/archive/}
-  \end{itemize}
-\item
-  Similarly Google Season of Docs
+\hypertarget{common-gotchas}{%
+\section{Common Gotchas}\label{common-gotchas}}
 
-  \begin{itemize}
-  \tightlist
-  \item
-    \url{https://developers.google.com/season-of-docs}
-  \end{itemize}
-\item
-  Establish mentored projects (diversity scholarships)
+\hypertarget{measuring-coverage}{%
+\section{Measuring Coverage}\label{measuring-coverage}}
 
-  \begin{itemize}
-  \tightlist
-  \item
-    mentees invest 2-5 hours per week over 3 months
-  \item
-    expenses paid scholarship to useR! conference following year: is there some other incentive we can offer while useR! is online?
-  \end{itemize}
-\item
-  Outreachy projects
+\hypertarget{using-covr}{%
+\subsection{\texorpdfstring{Using \texttt{covr}}{Using covr}}\label{using-covr}}
 
-  \begin{itemize}
-  \tightlist
-  \item
-    paid internship, 40 hours per week over 3 months
-  \item
-    require mentor(s) to invest 5 hours per week
-  \end{itemize}
-\item
-  Data umbrella sprints (similar to tidyverse developer days)
+\hypertarget{filing-the-issue}{%
+\section{Filing the Issue}\label{filing-the-issue}}
 
-  \begin{itemize}
-  \tightlist
-  \item
-    \url{https://www.dataumbrella.org/open-source/sprints}
-  \end{itemize}
-\end{itemize}
+\hypertarget{measuring-coverage-of-c-code}{%
+\section{Measuring coverage of C code}\label{measuring-coverage-of-c-code}}
 
-\hypertarget{funding}{%
-\chapter{Funding}\label{funding}}
+\hypertarget{helping-with-documentation}{%
+\chapter{Helping with Documentation}\label{helping-with-documentation}}
 
-\begin{itemize}
-\tightlist
-\item
-  Funding to support above efforts?
+\hypertarget{r-core-documentation}{%
+\section{R Core Documentation}\label{r-core-documentation}}
 
-  \begin{itemize}
-  \tightlist
-  \item
-    R Foundation likely to support some
-  \item
-    R Consortium + other sources to support FOSS projects?
-  \end{itemize}
-\end{itemize}
+\hypertarget{helping-with-documentation-1}{%
+\section{Helping with Documentation}\label{helping-with-documentation-1}}
 
-\hypertarget{openness}{%
-\chapter{Openness}\label{openness}}
+\hypertarget{proofreading}{%
+\section{Proofreading}\label{proofreading}}
 
-\hypertarget{openness-of-the-process-itself}{%
-\section{Openness of the Process itself}\label{openness-of-the-process-itself}}
+\hypertarget{helping-with-the-developers-guide}{%
+\section{Helping with the Developer's Guide}\label{helping-with-the-developers-guide}}
 
-\begin{itemize}
-\tightlist
-\item
-  Get input from community on ideas via discuss forum like rOpensci?
-\end{itemize}
+\hypertarget{developers-guide-workflow}{%
+\section{Developer's Guide workflow}\label{developers-guide-workflow}}
 
-\hypertarget{contributing}{%
-\chapter{Contributing}\label{contributing}}
+\hypertarget{documenting-r}{%
+\chapter{Documenting R}\label{documenting-r}}
 
-\hypertarget{initiatives-to-encourage-cran-contributions}{%
-\section{Initiatives to encourage CRAN contributions}\label{initiatives-to-encourage-cran-contributions}}
+\hypertarget{introduction-2}{%
+\section{Introduction}\label{introduction-2}}
 
-\begin{itemize}
-\tightlist
-\item
-  create organization on GitHub for people to put/link their repos for feedback/review/help prior to CRAN release
+\hypertarget{style-guide}{%
+\section{Style Guide}\label{style-guide}}
 
-  \begin{itemize}
-  \tightlist
-  \item
-    e.g. ``seeking review'' tag?
-  \item
-    a bit like how Bioconductor does it but in a open, community distributed way?
-  \item
-    or more like ropensci model? This is more in-depth review, but could borrow some ideas:
+\hypertarget{whitespace}{%
+\subsection{Whitespace}\label{whitespace}}
 
-    \begin{itemize}
-    \tightlist
-    \item
-      match people with similar interests
-    \item
-      don't go back to same person too often
-    \end{itemize}
-  \end{itemize}
-\item
-  create community of on-rampers
+\hypertarget{footnotes}{%
+\subsection{Footnotes}\label{footnotes}}
 
-  \begin{itemize}
-  \tightlist
-  \item
-    sharing error messages from CRAN to create more user-friendly checklists, pointers to relevant parts of docs
-  \end{itemize}
-\item
-  Zulip chat as alternative to R-package-devel to provide ad-hoc help
-\item
-  Step-by-step guide for people to review their own package before submission?
+\hypertarget{capitalization}{%
+\subsection{Capitalization}\label{capitalization}}
 
-  \begin{itemize}
-  \tightlist
-  \item
-    use some of tools from rOpensci?
-  \end{itemize}
-\item
-  Chatbot like rOpenSci one helping with package review, to help submitters?
-\end{itemize}
+\hypertarget{affirmative-tone}{%
+\subsection{Affirmative Tone}\label{affirmative-tone}}
+
+\hypertarget{economy-of-expression}{%
+\subsection{Economy of Expression}\label{economy-of-expression}}
+
+\hypertarget{security-consideration}{%
+\subsection{Security Consideration}\label{security-consideration}}
+
+\hypertarget{code-examples}{%
+\subsection{Code Examples}\label{code-examples}}
+
+\hypertarget{code-equivalents}{%
+\subsection{Code Equivalents}\label{code-equivalents}}
+
+\hypertarget{audience}{%
+\subsection{Audience}\label{audience}}
+
+\hypertarget{restructuredtext-primer}{%
+\section{reStructuredText Primer}\label{restructuredtext-primer}}
+
+\hypertarget{paragraphs}{%
+\subsection{Paragraphs}\label{paragraphs}}
+
+\hypertarget{inline-markup}{%
+\subsection{Inline markup}\label{inline-markup}}
+
+\hypertarget{lists-and-quotes}{%
+\subsection{Lists and Quotes}\label{lists-and-quotes}}
+
+\hypertarget{source-code}{%
+\subsection{Source Code}\label{source-code}}
+
+\hypertarget{hyperlinks}{%
+\subsection{Hyperlinks}\label{hyperlinks}}
+
+\hypertarget{sections}{%
+\subsection{Sections}\label{sections}}
+
+\hypertarget{explicit-markup}{%
+\subsection{Explicit Markup}\label{explicit-markup}}
+
+\hypertarget{directives}{%
+\subsection{Directives}\label{directives}}
+
+\hypertarget{footnotes-1}{%
+\subsection{Footnotes}\label{footnotes-1}}
+
+\hypertarget{comments}{%
+\subsection{Comments}\label{comments}}
+
+\hypertarget{source-encoding}{%
+\subsection{Source encoding}\label{source-encoding}}
+
+\hypertarget{gotchas}{%
+\subsection{Gotchas}\label{gotchas}}
+
+\hypertarget{additional-markup-constructs}{%
+\section{Additional Markup Constructs}\label{additional-markup-constructs}}
+
+\hypertarget{meta-information-markup}{%
+\subsection{Meta-information markup}\label{meta-information-markup}}
+
+\hypertarget{module-specific-markup}{%
+\subsection{Module-specific markup}\label{module-specific-markup}}
+
+\hypertarget{information-units}{%
+\subsection{Information units}\label{information-units}}
+
+\hypertarget{showing-code-examples}{%
+\subsection{Showing code examples}\label{showing-code-examples}}
+
+\hypertarget{inline-markup-1}{%
+\subsection{Inline markup}\label{inline-markup-1}}
+
+\hypertarget{cross-linking-markup}{%
+\subsection{Cross-linking markup}\label{cross-linking-markup}}
+
+\hypertarget{paragraph-level-markup}{%
+\subsection{Paragraph-level markup}\label{paragraph-level-markup}}
+
+\hypertarget{table-of-contents-markup}{%
+\subsection{Table-of-contents markup}\label{table-of-contents-markup}}
+
+\hypertarget{index-generating-markup}{%
+\subsection{Index-generating markup}\label{index-generating-markup}}
+
+\hypertarget{grammar-production-displays}{%
+\subsection{Grammar production displays}\label{grammar-production-displays}}
+
+\hypertarget{substitutions}{%
+\subsection{Substitutions}\label{substitutions}}
+
+\hypertarget{building-the-documentation}{%
+\section{Building the documentation}\label{building-the-documentation}}
+
+\hypertarget{using-make-make.bat}{%
+\subsection{Using make / make.bat}\label{using-make-make.bat}}
+
+\hypertarget{using-sphinx-build}{%
+\subsection{Using sphinx-build}\label{using-sphinx-build}}
+
+\hypertarget{translating}{%
+\section{Translating}\label{translating}}
+
+\hypertarget{starting-a-new-translation}{%
+\subsection{Starting a new translation}\label{starting-a-new-translation}}
+
+\hypertarget{pep-545-summary}{%
+\subsection{PEP 545 summary:}\label{pep-545-summary}}
+
+\hypertarget{how-to-get-help}{%
+\subsection{How to get help}\label{how-to-get-help}}
+
+\hypertarget{translation-faq}{%
+\subsection{Translation FAQ}\label{translation-faq}}
+
+\hypertarget{silence-warnings-from-the-test-suite}{%
+\chapter{Silence Warnings From the Test Suite}\label{silence-warnings-from-the-test-suite}}
+
+\hypertarget{silence-warnings-from-the-test-suite-1}{%
+\chapter{Silence Warnings From the Test Suite}\label{silence-warnings-from-the-test-suite-1}}
+
+\hypertarget{fixing-easy-issues-and-beyond}{%
+\chapter{Fixing ``easy'' Issues (and Beyond)}\label{fixing-easy-issues-and-beyond}}
+
+\hypertarget{issue-tracking}{%
+\chapter{Issue Tracking}\label{issue-tracking}}
+
+\hypertarget{using-the-issue-tracker}{%
+\section{Using the Issue Tracker}\label{using-the-issue-tracker}}
+
+\hypertarget{checking-if-a-bug-already-exists}{%
+\subsection{Checking if a bug already exists}\label{checking-if-a-bug-already-exists}}
+
+\hypertarget{reporting-an-issue}{%
+\subsection{Reporting an issue}\label{reporting-an-issue}}
+
+\hypertarget{understanding-the-issues-progress-and-status}{%
+\subsection{Understanding the issue's progress and status}\label{understanding-the-issues-progress-and-status}}
+
+\hypertarget{disagreement-with-a-resolution-on-the-issue-tracker}{%
+\section{Disagreement With a Resolution on the Issue Tracker}\label{disagreement-with-a-resolution-on-the-issue-tracker}}
+
+\hypertarget{helping-triage-issues}{%
+\section{Helping Triage Issues}\label{helping-triage-issues}}
+
+\hypertarget{classifying-reports}{%
+\subsection{Classifying Reports}\label{classifying-reports}}
+
+\hypertarget{reviewing-patches}{%
+\subsection{Reviewing Patches}\label{reviewing-patches}}
+
+\hypertarget{finding-an-issue-you-can-help-with}{%
+\subsection{Finding an Issue You Can Help With}\label{finding-an-issue-you-can-help-with}}
+
+\hypertarget{gaining-the-developer-role-on-the-issue-tracker}{%
+\section{Gaining the ``Developer'' Role on the Issue Tracker}\label{gaining-the-developer-role-on-the-issue-tracker}}
+
+\hypertarget{the-meta-tracker}{%
+\section{The Meta Tracker}\label{the-meta-tracker}}
+
+\hypertarget{triaging-an-issue}{%
+\chapter{Triaging an Issue}\label{triaging-an-issue}}
+
+\hypertarget{python-triage-team}{%
+\section{Python triage team}\label{python-triage-team}}
+
+\hypertarget{becoming-a-member-of-the-python-triage-team}{%
+\section{Becoming a member of the Python triage team}\label{becoming-a-member-of-the-python-triage-team}}
+
+\hypertarget{github-labels-for-prs}{%
+\subsection{GitHub Labels for PRs}\label{github-labels-for-prs}}
+
+\hypertarget{fields-in-the-issue-tracker}{%
+\section{Fields in the Issue Tracker}\label{fields-in-the-issue-tracker}}
+
+\hypertarget{title}{%
+\subsection{Title}\label{title}}
+
+\hypertarget{type}{%
+\subsection{Type}\label{type}}
+
+\hypertarget{stage}{%
+\subsection{Stage}\label{stage}}
+
+\hypertarget{components}{%
+\subsection{Components}\label{components}}
+
+\hypertarget{versions}{%
+\subsection{Versions}\label{versions}}
+
+\hypertarget{priority}{%
+\subsection{Priority}\label{priority}}
+
+\hypertarget{keywords}{%
+\subsection{Keywords}\label{keywords}}
+
+\hypertarget{nosy-list}{%
+\subsection{Nosy List}\label{nosy-list}}
+
+\hypertarget{assigned-to}{%
+\subsection{Assigned To}\label{assigned-to}}
+
+\hypertarget{dependencies}{%
+\subsection{Dependencies}\label{dependencies}}
+
+\hypertarget{superseder}{%
+\subsection{Superseder}\label{superseder}}
+
+\hypertarget{status}{%
+\subsection{Status}\label{status}}
+
+\hypertarget{resolution}{%
+\subsection{Resolution}\label{resolution}}
+
+\hypertarget{mercurial-repository}{%
+\subsection{Mercurial Repository}\label{mercurial-repository}}
+
+\hypertarget{generating-special-links-in-a-comment}{%
+\section{Generating Special Links in a Comment}\label{generating-special-links-in-a-comment}}
+
+\hypertarget{checklist-for-triaging}{%
+\section{Checklist for Triaging}\label{checklist-for-triaging}}
+
+\hypertarget{following-rs-development}{%
+\chapter{Following R's Development}\label{following-rs-development}}
+
+\hypertarget{mailing-lists-1}{%
+\section{Mailing Lists}\label{mailing-lists-1}}
+
+\hypertarget{zulip-1}{%
+\section{Zulip}\label{zulip-1}}
+
+\hypertarget{irc}{%
+\section{IRC}\label{irc}}
+
+\hypertarget{blogs}{%
+\section{Blogs}\label{blogs}}
+
+\hypertarget{standards-of-behaviour-in-these-communication-channels}{%
+\section{Standards of behaviour in these communication channels}\label{standards-of-behaviour-in-these-communication-channels}}
+
+\hypertarget{setting-expectations-for-open-source-participation}{%
+\section{Setting Expectations for Open Source Participation}\label{setting-expectations-for-open-source-participation}}
+
+\hypertarget{additional-repositories}{%
+\section{Additional Repositories}\label{additional-repositories}}
+
+\hypertarget{porting-r-to-a-new-platform}{%
+\chapter{Porting R to a new platform}\label{porting-r-to-a-new-platform}}
+
+\hypertarget{how-to-become-a-core-developer}{%
+\chapter{How to Become a Core Developer}\label{how-to-become-a-core-developer}}
+
+\hypertarget{what-it-takes}{%
+\section{What it Takes}\label{what-it-takes}}
+
+\hypertarget{what-it-means}{%
+\section{What it Means}\label{what-it-means}}
+
+\hypertarget{gaining-commit-privileges}{%
+\section{Gaining Commit Privileges}\label{gaining-commit-privileges}}
+
+\hypertarget{mailing-lists-2}{%
+\subsection{Mailing Lists}\label{mailing-lists-2}}
+
+\hypertarget{sign-a-contributor-agreement}{%
+\subsection{Sign a Contributor Agreement}\label{sign-a-contributor-agreement}}
+
+\hypertarget{pull-request-merging}{%
+\subsection{Pull Request merging}\label{pull-request-merging}}
+
+\hypertarget{responsibilities}{%
+\section{Responsibilities}\label{responsibilities}}
+
+\hypertarget{developer-log}{%
+\chapter{Developer Log}\label{developer-log}}
+
+\hypertarget{procedure-for-granting-or-dropping-access}{%
+\section{Procedure for Granting or Dropping Access}\label{procedure-for-granting-or-dropping-access}}
+
+\hypertarget{accepting-pull-requests}{%
+\chapter{Accepting Pull Requests}\label{accepting-pull-requests}}
+
+\hypertarget{is-the-pr-ready-to-be-accepted}{%
+\section{Is the PR ready to be accepted}\label{is-the-pr-ready-to-be-accepted}}
+
+\hypertarget{does-the-test-suite-still-pass}{%
+\subsection{Does the test suite still pass?}\label{does-the-test-suite-still-pass}}
+
+\hypertarget{patch-checklist}{%
+\subsection{Patch checklist}\label{patch-checklist}}
+
+\hypertarget{handling-others-code}{%
+\section{Handling Others' Code}\label{handling-others-code}}
+
+\hypertarget{contributor-licensing-agreements}{%
+\section{Contributor Licensing Agreements}\label{contributor-licensing-agreements}}
+
+\hypertarget{checking-if-the-cla-has-been-received}{%
+\section{Checking if the CLA has been received}\label{checking-if-the-cla-has-been-received}}
+
+\hypertarget{whats-new-and-news-entries}{%
+\section{What's New and News Entries}\label{whats-new-and-news-entries}}
+
+\hypertarget{working-with-git}{%
+\section{Working with Git}\label{working-with-git}}
+
+\hypertarget{active-branches}{%
+\subsection{Active branches}\label{active-branches}}
+
+\hypertarget{backporting-changes-to-an-older-version}{%
+\subsection{Backporting Changes to an Older Version}\label{backporting-changes-to-an-older-version}}
+
+\hypertarget{reverting-a-merged-pull-request}{%
+\subsection{Reverting a Merged Pull Request}\label{reverting-a-merged-pull-request}}
+
+\hypertarget{development-cycle}{%
+\chapter{Development Cycle}\label{development-cycle}}
+
+\hypertarget{branches}{%
+\section{Branches}\label{branches}}
+
+\hypertarget{in-development-main-branch}{%
+\subsection{In-development (main) branch}\label{in-development-main-branch}}
+
+\hypertarget{maintenance-branches}{%
+\subsection{Maintenance branches}\label{maintenance-branches}}
+
+\hypertarget{security-branches}{%
+\subsection{Security branches}\label{security-branches}}
+
+\hypertarget{end-of-life-branches}{%
+\subsection{End-of-life branches}\label{end-of-life-branches}}
+
+\hypertarget{stages}{%
+\section{Stages}\label{stages}}
+
+\hypertarget{pre-alpha}{%
+\subsection{Pre-alpha}\label{pre-alpha}}
+
+\hypertarget{alpha}{%
+\subsection{Alpha}\label{alpha}}
+
+\hypertarget{beta}{%
+\subsection{Beta}\label{beta}}
+
+\hypertarget{release-candidate-rc}{%
+\subsection{Release Candidate (RC)}\label{release-candidate-rc}}
+
+\hypertarget{final}{%
+\subsection{Final}\label{final}}
+
+\hypertarget{repository-administration}{%
+\section{Repository Administration}\label{repository-administration}}
+
+\hypertarget{organization-repository-policy}{%
+\subsection{Organization Repository Policy}\label{organization-repository-policy}}
+
+\hypertarget{organization-owner-policy}{%
+\subsection{Organization Owner Policy}\label{organization-owner-policy}}
+
+\hypertarget{current-owners}{%
+\subsection{Current Owners}\label{current-owners}}
+
+\hypertarget{repository-administrator-role-policy}{%
+\subsection{Repository Administrator Role Policy}\label{repository-administrator-role-policy}}
+
+\hypertarget{current-administrators}{%
+\subsection{Current Administrators}\label{current-administrators}}
+
+\hypertarget{repository-release-manager-role-policy}{%
+\subsection{Repository Release Manager Role Policy}\label{repository-release-manager-role-policy}}
+
+\hypertarget{continuous-integration}{%
+\chapter{Continuous Integration}\label{continuous-integration}}
+
+\hypertarget{checking-results-of-automatic-builds}{%
+\section{Checking results of automatic builds}\label{checking-results-of-automatic-builds}}
+
+\hypertarget{stability}{%
+\section{Stability}\label{stability}}
+
+\hypertarget{flags-dependent-failures}{%
+\section{Flags-dependent failures}\label{flags-dependent-failures}}
+
+\hypertarget{ordering-dependent-failures}{%
+\section{Ordering-dependent failures}\label{ordering-dependent-failures}}
+
+\hypertarget{transient-failures}{%
+\section{Transient failures}\label{transient-failures}}
+
+\hypertarget{custom-builders}{%
+\section{Custom builders}\label{custom-builders}}
+
+\hypertarget{adding-to-the-stdlib}{%
+\chapter{Adding to the Stdlib}\label{adding-to-the-stdlib}}
+
+\hypertarget{adding-to-a-pre-existing-module}{%
+\section{Adding to a pre-existing module}\label{adding-to-a-pre-existing-module}}
+
+\hypertarget{adding-a-new-module}{%
+\section{Adding a new module}\label{adding-a-new-module}}
+
+\hypertarget{acceptable-types-of-modules}{%
+\subsection{Acceptable Types of Modules}\label{acceptable-types-of-modules}}
+
+\hypertarget{requirements}{%
+\subsection{Requirements}\label{requirements}}
+
+\hypertarget{proposal-process}{%
+\subsection{Proposal Process}\label{proposal-process}}
+
+\hypertarget{experts-index}{%
+\chapter{Experts Index}\label{experts-index}}
+
+\hypertarget{stdlib}{%
+\section{Stdlib}\label{stdlib}}
+
+\hypertarget{tools}{%
+\section{Tools}\label{tools}}
+
+\hypertarget{platforms}{%
+\section{Platforms}\label{platforms}}
+
+\hypertarget{miscellaneous}{%
+\section{Miscellaneous}\label{miscellaneous}}
+
+\hypertarget{documentation-translations}{%
+\section{Documentation Translations}\label{documentation-translations}}
+
+\hypertarget{gdb-support}{%
+\chapter{gdb Support}\label{gdb-support}}
+
+\hypertarget{gdb-7-and-later}{%
+\section{gdb 7 and later}\label{gdb-7-and-later}}
+
+\hypertarget{gdb-6-and-earlier}{%
+\section{gdb 6 and earlier}\label{gdb-6-and-earlier}}
+
+\hypertarget{updating-auto-load-safe-path-to-allow-test_gdb-to-run}{%
+\section{Updating auto-load-safe-path to allow test\_gdb to run}\label{updating-auto-load-safe-path-to-allow-test_gdb-to-run}}
+
+\hypertarget{exploring-r-internals}{%
+\chapter{Exploring R Internals}\label{exploring-r-internals}}
+
+\hypertarget{changing-rs-grammar}{%
+\chapter{Changing R's Grammar}\label{changing-rs-grammar}}
+
+\hypertarget{design-of-r-compiler}{%
+\chapter{Design of R Compiler}\label{design-of-r-compiler}}
+
+\hypertarget{design-of-rs-garbage-collector}{%
+\chapter{Design of R's Garbage Collector}\label{design-of-rs-garbage-collector}}
+
+\hypertarget{updating-standard-library-extension-modules}{%
+\chapter{Updating standard library extension modules}\label{updating-standard-library-extension-modules}}
+
+\hypertarget{coverity-scan}{%
+\chapter{Coverity Scan}\label{coverity-scan}}
+
+\hypertarget{dynamic-analysis-with-clang}{%
+\chapter{Dynamic Analysis with Clang}\label{dynamic-analysis-with-clang}}
+
+\hypertarget{running-a-buildbot-worker}{%
+\chapter{Running a buildbot worker}\label{running-a-buildbot-worker}}
+
+\hypertarget{core-developer-motivations-and-affiliations}{%
+\chapter{Core Developer Motivations and Affiliations}\label{core-developer-motivations-and-affiliations}}
+
+\hypertarget{published-entries}{%
+\section{Published entries}\label{published-entries}}
+
+\hypertarget{goals-of-this-page}{%
+\section{Goals of this page}\label{goals-of-this-page}}
+
+\hypertarget{limitations-of-scope}{%
+\section{Limitations of Scope}\label{limitations-of-scope}}
+
+\hypertarget{cheatsheets}{%
+\chapter{Cheatsheets}\label{cheatsheets}}
+
+\hypertarget{accepting-pull-requests-1}{%
+\chapter{Accepting Pull Requests}\label{accepting-pull-requests-1}}
+
+\hypertarget{is-the-pr-ready-to-be-accepted-1}{%
+\section{Is the PR ready to be accepted}\label{is-the-pr-ready-to-be-accepted-1}}
+
+\hypertarget{does-the-test-suite-still-pass-1}{%
+\subsection{Does the test suite still pass?}\label{does-the-test-suite-still-pass-1}}
+
+\hypertarget{patch-checklist-1}{%
+\subsection{Patch checklist}\label{patch-checklist-1}}
+
+\hypertarget{handling-others-code-1}{%
+\section{Handling Others' Code}\label{handling-others-code-1}}
+
+\hypertarget{contributor-licensing-agreements-1}{%
+\section{Contributor Licensing Agreements}\label{contributor-licensing-agreements-1}}
+
+\hypertarget{checking-if-the-cla-has-been-received-1}{%
+\section{Checking if the CLA has been received}\label{checking-if-the-cla-has-been-received-1}}
+
+\hypertarget{whats-new-and-news-entries-1}{%
+\section{What's New and News Entries}\label{whats-new-and-news-entries-1}}
+
+\hypertarget{working-with-git-1}{%
+\section{Working with Git}\label{working-with-git-1}}
+
+\hypertarget{active-branches-1}{%
+\subsection{Active branches}\label{active-branches-1}}
+
+\hypertarget{backporting-changes-to-an-older-version-1}{%
+\subsection{Backporting Changes to an Older Version}\label{backporting-changes-to-an-older-version-1}}
+
+\hypertarget{reverting-a-merged-pull-request-1}{%
+\subsection{Reverting a Merged Pull Request}\label{reverting-a-merged-pull-request-1}}
 
 \bibliography{book.bib,packages.bib}
 

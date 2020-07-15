@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Contributing to R Core</title>
+  <title>Chapter 10 Documenting R | Contributing to R Core</title>
   <meta name="description" content="A developer’s guide to contributing to R Core." />
   <meta name="generator" content="bookdown 0.17 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Contributing to R Core" />
+  <meta property="og:title" content="Chapter 10 Documenting R | Contributing to R Core" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="marlycormar/mastering_shiny_book_solutions" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Contributing to R Core" />
+  <meta name="twitter:title" content="Chapter 10 Documenting R | Contributing to R Core" />
   
   <meta name="twitter:description" content="A developer’s guide to contributing to R Core." />
   
@@ -30,8 +30,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-
-<link rel="next" href="r-core-developers-guide.html"/>
+<link rel="prev" href="helping-with-documentation.html"/>
+<link rel="next" href="silence-warnings-from-the-test-suite.html"/>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -395,22 +395,149 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="header">
-<h1 class="title">Contributing to R Core</h1>
-<p class="author"><em>R Forwards</em></p>
-<p class="date"><em>(updated on 2020-07-15)</em></p>
+<div id="documenting-r" class="section level1">
+<h1><span class="header-section-number">Chapter 10</span> Documenting R</h1>
+<div id="introduction-2" class="section level2">
+<h2><span class="header-section-number">10.1</span> Introduction</h2>
 </div>
-<div id="section" class="section level1 unnumbered">
-<h1></h1>
+<div id="style-guide" class="section level2">
+<h2><span class="header-section-number">10.2</span> Style Guide</h2>
+<div id="whitespace" class="section level3">
+<h3><span class="header-section-number">10.2.1</span> Whitespace</h3>
+</div>
+<div id="footnotes" class="section level3">
+<h3><span class="header-section-number">10.2.2</span> Footnotes</h3>
+</div>
+<div id="capitalization" class="section level3">
+<h3><span class="header-section-number">10.2.3</span> Capitalization</h3>
+</div>
+<div id="affirmative-tone" class="section level3">
+<h3><span class="header-section-number">10.2.4</span> Affirmative Tone</h3>
+</div>
+<div id="economy-of-expression" class="section level3">
+<h3><span class="header-section-number">10.2.5</span> Economy of Expression</h3>
+</div>
+<div id="security-consideration" class="section level3">
+<h3><span class="header-section-number">10.2.6</span> Security Consideration</h3>
+</div>
+<div id="code-examples" class="section level3">
+<h3><span class="header-section-number">10.2.7</span> Code Examples</h3>
+</div>
+<div id="code-equivalents" class="section level3">
+<h3><span class="header-section-number">10.2.8</span> Code Equivalents</h3>
+</div>
+<div id="audience" class="section level3">
+<h3><span class="header-section-number">10.2.9</span> Audience</h3>
+</div>
+</div>
+<div id="restructuredtext-primer" class="section level2">
+<h2><span class="header-section-number">10.3</span> reStructuredText Primer</h2>
+<div id="paragraphs" class="section level3">
+<h3><span class="header-section-number">10.3.1</span> Paragraphs</h3>
+</div>
+<div id="inline-markup" class="section level3">
+<h3><span class="header-section-number">10.3.2</span> Inline markup</h3>
+</div>
+<div id="lists-and-quotes" class="section level3">
+<h3><span class="header-section-number">10.3.3</span> Lists and Quotes</h3>
+</div>
+<div id="source-code" class="section level3">
+<h3><span class="header-section-number">10.3.4</span> Source Code</h3>
+</div>
+<div id="hyperlinks" class="section level3">
+<h3><span class="header-section-number">10.3.5</span> Hyperlinks</h3>
+</div>
+<div id="sections" class="section level3">
+<h3><span class="header-section-number">10.3.6</span> Sections</h3>
+</div>
+<div id="explicit-markup" class="section level3">
+<h3><span class="header-section-number">10.3.7</span> Explicit Markup</h3>
+</div>
+<div id="directives" class="section level3">
+<h3><span class="header-section-number">10.3.8</span> Directives</h3>
+</div>
+<div id="footnotes-1" class="section level3">
+<h3><span class="header-section-number">10.3.9</span> Footnotes</h3>
+</div>
+<div id="comments" class="section level3">
+<h3><span class="header-section-number">10.3.10</span> Comments</h3>
+</div>
+<div id="source-encoding" class="section level3">
+<h3><span class="header-section-number">10.3.11</span> Source encoding</h3>
+</div>
+<div id="gotchas" class="section level3">
+<h3><span class="header-section-number">10.3.12</span> Gotchas</h3>
+</div>
+</div>
+<div id="additional-markup-constructs" class="section level2">
+<h2><span class="header-section-number">10.4</span> Additional Markup Constructs</h2>
+<div id="meta-information-markup" class="section level3">
+<h3><span class="header-section-number">10.4.1</span> Meta-information markup</h3>
+</div>
+<div id="module-specific-markup" class="section level3">
+<h3><span class="header-section-number">10.4.2</span> Module-specific markup</h3>
+</div>
+<div id="information-units" class="section level3">
+<h3><span class="header-section-number">10.4.3</span> Information units</h3>
+</div>
+<div id="showing-code-examples" class="section level3">
+<h3><span class="header-section-number">10.4.4</span> Showing code examples</h3>
+</div>
+<div id="inline-markup-1" class="section level3">
+<h3><span class="header-section-number">10.4.5</span> Inline markup</h3>
+</div>
+<div id="cross-linking-markup" class="section level3">
+<h3><span class="header-section-number">10.4.6</span> Cross-linking markup</h3>
+</div>
+<div id="paragraph-level-markup" class="section level3">
+<h3><span class="header-section-number">10.4.7</span> Paragraph-level markup</h3>
+</div>
+<div id="table-of-contents-markup" class="section level3">
+<h3><span class="header-section-number">10.4.8</span> Table-of-contents markup</h3>
+</div>
+<div id="index-generating-markup" class="section level3">
+<h3><span class="header-section-number">10.4.9</span> Index-generating markup</h3>
+</div>
+<div id="grammar-production-displays" class="section level3">
+<h3><span class="header-section-number">10.4.10</span> Grammar production displays</h3>
+</div>
+<div id="substitutions" class="section level3">
+<h3><span class="header-section-number">10.4.11</span> Substitutions</h3>
+</div>
+</div>
+<div id="building-the-documentation" class="section level2">
+<h2><span class="header-section-number">10.5</span> Building the documentation</h2>
+<div id="using-make-make.bat" class="section level3">
+<h3><span class="header-section-number">10.5.1</span> Using make / make.bat</h3>
+</div>
+<div id="using-sphinx-build" class="section level3">
+<h3><span class="header-section-number">10.5.2</span> Using sphinx-build</h3>
+</div>
+</div>
+<div id="translating" class="section level2">
+<h2><span class="header-section-number">10.6</span> Translating</h2>
+<div id="starting-a-new-translation" class="section level3">
+<h3><span class="header-section-number">10.6.1</span> Starting a new translation</h3>
+</div>
+<div id="pep-545-summary" class="section level3">
+<h3><span class="header-section-number">10.6.2</span> PEP 545 summary:</h3>
+</div>
+<div id="how-to-get-help" class="section level3">
+<h3><span class="header-section-number">10.6.3</span> How to get help</h3>
+</div>
+<div id="translation-faq" class="section level3">
+<h3><span class="header-section-number">10.6.4</span> Translation FAQ</h3>
 
+</div>
+</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-
-<a href="r-core-developers-guide.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="helping-with-documentation.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="silence-warnings-from-the-test-suite.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

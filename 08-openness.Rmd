@@ -1,5 +1,0 @@
-# Openness
-
-## Openness of the Process itself
-
- - Get input from community on ideas via discuss forum like rOpensci?

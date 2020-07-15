@@ -1,9 +1,25 @@
-# Initiatives
+# R Core Developer's Guide
 
-###  Encouraging R Core contributions
-
-Many of these ideas are inspired by the work of other developer communities as Heather Turner discussed here: https://youtu.be/BbpkKzz71EY?t=1045.
+This guide is heavily influenced by the [Python Developer Guide](https://devguide.python.org/appendix/#basics-for-contributors), and is a comprehensive resource for contributing to R Core – for both new and experienced contributors. It is maintained by [XXX]. We welcome your contributions to R Core!
 
 :::note
-Example of a note box in case we want to alert the reader of something
+This box denotes a tip for the reader.
 :::
+
+## Quick Reference
+
+## Quick Links
+
+## Status of R Core Branches
+
+## Contributing
+
+## Proposing Changes to R Core
+
+## Other Interpreter Implementations
+
+## Key Resources
+
+## Additional Resources
+
+## Code of Conduct
