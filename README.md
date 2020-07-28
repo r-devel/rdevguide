@@ -1,5 +1,6 @@
-This is the absolute minimum you need to start a [bookdown](https://bookdown.org/yihui/bookdown/) book. You can find the
-preview of this book at http://seankross.com/bookdown-start/
+A guide to contributing to R core.
 
-All of the content of this repository is licensed 
-[CC0](https://creativecommons.org/publicdomain/zero/1.0/).
+## Code of Conduct
+
+Please note that this project is released with a [Contributor Code of Conduct](https://github.com/hturner/PlackettLuce/blob/master/CONDUCT.md).
+By participating in this project you agree to abide by its terms.
