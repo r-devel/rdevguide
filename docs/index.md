@@ -1,7 +1,7 @@
 --- 
 title: "Contributing to R Core"
 author: "R Forwards"
-date: "`r Sys.Date()`"
+date: "2020-07-27"
 site: bookdown::bookdown_site
 documentclass: book
 bibliography: [book.bib]
