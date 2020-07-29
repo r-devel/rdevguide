@@ -4,7 +4,7 @@ This guide is a work in progress, inspired by http://devguide.python.org/. It is
 
 ## Background Resources
 
-A list of existing resources on R core development that we can use for reference or that we should document in the guide is given in the Wiki.
+A list of existing resources on R core development that we can use for reference or that we should document in the guide is given in the [Wiki for this repo](https://github.com/forwards/rdevguide/wiki).
 
 ## Contributing
 
