@@ -1,4 +1,4 @@
-# Triaging an Issue
+# Reviewing Bugs
 
 ## Python triage team
 
@@ -6,7 +6,7 @@
 
 ### GitHub Labels for PRs
 
-## Fields in the Issue Tracker
+## Fields in the Bug Tracker
 
 ### Title
 
