@@ -1,4 +1,4 @@
-# Lifecycle of a Pull Request
+# Lifecycle of a Patch
 
 ## Introduction
 
