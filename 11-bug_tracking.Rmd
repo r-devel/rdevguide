@@ -1,14 +1,14 @@
-# Issue Tracking
+# Bug Tracking
 
-## Using the Issue Tracker
+## Using the Bug Tracker (Bugzilla)
 
 ### Checking if a bug already exists
 
-### Reporting an issue
+### Reporting a bug
 
 ### Understanding the issue’s progress and status
 
-## Disagreement With a Resolution on the Issue Tracker
+## Disagreement With a Resolution on the Bug Tracker
 
 ## Helping Triage Issues
 
@@ -18,6 +18,6 @@
 
 ### Finding an Issue You Can Help With
 
-## Gaining the “Developer” Role on the Issue Tracker
+## Gaining the “Developer” Role on the Bug Tracker
 
 ## The Meta Tracker
