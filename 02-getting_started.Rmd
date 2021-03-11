@@ -1,5 +1,7 @@
 # Getting Started 
 
+These instructions cover how to install R in Windows. The tools required to build R and R packages in Windows are also discussed.
+
 ## Install git
 
 ## Get the source code 
