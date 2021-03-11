@@ -2,7 +2,21 @@
 
 These instructions cover how to install R in Windows. The tools required to build R and R packages in Windows are also discussed.
 
-## Install git
+## Installing R
+
+To install R in Windows follow these steps:
+
+1. Go to https://cran.r-project.org.
+
+2. Select `Download R for Windows`. You will be directed to a page which shows `Subdirectories` for installing R on Windows.
+
+3. Select `base` subdirectory. (Alternatively, you can select `install R for the first time`, it leads to the same page).
+
+
+
+## Building R and R packages
+
+ `RTools` subdirectory for 
 
 ## Get the source code 
 
