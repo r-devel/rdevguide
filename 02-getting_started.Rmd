@@ -10,9 +10,24 @@ To install R in Windows follow these steps:
 
 2. Select `Download R for Windows`. You will be directed to a page which shows `Subdirectories` for installing R on Windows.
 
-3. Select `base` subdirectory. (Alternatively, you can select `install R for the first time`, it leads to the same page).
+3. Select `base` subdirectory. (Alternatively, you can select `install R for the first time`, it leads to the same page). The recent stable release distribution of R can be downloaded from here. 
 
+4. The distribution is distributed as an installer ($\ge$) `R-4.0.4-win.exe`.
 
+5. This has to be run in the Windows-style installer.
+
+6. Select the language while installing, read the public license information, and select destination location to the start the installation. You will be prompted to select components at this stage: `User installation`, `32-bit User installation`, `64-bit User installation`, or `Custom installation`. The default option may be opted for the questions from this step onwards. 
+
+7. Complete the installation.
+
+## General instructions
+
+1. The R executable downloaded by following the above steps, is the binary distribution of ($\ge$) `R-4.0.4`, which can run on Windows XP and above versions (including 64-bit versions of Windows). It can run on ix86 and x86_64 chips.
+
+2. There are two versions of the R executable, the 32-bit version (in `R-4.0.4\bin\i386`) and the 64-bit version (in `R-4.0.4\bin\x64`). On the 32-bit versions of Windows, by default only the former gets installed, whereas on the 64-bit versions, both get installed. 
+
+3. If there is already a previous version of R installed in your system and you want to retain the packages installed in it, then: 
+  a) Uninstall R (write here, how to uninstall R)
 
 ## Building R and R packages
 
