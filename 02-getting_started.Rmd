@@ -1,18 +1,18 @@
 # Getting Started 
 
-These instructions cover how to install R in Windows. The tools required to build R and R packages in Windows are also discussed.
+These instructions cover how to install $\textsf{R}$ in Windows. The tools required to build $\textsf{R}$ and $\textsf{R}$ packages in Windows are also discussed.
 
-## Installing R
+## Installing $\textsf{R}$
 
-To install R in Windows follow these steps:
+To install $\textsf{R}$ in Windows follow these steps:
 
 1. Go to https://cran.r-project.org.
 
 2. Select `Download R for Windows`. You will be directed to a page which shows `Subdirectories` for installing R on Windows.
 
-3. Select `base` subdirectory. (Alternatively, you can select `install R for the first time`, it leads to the same page). The recent stable release distribution of R can be downloaded from here. 
+3. Select `base` subdirectory. Alternatively, you can select `install R for the first time`, it leads to the same page. The current official stable release distribution of $\textsf{R}$ can be downloaded from here. (Along with the link to the current official stable release, links to the development snapshot build and to the previous releases, are also available on this page).
 
-4. The distribution is distributed as an installer ($\ge$) `R-4.0.4-win.exe`.
+4. This distribution is distributed as an installer `R-x.y.z-win.exe`. The `x.y.z` in the $\textsf{R}$ system version represent the major, minor, and patchlevel version numbers, respectively.
 
 5. This has to be run in the Windows-style installer.
 
@@ -22,16 +22,27 @@ To install R in Windows follow these steps:
 
 ## General instructions
 
-1. The R executable downloaded by following the above steps, is the binary distribution of ($\ge$) `R-4.0.4`, which can run on Windows XP and above versions (including 64-bit versions of Windows). It can run on ix86 and x86_64 chips.
+1. The $\textsf{R}$ executable downloaded by following the above steps, is the binary distribution of `R-x.y.z`, which can run on Windows XP and above versions (including 64-bit versions of Windows). It can run on ix86 and x86_64 chips.
 
-2. There are two versions of the R executable, the 32-bit version (in `R-4.0.4\bin\i386`) and the 64-bit version (in `R-4.0.4\bin\x64`). On the 32-bit versions of Windows, by default only the former gets installed, whereas on the 64-bit versions, both get installed. 
+2. There are two versions of the $\textsf{R}$ executable, the 32-bit version (in `R-x.y.z\bin\i386`) and the 64-bit version (in `R-x.y.z\bin\x64`). On the 32-bit versions of Windows, by default only the former gets installed, whereas on the 64-bit versions, both get installed. 
 
-3. If there is already a previous version of R installed in your system and you want to retain the packages installed in it, then: 
-  a) Uninstall R (write here, how to uninstall R)
+3. If there is already a previous version of R installed in your system and you want to retain the packages installed in it, then uninstall the previous version of $\textsf{R}$ (from the Control Panel) and install the new one. In the new installation, copy any installed packages to the library folder and run `update.packages(checkBuilt=TRUE, ask=FALSE)` in the new $\textsf{R}$. 
 
-## Building R and R packages
+4. If there are different versions of R installed, then they are present in parallel folders. Hence, earlier versions can also be retained if you wish to keep them.
+  
+5. When there is a change in the minor version of $\textsf{R}$ (say, from 4.0.3 to 4.1.0), then the library names (folder `R\win-library\x.y` of your home directory, `R\win64-library\x.y` on 64-bit builds), will need to be updated too. For doing this, copy (say) `R\win-library\4.0` to `R\win-library\4.1` and then run the `update.packages(checkBuilt=TRUE, ask=FALSE)` command.
 
- `RTools` subdirectory for 
+## Building $\textsf{R}$ and $\textsf{R}$ packages
+
+`RTools` is the [subdirectory](https://cran.r-project.org/bin/windows/Rtools/) which you want to build $\textsf{R}$ or your own $\textsf{R}$ package(s) on Windows. 
+
+### What tools you need to build $\textsf{R}$ on Windows?
+
+1. `RTools` is the [subdirectory](https://cran.r-project.org/bin/windows/Rtools/) which you want to build $\textsf{R}$ or your own $\textsf{R}$ package(s) on Windows. 
+
+2. You also need a distribution of $\LaTeX$ installed for building $\textsf{R}$ and checking packages. The `MiKTeX` distribution of $\LaTeX$ that is used on CRAN can be downloaded from https://miktex.org.
+
+### How to setup `RTools`?
 
 ## Get the source code 
 
