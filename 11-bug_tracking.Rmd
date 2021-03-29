@@ -1,6 +1,76 @@
 # Bug Tracking
 
-## Using the Bug Tracker (Bugzilla)
+## What is a bug in $\textsf{R}$ ?
+
+Following are some situations where you may find a bug in $\textsf{R}$:
+
+1. The $\textsf{R}$ session terminates unexpectedly, or there is a segmentation fault, it might be a bug, unless you have written your own call to compiled code or an internal function (via `.C` or `.Internal`). The error may look like this:
+
+```{r, results='hide'}
+##  *** caught segfault ***
+## address (nil), cause 'memory not mapped'
+```
+
+2. If the code does not do what the documentation says it should, then either the code or the documentation is wrong. Report either of which needs to be fixed.
+
+$\textbf{Note}$:
+When you are in doubt that there is a bug:
+
+1. Make sure whether the bug appears in a clean session of $\textsf{R}$. Many a times, there are variables/commands/functions stored in history which might causes issues. Hence, check in a clean session. To do so, launch $\textsf{R}$ from the command line with the `--vanilla` option. 
+
+2. At times the code that is written is very complicated, has numerous package and file dependencies, has many function calls, etc.. In such scenarios it is quite common that the code throws an error and you are not able to solve it. You may tend to think that there is a bug that needs to be reported. Before doing so, try to produce a minimum working example of the code for the section where the error occurred. Add only those package and files which are required by that section, and see if the error appears still. Using this approach shall solve most of the errors.
+
+## What may not be a bug?
+
+1. In case the code is doing something unexpected, it may not necessarily be a bug. Carefully review the documentation of the function being called, and check whether the behaviour being exhibited on calling this function is the same as it was designed to do.
+
+2. Issues with $\textit{seemingly}$ identical numbers not being equal (especially floating point numbers) are usually not bugs. 
+
+3. If $\textsf{R}$ is running slower than expected, then also it may not be a bug. Ask someone else to review your code in such a case.
+
+4. If some function is working, but it is not defined in the best generalised way, then consult some to look over your code. This may perhaps not be a bug, instead it might be an alternative way of writing the function.
+
+## Levels of contributing to bug / What do you do when you find a bug?
+
+1. [Report](#ReportBug) the bug.
+
+2. [Test](provide hyperlink to the section/chapter which discusses this) the bug.
+
+3. [Fix](provide hyperlink to the section/chapter which discusses this) the bug: Fixing a bug might require relatively more time. You may start a conversation about it either on BugZilla (link here) or on the GitHub mirror (link here). This would require engagement with $\textsf{R}$ Core team.
+
+## What are some places where you may find a bug?
+
+You may find a bug in:
+
+1. The [documentation of this guide](#GuideDocBug).
+
+2. In the [$\textsf{R}$ Core-supported packages and/or their documentations](#RCorePkgBug).
+
+3. In the $\textsf{R}$ language.
+
+4. In packages and/or their documentations which are not supported by the $\textsf{R}$ Core.
+
+## Using the Bug Tracker (BugZilla or GitHub Mirror)
+## How to report a bug? {#ReportBug}
+
+Once you are confirmed that there is a bug, you need to submit a report so that it gets fixed.
+
+### Bug in the documentation of this guide {#GuideDocBug}
+
+1. If there is a bug in the documentation of this guide, then please report it as an issue at https://github.com/forwards/rdevguide/issues. 
+
+2. Please go through the $\textit{closed}$ issues to check if the bug is already reported and fixed. Otherwise, please check in the $\textit{open}$ issues to see if it is reported. If it is not recorded at either of these places, then please submit a new issue.
+
+### Bug in the $\textsf{R}$ Core-supported packages and/or their documentations {#RCorePkgBug}
+
+1. Packages that are supported by the $\textsf{R}$ Core are labelled with `Maintainer: R Core Team <R-core@r-project.org>`. You can check this label either by running `maintainer("package_name")` or by looking at the `Maintainer` field in the output when the command `packageDescription("package_name")` is run in $\textsf{R}$.
+
+2. The bug report for $\textsf{R}$ Core-supported packages and/or their documentations can be submitted either to $\textsf{R}$'s [Bugzilla](https://bugs.r-project.org/bugzilla/) or as an issue to the [GitHub Mirror of R svn server](https://github.com/r-devel/r-svn/issues).
+
+3. If you want to submit the bug report using Bugzilla, please ensure that you have a Bugzilla account. To get a Bugzilla account, please send an e-mail to `bug-report-request@r-project.org` from the address that you want to use as your login. In this e-mail, briefly explain why you need an account. A volunteer shall then create a Bugzilla account and add you to $\textsf{R}$'s Bugzilla members.
+
+
+## (good) Social practices in reporting bugs / Expectations of a (good) bug report
 
 ### Checking if a bug already exists
 
@@ -21,3 +91,7 @@
 ## Gaining the “Developer” Role on the Bug Tracker
 
 ## The Meta Tracker
+
+## Python Dev Guide
+
+## References
