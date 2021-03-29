@@ -1,5 +1,15 @@
 # Lifecycle of a Patch
 
+#### Include following levels of testing:
+## 1. Contribute to a test
+## 2. Report a bug fix
+## 3. Add a new feature (or test)
+#### For test coverage, no standard ways. there is perhaps a 'cover' package
+#### Submit more bugs, it will cause more testing
+
+#### A tips and tricks section: for instance, use a text editor, notepad, emacs for testing, emacs distribution, configurations of emacs which might be useful, use RStudio editor 
+
+
 ## Introduction
 
 ## Quick Guide
