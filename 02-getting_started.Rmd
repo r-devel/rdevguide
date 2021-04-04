@@ -22,17 +22,9 @@ To install $\textsf{R}$ in Windows follow these steps:
 
 ## General instructions
 
-1. The $\textsf{R}$ executable downloaded by following the above steps, is the binary distribution of `R-x.y.z`, which can run on Windows XP and above versions (including 64-bit versions of Windows). It can run on ix86 and x86_64 chips.
+1. If you install the latest version or R-patched or R-devel, it will not over-write the previous installation(s) in your Windows machine.
 
-2. There are two versions of the $\textsf{R}$ executable, the 32-bit version (in `R-x.y.z\bin\i386`) and the 64-bit version (in `R-x.y.z\bin\x64`). On the 32-bit versions of Windows, by default only the former gets installed, whereas on the 64-bit versions, both get installed. 
-
-3. If there is already a previous version of R installed in your system and you want to retain the packages installed in it, then uninstall the previous version of $\textsf{R}$ (from the Control Panel) and install the new one. In the new installation, copy any installed packages to the library folder and run `update.packages(checkBuilt=TRUE, ask=FALSE)` in the new $\textsf{R}$. 
-
-4. If there are different versions of R installed, then they are present in parallel folders. Hence, earlier versions can also be retained if you wish to keep them.
-  
-5. When there is a change in the minor version of $\textsf{R}$ (say, from 4.0.3 to 4.1.0), then the library names (folder `R\win-library\x.y` of your home directory, `R\win64-library\x.y` on 64-bit builds), will need to be updated too. For doing this, copy (say) `R\win-library\4.0` to `R\win-library\4.1` and then run the `update.packages(checkBuilt=TRUE, ask=FALSE)` command.
-
-6. Daily [tarballs](https://stat.ethz.ch/R/daily/) are available for the patched version of the current release (`r-patched`), and the development version of the current release (`r-devel`). The same are also available via the [R Subversion repository](https://svn.R-project.org/R/)
+2. Daily [tarballs](https://stat.ethz.ch/R/daily/) are available for the patched version of the current release (`r-patched`), and the development version of the current release (`r-devel`). The same are also available via the [R Subversion repository](https://svn.R-project.org/R/)
 
 ## Building $\textsf{R}$ and $\textsf{R}$ packages
 
@@ -44,31 +36,20 @@ To install $\textsf{R}$ in Windows follow these steps:
 
 ### How to setup `RTools`?
 
-1. The executable version of `RTools` that is specific to your requirements can be downloaded from https://cran.r-project.org/bin/windows/Rtools/ and run in the Windows-style installer. 
+1. The latest version of `RTools` can be downloaded from https://cran.r-project.org/bin/windows/Rtools/ and run in the Windows-style installer. You will need to know if you have a 32-bit or 64-bit Windows machine (right-click `This PC` in Windows Explorer and check the properties if you are unsure).
 
-2. After completing the installation, you need to put the location of the RTools $\textit{make}$ $\textit{utilities}$ on the `PATH`. For doing this, exceute the following commands in $\textsf{R}$:
-
-```{r, results='hide'}
-writeLines('PATH="${RTOOLS40_HOME}\\usr\\bin;${PATH}"', con = "~/.Renviron")
-```
-
-Restart $\textsf{R}$ now. Verify that $\textit{make}$ can be found using the following command. (The output of the command should show the path where you installed `RTools`):
-
-```{r, results='hide'}
-Sys.which("make")
-## "C:\\rtools40\\usr\\bin\\make.exe"
-```
-
-If the above works, then try installing an $\textsf{R}$ package from source:
-
-```{r, results='hide'}
-## install.packages("jsonlite", type = "source")    ## An example
-```
-
-If you are successful in installing an $\textsf{R}$ package from source, then the setup for `RTools` is completed.
+2. Don't forget to add `RTools` to the path as documented on the download page.
 
 ### How to build $\textsf{R}$?
 
 To build $\textsf{R}$ for Windows using `RTools` follow the instructions in this [readme](https://github.com/r-windows/r-base#readme) file.
 
-## References (chapterwise or at the end of the guide?)
+## See also
+
+1. [CRAN official website](https://cran.r-project.org)
+
+2. [R installation and administration manual](https://cran.r-project.org/doc/manuals/r-patched/R-admin.html)
+
+3. [R for Windows FAQ](https://cran.r-project.org/bin/windows/base/rw-FAQ.html)
+
+4. [Rtools40 manual for Windows](https://cran.r-project.org/bin/windows/Rtools/)
