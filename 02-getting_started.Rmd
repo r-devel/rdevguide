@@ -44,4 +44,12 @@ To install $\textsf{R}$ in Windows follow these steps:
 
 To build $\textsf{R}$ for Windows using `RTools` follow the instructions in this [readme](https://github.com/r-windows/r-base#readme) file.
 
-## References
+## See also
+
+1. [CRAN official website](https://cran.r-project.org)
+
+2. [R installation and administration manual](https://cran.r-project.org/doc/manuals/r-patched/R-admin.html)
+
+3. [R for Windows FAQ](https://cran.r-project.org/bin/windows/base/rw-FAQ.html)
+
+4. [Rtools40 manual for Windows](https://cran.r-project.org/bin/windows/Rtools/)
