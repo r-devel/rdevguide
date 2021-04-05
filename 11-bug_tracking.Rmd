@@ -2,7 +2,8 @@
 
 ## What is a bug in $\textsf{R}$ ?
 
-Following are some situations where you may find a bug in $\textsf{R}$:
+You may find a bug in $\textsf{R}$ if:
+
 
 1. The $\textsf{R}$ session terminates unexpectedly, or there is a segmentation fault, it might be a bug, unless you have written your own call to compiled code or an internal function (via `.C` or `.Internal`). The error may look like this:
 
