@@ -47,7 +47,8 @@ The sections that follow discuss where to check whether a bug is already reporte
 
 ## Levels of contributing to bug / What do you do when you find a bug?
 
-1. [Report](#ReportBug) the bug (if it is not alreasy reported).
+1. [Report](#ReportBug) the bug (if it is not already reported).
+
 
 2. [Test](provide hyperlink to the section/chapter which discusses this) the bug.
 
