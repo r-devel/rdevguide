@@ -32,7 +32,8 @@ Relevant details should be a part of a good bug report. You can help with the fo
 
 3. Writing a unit test: If the bug report lacks a unit test that should be a part of $\textsf{R}$'s test suite, then you can help with providing it.
 
-This is all helpful as it allows the Core developers and/ or maintainers to classify a bug report properly, so that it can be handled in a timely fashion.
+These helpful tasks allow the Core developers and/ or maintainers to classify a bug report properly so that the bug can be handled in a timely fashion.
+
 
 ### How to find a bug report or an issue that you can help with?
 
