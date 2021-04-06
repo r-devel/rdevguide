@@ -22,7 +22,8 @@ A good bug report is the one which:
 
 2. Includes the version of $\textsf{R}$, the machine architecture, and the operating system platform on which the bug occurred.
 
-These are the relevant details that should be a part of a good bug report. You can help with these things once you have experience developing for $\textsf{R}$:
+Relevant details should be a part of a good bug report. You can help with the following tasks once you have some experience developing for $\textsf{R}$:
+
 
 1. Reproducing the bug: If you see a bug report which does not clearly explain how to reproduce it, you can try reproducing the bug and eventually make things easier for the core developer(s) and/or package maintainer(s).
 
