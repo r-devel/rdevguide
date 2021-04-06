@@ -27,7 +27,8 @@ Relevant details should be a part of a good bug report. You can help with the fo
 
 1. Reproducing the bug: If you see a bug report which does not clearly explain how to reproduce it, you can try reproducing the bug and eventually make things easier for the core developer(s) and/or package maintainer(s).
 
-2. Check whether the bug occurs on a different binary build of $\textsf{R}$. It is helpful to know whether the bug is affecting: `r-patched`, `r-devel`, or `r-release` binary builds of $\textsf{R}$.
+2. Checking different binary builds: Check whether the bug occurs on a different binary build of $\textsf{R}$. It is helpful to know whether the bug is affecting: `r-patched`, `r-devel`, or `r-release` binary builds of $\textsf{R}$.
+
 
 3. Writing a unit test: If the bug report lacks a unit test that should be a part of $\textsf{R}$'s test suite, then you can help with providing it.
 
