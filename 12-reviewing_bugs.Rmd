@@ -6,7 +6,8 @@ After understanding where bugs are reported in $\textsf{R}$ (Bugzilla) or in oth
 
 Around the clock, new bug reports are being submitted on Bugzilla or the bug trackers (for instance, GitHub issues) of $\textsf{R}$ packages and existing bug reports are being updated. Every bug report needs to be reviewed to make sure various things are in proper order. You can help with this process of reviewing bugs. 
 
-Note: 
+### Preparing to review bug reports
+
 1. If you want to review bug reports on Bugzilla, you are required to have a Bugzilla account. To get a Bugzilla account send an e-mail to `bug-report-request@r-project.org` from the address you want to use as your login. Briefly explain why you want a Bugzilla account and a volunteer will add you to $\textsf{R}$'s Bugzilla members.
 
 2. More details on how you can review a bug report are available on this [blog](https://developer.r-project.org/Blog/public/2019/10/09/r-can-use-your-help-reviewing-bug-reports/)
