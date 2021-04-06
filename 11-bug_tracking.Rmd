@@ -74,7 +74,8 @@ Once you are confirmed that there is a bug, you need to submit a report so that 
 
 1. If there is a bug in the documentation of this guide, then please report it as an issue at https://github.com/forwards/rdevguide/issues. 
 
-2. Please go through the $\textit{closed}$ issues to check if the bug is already reported and fixed. Otherwise, please check in the $\textit{open}$ issues to see if it is reported. If it is not recorded at either of these places, then please submit a new issue.
+2. Prior to reporting the issue, please go through the $\textit{closed}$ issues to check if the bug is already reported and fixed. Otherwise, please check in the $\textit{open}$ issues to see if it is reported. If it is not found at either of these places, then please submit a new issue.
+
 
 ### Bug in the $\textsf{R}$ Core-supported packages and/or their documentations {#RCorePkgBug}
 
