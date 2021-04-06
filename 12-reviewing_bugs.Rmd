@@ -2,7 +2,7 @@
 
 ## How you can help to review bug reports?
 
-Once you are aware where bugs are reported in $\textsf{R}$, a great way to contribute is to help reviewing the bug reports.
+After understanding where bugs are reported in $\textsf{R}$ (Bugzilla) or in other projects (GitHub), a great way to contribute is reviewing bug reports.
 
 Around the clock, new bug reports are being submitted on Bugzilla or the bug trackers (for instance, GitHub issues) of $\textsf{R}$ packages and existing bug reports are being updated. Every bug report needs to be reviewed to make sure various things are in proper order. You can help with this process of reviewing bugs. 
 
