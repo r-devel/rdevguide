@@ -39,7 +39,8 @@ These helpful tasks allow the Core developers and/ or maintainers to classify a 
 
 1. You may find old bug reports or issues that can be closed, either because they are no longer valid or they have a patch that is ready to be committed, but no one has had the time to do so.
 
-2. You might also want to search for issues in topics which you have a working knowledge. When on Bugzilla you can use the advanced search for specific topics. Bug reports are by default public on Bugzilla (unless the defaults are changed to avoid security vulnerability), so you can select from them.
+2. You might also want to search for issues in topics in which you have a working knowledge. When on Bugzilla you can use the advanced search to find specific topics. Bug reports are by default public on Bugzilla (unless the defaults are changed to avoid security vulnerability).
+
 
 ## See also
 
