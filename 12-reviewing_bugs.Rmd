@@ -15,7 +15,8 @@ Note:
 
 A good bug report is the one which:
 
-1. Clearly explains the bug so that it can be reproduced.
+1. Explains clearly how to reproduce the bug.
+
 
 2. Includes the version of $\textsf{R}$, the machine architecture, and the operating system platform on which the bug occurred.
 
