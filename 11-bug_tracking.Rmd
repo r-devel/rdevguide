@@ -21,7 +21,8 @@ When you are in doubt that there is a bug:
 
 2. At times the code that is written is very complicated, has numerous package and file dependencies, has many function calls, etc.. In such scenarios it is quite common that the code throws an error and you are not able to solve it. You may tend to think that there is a bug that needs to be reported. Before doing so, try to produce a minimum working example of the code for the section where the error occurred. Add only those package and files which are required by that section, and see if the error appears still. Using this approach shall solve most of the errors.
 
-## What may not be a bug?
+## What condition might not be a bug?
+
 
 1. In case the code is doing something unexpected, it may not necessarily be a bug. Carefully review the documentation of the function being called, and check whether the behaviour being exhibited on calling this function is the same as it was designed to do.
 
