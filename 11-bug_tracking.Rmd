@@ -31,7 +31,8 @@ When you are in doubt that there is a bug:
 
 3. If $\textsf{R}$ is running slower than expected, then also it may not be a bug. Ask someone else to review your code in such a case.
 
-4. If some function is working, but it is not defined in the best generalised way, then consult some to look over your code. This may perhaps not be a bug, instead it might be an alternative way of writing the function.
+4. If some function is working, but it is not defined in the best generalised way, then consult someone to look over your code. This may perhaps not be a bug; instead, it might be an alternative way of writing the function.
+
 
 ## Checking if a bug is already reported
 
