@@ -70,7 +70,8 @@ You may find a bug in:
 
 ## How to report a bug? {#ReportBug}
 
-Once you are confirmed that there is a bug, you need to submit a report so that it gets fixed.
+Once you confirm a bug exists, you need to submit a bug report so that it gets fixed.
+
 
 ### Bug in the documentation of this guide {#GuideDocBug}
 
