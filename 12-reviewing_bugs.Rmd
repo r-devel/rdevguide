@@ -35,7 +35,8 @@ Relevant details should be a part of a good bug report. You can help with the fo
 These helpful tasks allow the Core developers and/ or maintainers to classify a bug report properly so that the bug can be handled in a timely fashion.
 
 
-### How to find a bug report or an issue that you can help with?
+### How to find a bug report or an issue to review?
+
 
 1. You may search old bug reports or issues that could be closed. Old bug reports may no longer be valid or may include a patch that is ready to be committed, but no one has had the time to review and commit.
 
