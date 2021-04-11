@@ -1,6 +1,6 @@
 --- 
 title: "Contributing to R Core"
-author: "R Forwards"
+author: "R Contribution Working Group"
 date: "2021-04-11"
 site: bookdown::bookdown_site
 documentclass: book
