@@ -1,9 +1,9 @@
 r-core-developers-guide
 getting-started
 general-instructions
-installing-textsfr
-building-textsfr-and-textsfr-packages
-what-tools-you-need-to-build-textsfr-from-source-on-windows
+installing-r
+building-r-and-r-packages
+what-tools-you-need-to-build-r-from-source-on-windows
 how-to-setup-rtools
-how-to-build-textsfr
+how-to-build-r
 see-also
