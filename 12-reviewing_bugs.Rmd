@@ -2,47 +2,37 @@
 
 ## How you can help to review bug reports?
 
-After understanding where bugs are reported in $\textsf{R}$ (Bugzilla) or in other projects (GitHub), a great way to contribute is reviewing bug reports.
+Once you are aware where bugs are reported in $\textsf{R}$, a great way to contribute is to help reviewing the bug reports.
 
 Around the clock, new bug reports are being submitted on Bugzilla or the bug trackers (for instance, GitHub issues) of $\textsf{R}$ packages and existing bug reports are being updated. Every bug report needs to be reviewed to make sure various things are in proper order. You can help with this process of reviewing bugs. 
 
-### Preparing to review bug reports
+Note: 
 
-1. If you want to review bug reports on Bugzilla, you are required to have a Bugzilla account. To get a Bugzilla account send an e-mail to `bug-report-request@r-project.org` from the address you want to use as your Bugzilla login. Briefly explain why you want a Bugzilla account and a volunteer will add you to $\textsf{R}$'s Bugzilla members.
+If you want to review bug reports on Bugzilla, you are required to have a Bugzilla account. To get a Bugzilla account send an e-mail to `bug-report-request@r-project.org` from the address you want to use as your login. Briefly explain why you want a Bugzilla account and a volunteer will add you to $\textsf{R}$'s Bugzilla members. More details on how you can review a bug report are available on this [blog](https://developer.r-project.org/Blog/public/2019/10/09/r-can-use-your-help-reviewing-bug-reports/)
 
-
-2. More details on how you can review a bug report are available on this [blog](https://developer.r-project.org/Blog/public/2019/10/09/r-can-use-your-help-reviewing-bug-reports/)
-
-### Classifying bug reports
+## Classifying bug reports
 
 A good bug report is the one which:
 
-1. Explains clearly how to reproduce the bug.
-
+1. Clearly explains the bug so that it can be reproduced.
 
 2. Includes the version of $\textsf{R}$, the machine architecture, and the operating system platform on which the bug occurred.
 
-Relevant details should be a part of a good bug report. You can help with the following tasks once you have some experience developing for $\textsf{R}$:
-
+These are the relevant details that should be a part of a good bug report. You can help with these things once you have $\textsf{R}$ programming experience:
 
 1. Reproducing the bug: If you see a bug report which does not clearly explain how to reproduce it, you can try reproducing the bug and eventually make things easier for the core developer(s) and/or package maintainer(s).
 
-2. Checking different binary builds: Check whether the bug occurs on a different binary build of $\textsf{R}$. It is helpful to know whether the bug is affecting: `r-patched`, `r-devel`, or `r-release` binary builds of $\textsf{R}$.
-
+2. Check whether the bug occurs on a different binary build of $\textsf{R}$. It is helpful to know whether the bug is affecting: `r-patched`, `r-devel`, or `r-release` binary builds of $\textsf{R}$.
 
 3. Writing a unit test: If the bug report lacks a unit test that should be a part of $\textsf{R}$'s test suite, then you can help with providing it.
 
-These helpful tasks allow the Core developers and/ or maintainers to classify a bug report properly so that the bug can be handled in a timely fashion.
+This is all helpful as it allows the Core developers and/ or maintainers to classify a bug report properly, so that it can be handled in a timely fashion.
 
+## How to find a bug report or an issue that you can help with?
 
-### How to find a bug report or an issue to review?
+1. You may find old bug reports or issues that can be closed, either because they are no longer valid or they have a patch that is ready to be committed, but no one has had the time to do so.
 
-
-1. You may search old bug reports or issues that could be closed. Old bug reports may no longer be valid or may include a patch that is ready to be committed, but no one has had the time to review and commit.
-
-
-2. You might also want to search for issues in topics in which you have a working knowledge. When on Bugzilla you can use the advanced search to find specific topics. Bug reports are by default public on Bugzilla (unless the defaults are changed to avoid security vulnerability).
-
+2. You might also want to search for issues in topics which you have a working knowledge. When on Bugzilla you can use the advanced search for specific topics. Bug reports are by default public on Bugzilla (unless the defaults are changed to avoid security vulnerability), so you can select from them.
 
 ## See also
 
