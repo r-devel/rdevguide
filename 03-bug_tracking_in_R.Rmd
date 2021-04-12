@@ -13,7 +13,7 @@ You may find a bug in R if:
 
 2. If the code does not do what the documentation says it should, then either the code or the documentation is wrong. Report either of which needs to be fixed.
 
-$\textbf{Note}$:
+**Note**:
 When you are in doubt that there is a bug:
 
 1. Make sure whether the bug appears in a clean session of R. Many times, there are variables/commands/functions stored in history which might cause issues. Hence, check if the issue happens in a clean session. To do so, launch R from the command line with the `--vanilla` option. 
@@ -24,7 +24,7 @@ When you are in doubt that there is a bug:
 
 1. In case the code is doing something unexpected, it may not necessarily be a bug. Carefully review the documentation of the function being called, and check whether the behaviour being exhibited on calling this function is the same as it was designed to do.
 
-2. Issues with [$\textit{seemingly}$ identical numbers](https://cran.r-project.org/doc/FAQ/R-FAQ.html#Why-doesn_0027t-R-think-these-numbers-are-equal_003f) not being equal (especially floating point numbers) are usually not bugs. 
+2. Issues with [_seemingly_ identical numbers](https://cran.r-project.org/doc/FAQ/R-FAQ.html#Why-doesn_0027t-R-think-these-numbers-are-equal_003f) not being equal (especially floating point numbers) are usually not bugs. 
 
 3. If R is running slower than expected, then also it may not be a bug. Ask someone else to review your code in such a case.
 
