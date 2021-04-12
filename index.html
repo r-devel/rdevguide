@@ -24,7 +24,7 @@
 <meta name="author" content="R Contribution Working Group" />
 
 
-<meta name="date" content="2021-04-11" />
+<meta name="date" content="2021-04-12" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -53,6 +53,70 @@
 <script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
 
 
+<style type="text/css">
+code.sourceCode > span { display: inline-block; line-height: 1.25; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
 
 <link rel="stylesheet" href="style.css" type="text/css" />
 </head>
@@ -82,6 +146,21 @@
 </ul></li>
 <li class="chapter" data-level="2.4" data-path="getting-started.html"><a href="getting-started.html#see-also"><i class="fa fa-check"></i><b>2.4</b> See also</a></li>
 </ul></li>
+<li class="chapter" data-level="3" data-path="bug-tracking.html"><a href="bug-tracking.html"><i class="fa fa-check"></i><b>3</b> Bug Tracking</a><ul>
+<li class="chapter" data-level="3.1" data-path="bug-tracking.html"><a href="bug-tracking.html#what-is-a-bug-in-r"><i class="fa fa-check"></i><b>3.1</b> What is a bug in R?</a></li>
+<li class="chapter" data-level="3.2" data-path="bug-tracking.html"><a href="bug-tracking.html#what-condition-might-not-be-a-bug"><i class="fa fa-check"></i><b>3.2</b> What condition might not be a bug?</a></li>
+<li class="chapter" data-level="3.3" data-path="bug-tracking.html"><a href="bug-tracking.html#checking-if-a-bug-is-already-reported"><i class="fa fa-check"></i><b>3.3</b> Checking if a bug is already reported</a></li>
+<li class="chapter" data-level="3.4" data-path="bug-tracking.html"><a href="bug-tracking.html#levels-of-contributing-to-bug-what-do-you-do-when-you-find-a-bug"><i class="fa fa-check"></i><b>3.4</b> Levels of contributing to bug / What do you do when you find a bug?</a></li>
+<li class="chapter" data-level="3.5" data-path="bug-tracking.html"><a href="bug-tracking.html#what-are-some-places-where-you-may-find-a-bug"><i class="fa fa-check"></i><b>3.5</b> What are some places where you may find a bug?</a></li>
+<li class="chapter" data-level="3.6" data-path="bug-tracking.html"><a href="bug-tracking.html#ReportBug"><i class="fa fa-check"></i><b>3.6</b> How to report a bug?</a><ul>
+<li class="chapter" data-level="3.6.1" data-path="bug-tracking.html"><a href="bug-tracking.html#RCorePkgBug"><i class="fa fa-check"></i><b>3.6.1</b> Bug in the R-Core supported packages, their documentations, and/ or in the R language</a></li>
+<li class="chapter" data-level="3.6.2" data-path="bug-tracking.html"><a href="bug-tracking.html#nonRCorePkgBug"><i class="fa fa-check"></i><b>3.6.2</b> Bug in the non R-Core supported packages and/or their documentations</a></li>
+</ul></li>
+<li class="chapter" data-level="3.7" data-path="bug-tracking.html"><a href="bug-tracking.html#good-practices-in-reporting-bugs-expectations-of-a-good-bug-report"><i class="fa fa-check"></i><b>3.7</b> Good practices in reporting bugs / Expectations of a good bug report</a></li>
+<li class="chapter" data-level="3.8" data-path="bug-tracking.html"><a href="bug-tracking.html#disagreement-with-a-resolution-on-the-bug-tracker"><i class="fa fa-check"></i><b>3.8</b> Disagreement with a resolution on the bug tracker</a></li>
+<li class="chapter" data-level="3.9" data-path="bug-tracking.html"><a href="bug-tracking.html#examples-of-bug-reports-submitted-on-bugzilla"><i class="fa fa-check"></i><b>3.9</b> Examples of Bug reports submitted on Bugzilla</a></li>
+<li class="chapter" data-level="3.10" data-path="bug-tracking.html"><a href="bug-tracking.html#see-also-1"><i class="fa fa-check"></i><b>3.10</b> See also</a></li>
+</ul></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
 </ul>
@@ -104,7 +183,7 @@
 <div id="header">
 <h1 class="title">Contributing to R Core</h1>
 <p class="author"><em>R Contribution Working Group</em></p>
-<p class="date"><em>2021-04-11</em></p>
+<p class="date"><em>2021-04-12</em></p>
 </div>
 <div id="section" class="section level1 unnumbered">
 <h1></h1>
