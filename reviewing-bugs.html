@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 1 R Core Developer’s Guide | Contributing to R Core</title>
+  <title>Chapter 4 Reviewing Bugs | Contributing to R Core</title>
   <meta name="description" content="A developer’s guide to contributing to R Core." />
   <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 1 R Core Developer’s Guide | Contributing to R Core" />
+  <meta property="og:title" content="Chapter 4 Reviewing Bugs | Contributing to R Core" />
   <meta property="og:type" content="book" />
   <meta property="og:url" content="TDDO" />
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="forwards/rdevguide" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 1 R Core Developer’s Guide | Contributing to R Core" />
+  <meta name="twitter:title" content="Chapter 4 Reviewing Bugs | Contributing to R Core" />
   
   <meta name="twitter:description" content="A developer’s guide to contributing to R Core." />
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="index.html"/>
-<link rel="next" href="getting-started.html"/>
+<link rel="prev" href="bug-tracking.html"/>
+
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -190,21 +190,63 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="r-core-developers-guide" class="section level1">
-<h1><span class="header-section-number">Chapter 1</span> R Core Developer’s Guide</h1>
-<p>This guide is heavily influenced by the <a href="https://devguide.python.org/appendix/#basics-for-contributors">Python Developer Guide</a>, and is a comprehensive resource for contributing to R Core – for both new and experienced contributors. It is maintained by the R Contribution Working Group. We welcome your contributions to R Core!</p>
-<div class="note">
-<p>This box denotes a tip for the reader.</p>
+<div id="reviewing-bugs" class="section level1">
+<h1><span class="header-section-number">Chapter 4</span> Reviewing Bugs</h1>
+<div id="how-you-can-help-to-review-bug-reports" class="section level2">
+<h2><span class="header-section-number">4.1</span> How you can help to review bug reports?</h2>
+<p>After understanding where bugs are reported in R (Bugzilla) or in other projects (GitHub/GitLab/R-Forge), a great way to contribute is reviewing bug reports.</p>
+<p>Around the clock, new bug reports are being submitted on Bugzilla or the bug trackers (for instance, GitHub issues) of R packages and existing bug reports are being updated. Every bug report needs to be reviewed to make sure various things are in proper order. You can help with this process of reviewing bugs.</p>
+<div id="preparing-to-review-bug-reports" class="section level3">
+<h3><span class="header-section-number">4.1.1</span> Preparing to review bug reports</h3>
+<p>If you want to review bug reports on Bugzilla, you are required to have a Bugzilla account. To get a Bugzilla account send an e-mail to <code>bug-report-request@r-project.org</code> from the address you want to use as your Bugzilla login. Briefly explain why you want a Bugzilla account and a volunteer will add you to R’s Bugzilla members. More details on how you can review a bug report are available on this <a href="https://developer.r-project.org/Blog/public/2019/10/09/r-can-use-your-help-reviewing-bug-reports/">blog</a></p>
 </div>
+</div>
+<div id="classifying-bug-reports" class="section level2">
+<h2><span class="header-section-number">4.2</span> Classifying bug reports</h2>
+<p>A good bug report is the one which:</p>
+<ol style="list-style-type: decimal">
+<li><p>Explains clearly how to reproduce the bug.</p></li>
+<li><p>Includes the version of R, the machine architecture, and the operating system platform on which the bug occurred.</p></li>
+</ol>
+<p>Relevant details should be a part of a good bug report. You can help with the following tasks once you have some R programming experience:</p>
+<ol style="list-style-type: decimal">
+<li><p>Reproducing the bug: If you see a bug report which does not clearly explain how to reproduce it, you can try reproducing the bug and eventually make things easier for the core developer(s) and/or package maintainer(s).</p></li>
+<li><p>Checking different binary builds: Check whether the bug occurs on a different binary build of R. It is helpful to know whether the bug is affecting: <code>r-patched</code>, <code>r-devel</code>, or <code>r-release</code> binary builds of R.</p></li>
+<li><p>Writing a unit test: If the bug report lacks a unit test that should be a part of R’s test suite, then you can help with providing it.</p></li>
+</ol>
+<p>These helpful tasks allow the Core developers and/ or maintainers to classify a bug report properly, so that the bug can be handled in a timely fashion.</p>
+</div>
+<div id="how-to-find-a-bug-report-or-an-issue-to-review" class="section level2">
+<h2><span class="header-section-number">4.3</span> How to find a bug report or an issue to review?</h2>
+<ol style="list-style-type: decimal">
+<li><p>You may search old bug reports or issues that could be closed. Old bug reports may no longer be valid or may include a patch that is ready to be committed, but no one has had the time to review and commit.</p></li>
+<li><p>You might also want to search for issues in topics in which you have a working knowledge. When on Bugzilla you can use the advanced search to find specific topics. Bug reports are by default public on Bugzilla (unless the defaults are changed to avoid security vulnerability).</p></li>
+</ol>
+</div>
+<div id="share-that-you-can-report-on-bugreports-for-review-on-r-devel-slack-or-on-the-gh-mirror" class="section level2">
+<h2><span class="header-section-number">4.4</span> share that you can report on bugreports for review on r-devel slack or on the GH mirror</h2>
+</div>
+<div id="example-of-a-bug-review-submitted-on-bugzilla" class="section level2">
+<h2><span class="header-section-number">4.5</span> Example of a bug review submitted on Bugzilla</h2>
+<p>If you would like to see how bugs are reviewed on Bugzilla, <a href="https://bugs.r-project.org/bugzilla/show_bug.cgi?id=16542">here</a> is an example where an old bug report is being reviewed. It is tested to see if it was still an issue and a few ways are proposed to resolve the issue.</p>
+<p><strong>Note</strong>:</p>
+<p>There is a <code>#bugreports-for-review</code> channel on the <a href="https://r-devel.slack.com/">R-devel slack</a> where you can share your bug report(s) for review/feedback before submitting to Bugzilla. This can help with checking that it really is a bug, that you have included the important information and excluded redundant information.</p>
+</div>
+<div id="see-also-2" class="section level2">
+<h2><span class="header-section-number">4.6</span> See also</h2>
+<ol style="list-style-type: decimal">
+<li><a href="https://developer.r-project.org/Blog/public/2019/10/09/r-can-use-your-help-reviewing-bug-reports/">Reviewing bug reports: Blog</a></li>
+</ol>
 
+</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="getting-started.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="bug-tracking.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
