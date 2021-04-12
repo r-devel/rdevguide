@@ -1,6 +1,6 @@
 --- 
 title: "Contributing to R Core"
-author: "R Forwards"
+author: "R Contribution Working Group"
 date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
 documentclass: book
