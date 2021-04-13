@@ -34,8 +34,6 @@ These helpful tasks allow the Core developers and/ or maintainers to classify a 
 
 2. You might also want to search for issues in topics in which you have a working knowledge. When on Bugzilla you can use the advanced search to find specific topics. Bug reports are by default public on Bugzilla (unless the defaults are changed to avoid security vulnerability).
 
-## share that you can report on bugreports for review on r-devel slack or on the GH mirror
-
 ## Example of a bug review submitted on Bugzilla
 
 If you would like to see how bugs are reviewed on Bugzilla, [here](https://bugs.r-project.org/bugzilla/show_bug.cgi?id=16542) is an example where an old bug report is being reviewed. It is tested to see if it was still an issue and a few ways are proposed to resolve the issue.

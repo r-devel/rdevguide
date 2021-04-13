@@ -24,7 +24,7 @@
 <meta name="author" content="R Contribution Working Group" />
 
 
-<meta name="date" content="2021-04-12" />
+<meta name="date" content="2021-04-13" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -167,9 +167,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="4.2" data-path="reviewing-bugs.html"><a href="reviewing-bugs.html#classifying-bug-reports"><i class="fa fa-check"></i><b>4.2</b> Classifying bug reports</a></li>
 <li class="chapter" data-level="4.3" data-path="reviewing-bugs.html"><a href="reviewing-bugs.html#how-to-find-a-bug-report-or-an-issue-to-review"><i class="fa fa-check"></i><b>4.3</b> How to find a bug report or an issue to review?</a></li>
-<li class="chapter" data-level="4.4" data-path="reviewing-bugs.html"><a href="reviewing-bugs.html#share-that-you-can-report-on-bugreports-for-review-on-r-devel-slack-or-on-the-gh-mirror"><i class="fa fa-check"></i><b>4.4</b> share that you can report on bugreports for review on r-devel slack or on the GH mirror</a></li>
-<li class="chapter" data-level="4.5" data-path="reviewing-bugs.html"><a href="reviewing-bugs.html#example-of-a-bug-review-submitted-on-bugzilla"><i class="fa fa-check"></i><b>4.5</b> Example of a bug review submitted on Bugzilla</a></li>
-<li class="chapter" data-level="4.6" data-path="reviewing-bugs.html"><a href="reviewing-bugs.html#see-also-2"><i class="fa fa-check"></i><b>4.6</b> See also</a></li>
+<li class="chapter" data-level="4.4" data-path="reviewing-bugs.html"><a href="reviewing-bugs.html#example-of-a-bug-review-submitted-on-bugzilla"><i class="fa fa-check"></i><b>4.4</b> Example of a bug review submitted on Bugzilla</a></li>
+<li class="chapter" data-level="4.5" data-path="reviewing-bugs.html"><a href="reviewing-bugs.html#see-also-2"><i class="fa fa-check"></i><b>4.5</b> See also</a></li>
 </ul></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
@@ -260,12 +259,12 @@ When you are in doubt that there is a bug:</p>
 </div>
 <div id="nonRCorePkgBug" class="section level3">
 <h3><span class="header-section-number">3.6.2</span> Bug in the non R-Core supported packages and/or their documentations</h3>
-<p>For packages that are not maintained by the R-Core, the bug reports can be submiited at, perhaps, an issues tracker url on GitHub/GitLab/R-Forge. To find if such an issues tracker is available, you can look at the package <code>DESCRIPTION</code> file first (e.g. using <code>packageDescription("package_name")</code>) to check if a url is provided in the <code>BugReports</code> field. If that is not available, then the package maintainer can be contacted (using <code>maintainer("package_name")</code>). In R running the function <code>bug.report(package = "package_name")</code> shall direct you to either the GitHub issue tracker of the package, or to the bug tracking web page, or towards composing an e-mail to the package maintainer. This function <code>bug.report</code> is disabled in <span class="math inline">\(\textbf{RStudio}\)</span>, by default. However, if you use <code>utils::bug.report(package = "package_name")</code> then it works on <span class="math inline">\(\textbf{RStudio}\)</span> as well. Please ensure that the bug is not already reported or fixed before reporting it in any of the ways suggested above.</p>
+<p>For packages that are not maintained by the R-Core, the bug reports can be submiited at, perhaps, an issues tracker url on GitHub/GitLab/R-Forge. To find if such an issues tracker is available, you can look at the package <code>DESCRIPTION</code> file first (e.g. using <code>packageDescription("package_name")</code>) to check if a url is provided in the <code>BugReports</code> field. If that is not available, then the package maintainer can be contacted (using <code>maintainer("package_name")</code>). In R running the function <code>bug.report(package = "package_name")</code> shall direct you to either the GitHub issue tracker of the package, or to the bug tracking web page, or towards composing an e-mail to the package maintainer. This function <code>bug.report</code> is disabled in RStudio, by default. However, if you use <code>utils::bug.report(package = "package_name")</code> then it works on RStudio as well. Please ensure that the bug is not already reported or fixed before reporting it in any of the ways suggested above.</p>
 </div>
 </div>
 <div id="good-practices-in-reporting-bugs-expectations-of-a-good-bug-report" class="section level2">
 <h2><span class="header-section-number">3.7</span> Good practices in reporting bugs / Expectations of a good bug report</h2>
-<p>If you follow the practices given below, you will come up with a good bug report which might make it easier for the Maintainer(s) to fix the bug.</p>
+<p>If you follow the practices given below, you will come up with a good bug report which might make it easier for the maintainer(s) to fix the bug.</p>
 <ol style="list-style-type: decimal">
 <li><p>Include a minimal reproducible example of the bug in your report. The maintainer should be able to quickly reproduce the bug on using the minimal example that you provide. Here is a <a href="https://stackoverflow.com/questions/5963269/how-to-make-a-great-r-reproducible-example">community wiki post</a> on how to make a minimal reproducible example.</p></li>
 <li><p>Mention the software architecture on which the bug occurred.</p></li>

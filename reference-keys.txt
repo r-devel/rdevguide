@@ -25,6 +25,5 @@ how-you-can-help-to-review-bug-reports
 preparing-to-review-bug-reports
 classifying-bug-reports
 how-to-find-a-bug-report-or-an-issue-to-review
-share-that-you-can-report-on-bugreports-for-review-on-r-devel-slack-or-on-the-gh-mirror
 example-of-a-bug-review-submitted-on-bugzilla
 see-also-2
