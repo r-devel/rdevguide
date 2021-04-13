@@ -94,7 +94,7 @@ Once you have successfully reported a bug, you will likely receive an update eac
 
 ## Disagreement with a resolution on the bug tracker
 
-As humans, there might be differences of opinions from time to time. What needs to be considered here is that, we are respectful of the fact that care, thought, and volunteer time has gone into the resolution of the issue or bug. 
+As humans, there might be differences of opinions from time to time. What needs to be considered here is that, being respectful of the fact that care, thought, and volunteer time has gone into the resolution of the issue or bug. 
 
 If you take some time, then on reflection, the resolution steps may seem more reasonable than you initially thought. If you still feel that the resolution is incorrect, then raise a thoughtful question to the person who resolved it. If the issue was carefully thought about in the first place then is less likely to win any conversion of thought.
 
