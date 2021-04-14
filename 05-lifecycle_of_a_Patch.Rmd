@@ -1,0 +1,75 @@
+# Lifecycle of a Patch {#FixBug}
+
+## Introduction
+
+R uses a workflow based on patches. What this means is that you can create a patch and submit it through your official Bugzilla account to the core developer(s) and/ or package maintainer(s).
+
+## When do you submit a patch?
+
+There might be a situation where you come across a bug in R, which you may have an idea of how to fix. This can turn out to be an opportunity for you to submit a patch. By submitting a patch or a bug fix, you are helping to reduce the workload on the R developers in addition to yourself being a contributor to R!  
+
+When you submit a patch, you are helping the developer(s) and maintainer(s) so that they do not have to write the entire code from scratch. Instead, they can test and tweak your patch, if necessary.
+
+## What tools are required to submit a patch?
+
+To submit a patch, you need:
+
+1. [SVN](http://subversion.apache.org/) installed on your machine.
+
+2. The latest developer version of R.
+
+## How to submit a patch?
+
+Refer to the guidelines given [here](https://www.r-project.org/bugs.html#how-to-submit-patches) for the process to submit a patch in R.
+
+## Step-by-step Guide {#GitBranch}
+
+### Resolving Merge Confilcts
+
+## Making Good PRs 
+
+## Making Good Commits
+
+## Licensing
+
+## Submitting
+
+## Converting an Existing Patch
+
+## Reviewing
+
+### How to Review a Pull Request
+
+## Leaving a Pull Request Review
+
+## Committing/Rejecting
+
+## Crediting
+
+## Details
+
+## Reviewing patches
+
+If a bug report or an issue has a patch attached that has not been reviewed, you can help by making sure that the patch:
+
+1. Follows the style guides.
+
+2. Is a good solution to the problem it is trying to solve.
+
+3. Includes proper tests.
+
+4. Includes proper documentation changes.
+
+Doing all of this allows the core developer(s) and/ or maintainer(s) to more quickly look for subtle issues that only people with extensive experience working on R's codebase will notice.
+
+## share examples of patch reports on Bugzilla+?
+
+## share examples where people have acted as reviewers for patches
+
+**Note**:
+
+There is a `#patches-for-review` channel on the [R-devel slack](https://r-devel.slack.com/) where you can share your patch(es) for review/feedback before submitting to R-Core/Bugzilla. This can help with checking that you have included the important information and excluded redundant information.
+
+## See also
+
+1. [Submitting patches](https://www.r-project.org/bugs.html#how-to-submit-patches)
