@@ -88,7 +88,7 @@ When you review a patch, you should provide additional details and context of yo
 
 A core developer can dismiss another core developer’s review if they confirmed that the requested changes have been made. When a core developer has assigned the patch to themselves, then it is a sign that they are actively looking after the patch, and their review should not be dismissed.
 
-## Committing/Rejecting
+## Acceptance or rejection of your patch
 
 Once your patch has reached an acceptable state (and thus considered 'accepted'), it will either be applied or rejected. If it is rejected, please do not take it personally! Your work is still appreciated regardless of whether your patch is applied. Balancing what does and does not go into R is tricky and everyone's contributions cannot always be accepted.
 
