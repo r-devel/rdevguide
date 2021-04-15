@@ -90,7 +90,7 @@ A core developer can dismiss another core developer’s review if they confirmed
 
 ## Acceptance or rejection of your patch
 
-Once your patch has reached an acceptable state (and thus considered 'accepted'), it will either be applied or rejected. If it is rejected, please do not take it personally! Your work is still appreciated regardless of whether your patch is applied. Balancing what does and does not go into R is tricky and everyone's contributions cannot always be accepted.
+Once your patch has reached an acceptable state, it will either be applied or rejected. If it is rejected, please do not take it personally. Your work is still appreciated regardless of whether your patch is applied. Balancing what does and does not go into R is tricky and everyone's contributions cannot always be accepted.
 
 But if your patch is accepted and applied it will then go on to be released with the next patched release and eventually the next major release of R. It may also be backported to older versions of R as a bugfix if the core developer doing the patch acceptance believes it is warranted.
 
