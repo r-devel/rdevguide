@@ -40,11 +40,11 @@ When creating a patch for submission, there are several things that you can do t
 
 7. Each bugfix should ideally be addressed by a single patch. In particular, do not fix more than one issue in the same patch (except, if one code change fixes all of them) and do not do cosmetic changes to unrelated code in the same patch as some bugfix.
 
-8. Include (mostly as the first sentence), a to-the-point explanation of what the purpose of the patch is. This sentence should not be in the descriptive form, rather an imperative form will be more suitable here. If this is not enough detail for a patch, a new paragraphs(s) can be added to explain in proper depth what has happened. The details should be good enough that a core developer reading it understands the justificationfor the change.
+## Submitting your patch for review
 
-9. If your patch is in response to a pre-existing issue or bug report on Bugzilla, then please make sure to reference the bug number using `Bug-NNNNN` in the patch title or message or comment.
+1. Patch in response to a pre-existing issue or bug report:  In this case, you should attach the patch to the existing issue or bug report on Bugzilla with a brief comment.
 
-10. If the patch is for an unreported issue or bug (assuming you already performed a search on Bugzilla for a pre-existing issue or bug), create a new bug report and include your patch with it. Please fill in as much relevant detail as possible to prevent reviewers from having to delay reviewing your patch because of lack of information.
+2. Patch in response to an unreported issue or bug report: Assuming you already performed a search on Bugzilla for a pre-existing issue or bug and did not find the issue or bug reported, you need to create a new bug report and include your patch with it. Please fill in as much relevant detail as possible to prevent reviewers from having to delay reviewing your patch because of lack of information. Include (mostly as the first sentence), a to-the-point explanation of what the purpose of the patch is. This sentence should not be in the descriptive form, rather an imperative form will be more suitable here. If this is not enough detail for a patch, a new paragraphs(s) can be added to explain in proper depth what has happened. The details should be good enough that a core developer reading it understands the justification for the change.
  
 ## Reviewing
 
