@@ -25,7 +25,8 @@ There are three main parts of an .Rd file:
 
 3. **Footer**: This part is optional. Usually the keyword information is included here.
 
-All the above information is included in a .Rd file within a series of sections with standard nmes (user-defined sections are also allowed). These sections are discussed below:
+All the above information is included in a .Rd file within a series of sections with standard names (user-defined sections are also allowed). These sections are discussed below:
+
 
 1. `\title` section:
     * Capitalize each word.
