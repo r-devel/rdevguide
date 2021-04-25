@@ -1,0 +1,15 @@
+# Testing R code {#TestRCode}
+
+## Running
+
+## Writing tests for R
+
+Writing tests for R is much like writing tests for your own code. Tests need to be thorough, fast, isolated, consistently repeatable, and as simple as possible. 
+
+When you are adding tests to an existing test file, it is also recommended that you study the other tests in that file; it will teach you which precautions you have to take to make your tests robust and portable.
+
+## Benchmarks
+
+Benchmarking is useful to test that a change does not degrade performance.
+
+## See also
