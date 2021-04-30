@@ -104,13 +104,17 @@ If you take some time, then on reflection, the resolution steps may seem more re
 
 As a reminder, issues closed by a core developer on Bugzilla have already been carefully considered. Please do not reopen a closed issue. Although one can comment on a closed issue, if necessary. Every comment on an issue generates an email to every R-core member (unless they have the notifications disabled). So it would be best to be considerate while commenting on issues, especially in case of the closed issues or when you are commenting in pure agreement without adding anything beyond that to a discussion (the +1 type posts which are perfectly acceptable in other contexts).
 
-## Examples of Bug reports submitted on Bugzilla
+## Examples of Bug reports submitted on Bugzilla or R-devel mailing list
 
 If you like to see how bugs are reported on Bugzilla, here are some examples:
 
 1. A [bug report](https://bugs.r-project.org/bugzilla/show_bug.cgi?id=17767) with a reproducible example, a patch, and a review.
 
-2. A [bug report](https://stat.ethz.ch/pipermail/r-devel/2019-May/077855.html) submitted via R-devel mailing list. (More information about the R-devel mailing list can be found [here](https://stat.ethz.ch/mailman/listinfo/r-devel)).
+2. A [bug report](https://stat.ethz.ch/pipermail/r-devel/2019-May/077855.html) submitted by Kara Woo which was promptly fixed via the R-devel mailing list. (More information about the R-devel mailing list can be found [here](https://stat.ethz.ch/mailman/listinfo/r-devel)).
+
+3. A substring [bug reported](https://stat.ethz.ch/pipermail/r-devel/2019-February/077393.html) by Toby Dylan Hocking and fixed by Tomas Kalibera, Feb 2019 via the R-devel mailing list.
+
+4. A gregexpr [bug report and patch](https://stat.ethz.ch/pipermail/r-devel/2019-February/077315.html) submitted by Toby Dylan Hocking and merged by Tomas Kalibera, Feb 2019 via the R-devel mailing list.
 
 ## See also
 
