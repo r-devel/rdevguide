@@ -48,7 +48,6 @@ div.note {
     background: hsla(214, 70%, 50%, 0.15);
     background-repeat: no-repeat;
     background-position: 15px center;
-    min-height: 120px;
     border-left: solid 4px 	hsl(214, 70%, 50%)
 }
 
