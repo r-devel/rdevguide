@@ -1,6 +1,6 @@
 # News and Annoucements
 
-Here are some resources which can be useful to keep up with the developments in R:
+Here are some resources that can be useful to keep up with the developments in R:
 
 ## Blogs
 
