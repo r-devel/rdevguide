@@ -1,0 +1,47 @@
+# Reviewing Bugs
+
+## How you can help to review bug reports?
+
+After understanding where bugs are reported in R (Bugzilla) or in other projects (GitHub/GitLab/R-Forge), a great way to contribute is reviewing bug reports.
+
+Around the clock, new bug reports are being submitted on Bugzilla or the bug trackers (for instance, GitHub issues) of R packages and existing bug reports are being updated. Every bug report needs to be reviewed to make sure various things are in proper order. You can help with this process of reviewing bugs. 
+
+### Preparing to review bug reports 
+
+If you want to review bug reports on Bugzilla, you are required to have a Bugzilla account. To get a Bugzilla account send an e-mail to `bug-report-request@r-project.org` from the address you want to use as your Bugzilla login. Briefly explain why you want a Bugzilla account and a volunteer will add you to R's Bugzilla members. More details on how you can review a bug report are available on this [blog](https://developer.r-project.org/Blog/public/2019/10/09/r-can-use-your-help-reviewing-bug-reports/)
+
+## Classifying bug reports
+
+A good bug report is the one which:
+
+1. Explains clearly how to reproduce the bug.
+
+2. Includes the version of R, the machine architecture, and the operating system platform on which the bug occurred.
+
+Relevant details should be a part of a good bug report. You can help with the following tasks once you have some R programming experience:
+
+1. Reproducing the bug: If you see a bug report which does not clearly explain how to reproduce it, you can try reproducing the bug and eventually make things easier for the core developer(s) and/or package maintainer(s).
+
+2. Checking different binary builds: Check whether the bug occurs on a different binary build of R. It is helpful to know whether the bug is affecting: `r-patched`, `r-devel`, or `r-release` binary builds of R.
+
+3. Writing a unit test: If the bug report lacks a unit test that should be a part of R's test suite, then you can help with providing it.
+
+These helpful tasks allow the Core developers and/ or maintainers to classify a bug report properly, so that the bug can be handled in a timely fashion.
+
+## How to find a bug report or an issue to review?
+
+1. You may search old bug reports or issues that could be closed. Old bug reports may no longer be valid or may include a patch that is ready to be committed, but no one has had the time to review and commit.
+
+2. You might also want to search for issues in topics in which you have a working knowledge. When on Bugzilla you can use the advanced search to find specific topics. Bug reports are by default public on Bugzilla (unless the defaults are changed to avoid security vulnerability).
+
+## Example of a bug review submitted on Bugzilla
+
+If you would like to see how bugs are reviewed on Bugzilla, [here](https://bugs.r-project.org/bugzilla/show_bug.cgi?id=16542) is an example where an old bug report is being reviewed. It is tested to see if it was still an issue and a few ways are proposed to resolve the issue.
+
+**Note**:
+
+There is a `#bugreports-for-review` channel on the [R-devel slack](https://r-devel.slack.com/) where you can share your bug report(s) for review/feedback before submitting to Bugzilla. This can help with checking that it really is a bug, that you have included the important information and excluded redundant information.
+
+## See also
+
+1. [Reviewing bug reports: Blog](https://developer.r-project.org/Blog/public/2019/10/09/r-can-use-your-help-reviewing-bug-reports/)
