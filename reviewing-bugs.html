@@ -53,6 +53,12 @@
 <script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
 <link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
 <script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<script>
+// add little icons to top left of note box
+$( document ).ready(function() {
+  $(".note").append("<div class='note-icon'><img src='img/information.svg'></img></div>")
+});
+</script>
 
 
 <style type="text/css">
@@ -134,7 +140,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       <nav role="navigation">
 
 <ul class="summary">
-<img src="img/Rlogo.png" style="width:150px;padding:10px 0px 0px 10px;"></img>
+<img src="img/Rlogo.png" style="width:150px;padding:10px 0px 0px 10px;display: block;margin:auto;"></img>
 
 <li class="divider"></li>
 <li><a href="index.html#section"></a></li>
