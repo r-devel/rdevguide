@@ -1,0 +1,44 @@
+# Where to get help 
+
+If you are working on R it is possible that you will come across an issue where you would need some assistance to solve it. If you require help, there are options available to seek assistance or get some feedback which are discussed in this chapter. If the question involves process or tool usage then please check the rest of this guide first as it should answer your question. Please be polite, patient, and respectful of people's time while you ask for feedback or help. 
+
+## Mailing Lists
+
+There are quite a few [mailing lists](https://www.r-project.org/mail.html) for getting help with R:
+
+  * [R-help](https://stat.ethz.ch/mailman/listinfo/r-help): 
+      * Discussions about problems and solutions using R.
+      * Announcements about the development of R.
+      * Announcements about the availability of new code.
+      * Enhancements and patches to the R source code and the R documentation.
+      * Comparison and compatibilty with S and S-plus.
+      * Posting examples and benchmarks.
+      
+  * [R-package-devel](https://stat.ethz.ch/mailman/listinfo/r-package-devel): 
+      * Getting help about package development in R.
+      * Learning about the package development process. 
+      * Discussing problems developing a package (or problem in passing the R CMD check).
+      
+  * [R-devel](https://stat.ethz.ch/mailman/listinfo/r-devel): 
+      * Questions and discussion about code development in R.
+      * Proposals of new functionality for R.
+      * Pre-testing of new versions of R.
+
+Please avoid cross-posting to both the R-package-devel and the R-devel mailing lists.
+
+## Slack
+
+You can try asking and get feedback on the [R-devel slack](https://r-devel.slack.com/), before submitting to Bugzilla. There are a number of experienced developers on this slack who can answer questions and/or provide feedback. The following channels are available on the R-devel slack for help and feedback with specific areas:
+
+  * #bugreports-for-review: Share bug report for review/feedback before submitting to Bugzilla.
+  * #core-dev-help: Getting help on anything related to R Core contribution.
+  * #core-documentation: Discuss patches/improvements to R's documentation.
+  * #core-translation: Discuss translating R into non-English languages.
+  * #patches-for-review: Share patches for peer review before submitting to R Core.
+
+Note: You may not be able to access the history of these channels, so it cannot be used as a knowledge base of sorts. 
+<!-- TODO check how long past messages remain available on Slack) -->
+
+## File a Bug
+
+If you strongly suspect you have come across a bug (be it in the build process, or in other areas), then report it on Bugzilla. As with every bug report it is strongly advised that you detail which conditions triggered it (including the OS name and version, and what you were trying to do), as well as the exact error message you encountered.
