@@ -12,7 +12,8 @@ Updates about conferences actively supported or endorsed by The R Foundation can
 
 ## Journal
 
-[The R Journal](https://journal.r-project.org/) is a open access, referred journal featuring short to medium length articles that should be of interest to users or developers of R. It also has a news section where information on, changes in R (new features of the latest release), changes on CRAN (new add-on packages, manuals, binary contributions, mirrors, etc.), upcoming conferences, and conference reports is provided.
+[The R Journal](https://journal.r-project.org/) is an open access and refereed journal featuring short to medium length articles that should be of interest to users or developers of R. It also has a news section where information on, changes in R (new features of the latest release), changes on CRAN (new add-on packages, manuals, binary contributions, mirrors, etc.), upcoming conferences, and conference reports is provided.
+
 
 ## Mailing lists
 
