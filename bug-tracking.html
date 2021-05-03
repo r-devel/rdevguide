@@ -24,7 +24,7 @@
 <meta name="author" content="R Contribution Working Group" />
 
 
-<meta name="date" content="2021-05-01" />
+<meta name="date" content="2021-05-03" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -216,7 +216,7 @@ When you are in doubt that there is a bug: (which should be most of the time!)</
 <ol style="list-style-type: decimal">
 <li><p>Make sure whether the bug appears in a clean session of R. Many times, there are variables/commands/functions stored in history which might cause issues. Hence, check if the issue happens in a clean session. To do so, launch R from the command line with the <code>--vanilla</code> option.</p></li>
 <li><p>At times the code that is written is very complicated, has numerous package and file dependencies, has many function calls, etc.. In such scenarios it is quite common that the code throws an error and you are not able to solve it. You may tend to think that there is a bug that needs to be reported. Before doing so, try to produce a minimum working example of the code for the section where the error occurred. Add only those package and files which are required by that section, and see if the error appears still. Using this approach shall solve most of the errors.</p></li>
-<li><p>Install R-devel, which is the most recent version of R from <a href="svn">https://svn.r-project.org/R/trunk/</a> / <a href="https://github.com/r-devel/r-svn">https://github.com/r-devel/r-svn</a> or <a href="daily%20Windows%20build">https://cran.r-project.org/bin/windows/base/rdevel.html</a>, and see if your bug still exists in R-devel (it may have been fixed very recently).</p></li>
+<li><p>Install R-devel, which is the most recent version of R from <a href="https://svn.r-project.org/R/trunk/">svn</a> / <a href="https://github.com/r-devel/r-svn">git</a> or <a href="https://cran.r-project.org/bin/windows/base/rdevel.html">daily Windows build</a>, and see if your bug still exists in R-devel (it may have been fixed very recently).</p></li>
 <li><p>Search on R-devel email list for messages with keywords related to your possible bug. If you find some related messages then read them to see if they clarify whether or not it is a bug. If you do not find any related messages, then please post a new message to R-devel. Your message should include (1) a brief description of the bug including current and expected behavior, (2) a minimal reproducible example.</p></li>
 </ol>
 </div>

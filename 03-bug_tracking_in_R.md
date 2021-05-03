@@ -21,7 +21,7 @@ When you are in doubt that there is a bug: (which should be most of the time!)
 
 2. At times the code that is written is very complicated, has numerous package and file dependencies, has many function calls, etc.. In such scenarios it is quite common that the code throws an error and you are not able to solve it. You may tend to think that there is a bug that needs to be reported. Before doing so, try to produce a minimum working example of the code for the section where the error occurred. Add only those package and files which are required by that section, and see if the error appears still. Using this approach shall solve most of the errors.
 
-3. Install R-devel, which is the most recent version of R from [https://svn.r-project.org/R/trunk/](svn) / [https://github.com/r-devel/r-svn](https://github.com/r-devel/r-svn) or [https://cran.r-project.org/bin/windows/base/rdevel.html](daily Windows build), and see if your bug still exists in R-devel (it may have been fixed very recently).
+3. Install R-devel, which is the most recent version of R from [svn](https://svn.r-project.org/R/trunk/) / [git](https://github.com/r-devel/r-svn) or [daily Windows build](https://cran.r-project.org/bin/windows/base/rdevel.html), and see if your bug still exists in R-devel (it may have been fixed very recently).
 
 4. Search on R-devel email list for messages with keywords related to your possible bug. If you find some related messages then read them to see if they clarify whether or not it is a bug. If you do not find any related messages, then please post a new message to R-devel. Your message should include (1) a brief description of the bug including current and expected behavior, (2) a minimal reproducible example.
 

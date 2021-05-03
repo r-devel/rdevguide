@@ -1,7 +1,7 @@
 --- 
 title: "Contributing to R Core"
 author: "R Contribution Working Group"
-date: "2021-05-01"
+date: "2021-05-03"
 site: bookdown::bookdown_site
 documentclass: book
 bibliography: [book.bib]
