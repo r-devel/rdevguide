@@ -1,0 +1,125 @@
+# Bug Tracking
+
+## What is a bug in R?
+
+You may find a bug in R if:
+
+1. The R session terminates unexpectedly, or there is a segmentation fault, it might be a bug in R, unless you have written your own call to compiled code or an internal function (via `.C` or `.Internal`). The error may look like this:
+
+```{r, results='hide'}
+##  *** caught segfault ***
+## address (nil), cause 'memory not mapped'
+```
+
+2. If the code does not do what the documentation says it should, then either the code or the documentation is wrong. Report either of which needs to be fixed.
+
+**Note**:
+When you are in doubt that there is a bug: (which should be most of the time!)
+
+1. Make sure whether the bug appears in a clean session of R. Many times, there are variables/commands/functions stored in history which might cause issues. Hence, check if the issue happens in a clean session. To do so, launch R from the command line with the `--vanilla` option. 
+
+2. At times the code that is written is very complicated, has numerous package and file dependencies, has many function calls, etc.. In such scenarios it is quite common that the code throws an error and you are not able to solve it. You may tend to think that there is a bug that needs to be reported. Before doing so, try to produce a minimum working example of the code for the section where the error occurred. Add only those package and files which are required by that section, and see if the error appears still. Using this approach shall solve most of the errors.
+
+3. Install R-devel, which is the most recent version of R from [svn](https://svn.r-project.org/R/trunk/) / [git](https://github.com/r-devel/r-svn) or [daily Windows build](https://cran.r-project.org/bin/windows/base/rdevel.html), and see if your bug still exists in R-devel (it may have been fixed very recently).
+
+4. Search on R-devel email list for messages with keywords related to your possible bug. If you find some related messages then read them to see if they clarify whether or not it is a bug. If you do not find any related messages, then please post a new message to R-devel. Your message should include (1) a brief description of the bug including current and expected behavior, (2) a minimal reproducible example.
+
+## What condition might not be a bug?
+
+1. In case the code is doing something unexpected, it may not necessarily be a bug. Carefully review the documentation of the function being called, and check whether the behaviour being exhibited on calling this function is the same as it was designed to do.
+
+2. Issues with [_seemingly_ identical numbers](https://cran.r-project.org/doc/FAQ/R-FAQ.html#Why-doesn_0027t-R-think-these-numbers-are-equal_003f) not being equal (especially floating point numbers) are usually not bugs. 
+
+3. If R is running slower than expected, then also it may not be a bug. Ask someone else to review your code in such a case.
+
+4. If some function is working, but it is not defined in the best generalised way, then consult someone to look over your code. This may perhaps not be a bug; instead, it might be an alternative way of writing the function.
+
+## Checking if a bug is already reported
+
+The first step before filing a bug report is to see whether the problem has already been reported. Checking if the bug is reported will:
+
+1. Save time for you and the developers
+
+2. Help you see if the bug is already fixed for the next release
+
+3. Lead you to learn what needs to be done to fix it
+
+4. Determine if any additional information is needed
+
+The sections that follow discuss where to check whether a bug is already reported.
+
+## Levels of contributing to bug / What do you do when you find a bug?
+
+1. [Report](#ReportBug) the bug (if it is not already reported).
+
+2. [Test](provide hyperlink to the section/chapter which discusses this also include comment 1 from getting started chapter) the bug.
+
+3. [Fix](hyperlink to the chapter on the lifecycle of a patch) the bug: Fixing a bug might require relatively more time. You may start a conversation about it on [BugZilla](https://bugs.r-project.org/bugzilla/index.cgi). This would require engagement with R Core team.
+
+## What are some places where you may find a bug?
+
+You may find a bug in:
+
+1. In the [R-Core supported packages, their documentations, and/ or in the R language](#RCorePkgBug).
+
+2. In [packages and/or their documentations which are not supported by the R-Core](#nonRCorePkgBug).
+
+## How to report a bug? {#ReportBug}
+
+Once you confirm a bug exists, you need to submit a bug report so that it gets fixed.
+
+### Bug in the R-Core supported packages, their documentations, and/ or in the R language {#RCorePkgBug}
+
+1. Packages that are supported by the R-Core are labelled with `Maintainer: R Core Team <R-core@r-project.org>`. One simple way to get the information from R is by running the `maintainer("package_name")` command.
+
+2. The bug report for R-Core supported packages, their documentations, and/ or a bug report for the R language itself can be submitted either to R's [Bugzilla](https://bugs.r-project.org/bugzilla/). In the future, we hope to have an option to report an issue to the [GitHub Mirror of R svn server](https://github.com/r-devel/r-svn/issues).
+
+3. If you want to submit the bug report using Bugzilla, please ensure that you have a Bugzilla account. To get a Bugzilla account, please send an e-mail to `bug-report-request@r-project.org` from the address that you want to use as your login. In this e-mail, briefly explain why you need an account. A volunteer shall then create a Bugzilla account and add you to R's Bugzilla members.
+
+4. Please ensure whether the bug is already fixed (in the upcoming changes in R) or reported (search for it from those already reported on Bugzilla, either on [search existing bug reports](https://bugs.r-project.org/bugzilla/query.cgi), may use the [advanced search](https://bugs.r-project.org/bugzilla/query.cgi?format=advanced) option here,  or [show open bugs new-to-old](https://bugs.r-project.org/bugzilla/buglist.cgi?bug_file_loc_type=allwordssubstr&bug_status=NEW&bug_status=ASSIGNED&bug_status=CONFIRMED&bug_status=REOPENED&bug_status=UNCONFIRMED&bugidtype=include&chfieldto=Now&cmdtype=doit&emailassigned_to1=1&emailassigned_to2=1&emailcc2=1&emailreporter2=1&emailtype1=substring&emailtype2=substring&field0-0-0=noop&long_desc_type=substring&order=bugs.delta_ts%20desc&query_format=advanced&short_desc_type=allwordssubstr&type0-0-0=noop)).
+
+### Bug in the non R-Core supported packages and/or their documentations {#nonRCorePkgBug}
+
+For packages that are not maintained by the R-Core, the bug reports can be submiited at, perhaps, an issues tracker url on GitHub/GitLab/R-Forge. To find if such an issues tracker is available, you can look at the package `DESCRIPTION` file first (e.g. using `packageDescription("package_name")`) to check if a url is provided in the `BugReports` field. If that is not available, then the package maintainer can be contacted (using `maintainer("package_name")`). In R running the function `bug.report(package = "package_name")` shall direct you to either the GitHub issue tracker of the package, or to the bug tracking web page, or towards composing an e-mail to the package maintainer. This function `bug.report` is disabled in RStudio, by default. However, if you use `utils::bug.report(package = "package_name")` then it works on RStudio as well. Please ensure that the bug is not already reported or fixed before reporting it in any of the ways suggested above.
+
+## Good practices in reporting bugs / Expectations of a good bug report
+
+If you follow the practices given below, you will come up with a good bug report which might make it easier for the maintainer(s) to fix the bug.
+
+1. Include a minimal reproducible example of the bug in your report. The maintainer should be able to quickly reproduce the bug on using the minimal example that you provide. Here is a [community wiki post](https://stackoverflow.com/questions/5963269/how-to-make-a-great-r-reproducible-example) on how to make a minimal reproducible example.
+
+2. Mention the software architecture on which the bug occurred. 
+
+3. Use inbuilt data sets as far as possible.
+
+In addition to the above, here are the [bug writing guidelines](https://bugs.r-project.org/bugzilla/page.cgi?id=bug-writing.html) on Bugzilla. The [bug reporting](https://www.r-project.org/bugs.html#writing-a-good-bug-report) documentation in R also the discusses practices to write a good bug report.
+
+Once you have successfully reported a bug, you will likely receive an update each time an action is taken on the bug. On Bugzilla, the report may be given one of the following status: New, Assigned, Confirmed, Reopened, Unconfirmed.
+
+## Disagreement with a resolution on the bug tracker
+
+As humans, there might be differences of opinions from time to time. What needs to be considered here is that, being respectful of the fact that care, thought, and volunteer time has gone into the resolution of the issue or bug. 
+
+If you take some time, then on reflection, the resolution steps may seem more reasonable than you initially thought. If you still feel that the resolution is incorrect, then raise a thoughtful question to the person who resolved it. If the issue was carefully thought about in the first place then is less likely to win any conversion of thought.
+
+As a reminder, issues closed by a core developer on Bugzilla have already been carefully considered. Please do not reopen a closed issue. Although one can comment on a closed issue, if necessary. Every comment on an issue generates an email to every R-core member (unless they have the notifications disabled). So it would be best to be considerate while commenting on issues, especially in case of the closed issues or when you are commenting in pure agreement without adding anything beyond that to a discussion (the +1 type posts which are perfectly acceptable in other contexts).
+
+## Examples of Bug reports submitted on Bugzilla or R-devel mailing list
+
+If you like to see how bugs are reported on Bugzilla, here are some examples:
+
+1. A [bug report](https://bugs.r-project.org/bugzilla/show_bug.cgi?id=17767) with a reproducible example, a patch, and a review.
+
+2. A [bug report](https://stat.ethz.ch/pipermail/r-devel/2019-May/077855.html) submitted by Kara Woo which was promptly fixed via the R-devel mailing list. (More information about the R-devel mailing list can be found [here](https://stat.ethz.ch/mailman/listinfo/r-devel)).
+
+3. A substring [bug reported](https://stat.ethz.ch/pipermail/r-devel/2019-February/077393.html) by Toby Dylan Hocking and fixed by Tomas Kalibera, Feb 2019 via the R-devel mailing list.
+
+4. A gregexpr [bug report and patch](https://stat.ethz.ch/pipermail/r-devel/2019-February/077315.html) submitted by Toby Dylan Hocking and merged by Tomas Kalibera, Feb 2019 via the R-devel mailing list.
+
+## See also
+
+1. [Reporting a bug](https://www.r-project.org/bugs.html)
+
+2. [R FAQ on bugs](https://mac.r-project.org/man/R-FAQ.html#R-Bugs)
+
+3. [Bugzilla guidelines of reporting a bug](https://bugs.r-project.org/bugzilla/page.cgi?id=bug-writing.html)
