@@ -14,11 +14,15 @@ You may find a bug in R if:
 2. If the code does not do what the documentation says it should, then either the code or the documentation is wrong. Report either of which needs to be fixed.
 
 **Note**:
-When you are in doubt that there is a bug:
+When you are in doubt that there is a bug: (which should be most of the time!)
 
 1. Make sure whether the bug appears in a clean session of R. Many times, there are variables/commands/functions stored in history which might cause issues. Hence, check if the issue happens in a clean session. To do so, launch R from the command line with the `--vanilla` option. 
 
 2. At times the code that is written is very complicated, has numerous package and file dependencies, has many function calls, etc.. In such scenarios it is quite common that the code throws an error and you are not able to solve it. You may tend to think that there is a bug that needs to be reported. Before doing so, try to produce a minimum working example of the code for the section where the error occurred. Add only those package and files which are required by that section, and see if the error appears still. Using this approach shall solve most of the errors.
+
+3. Install R-devel, which is the most recent version of R from [svn](https://svn.r-project.org/R/trunk/) / [git](https://github.com/r-devel/r-svn) or [daily Windows build](https://cran.r-project.org/bin/windows/base/rdevel.html), and see if your bug still exists in R-devel (it may have been fixed very recently).
+
+4. Search on R-devel email list for messages with keywords related to your possible bug. If you find some related messages then read them to see if they clarify whether or not it is a bug. If you do not find any related messages, then please post a new message to R-devel. Your message should include (1) a brief description of the bug including current and expected behavior, (2) a minimal reproducible example.
 
 ## What condition might not be a bug?
 
@@ -100,13 +104,17 @@ If you take some time, then on reflection, the resolution steps may seem more re
 
 As a reminder, issues closed by a core developer on Bugzilla have already been carefully considered. Please do not reopen a closed issue. Although one can comment on a closed issue, if necessary. Every comment on an issue generates an email to every R-core member (unless they have the notifications disabled). So it would be best to be considerate while commenting on issues, especially in case of the closed issues or when you are commenting in pure agreement without adding anything beyond that to a discussion (the +1 type posts which are perfectly acceptable in other contexts).
 
-## Examples of Bug reports submitted on Bugzilla
+## Examples of Bug reports submitted on Bugzilla or R-devel mailing list
 
 If you like to see how bugs are reported on Bugzilla, here are some examples:
 
 1. A [bug report](https://bugs.r-project.org/bugzilla/show_bug.cgi?id=17767) with a reproducible example, a patch, and a review.
 
-2. A [bug report](https://stat.ethz.ch/pipermail/r-devel/2019-May/077855.html) submitted via R-devel mailing list. (More information about the R-devel mailing list can be found [here](https://stat.ethz.ch/mailman/listinfo/r-devel)).
+2. A [bug report](https://stat.ethz.ch/pipermail/r-devel/2019-May/077855.html) submitted by Kara Woo which was promptly fixed via the R-devel mailing list. (More information about the R-devel mailing list can be found [here](https://stat.ethz.ch/mailman/listinfo/r-devel)).
+
+3. A substring [bug reported](https://stat.ethz.ch/pipermail/r-devel/2019-February/077393.html) by Toby Dylan Hocking and fixed by Tomas Kalibera, Feb 2019 via the R-devel mailing list.
+
+4. A gregexpr [bug report and patch](https://stat.ethz.ch/pipermail/r-devel/2019-February/077315.html) submitted by Toby Dylan Hocking and merged by Tomas Kalibera, Feb 2019 via the R-devel mailing list.
 
 ## See also
 
