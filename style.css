@@ -29,7 +29,7 @@ a {
 
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Josefin Slab', serif;
-  color: #4C1476 !important;
+  color: #2673D9 !important;
 }
 
 .summary {
@@ -37,17 +37,33 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 a {
-  color: #FF7666 !important;
+  color: #2673D9 !important;
 }
 
+/* these are Josh Comeau's amazing style!! */
 div.note {
+    position: relative;
     padding: 1em;
     margin: 2em 0;
-    padding-left: 100px;
     background-size: 70px;
-    background-image: url("img/lightbulb.svg");
+    background: hsla(214, 70%, 50%, 0.15);
     background-repeat: no-repeat;
     background-position: 15px center;
-    min-height: 120px;
-    border: dashed 5px #FAEDB6;
+    border-left: solid 4px 	hsl(214, 70%, 50%)
+}
+
+div.note.image {
+   content:url(img/information.svg);
+}
+
+.note-icon {
+    height: 32px;
+    width: 32px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    transform: translate(-50%, -50%);
+    background: white;
+    border-radius: 50%;
+    padding: 8px;
 }
