@@ -1,4 +1,6 @@
 bookdown::gitbook:
+  include:
+    in_header: header.html
   css: style.css
   split_by: chapter
   config:
@@ -8,6 +10,6 @@ bookdown::gitbook:
     toc:
       collapse: subsection
       before: |
-        <img src="img/Rlogo.png" style="width:150px;padding:10px 0px 0px 10px;"></img>
+        <img src="img/Rlogo.png" style="width:150px;padding:10px 0px 0px 10px;display: block;margin:auto;"></img>
       after: |
         <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
