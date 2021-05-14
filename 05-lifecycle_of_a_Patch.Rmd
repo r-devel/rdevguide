@@ -93,8 +93,10 @@ But if your patch is accepted and applied it will then go on to be released with
 It may take longer before your patch is accepted and applied or rejected, sometimes even months or years. Nonetheless, it is appreciated that you submitted a patch.
 
 ## Examples of patch reports on Bugzilla
+<!-- TODO add links of examples -->
 
 ## Examples of reviewing a patch
+<!-- TODO add links of examples -->
 
 ## See also
 
