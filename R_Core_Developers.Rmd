@@ -28,7 +28,7 @@ This page lists the former and current members of the R Core team who have write
   * Tomas Kalibera (present)
   * Uwe Ligges (present)
 
-Affiliations of R Core team members are available [here](). 
+View the [affiliations of R Core members](). We've left it up to the individual core developers to list areas of expertise (or things they are willing to maintain) if they wish.
 <!-- TODO add URL to bios, perhaps on the R project website -->
 
-Contributors, outside the R Core team, who provided invaluable help by donating code, bug fixes, and documentation are listed [here](https://www.r-project.org/contributors.html).
+The [Contributors page on the R Project website](https://www.r-project.org/contributors.html) also lists contributors, outside the R Core team, who provided invaluable help by donating code, bug fixes, and documentation.
