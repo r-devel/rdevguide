@@ -7,9 +7,13 @@ If you are working on R it is possible that you will come across an issue where 
 You can discuss issues related to the development of R and learn about the process of contributing to R on the [R-devel slack](https://r-devel.slack.com/). There are a number of experienced developers on this slack who can answer questions and/or provide feedback. The following channels are available on the R-devel slack for help and feedback with specific areas:
 
   * #bugreports-for-review: Share bug reports for review/feedback before submitting to Bugzilla.
+  
   * #core-dev-help: Getting help on anything related to R Core contribution.
+  
   * #core-documentation: Discuss patches/improvements to R's documentation.
+  
   * #core-translation: Discuss translating R messages, warnings, and errors into non-English languages.
+  
   * #patches-for-review: Share patches for peer review before submitting to R Core.
 
 Note: You may not be able to access the history of these channels, so it cannot be used as a knowledge base of sorts. 
@@ -23,14 +27,11 @@ There are quite a few [mailing lists](https://www.r-project.org/mail.html) for g
       * Getting help with technical programming issues, e.g. interfacing R with C/C++.
       * Proposals of new functionality for R.
       * Pre-testing of new versions of R.
-
+      * Enhancements and patches to the R source code and the R documentation.
+      * Posting examples and benchmarks.
+      
   * [R-help](https://stat.ethz.ch/mailman/listinfo/r-help): 
       * Discussions about problems and solutions using R.
-      * Announcements about the development of R.
-      * Announcements about the availability of new code.
-      * Enhancements and patches to the R source code and the R documentation.
-      * Comparison and compatibilty with S and S-plus.
-      * Posting examples and benchmarks.
       
   * [R-package-devel](https://stat.ethz.ch/mailman/listinfo/r-package-devel): 
       * Getting help about package development in R.
