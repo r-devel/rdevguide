@@ -64,11 +64,9 @@ If a bug report or an issue has a patch attached that has not been reviewed, you
 
   * is a good solution to the problem it is trying to solve; 
 
-  * includes proper tests; 
+  * includes proper tests; and 
 
-  * includes proper documentation changes; and
-
-  * is reproducible on following the stated steps.
+  * includes proper documentation changes.
 
 Also refer to [Making good patches](#GoodPatches) for more ideas. Doing all of this allows the core developer(s) and/ or maintainer(s) to more quickly look for subtle issues that only people with extensive experience working on R's codebase will notice.
 
