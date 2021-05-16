@@ -48,6 +48,12 @@ However, even for the quick build there are some [default requirements](https://
 
 If you are a maintainer of the Windows CRAN releases then, the full installer build is available for building the complete installer as it appears on CRAN. It will build both the 32-bit and 64-bit R, the pdf manuals, and the installer program. You will use this to create the binary builds and not when building R from the source yourself.
 
+## How to download the R sources directly or from the svn repository?
+
+  * To download the R sources on Windows, you can use `tar` from the RStudio terminal. 
+  
+  * If you want to checkout the sources from svn, it is probably best to install an SVN client. Either TortoiseSVN (https://tortoisesvn.net/, command line tool, and Windows Explorer integration) or SlikSVN (https://sliksvn.com/download/, just the command line tool) is recommended. They have simple Windows installers and you can use svn straight-away from Windows cmd or RStudio terminal.
+
 ## See also
 
 1. [CRAN official website](https://cran.r-project.org)
