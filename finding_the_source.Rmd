@@ -1,0 +1,41 @@
+# Finding the Source 
+
+This chapters discusses how you can have an overview of the R codebase. For instance, where to find the implmentation of a base function written in R and where to find a primitive implementation written C.
+
+# Finding R source code
+
+1. Find the R function with the code of interest. You will always be able to print the top-level function (or use `View(function_name)` in RStudio). Looking at the code for the body of this function will reveal what you need to do next:
+
+  * Can already see code of interest: stop here or skip to step 3 to find the corresponding file in the R sources.
+
+  * Code of interest is in nested R function: go to step 2.
+
+  * Top-level function is an S3 generic, identified by a call to `UseMethod()`. Use `methods(function_name)` to see available methods, then go to step 2.
+  
+  * Code of interest is in compiled code, identified by a call to `.C()`, `.Call()`, `.Fortran()`, `.External()`, or `.Internal()` and `.Primitive()`: go to section on compiled code.
+ 
+2. Nested functions or S3 methods may not be exported by the package they are in. If this is the case, the simplest way to view the code is to use `getAnywhere()` or `getS3method()`. Now you can keep looking at nested R functions till you find the code of interest or hit a call to compiled code.
+
+3. Find an R function in the R sources. Two options here:
+
+  * Search on the internet: For R Core packages, search on the GitHub mirror (https://github.com/r-devel/r-svn); for recommended packages, use the CRAN mirror (https://github.com/cran) - this will link to the source on GitHub if available, e.g. https://github.com/cran/survival. Note that GitHub search ignores wildcard characters
+  
+```
+ . , : ; / \ ` ' " = * ! ? # $ & + ^ | ~ < > ( ) { } [ ]
+```
+
+but this does not include `-` so you can search for a function or S3 method as follows:
+
+```
+"body <- function" extension:R
+"quantile.ecdf <- function" extension:R
+```
+
+  * Search in the R sources using grep: The [Getting Started](#GetStart) chapter discusses how to download the R sources directly or from the svn repository. Now if the sources are in `~/R-devel`, you can search as follows:
+  
+```  
+grep -R "body <- function" ~/R-devel/src
+grep -R "quantile <- function" ~/R-devel/src/library
+```
+
+Note: The above procedure does not cover S4, R6 or RC generics or methods.
