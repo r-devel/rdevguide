@@ -1,0 +1,103 @@
+# Lifecycle of a Patch {#FixBug}
+
+## Introduction
+
+R uses a workflow based on patches. A patch is the set of differences (additions and deletions) between two versions of code. So you can create a patch defining a bug fix or a proposed update to the R codebase and submit it through your official Bugzilla account to the core developer(s). Be clear in your communication as it is the key to contributing to any project, especially an open source project like R.
+
+## When do you submit a patch?
+
+There might be a situation where you come across a bug in R, which you may have an idea of how to fix. This can turn out to be an opportunity for you to submit a patch. By submitting a patch or a bug fix, you are helping to reduce the workload on the R developers in addition to yourself being a contributor to R!  
+
+When you submit a patch, you are helping the developer(s) and maintainer(s) so that they do not have to write the entire code from scratch. Instead, they can test and tweak your patch, if necessary.
+
+## What tools are required to submit a patch?
+
+To submit a patch, you need:
+
+1. [SVN](http://subversion.apache.org/) installed on your machine.
+
+2. The [latest developer version of R](#installR).
+
+## How to prepare a patch?
+
+Refer to the guidelines given [here](https://www.r-project.org/bugs.html#how-to-submit-patches) for the process to prepare a patch against R-devel.
+
+## Making good patches {#GoodPatches} 
+
+When creating a patch for submission, there are several things that you can do to help ensure that your patch is accepted:
+
+1. Make sure to follow [R's coding standards](https://cran.r-project.org/doc/manuals/r-release/R-ints.html#R-coding-standards) (R is a GNU project and there are GNU coding standards). The coding style of the patch you submit should largely match with the codebase it is being applied to. If your patch has one or two minor discrepancies, then those may be fixed by the core developer who will eventually test your patch. However, if there are systematic deviations from the style guides your patch will be put on hold until you fix the formatting issues. There is no comprehensive official R style manual, however some nearly universal standards are summarised in [this article](https://cran.r-project.org/web/packages/rockchalk/vignettes/Rstyle.pdf).
+
+2. Be aware of backwards-compatibility considerations. While the core developer who eventually handles your patch will make the final call on whether something is acceptable, thinking about backwards-compatibility early will help prevent having your patch rejected on these grounds. Put yourself in the shoes of someone whose code will be broken by the change(s) introduced by the patch. It is quite likely that any change made will break someone's code, so you need to have a good reason to make a change as you will be forcing someone to update their code. This obviously does not apply to new functions or new arguments. New arguments should be optional and have default values which maintain the existing behaviour. If in doubt, [discuss](#WhereToGetHelp) the issue with experienced developers.
+
+3. Make sure you have proper tests to verify that your patch works as expected. Patches may not be accepted without the proper tests.
+
+4. Make sure the entire test suite runs without failure because of your changes. It is not sufficient to only run whichever test seems impacted by your changes, because there might be interactions unknown to you between your changes and some other part of the interpreter.
+
+5. Proper documentation additions/changes should be included.
+
+6. Each bugfix should ideally be addressed by a single patch. In particular, do not fix more than one issue in the same patch (except, if one code change fixes all of them) and do not do cosmetic changes to unrelated code in the same patch as some bugfix.
+
+## Submitting your patch for review
+
+1. Patch in response to a pre-existing issue or bug report:  In this case, you should attach the patch to the existing issue or bug report on Bugzilla with a brief comment.
+
+2. Patch in response to an unreported issue or bug report: Assuming you already performed a search on Bugzilla for a pre-existing issue or bug and did not find the issue or bug reported, you need to create a new bug report and include your patch with it. Please fill in as much relevant detail as possible to prevent reviewers from having to delay reviewing your patch because of lack of information. Include (mostly as the first sentence), a to-the-point explanation of what the purpose of the patch is. This sentence should not be in the descriptive form, rather an imperative form will be more suitable here. If this is not enough detail for a patch, a new paragraphs(s) can be added to explain in proper depth what has happened. The details should be good enough that a core developer reading it understands the justification for the change.
+ 
+## Getting your patch reviewed
+
+To begin with, please be patient. There are many more people submitting patches than there are people capable of reviewing your patches. Getting your patch reviewed requires a reviewer to have the spare time and motivation to look at your patch. We cannot force anyone to review patches and no one is employed to look at patches. 
+
+There is a `#patches-for-review` channel on the [R-devel slack](https://r-devel.slack.com/) where you can share your patch(es) for review/feedback before submitting to R-Core/Bugzilla. This can help with checking that you have included the important information and excluded redundant information.
+
+If your patch has not received any notice from reviewers (i.e., no comment made) after one month, comment/message on the `#patches-for-review` channel to remind the members that the patch needs a review.
+
+When someone does manage to find the time to look at your patch they will most likely make comments about how it can be improved. It is then expected that you update your patch to address these comments, and the review process will thus iterate until a satisfactory solution has emerged.
+
+### How to review a patch?
+
+One of the bottlenecks in the R development process is the lack of code reviews. If you browse Bugzilla, you will see that numerous issues have a fix, but cannot be merged into the main source code repository, because no one has reviewed the proposed solution. Reviewing a patch can be just as informative as providing a patch and it will allow you to give constructive comments on another developer’s work. This guide provides a checklist for submitting a patch review. It is a common misconception that in order to be useful, a patch review has to be perfect. This is not the case at all. It is helpful to just test the patch and/or play around with the code and leave comments in the patch or on Bugzilla.
+
+If a bug report or an issue has a patch attached that has not been reviewed, you can help by making sure that the patch:
+
+  * follows the style guides;
+
+  * is a good solution to the problem it is trying to solve; 
+
+  * includes proper tests; and 
+
+  * includes proper documentation changes.
+
+Also refer to [Making good patches](#GoodPatches) for more ideas. Doing all of this allows the core developer(s) and/ or maintainer(s) to more quickly look for subtle issues that only people with extensive experience working on R's codebase will notice.
+
+## Leaving a patch review on Bugzilla
+
+When you review a patch, you should provide additional details and context of your review process and leave comments. For example:
+
+1. If you tested the patch, report the result and the system and version tested on, such as 'Windows 10', 'Ubuntu 16.4', or 'Mac High Sierra'.
+
+2. If you request changes, try to suggest how or attach an updated patch.
+
+3. Comment on what is 'good' about the patch, not just the 'bad'. Doing so will make it easier for the patch author to find the good in your comments.
+
+## Dismissing review from another core developer
+
+A core developer can dismiss another core developer’s review if they confirmed that the requested changes have been made. When a core developer has assigned the patch to themselves, then it is a sign that they are actively looking after the patch, and their review should not be dismissed.
+
+## Acceptance or rejection of your patch
+
+Once your patch has reached an acceptable state, it will either be applied or rejected. If it is rejected, please do not take it personally. Your work is still appreciated regardless of whether your patch is applied. Balancing what does and does not go into R is tricky and everyone's contributions cannot always be accepted.
+
+But if your patch is accepted and applied it will then go on to be released with the next patched release and eventually the next major release of R. It may also be backported to older versions of R as a bugfix if the core developer doing the patch acceptance believes it is warranted. 
+
+It may take longer before your patch is accepted and applied or rejected, sometimes even months or years. Nonetheless, it is appreciated that you submitted a patch.
+
+## Examples of patch reports on Bugzilla
+<!-- TODO add links of examples -->
+
+## Examples of reviewing a patch
+<!-- TODO add links of examples -->
+
+## See also
+
+1. [Submitting patches](https://www.r-project.org/bugs.html#how-to-submit-patches)

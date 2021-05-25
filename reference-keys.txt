@@ -1,7 +1,7 @@
 r-core-developers-guide
 getting-started
 general-instructions
-installing-r
+installR
 building-r-and-r-packages
 what-tools-do-you-need-to-build-r-from-source-on-windows
 how-to-setup-rtools
@@ -27,3 +27,18 @@ classifying-bug-reports
 how-to-find-a-bug-report-or-an-issue-to-review
 example-of-a-bug-review-submitted-on-bugzilla
 see-also-2
+FixBug
+introduction
+when-do-you-submit-a-patch
+what-tools-are-required-to-submit-a-patch
+how-to-prepare-a-patch
+GoodPatches
+submitting-your-patch-for-review
+getting-your-patch-reviewed
+how-to-review-a-patch
+leaving-a-patch-review-on-bugzilla
+dismissing-review-from-another-core-developer
+acceptance-or-rejection-of-your-patch
+examples-of-patch-reports-on-bugzilla
+examples-of-reviewing-a-patch
+see-also-3

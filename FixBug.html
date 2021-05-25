@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 4 Reviewing Bugs | Contributing to R Core</title>
+  <title>Chapter 5 Lifecycle of a Patch | Contributing to R Core</title>
   <meta name="description" content="A developer’s guide to contributing to R Core." />
   <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 4 Reviewing Bugs | Contributing to R Core" />
+  <meta property="og:title" content="Chapter 5 Lifecycle of a Patch | Contributing to R Core" />
   <meta property="og:type" content="book" />
   <meta property="og:url" content="TDDO" />
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="forwards/rdevguide" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 4 Reviewing Bugs | Contributing to R Core" />
+  <meta name="twitter:title" content="Chapter 5 Lifecycle of a Patch | Contributing to R Core" />
   
   <meta name="twitter:description" content="A developer’s guide to contributing to R Core." />
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="bug-tracking.html"/>
-<link rel="next" href="FixBug.html"/>
+<link rel="prev" href="reviewing-bugs.html"/>
+
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -215,49 +215,98 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="reviewing-bugs" class="section level1">
-<h1><span class="header-section-number">Chapter 4</span> Reviewing Bugs</h1>
-<div id="how-you-can-help-to-review-bug-reports" class="section level2">
-<h2><span class="header-section-number">4.1</span> How you can help to review bug reports?</h2>
-<p>After understanding where bugs are reported in R (Bugzilla) or in other projects (GitHub/GitLab/R-Forge), a great way to contribute is reviewing bug reports.</p>
-<p>Around the clock, new bug reports are being submitted on Bugzilla or the bug trackers (for instance, GitHub issues) of R packages and existing bug reports are being updated. Every bug report needs to be reviewed to make sure various things are in proper order. You can help with this process of reviewing bugs.</p>
-<div id="preparing-to-review-bug-reports" class="section level3">
-<h3><span class="header-section-number">4.1.1</span> Preparing to review bug reports</h3>
-<p>If you want to review bug reports on Bugzilla, you are required to have a Bugzilla account. To get a Bugzilla account send an e-mail to <code>bug-report-request@r-project.org</code> from the address you want to use as your Bugzilla login. Briefly explain why you want a Bugzilla account and a volunteer will add you to R’s Bugzilla members. More details on how you can review a bug report are available on this <a href="https://developer.r-project.org/Blog/public/2019/10/09/r-can-use-your-help-reviewing-bug-reports/">blog</a></p>
+<div id="FixBug" class="section level1">
+<h1><span class="header-section-number">Chapter 5</span> Lifecycle of a Patch</h1>
+<div id="introduction" class="section level2">
+<h2><span class="header-section-number">5.1</span> Introduction</h2>
+<p>R uses a workflow based on patches. A patch is the set of differences (additions and deletions) between two versions of code. So you can create a patch defining a bug fix or a proposed update to the R codebase and submit it through your official Bugzilla account to the core developer(s). Be clear in your communication as it is the key to contributing to any project, especially an open source project like R.</p>
 </div>
+<div id="when-do-you-submit-a-patch" class="section level2">
+<h2><span class="header-section-number">5.2</span> When do you submit a patch?</h2>
+<p>There might be a situation where you come across a bug in R, which you may have an idea of how to fix. This can turn out to be an opportunity for you to submit a patch. By submitting a patch or a bug fix, you are helping to reduce the workload on the R developers in addition to yourself being a contributor to R!</p>
+<p>When you submit a patch, you are helping the developer(s) and maintainer(s) so that they do not have to write the entire code from scratch. Instead, they can test and tweak your patch, if necessary.</p>
 </div>
-<div id="classifying-bug-reports" class="section level2">
-<h2><span class="header-section-number">4.2</span> Classifying bug reports</h2>
-<p>A good bug report is the one which:</p>
+<div id="what-tools-are-required-to-submit-a-patch" class="section level2">
+<h2><span class="header-section-number">5.3</span> What tools are required to submit a patch?</h2>
+<p>To submit a patch, you need:</p>
 <ol style="list-style-type: decimal">
-<li><p>Explains clearly how to reproduce the bug.</p></li>
-<li><p>Includes the version of R, the machine architecture, and the operating system platform on which the bug occurred.</p></li>
-</ol>
-<p>Relevant details should be a part of a good bug report. You can help with the following tasks once you have some R programming experience:</p>
-<ol style="list-style-type: decimal">
-<li><p>Reproducing the bug: If you see a bug report which does not clearly explain how to reproduce it, you can try reproducing the bug and eventually make things easier for the core developer(s) and/or package maintainer(s).</p></li>
-<li><p>Checking different binary builds: Check whether the bug occurs on a different binary build of R. It is helpful to know whether the bug is affecting: <code>r-patched</code>, <code>r-devel</code>, or <code>r-release</code> binary builds of R.</p></li>
-<li><p>Writing a unit test: If the bug report lacks a unit test that should be a part of R’s test suite, then you can help with providing it.</p></li>
-</ol>
-<p>These helpful tasks allow the Core developers and/ or maintainers to classify a bug report properly, so that the bug can be handled in a timely fashion.</p>
-</div>
-<div id="how-to-find-a-bug-report-or-an-issue-to-review" class="section level2">
-<h2><span class="header-section-number">4.3</span> How to find a bug report or an issue to review?</h2>
-<ol style="list-style-type: decimal">
-<li><p>You may search old bug reports or issues that could be closed. Old bug reports may no longer be valid or may include a patch that is ready to be committed, but no one has had the time to review and commit.</p></li>
-<li><p>You might also want to search for issues in topics in which you have a working knowledge. When on Bugzilla you can use the advanced search to find specific topics. Bug reports are by default public on Bugzilla (unless the defaults are changed to avoid security vulnerability).</p></li>
+<li><p><a href="http://subversion.apache.org/">SVN</a> installed on your machine.</p></li>
+<li><p>The <a href="getting-started.html#installR">latest developer version of R</a>.</p></li>
 </ol>
 </div>
-<div id="example-of-a-bug-review-submitted-on-bugzilla" class="section level2">
-<h2><span class="header-section-number">4.4</span> Example of a bug review submitted on Bugzilla</h2>
-<p>If you would like to see how bugs are reviewed on Bugzilla, <a href="https://bugs.r-project.org/bugzilla/show_bug.cgi?id=16542">here</a> is an example where an old bug report is being reviewed. It is tested to see if it was still an issue and a few ways are proposed to resolve the issue.</p>
-<p><strong>Note</strong>:</p>
-<p>There is a <code>#bugreports-for-review</code> channel on the <a href="https://r-devel.slack.com/">R-devel slack</a> where you can share your bug report(s) for review/feedback before submitting to Bugzilla. This can help with checking that it really is a bug, that you have included the important information and excluded redundant information.</p>
+<div id="how-to-prepare-a-patch" class="section level2">
+<h2><span class="header-section-number">5.4</span> How to prepare a patch?</h2>
+<p>Refer to the guidelines given <a href="https://www.r-project.org/bugs.html#how-to-submit-patches">here</a> for the process to prepare a patch against R-devel.</p>
 </div>
-<div id="see-also-2" class="section level2">
-<h2><span class="header-section-number">4.5</span> See also</h2>
+<div id="GoodPatches" class="section level2">
+<h2><span class="header-section-number">5.5</span> Making good patches</h2>
+<p>When creating a patch for submission, there are several things that you can do to help ensure that your patch is accepted:</p>
 <ol style="list-style-type: decimal">
-<li><a href="https://developer.r-project.org/Blog/public/2019/10/09/r-can-use-your-help-reviewing-bug-reports/">Reviewing bug reports: Blog</a></li>
+<li><p>Make sure to follow <a href="https://cran.r-project.org/doc/manuals/r-release/R-ints.html#R-coding-standards">R’s coding standards</a> (R is a GNU project and there are GNU coding standards). The coding style of the patch you submit should largely match with the codebase it is being applied to. If your patch has one or two minor discrepancies, then those may be fixed by the core developer who will eventually test your patch. However, if there are systematic deviations from the style guides your patch will be put on hold until you fix the formatting issues. There is no comprehensive official R style manual, however some nearly universal standards are summarised in <a href="https://cran.r-project.org/web/packages/rockchalk/vignettes/Rstyle.pdf">this article</a>.</p></li>
+<li><p>Be aware of backwards-compatibility considerations. While the core developer who eventually handles your patch will make the final call on whether something is acceptable, thinking about backwards-compatibility early will help prevent having your patch rejected on these grounds. Put yourself in the shoes of someone whose code will be broken by the change(s) introduced by the patch. It is quite likely that any change made will break someone’s code, so you need to have a good reason to make a change as you will be forcing someone to update their code. This obviously does not apply to new functions or new arguments. New arguments should be optional and have default values which maintain the existing behaviour. If in doubt, <a href="#WhereToGetHelp">discuss</a> the issue with experienced developers.</p></li>
+<li><p>Make sure you have proper tests to verify that your patch works as expected. Patches may not be accepted without the proper tests.</p></li>
+<li><p>Make sure the entire test suite runs without failure because of your changes. It is not sufficient to only run whichever test seems impacted by your changes, because there might be interactions unknown to you between your changes and some other part of the interpreter.</p></li>
+<li><p>Proper documentation additions/changes should be included.</p></li>
+<li><p>Each bugfix should ideally be addressed by a single patch. In particular, do not fix more than one issue in the same patch (except, if one code change fixes all of them) and do not do cosmetic changes to unrelated code in the same patch as some bugfix.</p></li>
+</ol>
+</div>
+<div id="submitting-your-patch-for-review" class="section level2">
+<h2><span class="header-section-number">5.6</span> Submitting your patch for review</h2>
+<ol style="list-style-type: decimal">
+<li><p>Patch in response to a pre-existing issue or bug report: In this case, you should attach the patch to the existing issue or bug report on Bugzilla with a brief comment.</p></li>
+<li><p>Patch in response to an unreported issue or bug report: Assuming you already performed a search on Bugzilla for a pre-existing issue or bug and did not find the issue or bug reported, you need to create a new bug report and include your patch with it. Please fill in as much relevant detail as possible to prevent reviewers from having to delay reviewing your patch because of lack of information. Include (mostly as the first sentence), a to-the-point explanation of what the purpose of the patch is. This sentence should not be in the descriptive form, rather an imperative form will be more suitable here. If this is not enough detail for a patch, a new paragraphs(s) can be added to explain in proper depth what has happened. The details should be good enough that a core developer reading it understands the justification for the change.</p></li>
+</ol>
+</div>
+<div id="getting-your-patch-reviewed" class="section level2">
+<h2><span class="header-section-number">5.7</span> Getting your patch reviewed</h2>
+<p>To begin with, please be patient. There are many more people submitting patches than there are people capable of reviewing your patches. Getting your patch reviewed requires a reviewer to have the spare time and motivation to look at your patch. We cannot force anyone to review patches and no one is employed to look at patches.</p>
+<p>There is a <code>#patches-for-review</code> channel on the <a href="https://r-devel.slack.com/">R-devel slack</a> where you can share your patch(es) for review/feedback before submitting to R-Core/Bugzilla. This can help with checking that you have included the important information and excluded redundant information.</p>
+<p>If your patch has not received any notice from reviewers (i.e., no comment made) after one month, comment/message on the <code>#patches-for-review</code> channel to remind the members that the patch needs a review.</p>
+<p>When someone does manage to find the time to look at your patch they will most likely make comments about how it can be improved. It is then expected that you update your patch to address these comments, and the review process will thus iterate until a satisfactory solution has emerged.</p>
+<div id="how-to-review-a-patch" class="section level3">
+<h3><span class="header-section-number">5.7.1</span> How to review a patch?</h3>
+<p>One of the bottlenecks in the R development process is the lack of code reviews. If you browse Bugzilla, you will see that numerous issues have a fix, but cannot be merged into the main source code repository, because no one has reviewed the proposed solution. Reviewing a patch can be just as informative as providing a patch and it will allow you to give constructive comments on another developer’s work. This guide provides a checklist for submitting a patch review. It is a common misconception that in order to be useful, a patch review has to be perfect. This is not the case at all. It is helpful to just test the patch and/or play around with the code and leave comments in the patch or on Bugzilla.</p>
+<p>If a bug report or an issue has a patch attached that has not been reviewed, you can help by making sure that the patch:</p>
+<ul>
+<li><p>follows the style guides;</p></li>
+<li><p>is a good solution to the problem it is trying to solve;</p></li>
+<li><p>includes proper tests; and</p></li>
+<li><p>includes proper documentation changes.</p></li>
+</ul>
+<p>Also refer to <a href="FixBug.html#GoodPatches">Making good patches</a> for more ideas. Doing all of this allows the core developer(s) and/ or maintainer(s) to more quickly look for subtle issues that only people with extensive experience working on R’s codebase will notice.</p>
+</div>
+</div>
+<div id="leaving-a-patch-review-on-bugzilla" class="section level2">
+<h2><span class="header-section-number">5.8</span> Leaving a patch review on Bugzilla</h2>
+<p>When you review a patch, you should provide additional details and context of your review process and leave comments. For example:</p>
+<ol style="list-style-type: decimal">
+<li><p>If you tested the patch, report the result and the system and version tested on, such as ‘Windows 10’, ‘Ubuntu 16.4’, or ‘Mac High Sierra’.</p></li>
+<li><p>If you request changes, try to suggest how or attach an updated patch.</p></li>
+<li><p>Comment on what is ‘good’ about the patch, not just the ‘bad’. Doing so will make it easier for the patch author to find the good in your comments.</p></li>
+</ol>
+</div>
+<div id="dismissing-review-from-another-core-developer" class="section level2">
+<h2><span class="header-section-number">5.9</span> Dismissing review from another core developer</h2>
+<p>A core developer can dismiss another core developer’s review if they confirmed that the requested changes have been made. When a core developer has assigned the patch to themselves, then it is a sign that they are actively looking after the patch, and their review should not be dismissed.</p>
+</div>
+<div id="acceptance-or-rejection-of-your-patch" class="section level2">
+<h2><span class="header-section-number">5.10</span> Acceptance or rejection of your patch</h2>
+<p>Once your patch has reached an acceptable state, it will either be applied or rejected. If it is rejected, please do not take it personally. Your work is still appreciated regardless of whether your patch is applied. Balancing what does and does not go into R is tricky and everyone’s contributions cannot always be accepted.</p>
+<p>But if your patch is accepted and applied it will then go on to be released with the next patched release and eventually the next major release of R. It may also be backported to older versions of R as a bugfix if the core developer doing the patch acceptance believes it is warranted.</p>
+<p>It may take longer before your patch is accepted and applied or rejected, sometimes even months or years. Nonetheless, it is appreciated that you submitted a patch.</p>
+</div>
+<div id="examples-of-patch-reports-on-bugzilla" class="section level2">
+<h2><span class="header-section-number">5.11</span> Examples of patch reports on Bugzilla</h2>
+<!-- TODO add links of examples -->
+</div>
+<div id="examples-of-reviewing-a-patch" class="section level2">
+<h2><span class="header-section-number">5.12</span> Examples of reviewing a patch</h2>
+<!-- TODO add links of examples -->
+</div>
+<div id="see-also-3" class="section level2">
+<h2><span class="header-section-number">5.13</span> See also</h2>
+<ol style="list-style-type: decimal">
+<li><a href="https://www.r-project.org/bugs.html#how-to-submit-patches">Submitting patches</a></li>
 </ol>
 
 </div>
@@ -267,8 +316,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           </div>
         </div>
       </div>
-<a href="bug-tracking.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="FixBug.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="reviewing-bugs.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
