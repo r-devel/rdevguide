@@ -42,3 +42,4 @@ acceptance-or-rejection-of-your-patch
 examples-of-patch-reports-on-bugzilla
 examples-of-reviewing-a-patch
 see-also-3
+r-core-developers

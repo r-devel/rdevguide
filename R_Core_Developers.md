@@ -1,0 +1,34 @@
+# R Core Developers
+
+This page lists the former and current members of the R Core team who have write access to the R source.
+
+  * Brian Ripley (present) 
+  * Deepayan Sarkar (present) 
+  * Douglas Bates (present) 
+  * Duncan Murdoch (up to September 2017)
+  * Duncan Temple Lang (present) 
+  * Friedrich Leisch (present)
+  * Guido Masarotto (up to June 2003)
+  * Heiner Schwarte (up to October 1999)
+  * John Chambers (present)
+  * Kurt Hornik (present)
+  * Luke Tierney (present)
+  * Martin Maechler (present)
+  * Martin Morgan (present)
+  * Martyn Plummer (present)
+  * Michael Lawrence (present)
+  * Paul Murrell (present)
+  * Peter Dalgaard (present)
+  * Robert Gentleman (present)
+  * Ross Ihaka (present)
+  * Seth Falcon (up to August 2015)
+  * Simon Urbanek (present)
+  * Stefano lacus (up to July 2014)
+  * Thomas Lumley (present)
+  * Tomas Kalibera (present)
+  * Uwe Ligges (present)
+
+View the [affiliations of R Core members](). We've left it up to the individual core developers to list areas of expertise (or things they are willing to maintain) if they wish.
+<!-- TODO add URL to bios, perhaps on the R project website -->
+
+The [Contributors page on the R Project website](https://www.r-project.org/contributors.html) also lists contributors, outside the R Core team, who provided invaluable help by donating code, bug fixes, and documentation.
