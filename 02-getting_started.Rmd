@@ -16,7 +16,7 @@ These instructions cover how to install R in Windows. The tools required to buil
 
 The `r-devel` is the next minor or eventually major release development version of R. Mostly, bug fixes are introduced in `r-patched`, while `r-devel` is for introducing new features.
 
-## Installing R
+## Installing R {#installR}
 
 1. The binary builds of R for Windows can be downloaded and installed from [here](https://cran.r-project.org/bin/windows/base/). Along with the link to the latest stable release, this page also contains links to the binary builds of r-patched and r-devel. 
 
