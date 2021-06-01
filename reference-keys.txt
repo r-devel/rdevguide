@@ -1,4 +1,5 @@
 r-core-developers-guide
+how-to-contribute
 getting-started
 general-instructions
 installR
