@@ -24,7 +24,7 @@
 <meta name="author" content="R Contribution Working Group" />
 
 
-<meta name="date" content="2021-06-01" />
+<meta name="date" content="2021-06-07" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -234,7 +234,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li><p>The official release (<code>r-release</code>),</p></li>
 <li><p>The patched release (<code>r-patched</code>), and</p></li>
-<li><p>The development (<code>r-devel</code>) release.</p></li>
+<li><p>The development release (<code>r-devel</code>).</p></li>
 </ul></li>
 </ol>
 <p>The <code>r-devel</code> is the next minor or eventually major release development version of R. Mostly, bug fixes are introduced in <code>r-patched</code>, while <code>r-devel</code> is for introducing new features.</p>
@@ -253,7 +253,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h3><span class="header-section-number">2.3.1</span> What tools do you need to build R from source on Windows?</h3>
 <ol style="list-style-type: decimal">
 <li><p><a href="https://github.com/r-windows/docs/blob/master/faq.md#what-is-rtools">RTools</a> is the toolchain bundle that you can use to build R base and R packages containing compiled code, on Windows.</p></li>
-<li><p>You also need a distribution of <span class="math inline">\(\LaTeX\)</span> installed for building R and checking packages. The MiKTeX distribution of LaTeX that is used on CRAN can be downloaded from <a href="https://miktex.org" class="uri">https://miktex.org</a>.</p></li>
+<li><p>You also need a distribution of LaTeX installed for building R and checking packages. The MiKTeX distribution of LaTeX that is used on CRAN can be downloaded from <a href="https://miktex.org" class="uri">https://miktex.org</a>.</p></li>
 </ol>
 </div>
 <div id="how-to-setup-rtools" class="section level3">
@@ -340,20 +340,6 @@ gitbook.start({
 });
 </script>
 
-<!-- dynamically load mathjax for compatibility with self-contained -->
-<script>
-  (function () {
-    var script = document.createElement("script");
-    script.type = "text/javascript";
-    var src = "true";
-    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
-    if (location.protocol !== "file:")
-      if (/^https?:/.test(src))
-        src = src.replace(/^https?:/, '');
-    script.src = src;
-    document.getElementsByTagName("head")[0].appendChild(script);
-  })();
-</script>
 </body>
 
 </html>
