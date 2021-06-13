@@ -72,7 +72,7 @@ Once you confirm a bug exists, you need to submit a bug report so that it gets f
 
 1. Packages that are supported by the R-Core are labelled with `Maintainer: R Core Team <R-core@r-project.org>`. One simple way to get the information from R is by running the `maintainer("package_name")` command.
 
-2. The bug report for R-Core supported packages, their documentations, and/ or a bug report for the R language itself can be submitted either to R's [Bugzilla](https://bugs.r-project.org/bugzilla/). In the future, we hope to have an option to report an issue to the [GitHub Mirror of R svn server](https://github.com/r-devel/r-svn/issues).
+2. The bug report for R-Core supported packages, their documentations, and/ or a bug report for the R language itself can be submitted either to R-devel, [see posting guide](https://www.r-project.org/posting-guide.html#which_list), or to [Bugzilla](https://bugs.r-project.org/bugzilla/). In the future, we hope to have an option to report an issue to the [GitHub Mirror of R svn server](https://github.com/r-devel/r-svn/issues).
 
 3. If you want to submit the bug report using Bugzilla, please ensure that you have a Bugzilla account. To get a Bugzilla account, please send an e-mail to `bug-report-request@r-project.org` from the address that you want to use as your login. In this e-mail, briefly explain why you need an account. A volunteer shall then create a Bugzilla account and add you to R's Bugzilla members.
 
