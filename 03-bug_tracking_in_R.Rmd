@@ -22,7 +22,7 @@ When you are in doubt that there is a bug: (which should be most of the time!)
 
 3. Install R-devel, which is the most recent version of R from [svn](https://svn.r-project.org/R/trunk/) / [git](https://github.com/r-devel/r-svn) or [daily Windows build](https://cran.r-project.org/bin/windows/base/rdevel.html), and see if your bug still exists in R-devel (it may have been fixed very recently).
 
-4. Search on R-devel email list for messages with keywords related to your possible bug. If you find some related messages then read them to see if they clarify whether or not it is a bug. If you do not find any related messages, then please post a new message to R-devel. Your message should include (1) a brief description of the bug including current and expected behavior, (2) a minimal reproducible example.
+4. [Search on R-devel email list for messages with keywords related to your possible bug](https://r.789695.n4.nabble.com/template/NamlServlet.jtp?macro=search_page&node=909078&query=isna&days=0). If you find some related messages then read them to see if they clarify whether or not it is a bug. If you do not find any related messages, then please post a new message to R-devel. Your message should include (1) a brief description of the bug including current and expected behavior, (2) a minimal reproducible example.
 
 ## What condition might not be a bug?
 
