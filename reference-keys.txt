@@ -1,12 +1,13 @@
 r-core-developers-guide
 how-to-contribute
-getting-started
+GetStart
 general-instructions
 installR
 building-r-and-r-packages
-what-tools-do-you-need-to-build-r-from-source-on-windows
+what-tools-you-need-to-build-r-from-source-on-windows
 how-to-setup-rtools
 how-to-build-r
+how-to-download-the-r-sources-directly-or-from-the-svn-repository
 see-also
 bug-tracking
 what-is-a-bug-in-r
@@ -57,6 +58,10 @@ VM
 what-can-you-test
 writing-tests-for-r
 benchmarks
+finding-the-source
+finding-r-source-code
+finding-c-source-code
+see-also-5
 news-and-announcements
 blogs
 conferences

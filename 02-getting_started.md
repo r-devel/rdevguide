@@ -1,4 +1,4 @@
-# Getting Started 
+# Getting Started {#GetStart}
 
 These instructions cover how to install R in Windows. The tools required to build R and R packages in Windows are also discussed.
 
@@ -22,11 +22,11 @@ The `r-devel` is the next minor or eventually major release development version 
 
 2. Click on the download links to download an executable installer.
 
-3. Select the language while installing, read the public license information, and select the destination location to start the installation. You will be prompted to select components at this stage: `User installation`, `32-bit User installation`, `64-bit User installation`, or `Custom installation`. The default option may be opted for the questions from this step onwards to complete the installation. 
+3. Select the language while installing, read the public license information, and select destination location to the start the installation. You will be prompted to select components at this stage: `User installation`, `32-bit User installation`, `64-bit User installation`, or `Custom installation`. The default option may be opted for the questions from this step onwards to complete the installation. 
 
 ## Building R and R packages
 
-### What tools do you need to build R from source on Windows?
+### What tools you need to build R from source on Windows?
 
 1. [RTools](https://github.com/r-windows/docs/blob/master/faq.md#what-is-rtools) is the toolchain bundle that you can use to build R base and R packages containing compiled code, on Windows.
 
@@ -44,9 +44,15 @@ To build R for Windows using `RTools` follow the instructions in this [README](h
 
 For development and testing, you need only the quick development build. The quick build avoids building the manuals, which are generally not needed for development and testing. 
 
-However, even for the quick build there are some [default requirements](https://github.com/r-windows/r-base/blob/master/quick-build.sh). For instance, MiKTeX is to be installed in `C:/Program Files` and you have 64-bit R. If necessary, these defaults can be customised. The installation path of MiKTeX can be customised [here](https://github.com/r-windows/r-base/blob/50a229fc76c50a5fb42c0daa367466aaf2318171/quick-build.sh#L13) whereas the Windows bit can be customised [here](https://github.com/r-windows/r-base/blob/50a229fc76c50a5fb42c0daa367466aaf2318171/quick-build.sh#L6).
+However, even for the quick build there are some [default requirements](https://github.com/r-windows/r-base/blob/master/quick-build.sh). For instance, MikTeX is to be installed in `C:/Program Files` and you have 64-bit R. If necessary, these defaults can be customised. The installation path of MikTex can be customised [here](https://github.com/r-windows/r-base/blob/50a229fc76c50a5fb42c0daa367466aaf2318171/quick-build.sh#L13) whereas the Windows bit can be customised [here](https://github.com/r-windows/r-base/blob/50a229fc76c50a5fb42c0daa367466aaf2318171/quick-build.sh#L6).
 
 If you are a maintainer of the Windows CRAN releases then, the full installer build is available for building the complete installer as it appears on CRAN. It will build both the 32-bit and 64-bit R, the pdf manuals, and the installer program. You will use this to create the binary builds and not when building R from the source yourself.
+
+## How to download the R sources directly or from the svn repository?
+
+  * To download the R sources on Windows, you can use `tar` from the RStudio terminal. 
+  
+  * If you want to checkout the sources from svn, it is probably best to install an SVN client. Either TortoiseSVN (https://tortoisesvn.net/, command line tool, and Windows Explorer integration) or SlikSVN (https://sliksvn.com/download/, just the command line tool) is recommended. They have simple Windows installers and you can use svn straight-away from Windows cmd or RStudio terminal.
 
 ## See also
 
