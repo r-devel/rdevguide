@@ -1,6 +1,6 @@
 # Finding the Source 
 
-This chapter discusses how you can have an overview of the R codebase. For instance, where to find the implmentation of a base function written in R and where to find a primitive implementation written C. You may want to find the source code of a function just out of curiosity or maybe to gain more insight into what a particular function is actually doing. Whatever be the case, reading the source code will help you to learn a lot about any function.
+This chapter discusses how you can have an overview of the R codebase. For instance, where to find the implementation of a base function written in R and where to find a primitive implementation written in C. You may want to find the source code of a function just out of curiosity or maybe to gain more insight into what a particular function is actually doing. Whatever be the case, reading the source code will help you to learn a lot about any function.
 
 ## Finding R source code
 
@@ -12,7 +12,7 @@ This chapter discusses how you can have an overview of the R codebase. For insta
 
   * Top-level function is an S3 generic, identified by a call to `UseMethod()`. Use `methods(function_name)` to see available methods, then go to step 2.
   
-  * Code of interest is in compiled code, identified by a call to `.C()`, `.Call()`, `.Fortran()`, `.External()`, or `.Internal()` and `.Primitive()`: go to section on compiled code.
+  * Code of interest is in compiled code, identified by a call to `.C()`, `.Call()`, `.Fortran()`, and `.External()`, or `.Internal()` and `.Primitive()`: go to section on compiled code.
  
 2. Nested functions or S3 methods may not be exported by the package they are in. If this is the case, the simplest way to view the code is to use `getAnywhere()` or `getS3method()`. Now you can keep looking at nested R functions till you find the code of interest or hit a call to compiled code.
 
