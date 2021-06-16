@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 7 Testing R code | Contributing to R Core</title>
+  <title>Chapter 8 Testing R code | Contributing to R Core</title>
   <meta name="description" content="A developer’s guide to contributing to R Core." />
   <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 7 Testing R code | Contributing to R Core" />
+  <meta property="og:title" content="Chapter 8 Testing R code | Contributing to R Core" />
   <meta property="og:type" content="book" />
   <meta property="og:url" content="TDDO" />
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="forwards/rdevguide" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 7 Testing R code | Contributing to R Core" />
+  <meta name="twitter:title" content="Chapter 8 Testing R code | Contributing to R Core" />
   
   <meta name="twitter:description" content="A developer’s guide to contributing to R Core." />
   
@@ -31,7 +31,7 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="documenting-r.html"/>
+<link rel="prev" href="FixBug.html"/>
 <link rel="next" href="developer-tools.html"/>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -182,25 +182,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="4.4" data-path="reviewing-bugs.html"><a href="reviewing-bugs.html#example-of-a-bug-review-submitted-on-bugzilla"><i class="fa fa-check"></i><b>4.4</b> Example of a bug review submitted on Bugzilla</a></li>
 <li class="chapter" data-level="4.5" data-path="reviewing-bugs.html"><a href="reviewing-bugs.html#see-also-2"><i class="fa fa-check"></i><b>4.5</b> See also</a></li>
 </ul></li>
-<li class="chapter" data-level="5" data-path="FixBug.html"><a href="FixBug.html"><i class="fa fa-check"></i><b>5</b> Lifecycle of a Patch</a><ul>
-<li class="chapter" data-level="5.1" data-path="FixBug.html"><a href="FixBug.html#introduction"><i class="fa fa-check"></i><b>5.1</b> Introduction</a></li>
-<li class="chapter" data-level="5.2" data-path="FixBug.html"><a href="FixBug.html#when-do-you-submit-a-patch"><i class="fa fa-check"></i><b>5.2</b> When do you submit a patch?</a></li>
-<li class="chapter" data-level="5.3" data-path="FixBug.html"><a href="FixBug.html#what-tools-are-required-to-submit-a-patch"><i class="fa fa-check"></i><b>5.3</b> What tools are required to submit a patch?</a></li>
-<li class="chapter" data-level="5.4" data-path="FixBug.html"><a href="FixBug.html#how-to-prepare-a-patch"><i class="fa fa-check"></i><b>5.4</b> How to prepare a patch?</a></li>
-<li class="chapter" data-level="5.5" data-path="FixBug.html"><a href="FixBug.html#GoodPatches"><i class="fa fa-check"></i><b>5.5</b> Making good patches</a></li>
-<li class="chapter" data-level="5.6" data-path="FixBug.html"><a href="FixBug.html#submitting-your-patch-for-review"><i class="fa fa-check"></i><b>5.6</b> Submitting your patch for review</a></li>
-<li class="chapter" data-level="5.7" data-path="FixBug.html"><a href="FixBug.html#getting-your-patch-reviewed"><i class="fa fa-check"></i><b>5.7</b> Getting your patch reviewed</a><ul>
-<li class="chapter" data-level="5.7.1" data-path="FixBug.html"><a href="FixBug.html#how-to-review-a-patch"><i class="fa fa-check"></i><b>5.7.1</b> How to review a patch?</a></li>
-</ul></li>
-<li class="chapter" data-level="5.8" data-path="FixBug.html"><a href="FixBug.html#leaving-a-patch-review-on-bugzilla"><i class="fa fa-check"></i><b>5.8</b> Leaving a patch review on Bugzilla</a></li>
-<li class="chapter" data-level="5.9" data-path="FixBug.html"><a href="FixBug.html#dismissing-review-from-another-core-developer"><i class="fa fa-check"></i><b>5.9</b> Dismissing review from another core developer</a></li>
-<li class="chapter" data-level="5.10" data-path="FixBug.html"><a href="FixBug.html#acceptance-or-rejection-of-your-patch"><i class="fa fa-check"></i><b>5.10</b> Acceptance or rejection of your patch</a></li>
-<li class="chapter" data-level="5.11" data-path="FixBug.html"><a href="FixBug.html#examples-of-patch-reports-on-bugzilla"><i class="fa fa-check"></i><b>5.11</b> Examples of patch reports on Bugzilla</a></li>
-<li class="chapter" data-level="5.12" data-path="FixBug.html"><a href="FixBug.html#examples-of-reviewing-a-patch"><i class="fa fa-check"></i><b>5.12</b> Examples of reviewing a patch</a></li>
-<li class="chapter" data-level="5.13" data-path="FixBug.html"><a href="FixBug.html#see-also-3"><i class="fa fa-check"></i><b>5.13</b> See also</a></li>
+<li class="chapter" data-level="5" data-path="finding-the-source.html"><a href="finding-the-source.html"><i class="fa fa-check"></i><b>5</b> Finding the Source</a><ul>
+<li class="chapter" data-level="5.1" data-path="finding-the-source.html"><a href="finding-the-source.html#finding-r-source-code"><i class="fa fa-check"></i><b>5.1</b> Finding R source code</a></li>
+<li class="chapter" data-level="5.2" data-path="finding-the-source.html"><a href="finding-the-source.html#finding-c-source-code"><i class="fa fa-check"></i><b>5.2</b> Finding C source code</a></li>
+<li class="chapter" data-level="5.3" data-path="finding-the-source.html"><a href="finding-the-source.html#see-also-3"><i class="fa fa-check"></i><b>5.3</b> See also</a></li>
 </ul></li>
 <li class="chapter" data-level="6" data-path="documenting-r.html"><a href="documenting-r.html"><i class="fa fa-check"></i><b>6</b> Documenting R</a><ul>
-<li class="chapter" data-level="6.1" data-path="documenting-r.html"><a href="documenting-r.html#introduction-1"><i class="fa fa-check"></i><b>6.1</b> Introduction</a></li>
+<li class="chapter" data-level="6.1" data-path="documenting-r.html"><a href="documenting-r.html#introduction"><i class="fa fa-check"></i><b>6.1</b> Introduction</a></li>
 <li class="chapter" data-level="6.2" data-path="documenting-r.html"><a href="documenting-r.html#guidelines-for-writing-the-system-help-files-in-.rd-format"><i class="fa fa-check"></i><b>6.2</b> Guidelines for writing the system help files (in .Rd format)</a></li>
 <li class="chapter" data-level="6.3" data-path="documenting-r.html"><a href="documenting-r.html#helping-with-documentation"><i class="fa fa-check"></i><b>6.3</b> Helping with documentation</a></li>
 <li class="chapter" data-level="6.4" data-path="documenting-r.html"><a href="documenting-r.html#proofreading"><i class="fa fa-check"></i><b>6.4</b> Proofreading</a></li>
@@ -208,24 +196,36 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="6.6" data-path="documenting-r.html"><a href="documenting-r.html#instructions-for-reporting-the-cran-policy-bugs-discussion-in-slack-random-channel"><i class="fa fa-check"></i><b>6.6</b> Instructions for reporting the CRAN policy bugs – discussion in slack (random channel)</a></li>
 <li class="chapter" data-level="6.7" data-path="documenting-r.html"><a href="documenting-r.html#see-also-4"><i class="fa fa-check"></i><b>6.7</b> See also</a></li>
 </ul></li>
-<li class="chapter" data-level="7" data-path="TestRCode.html"><a href="TestRCode.html"><i class="fa fa-check"></i><b>7</b> Testing R code</a><ul>
-<li class="chapter" data-level="7.1" data-path="TestRCode.html"><a href="TestRCode.html#where-to-test"><i class="fa fa-check"></i><b>7.1</b> Where to test?</a><ul>
-<li class="chapter" data-level="7.1.1" data-path="TestRCode.html"><a href="TestRCode.html#VM"><i class="fa fa-check"></i><b>7.1.1</b> Virtual machine</a></li>
+<li class="chapter" data-level="7" data-path="FixBug.html"><a href="FixBug.html"><i class="fa fa-check"></i><b>7</b> Lifecycle of a Patch</a><ul>
+<li class="chapter" data-level="7.1" data-path="FixBug.html"><a href="FixBug.html#introduction-1"><i class="fa fa-check"></i><b>7.1</b> Introduction</a></li>
+<li class="chapter" data-level="7.2" data-path="FixBug.html"><a href="FixBug.html#when-do-you-submit-a-patch"><i class="fa fa-check"></i><b>7.2</b> When do you submit a patch?</a></li>
+<li class="chapter" data-level="7.3" data-path="FixBug.html"><a href="FixBug.html#what-tools-are-required-to-submit-a-patch"><i class="fa fa-check"></i><b>7.3</b> What tools are required to submit a patch?</a></li>
+<li class="chapter" data-level="7.4" data-path="FixBug.html"><a href="FixBug.html#how-to-prepare-a-patch"><i class="fa fa-check"></i><b>7.4</b> How to prepare a patch?</a></li>
+<li class="chapter" data-level="7.5" data-path="FixBug.html"><a href="FixBug.html#GoodPatches"><i class="fa fa-check"></i><b>7.5</b> Making good patches</a></li>
+<li class="chapter" data-level="7.6" data-path="FixBug.html"><a href="FixBug.html#submitting-your-patch-for-review"><i class="fa fa-check"></i><b>7.6</b> Submitting your patch for review</a></li>
+<li class="chapter" data-level="7.7" data-path="FixBug.html"><a href="FixBug.html#getting-your-patch-reviewed"><i class="fa fa-check"></i><b>7.7</b> Getting your patch reviewed</a><ul>
+<li class="chapter" data-level="7.7.1" data-path="FixBug.html"><a href="FixBug.html#how-to-review-a-patch"><i class="fa fa-check"></i><b>7.7.1</b> How to review a patch?</a></li>
 </ul></li>
-<li class="chapter" data-level="7.2" data-path="TestRCode.html"><a href="TestRCode.html#what-can-you-test"><i class="fa fa-check"></i><b>7.2</b> What can you test?</a></li>
-<li class="chapter" data-level="7.3" data-path="TestRCode.html"><a href="TestRCode.html#writing-tests-for-r"><i class="fa fa-check"></i><b>7.3</b> Writing tests for R</a></li>
-<li class="chapter" data-level="7.4" data-path="TestRCode.html"><a href="TestRCode.html#benchmarks"><i class="fa fa-check"></i><b>7.4</b> Benchmarks</a></li>
+<li class="chapter" data-level="7.8" data-path="FixBug.html"><a href="FixBug.html#leaving-a-patch-review-on-bugzilla"><i class="fa fa-check"></i><b>7.8</b> Leaving a patch review on Bugzilla</a></li>
+<li class="chapter" data-level="7.9" data-path="FixBug.html"><a href="FixBug.html#dismissing-review-from-another-core-developer"><i class="fa fa-check"></i><b>7.9</b> Dismissing review from another core developer</a></li>
+<li class="chapter" data-level="7.10" data-path="FixBug.html"><a href="FixBug.html#acceptance-or-rejection-of-your-patch"><i class="fa fa-check"></i><b>7.10</b> Acceptance or rejection of your patch</a></li>
+<li class="chapter" data-level="7.11" data-path="FixBug.html"><a href="FixBug.html#examples-of-patch-reports-on-bugzilla"><i class="fa fa-check"></i><b>7.11</b> Examples of patch reports on Bugzilla</a></li>
+<li class="chapter" data-level="7.12" data-path="FixBug.html"><a href="FixBug.html#examples-of-reviewing-a-patch"><i class="fa fa-check"></i><b>7.12</b> Examples of reviewing a patch</a></li>
+<li class="chapter" data-level="7.13" data-path="FixBug.html"><a href="FixBug.html#see-also-5"><i class="fa fa-check"></i><b>7.13</b> See also</a></li>
 </ul></li>
-<li class="chapter" data-level="8" data-path="developer-tools.html"><a href="developer-tools.html"><i class="fa fa-check"></i><b>8</b> Developer tools</a><ul>
-<li class="chapter" data-level="8.1" data-path="developer-tools.html"><a href="developer-tools.html#subversion-svn-client"><i class="fa fa-check"></i><b>8.1</b> Subversion (svn) client</a></li>
-<li class="chapter" data-level="8.2" data-path="developer-tools.html"><a href="developer-tools.html#globally-search-for-a-regular-expression-and-print-matching-lines-grep"><i class="fa fa-check"></i><b>8.2</b> Globally search for a regular expression and print matching lines (grep)</a></li>
-<li class="chapter" data-level="8.3" data-path="developer-tools.html"><a href="developer-tools.html#git"><i class="fa fa-check"></i><b>8.3</b> Git</a></li>
-<li class="chapter" data-level="8.4" data-path="developer-tools.html"><a href="developer-tools.html#github"><i class="fa fa-check"></i><b>8.4</b> GitHub</a></li>
+<li class="chapter" data-level="8" data-path="TestRCode.html"><a href="TestRCode.html"><i class="fa fa-check"></i><b>8</b> Testing R code</a><ul>
+<li class="chapter" data-level="8.1" data-path="TestRCode.html"><a href="TestRCode.html#where-to-test"><i class="fa fa-check"></i><b>8.1</b> Where to test?</a><ul>
+<li class="chapter" data-level="8.1.1" data-path="TestRCode.html"><a href="TestRCode.html#VM"><i class="fa fa-check"></i><b>8.1.1</b> Virtual machine</a></li>
 </ul></li>
-<li class="chapter" data-level="9" data-path="finding-the-source.html"><a href="finding-the-source.html"><i class="fa fa-check"></i><b>9</b> Finding the Source</a><ul>
-<li class="chapter" data-level="9.1" data-path="finding-the-source.html"><a href="finding-the-source.html#finding-r-source-code"><i class="fa fa-check"></i><b>9.1</b> Finding R source code</a></li>
-<li class="chapter" data-level="9.2" data-path="finding-the-source.html"><a href="finding-the-source.html#finding-c-source-code"><i class="fa fa-check"></i><b>9.2</b> Finding C source code</a></li>
-<li class="chapter" data-level="9.3" data-path="finding-the-source.html"><a href="finding-the-source.html#see-also-5"><i class="fa fa-check"></i><b>9.3</b> See also</a></li>
+<li class="chapter" data-level="8.2" data-path="TestRCode.html"><a href="TestRCode.html#what-can-you-test"><i class="fa fa-check"></i><b>8.2</b> What can you test?</a></li>
+<li class="chapter" data-level="8.3" data-path="TestRCode.html"><a href="TestRCode.html#writing-tests-for-r"><i class="fa fa-check"></i><b>8.3</b> Writing tests for R</a></li>
+<li class="chapter" data-level="8.4" data-path="TestRCode.html"><a href="TestRCode.html#benchmarks"><i class="fa fa-check"></i><b>8.4</b> Benchmarks</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="developer-tools.html"><a href="developer-tools.html"><i class="fa fa-check"></i><b>9</b> Developer tools</a><ul>
+<li class="chapter" data-level="9.1" data-path="developer-tools.html"><a href="developer-tools.html#subversion-svn-client"><i class="fa fa-check"></i><b>9.1</b> Subversion (svn) client</a></li>
+<li class="chapter" data-level="9.2" data-path="developer-tools.html"><a href="developer-tools.html#globally-search-for-a-regular-expression-and-print-matching-lines-grep"><i class="fa fa-check"></i><b>9.2</b> Globally search for a regular expression and print matching lines (grep)</a></li>
+<li class="chapter" data-level="9.3" data-path="developer-tools.html"><a href="developer-tools.html#git"><i class="fa fa-check"></i><b>9.3</b> Git</a></li>
+<li class="chapter" data-level="9.4" data-path="developer-tools.html"><a href="developer-tools.html#github"><i class="fa fa-check"></i><b>9.4</b> GitHub</a></li>
 </ul></li>
 <li class="chapter" data-level="10" data-path="news-and-announcements.html"><a href="news-and-announcements.html"><i class="fa fa-check"></i><b>10</b> News and Announcements</a><ul>
 <li class="chapter" data-level="10.1" data-path="news-and-announcements.html"><a href="news-and-announcements.html#blogs"><i class="fa fa-check"></i><b>10.1</b> Blogs</a></li>
@@ -260,18 +260,18 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
             <section class="normal" id="section-">
 <div id="TestRCode" class="section level1">
-<h1><span class="header-section-number">Chapter 7</span> Testing R code</h1>
+<h1><span class="header-section-number">Chapter 8</span> Testing R code</h1>
 <p>This chapter is inspired from the blog on <a href="https://developer.r-project.org/Blog/public/2021/04/28/r-can-use-your-help-testing-r-before-release/index.html">testing R before release</a> and discusses how you can help with testing of pre-release versions of R.</p>
 <div id="where-to-test" class="section level2">
-<h2><span class="header-section-number">7.1</span> Where to test?</h2>
+<h2><span class="header-section-number">8.1</span> Where to test?</h2>
 <p>Whenever possible use a fresh package library for testing, even better would be to use <a href="TestRCode.html#VM">virtual machines</a> for the testing. This would ensure that you do not damage your existing R installation.</p>
 <div id="VM" class="section level3">
-<h3><span class="header-section-number">7.1.1</span> Virtual machine</h3>
+<h3><span class="header-section-number">8.1.1</span> Virtual machine</h3>
 <p>A free Windows 10 virtual machine is provided by Microsoft (with a 90-day limit) for building, testing, and checking R packages and R itself. Package maintainers who work on Linux and MacOS can use it to test their packages on Windows. Read the <a href="https://svn.r-project.org/R-dev-web/trunk/WindowsBuilds/winutf8/ucrt3/vm.html">instructions</a> on how to automatically set up the machine to check R packages. Tomas Kalibera describes the details of using virtual machine in the blog <a href="https://developer.r-project.org/Blog/public/2021/03/18/virtual-windows-machine-for-checking-r-packages/index.html">Virtual Windows machine for checking R packages</a>.</p>
 </div>
 </div>
 <div id="what-can-you-test" class="section level2">
-<h2><span class="header-section-number">7.2</span> What can you test?</h2>
+<h2><span class="header-section-number">8.2</span> What can you test?</h2>
 <p>You can test:</p>
 <ul>
 <li><p>Your own programs.</p></li>
@@ -289,12 +289,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul>
 </div>
 <div id="writing-tests-for-r" class="section level2">
-<h2><span class="header-section-number">7.3</span> Writing tests for R</h2>
+<h2><span class="header-section-number">8.3</span> Writing tests for R</h2>
 <p>Writing tests for R is much like writing tests for your own code. Tests need to be thorough, fast, isolated, consistently repeatable, and as simple as possible.</p>
 <p>When you are adding tests to an existing test file, it is also recommended that you study the other tests in that file; it will teach you which precautions you have to take to make your tests robust and portable. We try to have tests both for normal behaviour and for error conditions. Tests live in the <code>tests</code> directory.</p>
 </div>
 <div id="benchmarks" class="section level2">
-<h2><span class="header-section-number">7.4</span> Benchmarks</h2>
+<h2><span class="header-section-number">8.4</span> Benchmarks</h2>
 <p>Benchmarking is useful to test that a change does not degrade performance.</p>
 
 </div>
@@ -304,7 +304,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           </div>
         </div>
       </div>
-<a href="documenting-r.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="FixBug.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
 <a href="developer-tools.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
