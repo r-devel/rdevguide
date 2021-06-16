@@ -261,7 +261,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="finding-the-source" class="section level1">
 <h1><span class="header-section-number">Chapter 5</span> Finding the Source</h1>
-<p>This chapter discusses how you can have an overview of the R codebase. For instance, where to find the implmentation of a base function written in R and where to find a primitive implementation written C. You may want to find the source code of a function just out of curiosity or maybe to gain more insight into what a particular function is actually doing. Whatever be the case, reading the source code will help you to learn a lot about any function.</p>
+<p>This chapter discusses how you can have an overview of the R codebase. For instance, where to find the implementation of a base function written in R and where to find a primitive implementation written in C. You may want to find the source code of a function just out of curiosity or maybe to gain more insight into what a particular function is actually doing. Whatever be the case, reading the source code will help you to learn a lot about any function.</p>
 <div id="finding-r-source-code" class="section level2">
 <h2><span class="header-section-number">5.1</span> Finding R source code</h2>
 <ol style="list-style-type: decimal">
@@ -271,7 +271,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li><p>Can already see code of interest: stop here or skip to step 3 to find the corresponding file in the R sources.</p></li>
 <li><p>Code of interest is in nested R function: go to step 2.</p></li>
 <li><p>Top-level function is an S3 generic, identified by a call to <code>UseMethod()</code>. Use <code>methods(function_name)</code> to see available methods, then go to step 2.</p></li>
-<li><p>Code of interest is in compiled code, identified by a call to <code>.C()</code>, <code>.Call()</code>, <code>.Fortran()</code>, <code>.External()</code>, or <code>.Internal()</code> and <code>.Primitive()</code>: go to section on compiled code.</p></li>
+<li><p>Code of interest is in compiled code, identified by a call to <code>.C()</code>, <code>.Call()</code>, <code>.Fortran()</code>, and <code>.External()</code>, or <code>.Internal()</code> and <code>.Primitive()</code>: go to section on compiled code.</p></li>
 </ul>
 <ol start="2" style="list-style-type: decimal">
 <li><p>Nested functions or S3 methods may not be exported by the package they are in. If this is the case, the simplest way to view the code is to use <code>getAnywhere()</code> or <code>getS3method()</code>. Now you can keep looking at nested R functions till you find the code of interest or hit a call to compiled code.</p></li>
