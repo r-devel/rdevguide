@@ -62,6 +62,7 @@ VM
 what-can-you-test
 writing-tests-for-r
 benchmarks
+r-core-developers
 developer-tools
 subversion-svn-client
 globally-search-for-a-regular-expression-and-print-matching-lines-grep
@@ -73,7 +74,6 @@ conferences
 journal
 mailing-lists
 twitter
-r-core-developers
 WhereToGetHelp
 slack
 mailing-lists-1
