@@ -3,7 +3,7 @@ GetStart
 general-instructions
 installR
 building-r-and-r-packages
-what-tools-you-need-to-build-r-from-source-on-windows
+what-tools-do-you-need-to-build-r-from-source-on-windows
 how-to-setup-rtools
 how-to-build-r
 how-to-download-the-r-sources-directly-or-from-the-svn-repository
