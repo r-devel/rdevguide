@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 6 Documenting R | Contributing to R Core</title>
+  <title>Chapter 7 Documenting R | Contributing to R Core</title>
   <meta name="description" content="A developer’s guide to contributing to R Core." />
   <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 6 Documenting R | Contributing to R Core" />
+  <meta property="og:title" content="Chapter 7 Documenting R | Contributing to R Core" />
   <meta property="og:type" content="book" />
   <meta property="og:url" content="TDDO" />
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="forwards/rdevguide" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 6 Documenting R | Contributing to R Core" />
+  <meta name="twitter:title" content="Chapter 7 Documenting R | Contributing to R Core" />
   
   <meta name="twitter:description" content="A developer’s guide to contributing to R Core." />
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="finding-the-source.html"/>
-<link rel="next" href="FixBug.html"/>
+<link rel="prev" href="FixBug.html"/>
+<link rel="next" href="TestRCode.html"/>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -187,31 +187,31 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="5.2" data-path="finding-the-source.html"><a href="finding-the-source.html#finding-c-source-code"><i class="fa fa-check"></i><b>5.2</b> Finding C source code</a></li>
 <li class="chapter" data-level="5.3" data-path="finding-the-source.html"><a href="finding-the-source.html#see-also-3"><i class="fa fa-check"></i><b>5.3</b> See also</a></li>
 </ul></li>
-<li class="chapter" data-level="6" data-path="documenting-r.html"><a href="documenting-r.html"><i class="fa fa-check"></i><b>6</b> Documenting R</a><ul>
-<li class="chapter" data-level="6.1" data-path="documenting-r.html"><a href="documenting-r.html#introduction"><i class="fa fa-check"></i><b>6.1</b> Introduction</a></li>
-<li class="chapter" data-level="6.2" data-path="documenting-r.html"><a href="documenting-r.html#guidelines-for-writing-the-system-help-files-in-.rd-format"><i class="fa fa-check"></i><b>6.2</b> Guidelines for writing the system help files (in .Rd format)</a></li>
-<li class="chapter" data-level="6.3" data-path="documenting-r.html"><a href="documenting-r.html#helping-with-documentation"><i class="fa fa-check"></i><b>6.3</b> Helping with documentation</a></li>
-<li class="chapter" data-level="6.4" data-path="documenting-r.html"><a href="documenting-r.html#proofreading"><i class="fa fa-check"></i><b>6.4</b> Proofreading</a></li>
-<li class="chapter" data-level="6.5" data-path="documenting-r.html"><a href="documenting-r.html#helping-with-the-developers-guide"><i class="fa fa-check"></i><b>6.5</b> Helping with the Developer’s Guide</a></li>
-<li class="chapter" data-level="6.6" data-path="documenting-r.html"><a href="documenting-r.html#instructions-for-reporting-the-cran-policy-bugs-discussion-in-slack-random-channel"><i class="fa fa-check"></i><b>6.6</b> Instructions for reporting the CRAN policy bugs – discussion in slack (random channel)</a></li>
-<li class="chapter" data-level="6.7" data-path="documenting-r.html"><a href="documenting-r.html#see-also-4"><i class="fa fa-check"></i><b>6.7</b> See also</a></li>
+<li class="chapter" data-level="6" data-path="FixBug.html"><a href="FixBug.html"><i class="fa fa-check"></i><b>6</b> Lifecycle of a Patch</a><ul>
+<li class="chapter" data-level="6.1" data-path="FixBug.html"><a href="FixBug.html#introduction"><i class="fa fa-check"></i><b>6.1</b> Introduction</a></li>
+<li class="chapter" data-level="6.2" data-path="FixBug.html"><a href="FixBug.html#when-do-you-submit-a-patch"><i class="fa fa-check"></i><b>6.2</b> When do you submit a patch?</a></li>
+<li class="chapter" data-level="6.3" data-path="FixBug.html"><a href="FixBug.html#what-tools-are-required-to-submit-a-patch"><i class="fa fa-check"></i><b>6.3</b> What tools are required to submit a patch?</a></li>
+<li class="chapter" data-level="6.4" data-path="FixBug.html"><a href="FixBug.html#how-to-prepare-a-patch"><i class="fa fa-check"></i><b>6.4</b> How to prepare a patch?</a></li>
+<li class="chapter" data-level="6.5" data-path="FixBug.html"><a href="FixBug.html#GoodPatches"><i class="fa fa-check"></i><b>6.5</b> Making good patches</a></li>
+<li class="chapter" data-level="6.6" data-path="FixBug.html"><a href="FixBug.html#submitting-your-patch-for-review"><i class="fa fa-check"></i><b>6.6</b> Submitting your patch for review</a></li>
+<li class="chapter" data-level="6.7" data-path="FixBug.html"><a href="FixBug.html#getting-your-patch-reviewed"><i class="fa fa-check"></i><b>6.7</b> Getting your patch reviewed</a><ul>
+<li class="chapter" data-level="6.7.1" data-path="FixBug.html"><a href="FixBug.html#how-to-review-a-patch"><i class="fa fa-check"></i><b>6.7.1</b> How to review a patch?</a></li>
 </ul></li>
-<li class="chapter" data-level="7" data-path="FixBug.html"><a href="FixBug.html"><i class="fa fa-check"></i><b>7</b> Lifecycle of a Patch</a><ul>
-<li class="chapter" data-level="7.1" data-path="FixBug.html"><a href="FixBug.html#introduction-1"><i class="fa fa-check"></i><b>7.1</b> Introduction</a></li>
-<li class="chapter" data-level="7.2" data-path="FixBug.html"><a href="FixBug.html#when-do-you-submit-a-patch"><i class="fa fa-check"></i><b>7.2</b> When do you submit a patch?</a></li>
-<li class="chapter" data-level="7.3" data-path="FixBug.html"><a href="FixBug.html#what-tools-are-required-to-submit-a-patch"><i class="fa fa-check"></i><b>7.3</b> What tools are required to submit a patch?</a></li>
-<li class="chapter" data-level="7.4" data-path="FixBug.html"><a href="FixBug.html#how-to-prepare-a-patch"><i class="fa fa-check"></i><b>7.4</b> How to prepare a patch?</a></li>
-<li class="chapter" data-level="7.5" data-path="FixBug.html"><a href="FixBug.html#GoodPatches"><i class="fa fa-check"></i><b>7.5</b> Making good patches</a></li>
-<li class="chapter" data-level="7.6" data-path="FixBug.html"><a href="FixBug.html#submitting-your-patch-for-review"><i class="fa fa-check"></i><b>7.6</b> Submitting your patch for review</a></li>
-<li class="chapter" data-level="7.7" data-path="FixBug.html"><a href="FixBug.html#getting-your-patch-reviewed"><i class="fa fa-check"></i><b>7.7</b> Getting your patch reviewed</a><ul>
-<li class="chapter" data-level="7.7.1" data-path="FixBug.html"><a href="FixBug.html#how-to-review-a-patch"><i class="fa fa-check"></i><b>7.7.1</b> How to review a patch?</a></li>
+<li class="chapter" data-level="6.8" data-path="FixBug.html"><a href="FixBug.html#leaving-a-patch-review-on-bugzilla"><i class="fa fa-check"></i><b>6.8</b> Leaving a patch review on Bugzilla</a></li>
+<li class="chapter" data-level="6.9" data-path="FixBug.html"><a href="FixBug.html#dismissing-review-from-another-core-developer"><i class="fa fa-check"></i><b>6.9</b> Dismissing review from another core developer</a></li>
+<li class="chapter" data-level="6.10" data-path="FixBug.html"><a href="FixBug.html#acceptance-or-rejection-of-your-patch"><i class="fa fa-check"></i><b>6.10</b> Acceptance or rejection of your patch</a></li>
+<li class="chapter" data-level="6.11" data-path="FixBug.html"><a href="FixBug.html#examples-of-patch-reports-on-bugzilla"><i class="fa fa-check"></i><b>6.11</b> Examples of patch reports on Bugzilla</a></li>
+<li class="chapter" data-level="6.12" data-path="FixBug.html"><a href="FixBug.html#examples-of-reviewing-a-patch"><i class="fa fa-check"></i><b>6.12</b> Examples of reviewing a patch</a></li>
+<li class="chapter" data-level="6.13" data-path="FixBug.html"><a href="FixBug.html#see-also-4"><i class="fa fa-check"></i><b>6.13</b> See also</a></li>
 </ul></li>
-<li class="chapter" data-level="7.8" data-path="FixBug.html"><a href="FixBug.html#leaving-a-patch-review-on-bugzilla"><i class="fa fa-check"></i><b>7.8</b> Leaving a patch review on Bugzilla</a></li>
-<li class="chapter" data-level="7.9" data-path="FixBug.html"><a href="FixBug.html#dismissing-review-from-another-core-developer"><i class="fa fa-check"></i><b>7.9</b> Dismissing review from another core developer</a></li>
-<li class="chapter" data-level="7.10" data-path="FixBug.html"><a href="FixBug.html#acceptance-or-rejection-of-your-patch"><i class="fa fa-check"></i><b>7.10</b> Acceptance or rejection of your patch</a></li>
-<li class="chapter" data-level="7.11" data-path="FixBug.html"><a href="FixBug.html#examples-of-patch-reports-on-bugzilla"><i class="fa fa-check"></i><b>7.11</b> Examples of patch reports on Bugzilla</a></li>
-<li class="chapter" data-level="7.12" data-path="FixBug.html"><a href="FixBug.html#examples-of-reviewing-a-patch"><i class="fa fa-check"></i><b>7.12</b> Examples of reviewing a patch</a></li>
-<li class="chapter" data-level="7.13" data-path="FixBug.html"><a href="FixBug.html#see-also-5"><i class="fa fa-check"></i><b>7.13</b> See also</a></li>
+<li class="chapter" data-level="7" data-path="documenting-r.html"><a href="documenting-r.html"><i class="fa fa-check"></i><b>7</b> Documenting R</a><ul>
+<li class="chapter" data-level="7.1" data-path="documenting-r.html"><a href="documenting-r.html#introduction-1"><i class="fa fa-check"></i><b>7.1</b> Introduction</a></li>
+<li class="chapter" data-level="7.2" data-path="documenting-r.html"><a href="documenting-r.html#guidelines-for-writing-the-system-help-files-in-.rd-format"><i class="fa fa-check"></i><b>7.2</b> Guidelines for writing the system help files (in .Rd format)</a></li>
+<li class="chapter" data-level="7.3" data-path="documenting-r.html"><a href="documenting-r.html#helping-with-documentation"><i class="fa fa-check"></i><b>7.3</b> Helping with documentation</a></li>
+<li class="chapter" data-level="7.4" data-path="documenting-r.html"><a href="documenting-r.html#proofreading"><i class="fa fa-check"></i><b>7.4</b> Proofreading</a></li>
+<li class="chapter" data-level="7.5" data-path="documenting-r.html"><a href="documenting-r.html#helping-with-the-developers-guide"><i class="fa fa-check"></i><b>7.5</b> Helping with the Developer’s Guide</a></li>
+<li class="chapter" data-level="7.6" data-path="documenting-r.html"><a href="documenting-r.html#instructions-for-reporting-the-cran-policy-bugs-discussion-in-slack-random-channel"><i class="fa fa-check"></i><b>7.6</b> Instructions for reporting the CRAN policy bugs – discussion in slack (random channel)</a></li>
+<li class="chapter" data-level="7.7" data-path="documenting-r.html"><a href="documenting-r.html#see-also-5"><i class="fa fa-check"></i><b>7.7</b> See also</a></li>
 </ul></li>
 <li class="chapter" data-level="8" data-path="TestRCode.html"><a href="TestRCode.html"><i class="fa fa-check"></i><b>8</b> Testing R code</a><ul>
 <li class="chapter" data-level="8.1" data-path="TestRCode.html"><a href="TestRCode.html#where-to-test"><i class="fa fa-check"></i><b>8.1</b> Where to test?</a><ul>
@@ -260,17 +260,17 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
             <section class="normal" id="section-">
 <div id="documenting-r" class="section level1">
-<h1><span class="header-section-number">Chapter 6</span> Documenting R</h1>
+<h1><span class="header-section-number">Chapter 7</span> Documenting R</h1>
 <p>The R language has a substantial body of documentation, much of which is contributed by various authors. The help files for R functions are written in ‘R documentation’ (.Rd) file format. It is a simple markup language with close resemblance to LaTeX. The .Rd file format can be further processed into a variety of formats, including LaTeX, HTML, and plain text.</p>
 <p>This chapter describes the styleguide for R’s documentation, how to document for R, report and review bugs (and suggest corrections for them) in the existing documentation. If you are interested in contributing to R’s documentation, your contributions are more than welcome.</p>
-<div id="introduction" class="section level2">
-<h2><span class="header-section-number">6.1</span> Introduction</h2>
+<div id="introduction-1" class="section level2">
+<h2><span class="header-section-number">7.1</span> Introduction</h2>
 <p>R’s documentation has long been considered to be good for a free programming language. The core developers have been committed to provide goods documentation on the language and its packages. The continuing involvement of the user community in providing assistance for creating and maintaining documentation has also supported a lot.</p>
 <p>The involvement of the community takes many forms, from authoring to bug reports to raising an issue when the documentation could be more complete or easier to use.</p>
 <p>This chapter is aimed at authors and potential authors of documentation for R. More specifically, it is for people contributing to the standard documentation and developing additional documents using the same tools as the standard documents. Any time you feel that you can clarify existing documentation or provide documentation that is missing, your contribution will be welcome and highly appreciated. If you find it difficult to deal with the markup language, you can ask for help for that part too. Please do not let the material in this chapter stand between the documentation and your desire to help out.</p>
 </div>
 <div id="guidelines-for-writing-the-system-help-files-in-.rd-format" class="section level2">
-<h2><span class="header-section-number">6.2</span> Guidelines for writing the system help files (in .Rd format)</h2>
+<h2><span class="header-section-number">7.2</span> Guidelines for writing the system help files (in .Rd format)</h2>
 <p>Following are the suggested guidelines while creating the system help files in the .Rd format. These are intended for writing the core documentations but may also be useful for package writers. (share documentation of a simple base function here?)</p>
 <p>There are three main parts of an .Rd file:</p>
 <ol style="list-style-type: decimal">
@@ -327,29 +327,29 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>Extensive details of writing R documentation files can be found <a href="https://cran.r-project.org/doc/manuals/r-release/R-exts.html#Writing-R-documentation-files">here</a>.</p>
 </div>
 <div id="helping-with-documentation" class="section level2">
-<h2><span class="header-section-number">6.3</span> Helping with documentation</h2>
+<h2><span class="header-section-number">7.3</span> Helping with documentation</h2>
 <p>Maintaining the accuracy of R’s documentations and keeping a high level of quality takes a lot of effort. Community members, like you, help with writing, editing, and updating content, and these contributions are appreciated and welcomed.</p>
 <p>Looking at pre-existing documentation source files can be very helpful when getting started.</p>
 <p>If you look at documentation issues on Bugzilla, you will find various documentation problems that may need work. Issues vary from typos to unclear documentation and items lacking documentation.</p>
 <p>If you see a documentation issue that you would like to tackle, you can leave a comment on the issue saying you are going to try to solve the issue and mention roughly how long you think you will take to do so (this allows others to take on the issue if you happen to forget or lose interest).</p>
 </div>
 <div id="proofreading" class="section level2">
-<h2><span class="header-section-number">6.4</span> Proofreading</h2>
+<h2><span class="header-section-number">7.4</span> Proofreading</h2>
 <p>While an issue filed on Bugzilla means there is a known issue somewhere, that does not mean there are not other issues lurking about in the documentation. Proofreading a part of the documentation can often uncover problems.</p>
 <p>If you decide to proofread, read a section of the documentation from start to finish, filing issues in Bugzilla for each major type of problem you find. It is best to avoid filing a single issue for an entire section containing multiple problems; instead, file several issues so that it is easier to break the work up for multiple people and more efficient review.</p>
 </div>
 <div id="helping-with-the-developers-guide" class="section level2">
-<h2><span class="header-section-number">6.5</span> Helping with the Developer’s Guide</h2>
+<h2><span class="header-section-number">7.5</span> Helping with the Developer’s Guide</h2>
 <p>The Developer’s Guide (what you are reading now) uses the same process as the main R documentation, except for some small differences. The source lives in a <a href="https://github.com/forwards/rdevguide">GitHub repository</a> and bug reports should be submitted to the <a href="https://github.com/forwards/rdevguide/issues">devguide GitHub tracker</a>.</p>
 <p>Our dev guide workflow uses continuous integration and deployment so changes to the dev guide are normally published when the pull request is merged. (Link to how-to-contribute from the introduction chapter)</p>
 </div>
 <div id="instructions-for-reporting-the-cran-policy-bugs-discussion-in-slack-random-channel" class="section level2">
-<h2><span class="header-section-number">6.6</span> Instructions for reporting the CRAN policy bugs – discussion in slack (random channel)</h2>
+<h2><span class="header-section-number">7.6</span> Instructions for reporting the CRAN policy bugs – discussion in slack (random channel)</h2>
 <p><strong>Note</strong>:</p>
 <p>There is a <code>#core-documentation</code> channel on the <a href="https://r-devel.slack.com/">R-devel slack</a> where you can discuss about the patches for improvements to R’s documentation.</p>
 </div>
-<div id="see-also-4" class="section level2">
-<h2><span class="header-section-number">6.7</span> See also</h2>
+<div id="see-also-5" class="section level2">
+<h2><span class="header-section-number">7.7</span> See also</h2>
 <ol style="list-style-type: decimal">
 <li><a href="https://cran.r-project.org/doc/manuals/r-release/R-exts.html#Writing-R-documentation-files">Writing R documentation files</a></li>
 </ol>
@@ -361,8 +361,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           </div>
         </div>
       </div>
-<a href="finding-the-source.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="FixBug.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="FixBug.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="TestRCode.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
