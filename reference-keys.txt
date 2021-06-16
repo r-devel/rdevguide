@@ -58,6 +58,11 @@ VM
 what-can-you-test
 writing-tests-for-r
 benchmarks
+developer-tools
+subversion-svn-client
+globally-search-for-a-regular-expression-and-print-matching-lines-grep
+git
+github
 finding-the-source
 finding-r-source-code
 finding-c-source-code
