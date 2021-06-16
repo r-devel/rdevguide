@@ -63,6 +63,10 @@ what-can-you-test
 writing-tests-for-r
 benchmarks
 r-core-developers
+WhereToGetHelp
+slack
+mailing-lists
+file-a-bug
 developer-tools
 subversion-svn-client
 globally-search-for-a-regular-expression-and-print-matching-lines-grep
@@ -72,9 +76,5 @@ news-and-announcements
 blogs
 conferences
 journal
-mailing-lists
-twitter
-WhereToGetHelp
-slack
 mailing-lists-1
-file-a-bug
+twitter
