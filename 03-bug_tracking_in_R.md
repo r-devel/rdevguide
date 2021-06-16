@@ -53,7 +53,7 @@ The sections that follow discuss where to check whether a bug is already reporte
 
 1. [Report](#ReportBug) the bug (if it is not already reported).
 
-2. [Test](provide hyperlink to the section/chapter which discusses this also include comment 1 from getting started chapter) the bug.
+2. [Test](#TestRCode) the bug.
 
 3. [Fix](#FixBug) the bug: Fixing a bug might require relatively more time. You may start a conversation about it on [BugZilla](https://bugs.r-project.org/bugzilla/index.cgi). This would require engagement with R Core team.
 

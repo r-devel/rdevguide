@@ -51,6 +51,12 @@ proofreading
 helping-with-the-developers-guide
 instructions-for-reporting-the-cran-policy-bugs-discussion-in-slack-random-channel
 see-also-4
+TestRCode
+where-to-test
+VM
+what-can-you-test
+writing-tests-for-r
+benchmarks
 r-core-developers
 WhereToGetHelp
 slack
