@@ -12,7 +12,7 @@ These instructions cover how to install R in Windows. The tools required to buil
 
    * The patched release (`r-patched`), and
 
-   * The development (`r-devel`) release. 
+   * The development release (`r-devel`). 
 
 The `r-devel` is the next minor or eventually major release development version of R. Mostly, bug fixes are introduced in `r-patched`, while `r-devel` is for introducing new features.
 
@@ -30,7 +30,7 @@ The `r-devel` is the next minor or eventually major release development version 
 
 1. [RTools](https://github.com/r-windows/docs/blob/master/faq.md#what-is-rtools) is the toolchain bundle that you can use to build R base and R packages containing compiled code, on Windows.
 
-2. You also need a distribution of $\LaTeX$ installed for building R and checking packages. The MiKTeX distribution of LaTeX that is used on CRAN can be downloaded from https://miktex.org.
+2. You also need a distribution of LaTeX installed for building R and checking packages. The MiKTeX distribution of LaTeX that is used on CRAN can be downloaded from https://miktex.org.
 
 ### How to setup `RTools`?
 
