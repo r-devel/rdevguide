@@ -22,11 +22,11 @@ The `r-devel` is the next minor or eventually major release development version 
 
 2. Click on the download links to download an executable installer.
 
-3. Select the language while installing, read the public license information, and select destination location to the start the installation. You will be prompted to select components at this stage: `User installation`, `32-bit User installation`, `64-bit User installation`, or `Custom installation`. The default option may be opted for the questions from this step onwards to complete the installation. 
+3. Select the language while installing, read the public license information, and select the destination location to start the installation. You will be prompted to select components at this stage: `User installation`, `32-bit User installation`, `64-bit User installation`, or `Custom installation`. The default option may be chosen for the questions from this step onwards to complete the installation. 
 
 ## Building R and R packages
 
-### What tools you need to build R from source on Windows?
+### What tools do you need to build R from source on Windows?
 
 1. [RTools](https://github.com/r-windows/docs/blob/master/faq.md#what-is-rtools) is the toolchain bundle that you can use to build R base and R packages containing compiled code, on Windows.
 
