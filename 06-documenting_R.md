@@ -1,0 +1,107 @@
+# Documenting R
+
+The R language has a substantial body of documentation, much of which is contributed by various authors. The help files for R functions are written in 'R documentation' (.Rd) file format. It is a simple markup language with close resemblance to LaTeX. The .Rd file format can be further processed into a variety of formats, including LaTeX, HTML, and plain text.
+
+This chapter describes the styleguide for R's documentation, how to document for R, report and review bugs (and suggest corrections for them) in the existing documentation. If you are interested in contributing to R's documentation, your contributions are more than welcome. 
+
+## Introduction
+
+R’s documentation has long been considered to be good for a free programming language. The core developers have been committed to provide goods documentation on the language and its packages. The continuing involvement of the user community in providing assistance for creating and maintaining documentation has also supported a lot.
+
+The involvement of the community takes many forms, from authoring to bug reports to raising an issue when the documentation could be more complete or easier to use.
+
+This chapter is aimed at authors and potential authors of documentation for R. More specifically, it is for people contributing to the standard documentation and developing additional documents using the same tools as the standard documents. Any time you feel that you can clarify existing documentation or provide documentation that is missing, your contribution will be welcome and highly appreciated. If you find it difficult to deal with the markup language, you can ask for help for that part too. Please do not let the material in this chapter stand between the documentation and your desire to help out.
+
+## Guidelines for writing the system help files (in .Rd format)
+
+Following are the suggested guidelines while creating the system help files in the .Rd format. These are intended for writing the core documentations but may also be useful for package writers. (share documentation of a simple base function here?)
+
+There are three main parts of an .Rd file:
+
+1. **Header**: This part is for the basic information of the document/file. For instance, the name of the file, the topics documented, a title, a short textual description, and R usage information for the objects documented.
+
+2. **Body**: This part includes further information on the function's arguments and return value.
+
+3. **Footer**: This part is optional. Usually the keyword information is included here.
+
+All the above information is included in a .Rd file within a series of sections with standard names (user-defined sections are also allowed). These sections are discussed below:
+
+1. `\title` section:
+    * Capitalize each word.
+    * Do not end in a period.
+    * Avoid use of markup language (because markup language need not be suitable for various hypertext search systems).
+    
+2. `\usage` and `\examples` sections:
+    * Line length of 65 characters is advised.
+    * Use `TRUE` instead of `T` and `FALSE` instead of `F`.
+    * Add spaces around binary operators.
+    * Add spaces after commas in the argument lists.
+    * Use `<-` rather than `=` for assignments.
+    * Add spaces around the `<-` operator.
+    * Do not use tabs to indent (as these do not render correctly on all possible pagers).
+    * Use 4 spaces to indent the (example) code.
+    * Make sure the examples are directly executable.
+    * The examples should be system-independent.
+    * The examples should not require special facilities (for instance, Internet access or write permission to specific directories).
+    * Examples should also not take longer than necessary to run, as they are run when checking a build of R.
+    
+3. `\synopsis` section: The `\usage` section can have the function definition, or the actual definition can be included in the `\synopsis` section.
+
+4. `\source` and `\references` sections:
+    * Author(s) names should be written in the form `Author, A. B.`.
+    * Author(s) names should be separated by a comma or `and` (but not both).
+    * Separate paragraphs (separated by a blank line) should be used for each reference.
+    * Give a date immediately after the author(s) names.
+    * Do not put a period after the date.
+    * Titles of books and journals (not articles) should be enclosed in `\emph{...}`.
+    * Volume numbers for journals are to be enclosed in `\bold{...}` and followed by a comma.
+    * Use `--` for page ranges.
+    * For given an address for a publisher use the format `New York: Springer-Verlag`.
+
+More guidelines for writing .Rd files can be found [here](https://developer.r-project.org/Rds.html).
+
+The language used in the documentations should follow these basic rules:
+
+1. Affirmative tone should be used to describe what the function does and how to use it effectively. Rather than creating worry in the mind of a reader, it should establish confident knowledge about the effective use of the particular function/feature.
+
+2. More documentation is not necessarily better documentation. Long descriptions full of corner cases and caveats can create the impression that a function is more complex or harder to use than it actually is. Be succinct but exhaustive. 
+
+3. Short code examples can help in understanding better. Readers can often grasp a simple example more quickly than they can digest a formal description. Usually people learn faster with concrete, motivating examples that match the context of a typical use case. 
+
+4. Giving a code equivalent (or approximate equivalent) can be a useful in addition to the description provided. You should carefully weigh whether the code equivalent adds value to the document.
+
+5. The tone of the documentation needs to be respectful of the reader’s background. Lay out the relevant information, show motivating use cases, provide glossary links, and do your best to connect-the-dots. The documentation is meant for newcomers, many of whom will be using it to evaluate the R language as a whole. The experience needs to be positive and not leave the reader with worries that something bad will happen if they make a mistake. 
+
+Extensive details of writing R documentation files can be found [here](https://cran.r-project.org/doc/manuals/r-release/R-exts.html#Writing-R-documentation-files).
+
+## Helping with documentation
+
+Maintaining the accuracy  of R's documentations and keeping a high level of quality takes a lot of effort. Community members, like you, help with writing, editing, and updating content, and these contributions are appreciated and welcomed.
+
+Looking at pre-existing documentation source files can be very helpful when getting started.
+
+If you look at documentation issues on Bugzilla, you will find various documentation problems that may need work. Issues vary from typos to unclear documentation and items lacking documentation.
+
+If you see a documentation issue that you would like to tackle, you can leave a comment on the issue saying you are going to try to solve the issue and mention roughly how long you think you will take to do so (this allows others to take on the issue if you happen to forget or lose interest).
+
+## Proofreading
+
+While an issue filed on Bugzilla means there is a known issue somewhere, that does not mean there are not other issues lurking about in the documentation. Proofreading a part of the documentation can often uncover problems.
+
+If you decide to proofread, read a section of the documentation from start to finish, filing issues in Bugzilla for each major type of problem you find. It is best to avoid filing a single issue for an entire section containing multiple problems; instead, file several issues so that it is easier to break the work up for multiple people and more efficient review.
+
+## Helping with the Developer's Guide
+
+The Developer’s Guide (what you are reading now) uses the same process as the main R documentation, except for some small differences. The source lives in a [GitHub repository](https://github.com/forwards/rdevguide) and bug reports should be submitted to the [devguide GitHub tracker](https://github.com/forwards/rdevguide/issues).
+
+Our dev guide workflow uses continuous integration and deployment so changes to the dev guide are normally published when the pull request is merged. (Link to how-to-contribute from the introduction chapter)
+
+## Instructions for reporting the CRAN policy bugs -- discussion in slack (random channel)
+
+**Note**:
+
+There is a `#core-documentation` channel on the [R-devel slack](https://r-devel.slack.com/) where you can discuss about the patches for improvements to R's documentation. 
+
+## See also
+
+1. [Writing R documentation files](https://cran.r-project.org/doc/manuals/r-release/R-exts.html#Writing-R-documentation-files)

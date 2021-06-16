@@ -43,6 +43,14 @@ acceptance-or-rejection-of-your-patch
 examples-of-patch-reports-on-bugzilla
 examples-of-reviewing-a-patch
 see-also-3
+documenting-r
+introduction-1
+guidelines-for-writing-the-system-help-files-in-.rd-format
+helping-with-documentation
+proofreading
+helping-with-the-developers-guide
+instructions-for-reporting-the-cran-policy-bugs-discussion-in-slack-random-channel
+see-also-4
 r-core-developers
 WhereToGetHelp
 slack
