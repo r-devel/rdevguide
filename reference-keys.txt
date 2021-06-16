@@ -1,4 +1,4 @@
-r-core-developers-guide
+introduction
 GetStart
 general-instructions
 installR
@@ -33,7 +33,7 @@ finding-r-source-code
 finding-c-source-code
 see-also-3
 FixBug
-introduction
+introduction-1
 when-do-you-submit-a-patch
 what-tools-are-required-to-submit-a-patch
 how-to-prepare-a-patch
@@ -48,7 +48,7 @@ examples-of-patch-reports-on-bugzilla
 examples-of-reviewing-a-patch
 see-also-4
 documenting-r
-introduction-1
+introduction-2
 guidelines-for-writing-the-system-help-files-in-.rd-format
 helping-with-documentation
 proofreading

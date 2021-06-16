@@ -1,4 +1,4 @@
-# R Core Developer's Guide
+# Introduction
 
 This guide is heavily influenced by the [Python Developer Guide](https://devguide.python.org/), and is a comprehensive resource for contributing to R Core – for both new and experienced contributors. It is maintained by the [R Contribution Working Group](https://forwards.github.io/rcontribution/working-group). We welcome your contributions to R Core!
 
