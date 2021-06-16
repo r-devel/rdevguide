@@ -22,7 +22,7 @@ When you are in doubt that there is a bug: (which should be most of the time!)
 
 3. Install R-devel, which is the most recent version of R from [svn](https://svn.r-project.org/R/trunk/) / [git](https://github.com/r-devel/r-svn) or [daily Windows build](https://cran.r-project.org/bin/windows/base/rdevel.html), and see if your bug still exists in R-devel (it may have been fixed very recently).
 
-4. Search on R-devel email list for messages with keywords related to your possible bug. If you find some related messages then read them to see if they clarify whether or not it is a bug. If you do not find any related messages, then please post a new message to R-devel. Your message should include (1) a brief description of the bug including current and expected behavior, (2) a minimal reproducible example.
+4. [Search on R-devel email list for messages with keywords related to your possible bug](https://r.789695.n4.nabble.com/template/NamlServlet.jtp?macro=search_page&node=909078&query=isna&days=0). If you find some related messages then read them to see if they clarify whether or not it is a bug. If you do not find any related messages, then please post a new message to R-devel. Your message should include (1) a brief description of the bug including current and expected behavior, (2) a minimal reproducible example.
 
 ## What condition might not be a bug?
 
@@ -52,9 +52,9 @@ The sections that follow discuss where to check whether a bug is already reporte
 
 1. [Report](#ReportBug) the bug (if it is not already reported).
 
-2. [Test](provide hyperlink to the section/chapter which discusses this also include comment 1 from getting started chapter) the bug.
+2. [Test](#TestRCode) the bug.
 
-3. [Fix](hyperlink to the chapter on the lifecycle of a patch) the bug: Fixing a bug might require relatively more time. You may start a conversation about it on [BugZilla](https://bugs.r-project.org/bugzilla/index.cgi). This would require engagement with R Core team.
+3. [Fix](#FixBug) the bug: Fixing a bug might require relatively more time. You may start a conversation about it on [BugZilla](https://bugs.r-project.org/bugzilla/index.cgi). This would require engagement with R Core team.
 
 ## What are some places where you may find a bug?
 
@@ -72,7 +72,7 @@ Once you confirm a bug exists, you need to submit a bug report so that it gets f
 
 1. Packages that are supported by the R-Core are labelled with `Maintainer: R Core Team <R-core@r-project.org>`. One simple way to get the information from R is by running the `maintainer("package_name")` command.
 
-2. The bug report for R-Core supported packages, their documentations, and/ or a bug report for the R language itself can be submitted either to R's [Bugzilla](https://bugs.r-project.org/bugzilla/). In the future, we hope to have an option to report an issue to the [GitHub Mirror of R svn server](https://github.com/r-devel/r-svn/issues).
+2. The bug report for R-Core supported packages, their documentations, and/ or a bug report for the R language itself can be submitted either to R-devel, [see posting guide](https://www.r-project.org/posting-guide.html#which_list), or to [Bugzilla](https://bugs.r-project.org/bugzilla/). In the future, we hope to have an option to report an issue to the [GitHub Mirror of R svn server](https://github.com/r-devel/r-svn/issues).
 
 3. If you want to submit the bug report using Bugzilla, please ensure that you have a Bugzilla account. To get a Bugzilla account, please send an e-mail to `bug-report-request@r-project.org` from the address that you want to use as your login. In this e-mail, briefly explain why you need an account. A volunteer shall then create a Bugzilla account and add you to R's Bugzilla members.
 
