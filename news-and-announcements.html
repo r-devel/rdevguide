@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 2 Getting Started | Contributing to R Core</title>
+  <title>Chapter 8 News and Announcements | Contributing to R Core</title>
   <meta name="description" content="A developer’s guide to contributing to R Core." />
   <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 2 Getting Started | Contributing to R Core" />
+  <meta property="og:title" content="Chapter 8 News and Announcements | Contributing to R Core" />
   <meta property="og:type" content="book" />
   <meta property="og:url" content="TDDO" />
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="forwards/rdevguide" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 2 Getting Started | Contributing to R Core" />
+  <meta name="twitter:title" content="Chapter 8 News and Announcements | Contributing to R Core" />
   
   <meta name="twitter:description" content="A developer’s guide to contributing to R Core." />
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="r-core-developers-guide.html"/>
-<link rel="next" href="bug-tracking.html"/>
+<link rel="prev" href="TestRCode.html"/>
+<link rel="next" href="r-core-developers.html"/>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -247,63 +247,31 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="getting-started" class="section level1">
-<h1><span class="header-section-number">Chapter 2</span> Getting Started</h1>
-<p>These instructions cover how to install R in Windows. The tools required to build R and R packages in Windows are also discussed.</p>
-<div id="general-instructions" class="section level2">
-<h2><span class="header-section-number">2.1</span> General instructions</h2>
-<ol style="list-style-type: decimal">
-<li><p>If you install the latest version or R-patched or R-devel, it will not over-write the previous installation(s) in your Windows machine.</p></li>
-<li><p>R uses a ‘major.minor.patchlevel’ version numbering scheme. Accordingly there are three main releases of R available to install:</p>
+<div id="news-and-announcements" class="section level1">
+<h1><span class="header-section-number">Chapter 8</span> News and Announcements</h1>
+<p>Here are some resources that can be useful to keep up with the developments in R:</p>
+<div id="blogs" class="section level2">
+<h2><span class="header-section-number">8.1</span> Blogs</h2>
+<p>The <a href="https://www.r-project.org/">R project</a> maintains a list of public <a href="https://developer.r-project.org/Blog/public/">blogs</a> mainly written by the R Core Development Team. Daily news about R-devel can be found <a href="https://developer.r-project.org/blosxom.cgi/R-devel">here</a>.</p>
+</div>
+<div id="conferences" class="section level2">
+<h2><span class="header-section-number">8.2</span> Conferences</h2>
+<p>Updates about conferences actively supported or endorsed by The R Foundation can be found <a href="https://www.r-project.org/conferences/">here</a>. These conferences are organised by members from the R community.</p>
+</div>
+<div id="journal" class="section level2">
+<h2><span class="header-section-number">8.3</span> Journal</h2>
+<p><a href="https://journal.r-project.org/">The R Journal</a> is an open access and refereed journal featuring short to medium length articles that should be of interest to users or developers of R. It also has a news section where information on, changes in R (new features of the latest release), changes on CRAN (new add-on packages, manuals, binary contributions, mirrors, etc.), upcoming conferences, and conference reports is provided.</p>
+</div>
+<div id="mailing-lists" class="section level2">
+<h2><span class="header-section-number">8.4</span> Mailing lists</h2>
 <ul>
-<li><p>The official release (<code>r-release</code>),</p></li>
-<li><p>The patched release (<code>r-patched</code>), and</p></li>
-<li><p>The development release (<code>r-devel</code>).</p></li>
-</ul></li>
-</ol>
-<p>The <code>r-devel</code> is the next minor or eventually major release development version of R. Mostly, bug fixes are introduced in <code>r-patched</code>, while <code>r-devel</code> is for introducing new features.</p>
+<li><a href="https://stat.ethz.ch/mailman/listinfo/r-announce">R-announce</a>: A moderated mailing list used for announcements by the R Core Development Team. Major announcements about the development of R and the availability of new code are made here.</li>
+<li><a href="https://stat.ethz.ch/mailman/listinfo/r-packages">R-packages</a>: A moderated mailing list for announcements about contributed R packages (typically on <a href="https://cran.r-project.org/">CRAN</a>) and similar R project extensions.</li>
+</ul>
 </div>
-<div id="installR" class="section level2">
-<h2><span class="header-section-number">2.2</span> Installing R</h2>
-<ol style="list-style-type: decimal">
-<li><p>The binary builds of R for Windows can be downloaded and installed from <a href="https://cran.r-project.org/bin/windows/base/">here</a>. Along with the link to the latest stable release, this page also contains links to the binary builds of r-patched and r-devel.</p></li>
-<li><p>Click on the download links to download an executable installer.</p></li>
-<li><p>Select the language while installing, read the public license information, and select the destination location to start the installation. You will be prompted to select components at this stage: <code>User installation</code>, <code>32-bit User installation</code>, <code>64-bit User installation</code>, or <code>Custom installation</code>. The default option may be opted for the questions from this step onwards to complete the installation.</p></li>
-</ol>
-</div>
-<div id="building-r-and-r-packages" class="section level2">
-<h2><span class="header-section-number">2.3</span> Building R and R packages</h2>
-<div id="what-tools-do-you-need-to-build-r-from-source-on-windows" class="section level3">
-<h3><span class="header-section-number">2.3.1</span> What tools do you need to build R from source on Windows?</h3>
-<ol style="list-style-type: decimal">
-<li><p><a href="https://github.com/r-windows/docs/blob/master/faq.md#what-is-rtools">RTools</a> is the toolchain bundle that you can use to build R base and R packages containing compiled code, on Windows.</p></li>
-<li><p>You also need a distribution of LaTeX installed for building R and checking packages. The MiKTeX distribution of LaTeX that is used on CRAN can be downloaded from <a href="https://miktex.org" class="uri">https://miktex.org</a>.</p></li>
-</ol>
-</div>
-<div id="how-to-setup-rtools" class="section level3">
-<h3><span class="header-section-number">2.3.2</span> How to setup <code>RTools</code>?</h3>
-<ol style="list-style-type: decimal">
-<li><p>The latest version of <code>RTools</code> can be downloaded from <a href="https://cran.r-project.org/bin/windows/Rtools/" class="uri">https://cran.r-project.org/bin/windows/Rtools/</a> and run in the Windows-style installer. You will need to know if you have a 32-bit or 64-bit Windows machine (right-click <code>This PC</code> in Windows Explorer and check the properties if you are unsure).</p></li>
-<li><p>Don’t forget to add <code>RTools</code> to the path as documented on the download page.</p></li>
-</ol>
-</div>
-<div id="how-to-build-r" class="section level3">
-<h3><span class="header-section-number">2.3.3</span> How to build R?</h3>
-<p>To build R for Windows using <code>RTools</code> follow the instructions in this <a href="https://github.com/r-windows/r-base#readme">README</a> file. There are two options available to build R. One is the quick development build and the other option is the full installer build.</p>
-<p>For development and testing, you need only the quick development build. The quick build avoids building the manuals, which are generally not needed for development and testing.</p>
-<p>However, even for the quick build there are some <a href="https://github.com/r-windows/r-base/blob/master/quick-build.sh">default requirements</a>. For instance, MiKTeX is to be installed in <code>C:/Program Files</code> and you have 64-bit R. If necessary, these defaults can be customised. The installation path of MiKTeX can be customised <a href="https://github.com/r-windows/r-base/blob/50a229fc76c50a5fb42c0daa367466aaf2318171/quick-build.sh#L13">here</a> whereas the Windows bit can be customised <a href="https://github.com/r-windows/r-base/blob/50a229fc76c50a5fb42c0daa367466aaf2318171/quick-build.sh#L6">here</a>.</p>
-<p>If you are a maintainer of the Windows CRAN releases then, the full installer build is available for building the complete installer as it appears on CRAN. It will build both the 32-bit and 64-bit R, the pdf manuals, and the installer program. You will use this to create the binary builds and not when building R from the source yourself.</p>
-</div>
-</div>
-<div id="see-also" class="section level2">
-<h2><span class="header-section-number">2.4</span> See also</h2>
-<ol style="list-style-type: decimal">
-<li><p><a href="https://cran.r-project.org">CRAN official website</a></p></li>
-<li><p><a href="https://cran.r-project.org/doc/manuals/r-patched/R-admin.html">R installation and administration manual</a></p></li>
-<li><p><a href="https://cran.r-project.org/bin/windows/base/rw-FAQ.html">R for Windows FAQ</a></p></li>
-<li><p><a href="https://cran.r-project.org/bin/windows/Rtools/">Rtools40 manual for Windows</a></p></li>
-<li><p><a href="https://cran.r-project.org/doc/FAQ/R-FAQ.html">R FAQ</a></p></li>
-</ol>
+<div id="twitter" class="section level2">
+<h2><span class="header-section-number">8.5</span> Twitter</h2>
+<p>Follow <a href="https://twitter.com/R_dev_news">‘<span class="citation">(<span class="citeproc-not-found" data-reference-id="R_dev_news"><strong>???</strong></span>)</span>’</a> on Twitter for the <a href="https://developer.r-project.org/RSSfeeds.html">R development updates</a> and <a href="https://developer.r-project.org/Blog/public/">blog post</a> announcements.</p>
 
 </div>
 </div>
@@ -312,8 +280,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           </div>
         </div>
       </div>
-<a href="r-core-developers-guide.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="bug-tracking.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="TestRCode.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="r-core-developers.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -345,7 +313,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/forwards/rdevguide/edit/master/02-getting_started.Rmd",
+"link": "https://github.com/forwards/rdevguide/edit/master/news_and_announcements.Rmd",
 "text": "Edit"
 },
 "history": {

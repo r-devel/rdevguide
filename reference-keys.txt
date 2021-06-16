@@ -57,8 +57,14 @@ VM
 what-can-you-test
 writing-tests-for-r
 benchmarks
+news-and-announcements
+blogs
+conferences
+journal
+mailing-lists
+twitter
 r-core-developers
 WhereToGetHelp
 slack
-mailing-lists
+mailing-lists-1
 file-a-bug
