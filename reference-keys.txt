@@ -55,7 +55,7 @@ proofreading
 helping-with-the-developers-guide
 instructions-for-reporting-the-cran-policy-bugs-discussion-in-slack-random-channel
 see-also-5
-TestRCode
+testing-pre-release-r-versions
 where-to-test
 VM
 what-can-you-test

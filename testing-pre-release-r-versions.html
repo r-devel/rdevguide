@@ -213,13 +213,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="7.6" data-path="documenting-r.html"><a href="documenting-r.html#instructions-for-reporting-the-cran-policy-bugs-discussion-in-slack-random-channel"><i class="fa fa-check"></i><b>7.6</b> Instructions for reporting the CRAN policy bugs – discussion in slack (random channel)</a></li>
 <li class="chapter" data-level="7.7" data-path="documenting-r.html"><a href="documenting-r.html#see-also-5"><i class="fa fa-check"></i><b>7.7</b> See also</a></li>
 </ul></li>
-<li class="chapter" data-level="8" data-path="TestRCode.html"><a href="TestRCode.html"><i class="fa fa-check"></i><b>8</b> Testing Pre-release R Versions</a><ul>
-<li class="chapter" data-level="8.1" data-path="TestRCode.html"><a href="TestRCode.html#where-to-test"><i class="fa fa-check"></i><b>8.1</b> Where to test?</a><ul>
-<li class="chapter" data-level="8.1.1" data-path="TestRCode.html"><a href="TestRCode.html#VM"><i class="fa fa-check"></i><b>8.1.1</b> Virtual machine</a></li>
+<li class="chapter" data-level="8" data-path="testing-pre-release-r-versions.html"><a href="testing-pre-release-r-versions.html"><i class="fa fa-check"></i><b>8</b> Testing Pre-release R Versions</a><ul>
+<li class="chapter" data-level="8.1" data-path="testing-pre-release-r-versions.html"><a href="testing-pre-release-r-versions.html#where-to-test"><i class="fa fa-check"></i><b>8.1</b> Where to test?</a><ul>
+<li class="chapter" data-level="8.1.1" data-path="testing-pre-release-r-versions.html"><a href="testing-pre-release-r-versions.html#VM"><i class="fa fa-check"></i><b>8.1.1</b> Virtual machine</a></li>
 </ul></li>
-<li class="chapter" data-level="8.2" data-path="TestRCode.html"><a href="TestRCode.html#what-can-you-test"><i class="fa fa-check"></i><b>8.2</b> What can you test?</a></li>
-<li class="chapter" data-level="8.3" data-path="TestRCode.html"><a href="TestRCode.html#writing-tests-for-r"><i class="fa fa-check"></i><b>8.3</b> Writing tests for R</a></li>
-<li class="chapter" data-level="8.4" data-path="TestRCode.html"><a href="TestRCode.html#benchmarks"><i class="fa fa-check"></i><b>8.4</b> Benchmarks</a></li>
+<li class="chapter" data-level="8.2" data-path="testing-pre-release-r-versions.html"><a href="testing-pre-release-r-versions.html#what-can-you-test"><i class="fa fa-check"></i><b>8.2</b> What can you test?</a></li>
+<li class="chapter" data-level="8.3" data-path="testing-pre-release-r-versions.html"><a href="testing-pre-release-r-versions.html#writing-tests-for-r"><i class="fa fa-check"></i><b>8.3</b> Writing tests for R</a></li>
+<li class="chapter" data-level="8.4" data-path="testing-pre-release-r-versions.html"><a href="testing-pre-release-r-versions.html#benchmarks"><i class="fa fa-check"></i><b>8.4</b> Benchmarks</a></li>
 </ul></li>
 <li class="chapter" data-level="9" data-path="r-core-developers.html"><a href="r-core-developers.html"><i class="fa fa-check"></i><b>9</b> R Core Developers</a></li>
 <li class="chapter" data-level="10" data-path="WhereToGetHelp.html"><a href="WhereToGetHelp.html"><i class="fa fa-check"></i><b>10</b> Where to get help</a><ul>
@@ -259,12 +259,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="TestRCode" class="section level1">
+<div id="testing-pre-release-r-versions" class="section level1">
 <h1><span class="header-section-number">Chapter 8</span> Testing Pre-release R Versions</h1>
 <p>This chapter is inspired from the blog on <a href="https://developer.r-project.org/Blog/public/2021/04/28/r-can-use-your-help-testing-r-before-release/index.html">testing R before release</a> and discusses how you can help with testing of pre-release versions of R.</p>
 <div id="where-to-test" class="section level2">
 <h2><span class="header-section-number">8.1</span> Where to test?</h2>
-<p>Whenever possible use a fresh package library for testing, even better would be to use <a href="TestRCode.html#VM">virtual machines</a> for the testing. This would ensure that you do not damage your existing R installation.</p>
+<p>Whenever possible use a fresh package library for testing, even better would be to use <a href="testing-pre-release-r-versions.html#VM">virtual machines</a> for the testing. This would ensure that you do not damage your existing R installation.</p>
 <div id="VM" class="section level3">
 <h3><span class="header-section-number">8.1.1</span> Virtual machine</h3>
 <p>A free Windows 10 virtual machine is provided by Microsoft (with a 90-day limit) for building, testing, and checking R packages and R itself. Package maintainers who work on Linux and MacOS can use it to test their packages on Windows. Read the <a href="https://svn.r-project.org/R-dev-web/trunk/WindowsBuilds/winutf8/ucrt3/vm.html">instructions</a> on how to automatically set up the machine to check R packages. Tomas Kalibera describes the details of using virtual machine in the blog <a href="https://developer.r-project.org/Blog/public/2021/03/18/virtual-windows-machine-for-checking-r-packages/index.html">Virtual Windows machine for checking R packages</a>.</p>
