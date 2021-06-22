@@ -60,7 +60,7 @@ The sections that follow discuss where to check whether a bug is already reporte
 
 You may find a bug in:
 
-1. In the [R-Core supported packages, their documentations, and/ or in the R language](#RCorePkgBug).
+1. In the [R-Core supported packages, their documentations, and/ or in the R language implementation](#RCorePkgBug).
 
 2. In [packages and/or their documentations which are not supported by the R-Core](#nonRCorePkgBug).
 
