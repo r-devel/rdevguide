@@ -18,4 +18,4 @@ Initial chapters of this guide were developed by Saranjeet Kaur Bhogal, in a pro
 
 This guide has benefited from contributions and reviews by the following (names are in alphabetical order):
 
-Bettina Gruen, Carol Willing, Gabriel Becker, Kara Woo, Lluis Revilla Sancho, Maya Gans, Michael Chirico, Mine Cetinkaya-Rundel, Toby Dylan Hocking.
+Bettina Gruen, Carol Willing, Gabriel Becker, Kara Woo, Lluís Revilla Sancho, Maya Gans, Michael Chirico, Mine Cetinkaya-Rundel, Toby Dylan Hocking.
