@@ -1,7 +1,7 @@
 --- 
 title: "R Developer's Guide"
 author: "R Contribution Working Group"
-date: "2021-09-22"
+date: "2021-09-30"
 site: bookdown::bookdown_site
 documentclass: book
 bibliography: [book.bib]
@@ -18,4 +18,4 @@ Initial chapters of this guide were developed by Saranjeet Kaur Bhogal, in a pro
 
 This guide has benefited from contributions and reviews by the following (names are in alphabetical order):
 
-Bettina Gruen, Carol Willing, Gabriel Becker, Kara Woo, Lluis Revilla Sancho, Maya Gans, Michael Chirico, Mine Cetinkaya-Rundel, Toby Dylan Hocking.
+Bettina Gruen, Carol Willing, Gabriel Becker, Kara Woo, Lluís Revilla Sancho, Maya Gans, Michael Chirico, Mine Cetinkaya-Rundel, Toby Dylan Hocking.
