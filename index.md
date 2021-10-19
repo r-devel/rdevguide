@@ -1,7 +1,7 @@
 --- 
-title: "R Developer's Guide"
+title: "R Development Guide"
 author: "R Contribution Working Group"
-date: "2021-10-16"
+date: "2021-10-19"
 site: bookdown::bookdown_site
 documentclass: book
 bibliography: [book.bib]
@@ -9,7 +9,7 @@ biblio-style: apalike
 link-citations: yes
 github-repo: forwards/rdevguide
 url: 'TDDO'
-description: "A developer's guide to contributing to R Core."
+description: "A guide to R development."
 ---
 
 # {-}
