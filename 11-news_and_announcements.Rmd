@@ -22,4 +22,4 @@ Updates about conferences actively supported or endorsed by The R Foundation can
 
 ## Twitter
 
-Follow ['\@R_dev_news'](https://twitter.com/R_dev_news) on Twitter for the [R development updates](https://developer.r-project.org/RSSfeeds.html) and [blog post](https://developer.r-project.org/Blog/public/) announcements.
+Follow [\@R_dev_news](https://twitter.com/R_dev_news) on Twitter for the [R development updates](https://developer.r-project.org/RSSfeeds.html) and [blog post](https://developer.r-project.org/Blog/public/) announcements.
