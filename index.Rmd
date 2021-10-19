@@ -1,5 +1,5 @@
 --- 
-title: "R Developer's Guide"
+title: "R Development Guide"
 author: "R Contribution Working Group"
 date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
@@ -9,7 +9,7 @@ biblio-style: apalike
 link-citations: yes
 github-repo: forwards/rdevguide
 url: 'TDDO'
-description: "A developer's guide to contributing to R Core."
+description: "A guide to R development."
 ---
 
 # {-}
