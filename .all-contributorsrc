@@ -84,6 +84,15 @@
       "contributions": [
         "review"
       ]
+    },
+    {
+      "login": "anelda",
+      "name": "Anelda van der Walt",
+      "avatar_url": "https://avatars.githubusercontent.com/u/7215014?v=4",
+      "profile": "http://www.talarify.co.za",
+      "contributions": [
+        "review"
+      ]
     }
   ],
   "contributorsPerLine": 7,
