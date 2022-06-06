@@ -1,6 +1,6 @@
 # A Guide to Contributing to R Core
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-10-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-11-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 This guide is a work in progress, inspired by http://devguide.python.org/. It is currently deployed at https://forwards.github.io/rdevguide/.
@@ -65,6 +65,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="http://stat.ethz.ch/~maechler"><img src="https://avatars.githubusercontent.com/u/995722?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Martin Mächler</b></sub></a><br /><a href="https://github.com/r-devel/rdevguide/pulls?q=is%3Apr+reviewed-by%3Ammaechler" title="Reviewed Pull Requests">👀</a></td>
     <td align="center"><a href="http://www.talarify.co.za"><img src="https://avatars.githubusercontent.com/u/7215014?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Anelda van der Walt</b></sub></a><br /><a href="https://github.com/r-devel/rdevguide/pulls?q=is%3Apr+reviewed-by%3Aanelda" title="Reviewed Pull Requests">👀</a></td>
     <td align="center"><a href="http://mine-cr.com"><img src="https://avatars.githubusercontent.com/u/5965649?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Mine Cetinkaya-Rundel</b></sub></a><br /><a href="https://github.com/r-devel/rdevguide/pulls?q=is%3Apr+reviewed-by%3Amine-cetinkaya-rundel" title="Reviewed Pull Requests">👀</a></td>
+    <td align="center"><a href="https://github.com/MichaelChirico"><img src="https://avatars.githubusercontent.com/u/7606389?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Michael Chirico</b></sub></a><br /><a href="https://github.com/r-devel/rdevguide/pulls?q=is%3Apr+reviewed-by%3AMichaelChirico" title="Reviewed Pull Requests">👀</a> <a href="#question-MichaelChirico" title="Answering Questions">💬</a></td>
   </tr>
 </table>
 

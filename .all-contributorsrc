@@ -102,6 +102,16 @@
       "contributions": [
         "review"
       ]
+    },
+    {
+      "login": "MichaelChirico",
+      "name": "Michael Chirico",
+      "avatar_url": "https://avatars.githubusercontent.com/u/7606389?v=4",
+      "profile": "https://github.com/MichaelChirico",
+      "contributions": [
+        "review",
+        "question"
+      ]
     }
   ],
   "contributorsPerLine": 7,
