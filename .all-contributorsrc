@@ -11,7 +11,12 @@
       "avatar_url": "https://avatars.githubusercontent.com/u/3343008?v=4",
       "profile": "https://www.heatherturner.net/",
       "contributions": [
-        "content"
+        "content",
+        "code",
+        "maintenance",
+        "mentoring",
+        "projectManagement",
+        "review"
       ]
     },
     {
