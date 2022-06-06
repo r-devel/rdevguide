@@ -14,13 +14,22 @@
         "content"
       ]
     },
-    {  
+    {
       "login": "SaranjeetKaur",
       "name": "Saranjeet Kaur",
       "avatar_url": "https://avatars.githubusercontent.com/u/28556616?v=4",
       "profile": "https://saranjeetkaur.github.io/About-Me/",
       "contributions": [
         "content"
+      ]
+    },
+    {
+      "login": "MayaGans",
+      "name": "Maya Gans",
+      "avatar_url": "https://avatars.githubusercontent.com/u/6053906?v=4",
+      "profile": "http://maya.rbind.io",
+      "contributions": [
+        "infra"
       ]
     }
   ],
