@@ -1,6 +1,6 @@
 # A Guide to Contributing to R Core
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-7-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-8-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 This guide is a work in progress, inspired by http://devguide.python.org/. It is currently deployed at https://forwards.github.io/rdevguide/.
@@ -60,6 +60,9 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="http://llrs.dev"><img src="https://avatars.githubusercontent.com/u/6818218?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Lluís</b></sub></a><br /><a href="https://github.com/r-devel/rdevguide/pulls?q=is%3Apr+reviewed-by%3Allrs" title="Reviewed Pull Requests">👀</a></td>
     <td align="center"><a href="http://tdhock.github.io"><img src="https://avatars.githubusercontent.com/u/932850?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Toby Dylan Hocking</b></sub></a><br /><a href="https://github.com/r-devel/rdevguide/pulls?q=is%3Apr+reviewed-by%3Atdhock" title="Reviewed Pull Requests">👀</a> <a href="#example-tdhock" title="Examples">💡</a></td>
     <td align="center"><a href="https://github.com/bettinagruen"><img src="https://avatars.githubusercontent.com/u/3341603?v=4?s=100" width="100px;" alt=""/><br /><sub><b>bettinagruen</b></sub></a><br /><a href="https://github.com/r-devel/rdevguide/pulls?q=is%3Apr+reviewed-by%3Abettinagruen" title="Reviewed Pull Requests">👀</a></td>
+  </tr>
+  <tr>
+    <td align="center"><a href="http://stat.ethz.ch/~maechler"><img src="https://avatars.githubusercontent.com/u/995722?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Martin Mächler</b></sub></a><br /><a href="https://github.com/r-devel/rdevguide/pulls?q=is%3Apr+reviewed-by%3Ammaechler" title="Reviewed Pull Requests">👀</a></td>
   </tr>
 </table>
 
