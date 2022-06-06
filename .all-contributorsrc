@@ -112,6 +112,15 @@
         "review",
         "question"
       ]
+    },
+    {
+      "login": "elinw",
+      "name": "Elin Waring",
+      "avatar_url": "https://avatars.githubusercontent.com/u/754813?v=4",
+      "profile": "http://officialjoomlabook.com",
+      "contributions": [
+        "question"
+      ]
     }
   ],
   "contributorsPerLine": 7,
