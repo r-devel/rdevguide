@@ -75,6 +75,15 @@
       "contributions": [
         "review"
       ]
+    },
+    {
+      "login": "mmaechler",
+      "name": "Martin Mächler",
+      "avatar_url": "https://avatars.githubusercontent.com/u/995722?v=4",
+      "profile": "http://stat.ethz.ch/~maechler",
+      "contributions": [
+        "review"
+      ]
     }
   ],
   "contributorsPerLine": 7,
