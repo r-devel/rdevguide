@@ -93,6 +93,15 @@
       "contributions": [
         "review"
       ]
+    },
+    {
+      "login": "mine-cetinkaya-rundel",
+      "name": "Mine Cetinkaya-Rundel",
+      "avatar_url": "https://avatars.githubusercontent.com/u/5965649?v=4",
+      "profile": "http://mine-cr.com",
+      "contributions": [
+        "review"
+      ]
     }
   ],
   "contributorsPerLine": 7,
