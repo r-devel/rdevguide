@@ -38,6 +38,15 @@
       "contributions": [
         "infra"
       ]
+    },
+    {
+      "login": "willingc",
+      "name": "Carol Willing",
+      "avatar_url": "https://avatars.githubusercontent.com/u/2680980?v=4",
+      "profile": "https://www.willingconsulting.com",
+      "contributions": [
+        "review"
+      ]
     }
   ],
   "contributorsPerLine": 7,
