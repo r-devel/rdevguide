@@ -1,0 +1,24 @@
+{
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": false,
+  "contributors": [
+    {
+      "login": "hturner",
+      "name": "Heather Turner",
+      "avatar_url": "https://avatars.githubusercontent.com/u/3343008?v=4",
+      "profile": "https://www.heatherturner.net/",
+      "contributions": [
+        "content"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7,
+  "projectName": "rdevguide",
+  "projectOwner": "r-devel",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "skipCi": true
+}
