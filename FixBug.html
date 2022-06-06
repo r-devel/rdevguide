@@ -6,11 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Chapter 6 Lifecycle of a Patch | R Development Guide</title>
   <meta name="description" content="A guide to R development." />
-  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.26 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Chapter 6 Lifecycle of a Patch | R Development Guide" />
   <meta property="og:type" content="book" />
-  <meta property="og:url" content="TDDO" />
   
   <meta property="og:description" content="A guide to R development." />
   <meta name="github-repo" content="forwards/rdevguide" />
@@ -24,7 +23,7 @@
 <meta name="author" content="R Contribution Working Group" />
 
 
-<meta name="date" content="2022-01-31" />
+<meta name="date" content="2022-06-06" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -51,8 +50,9 @@
 
 
 <script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
-<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 <!-- see https://plausible.io/contributor.r-project.org%2Frdevguide for analytics dashboard -->
 <script defer data-domain="contributor.r-project.org/rdevguide" src="https://plausible.io/js/plausible.js"></script>
 
@@ -262,31 +262,31 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="FixBug" class="section level1">
-<h1><span class="header-section-number">Chapter 6</span> Lifecycle of a Patch</h1>
-<div id="introduction-1" class="section level2">
-<h2><span class="header-section-number">6.1</span> Introduction</h2>
+<div id="FixBug" class="section level1 hasAnchor">
+<h1><span class="header-section-number">Chapter 6</span> Lifecycle of a Patch<a href="FixBug.html#FixBug" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="introduction-1" class="section level2 hasAnchor">
+<h2><span class="header-section-number">6.1</span> Introduction<a href="FixBug.html#introduction-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>R uses a workflow based on patches. A patch is the set of differences (additions and deletions) between two versions of code. So you can create a patch defining a bug fix or a proposed update to the R codebase and submit it through your official Bugzilla account to the core developer(s). Be clear in your communication as it is the key to contributing to any project, especially an open source project like R.</p>
 </div>
-<div id="when-do-you-submit-a-patch" class="section level2">
-<h2><span class="header-section-number">6.2</span> When do you submit a patch?</h2>
+<div id="when-do-you-submit-a-patch" class="section level2 hasAnchor">
+<h2><span class="header-section-number">6.2</span> When do you submit a patch?<a href="FixBug.html#when-do-you-submit-a-patch" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>There might be a situation where you come across a bug in R, which you may have an idea of how to fix. This can turn out to be an opportunity for you to submit a patch. By submitting a patch or a bug fix, you are helping to reduce the workload on the R developers in addition to yourself being a contributor to R!</p>
 <p>When you submit a patch, you are helping the developer(s) and maintainer(s) so that they do not have to write the entire code from scratch. Instead, they can test and tweak your patch, if necessary.</p>
 </div>
-<div id="what-tools-are-required-to-submit-a-patch" class="section level2">
-<h2><span class="header-section-number">6.3</span> What tools are required to submit a patch?</h2>
+<div id="what-tools-are-required-to-submit-a-patch" class="section level2 hasAnchor">
+<h2><span class="header-section-number">6.3</span> What tools are required to submit a patch?<a href="FixBug.html#what-tools-are-required-to-submit-a-patch" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>To submit a patch, you need:</p>
 <ol style="list-style-type: decimal">
 <li><p><a href="http://subversion.apache.org/">SVN</a> installed on your machine.</p></li>
 <li><p>The <a href="GetStart.html#installR">latest developer version of R</a>.</p></li>
 </ol>
 </div>
-<div id="how-to-prepare-a-patch" class="section level2">
-<h2><span class="header-section-number">6.4</span> How to prepare a patch?</h2>
+<div id="how-to-prepare-a-patch" class="section level2 hasAnchor">
+<h2><span class="header-section-number">6.4</span> How to prepare a patch?<a href="FixBug.html#how-to-prepare-a-patch" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Refer to the guidelines given <a href="https://www.r-project.org/bugs.html#how-to-submit-patches">here</a> for the process to prepare a patch against R-devel.</p>
 </div>
-<div id="GoodPatches" class="section level2">
-<h2><span class="header-section-number">6.5</span> Making good patches</h2>
+<div id="GoodPatches" class="section level2 hasAnchor">
+<h2><span class="header-section-number">6.5</span> Making good patches<a href="FixBug.html#GoodPatches" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>When creating a patch for submission, there are several things that you can do to help ensure that your patch is accepted:</p>
 <ol style="list-style-type: decimal">
 <li><p>Make sure to follow <a href="https://cran.r-project.org/doc/manuals/r-release/R-ints.html#R-coding-standards">R’s coding standards</a> (R is a GNU project and there are GNU coding standards). The coding style of the patch you submit should largely match with the codebase it is being applied to. If your patch has one or two minor discrepancies, then those may be fixed by the core developer who will eventually test your patch. However, if there are systematic deviations from the style guides your patch will be put on hold until you fix the formatting issues. There is no comprehensive official R style manual, however some nearly universal standards are summarised in <a href="https://cran.r-project.org/web/packages/rockchalk/vignettes/Rstyle.pdf">this article</a>.</p></li>
@@ -297,21 +297,21 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li><p>Each bugfix should ideally be addressed by a single patch. In particular, do not fix more than one issue in the same patch (except, if one code change fixes all of them) and do not do cosmetic changes to unrelated code in the same patch as some bugfix.</p></li>
 </ol>
 </div>
-<div id="submitting-your-patch-for-review" class="section level2">
-<h2><span class="header-section-number">6.6</span> Submitting your patch for review</h2>
+<div id="submitting-your-patch-for-review" class="section level2 hasAnchor">
+<h2><span class="header-section-number">6.6</span> Submitting your patch for review<a href="FixBug.html#submitting-your-patch-for-review" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <ol style="list-style-type: decimal">
 <li><p>Patch in response to a pre-existing issue or bug report: In this case, you should attach the patch to the existing issue or bug report on Bugzilla with a brief comment.</p></li>
 <li><p>Patch in response to an unreported issue or bug report: Assuming you already performed a search on Bugzilla for a pre-existing issue or bug and did not find the issue or bug reported, you need to create a new bug report and include your patch with it. Please fill in as much relevant detail as possible to prevent reviewers from having to delay reviewing your patch because of lack of information. Include (mostly as the first sentence), a to-the-point explanation of what the purpose of the patch is. This sentence should not be in the descriptive form, rather an imperative form will be more suitable here. If this is not enough detail for a patch, a new paragraphs(s) can be added to explain in proper depth what has happened. The details should be good enough that a core developer reading it understands the justification for the change.</p></li>
 </ol>
 </div>
-<div id="getting-your-patch-reviewed" class="section level2">
-<h2><span class="header-section-number">6.7</span> Getting your patch reviewed</h2>
+<div id="getting-your-patch-reviewed" class="section level2 hasAnchor">
+<h2><span class="header-section-number">6.7</span> Getting your patch reviewed<a href="FixBug.html#getting-your-patch-reviewed" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>To begin with, please be patient. There are many more people submitting patches than there are people capable of reviewing your patches. Getting your patch reviewed requires a reviewer to have the spare time and motivation to look at your patch. We cannot force anyone to review patches and no one is employed to look at patches.</p>
 <p>There is a <code>#patches-for-review</code> channel on the <a href="https://r-devel.slack.com/">R-devel slack</a> where you can share your patch(es) for review/feedback before submitting to R-Core/Bugzilla. This can help with checking that you have included the important information and excluded redundant information.</p>
 <p>If your patch has not received any notice from reviewers (i.e., no comment made) after one month, comment/message on the <code>#patches-for-review</code> channel to remind the members that the patch needs a review.</p>
 <p>When someone does manage to find the time to look at your patch they will most likely make comments about how it can be improved. It is then expected that you update your patch to address these comments, and the review process will thus iterate until a satisfactory solution has emerged.</p>
-<div id="how-to-review-a-patch" class="section level3">
-<h3><span class="header-section-number">6.7.1</span> How to review a patch?</h3>
+<div id="how-to-review-a-patch" class="section level3 hasAnchor">
+<h3><span class="header-section-number">6.7.1</span> How to review a patch?<a href="FixBug.html#how-to-review-a-patch" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>One of the bottlenecks in the R development process is the lack of code reviews. If you browse Bugzilla, you will see that numerous issues have a fix, but cannot be merged into the main source code repository, because no one has reviewed the proposed solution. Reviewing a patch can be just as informative as providing a patch and it will allow you to give constructive comments on another developer’s work. This guide provides a checklist for submitting a patch review. It is a common misconception that in order to be useful, a patch review has to be perfect. This is not the case at all. It is helpful to just test the patch and/or play around with the code and leave comments in the patch or on Bugzilla.</p>
 <p>If a bug report or an issue has a patch attached that has not been reviewed, you can help by making sure that the patch:</p>
 <ul>
@@ -323,8 +323,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>Also refer to <a href="FixBug.html#GoodPatches">Making good patches</a> for more ideas. Doing all of this allows the core developer(s) and/ or maintainer(s) to more quickly look for subtle issues that only people with extensive experience working on R’s codebase will notice.</p>
 </div>
 </div>
-<div id="leaving-a-patch-review-on-bugzilla" class="section level2">
-<h2><span class="header-section-number">6.8</span> Leaving a patch review on Bugzilla</h2>
+<div id="leaving-a-patch-review-on-bugzilla" class="section level2 hasAnchor">
+<h2><span class="header-section-number">6.8</span> Leaving a patch review on Bugzilla<a href="FixBug.html#leaving-a-patch-review-on-bugzilla" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>When you review a patch, you should provide additional details and context of your review process and leave comments. For example:</p>
 <ol style="list-style-type: decimal">
 <li><p>If you tested the patch, report the result and the system and version tested on, such as ‘Windows 10’, ‘Ubuntu 16.4’, or ‘Mac High Sierra’.</p></li>
@@ -332,26 +332,26 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li><p>Comment on what is ‘good’ about the patch, not just the ‘bad’. Doing so will make it easier for the patch author to find the good in your comments.</p></li>
 </ol>
 </div>
-<div id="dismissing-review-from-another-core-developer" class="section level2">
-<h2><span class="header-section-number">6.9</span> Dismissing review from another core developer</h2>
+<div id="dismissing-review-from-another-core-developer" class="section level2 hasAnchor">
+<h2><span class="header-section-number">6.9</span> Dismissing review from another core developer<a href="FixBug.html#dismissing-review-from-another-core-developer" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>A core developer can dismiss another core developer’s review if they confirmed that the requested changes have been made. When a core developer has assigned the patch to themselves, then it is a sign that they are actively looking after the patch, and their review should not be dismissed.</p>
 </div>
-<div id="acceptance-or-rejection-of-your-patch" class="section level2">
-<h2><span class="header-section-number">6.10</span> Acceptance or rejection of your patch</h2>
+<div id="acceptance-or-rejection-of-your-patch" class="section level2 hasAnchor">
+<h2><span class="header-section-number">6.10</span> Acceptance or rejection of your patch<a href="FixBug.html#acceptance-or-rejection-of-your-patch" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Once your patch has reached an acceptable state, it will either be applied or rejected. If it is rejected, please do not take it personally. Your work is still appreciated regardless of whether your patch is applied. Balancing what does and does not go into R is tricky and everyone’s contributions cannot always be accepted.</p>
 <p>But if your patch is accepted and applied it will then go on to be released with the next patched release and eventually the next major release of R. It may also be backported to older versions of R as a bugfix if the core developer doing the patch acceptance believes it is warranted.</p>
 <p>It may take longer before your patch is accepted and applied or rejected, sometimes even months or years. Nonetheless, it is appreciated that you submitted a patch.</p>
 </div>
-<div id="examples-of-patch-reports-on-bugzilla" class="section level2">
-<h2><span class="header-section-number">6.11</span> Examples of patch reports on Bugzilla</h2>
+<div id="examples-of-patch-reports-on-bugzilla" class="section level2 hasAnchor">
+<h2><span class="header-section-number">6.11</span> Examples of patch reports on Bugzilla<a href="FixBug.html#examples-of-patch-reports-on-bugzilla" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <!-- TODO add links of examples -->
 </div>
-<div id="examples-of-reviewing-a-patch" class="section level2">
-<h2><span class="header-section-number">6.12</span> Examples of reviewing a patch</h2>
+<div id="examples-of-reviewing-a-patch" class="section level2 hasAnchor">
+<h2><span class="header-section-number">6.12</span> Examples of reviewing a patch<a href="FixBug.html#examples-of-reviewing-a-patch" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <!-- TODO add links of examples -->
 </div>
-<div id="see-also-4" class="section level2">
-<h2><span class="header-section-number">6.13</span> See also</h2>
+<div id="see-also-4" class="section level2 hasAnchor">
+<h2><span class="header-section-number">6.13</span> See also<a href="FixBug.html#see-also-4" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <ol style="list-style-type: decimal">
 <li><a href="https://www.r-project.org/bugs.html#how-to-submit-patches">Submitting patches</a></li>
 </ol>

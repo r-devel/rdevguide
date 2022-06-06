@@ -6,11 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Chapter 2 Getting Started | R Development Guide</title>
   <meta name="description" content="A guide to R development." />
-  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.26 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Chapter 2 Getting Started | R Development Guide" />
   <meta property="og:type" content="book" />
-  <meta property="og:url" content="TDDO" />
   
   <meta property="og:description" content="A guide to R development." />
   <meta name="github-repo" content="forwards/rdevguide" />
@@ -24,7 +23,7 @@
 <meta name="author" content="R Contribution Working Group" />
 
 
-<meta name="date" content="2022-01-31" />
+<meta name="date" content="2022-06-06" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -51,8 +50,9 @@
 
 
 <script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
-<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 <!-- see https://plausible.io/contributor.r-project.org%2Frdevguide for analytics dashboard -->
 <script defer data-domain="contributor.r-project.org/rdevguide" src="https://plausible.io/js/plausible.js"></script>
 
@@ -262,11 +262,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="GetStart" class="section level1">
-<h1><span class="header-section-number">Chapter 2</span> Getting Started</h1>
+<div id="GetStart" class="section level1 hasAnchor">
+<h1><span class="header-section-number">Chapter 2</span> Getting Started<a href="GetStart.html#GetStart" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <p>These instructions cover how to install R in Windows. The tools required to build R and R packages in Windows are also discussed.</p>
-<div id="general-instructions" class="section level2">
-<h2><span class="header-section-number">2.1</span> General instructions</h2>
+<div id="general-instructions" class="section level2 hasAnchor">
+<h2><span class="header-section-number">2.1</span> General instructions<a href="GetStart.html#general-instructions" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <ol style="list-style-type: decimal">
 <li><p>If you install the latest version or R-patched or R-devel, it will not over-write the previous installation(s) in your Windows machine.</p></li>
 <li><p>R uses a ‘major.minor.patchlevel’ version numbering scheme. Accordingly there are three main releases of R available to install:</p>
@@ -278,47 +278,47 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ol>
 <p>The <code>r-devel</code> is the next minor or eventually major release development version of R. Mostly, bug fixes are introduced in <code>r-patched</code>, while <code>r-devel</code> is for introducing new features.</p>
 </div>
-<div id="installR" class="section level2">
-<h2><span class="header-section-number">2.2</span> Installing R</h2>
+<div id="installR" class="section level2 hasAnchor">
+<h2><span class="header-section-number">2.2</span> Installing R<a href="GetStart.html#installR" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <ol style="list-style-type: decimal">
 <li><p>The binary builds of R for Windows can be downloaded and installed from <a href="https://cran.r-project.org/bin/windows/base/">here</a>. Along with the link to the latest stable release, this page also contains links to the binary builds of r-patched and r-devel.</p></li>
 <li><p>Click on the download links to download an executable installer.</p></li>
 <li><p>Select the language while installing, read the public license information, and select the destination location to start the installation. You will be prompted to select components at this stage: <code>User installation</code>, <code>32-bit User installation</code>, <code>64-bit User installation</code>, or <code>Custom installation</code>. The default option may be chosen for the questions from this step onwards to complete the installation.</p></li>
 </ol>
 </div>
-<div id="building-r-and-r-packages" class="section level2">
-<h2><span class="header-section-number">2.3</span> Building R and R packages</h2>
-<div id="what-tools-do-you-need-to-build-r-from-source-on-windows" class="section level3">
-<h3><span class="header-section-number">2.3.1</span> What tools do you need to build R from source on Windows?</h3>
+<div id="building-r-and-r-packages" class="section level2 hasAnchor">
+<h2><span class="header-section-number">2.3</span> Building R and R packages<a href="GetStart.html#building-r-and-r-packages" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="what-tools-do-you-need-to-build-r-from-source-on-windows" class="section level3 hasAnchor">
+<h3><span class="header-section-number">2.3.1</span> What tools do you need to build R from source on Windows?<a href="GetStart.html#what-tools-do-you-need-to-build-r-from-source-on-windows" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <ol style="list-style-type: decimal">
 <li><p><a href="https://github.com/r-windows/docs/blob/master/faq.md#what-is-rtools">RTools</a> is the toolchain bundle that you can use to build R base and R packages containing compiled code, on Windows.</p></li>
 <li><p>You also need a distribution of LaTeX installed for building R and checking packages. The MiKTeX distribution of LaTeX that is used on CRAN can be downloaded from <a href="https://miktex.org" class="uri">https://miktex.org</a>.</p></li>
 </ol>
 </div>
-<div id="how-to-setup-rtools" class="section level3">
-<h3><span class="header-section-number">2.3.2</span> How to setup <code>RTools</code>?</h3>
+<div id="how-to-setup-rtools" class="section level3 hasAnchor">
+<h3><span class="header-section-number">2.3.2</span> How to setup <code>RTools</code>?<a href="GetStart.html#how-to-setup-rtools" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <ol style="list-style-type: decimal">
 <li><p>The latest version of <code>RTools</code> can be downloaded from <a href="https://cran.r-project.org/bin/windows/Rtools/" class="uri">https://cran.r-project.org/bin/windows/Rtools/</a> and run in the Windows-style installer. You will need to know if you have a 32-bit or 64-bit Windows machine (right-click <code>This PC</code> in Windows Explorer and check the properties if you are unsure).</p></li>
 <li><p>Don’t forget to add <code>RTools</code> to the path as documented on the download page.</p></li>
 </ol>
 </div>
-<div id="how-to-build-r" class="section level3">
-<h3><span class="header-section-number">2.3.3</span> How to build R?</h3>
+<div id="how-to-build-r" class="section level3 hasAnchor">
+<h3><span class="header-section-number">2.3.3</span> How to build R?<a href="GetStart.html#how-to-build-r" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>To build R for Windows using <code>RTools</code> follow the instructions in this <a href="https://github.com/r-windows/r-base#readme">README</a> file. There are two options available to build R. One is the quick development build and the other option is the full installer build.</p>
 <p>For development and testing, you need only the quick development build. The quick build avoids building the manuals, which are generally not needed for development and testing.</p>
 <p>However, even for the quick build there are some <a href="https://github.com/r-windows/r-base/blob/master/quick-build.sh">default requirements</a>. For instance, MikTeX is to be installed in <code>C:/Program Files</code> and you have 64-bit R. If necessary, these defaults can be customised. The installation path of MikTex can be customised <a href="https://github.com/r-windows/r-base/blob/50a229fc76c50a5fb42c0daa367466aaf2318171/quick-build.sh#L13">here</a> whereas the Windows bit can be customised <a href="https://github.com/r-windows/r-base/blob/50a229fc76c50a5fb42c0daa367466aaf2318171/quick-build.sh#L6">here</a>.</p>
 <p>If you are a maintainer of the Windows CRAN releases then, the full installer build is available for building the complete installer as it appears on CRAN. It will build both the 32-bit and 64-bit R, the pdf manuals, and the installer program. You will use this to create the binary builds and not when building R from the source yourself.</p>
 </div>
 </div>
-<div id="how-to-download-the-r-sources-directly-or-from-the-svn-repository" class="section level2">
-<h2><span class="header-section-number">2.4</span> How to download the R sources directly or from the svn repository?</h2>
+<div id="how-to-download-the-r-sources-directly-or-from-the-svn-repository" class="section level2 hasAnchor">
+<h2><span class="header-section-number">2.4</span> How to download the R sources directly or from the svn repository?<a href="GetStart.html#how-to-download-the-r-sources-directly-or-from-the-svn-repository" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <ul>
 <li><p>To download the R sources on Windows, you can use <code>tar</code> from the RStudio terminal.</p></li>
 <li><p>If you want to checkout the sources from svn, it is probably best to install an SVN client. Either TortoiseSVN (<a href="https://tortoisesvn.net/" class="uri">https://tortoisesvn.net/</a>, command line tool, and Windows Explorer integration) or SlikSVN (<a href="https://sliksvn.com/download/" class="uri">https://sliksvn.com/download/</a>, just the command line tool) is recommended. They have simple Windows installers and you can use svn straight-away from Windows cmd or RStudio terminal.</p></li>
 </ul>
 </div>
-<div id="see-also" class="section level2">
-<h2><span class="header-section-number">2.5</span> See also</h2>
+<div id="see-also" class="section level2 hasAnchor">
+<h2><span class="header-section-number">2.5</span> See also<a href="GetStart.html#see-also" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <ol style="list-style-type: decimal">
 <li><p><a href="https://cran.r-project.org">CRAN official website</a></p></li>
 <li><p><a href="https://cran.r-project.org/doc/manuals/r-patched/R-admin.html">R installation and administration manual</a></p></li>
