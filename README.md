@@ -54,7 +54,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <table>
   <tr>
     <td align="center"><a href="https://www.heatherturner.net/"><img src="https://avatars.githubusercontent.com/u/3343008?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Heather Turner</b></sub></a><br /><a href="#content-hturner" title="Content">🖋</a></td>
-    <td align="center"><a href="https://saranjeetkaur.github.io/About-Me/"><img src="https://avatars.githubusercontent.com/u/28556616?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Saranjeet Kaur</b></sub></a><br /><a href="#content-SaranjeetKaur" title="Content">🖋</a> <a href="https://github.com/r-devel/rdevguide/commits?author=SaranjeetKaur" title="Documentation">📖</a> <a href="#ideas-SaranjeetKaur" title="Ideas, Planning, & Feedback">🤔</a></td>
+    <td align="center"><a href="https://saranjeetkaur.github.io/About-Me/"><img src="https://avatars.githubusercontent.com/u/28556616?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Saranjeet Kaur</b></sub></a><br /><a href="#content-SaranjeetKaur" title="Content">🖋</a> <a href="https://github.com/r-devel/rdevguide/commits?author=SaranjeetKaur" title="Documentation">📖</a> <a href="#ideas-SaranjeetKaur" title="Ideas, Planning, & Feedback">🤔</a> <a href="#fundingFinding-SaranjeetKaur" title="Funding Finding">🔍</a></td>
     <td align="center"><a href="http://maya.rbind.io"><img src="https://avatars.githubusercontent.com/u/6053906?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Maya Gans</b></sub></a><br /><a href="#infra-MayaGans" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a></td>
   </tr>
 </table>
