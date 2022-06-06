@@ -56,6 +56,16 @@
       "contributions": [
         "review"
       ]
+    },
+    {
+      "login": "tdhock",
+      "name": "Toby Dylan Hocking",
+      "avatar_url": "https://avatars.githubusercontent.com/u/932850?v=4",
+      "profile": "http://tdhock.github.io",
+      "contributions": [
+        "review",
+        "example"
+      ]
     }
   ],
   "contributorsPerLine": 7,
