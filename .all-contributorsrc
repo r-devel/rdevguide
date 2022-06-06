@@ -6,6 +6,15 @@
   "commit": false,
   "contributors": [
     {
+      "login": "hturner",
+      "name": "Heather Turner",
+      "avatar_url": "https://avatars.githubusercontent.com/u/3343008?v=4",
+      "profile": "https://www.heatherturner.net/",
+      "contributions": [
+        "content"
+      ]
+    },
+    {  
       "login": "SaranjeetKaur",
       "name": "Saranjeet Kaur",
       "avatar_url": "https://avatars.githubusercontent.com/u/28556616?v=4",
