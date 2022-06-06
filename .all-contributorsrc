@@ -47,6 +47,15 @@
       "contributions": [
         "review"
       ]
+    },
+    {
+      "login": "llrs",
+      "name": "Lluís",
+      "avatar_url": "https://avatars.githubusercontent.com/u/6818218?v=4",
+      "profile": "http://llrs.dev",
+      "contributions": [
+        "review"
+      ]
     }
   ],
   "contributorsPerLine": 7,
