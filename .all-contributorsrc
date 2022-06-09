@@ -31,7 +31,9 @@
       "contributions": [
         "content",
         "doc",
-        "ideas"
+        "ideas",
+        "fundingFinding",
+        "question"
       ]
     },
     {
@@ -41,6 +43,128 @@
       "profile": "http://maya.rbind.io",
       "contributions": [
         "infra"
+      ]
+    },
+    {
+      "login": "willingc",
+      "name": "Carol Willing",
+      "avatar_url": "https://avatars.githubusercontent.com/u/2680980?v=4",
+      "profile": "https://www.willingconsulting.com",
+      "contributions": [
+        "review"
+      ]
+    },
+    {
+      "login": "llrs",
+      "name": "Lluís",
+      "avatar_url": "https://avatars.githubusercontent.com/u/6818218?v=4",
+      "profile": "http://llrs.dev",
+      "contributions": [
+        "review"
+      ]
+    },
+    {
+      "login": "tdhock",
+      "name": "Toby Dylan Hocking",
+      "avatar_url": "https://avatars.githubusercontent.com/u/932850?v=4",
+      "profile": "http://tdhock.github.io",
+      "contributions": [
+        "review",
+        "example"
+      ]
+    },
+    {
+      "login": "bettinagruen",
+      "name": "bettinagruen",
+      "avatar_url": "https://avatars.githubusercontent.com/u/3341603?v=4",
+      "profile": "https://github.com/bettinagruen",
+      "contributions": [
+        "review"
+      ]
+    },
+    {
+      "login": "mmaechler",
+      "name": "Martin Mächler",
+      "avatar_url": "https://avatars.githubusercontent.com/u/995722?v=4",
+      "profile": "http://stat.ethz.ch/~maechler",
+      "contributions": [
+        "review"
+      ]
+    },
+    {
+      "login": "anelda",
+      "name": "Anelda van der Walt",
+      "avatar_url": "https://avatars.githubusercontent.com/u/7215014?v=4",
+      "profile": "http://www.talarify.co.za",
+      "contributions": [
+        "review"
+      ]
+    },
+    {
+      "login": "mine-cetinkaya-rundel",
+      "name": "Mine Cetinkaya-Rundel",
+      "avatar_url": "https://avatars.githubusercontent.com/u/5965649?v=4",
+      "profile": "http://mine-cr.com",
+      "contributions": [
+        "review"
+      ]
+    },
+    {
+      "login": "MichaelChirico",
+      "name": "Michael Chirico",
+      "avatar_url": "https://avatars.githubusercontent.com/u/7606389?v=4",
+      "profile": "https://github.com/MichaelChirico",
+      "contributions": [
+        "review",
+        "question"
+      ]
+    },
+    {
+      "login": "elinw",
+      "name": "Elin Waring",
+      "avatar_url": "https://avatars.githubusercontent.com/u/754813?v=4",
+      "profile": "http://officialjoomlabook.com",
+      "contributions": [
+        "question"
+      ]
+    },
+    {
+      "login": "lawremi",
+      "name": "Michael Lawrence",
+      "avatar_url": "https://avatars.githubusercontent.com/u/158190?v=4",
+      "profile": "https://github.com/lawremi",
+      "contributions": [
+        "review",
+        "ideas",
+        "mentoring"
+      ]
+    },
+    {
+      "login": "gmbecker",
+      "name": "Gabe Becker",
+      "avatar_url": "https://avatars.githubusercontent.com/u/908721?v=4",
+      "profile": "https://github.com/gmbecker",
+      "contributions": [
+        "review",
+        "question"
+      ]
+    },
+    {
+      "login": "krlmlr",
+      "name": "Kirill Müller",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1741643?v=4",
+      "profile": "https://github.com/krlmlr",
+      "contributions": [
+        "question"
+      ]
+    },
+    {
+      "login": "lionel-",
+      "name": "Lionel Henry",
+      "avatar_url": "https://avatars.githubusercontent.com/u/4465050?v=4",
+      "profile": "https://github.com/lionel-",
+      "contributions": [
+        "question"
       ]
     }
   ],
