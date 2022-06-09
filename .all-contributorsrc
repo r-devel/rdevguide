@@ -18,7 +18,9 @@
         "projectManagement",
         "review",
         "fundingFinding",
-        "question"
+        "question",
+        "eventOrganizing",
+        "talk"
       ]
     },
     {
