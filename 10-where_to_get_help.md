@@ -1,4 +1,4 @@
-# Where to get help {#WhereToGetHelp}
+# Where to Get Help {#WhereToGetHelp}
 
 If you are working on R it is possible that you will come across an issue where you would need some assistance to solve it. If you require help, there are options available to seek assistance or get some feedback which are discussed in this chapter. If the question involves process or tool usage then please check the rest of this guide first as it should answer your question. Please make sure to search the documentation and resources to see if your question has already been addressed. If not, then ask for assistance in the appropriate forum. Many developers are volunteers and please be polite, patient, and thoughtful when requesting for feedback or help.
 
@@ -18,7 +18,7 @@ You can discuss issues related to the development of R and learn about the proce
 
 Note: You may not be able to access the history of these channels, so it cannot be used as a knowledge base of sorts. 
 
-## Mailing Lists
+## Mailing lists
 
 There are quite a few [mailing lists](https://www.r-project.org/mail.html) for getting help with R:
 
@@ -40,6 +40,6 @@ There are quite a few [mailing lists](https://www.r-project.org/mail.html) for g
       
 Please avoid cross-posting to both the R-package-devel and the R-devel mailing lists.
 
-## File a Bug
+## File a bug
 
 If you strongly suspect you have come across a bug (be it in the build process, or in other areas), then [report it on Bugzilla](#ReportBug). 
