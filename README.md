@@ -1,6 +1,6 @@
 # A Guide to Contributing to R Core
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-16-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-17-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 This guide is a work in progress, inspired by http://devguide.python.org/. It is currently deployed at https://forwards.github.io/rdevguide/.
@@ -73,6 +73,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
   <tr>
     <td align="center"><a href="https://github.com/krlmlr"><img src="https://avatars.githubusercontent.com/u/1741643?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Kirill Müller</b></sub></a><br /><a href="#question-krlmlr" title="Answering Questions">💬</a></td>
     <td align="center"><a href="https://github.com/lionel-"><img src="https://avatars.githubusercontent.com/u/4465050?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Lionel Henry</b></sub></a><br /><a href="#question-lionel-" title="Answering Questions">💬</a></td>
+    <td align="center"><a href="https://github.com/HayesJohnD"><img src="https://avatars.githubusercontent.com/u/66183716?v=4?s=100" width="100px;" alt=""/><br /><sub><b>John Hayes</b></sub></a><br /><a href="https://github.com/r-devel/rdevguide/pulls?q=is%3Apr+reviewed-by%3AHayesJohnD" title="Reviewed Pull Requests">👀</a></td>
   </tr>
 </table>
 
