@@ -22,7 +22,7 @@ The `r-devel` is the next minor or eventually major release development version 
 
 2. Click on the download links to download an executable installer.
 
-3. Select the language while installing, read the public license information, and select the destination location to start the installation. You will be prompted to select components at this stage: `User installation`, `32-bit User installation`, `64-bit User installation`, or `Custom installation`. The default option may be chosen for the questions from this step onwards to complete the installation. 
+3. Select the language while installing, read the GNU general public license information, and select the destination location to start the installation. You will be prompted to select components at this stage: `User installation`, `32-bit User installation`, `64-bit User installation`, or `Custom installation`. The default option may be chosen for the questions from this step onwards to complete the installation. 
 
 ## Building R and R packages
 
