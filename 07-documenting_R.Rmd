@@ -6,7 +6,7 @@ This chapter describes the styleguide for R's documentation, how to document for
 
 ## Introduction
 
-R’s documentation has long been considered to be good for a free programming language. The core developers have been committed to provide goods documentation on the language and its packages. The continuing involvement of the user community in providing assistance for creating and maintaining documentation has also supported a lot.
+R’s documentation has long been considered to be good for a free programming language. The core developers have been committed to providing good documentation on the language and its packages. The continuing involvement of the user community in providing assistance for creating and maintaining documentation has also supported a lot.
 
 The involvement of the community takes many forms, from authoring to bug reports to raising an issue when the documentation could be more complete or easier to use.
 
