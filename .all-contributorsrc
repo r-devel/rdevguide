@@ -169,6 +169,15 @@
       "contributions": [
         "question"
       ]
+    },
+    {
+      "login": "HayesJohnD",
+      "name": "John Hayes",
+      "avatar_url": "https://avatars.githubusercontent.com/u/66183716?v=4",
+      "profile": "https://github.com/HayesJohnD",
+      "contributions": [
+        "review"
+      ]
     }
   ],
   "contributorsPerLine": 7,
