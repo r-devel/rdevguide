@@ -1,0 +1,71 @@
+# Translations
+
+This chapter covers internationalization in R, i.e., the display of messages in languages other than English.
+R leverages the [`gettext`](https://www.gnu.org/software/gettext/) program to handle the conversion from English
+to arbitrary target languages.
+
+Having messages available in other languages can be an important bridge for R learners not confident in English --
+rather than learning two things at once (coding in R and processing diagnostic information in English), they can
+focus on coding while getting more natural errors/warnings in their native tongue.
+
+The [`gettext` manual](https://www.gnu.org/software/gettext/manual/index.html) is a more canonical reference for
+deep understanding of how `gettext` works. This chapter will just give a broad overview of how it works, with
+particular focus on how things work for R, with the goal of making it as low-friction as possible for developers
+and users to contribute new/updated translations.
+
+## How translations work
+
+Each of the default packages distributed with R (i.e., those found in `./src/library` such as `base`, `utils`,
+and `stats`) contains a `po` directory that is the central location for cataloguing/translating each package's
+messages.
+
+### .pot files
+
+The `.pot` file is a snapshot of the messages available in a given **domain**. A domain in R typically identifies
+a source package and a source language (either R or C/C++). For example, the file `R-base.pot`
+(found in the R sources in `./src/library/base/po`) is a catalogue of all messages produced by R code in the
+`base` package, while `stats.pot` (_viz._, `./src/library/stats/po`) is a catalogue of all messages produced
+by C code in the `stats` package.
+
+There are two exceptions to the basic pattern described above. The first is the domain for C messages produced
+by the `base` package. Well, technically, they are not "produced by the `base` package" in the normal sense
+that code in the `src` directory of base is not where these messages come from, but rather, the C code which
+is the fundamental backing of R itself (especially, but not exclusively, the C code under `./src/main`).
+Given this idisyncrasy, the associated `.pot` file is `R.pot` and it's found in the `po` directory for `base`.
+
+The second is the domain for the Windows R GUI, i.e., the text in the menus and elsewhere in the R GUI program
+available for running R on Windows. These messages are stored in the `RGui.pot` domain, also in the `po`
+directory for `base`, and are most commonly derived from C code found in `./src/gnuwin32`. One reason to keep
+this domain separate is that it is only relevant to one platform (Windows). In particular, Windows has historically
+different character encodings, so that it made more sense for Windows developers to produce translations
+for Windows, since it is non-trivial for non-Windows users to test their translations for the Windows GUI.
+
+#### Generating .pot files
+
+For outside contributors, there's no need to update .pot files -- translators will typically take the R .pot files
+as given and generate .po files from them to be sent to an R-core maintainer as a patch.
+
+To emphasize, this section is almost always not needed for contributing translations -- it is here for
+completeness and edification.
+
+### .po files
+
+### .mo files
+
+.po files are plain text, but while helpful for human readers, this is inefficient for consumption by computers.
+The .mo format is a "compiled" version of the .po file optimized for retrieving messages when R is running.
+
+In R-devel, the conversion from .po to .mo is done by R-core -- you don't need to compile these files yourself.
+They are stored in the R sources at `./src/library/translations/inst` in various language-specific subdirectories.
+
+## How to contribute new translations
+
+Creating and editing .po files, testing the translations worked, **encoding**, translation teams, release schedule
+
+## Current status of translations in R
+
+https://contributor.r-project.org/translations/
+
+## Helpful references
+
+ - Statistical terms glossary
