@@ -40,7 +40,7 @@ If you would like to see how bugs are reviewed on Bugzilla, [here](https://bugs.
 
 **Note**:
 
-There is a `#bugreports-for-review` channel on the [R-devel slack](https://r-devel.slack.com/) where you can share your bug report(s) for review/feedback before submitting to Bugzilla. This can help with checking that it really is a bug, that you have included the important information and excluded redundant information.
+There is a `#bugreports-for-review` channel on the [R Contributors slack](https://r-contributors.slack.com/) where you can share your bug report(s) for review/feedback before submitting to Bugzilla. This can help with checking that it really is a bug, that you have included the important information and excluded redundant information.
 
 ## See also
 

@@ -48,7 +48,7 @@ When creating a patch for submission, there are several things that you can do t
 
 To begin with, please be patient. There are many more people submitting patches than there are people capable of reviewing your patches. Getting your patch reviewed requires a reviewer to have the spare time and motivation to look at your patch. We cannot force anyone to review patches and no one is employed to look at patches. 
 
-There is a `#patches-for-review` channel on the [R-devel slack](https://r-devel.slack.com/) where you can share your patch(es) for review/feedback before submitting to R-Core/Bugzilla. This can help with checking that you have included the important information and excluded redundant information.
+There is a `#patches-for-review` channel on the [R Contributors slack](https://r-contributors.slack.com/) where you can share your patch(es) for review/feedback before submitting to R-Core/Bugzilla. This can help with checking that you have included the important information and excluded redundant information.
 
 If your patch has not received any notice from reviewers (i.e., no comment made) after one month, comment/message on the `#patches-for-review` channel to remind the members that the patch needs a review.
 

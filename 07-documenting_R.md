@@ -100,7 +100,7 @@ Our dev guide workflow uses continuous integration and deployment so changes to 
 
 **Note**:
 
-There is a `#core-documentation` channel on the [R-devel slack](https://r-devel.slack.com/) where you can discuss about the patches for improvements to R's documentation. 
+There is a `#core-documentation` channel on the [R Contributors slack](https://r-contributors.slack.com/) where you can discuss about the patches for improvements to R's documentation. 
 
 ## See also
 
