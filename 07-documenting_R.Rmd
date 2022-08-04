@@ -94,7 +94,7 @@ If you decide to proofread, read a section of the documentation from start to fi
 
 The Developer’s Guide (what you are reading now) uses the same process as the main R documentation, except for some small differences. The source lives in a [GitHub repository](https://github.com/forwards/rdevguide) and bug reports should be submitted to the [devguide GitHub tracker](https://github.com/forwards/rdevguide/issues).
 
-Our dev guide workflow uses continuous integration and deployment so changes to the dev guide are normally published when the pull request is merged. (Link to how-to-contribute from the introduction chapter)
+Our dev guide workflow uses continuous integration and deployment so changes to the dev guide are normally published when the pull request is merged. [How to contribute to this guide from the introduction.](#how-to-contribute-to-this-guide)
 
 ## Instructions for reporting the CRAN policy bugs -- discussion in slack (random channel)
 
