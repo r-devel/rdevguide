@@ -56,7 +56,7 @@ All the above information is included in a .Rd file within a series of sections 
     * Titles of books and journals (not articles) should be enclosed in `\emph{...}`.
     * Volume numbers for journals are to be enclosed in `\bold{...}` and followed by a comma.
     * Use `--` for page ranges.
-    * For given an address for a publisher use the format `New York: Springer-Verlag`.
+    * For giving an address for a publisher use the format `New York: Springer-Verlag`.
 
 More guidelines for writing .Rd files can be found [here](https://developer.r-project.org/Rds.html).
 
