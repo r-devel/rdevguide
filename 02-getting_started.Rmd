@@ -4,7 +4,7 @@ These instructions cover how to install R from source.
 The tools required to build R and R packages are also discussed.
 For the most up to date and complete instructions you can check the [R installation and administration manual](https://cran.r-project.org/doc/manuals/r-devel/R-admin.html) .
 
-### Brief introduction to R source code:
+## Brief introduction to R source code:
 
 R uses [svn](https://subversion.apache.org/ "SVN official page") as a version control tool hosted at <https://svn.r-project.org> and uses a 'major.minor.patchlevel' version numbering scheme[^02-getting_started-1].
 
@@ -64,8 +64,8 @@ Here are the basic steps needed meant as a checklist.For complete instructions p
 
 [^02-getting_started-2]: Recommended packages are not in the subversion repository.
 
-Once you successfully build R from source you can modify R source code to fix an issue:
-Prepare a patch (See [this guide](https://www.r-project.org/bugs.html#how-to-submit-patches)) and after checking that R works as intended (`make check-devel`) submit the patch for the R core consideration. (See the [lifecycle of a patch](#FixBug) chapter). 
+Once you successfully build R from source you can modify R source code to fix an issue: Prepare a patch (See [this guide](https://www.r-project.org/bugs.html#how-to-submit-patches)) and after checking that R works as intended (`make check-devel`) submit the patch for the R core consideration.
+(See the [lifecycle of a patch](#FixBug) chapter).
 
 ## Windows
 
