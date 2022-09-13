@@ -31,7 +31,7 @@ There are two exceptions to the basic pattern described above. The first is the 
 by the `base` package. Well, technically, they are not "produced by the `base` package" in the normal sense
 that code in the `src` directory of base is not where these messages come from, but rather, the C code which
 is the fundamental backing of R itself (especially, but not exclusively, the C code under `./src/main`).
-Given this idisyncrasy, the associated `.pot` file is `R.pot` and it's found in the `po` directory for `base`.
+Given this idiosyncrasy, the associated `.pot` file is `R.pot` and it is found in the `po` directory for `base`.
 
 The second is the domain for the Windows R GUI, i.e., the text in the menus and elsewhere in the R GUI program
 available for running R on Windows. These messages are stored in the `RGui.pot` domain, also in the `po`
