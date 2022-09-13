@@ -31,7 +31,7 @@ Here are the basic steps needed meant as a checklist.For complete instructions p
 
         svn checkout https://svn.r-project.org/R/trunk/ TOP_SRCDIR
 
-    If you need to install svn you can use your distribution manager to install it.
+    If you need to install svn you can use your distribution's package manager to install it.
     In Ubuntu you can use :
 
         sudo apt-get install subversion
