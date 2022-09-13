@@ -27,7 +27,7 @@ Mostly, bug fixes are introduced in `r-patched` and `r-devel`, while `r-devel` i
 
 Here are the basic steps needed meant as a checklist.For complete instructions please see the section in [R-admin](https://cran.r-project.org/doc/manuals/r-devel/R-admin.html#Installing-R-under-Unix_002dalikes)
 
-1.  Retrieve R source code via into `TOPSRCDIR`, note that we retrieve the r-devel source code:
+1.  Retrieve R source code via into `TOP_SRCDIR`, note that we retrieve the r-devel source code:
 
         svn checkout https://svn.r-project.org/R/trunk/ TOP_SRCDIR
 
