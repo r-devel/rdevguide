@@ -20,7 +20,7 @@ There are three releases of R available to install:
 
 The source code of released versions of R can be found at [R/tags](https://svn.r-project.org/R/tags/ "svn release source code folder"), the patched versions are at [R/branch](https://svn.r-project.org/R/branches/ "svn patched source code folder").
 
-The `r-devel` at [R/trunk](trunk "svn devel source code folder") is the next minor or eventually major release development version of R.
+The `r-devel` at [R/trunk](trunk "svn devel source code folder") is the next minor or eventual major release development version of R.
 Mostly, bug fixes are introduced in `r-patched` and `r-devel`, while `r-devel` is for introducing new features.
 
 ## Installing R in Linux
