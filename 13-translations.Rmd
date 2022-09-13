@@ -1,6 +1,6 @@
 # Translations
 
-This chapter covers internationalization in R, i.e., the display of messages in languages other than English.
+This chapter covers internationalization in R, i.e., the display of messages in languages other than English. All output in R (such as messages emitted by `stop()`, `warning()`, or `message()`) is eligible for translation, as are menu labels in the GUI. Depending on the version of R that you are using, some of the languages might already be available while others may need work.
 R leverages the [`gettext`](https://www.gnu.org/software/gettext/) program to handle the conversion from English
 to arbitrary target languages.
 
