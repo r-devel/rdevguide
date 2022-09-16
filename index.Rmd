@@ -10,8 +10,11 @@ biblio-style: apalike
 link-citations: yes
 github-repo: forwards/rdevguide
 url: 'TDDO'
+cover-image: "img/Rlogo.png"
+favicon: "img/Rlogo.svg"
 description: "A guide to R development."
 ---
+
 
 # Acknowledgement
 
