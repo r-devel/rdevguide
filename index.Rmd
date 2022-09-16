@@ -21,3 +21,8 @@ description: "A guide to R development."
 Initial chapters of this guide were developed by Saranjeet Kaur Bhogal, in a project funded by the R Foundation, mentored by Heather Turner and Michael Lawrence. It draws on documentation and articles written by the R Core Team. The initial version of the guide was upgraded as a part of the [Google Season of Docs 2022](https://github.com/rstats-gsod/gsod2022/wiki/GSOD-2022-Proposal) project with two Technical Writers and reviewed by the [Steering Committee](https://github.com/rstats-gsod/gsod2022/wiki/GSOD-2022-Proposal#steering-committee).
 
 This guide has benefited and continues to be benefited from varied contributions by several [contributors](https://github.com/r-devel/rdevguide#contributors-). 
+
+
+[![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/){width=180px}
+
+This project is licensed under a [Creative Commons Attribution 4.0 International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/). Some pages may contain materials that are subject to copyright, in which case you will see the copyright notice.
