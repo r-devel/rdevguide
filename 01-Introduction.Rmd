@@ -1,16 +1,15 @@
 # Introduction
 
-This guide is heavily influenced by the [Python Developer Guide](https://devguide.python.org/), and is a comprehensive resource for contributing to R Core – for both new and experienced contributors. It is maintained by the [R Contribution Working Group](/working-group). We welcome your contributions to R Core!
+This guide is heavily influenced by the [Python Developer Guide](https://devguide.python.org/), and is a comprehensive resource for contributing to base R – for both new and experienced contributors. It is maintained by the [R Contribution Working Group](/working-group). We welcome your contributions to base R!
 
 ## Overview of different ways of contributing to the R Project: contributing to bug fixing, contributing to translations, testing R before release
-- cLinks to the rest of the guide
+- Links to the rest of the guide
 - Contributing to R tutorial
 - Welcome to Bug BBQ slides
 - README on Bug BBQ repo
 - subsection on Intro to Bugzilla (either here or in the latter chapter on Bug reviewing/reporting)
 
 ## Schema / Schematic diagram
-
 
 
 ## How to contribute to this guide itself? {#how-to-contribute-to-this-guide -}
