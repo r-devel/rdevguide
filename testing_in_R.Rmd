@@ -1,0 +1,20 @@
+# Testing in R
+
+This chapter discusses about writing tests for R and extending the test suite for R. Usually, when one contributes a patch, one might also want to contribute tests that are able to cover the new code.
+
+## When and why to write a test?
+
+Whenever you add new functions to R base or any of the packages distributed with R, it is beneficial to add test(s) corresponding to the new code. While doing so it is essential to check whether `make test-Specific` still works with the new code included. In particular, check whether `cd tests; make no-segfault.Rout` work on a standalone computer without the requirement of an interactive user intervention.
+
+If the new code requires GUI interaction or accesses the Internet, then it is essential to add its name to the `stop list` in `tests/no-segfault.Rin`.
+
+## Writing tests for R (adopted from the pre release test chapter, remove this section from there)
+
+Writing tests for R is much like writing tests for your own code. Tests need to be thorough, fast, isolated, consistently repeatable, and as simple as possible. 
+
+When you are adding tests to an existing test file, it is also recommended that you study the other tests in that file; it will teach you which precautions you have to take to make your tests robust and portable. We try to have tests both for normal behaviour and for error conditions. Tests live in the `tests` directory.
+
+## Benchmarks
+
+Benchmarking is useful to test that a change does not degrade performance.
+  
