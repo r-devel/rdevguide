@@ -25,7 +25,7 @@ You can push directly to `master` for small fixes. Please use PRs to `master` fo
 
 ## Editing notes
 
-* Images must be included in the source, not provided as URLs, for the PDF boo to compile.
+* Images must be included in the source, not provided as URLs, for the PDF book to compile.
 * Images should have alt text for accessibility - note this is shown as a caption in the EPUB version.
 
 ## Technical details
