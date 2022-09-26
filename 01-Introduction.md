@@ -6,7 +6,7 @@ This guide is heavily influenced by the [Python Developer Guide](https://devguid
 
 This guide is built using bookdown which makes editing it easier, provided you have a GitHub account (sign-up at [github.com](https://github.com/)). After you log-in to GitHub, click on the ‘Edit’ icon highlighted with a red ellipse in the image below. This will take you to an editable version of the the source R Markdown file that generated the page you are on:
 
-![](https://user-images.githubusercontent.com/28556616/122679827-03314a80-d20a-11eb-9714-06ae588127f0.png)
+![Screenshot of the toolbar in the HTML version of the guide, with the Edit button (pencil and paper icon) circled in red.](img/edit_icon.png)
 
 Use the [issue tracker](https://github.com/forwards/rdevguide/issues) to raise an issue about the guide’s content or to make a feature request.
 
