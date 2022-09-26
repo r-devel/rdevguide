@@ -18,11 +18,11 @@ jobs:
       - name: Install rmarkdown
         run: Rscript -e 'install.packages(c("rmarkdown","bookdown"))'
       - name: Render HTML
-        run: Rscript -e 'bookdown::render_book("index.Rmd", "gitbook")'
+        run: Rscript -e 'bookdown::render_book("index.Rmd", "bookdown::gitbook")'
       - name: Render PDF
-        run: Rscript -e 'bookdown::render_book("index.Rmd", "pdf_book")'
+        run: Rscript -e 'bookdown::render_book("index.Rmd", "bookdown::pdf_book")'
       - name: Render ePub
-        run: Rscript -e 'bookdown::render_book("index.Rmd", "epub_book")'
+        run: Rscript -e 'bookdown::render_book("index.Rmd", "bookdown::epub_book")'
       - uses: actions/upload-artifact@v3
         with:
           name: docs
