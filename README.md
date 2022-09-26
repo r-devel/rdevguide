@@ -38,7 +38,7 @@ If you want to render the guide locally, you need to install `bookdown`. Then us
 
 ```bookdown::render_book('index.Rmd', 'bookdown::gitbook')```
 
-and the book will be generated in the `docs` folder. You can open the guide on the command line via `open docs/index.html`.
+and the book will be generated in the `docs` folder. You can open the guide on the command line via `open docs/index.html`. To preview the PDF or EPUB versions locally, replace `'bookdown::gitbook'` with `'bookdown::pdf_book'` or `'bookdown::epub_book`' as appropriate.
 
 ## Code of Conduct
 
