@@ -23,6 +23,11 @@ You can also suggest changes by editing the .Rmd files that are at the root of t
 
 You can push directly to `master` for small fixes. Please use PRs to `master` for discussing larger updates - try to limit to one section or at least one chapter in each PR, so that changes are easier to review.
 
+## Editing notes
+
+* Images must be included in the source, not provided as URLs, for the PDF boo to compile.
+* Images should have alt text for accessibility - note this is shown as a caption in the EPUB version.
+
 ## Technical details
 
 Deployment is done via Travis CI:
