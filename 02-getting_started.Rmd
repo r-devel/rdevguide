@@ -1,33 +1,36 @@
-# Getting Started {#GetStart}
+# R Patched and Development Versions {#GetStart}
 
 These instructions cover how to install R from source.
+Contributors will typically need to work with the patched or development versions of R.
+This chapter describes where the source code for these versions can be found and how to install these versions from the source or the binary builds (where available).
 The tools required to build R and R packages are also discussed.
 For the most up to date and complete instructions you can check the [R installation and administration manual](https://cran.r-project.org/doc/manuals/r-devel/R-admin.html) .
 
-## Brief introduction to R source code:
+## The R Source Code
 
-R uses [svn](https://subversion.apache.org/ "SVN official page") as a version control tool hosted at <https://svn.r-project.org> and uses a 'major.minor.patchlevel' version numbering scheme[^02-getting_started-1].
+R uses [svn](https://subversion.apache.org/ "SVN official page") as a version control tool hosted at <https://svn.r-project.org/R/> and uses a 'major.minor.patchlevel' version numbering scheme[^02-getting_started-1].
 
 [^02-getting_started-1]: Also known as [semantic versioning](https://en.wikipedia.org/wiki/Software_versioning#Semantic_versioning "Wikipedia explanation of semantic versioning")
 
 There are three releases of R available to install:
 
--   The latest official release (`r-release`),
+-   The latest official release (`r-release`), either major version x.0.0 or minor version x.y.0, for example: 3.0.0 or 3.2.0
 
--   The patched release (`r-patched`), and
+-   The patched release (`r-patched`), for example 3.0.1 or 3.2.1 and
 
--   The development release (`r-devel`).
+-   The development release (`r-devel`) : continually developed version moving from r-release to next major/minor version (x + 1).0.0 or x.(y + 1).0 a few weeks before release (at the start of the "GRAND FEATURE FREEZE").
 
 The source code of released versions of R can be found at [R/tags](https://svn.r-project.org/R/tags/ "svn release source code folder"), the patched versions are at [R/branch](https://svn.r-project.org/R/branches/ "svn patched source code folder").
 
-The `r-devel` at [R/trunk](trunk "svn devel source code folder") is the next minor or eventually major release development version of R.
-Mostly, bug fixes are introduced in `r-patched` and `r-devel`, while `r-devel` is for introducing new features.
+The `r-devel` at [R/trunk](https://svn.r-project.org/R/trunk "svn devel source code folder") is the next minor or eventually major release development version of R.
+Mostly, contributions and new features are introduced in `r-devel`, and if the R core decides which are moved to `r-patched`.
 
 ## Installing R in Linux
 
-Here are the basic steps needed meant as a checklist.For complete instructions please see the section in [R-admin](https://cran.r-project.org/doc/manuals/r-devel/R-admin.html#Installing-R-under-Unix_002dalikes)
+Here are the basic steps intended as a checklist.
+For complete instructions please see the section in [R-admin](https://cran.r-project.org/doc/manuals/r-devel/R-admin.html#Installing-R-under-Unix_002dalikes)
 
-1.  Retrieve R source code via into `TOPSRCDIR`, note that we retrieve the r-devel source code:
+1.  Retrieve R source code via into `TOP_SRCDIR`, note that we retrieve the r-devel source code:
 
         svn checkout https://svn.r-project.org/R/trunk/ TOP_SRCDIR
 
@@ -42,7 +45,7 @@ Here are the basic steps needed meant as a checklist.For complete instructions p
 
 3.  Configure indicating where R should be installed (`BUILDDIR`):
 
-        TOP_SRCDIR/configure –prefix=BUILDDIR
+        TOP_SRCDIR/configure --prefix=BUILDDIR
 
     or
 
