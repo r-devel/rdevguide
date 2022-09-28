@@ -56,7 +56,7 @@ All the above information is included in a .Rd file within a series of sections 
     * Titles of books and journals (not articles) should be enclosed in `\emph{...}`.
     * Volume numbers for journals are to be enclosed in `\bold{...}` and followed by a comma.
     * Use `--` for page ranges.
-    * For given an address for a publisher use the format `New York: Springer-Verlag`.
+    * For giving an address for a publisher use the format `New York: Springer-Verlag`.
 
 More guidelines for writing .Rd files can be found [here](https://developer.r-project.org/Rds.html).
 
@@ -94,13 +94,13 @@ If you decide to proofread, read a section of the documentation from start to fi
 
 The Developer’s Guide (what you are reading now) uses the same process as the main R documentation, except for some small differences. The source lives in a [GitHub repository](https://github.com/forwards/rdevguide) and bug reports should be submitted to the [devguide GitHub tracker](https://github.com/forwards/rdevguide/issues).
 
-Our dev guide workflow uses continuous integration and deployment so changes to the dev guide are normally published when the pull request is merged. (Link to how-to-contribute from the introduction chapter)
+Our dev guide workflow uses continuous integration and deployment so changes to the dev guide are normally published when the pull request is merged. [How to contribute to this guide from the introduction.](#how-to-contribute-to-this-guide)
 
 ## Instructions for reporting the CRAN policy bugs -- discussion in slack (random channel)
 
 **Note**:
 
-There is a `#core-documentation` channel on the [R-devel slack](https://r-devel.slack.com/) where you can discuss about the patches for improvements to R's documentation. 
+There is a `#core-documentation` channel on the [R Contributors slack](https://r-contributors.slack.com/) where you can discuss about the patches for improvements to R's documentation. 
 
 ## See also
 

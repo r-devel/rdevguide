@@ -1,3 +1,5 @@
+[![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
+
 # A Guide to Contributing to R Core
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
 [![All Contributors](https://img.shields.io/badge/all_contributors-17-orange.svg?style=flat-square)](#contributors-)
@@ -21,6 +23,11 @@ You can also suggest changes by editing the .Rmd files that are at the root of t
 
 You can push directly to `master` for small fixes. Please use PRs to `master` for discussing larger updates - try to limit to one section or at least one chapter in each PR, so that changes are easier to review.
 
+## Editing notes
+
+* Images must be included in the source, not provided as URLs, for the PDF book to compile.
+* Images should have alt text for accessibility - note this is shown as a caption in the EPUB version.
+
 ## Technical details
 
 Deployment is done via Travis CI:
@@ -31,7 +38,7 @@ If you want to render the guide locally, you need to install `bookdown`. Then us
 
 ```bookdown::render_book('index.Rmd', 'bookdown::gitbook')```
 
-and the book will be generated in the `docs` folder. You can open the guide on the command line via `open docs/index.html`.
+and the book will be generated in the `docs` folder. You can open the guide on the command line via `open docs/index.html`. To preview the PDF or EPUB versions locally, replace `'bookdown::gitbook'` with `'bookdown::pdf_book'` or `'bookdown::epub_book`' as appropriate.
 
 ## Code of Conduct
 

@@ -4,7 +4,7 @@ If you are working on R it is possible that you will come across an issue where 
 
 ## Slack
 
-You can discuss issues related to the development of R and learn about the process of contributing to R on the [R-devel slack](https://r-devel.slack.com/). There are a number of experienced developers on this slack who can answer questions and/or provide feedback. The following channels are available on the R-devel slack for help and feedback with specific areas:
+You can discuss issues related to the development of R and learn about the process of contributing to R on the [R Contributors slack](https://r-contributors.slack.com/). There are a number of experienced developers on this slack who can answer questions and/or provide feedback. The following channels are available on the R-devel slack for help and feedback with specific areas:
 
   * #bugreports-for-review: Share bug reports for review/feedback before submitting to Bugzilla.
   
