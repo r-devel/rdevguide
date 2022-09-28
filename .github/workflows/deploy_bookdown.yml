@@ -11,14 +11,19 @@ jobs:
     name: Render-Book
     runs-on: macOS-latest
     steps:
-      - uses: actions/checkout@v1
-      - uses: r-lib/actions/setup-r@v1
-      - uses: r-lib/actions/setup-pandoc@v1
+      - uses: actions/checkout@v3
+      - uses: r-lib/actions/setup-r@v2
+      - uses: r-lib/actions/setup-pandoc@v2
+      - uses: r-lib/actions/setup-tinytex@v2
       - name: Install rmarkdown
         run: Rscript -e 'install.packages(c("rmarkdown","bookdown"))'
-      - name: Render Book
-        run: Rscript -e 'bookdown::render_book("index.Rmd")'
-      - uses: actions/upload-artifact@v1
+      - name: Render HTML
+        run: Rscript -e 'bookdown::render_book("index.Rmd", "bookdown::gitbook")'
+      - name: Render PDF
+        run: Rscript -e 'bookdown::render_book("index.Rmd", "bookdown::pdf_book")'
+      - name: Render ePub
+        run: Rscript -e 'bookdown::render_book("index.Rmd", "bookdown::epub_book")'
+      - uses: actions/upload-artifact@v3
         with:
           name: docs
           path: docs/
