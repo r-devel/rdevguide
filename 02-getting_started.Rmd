@@ -22,7 +22,7 @@ There are three releases of R available to install:
 
 The source code of released versions of R can be found at [R/tags](https://svn.r-project.org/R/tags/ "svn release source code folder"), the patched versions are at [R/branch](https://svn.r-project.org/R/branches/ "svn patched source code folder").
 
-The `r-devel` at [R/trunk](https://svn.r-project.org/R/trunk "svn devel source code folder") is the next minor or eventually major release development version of R.
+The `r-devel` at [R/trunk](https://svn.r-project.org/R/trunk "svn devel source code folder") is the next minor or eventual major release development version of R.
 Mostly, contributions and new features are introduced in `r-devel`, and if the R core decides which are moved to `r-patched`.
 
 ## Installing R in Linux
@@ -34,7 +34,7 @@ For complete instructions please see the section in [R-admin](https://cran.r-pro
 
         svn checkout https://svn.r-project.org/R/trunk/ TOP_SRCDIR
 
-    If you need to install svn you can use your distribution manager to install it.
+    If you need to install svn you can use your distribution's package manager to install it.
     In Ubuntu you can use :
 
         sudo apt-get install subversion
