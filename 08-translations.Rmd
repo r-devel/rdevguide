@@ -10,7 +10,7 @@ Having messages available in other languages can be an important bridge for R le
 rather than learning two things at once (coding in R and processing diagnostic information in English), they can
 focus on coding while getting more natural errors/warnings in their native tongue.
 
-The [`gettext` manual](https://www.gnu.org/software/gettext/manual/index.html) is a more canonical reference for
+The [`gettext` manual](https://www.gnu.org/software/gettext/manual/index.html) is a more canonical reference for a
 deep understanding of how `gettext` works. This chapter will just give a broad overview, with particular focus on
 how things work for R, with the goal of making it as low-friction as possible for developers and users to contribute
 new/updated translations.
@@ -24,16 +24,14 @@ messages.
 ### .pot files
 
 The `.pot` file is a snapshot of the messages available in a given **domain**. A domain in R typically identifies
-a source package and a source language (either R or C/C++). For example, the file `R-base.pot`
-(found in the R sources in `./src/library/base/po`) is a catalogue of all messages produced by R code in the
-`base` package, while `stats.pot` (_viz._, `./src/library/stats/po`) is a catalogue of all messages produced
-by C code in the `stats` package.
+a source package and a source language (either R or C/C++). For example, the file `R-stats.pot`
+(found in the R sources in `./src/library/stats/po`) is a catalogue of all messages produced by R code in the
+`base` package, while `stats.pot` is a catalogue of all messages produced by C code in the `stats` package.
 
-There are two exceptions to the basic pattern described above. The first is the domain for C messages produced
-by the `base` package. Well, technically, they are not "produced by the `base` package" in the normal sense
-that code in the `src` directory of base is not where these messages come from, but rather, the C code which
-is the fundamental backing of R itself (especially, but not exclusively, the C code under `./src/main`).
-Given this idiosyncrasy, the associated `.pot` file is `R.pot` and it is found in the `po` directory for `base`.
+There are two exceptions to the basic pattern described above. The first is the domain for messages produced by
+the C code which is the fundamental backing of R itself (especially, but not exclusively, the C code under
+./src/main). The associated .pot file is R.pot and it is found in `./src/library/base/po`. R-base.pot is a
+normal .pot file because base has a normal `R` directory.
 
 The second is the domain for the Windows R GUI, i.e., the text in the menus and elsewhere in the R GUI program
 available for running R on Windows. These messages are stored in the `RGui.pot` domain, also in the `po`
@@ -45,7 +43,8 @@ for Windows, since it is non-trivial for non-Windows users to test their transla
 #### Generating .pot files
 
 For outside contributors, there's no need to update .pot files -- translators will typically take the R .pot files
-as given and generate .po files from them to be sent to an R-core maintainer as a patch.
+as given and generate .po files. These will be sent along to a language-specific translation maintainer, who then
+compiles them to send to the R Core developer responsible for translations, who finally applies them as a patch.
 
 To emphasize, this section is almost always not needed for contributing translations -- it is here for
 completeness and edification.
@@ -60,7 +59,7 @@ the messages as they appear in the source code and how the messages will appear 
 Most messages appear as `msgid`/`msgstr` pairs. The former gives the message at it appears in the code, while the
 latter shows how it should appear in translation. For example, here is an error in German (locale: `de`) informing
 the user that their input must be of class `POSIXt`
-([source](https://github.com/r-devel/r-svn/blob/c715d61cb74b3fee2d035faed9b258e86e420b75/src/library/base/po/R-de.po#L537-L538)):
+([.po file source](https://github.com/r-devel/r-svn/blob/c715d61cb74b3fee2d035faed9b258e86e420b75/src/library/base/po/R-de.po#L537-L538)):
 
 ```
 msgid "'to' must be a \"POSIXt\" object"
@@ -135,21 +134,21 @@ Parsing, we get the following associations:
    that's 2, 3, ..., 9, 22, 23, ..., 29, 32, 33, ... 39, ..., 102, 103, ..., 109, 122, 123, ...
  - The `2` entry corresponds to all other numbers, i.e. 0, 10, 11, 12, ..., 19, 20, 30, ..., 90, 100, 110, 111, 112, ...
 
-TODO(michaelchirico): How to discover a new `nplurals/plural`.
-TODO(michaelchirico): sprintf templates (`%s`) and redirections (`%1$s`)
-TODO(michaelchirico): fuzzy translations
+<!-- TODO(michaelchirico): How to discover a new `nplurals/plural`. -->
+<!-- TODO(michaelchirico): sprintf templates (`%s`) and redirections (`%1$s`) -->
+<!-- TODO(michaelchirico): fuzzy translations -->
 
 ### .mo files
 
 .po files are plain text, but while helpful for human readers, this is inefficient for consumption by computers.
 The .mo format is a "compiled" version of the .po file optimized for retrieving messages when R is running.
 
-In R-devel, the conversion from .po to .mo is done by R-core -- you don't need to compile these files yourself.
+In R-devel, the conversion from .po to .mo is done by R Core -- you don't need to compile these files yourself.
 They are stored in the R sources at `./src/library/translations/inst` in various language-specific subdirectories.
 
 ## How to contribute new translations
 
-TODO(michaelchirico): Creating and editing .po files, testing the translations worked, **encoding**, translation teams, release schedule
+<!-- TODO(michaelchirico): Creating and editing .po files, testing the translations worked, **encoding**, translation teams, release schedule -->
 
 ## Current status of translations in R
 
