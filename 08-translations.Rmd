@@ -56,15 +56,14 @@ the messages as they appear in the source code and how the messages will appear 
 
 #### Singular messages
 
-Most messages appear as `msgid`/`msgstr` pairs. The former gives the message at it appears in the code, while the
+Most messages appear as `msgid`/`msgstr` pairs. The former gives the message as it appears in the code, while the
 latter shows how it should appear in translation. For example, here is an error in German (locale: `de`) informing
 the user that their input must be of class `POSIXt`
-([.po file source](https://github.com/r-devel/r-svn/blob/c715d61cb74b3fee2d035faed9b258e86e420b75/src/library/base/po/R-de.po#L537-L538)):
 
-```
-msgid "'to' must be a \"POSIXt\" object"
-msgstr "'to' muss ein \"POSIXt\" Objekt sein"
-```
+    msgid "'to' must be a \"POSIXt\" object"
+    msgstr "'to' muss ein \"POSIXt\" Objekt sein"
+
+See this in context in the [`R-de.po` source file](https://github.com/r-devel/r-svn/blob/c715d61cb74b3fee2d035faed9b258e86e420b75/src/library/base/po/R-de.po#L537-L538).
 
 The same message can also be found in
 [`R-it.po`](https://github.com/r-devel/r-svn/blob/c715d61cb74b3fee2d035faed9b258e86e420b75/src/library/base/po/R-it.po#L532-L533)
