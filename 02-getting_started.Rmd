@@ -136,6 +136,14 @@ If we don't want to build R in a different directory than the source code we can
 Once you successfully build R from source you can modify R source code to fix an issue: Prepare a patch (See [this guide](https://www.r-project.org/bugs.html#how-to-submit-patches)) and after checking that R works as intended (`make check-devel`) submit the patch for the R core consideration.
 (See the [lifecycle of a patch](#FixBug) chapter).
 
+
+To use the r-devel version in RStudio to you can do the following:
+
+    export RSTUIDO_WHICH_R="$BUILDDIR/bin/R"
+    cd $TOP_SRCDIR
+    rstudio
+
+
 ## Windows
 
 ### Installing R {#installR}
