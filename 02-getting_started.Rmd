@@ -1,6 +1,6 @@
 # R Patched and Development Versions {#GetStart}
 
-These instructions cover how to install R from source.
+These instructions cover how to install R from source or from binaries.
 Contributors will typically need to work with the patched or development versions of R.
 This chapter describes where the source code for these versions can be found and how to install these versions from the source or the binary builds (where available).
 The tools required to build R and R packages are also discussed.
@@ -22,39 +22,96 @@ There are three releases of R available to install:
 
 The source code of released versions of R can be found at [R/tags](https://svn.r-project.org/R/tags/ "svn release source code folder"), the patched versions are at [R/branch](https://svn.r-project.org/R/branches/ "svn patched source code folder").
 
-The `r-devel` at [R/trunk](https://svn.r-project.org/R/trunk "svn devel source code folder") is the next minor or eventual major release development version of R.
-Mostly, contributions and new features are introduced in `r-devel`, and if the R core decides which are moved to `r-patched`.
 
-## Installing R in Linux
+The `r-devel` at [R/trunk](https://svn.r-project.org/R/trunk "svn devel source code folder") is the next minor or eventual major release development version of R.
+Bug fixes and new features are introduced in `r-devel` first. 
+If the change meets the [development guidelines](https://developer.r-project.org/devel-guidelines.txt) R Core will also make the change in `r-patched`.
+
+## Prerequisites  {.tabset}
+
+To install from the source code you will need the source code and the dependencies of R.
+
+Retrieve R source code via into `TOP_SRCDIR`, note that we retrieve the r-devel source code:
+
+      export TOP_SRCDIR="$HOME/Downloads/R"
+      svn checkout https://svn.r-project.org/R/trunk/ $TOP_SRCDIR
+
+If you need to install svn you can use your distribution's package manager to install it.
+
+### Ubuntu
+
+In Ubuntu you can use :
+
+      sudo apt-get install -y \
+          subversion \
+          autoconf \
+          automake \
+          autopoint \
+          bash \
+          bison \
+          bzip2 \
+          flex \
+          g++ \
+          g++-multilib \
+          gettext \
+          git \
+          gperf \
+          intltool \
+          libc6-dev-i386 \
+          libgdk-pixbuf2.0-dev \
+          libltdl-dev \
+          libssl-dev \
+          libtool-bin \
+          libxml-parser-perl \
+          lzip \
+          make \
+          openssl \
+          p7zip-full \
+          patch \
+          perl \
+          python3 \
+          python3-mako \
+          python3-setuptools \
+          python \
+          ruby \
+          sed \
+          unzip \
+          wget \
+          xz-utils \
+          texinfo \
+          sqlite3 \
+          zstd
+
+### Windows
+
+Install MSYS and rtools42
+
+### macOS
+
+
+## Building R in Linux
 
 Here are the basic steps intended as a checklist.
-For complete instructions please see the section in [R-admin](https://cran.r-project.org/doc/manuals/r-devel/R-admin.html#Installing-R-under-Unix_002dalikes)
+For complete instructions please see the section in [R-admin](https://cran.r-project.org/doc/manuals/r-devel/R-admin.html#Installing-R-under-Unix_002dalikes).
 
-1.  Retrieve R source code via into `TOP_SRCDIR`, note that we retrieve the r-devel source code:
+1.  Download the latest recommended packages[^02-getting_started-2]:
 
-        svn checkout https://svn.r-project.org/R/trunk/ TOP_SRCDIR
+        $TOP_SRCDIR/tools/rsync-recommended
 
-    If you need to install svn you can use your distribution's package manager to install it.
-    In Ubuntu you can use :
+3.  Create the build directory in the `BUILDDIR`:
 
-        sudo apt-get install subversion
+        export BUILDDIR="$HOME/bin/R"
+        mkdir -p $BUILDDIR
+        cd $BUILDDIR
+        
+4.  Configure the R installation (with `--enable-R-shlib` so that RStudio IDE can use it):
+        
+        $TOP_SRCDIR/configure --enable-R-shlib
+        
+4.  Build R :
 
-2.  Download the latest recommended packages[^02-getting_started-2]:
+        make 
 
-        TOP_SRCDIR/tools/rsync-recommended
-
-3.  Configure indicating where R should be installed (`BUILDDIR`):
-
-        TOP_SRCDIR/configure --prefix=BUILDDIR
-
-    or
-
-        cd BUILDDIR
-        TOP_SRCDIR/configure
-
-4.  Build R on the desired folder
-
-        make
 
 5.  Check that R works as expected:
 
@@ -66,6 +123,15 @@ For complete instructions please see the section in [R-admin](https://cran.r-pro
         make check-recommended
 
 [^02-getting_started-2]: Recommended packages are not in the subversion repository.
+
+If we don't want to build R in a different directory than the source code we can simply use:
+
+    cd $TOP_SRCDIR 
+    svn update
+    tools/rsync-recommended
+    $TOP_SRCDIR/configure  --enable-R-shlib
+    make 
+    make check
 
 Once you successfully build R from source you can modify R source code to fix an issue: Prepare a patch (See [this guide](https://www.r-project.org/bugs.html#how-to-submit-patches)) and after checking that R works as intended (`make check-devel`) submit the patch for the R core consideration.
 (See the [lifecycle of a patch](#FixBug) chapter).
