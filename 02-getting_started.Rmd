@@ -34,7 +34,7 @@ To install from the source code you will need the source code and the dependenci
 Retrieve R source code via into `TOP_SRCDIR`, note that we retrieve the r-devel source code:
 
       export TOP_SRCDIR="$HOME/Downloads/R"
-      svn checkout https://svn.r-project.org/R/trunk/ $TOP_SRCDIR
+      svn checkout https://svn.r-project.org/R/trunk/ "$TOP_SRCDIR"
 
 If you need to install svn you can use your distribution's package manager to install it.
 
@@ -84,13 +84,14 @@ In Ubuntu you can use :
 
 ### Windows
 
-1.  [RTools](https://cran.r-project.org/bin/windows/Rtools/rtools42/rtools.html) is the toolchain bundle that you can use to build R base and R packages containing compiled code, on Windows. 
-  They can be downloaded from [their own page](https://cran.r-project.org/bin/windows/Rtools/rtools42/files/).
+1.  [Rtools](https://cran.r-project.org/bin/windows/Rtools/) is the toolchain bundle that you can use to build R base and R packages containing compiled code, on Windows. 
+  The latest [version Rtools42](https://cran.r-project.org/bin/windows/Rtools/rtools42/rtools.html) can be installed using the [Rtools installer rtools42-XXXX-XXX.exe ](https://cran.r-project.org/bin/windows/Rtools/rtools42/files/).
 
-2.  You also need a distribution of LaTeX installed for building R and checking packages.
-    The MiKTeX distribution of LaTeX that is used on CRAN can be downloaded from <https://miktex.org>.
-    
-The latest version of `RTools` can be downloaded from <https://cran.r-project.org/bin/windows/Rtools/> and run in the Windows-style installer.
+2.  A LaTeX compilers is needed to install and building R, check packages and build  manuals. 
+    The MiKTeX distribution of LaTeX that is used on CRAN can be downloaded from <https://miktex.org>. 
+    Once installed open it via the windows start menu.
+    It might ask to check for updates and, most importantly, to make it available in the PATH; accept both. 
+
 
 ### macOS
 
@@ -109,12 +110,12 @@ For complete instructions please see the section in [R-admin](https://cran.r-pro
 3.  Create the build directory in the `BUILDDIR`:
 
         export BUILDDIR="$HOME/bin/R"
-        mkdir -p $BUILDDIR
-        cd $BUILDDIR
+        mkdir -p "$BUILDDIR"
+        cd "$BUILDDIR"
         
 4.  Configure the R installation (with `--enable-R-shlib` so that RStudio IDE can use it):
         
-        $TOP_SRCDIR/configure --enable-R-shlib
+        "$TOP_SRCDIR/configure" --enable-R-shlib
         
 4.  Build R :
 
@@ -136,10 +137,10 @@ For complete instructions please see the section in [R-admin](https://cran.r-pro
 
 If we don't want to build R in a different directory than the source code we can simply use:
 
-    cd $TOP_SRCDIR 
+    cd "$TOP_SRCDIR"
     svn update
     tools/rsync-recommended
-    $TOP_SRCDIR/configure  --enable-R-shlib
+    "$TOP_SRCDIR/configure"  --enable-R-shlib
     make 
     make check
 
@@ -150,7 +151,7 @@ Once you successfully build R from source you can modify R source code to fix an
 To use the r-devel version in RStudio to you can do the following:
 
     export RSTUIDO_WHICH_R="$BUILDDIR/bin/R"
-    cd $TOP_SRCDIR
+    cd "$TOP_SRCDIR"
     rstudio
 
 
@@ -158,7 +159,7 @@ To use the r-devel version in RStudio to you can do the following:
 
 #### Binaries
 
-The latest documentation about installing R and packages from source at the current time can be find [here](https://cran.r-project.org/bin/windows/base/howto-R-4.2.html).
+We can follow the [latest documentation](https://cran.r-project.org/bin/windows/base/howto-R-4.2.html) about installing R and packages from source:
 
 1.  The binary builds of R for Windows can be downloaded and installed from [here](https://cran.r-project.org/bin/windows/base/).
     Along with the link to the latest stable release, this page also contains links to the binary builds of `r-patched` and `r-devel`.
@@ -169,7 +170,7 @@ The latest documentation about installing R and packages from source at the curr
     You will be prompted to select components at this stage: `User installation`, `64-bit User installation`, or `Custom installation`.
     The default option may be chosen for the questions from this step onwards to complete the installation.
     
-You can also use the [binaries for `r-devel` made available](https://cran.r-project.org/bin/windows/base/rdevel.html) which are not so up to date. 
+Daily binaries for `r-devel` are made available for [download and installation](https://cran.r-project.org/bin/windows/base/rdevel.html). 
 
 #### From source
 
@@ -182,11 +183,13 @@ Either TortoiseSVN (<https://tortoisesvn.net/>, command line tool, and Windows E
       pacman -Syuu
       pacman -Sy wget subversion
       
-2. Download the latest tcl/tk
+2. Download the latest tcl/tk and unzip it in `$TOP_SRCDIR`:
 
+      cd "$TOP_SRCDIR"
       wget -np -nd -r -l1 -A 'tcltk-*.zip' https://cran.r-project.org/bin/windows/Rtools/rtools42/files/
+      unzip "tcltk-*.zip"
       
-3. Set environment variables for POSIX, MiKTeX, tar (and one tar option):
+3. Set environment variables for gcc, POSIX, MiKTeX, tar and one tar option:
 
         export PATH=/x86_64-w64-mingw32.static.posix/bin:$PATH
         export PATH=/c/Program\ Files/MiKTeX/miktex/bin/x64:$PATH
@@ -198,24 +201,20 @@ Either TortoiseSVN (<https://tortoisesvn.net/>, command line tool, and Windows E
         which make gcc pdflatex tar
         
     If there is any error you'll need to find where the program is installed and add the corresponding path.
+    
 1.  Download the latest recommended packages[^02-getting_started-2]:
 
-        $TOP_SRCDIR/tools/rsync-recommended
-
-3.  Create the build directory in the `BUILDDIR`:
-
-        export BUILDDIR="$HOME/bin/R"
-        mkdir -p $BUILDDIR
-        cd $BUILDDIR
+         cd "$TOP_SRCDIR/src/gnuwin32/"
+        "$TOP_SRCDIR/tools/rsync-recommended"
         
-4.  Configure the R installation (with `--enable-R-shlib` so that RStudio IDE can use it):
-        
-        $TOP_SRCDIR/configure --enable-R-shlib
-        
-4.  Build R :
+    This is equivalent of using `make rsync-recommended`.
 
-        make 
-
+3.  Build R and the recommended files:
+       
+        make all recommended
+        
+    The recently compiled version of R will be at `$TOP_SRCDIR/bin/`.
+    In RStudio you can select that folder and restart it to use the r-devel version.
 
 5.  Check that R works as expected:
 
