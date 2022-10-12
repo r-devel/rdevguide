@@ -18,10 +18,10 @@ new/updated translations.
 ## How translations work
 
 Each of the default packages distributed with R (i.e., those found in `./src/library` such as `base`, `utils`,
-and `stats`) contains a `po` directory that is the central location for cataloguing/translating each package's
+and `stats` and which have priority base) contains a `po` directory that is the central location for cataloguing/translating each package's
 messages.
 
-### .pot files
+### `.pot` files
 
 The `.pot` file is a snapshot of the messages available in a given **domain**. A domain in R typically identifies
 a source package and a source language (either R or C/C++). For example, the file `R-stats.pot`
@@ -30,26 +30,25 @@ a source package and a source language (either R or C/C++). For example, the fil
 
 There are two exceptions to the basic pattern described above. The first is the domain for messages produced by
 the C code which is the fundamental backing of R itself (especially, but not exclusively, the C code under
-./src/main). The associated .pot file is R.pot and it is found in `./src/library/base/po`. R-base.pot is a
-normal .pot file because base has a normal `R` directory.
+./src/main). The associated `.pot` file is `R.pot` and it is found in `./src/library/base/po`. `R-base.pot` is a
+normal `.pot` file because base has a normal `R` directory.
 
 The second is the domain for the Windows R GUI, i.e., the text in the menus and elsewhere in the R GUI program
 available for running R on Windows. These messages are stored in the `RGui.pot` domain, also in the `po`
 directory for `base`, and are most commonly derived from C code found in `./src/gnuwin32`. One reason to keep
 this domain separate is that it is only relevant to one platform (Windows). In particular, Windows has historically
-different character encodings, so that it made more sense for Windows developers to produce translations
-for Windows, since it is non-trivial for non-Windows users to test their translations for the Windows GUI.
+different character encodings, so that it made more sense for Windows developers to produce translations specifically for Windows, since it is non-trivial for non-Windows users to test their translations for the Windows GUI.
 
-#### Generating .pot files
+#### Generating `.pot` files
 
-For outside contributors, there's no need to update .pot files -- translators will typically take the R .pot files
-as given and generate .po files. These will be sent along to a language-specific translation maintainer, who then
+For outside contributors, there's no need to update .pot files -- translators will typically take the R `.pot` files
+as given and generate `.po` files. These will be sent along to a language-specific translation maintainer, who then
 compiles them to send to the R Core developer responsible for translations, who finally applies them as a patch.
 
 To emphasize, this section is almost always not needed for contributing translations -- it is here for
 completeness and edification.
 
-### .po files
+### `.po` files
 
 .po files are the most important artifacts for translators. They provide the (human-readable!) mapping between
 the messages as they appear in the source code and how the messages will appear to users in translated locales.
@@ -65,10 +64,10 @@ msgid "'to' must be a \"POSIXt\" object"
 msgstr "'to' muss ein \"POSIXt\" Objekt sein"
 ```
 
-See this in context in the [`R-de.po` source file](https://github.com/r-devel/r-svn/blob/c715d61cb74b3fee2d035faed9b258e86e420b75/src/library/base/po/R-de.po#L537-L538).
+See this in context in the [`R-de.po` source file](https://svn.r-project.org/R/trunk/src/library/base/po/R-de.po).
 
 The same message can also be found in
-[`R-it.po`](https://github.com/r-devel/r-svn/blob/c715d61cb74b3fee2d035faed9b258e86e420b75/src/library/base/po/R-it.po#L532-L533)
+[`R-it.po`](https://svn.r-project.org/R/trunk/src/library/base/po/R-it.po)
 giving the translation to Italian:
 
 ```
@@ -86,7 +85,7 @@ For example, English typically adds `s` to any quantity of items besides 1 (1 do
 Chinese typically does not alter the word itself in similar situations (一只狗, 两只狗, 一百只狗, 零只狗); Arabic has _six_
 different ways to pluralize a quantity.
 
-In .po files, this shows up in the form of `msgid_plural` entries, followed by several ordered `msgstr` entries. Here's an example from
+In `.po` files, this shows up in the form of `msgid_plural` entries, followed by several ordered `msgstr` entries. Here's an example from
 [`R-de.po`](https://github.com/r-devel/r-svn/blob/c715d61cb74b3fee2d035faed9b258e86e420b75/src/library/base/po/R-de.po#L2015-L2018):
 
 ```
@@ -113,7 +112,7 @@ This corresponds to the 3 different ways to pluralize words in Polish.
 
 What do `0`, `1`, and `2` correspond to, exactly? Ideally, this will be clear to native speakers of the language, but for
 clarity, it is the solution to a small arithmetic problem that can be found in the language's metadata entry. Look for the
-`Plural-Forms` entry in the metadata at the top of the .po file;
+`Plural-Forms` entry in the metadata at the top of the `.po` file;
 [here it is for Lithuanian](https://github.com/r-devel/r-svn/blob/c715d61cb74b3fee2d035faed9b258e86e420b75/src/library/base/po/R-lt.po#L18-L19):
 
 ```
@@ -139,9 +138,9 @@ Parsing, we get the following associations:
 <!-- TODO(michaelchirico): sprintf templates (`%s`) and redirections (`%1$s`) -->
 <!-- TODO(michaelchirico): fuzzy translations -->
 
-### .mo files
+### `.mo` files
 
-.po files are plain text, but while helpful for human readers, this is inefficient for consumption by computers.
+`.po` files are plain text, but while helpful for human readers, this is inefficient for consumption by computers.
 The .mo format is a "compiled" version of the .po file optimized for retrieving messages when R is running.
 
 In R-devel, the conversion from .po to .mo is done by R Core -- you don't need to compile these files yourself.
