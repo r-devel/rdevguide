@@ -33,8 +33,10 @@ To install from the source code you will need the source code and the dependenci
 
 Retrieve R source code via into `TOP_SRCDIR`, note that we retrieve the r-devel source code:
 
-      export TOP_SRCDIR="$HOME/Downloads/R"
-      svn checkout https://svn.r-project.org/R/trunk/ "$TOP_SRCDIR"
+```sh
+export TOP_SRCDIR="$HOME/Downloads/R"
+svn checkout https://svn.r-project.org/R/trunk/ "$TOP_SRCDIR"
+```
 
 If you need to install svn you can use your distribution's package manager to install it.
 
@@ -42,45 +44,47 @@ If you need to install svn you can use your distribution's package manager to in
 
 In Ubuntu you can use :
 
-      sudo apt-get install -y \
-          subversion \
-          autoconf \
-          automake \
-          autopoint \
-          bash \
-          bison \
-          bzip2 \
-          flex \
-          g++ \
-          g++-multilib \
-          gettext \
-          git \
-          gperf \
-          intltool \
-          libc6-dev-i386 \
-          libgdk-pixbuf2.0-dev \
-          libltdl-dev \
-          libssl-dev \
-          libtool-bin \
-          libxml-parser-perl \
-          lzip \
-          make \
-          openssl \
-          p7zip-full \
-          patch \
-          perl \
-          python3 \
-          python3-mako \
-          python3-setuptools \
-          python \
-          ruby \
-          sed \
-          unzip \
-          wget \
-          xz-utils \
-          texinfo \
-          sqlite3 \
-          zstd
+```sh
+sudo apt-get install -y \
+      subversion \
+      autoconf \
+      automake \
+      autopoint \
+      bash \
+      bison \
+      bzip2 \
+      flex \
+      g++ \
+      g++-multilib \
+      gettext \
+      git \
+      gperf \
+      intltool \
+      libc6-dev-i386 \
+      libgdk-pixbuf2.0-dev \
+      libltdl-dev \
+      libssl-dev \
+      libtool-bin \
+      libxml-parser-perl \
+      lzip \
+      make \
+      openssl \
+      p7zip-full \
+      patch \
+      perl \
+      python3 \
+      python3-mako \
+      python3-setuptools \
+      python \
+      ruby \
+      sed \
+      unzip \
+      wget \
+      xz-utils \
+      texinfo \
+      sqlite3 \
+      zstd
+```
 
 ### Windows
 
@@ -105,31 +109,43 @@ For complete instructions please see the section in [R-admin](https://cran.r-pro
 
 1.  Download the latest recommended packages[^02-getting_started-2]:
 
-        $TOP_SRCDIR/tools/rsync-recommended
+    ```sh
+    "$TOP_SRCDIR/tools/rsync-recommended"
+    ```
 
 3.  Create the build directory in the `BUILDDIR`:
 
-        export BUILDDIR="$HOME/bin/R"
-        mkdir -p "$BUILDDIR"
-        cd "$BUILDDIR"
+    ```sh
+    export BUILDDIR="$HOME/bin/R"
+    mkdir -p "$BUILDDIR"
+    cd "$BUILDDIR"
+    ```
         
 4.  Configure the R installation (with `--enable-R-shlib` so that RStudio IDE can use it):
         
-        "$TOP_SRCDIR/configure" --enable-R-shlib
+    ```sh
+    "$TOP_SRCDIR/configure" --enable-R-shlib
+    ```
         
 4.  Build R :
 
-        make 
+    ```sh
+    make
+    ```
 
 
 5.  Check that R works as expected:
 
-        make check
+    ```sh
+    make check
+    ```
 
     There are other checks you can run:
 
-        make check-devel
-        make check-recommended
+    ```sh
+    make check-devel
+    make check-recommended
+    ```
 
 
 [^02-getting_started-2]: Recommended packages are not in the subversion repository.
@@ -137,12 +153,14 @@ For complete instructions please see the section in [R-admin](https://cran.r-pro
 
 If we don't want to build R in a different directory than the source code we can simply use:
 
-    cd "$TOP_SRCDIR"
-    svn update
-    tools/rsync-recommended
-    "$TOP_SRCDIR/configure"  --enable-R-shlib
-    make 
-    make check
+```sh
+cd "$TOP_SRCDIR"
+svn update
+tools/rsync-recommended
+"$TOP_SRCDIR/configure"  --enable-R-shlib
+make 
+make check
+```
 
 Once you successfully build R from source you can modify R source code to fix an issue: Prepare a patch (See [this guide](https://www.r-project.org/bugs.html#how-to-submit-patches)) and after checking that R works as intended (`make check-devel`) submit the patch for the R core consideration.
 (See the [lifecycle of a patch](#FixBug) chapter).
@@ -150,9 +168,11 @@ Once you successfully build R from source you can modify R source code to fix an
 
 To use the r-devel version in RStudio to you can do the following:
 
-    export RSTUIDO_WHICH_R="$BUILDDIR/bin/R"
-    cd "$TOP_SRCDIR"
-    rstudio
+```sh
+export RSTUIDO_WHICH_R="$BUILDDIR/bin/R"
+cd "$TOP_SRCDIR"
+rstudio
+```
 
 
 ### Windows
@@ -180,50 +200,66 @@ Either TortoiseSVN (<https://tortoisesvn.net/>, command line tool, and Windows E
 
 1.  Open the Rtools42 terminal, and update and get the tools:
 
-      pacman -Syuu
-      pacman -Sy wget subversion
-      
+    ```sh
+    pacman -Syuu
+    pacman -Sy wget subversion
+    ```
+
 2. Download the latest tcl/tk and unzip it in `$TOP_SRCDIR`:
 
-      cd "$TOP_SRCDIR"
-      wget -np -nd -r -l1 -A 'tcltk-*.zip' https://cran.r-project.org/bin/windows/Rtools/rtools42/files/
-      unzip "tcltk-*.zip"
-      
+    ```sh
+    cd "$TOP_SRCDIR"
+    wget -np -nd -r -l1 -A 'tcltk-*.zip' https://cran.r-project.org/bin/windows/Rtools/rtools42/files/
+    unzip "tcltk-*.zip"
+    ```
+
 3. Set environment variables for gcc, POSIX, MiKTeX, tar and one tar option:
 
-        export PATH=/x86_64-w64-mingw32.static.posix/bin:$PATH
-        export PATH=/c/Program\ Files/MiKTeX/miktex/bin/x64:$PATH
-        export TAR="/usr/bin/tar"
-        export TAR_OPTIONS="--force-local"
+    ```sh
+    export PATH=/x86_64-w64-mingw32.static.posix/bin:$PATH
+    export PATH=/c/Program\ Files/MiKTeX/miktex/bin/x64:$PATH
+    export TAR="/usr/bin/tar"
+    export TAR_OPTIONS="--force-local"
+    ```
 
 4. Check that all the programs can be found:
 
-        which make gcc pdflatex tar
-        
+    ```sh
+    which make gcc pdflatex tar
+    ```
+
     If there is any error you'll need to find where the program is installed and add the corresponding path.
     
-1.  Download the latest recommended packages[^02-getting_started-2]:
+5.  Download the latest recommended packages[^02-getting_started-2]:
 
-         cd "$TOP_SRCDIR/src/gnuwin32/"
-        "$TOP_SRCDIR/tools/rsync-recommended"
-        
+    ```sh
+    cd "$TOP_SRCDIR/src/gnuwin32/"
+    "$TOP_SRCDIR/tools/rsync-recommended"
+    ```
+
     This is equivalent of using `make rsync-recommended`.
 
-3.  Build R and the recommended files:
-       
-        make all recommended
-        
+6.  Build R and the recommended files:
+
+    ```sh
+    make all recommended
+    ```
+
     The recently compiled version of R will be at `$TOP_SRCDIR/bin/`.
     In RStudio you can select that folder and restart it to use the r-devel version.
 
-5.  Check that R works as expected:
+7.  Check that R works as expected:
 
-        make check
+    ```sh
+    make check
+    ```
 
     There are other checks you can run:
 
-        make check-devel
-        make check-recommended
+    ```sh
+    make check-devel
+    make check-recommended
+    ```
 
 
 ### macOS
