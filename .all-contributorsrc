@@ -183,6 +183,17 @@
       "contributions": [
         "review"
       ]
+    },
+    {
+      "login": "nbenn",
+      "name": "nbenn",
+      "avatar_url": "https://avatars.githubusercontent.com/u/3158446?v=4",
+      "profile": "https://github.com/nbenn",
+      "contributions": [
+        "review",
+        "research",
+        "question"
+      ]
     }
   ],
   "contributorsPerLine": 7,
