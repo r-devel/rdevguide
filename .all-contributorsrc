@@ -119,7 +119,10 @@
       "profile": "https://github.com/MichaelChirico",
       "contributions": [
         "review",
-        "question"
+        "question",
+        "content",
+        "doc",
+        "research"
       ]
     },
     {
@@ -185,5 +188,6 @@
   "projectOwner": "r-devel",
   "repoType": "github",
   "repoHost": "https://github.com",
-  "skipCi": true
+  "skipCi": true,
+  "commitConvention": "angular"
 }
