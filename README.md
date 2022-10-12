@@ -2,7 +2,7 @@
 
 # A Guide to Contributing to R Core
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-18-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-19-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 This guide is a work in progress, inspired by http://devguide.python.org/. It is currently deployed at https://forwards.github.io/rdevguide/.
@@ -83,6 +83,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center"><a href="https://github.com/lionel-"><img src="https://avatars.githubusercontent.com/u/4465050?v=4?s=100" width="100px;" alt="Lionel Henry"/><br /><sub><b>Lionel Henry</b></sub></a><br /><a href="#question-lionel-" title="Answering Questions">💬</a></td>
       <td align="center"><a href="https://github.com/HayesJohnD"><img src="https://avatars.githubusercontent.com/u/66183716?v=4?s=100" width="100px;" alt="John Hayes"/><br /><sub><b>John Hayes</b></sub></a><br /><a href="https://github.com/r-devel/rdevguide/pulls?q=is%3Apr+reviewed-by%3AHayesJohnD" title="Reviewed Pull Requests">👀</a></td>
       <td align="center"><a href="https://github.com/nbenn"><img src="https://avatars.githubusercontent.com/u/3158446?v=4?s=100" width="100px;" alt="nbenn"/><br /><sub><b>nbenn</b></sub></a><br /><a href="https://github.com/r-devel/rdevguide/pulls?q=is%3Apr+reviewed-by%3Anbenn" title="Reviewed Pull Requests">👀</a> <a href="#research-nbenn" title="Research">🔬</a> <a href="#question-nbenn" title="Answering Questions">💬</a></td>
+      <td align="center"><a href="https://github.com/benubah"><img src="https://avatars.githubusercontent.com/u/11357251?v=4?s=100" width="100px;" alt="Ben"/><br /><sub><b>Ben</b></sub></a><br /><a href="#content-benubah" title="Content">🖋</a> <a href="https://github.com/r-devel/rdevguide/pulls?q=is%3Apr+reviewed-by%3Abenubah" title="Reviewed Pull Requests">👀</a> <a href="#research-benubah" title="Research">🔬</a> <a href="#question-benubah" title="Answering Questions">💬</a></td>
     </tr>
   </tbody>
 </table>

@@ -194,6 +194,18 @@
         "research",
         "question"
       ]
+    },
+    {
+      "login": "benubah",
+      "name": "Ben",
+      "avatar_url": "https://avatars.githubusercontent.com/u/11357251?v=4",
+      "profile": "https://github.com/benubah",
+      "contributions": [
+        "content",
+        "review",
+        "research",
+        "question"
+      ]
     }
   ],
   "contributorsPerLine": 7,
