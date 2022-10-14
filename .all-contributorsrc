@@ -36,7 +36,10 @@
         "question",
         "eventOrganizing",
         "talk",
-        "video"
+        "video",
+        "review",
+        "example",
+        "research"
       ]
     },
     {
