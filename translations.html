@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 6 Finding the Source | R Development Guide</title>
+  <title>Chapter 9 Translations | R Development Guide</title>
   <meta name="description" content="A guide to R development." />
   <meta name="generator" content="bookdown 0.29 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 6 Finding the Source | R Development Guide" />
+  <meta property="og:title" content="Chapter 9 Translations | R Development Guide" />
   <meta property="og:type" content="book" />
   <meta property="og:image" content="TDDO/img/Rlogo.png" />
   <meta property="og:description" content="A guide to R development." />
   <meta name="github-repo" content="forwards/rdevguide" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 6 Finding the Source | R Development Guide" />
+  <meta name="twitter:title" content="Chapter 9 Translations | R Development Guide" />
   
   <meta name="twitter:description" content="A guide to R development." />
   <meta name="twitter:image" content="TDDO/img/Rlogo.png" />
@@ -30,8 +30,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   <link rel="shortcut icon" href="img/Rlogo.svg" type="image/x-icon" />
-<link rel="prev" href="reviewing-bugs.html"/>
-<link rel="next" href="FixBug.html"/>
+<link rel="prev" href="documenting-r.html"/>
+<link rel="next" href="testing-pre-release-r-versions.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -291,65 +291,137 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="finding-the-source" class="section level1 hasAnchor" number="6">
-<h1><span class="header-section-number">Chapter 6</span> Finding the Source<a href="finding-the-source.html#finding-the-source" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p>This chapter discusses how you can have an overview of the R codebase. For instance, where to find the implementation of a base function written in R and where to find a primitive implementation written in C. You may want to find the source code of a function just out of curiosity or maybe to gain more insight into what a particular function is actually doing. Whatever be the case, reading the source code will help you to learn a lot about any function.</p>
-<div id="finding-r-source-code" class="section level2 hasAnchor" number="6.1">
-<h2><span class="header-section-number">6.1</span> Finding R source code<a href="finding-the-source.html#finding-r-source-code" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<ol style="list-style-type: decimal">
-<li>Find the R function with the code of interest. You will always be able to print the top-level function (or use <code>View(function_name)</code> in RStudio). Looking at the code for the body of this function will reveal what you need to do next:</li>
-</ol>
-<ul>
-<li><p>Can already see code of interest: stop here or skip to step 3 to find the corresponding file in the R sources.</p></li>
-<li><p>Code of interest is in nested R function: go to step 2.</p></li>
-<li><p>Top-level function is an S3 generic, identified by a call to <code>UseMethod()</code>. Use <code>methods(function_name)</code> to see available methods, then go to step 2.</p></li>
-<li><p>Code of interest is in compiled code, identified by a call to <code>.C()</code>, <code>.Call()</code>, <code>.Fortran()</code>, and <code>.External()</code>, or <code>.Internal()</code> and <code>.Primitive()</code>: go to section on compiled code.</p></li>
-</ul>
-<ol start="2" style="list-style-type: decimal">
-<li><p>Nested functions or S3 methods may not be exported by the package they are in. If this is the case, the simplest way to view the code is to use <code>getAnywhere()</code> or <code>getS3method()</code>. Now you can keep looking at nested R functions till you find the code of interest or hit a call to compiled code.</p></li>
-<li><p>Find an R function in the R sources. Two options here:</p></li>
-</ol>
-<ul>
-<li>Search on the internet: For R Core packages, search on the GitHub mirror (<a href="https://github.com/r-devel/r-svn" class="uri">https://github.com/r-devel/r-svn</a>); for recommended packages, use the CRAN mirror (<a href="https://github.com/cran" class="uri">https://github.com/cran</a>) - this will link to the source on GitHub if available, e.g. <a href="https://github.com/cran/survival" class="uri">https://github.com/cran/survival</a>. Note that GitHub search ignores wildcard characters</li>
-</ul>
-<pre><code> . , : ; / \ ` &#39; &quot; = * ! ? # $ &amp; + ^ | ~ &lt; &gt; ( ) { } [ ]</code></pre>
-<p>but this does not include <code>-</code> so you can search for a function or S3 method as follows:</p>
-<pre><code>&quot;body &lt;- function&quot; extension:R
-&quot;quantile.ecdf &lt;- function&quot; extension:R</code></pre>
-<ul>
-<li>Search in the R sources using grep: The <a href="GetStart.html#GetStart">Getting Started</a> chapter discusses how to download the R sources directly or from the svn repository. Now if the sources are in <code>~/R-devel</code>, you can search as follows:</li>
-</ul>
-<pre><code>grep -R &quot;body &lt;- function&quot; ~/R-devel/src
-grep -R &quot;quantile &lt;- function&quot; ~/R-devel/src/library</code></pre>
-<p>Note: The above procedure does not cover S4, R6 or RC generics or methods. Refer <a href="https://github.com/jennybc/access-r-source">accessing R source</a> for further details.</p>
+<div id="translations" class="section level1 hasAnchor" number="9">
+<h1><span class="header-section-number">Chapter 9</span> Translations<a href="translations.html#translations" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>This chapter covers internationalization in R, i.e., the display of messages in languages other than English. All
+output in R (such as messages emitted by <code>stop()</code>, <code>warning()</code>, or <code>message()</code>) is eligible for translation, as
+are menu labels in the GUI. Depending on the version of R that you are using, some of the languages might already
+be available while others may need work. R leverages the <a href="https://www.gnu.org/software/gettext/"><code>gettext</code></a> program
+to handle the conversion from English to arbitrary target languages.</p>
+<p>Having messages available in other languages can be an important bridge for R learners not confident in English –
+rather than learning two things at once (coding in R and processing diagnostic information in English), they can
+focus on coding while getting more natural errors/warnings in their native tongue.</p>
+<p>The <a href="https://www.gnu.org/software/gettext/manual/index.html"><code>gettext</code> manual</a> is a more canonical reference for a
+deep understanding of how <code>gettext</code> works. This chapter will just give a broad overview, with particular focus on
+how things work for R, with the goal of making it as low-friction as possible for developers and users to contribute
+new/updated translations.</p>
+<div id="how-translations-work" class="section level2 hasAnchor" number="9.1">
+<h2><span class="header-section-number">9.1</span> How translations work<a href="translations.html#how-translations-work" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Each of the default packages distributed with R (i.e., those found in <code>./src/library</code> such as <code>base</code>, <code>utils</code>,
+and <code>stats</code> and which have priority base) contains a <code>po</code> directory that is the central location for cataloguing/translating each package’s
+messages.</p>
+<div id="pot-files" class="section level3 hasAnchor" number="9.1.1">
+<h3><span class="header-section-number">9.1.1</span> <code>.pot</code> files<a href="translations.html#pot-files" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>The <code>.pot</code> file is a snapshot of the messages available in a given <strong>domain</strong>. A domain in R typically identifies
+a source package and a source language (either R or C/C++). For example, the file <code>R-stats.pot</code>
+(found in the R sources in <code>./src/library/stats/po</code>) is a catalogue of all messages produced by R code in the
+<code>base</code> package, while <code>stats.pot</code> is a catalogue of all messages produced by C code in the <code>stats</code> package.</p>
+<p>There are two exceptions to the basic pattern described above. The first is the domain for messages produced by
+the C code which is the fundamental backing of R itself (especially, but not exclusively, the C code under
+./src/main). The associated <code>.pot</code> file is <code>R.pot</code> and it is found in <code>./src/library/base/po</code>. <code>R-base.pot</code> is a
+normal <code>.pot</code> file because base has a normal <code>R</code> directory.</p>
+<p>The second is the domain for the Windows R GUI, i.e., the text in the menus and elsewhere in the R GUI program
+available for running R on Windows. These messages are stored in the <code>RGui.pot</code> domain, also in the <code>po</code>
+directory for <code>base</code>, and are most commonly derived from C code found in <code>./src/gnuwin32</code>. One reason to keep
+this domain separate is that it is only relevant to one platform (Windows). In particular, Windows has historically
+different character encodings, so that it made more sense for Windows developers to produce translations specifically for Windows, since it is non-trivial for non-Windows users to test their translations for the Windows GUI.</p>
+<div id="generating-.pot-files" class="section level4 hasAnchor" number="9.1.1.1">
+<h4><span class="header-section-number">9.1.1.1</span> Generating <code>.pot</code> files<a href="translations.html#generating-.pot-files" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>For outside contributors, there’s no need to update .pot files – translators will typically take the R <code>.pot</code> files
+as given and generate <code>.po</code> files. These will be sent along to a language-specific translation maintainer, who then
+compiles them to send to the R Core developer responsible for translations, who finally applies them as a patch.</p>
+<p>To emphasize, this section is almost always not needed for contributing translations – it is here for
+completeness and edification.</p>
 </div>
-<div id="finding-c-source-code" class="section level2 hasAnchor" number="6.2">
-<h2><span class="header-section-number">6.2</span> Finding C source code<a href="finding-the-source.html#finding-c-source-code" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<ol style="list-style-type: decimal">
-<li>If <code>.Internal()</code> or <code>.Primitive()</code>, find entry point in <code>names.c</code> as described in the Jenny Bryan’s post of <a href="https://github.com/jennybc/access-r-source">accessing R source</a>. For all other calls to compiled code, you can find the entry point from within R. For instance, the body of complete.cases() is</li>
-</ol>
-<pre><code>.External(C_compcases, ...)</code></pre>
-<p><code>C_compcases</code> inherits from class “NativeSymbolInfo” and we can extract the name of the entry point via</p>
-<pre><code>stats:::C_compcases$name</code></pre>
-<p>We know that it is in the stats package as we see that when we print complete.cases or look at the help file. This shows us that the entry point is simply “compcases” and in fact that is the general convention in R code, that you simply remove the <code>C_</code> prefix (sometimes <code>.F_</code> for Fortran code) in the name of the object passed to the first argument of the call.</p>
-<ol start="2" style="list-style-type: decimal">
-<li>Once you have the entry point, search as for R code. In the case of searching on GitHub, restrict the search to files with the relevant extension</li>
-</ol>
-<pre><code>compcases extension:c
-lowesw extension:f</code></pre>
-<p>similarly for grep</p>
-<pre><code>grep -R --include=*.c &quot;compcases&quot; ~/R-devel/src/library/</code></pre>
-<p>Note:</p>
-<ol style="list-style-type: decimal">
-<li><p>Many editors (like RStudio, ESS) support <a href="https://en.wikipedia.org/wiki/Ctags">ctags</a> for code browsing, making it easy to jump to definitions of functions. <code>R CMD rtags</code> can generate ctags for any R code (Credit: Deepayan Sarkar).</p></li>
-<li><p>A more sophisticated system is called GNU GLOBAL, which also supports
-finding all references (calls) to a function.</p></li>
-<li><p>GitHub has a code navigation feature via the library tree-sitter. Unfortunately, it does not have R support yet. An <a href="https://github.com/r-lib/tree-sitter-r">R driver for tree-sitter</a> made by Jim Hester is available.</p></li>
-</ol>
 </div>
-<div id="see-also-3" class="section level2 hasAnchor" number="6.3">
-<h2><span class="header-section-number">6.3</span> See also<a href="finding-the-source.html#see-also-3" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p><a href="https://blog.r-hub.io/2019/05/14/read-the-source/">Read the R source</a> blogpost.</p>
+<div id="po-files" class="section level3 hasAnchor" number="9.1.2">
+<h3><span class="header-section-number">9.1.2</span> <code>.po</code> files<a href="translations.html#po-files" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>.po files are the most important artifacts for translators. They provide the (human-readable!) mapping between
+the messages as they appear in the source code and how the messages will appear to users in translated locales.</p>
+<div id="singular-messages" class="section level4 hasAnchor" number="9.1.2.1">
+<h4><span class="header-section-number">9.1.2.1</span> Singular messages<a href="translations.html#singular-messages" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Most messages appear as <code>msgid</code>/<code>msgstr</code> pairs. The former gives the message as it appears in the code, while the
+latter shows how it should appear in translation. For example, here is an error in German (locale: <code>de</code>) informing
+the user that their input must be of class <code>POSIXt</code></p>
+<pre><code>msgid &quot;&#39;to&#39; must be a \&quot;POSIXt\&quot; object&quot;
+msgstr &quot;&#39;to&#39; muss ein \&quot;POSIXt\&quot; Objekt sein&quot;</code></pre>
+<p>See this in context in the <a href="https://svn.r-project.org/R/trunk/src/library/base/po/R-de.po"><code>R-de.po</code> source file</a>.</p>
+<p>The same message can also be found in
+<a href="https://svn.r-project.org/R/trunk/src/library/base/po/R-it.po"><code>R-it.po</code></a>
+giving the translation to Italian:</p>
+<pre><code>msgid &quot;&#39;to&#39; must be a \&quot;POSIXt\&quot; object&quot;
+msgstr &quot;&#39;to&#39; dev&#39;essere un oggetto \&quot;POSIXt\&quot;&quot;</code></pre>
+</div>
+<div id="plural-messages" class="section level4 hasAnchor" number="9.1.2.2">
+<h4><span class="header-section-number">9.1.2.2</span> Plural messages<a href="translations.html#plural-messages" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Some messages will have different translations depending on some input determined at run time (e.g., the <code>length()</code> of
+an input object or the <code>nrow()</code> of a <code>data.frame</code>). This presents a challenge for translation, because different languages
+have different rules for how to pluralize different ordinal
+numbers[^See the <a href="https://www.gnu.org/software/gettext/manual/html_node/Plural-forms.html">relevant section</a> of the <code>gettext</code> manual].
+For example, English typically adds <code>s</code> to any quantity of items besides 1 (1 dog, 2 dog<code>s</code>, 100 dog<code>s</code>, even 0 dog<code>s</code>).
+Chinese typically does not alter the word itself in similar situations (一只狗, 两只狗, 一百只狗, 零只狗); Arabic has <em>six</em>
+different ways to pluralize a quantity.</p>
+<p>In <code>.po</code> files, this shows up in the form of <code>msgid_plural</code> entries, followed by several ordered <code>msgstr</code> entries. Here’s an example from
+<a href="https://github.com/r-devel/r-svn/blob/c715d61cb74b3fee2d035faed9b258e86e420b75/src/library/base/po/R-de.po#L2015-L2018"><code>R-de.po</code></a>:</p>
+<pre><code>msgid &quot;Warning message:\n&quot;
+msgid_plural &quot;Warning messages:\n&quot;
+msgstr[0] &quot;Warnmeldung:\n&quot;
+msgstr[1] &quot;Warnmeldungen:\n&quot;</code></pre>
+<p>The two entries in English correspond to the singular and plural messages; the two entries in German correspond similarly, because
+pluralization rules in German are similar to those in English. The situation in Lithuanian
+(<a href="https://github.com/r-devel/r-svn/blob/c715d61cb74b3fee2d035faed9b258e86e420b75/src/library/base/po/R-lt.po#L1999-L2003"><code>R-lt.po</code></a>)
+is more divergent:</p>
+<pre><code>msgid &quot;Warning message:\n&quot;
+msgid_plural &quot;Warning messages:\n&quot;
+msgstr[0] &quot;Įspėjantis pranešimas:\n&quot;
+msgstr[1] &quot;Įspėjantys pranešimai:\n&quot;
+msgstr[2] &quot;Įspėjančių pranešimų:\n&quot;</code></pre>
+<p>This corresponds to the 3 different ways to pluralize words in Polish.</p>
+<p>What do <code>0</code>, <code>1</code>, and <code>2</code> correspond to, exactly? Ideally, this will be clear to native speakers of the language, but for
+clarity, it is the solution to a small arithmetic problem that can be found in the language’s metadata entry. Look for the
+<code>Plural-Forms</code> entry in the metadata at the top of the <code>.po</code> file;
+<a href="https://github.com/r-devel/r-svn/blob/c715d61cb74b3fee2d035faed9b258e86e420b75/src/library/base/po/R-lt.po#L18-L19">here it is for Lithuanian</a>:</p>
+<pre><code>&quot;Plural-Forms: nplurals=3; plural=(n%10==1 &amp;&amp; n%100!=11 ? 0 : n%10&gt;=2 &amp;&amp; (n&quot;
+&quot;%100&lt;10 || n%100&gt;=20) ? 1 : 2);\n&quot;</code></pre>
+<p><code>nplurals</code> tells us how many entries correspond to each <code>msgid_plural</code> for this language. <code>plural</code> tells us, for the
+quantity <code>n</code>, which entry to use. The arithmetic is C code; most important if you really want to parse this and are only
+familiar with R code is C’s <a href="https://en.wikipedia.org/wiki/%3F:">ternary operator</a>: <code>test ? valueIfTrue : valueIfFalse</code>
+is a handy way to write R’s <code>if (test) valueIfTrue else valueIfFalse</code>.</p>
+<p>Parsing, we get the following associations:</p>
+<ul>
+<li>the <code>0</code> entry corresponds to when a number equals 1 modulo 10 (i.e., 1, 11, 21, 31, …) <em>except</em> numbers equaling
+11 modulo 100 (i.e., 11, 111, 211, 311, …). Combining, that’s 1, 21, 31, …, 91, 101, 121, 131, …, 191, …</li>
+<li>the <code>1</code> entry corresponds to numbers at least 2 modulo 10 (2, 3, …, 8, 9, 12, 13, 14, …) and <em>either</em>
+below 10 modulo 100 (0, 1, …, 9, 100, 101, …, 109, …) <em>or</em> exceeding 20 modulo 100 (21, 22, …, 99). Combining,
+that’s 2, 3, …, 9, 22, 23, …, 29, 32, 33, … 39, …, 102, 103, …, 109, 122, 123, …</li>
+<li>The <code>2</code> entry corresponds to all other numbers, i.e. 0, 10, 11, 12, …, 19, 20, 30, …, 90, 100, 110, 111, 112, …</li>
+</ul>
+<!-- TODO(michaelchirico): How to discover a new `nplurals/plural`. -->
+<!-- TODO(michaelchirico): sprintf templates (`%s`) and redirections (`%1$s`) -->
+<!-- TODO(michaelchirico): fuzzy translations -->
+</div>
+</div>
+<div id="mo-files" class="section level3 hasAnchor" number="9.1.3">
+<h3><span class="header-section-number">9.1.3</span> <code>.mo</code> files<a href="translations.html#mo-files" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><code>.po</code> files are plain text, but while helpful for human readers, this is inefficient for consumption by computers.
+The .mo format is a “compiled” version of the .po file optimized for retrieving messages when R is running.</p>
+<p>In R-devel, the conversion from .po to .mo is done by R Core – you don’t need to compile these files yourself.
+They are stored in the R sources at <code>./src/library/translations/inst</code> in various language-specific subdirectories.</p>
+</div>
+</div>
+<div id="how-to-contribute-new-translations" class="section level2 hasAnchor" number="9.2">
+<h2><span class="header-section-number">9.2</span> How to contribute new translations<a href="translations.html#how-to-contribute-new-translations" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<!-- TODO(michaelchirico): Creating and editing .po files, testing the translations worked, **encoding**, translation teams, release schedule -->
+</div>
+<div id="current-status-of-translations-in-r" class="section level2 hasAnchor" number="9.3">
+<h2><span class="header-section-number">9.3</span> Current status of translations in R<a href="translations.html#current-status-of-translations-in-r" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><a href="https://contributor.r-project.org/translations/" class="uri">https://contributor.r-project.org/translations/</a></p>
+</div>
+<div id="helpful-references" class="section level2 hasAnchor" number="9.4">
+<h2><span class="header-section-number">9.4</span> Helpful references<a href="translations.html#helpful-references" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<ul>
+<li>Statistical terms glossary</li>
+</ul>
 
 </div>
 </div>
@@ -358,8 +430,8 @@ finding all references (calls) to a function.</p></li>
           </div>
         </div>
       </div>
-<a href="reviewing-bugs.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="FixBug.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="documenting-r.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="testing-pre-release-r-versions.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -390,7 +462,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/forwards/rdevguide/edit/master/05-finding_the_source.Rmd",
+"link": "https://github.com/forwards/rdevguide/edit/master/08-translations.Rmd",
 "text": "Edit"
 },
 "history": {

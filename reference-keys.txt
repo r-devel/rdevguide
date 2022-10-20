@@ -56,6 +56,17 @@ proofreading
 helping-with-the-developers-guide
 instructions-for-reporting-the-cran-policy-bugs-discussion-in-slack-random-channel
 see-also-5
+translations
+how-translations-work
+pot-files
+generating-.pot-files
+po-files
+singular-messages
+plural-messages
+mo-files
+how-to-contribute-new-translations
+current-status-of-translations-in-r
+helpful-references
 testing-pre-release-r-versions
 where-to-test
 VM
