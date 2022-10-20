@@ -34,12 +34,3 @@ Details of performing testing on various operating systems:
   
   * [Solaris](https://developer.r-project.org/Blog/public/2021/04/28/r-can-use-your-help-testing-r-before-release/index.html#on-solaris)
   
-## Writing tests for R
-
-Writing tests for R is much like writing tests for your own code. Tests need to be thorough, fast, isolated, consistently repeatable, and as simple as possible. 
-
-When you are adding tests to an existing test file, it is also recommended that you study the other tests in that file; it will teach you which precautions you have to take to make your tests robust and portable. We try to have tests both for normal behaviour and for error conditions. Tests live in the `tests` directory.
-
-## Benchmarks
-
-Benchmarking is useful to test that a change does not degrade performance.
