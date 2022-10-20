@@ -4,7 +4,7 @@ This chapter discusses about writing tests for R and extending the test suite fo
 
 ## When and why to write a test?
 
-Whenever you add new functions to R base or any of the packages distributed with R, it is beneficial to add test(s) corresponding to the new code. While doing so it is essential to check whether `make test-Specific` still works with the new code included. In particular, check whether `cd tests; make no-segfault.Rout` work on a standalone computer without the requirement of an interactive user intervention.
+Whenever you add new functionality to the core code or any of the packages distributed with R, it is beneficial to add test(s) corresponding to the new code. While doing so it is essential to check whether `make test-Specific` still works with the new code included. In particular, check whether `cd tests; make no-segfault.Rout` work on a standalone computer without the requirement of an interactive user intervention.
 
 If the new code requires GUI interaction or accesses the Internet, then it is essential to add its name to the `stop list` in `tests/no-segfault.Rin`.
 
