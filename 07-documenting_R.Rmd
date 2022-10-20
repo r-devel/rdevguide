@@ -56,7 +56,7 @@ All the above information is included in a .Rd file within a series of sections 
     * Titles of books and journals (not articles) should be enclosed in `\emph{...}`.
     * Volume numbers for journals are to be enclosed in `\bold{...}` and followed by a comma.
     * Use `--` for page ranges.
-    * For given an address for a publisher use the format `New York: Springer-Verlag`.
+    * For giving an address for a publisher use the format `New York: Springer-Verlag`.
 
 More guidelines for writing .Rd files can be found [here](https://developer.r-project.org/Rds.html).
 
@@ -68,7 +68,7 @@ The language used in the documentations should follow these basic rules:
 
 3. Short code examples can help in understanding better. Readers can often grasp a simple example more quickly than they can digest a formal description. Usually people learn faster with concrete, motivating examples that match the context of a typical use case. 
 
-4. Giving a code equivalent (or approximate equivalent) can be a useful in addition to the description provided. You should carefully weigh whether the code equivalent adds value to the document.
+4. Giving a code equivalent (or approximate equivalent) can be a useful addition to the description provided. You should carefully weigh whether the code equivalent adds value to the document.
 
 5. The tone of the documentation needs to be respectful of the reader’s background. Lay out the relevant information, show motivating use cases, provide glossary links, and do your best to connect-the-dots. The documentation is meant for newcomers, many of whom will be using it to evaluate the R language as a whole. The experience needs to be positive and not leave the reader with worries that something bad will happen if they make a mistake. 
 
@@ -94,7 +94,7 @@ If you decide to proofread, read a section of the documentation from start to fi
 
 The Developer’s Guide (what you are reading now) uses the same process as the main R documentation, except for some small differences. The source lives in a [GitHub repository](https://github.com/forwards/rdevguide) and bug reports should be submitted to the [devguide GitHub tracker](https://github.com/forwards/rdevguide/issues).
 
-Our dev guide workflow uses continuous integration and deployment so changes to the dev guide are normally published when the pull request is merged. (Link to how-to-contribute from the introduction chapter)
+Our dev guide workflow uses continuous integration and deployment so changes to the dev guide are normally published when the pull request is merged. [How to contribute to this guide from the introduction.](#how-to-contribute-to-this-guide)
 
 ## Instructions for reporting the CRAN policy bugs -- discussion in slack (random channel)
 
