@@ -68,7 +68,7 @@ The language used in the documentations should follow these basic rules:
 
 3. Short code examples can help in understanding better. Readers can often grasp a simple example more quickly than they can digest a formal description. Usually people learn faster with concrete, motivating examples that match the context of a typical use case. 
 
-4. Giving a code equivalent (or approximate equivalent) can be a useful in addition to the description provided. You should carefully weigh whether the code equivalent adds value to the document.
+4. Giving a code equivalent (or approximate equivalent) can be a useful addition to the description provided. You should carefully weigh whether the code equivalent adds value to the document.
 
 5. The tone of the documentation needs to be respectful of the reader’s background. Lay out the relevant information, show motivating use cases, and do your best to connect-the-dots. The documentation is meant for newcomers, many of whom will be using it to evaluate the R language as a whole. The experience needs to be positive and not leave the reader with worries that something bad will happen if they make a mistake. 
 
