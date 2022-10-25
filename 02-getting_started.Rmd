@@ -43,44 +43,50 @@ If you need to install svn you can use your distribution's package manager to in
 In Ubuntu you can use :
 
       sudo apt-get install -y \
-          subversion \
-          autoconf \
-          automake \
-          autopoint \
-          bash \
+          bash-completion \
           bison \
-          bzip2 \
-          flex \
-          g++ \
-          g++-multilib \
-          gettext \
-          git \
-          gperf \
-          intltool \
-          libc6-dev-i386 \
-          libgdk-pixbuf2.0-dev \
-          libltdl-dev \
-          libssl-dev \
-          libtool-bin \
-          libxml-parser-perl \
-          lzip \
-          make \
-          openssl \
-          p7zip-full \
-          patch \
-          perl \
-          python3 \
-          python3-mako \
-          python3-setuptools \
-          python \
-          ruby \
-          sed \
-          unzip \
-          wget \
-          xz-utils \
-          texinfo \
-          sqlite3 \
-          zstd
+          debhelper-compat (= 11) \
+          default-jdk \
+          g++ (>= 4:4.9.2-2) \
+          gcc (>= 4:4.9.2-2) \
+          gfortran (>= 4:4.9.2-2) \
+          groff-base \
+          libblas-dev \
+          libbz2-dev \
+          libcairo2-dev \
+          libcurl4-dev \
+          libcurl4-openssl-dev \
+          libjpeg-dev \
+          liblapack-dev \
+          liblzma-dev \
+          libncurses5-dev \
+          libpango1.0-dev \
+          libpcre2-dev \
+          libpcre3-dev \
+          libpng-dev \
+          libreadline-dev \
+          libtiff5-dev \
+          libx11-dev \
+          libxt-dev \
+          mpack \
+          tcl8.6-dev \
+          texinfo (>= 4.1-2) \
+          texlive-base \
+          texlive-extra-utils \
+          texlive-fonts-extra \
+          texlive-fonts-recommended \
+          texlive-latex-base \
+          texlive-latex-extra \
+          texlive-latex-recommended \
+          texlive-plain-generic \
+          tk8.6-dev \
+          x11proto-core-dev \
+          xauth \
+          xdg-utils \
+          xfonts-base \
+          xvfb \
+          zlib1g-dev
+
 
 ### Windows
 
