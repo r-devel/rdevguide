@@ -36,7 +36,10 @@
         "question",
         "eventOrganizing",
         "talk",
-        "video"
+        "video",
+        "review",
+        "example",
+        "research"
       ]
     },
     {
@@ -63,7 +66,12 @@
       "avatar_url": "https://avatars.githubusercontent.com/u/6818218?v=4",
       "profile": "http://llrs.dev",
       "contributions": [
-        "review"
+        "review",
+        "content",
+        "question",
+        "research",
+        "doc",
+        "example"
       ]
     },
     {
@@ -73,7 +81,9 @@
       "profile": "http://tdhock.github.io",
       "contributions": [
         "review",
-        "example"
+        "example",
+        "research",
+        "question"
       ]
     },
     {
@@ -82,7 +92,9 @@
       "avatar_url": "https://avatars.githubusercontent.com/u/3341603?v=4",
       "profile": "https://github.com/bettinagruen",
       "contributions": [
-        "review"
+        "review",
+        "research",
+        "question"
       ]
     },
     {
@@ -119,7 +131,10 @@
       "profile": "https://github.com/MichaelChirico",
       "contributions": [
         "review",
-        "question"
+        "question",
+        "content",
+        "doc",
+        "research"
       ]
     },
     {
@@ -178,6 +193,29 @@
       "contributions": [
         "review"
       ]
+    },
+    {
+      "login": "nbenn",
+      "name": "nbenn",
+      "avatar_url": "https://avatars.githubusercontent.com/u/3158446?v=4",
+      "profile": "https://github.com/nbenn",
+      "contributions": [
+        "review",
+        "research",
+        "question"
+      ]
+    },
+    {
+      "login": "benubah",
+      "name": "Ben",
+      "avatar_url": "https://avatars.githubusercontent.com/u/11357251?v=4",
+      "profile": "https://github.com/benubah",
+      "contributions": [
+        "content",
+        "review",
+        "research",
+        "question"
+      ]
     }
   ],
   "contributorsPerLine": 7,
@@ -185,5 +223,6 @@
   "projectOwner": "r-devel",
   "repoType": "github",
   "repoHost": "https://github.com",
-  "skipCi": true
+  "skipCi": true,
+  "commitConvention": "angular"
 }
