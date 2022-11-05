@@ -31,13 +31,6 @@ If the change meets the [development guidelines](https://developer.r-project.org
 
 To install from the source code you will need the source code and the dependencies of R.
 
-Retrieve R source code via into `TOP_SRCDIR`, note that we retrieve the r-devel source code:
-
-```sh
-export TOP_SRCDIR="$HOME/Downloads/R"
-svn checkout https://svn.r-project.org/R/trunk/ "$TOP_SRCDIR"
-```
-
 If you need to install svn you can use your distribution's package manager to install it.
 
 ### Ubuntu
@@ -92,26 +85,19 @@ sudo apt-get install -y \
       zlib1g-dev 
 ```
 
-### Windows
-
-1.  [Rtools](https://cran.r-project.org/bin/windows/Rtools/) is the toolchain bundle that you can use to build R base and R packages containing compiled code, on Windows. 
-  The latest [version Rtools42](https://cran.r-project.org/bin/windows/Rtools/rtools42/rtools.html) can be installed using the [Rtools installer rtools42-XXXX-XXX.exe ](https://cran.r-project.org/bin/windows/Rtools/rtools42/files/).
-
-2.  A LaTeX compilers is needed to install and building R, check packages and build  manuals. 
-    The MiKTeX distribution of LaTeX that is used on CRAN can be downloaded from <https://miktex.org>. 
-    Once installed open it via the windows start menu.
-    It might ask to check for updates and, most importantly, to make it available in the PATH; accept both. 
-
-
-### macOS
-
-
 ## Building R 
 
 ### Linux
 
 Here are the basic steps intended as a checklist.
 For complete instructions please see the section in [R-admin](https://cran.r-project.org/doc/manuals/r-devel/R-admin.html#Installing-R-under-Unix_002dalikes).
+
+0. Retrieve R source code via into `TOP_SRCDIR`, note that we retrieve the `r-devel` source code:
+
+    ```sh
+    export TOP_SRCDIR="$HOME/Downloads/R"
+    svn checkout https://svn.r-project.org/R/trunk/ "$TOP_SRCDIR"
+    ```
 
 1.  Download the latest recommended packages[^02-getting_started-2]:
 
@@ -172,7 +158,7 @@ Once you successfully build R from source you can modify R source code to fix an
 (See the [lifecycle of a patch](#FixBug) chapter).
 
 
-To use the r-devel version in RStudio to you can do the following:
+To use the `r-devel` version in RStudio to you can do the following:
 
 ```sh
 export RSTUIDO_WHICH_R="$BUILDDIR/bin/R"
@@ -185,14 +171,12 @@ rstudio
 
 #### Binaries
 
-We can follow the [latest documentation](https://cran.r-project.org/bin/windows/base/howto-R-4.2.html) about installing R and packages from source:
+The binary builds of R for Windows can be downloaded and installed from [here](https://cran.r-project.org/bin/windows/base/).
+Along with the link to the latest stable release, this page also contains links to the binary builds of `r-patched` and `r-devel`.
 
-1.  The binary builds of R for Windows can be downloaded and installed from [here](https://cran.r-project.org/bin/windows/base/).
-    Along with the link to the latest stable release, this page also contains links to the binary builds of `r-patched` and `r-devel`.
+1.  Click on the download links to download an executable installer.
 
-2.  Click on the download links to download an executable installer.
-
-3.  Select the language while installing, read the GNU general public license information, and select the destination location to start the installation.
+2.  Select the language while installing, read the GNU general public license information, and select the destination location to start the installation.
     You will be prompted to select components at this stage: `User installation`, `64-bit User installation`, or `Custom installation`.
     The default option may be chosen for the questions from this step onwards to complete the installation.
     
@@ -200,9 +184,15 @@ Daily binaries for `r-devel` are made available for [download and installation](
 
 #### From source
 
-You can download the R sources on Windows <https://svn.r-project.org/R/>. 
-But if you want to keep up with changes it is recommended to checkout the sources from svn, it is probably best to install an SVN client.
-Either TortoiseSVN (<https://tortoisesvn.net/>, command line tool, and Windows Explorer integration) or SlikSVN (<https://sliksvn.com/download/>, just the command line tool) is recommended.
+Before installing R from source it some programs are needed, as per the [latest documentation](https://cran.r-project.org/bin/windows/base/howto-R-4.2.html):
+
+1.  [Rtools](https://cran.r-project.org/bin/windows/Rtools/) is the toolchain bundle that you can use to build R base and R packages containing compiled code, on Windows. 
+  The latest [version Rtools42](https://cran.r-project.org/bin/windows/Rtools/rtools42/rtools.html) can be installed using the [Rtools installer rtools42-XXXX-XXX.exe ](https://cran.r-project.org/bin/windows/Rtools/rtools42/files/).
+
+2.  A LaTeX compilers is needed to install and building R, check packages and build  manuals. 
+    The MiKTeX distribution of LaTeX that is used on CRAN can be downloaded from <https://miktex.org>. 
+    Once installed open it via the windows start menu.
+    It might ask to check for updates and, most importantly, to make it available in the PATH; accept both.
 
 1.  Open the Rtools42 terminal, and update and get the tools:
 
@@ -210,6 +200,22 @@ Either TortoiseSVN (<https://tortoisesvn.net/>, command line tool, and Windows E
     pacman -Syuu
     pacman -Sy wget subversion
     ```
+    
+3. Retrieve the latest source code via subversion:
+
+    ```sh
+    export TOP_SRCDIR="$HOME/Downloads/R"
+    svn checkout https://svn.r-project.org/R/trunk/ "$TOP_SRCDIR"
+    ```
+
+    If you already have it you should update it with :
+
+    ```sh
+    cd $TOP_SRCDIR
+    svn update
+    ```
+
+    You can also use a SVN client such as TortoiseSVN (<https://tortoisesvn.net/>, command line tool, and Windows Explorer integration) or SlikSVN (<https://sliksvn.com/download/>, just the command line tool) so that it can be also found by other tools.
 
 2. Download the latest tcl/tk and unzip it in `$TOP_SRCDIR`:
 
@@ -219,15 +225,21 @@ Either TortoiseSVN (<https://tortoisesvn.net/>, command line tool, and Windows E
     unzip "tcltk-*.zip"
     ```
 
-3. Set environment variables for gcc, POSIX, MiKTeX, tar and one tar option:
+3. Add gcc, MiKTeX and tar to the path and set one tar option:
 
     ```sh
-    export PATH=/x86_64-w64-mingw32.static.posix/bin:$PATH
-    export PATH=/c/Program\ Files/MiKTeX/miktex/bin/x64:$PATH
+    export PATH="/x86_64-w64-mingw32.static.posix/bin:$PATH"
+    export PATH="/c/Program\ Files/MiKTeX/miktex/bin/x64:$PATH"
     export TAR="/usr/bin/tar"
     export TAR_OPTIONS="--force-local"
     ```
 
+    If MiKTeX was installed just for your user you might need to run:
+
+    ```sh
+    export PATH="/c/Users/$USER/AppData/Local/Programs/MiKTeX/miktex/bin/x64:$PATH"
+    ```
+   
 4. Check that all the programs can be found:
 
     ```sh
@@ -243,8 +255,6 @@ Either TortoiseSVN (<https://tortoisesvn.net/>, command line tool, and Windows E
     "$TOP_SRCDIR/tools/rsync-recommended"
     ```
 
-    This is equivalent of using `make rsync-recommended`.
-
 6.  Build R and the recommended files:
 
     ```sh
@@ -252,7 +262,7 @@ Either TortoiseSVN (<https://tortoisesvn.net/>, command line tool, and Windows E
     ```
 
     The recently compiled version of R will be at `$TOP_SRCDIR/bin/`.
-    In RStudio you can select that folder and restart it to use the r-devel version.
+    In RStudio you can select that folder and restart it to use the `r-devel` version.
 
 7.  Check that R works as expected:
 
