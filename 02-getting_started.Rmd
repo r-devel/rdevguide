@@ -120,7 +120,7 @@ sudo dnf install -y \
     'tex(inconsolata.sty)' \
     'tex(latex)' \
     'tex(upquote.sty)' \
-    'texinfo-tex' \
+    texinfo-tex \
     tk-devel \
     tre-devel \
     valgrind-devel \
