@@ -91,7 +91,7 @@ sudo apt-get install -y \
 In Fedora you can use:
 
 ```sh
-sudo dnf install \
+sudo dnf install -y \
     autoconf \
     automake \
     bzip2-devel \
@@ -99,7 +99,7 @@ sudo dnf install \
     flexiblas-devel \
     gcc-c++ \
     gcc-gfortran \
-    java-headless \
+    java-devel \
     less \
     libICE-devel \
     libSM-devel \
@@ -117,10 +117,10 @@ sudo dnf install \
     pcre2-devel \
     readline-devel \
     tcl-devel \
-    tex(inconsolata.sty) \
-    tex(latex) \
-    tex(upquote.sty) \
-    texinfo-tex \
+    'tex(inconsolata.sty)' \
+    'tex(latex)' \
+    'tex(upquote.sty)' \
+    'texinfo-tex' \
     tk-devel \
     tre-devel \
     valgrind-devel \
