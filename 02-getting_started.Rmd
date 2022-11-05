@@ -85,6 +85,49 @@ sudo apt-get install -y \
       zlib1g-dev 
 ```
 
+### Fedora
+
+<!-- # Command to obtain it: dnf rq -q --repo=fedora-source --requires R -->
+In Fedora you can use:
+
+```sh
+sudo dnf install \
+    autoconf \
+    automake \
+    bzip2-devel \
+    cairo-devel \
+    flexiblas-devel \
+    gcc-c++ \
+    gcc-gfortran \
+    java-headless \
+    less \
+    libICE-devel \
+    libSM-devel \
+    libX11-devel \
+    libXmu-devel \
+    libXt-devel \
+    libcurl-devel \
+    libicu-devel \
+    libjpeg-devel \
+    libpng-devel \
+    libtiff-devel \
+    libtool \
+    ncurses-devel \
+    pango-devel \
+    pcre2-devel \
+    readline-devel \
+    tcl-devel \
+    tex(inconsolata.sty) \
+    tex(latex) \
+    tex(upquote.sty) \
+    texinfo-tex \
+    tk-devel \
+    tre-devel \
+    valgrind-devel \
+    xz-devel \
+    zlib-devel
+```
+
 ## Building R 
 
 ### Linux
