@@ -184,17 +184,17 @@ Daily binaries for `r-devel` are made available for [download and installation](
 
 #### From source
 
-Before installing R from source it some programs are needed, as per the [latest documentation](https://cran.r-project.org/bin/windows/base/howto-R-4.2.html):
+Before installing R from source, some additional programs are needed, as per the [latest documentation](https://cran.r-project.org/bin/windows/base/howto-R-4.2.html):
 
-1.  [Rtools](https://cran.r-project.org/bin/windows/Rtools/) is the toolchain bundle that you can use to build R base and R packages containing compiled code, on Windows. 
-  The latest [version Rtools42](https://cran.r-project.org/bin/windows/Rtools/rtools42/rtools.html) can be installed using the [Rtools installer rtools42-XXXX-XXX.exe ](https://cran.r-project.org/bin/windows/Rtools/rtools42/files/).
+1.  [Rtools](https://cran.r-project.org/bin/windows/Rtools/) is the suggested toolchain bundle for building R base and R packages containing compiled code on Windows. 
+  The latest [version of Rtools42](https://cran.r-project.org/bin/windows/Rtools/rtools42/rtools.html) can be installed using the [Rtools installer rtools42-XXXX-XXX.exe ](https://cran.r-project.org/bin/windows/Rtools/rtools42/files/).
 
-2.  A LaTeX compilers is needed to install and building R, check packages and build  manuals. 
-    The MiKTeX distribution of LaTeX that is used on CRAN can be downloaded from <https://miktex.org>. 
-    Once installed open it via the windows start menu.
-    It might ask to check for updates and, most importantly, to make it available in the PATH; accept both.
+2.  A LaTeX compiler is needed to install and build R, check packages and build  manuals. 
+    On CRAN, MiKTeX is used, which can be downloaded from <https://miktex.org>. 
+    Once installed open MiKTeX via the Windows start menu.
+    It might ask to check for updates and more importantly, to make it available in PATH. You can accept both.
 
-1.  Open the Rtools42 terminal, and update and get the tools:
+1.  Open the Rtools42 terminal to update and install subversion:
 
     ```sh
     pacman -Syuu
@@ -208,7 +208,7 @@ Before installing R from source it some programs are needed, as per the [latest 
     svn checkout https://svn.r-project.org/R/trunk/ "$TOP_SRCDIR"
     ```
 
-    If you already have it you should update it with :
+    If you already have the repository available you can update as:
 
     ```sh
     cd $TOP_SRCDIR
@@ -225,7 +225,7 @@ Before installing R from source it some programs are needed, as per the [latest 
     unzip "tcltk-*.zip"
     ```
 
-3. Add gcc, MiKTeX and tar to the path and set one tar option:
+3. Add gcc, MiKTeX and tar to the PATH and set one tar option:
 
     ```sh
     export PATH="/x86_64-w64-mingw32.static.posix/bin:$PATH"
