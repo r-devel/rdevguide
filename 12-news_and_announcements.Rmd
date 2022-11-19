@@ -1,4 +1,4 @@
-# News and Announcements
+# News and Announcements {#News}
 
 Here are some resources that can be useful to keep up with the developments in R:
 

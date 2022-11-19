@@ -1,8 +1,8 @@
-# Documenting R
+# Documenting R {#Doc}
 
 The R language has a substantial body of documentation, much of which is contributed by various authors. The help files for R functions are written in 'R documentation' (.Rd) file format. It is a simple markup language with close resemblance to LaTeX. The .Rd file format can be further processed into a variety of formats, including LaTeX, HTML, and plain text.
 
-This chapter describes the styleguide for R's documentation, how to document for R, report and review bugs (and suggest corrections for them) in the existing documentation. If you are interested in contributing to R's documentation, your contributions are more than welcome. 
+This chapter describes the styleguide for R's documentation, how to document for R, report and review bugs (and/or suggest corrections for them) in the existing documentation. If you are interested in contributing to R's documentation, your contributions are more than welcome. 
 
 ## Introduction
 
