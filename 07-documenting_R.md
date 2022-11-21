@@ -1,8 +1,8 @@
-# Documenting R
+# Documenting R {#Doc}
 
 The R language has a substantial body of documentation, much of which is contributed by various authors. The help files for R functions are written in 'R documentation' (.Rd) file format. It is a simple markup language with close resemblance to LaTeX. The .Rd file format can be further processed into a variety of formats, including LaTeX, HTML, and plain text.
 
-This chapter describes the styleguide for R's documentation, how to document for R, report and review bugs (and suggest corrections for them) in the existing documentation. If you are interested in contributing to R's documentation, your contributions are more than welcome. 
+This chapter describes the styleguide for R's documentation, how to document for R, report and review bugs (and/or suggest corrections for them) in the existing documentation. If you are interested in contributing to R's documentation, your contributions are more than welcome. 
 
 ## Introduction
 
@@ -92,7 +92,7 @@ If you decide to proofread, read a section of the documentation from start to fi
 
 ## Helping with the Developer's Guide
 
-The Developer’s Guide (what you are reading now) uses the same process as the main R documentation, except for some small differences. The source lives in a [GitHub repository](https://github.com/forwards/rdevguide) and bug reports should be submitted to the [devguide GitHub tracker](https://github.com/forwards/rdevguide/issues).
+The Developer’s Guide (what you are reading now) uses the same process as the main R documentation, except for some small differences. The source lives in a [GitHub repository](https://github.com/r-devel/rdevguide/) and bug reports should be submitted to the [devguide GitHub tracker](https://github.com/r-devel/rdevguide/issues).
 
 Our dev guide workflow uses continuous integration and deployment so changes to the dev guide are normally published when the pull request is merged. [How to contribute to this guide from the introduction.](#how-to-contribute-to-this-guide)
 

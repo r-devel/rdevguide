@@ -1,4 +1,4 @@
-# Bug Tracking
+# Bug Tracking {#BugTrack}
 
 ## What is a bug in R?
 

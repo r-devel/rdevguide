@@ -1,4 +1,4 @@
-# Reviewing Bugs
+# Reviewing Bugs {#ReviewBugs}
 
 ## How you can help to review bug reports?
 
