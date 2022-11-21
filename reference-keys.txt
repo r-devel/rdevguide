@@ -65,7 +65,7 @@ proofreading
 helping-with-the-developers-guide
 instructions-for-reporting-the-cran-policy-bugs-discussion-in-slack-random-channel
 see-also-5
-translations
+message-translations
 how-translations-work
 pot-files
 generating-.pot-files

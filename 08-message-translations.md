@@ -1,4 +1,4 @@
-# Translations
+# Message Translations
 
 This chapter covers internationalization in R, i.e., the display of messages in languages other than English. All
 output in R (such as messages emitted by `stop()`, `warning()`, or `message()`) is eligible for translation, as
