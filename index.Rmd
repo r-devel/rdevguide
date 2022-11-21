@@ -8,7 +8,7 @@ documentclass: book
 bibliography: [book.bib]
 biblio-style: apalike
 link-citations: yes
-github-repo: forwards/rdevguide
+github-repo: r-devel/rdevguide
 url: 'TDDO'
 cover-image: "img/Rlogo.png"
 favicon: "img/Rlogo.svg"

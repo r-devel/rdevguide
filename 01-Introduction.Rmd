@@ -83,7 +83,7 @@ This guide is built using bookdown which makes editing it easier, provided you h
 
 ![Screenshot of the toolbar in the HTML version of the guide, with the Edit button (pencil and paper icon) circled in red.](img/edit_icon.png)
 
-Use the [issue tracker](https://github.com/forwards/rdevguide/issues) to raise an issue about the guide’s content or to make a feature request.
+Use the [issue tracker](https://github.com/r-devel/rdevguide/issues) to raise an issue about the guide’s content or to make a feature request.
 
-Maintainers and contributors are requested to follow this project's [code of conduct](https://github.com/forwards/rdevguide/blob/master/CONDUCT.md).
+Maintainers and contributors are requested to follow this project's [code of conduct](https://github.com/r-devel/rdevguide/blob/main/CONDUCT.md).
 
