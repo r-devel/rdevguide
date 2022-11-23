@@ -117,7 +117,7 @@
 
 \title{R Development Guide}
 \author{R Contribution Working Group}
-\date{2022-11-21}
+\date{2022-11-23}
 
 \begin{document}
 \maketitle
@@ -127,9 +127,11 @@
 \tableofcontents
 }
 \hypertarget{acknowledgement}{%
-\chapter{Acknowledgement}\label{acknowledgement}}
+\chapter*{Acknowledgement}\label{acknowledgement}}
+\addcontentsline{toc}{chapter}{Acknowledgement}
 
-This guide draws on documentation and articles written by the R Core Team.
+This guide draws on documentation and articles written by the R Core Team. The first version of the guide was heavily influence by the \href{https://devguide.python.org/}{Python Developer's Guide}.
+
 Initial chapters of the guide were developed by Saranjeet Kaur Bhogal, in a project funded by the R Foundation, mentored by Heather Turner and Michael Lawrence. This initial version was upgraded in a \href{https://github.com/rstats-gsod/gsod2022/wiki/GSOD-2022-Proposal}{Google Season of Docs 2022} project with Saranjeet Kaur Bhogal and Lluís Revilla Sancho working as technical writers managed by Nicolas Bennett and overseen by a \href{https://github.com/rstats-gsod/gsod2022/wiki/GSOD-2022-Proposal\#steering-committee}{Steering Committee} including representatives from R Core and the wider R community.
 
 This guide has benefited and continues to benefit from varied contributions by several \href{https://github.com/r-devel/rdevguide\#contributors-}{contributors}.
@@ -141,108 +143,12 @@ This project is licensed under a \href{https://creativecommons.org/licenses/by/4
 \hypertarget{introduction}{%
 \chapter{Introduction}\label{introduction}}
 
-This guide is heavily influenced by the \href{https://devguide.python.org/}{Python Developer Guide}, and is a comprehensive resource for contributing to base R -- for both new and experienced contributors. It is maintained by the \href{/working-group}{R Contribution Working Group}. We welcome your contributions to base R!
-
-\hypertarget{introduction-to-bugzilla}{%
-\section{Introduction to Bugzilla}\label{introduction-to-bugzilla}}
-
-Base R uses \href{https://bugs.r-project.org/}{Bugzilla} for keeping track of bugs in R. To be able use R\textquotesingle s Bugzilla for reporting or fixing bugs in R, you will first need an \protect\hyperlink{RCorePkgBug}{account} on Bugzilla. Once you have set up your account and manage to log in to Bugzilla, you are good to go.
-
-An image of the existing home page of Bugzilla is shared below:
-
-\begin{figure}
-\centering
-\includegraphics{img/bugzilla.png}
-\caption{Screenshot of the existing home page of Bugzilla.}
-\end{figure}
-
-On the home page of Bugzilla, there are various buttons and links. There are four square buttons called as:
-
-\begin{figure}
-\centering
-\includegraphics{img/squarebuttons.png}
-\caption{Screenshot of the four square buttons on the home page of Bugzilla.}
-\end{figure}
-
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\item
-  \href{https://bugs.r-project.org/enter_bug.cgi}{File a bug}: You will have to log in to Bugzilla to file a bug using this button
-\item
-  \href{https://bugs.r-project.org/query.cgi}{Search}: When you click this button you will get a page with `Simple Search' and `Advanced Search' options. Either of the search options could be used depending on what you are looking for.
-\item
-  \href{https://bugs.r-project.org/?GoAheadAndLogIn=1}{Log In}: Provide the appropriate email address and password here to log in to Bugzilla.
-\item
-  \href{https://bugzilla.readthedocs.io/en/latest/using/index.html}{Documentation}: Provides a user guide for R\textquotesingle s Bugzilla.
-\end{enumerate}
-
-There are also self-explanatory links available on the home page to:
-
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\item
-  \href{https://bugs.r-project.org/enter_bug.cgi}{Enter a new bug report}
-\item
-  \href{https://bugs.r-project.org/buglist.cgi?bug_file_loc_type=allwordssubstr\&bug_status=NEW\&bug_status=ASSIGNED\&bug_status=CONFIRMED\&bug_status=REOPENED\&bug_status=UNCONFIRMED\&bugidtype=include\&chfieldto=Now\&cmdtype=doit\&emailassigned_to1=1\&emailassigned_to2=1\&emailcc2=1\&emailreporter2=1\&emailtype1=substring\&emailtype2=substring\&field0-0-0=noop\&long_desc_type=substring\&order=bugs.delta_ts\%20desc\&query_format=advanced\&short_desc_type=allwordssubstr\&type0-0-0=noop}{Show open bugs new-to-old}
-\item
-  \href{https://bugs.r-project.org/query.cgi}{Search existing bug reports}
-\end{enumerate}
-
-A \href{https://bugs.r-project.org/page.cgi?id=quicksearch.html}{quick search} bar is available on the home page where you can enter a bug \# to search or some search terms.
-
-\begin{figure}
-\centering
-\includegraphics{img/quicksearch.png}
-\caption{Screenshot of the quick search bar on the home page of Bugzilla.}
-\end{figure}
-
-There is also a section for Common Queries on the home page which includes links to bugs reported and changed in the last 24 hours and last 7 days.
-
-\begin{figure}
-\centering
-\includegraphics{img/commonquery.png}
-\caption{Screenshot of the Common Queries section on the home page of Bugzilla.}
-\end{figure}
-
-\hypertarget{quick-start-to-the-guide}{%
-\section{Quick start to the guide}\label{quick-start-to-the-guide}}
-
-The guide is intended to be a comprehensive resource for contributing to base R. There are a number of chapters and chapter sections devised to help with the process of contributing to base R:
-
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\tightlist
-\item
-  The \protect\hyperlink{GetStart}{Getting Started} covers the instructions on how to install R in Windows and the tools required to build R and R packages in Windows.
-\end{enumerate}
-
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\setcounter{enumi}{1}
-\item
-  The \protect\hyperlink{BugTrack}{Bug Tracking} and the \protect\hyperlink{ReviewBugs}{Reviewing Bugs} chapters discuss how to find bugs in R and how to review bug reports that are submitted to Bugzilla.
-\item
-  The \protect\hyperlink{FindSource}{Finding the Source} chapter discusses how to have an overview of the R codebase like finding the implementation of a base function written in R and/or the primitive implementation written in C.
-\item
-  The \protect\hyperlink{FixBug}{Lifecycle of a Patch} chapter discusses how to create a patch to propose a bug fix.
-\item
-  The \protect\hyperlink{Doc}{Documenting R} chapter describes the styleguide for R's documentation, how to document for R, and report and review bugs (and/or suggest corrections for them) in the existing documentation.
-\item
-  How to test pre-release versions of R is discussed in the chapter on \protect\hyperlink{TestRVer}{Testing Pre-release R Versions}.
-\item
-  The \protect\hyperlink{CoreDev}{R Core Developers} chapter contains a list of the former and current members of the R Core team who have write access to the R source.
-\item
-  To get more information on how to find assistance to resolve issues faced while working on R, refer to the \protect\hyperlink{WhereToGetHelp}{Where to Get Help} chapter.
-\item
-  To keep up with the developments in R refer to some of the resources available in the \protect\hyperlink{News}{News and Announcements}
-\item
-  Resources and tools that may be relevant for R developers are available in the \protect\hyperlink{DevTools}{Developer Tools} chapter.
-\end{enumerate}
+This guide is a comprehensive resource for contributing to base R\footnote{The \href{https://cran.r-project.org/doc/FAQ/R-FAQ.html\#Add_002don-packages-in-R}{set of packages} in the base R distribution that are maintained by the R Core Team.} -- for both new and experienced contributors. It is maintained by the \href{/working-group}{R Contribution Working Group}. We welcome your contributions to base R!
 
 \hypertarget{overview-of-different-ways-of-contributing-to-base-r-project}{%
 \section{Overview of different ways of contributing to base R Project}\label{overview-of-different-ways-of-contributing-to-base-r-project}}
 
-One can contribute to the base R project in a number of different ways. Some of them are listed below:
+Contributions to base R are possible in a number of different ways. Some of them are listed below:
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -253,6 +159,41 @@ One can contribute to the base R project in a number of different ways. Some of 
   Contributing to translations: Refer \protect\hyperlink{}{Translations}.
 \item
   Testing R before release: Refer \protect\hyperlink{TestRVer}{Testing Pre-release R Versions}.
+\end{enumerate}
+
+\hypertarget{quick-start-to-the-guide}{%
+\section{Quick start to the guide}\label{quick-start-to-the-guide}}
+
+The guide is intended as a comprehensive resource for contributing to base R. The following chapter outline provides an overview with links to sections for getting started with contributing.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  The \protect\hyperlink{GetStart}{Getting Started} covers the instructions on how to install R on the major operating systems (Windows, Linux and macOS), as well as the tools required to build R and R packages from source.
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{1}
+\item
+  The \protect\hyperlink{BugTrack}{Bug Tracking} and the \protect\hyperlink{ReviewBugs}{Reviewing Bugs} chapters discuss how to find bugs in R and how to review bug reports that are submitted to Bugzilla.
+\item
+  The \protect\hyperlink{FindSource}{Finding the Source} chapter provides an overview of the R codebase and helps with finding source code of base functions written in R and/or C.
+\item
+  The \protect\hyperlink{FixBug}{Lifecycle of a Patch} chapter discusses how to create a patch to propose a bug fix.
+\item
+  The \protect\hyperlink{Doc}{Documenting R} chapter describes the format and style guide for help files in R, how to report and review issues in the existing documentation and how to propose changes.
+\item
+  How to test pre-release versions of R is discussed in the chapter on \protect\hyperlink{TestRVer}{Testing Pre-release R Versions}.
+\item
+  The \protect\hyperlink{CoreDev}{R Core Developers} chapter contains a list of the former and current members of the R Core team who have write access to the R source.
+\item
+  For more information on how to engage with to community and ask for help, refer to the \protect\hyperlink{WhereToGetHelp}{Where to Get Help} chapter.
+\item
+  To keep up with the developments in R refer to some of the resources available in the \protect\hyperlink{News}{News and Announcements}
+\item
+  Resources and tools that may be relevant for R developers are available in the \protect\hyperlink{DevTools}{Developer Tools} chapter.
 \end{enumerate}
 
 \hypertarget{how-to-contribute-to-this-guide}{%
@@ -661,7 +602,7 @@ Once you confirm a bug exists, you need to submit a bug report so that it gets f
 \item
   The bug report for R-Core supported packages, their documentations, and/ or a bug report for the R language itself can be submitted either to R-devel, \href{https://www.r-project.org/posting-guide.html\#which_list}{see posting guide}, or to \href{https://bugs.r-project.org/bugzilla/}{Bugzilla}. In the future, we hope to have an option to report an issue to the \href{https://github.com/r-devel/r-svn/issues}{GitHub Mirror of R svn server}.
 \item
-  If you want to submit the bug report using Bugzilla, please ensure that you have a Bugzilla account. To get a Bugzilla account, please send an e-mail to \texttt{bug-report-request@r-project.org} from the address that you want to use as your login. In this e-mail, briefly explain why you need an account. A volunteer shall then create a Bugzilla account and add you to R's Bugzilla members.
+  If you want to submit the bug report using \protect\hyperlink{Bugzilla}{Bugzilla}, please ensure that you have a Bugzilla account. To get a Bugzilla account, please send an e-mail to \texttt{bug-report-request@r-project.org} from the address that you want to use as your login. In this e-mail, briefly explain why you need an account. A volunteer shall then create a Bugzilla account and add you to R's Bugzilla members.
 \item
   Please ensure whether the bug is already fixed (in the upcoming changes in R) or reported (search for it from those already reported on Bugzilla, either on \href{https://bugs.r-project.org/bugzilla/query.cgi}{search existing bug reports}, may use the \href{https://bugs.r-project.org/bugzilla/query.cgi?format=advanced}{advanced search} option here, or \href{https://bugs.r-project.org/bugzilla/buglist.cgi?bug_file_loc_type=allwordssubstr\&bug_status=NEW\&bug_status=ASSIGNED\&bug_status=CONFIRMED\&bug_status=REOPENED\&bug_status=UNCONFIRMED\&bugidtype=include\&chfieldto=Now\&cmdtype=doit\&emailassigned_to1=1\&emailassigned_to2=1\&emailcc2=1\&emailreporter2=1\&emailtype1=substring\&emailtype2=substring\&field0-0-0=noop\&long_desc_type=substring\&order=bugs.delta_ts\%20desc\&query_format=advanced\&short_desc_type=allwordssubstr\&type0-0-0=noop}{show open bugs new-to-old}).
 \end{enumerate}
@@ -738,6 +679,67 @@ If you like to see how bugs are reported on Bugzilla, here are some examples:
 After understanding where bugs are reported in R (Bugzilla) or in other projects (GitHub/GitLab/R-Forge), a great way to contribute is reviewing bug reports.
 
 Around the clock, new bug reports are being submitted on Bugzilla or the bug trackers (for instance, GitHub issues) of R packages and existing bug reports are being updated. Every bug report needs to be reviewed to make sure various things are in proper order. You can help with this process of reviewing bugs.
+
+\hypertarget{Bugzilla}{%
+\subsection{Navigating Bugzilla}\label{Bugzilla}}
+
+Base R uses \href{https://bugs.r-project.org/}{Bugzilla} for issue tracking. In order to report bugs, as well as fixes, you will first need to create an \protect\hyperlink{RCorePkgBug}{account} on Bugzilla. After having successfully logged in to Bugzilla, you are good to go.
+
+An image of the existing home page of Bugzilla is shared below:
+
+\begin{figure}
+\centering
+\includegraphics{img/bugzilla.png}
+\caption{Screenshot of the existing home page of Bugzilla.}
+\end{figure}
+
+On the home page of Bugzilla, there are various buttons and links. There are four square buttons called as:
+
+\begin{figure}
+\centering
+\includegraphics{img/squarebuttons.png}
+\caption{Screenshot of the four square buttons on the home page of Bugzilla.}
+\end{figure}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  \href{https://bugs.r-project.org/enter_bug.cgi}{File a bug}: You will have to log in to Bugzilla to file a bug using this button
+\item
+  \href{https://bugs.r-project.org/query.cgi}{Search}: When you click this button you will get a page with `Simple Search' and `Advanced Search' options. Either of the search options could be used depending on what you are looking for.
+\item
+  \href{https://bugs.r-project.org/?GoAheadAndLogIn=1}{Log In}: Provide the appropriate email address and password here to log in to Bugzilla.
+\item
+  \href{https://bugzilla.readthedocs.io/en/latest/using/index.html}{Documentation}: Provides a user guide for R\textquotesingle s Bugzilla.
+\end{enumerate}
+
+Several useful shortcuts are available from the landing page:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  \href{https://bugs.r-project.org/enter_bug.cgi}{Enter a new bug report}
+\item
+  \href{https://bugs.r-project.org/buglist.cgi?bug_file_loc_type=allwordssubstr\&bug_status=NEW\&bug_status=ASSIGNED\&bug_status=CONFIRMED\&bug_status=REOPENED\&bug_status=UNCONFIRMED\&bugidtype=include\&chfieldto=Now\&cmdtype=doit\&emailassigned_to1=1\&emailassigned_to2=1\&emailcc2=1\&emailreporter2=1\&emailtype1=substring\&emailtype2=substring\&field0-0-0=noop\&long_desc_type=substring\&order=bugs.delta_ts\%20desc\&query_format=advanced\&short_desc_type=allwordssubstr\&type0-0-0=noop}{Show open bugs new-to-old}
+\item
+  \href{https://bugs.r-project.org/query.cgi}{Search existing bug reports}
+\end{enumerate}
+
+A \href{https://bugs.r-project.org/page.cgi?id=quicksearch.html}{quick search} bar is available on the home page where you can enter a bug number to search or some search terms.
+
+\begin{figure}
+\centering
+\includegraphics{img/quicksearch.png}
+\caption{Screenshot of the quick search bar on the home page of Bugzilla.}
+\end{figure}
+
+There is also a section for Common Queries on the home page which includes links to bugs reported and changed in the last 24 hours and last 7 days.
+
+\begin{figure}
+\centering
+\includegraphics{img/commonquery.png}
+\caption{Screenshot of the Common Queries section on the home page of Bugzilla.}
+\end{figure}
 
 \hypertarget{preparing-to-review-bug-reports}{%
 \subsection{Preparing to review bug reports}\label{preparing-to-review-bug-reports}}

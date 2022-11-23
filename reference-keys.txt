@@ -1,8 +1,6 @@
-acknowledgement
 introduction
-introduction-to-bugzilla
-quick-start-to-the-guide
 overview-of-different-ways-of-contributing-to-base-r-project
+quick-start-to-the-guide
 GetStart
 the-r-source-code
 prerequisites
@@ -33,6 +31,7 @@ examples-of-bug-reports-submitted-on-bugzilla-or-r-devel-mailing-list
 see-also-1
 ReviewBugs
 how-you-can-help-to-review-bug-reports
+Bugzilla
 preparing-to-review-bug-reports
 classifying-bug-reports
 how-to-find-a-bug-report-or-an-issue-to-review
