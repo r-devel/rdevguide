@@ -15,6 +15,9 @@ favicon: "img/Rlogo.svg"
 description: "A guide to R development."
 ---
 
+# {-}
+
+![R Logo](img/Rlogo.png){height=400px width=500px}
 
 # Acknowledgement {-}
 
