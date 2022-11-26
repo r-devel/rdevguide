@@ -66,6 +66,7 @@ sudo apt-get install -y \
       libx11-dev \
       libxt-dev \
       mpack \
+      rsync \
       tcl8.6-dev \
       texinfo \
       texlive-base \
@@ -116,6 +117,7 @@ sudo dnf install -y \
     pango-devel \
     pcre2-devel \
     readline-devel \
+    rsync \
     tcl-devel \
     'tex(inconsolata.sty)' \
     'tex(latex)' \
