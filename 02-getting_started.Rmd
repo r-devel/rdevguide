@@ -37,6 +37,7 @@ If you need to install svn you can use your distribution's package manager to in
 
 In Ubuntu you can use :
 
+<!-- # Command to obtain it: apt-rdepends --build-depends --follow=DEPENDS r-base | grep " B" | sed -e "s/ Build-Depends: //" | sort -->
 
 ```sh
 sudo apt-get install -y \
@@ -89,6 +90,8 @@ sudo apt-get install -y \
 ### Fedora
 
 <!-- # Command to obtain it: dnf rq -q --repo=fedora-source --requires R -->
+<!-- # Plus the rsync package-->
+
 In Fedora you can use:
 
 ```sh
