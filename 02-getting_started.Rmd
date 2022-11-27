@@ -255,7 +255,7 @@ Before installing R from source, some additional programs are needed, as per the
     "$TOP_SRCDIR/tools/rsync-recommended"
     ```
 
-6.  Build R and the recommended files:
+6.  Build R and the recommended packages:
 
     ```sh
     make all recommended
@@ -270,7 +270,7 @@ Before installing R from source, some additional programs are needed, as per the
     make check
     ```
 
-    There are other checks you can run:
+    There are other checks you can run for testing the successful installation of the recommended packages:
 
     ```sh
     make check-devel
