@@ -1,7 +1,7 @@
 --- 
 title: "R Development Guide"
 author: "R Contribution Working Group"
-date: "2022-11-23"
+date: "2022-11-28"
 site: bookdown::bookdown_site
 output: bookdown::gitbook
 documentclass: book
@@ -9,7 +9,7 @@ bibliography: [book.bib]
 biblio-style: apalike
 link-citations: yes
 github-repo: r-devel/rdevguide
-url: 'TDDO'
+url: https://contributor.r-project.org/rdevguide
 cover-image: "img/Rlogo.png"
 favicon: "img/Rlogo.svg"
 description: "A guide to R development."
