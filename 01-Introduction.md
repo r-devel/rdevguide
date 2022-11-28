@@ -40,7 +40,7 @@ The guide is intended as a comprehensive resource for contributing to base R. Th
 
 10. Resources and tools that may be relevant for R developers are available in the [Developer Tools](#DevTools) chapter.
 
-## How to contribute to this guide itself? {#how-to-contribute-to-this-guide -}
+## How to contribute to this guide itself? {#how-to-contribute-to-this-guide}
 
 This guide is built using bookdown which makes editing it easier, provided you have a GitHub account (sign-up at [github.com](https://github.com/)). After you log-in to GitHub, click on the ‘Edit’ icon highlighted with a red ellipse in the image below. This will take you to an editable version of the the source R Markdown file that generated the page you are on:
 

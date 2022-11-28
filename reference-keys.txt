@@ -1,6 +1,7 @@
 introduction
 overview-of-different-ways-of-contributing-to-base-r-project
 quick-start-to-the-guide
+how-to-contribute-to-this-guide
 GetStart
 the-r-source-code
 prerequisites
