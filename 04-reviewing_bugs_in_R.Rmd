@@ -6,7 +6,7 @@ After understanding where bugs are reported in R (Bugzilla) or in other projects
 
 Around the clock, new bug reports are being submitted on Bugzilla or the bug trackers (for instance, GitHub issues) of R packages and existing bug reports are being updated. Every bug report needs to be reviewed to make sure various things are in proper order. You can help with this process of reviewing bugs. 
 
-### Navigating Bugzilla {#Bugzilla}
+## Navigating Bugzilla {#Bugzilla}
 
 Base R uses [Bugzilla](https://bugs.r-project.org/) for issue tracking. In order to report bugs, as well as fixes, you will first need to create an [account](#RCorePkgBug) on Bugzilla. After having successfully logged in to Bugzilla, you are good to go.
 
