@@ -16,20 +16,22 @@ To submit a patch, you need:
 
 1. [SVN](http://subversion.apache.org/) installed on your machine.
 
-2. The [latest developer version of R](#installR).
-
-## How to prepare a patch?
-
-Refer to the guidelines given [here](https://www.r-project.org/bugs.html#how-to-submit-patches) for the process to prepare a patch against R-devel.
-
-You should modify the source code on your computer of the latest version of R (`r-devel`). You can retrieve the latest source code of R via:
+2. The latest developer version of R.
+    
+  You can retrieve the latest source code of R via:
 
   ```sh
   export TOP_SRCDIR="$HOME/Downloads/R"
   svn checkout https://svn.r-project.org/R/trunk/ "$TOP_SRCDIR"
   ```
-Then you should edit the files, for example a documentation file such as  `"$TOP_SRCDIR"/src/library/stats/man/Multinom.Rd`. 
-Make your desired changes to that or more files.
+  
+  Depending on the operative system you might need to do some steps before that. 
+  The different steps required can be found in previous chapters of the book, for [Windows](#windowsSource), [macOS](#macos) and [Linux](#linux).
+
+## How to prepare a patch?
+
+
+If you have the source code in `$TOP_SRCDIR` you can edit the files, for example a documentation file such as  `"$TOP_SRCDIR"/src/library/stats/man/Multinom.Rd`, to make your desired changes to that or more files.
 
 Then you should check that R still works as expected via:
 
@@ -38,7 +40,7 @@ Then you should check that R still works as expected via:
   make check-devel
   ```
 
-If there is no test for your proposed change you can add a new test.
+If there is no test for your proposed change you can add a new regression test, following [the guidelines](#TestR).
 
 Then you should bring changes from the repository into the working copy, in case any other change has been introduced, and create a path.diff file with just the changes you want to propose to the R core:
 
@@ -48,6 +50,8 @@ Then you should bring changes from the repository into the working copy, in case
   ```
   
 This `patch.diff` file is the one that can be proposed to the R core via [Bugzilla](#SubmitPatches). You can also [ask for reviews](#PatchesReview) to the patch before proposing it to the R core via the [r-devel mailing list](https://stat.ethz.ch/mailman/listinfo/r-devel) or the slack channel of the R-contributors space.
+
+### Using a git mirror
 
 Besides checking in your computer, you can use the Github mirror  [r-devel/r-svn](https://github.com/r-devel/r-svn  "A github svn mirror") of the source code to check this patch with different configurations and OS.
 
@@ -86,7 +90,8 @@ Once you are happy with the changes and the checks report that everything is oka
 
 With that file you can [submit your patch](#SubmitPatches), remember to check if it meets the [recommendations for good patches](#GoodPatches).
 
-If you want to use `git` from the terminal to create the pull request (PR) to test the changes, you can use this [summary of the available git commands](https://about.gitlab.com/images/press/git-cheat-sheet.pdf "git cheat sheet"). 
+If you want to use `git` from the terminal to create the pull request (PR) to test the changes, you can use this [summary of the available git commands](https://about.gitlab.com/images/press/git-cheat-sheet.pdf "git cheat sheet").
+
 ## Making good patches {#GoodPatches} 
 
 When creating a patch for submission, there are several things that you can do to help ensure that your patch is accepted:
