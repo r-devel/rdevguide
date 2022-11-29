@@ -1,7 +1,7 @@
 --- 
 title: "R Development Guide"
 author: "R Contribution Working Group"
-date: "2022-11-28"
+date: "2022-11-29"
 site: bookdown::bookdown_site
 output: bookdown::gitbook
 documentclass: book
@@ -21,7 +21,7 @@ description: "A guide to R development."
 
 # Acknowledgement {-}
 
-This guide draws on documentation and articles written by the R Core Team. The first version of the guide was heavily influence by the [Python Developer's Guide](https://devguide.python.org/).
+This guide draws on documentation and articles written by the R Core Team. The first version of the guide was heavily influenced by the [Python Developer's Guide](https://devguide.python.org/).
 
 Initial chapters of the guide were developed by Saranjeet Kaur Bhogal, in a project funded by the R Foundation, mentored by Heather Turner and Michael Lawrence. This initial version was upgraded in a [Google Season of Docs 2022](https://github.com/rstats-gsod/gsod2022/wiki/GSOD-2022-Proposal) project with Saranjeet Kaur Bhogal and Lluís Revilla Sancho working as technical writers managed by Nicolas Bennett and overseen by a [Steering Committee](https://github.com/rstats-gsod/gsod2022/wiki/GSOD-2022-Proposal#steering-committee) including representatives from R Core and the wider R community.
 
