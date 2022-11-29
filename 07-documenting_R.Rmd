@@ -45,7 +45,7 @@ All the above information is included in a .Rd file within a series of sections 
     * The examples should not require special facilities (for instance, Internet access or write permission to specific directories).
     * Examples should also not take longer than necessary to run, as they are run when checking a build of R.
     
-3. `\synopsis` section: The `\usage` section can have the function definition, or the actual definition can be included in the `\synopsis` section. The full documentation for [\usage](https://cran.r-project.org/doc/manuals/r-release/R-exts.html#Documenting-functions) says that the usage information specified should match the function definition exactly. Apparently, `\synopsis` was removed in [R 3.1.0](https://github.com/r-devel/r-svn/blob/0d65935f30dcaccfeee1dd61991bf4b1444873bc/src/library/tools/R/RdConv2.R#L918-L919), but it is still mentioned in [Rds](https://developer.r-project.org/Rds.html). 
+3. `\synopsis` section: The `\usage` section can have the function definition, or the actual definition can be included in the `\synopsis` section. The full documentation for [`\usage`](https://cran.r-project.org/doc/manuals/r-release/R-exts.html#Documenting-functions) says that the usage information specified should match the function definition exactly. Apparently, `\synopsis` was removed in [R 3.1.0](https://github.com/r-devel/r-svn/blob/0d65935f30dcaccfeee1dd61991bf4b1444873bc/src/library/tools/R/RdConv2.R#L918-L919), but it is still mentioned in [Rds](https://developer.r-project.org/Rds.html). 
 
 4. `\source` and `\references` sections:
     * Author(s) names should be written in the form `Author, A. B.`.
