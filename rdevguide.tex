@@ -257,13 +257,6 @@ If the change meets the \href{https://developer.r-project.org/devel-guidelines.t
 
 To install from the source code you will need the source code and the dependencies of R.
 
-Retrieve R source code via into \texttt{TOP\_SRCDIR}, note that we retrieve the r-devel source code:
-
-\begin{verbatim}
-  export TOP_SRCDIR="$HOME/Downloads/R"
-  svn checkout https://svn.r-project.org/R/trunk/ $TOP_SRCDIR
-\end{verbatim}
-
 If you need to install svn you can use your distribution's package manager to install it.
 
 \hypertarget{ubuntu}{%
@@ -271,208 +264,300 @@ If you need to install svn you can use your distribution's package manager to in
 
 In Ubuntu you can use :
 
-\begin{verbatim}
-  sudo apt-get install -y \
-      bash-completion \
-      bison \
-      debhelper-compat (= 11) \
-      default-jdk \
-      g++ (>= 4:4.9.2-2) \
-      gcc (>= 4:4.9.2-2) \
-      gfortran (>= 4:4.9.2-2) \
-      groff-base \
-      libblas-dev \
-      libbz2-dev \
-      libcairo2-dev \
-      libcurl4-dev \
-      libcurl4-openssl-dev \
-      libjpeg-dev \
-      liblapack-dev \
-      liblzma-dev \
-      libncurses5-dev \
-      libpango1.0-dev \
-      libpcre2-dev \
-      libpcre3-dev \
-      libpng-dev \
-      libreadline-dev \
-      libtiff5-dev \
-      libx11-dev \
-      libxt-dev \
-      mpack \
-      tcl8.6-dev \
-      texinfo (>= 4.1-2) \
-      texlive-base \
-      texlive-extra-utils \
-      texlive-fonts-extra \
-      texlive-fonts-recommended \
-      texlive-latex-base \
-      texlive-latex-extra \
-      texlive-latex-recommended \
-      texlive-plain-generic \
-      tk8.6-dev \
-      x11proto-core-dev \
-      xauth \
-      xdg-utils \
-      xfonts-base \
-      xvfb \
-      zlib1g-dev
-\end{verbatim}
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{sudo}\NormalTok{ apt{-}get install }\AttributeTok{{-}y} \DataTypeTok{\textbackslash{}}
+\NormalTok{      bash{-}completion }\DataTypeTok{\textbackslash{}}
+\NormalTok{      bison }\DataTypeTok{\textbackslash{}}
+\NormalTok{      debhelper{-}compat }\DataTypeTok{\textbackslash{}}
+\NormalTok{      default{-}jdk }\DataTypeTok{\textbackslash{}}
+\NormalTok{      g++ }\DataTypeTok{\textbackslash{}}
+\NormalTok{      gcc }\DataTypeTok{\textbackslash{}}
+\NormalTok{      gfortran }\DataTypeTok{\textbackslash{}}
+\NormalTok{      groff{-}base }\DataTypeTok{\textbackslash{}}
+\NormalTok{      libblas{-}dev }\DataTypeTok{\textbackslash{}}
+\NormalTok{      libbz2{-}dev }\DataTypeTok{\textbackslash{}}
+\NormalTok{      libcairo2{-}dev }\DataTypeTok{\textbackslash{}}
+\NormalTok{      libcurl4{-}dev }\DataTypeTok{\textbackslash{}}
+\NormalTok{      libcurl4{-}openssl{-}dev }\DataTypeTok{\textbackslash{}}
+\NormalTok{      libjpeg{-}dev }\DataTypeTok{\textbackslash{}}
+\NormalTok{      liblapack{-}dev }\DataTypeTok{\textbackslash{}}
+\NormalTok{      liblzma{-}dev }\DataTypeTok{\textbackslash{}}
+\NormalTok{      libncurses5{-}dev }\DataTypeTok{\textbackslash{}}
+\NormalTok{      libpango1.0{-}dev }\DataTypeTok{\textbackslash{}}
+\NormalTok{      libpcre2{-}dev }\DataTypeTok{\textbackslash{}}
+\NormalTok{      libpcre3{-}dev }\DataTypeTok{\textbackslash{}}
+\NormalTok{      libpng{-}dev }\DataTypeTok{\textbackslash{}}
+\NormalTok{      libreadline{-}dev }\DataTypeTok{\textbackslash{}}
+\NormalTok{      libtiff5{-}dev }\DataTypeTok{\textbackslash{}}
+\NormalTok{      libx11{-}dev }\DataTypeTok{\textbackslash{}}
+\NormalTok{      libxt{-}dev }\DataTypeTok{\textbackslash{}}
+\NormalTok{      mpack }\DataTypeTok{\textbackslash{}}
+\NormalTok{      tcl8.6{-}dev }\DataTypeTok{\textbackslash{}}
+\NormalTok{      texinfo }\DataTypeTok{\textbackslash{}}
+\NormalTok{      texlive{-}base }\DataTypeTok{\textbackslash{}}
+\NormalTok{      texlive{-}extra{-}utils }\DataTypeTok{\textbackslash{}}
+\NormalTok{      texlive{-}fonts{-}extra }\DataTypeTok{\textbackslash{}}
+\NormalTok{      texlive{-}fonts{-}recommended }\DataTypeTok{\textbackslash{}}
+\NormalTok{      texlive{-}latex{-}base }\DataTypeTok{\textbackslash{}}
+\NormalTok{      texlive{-}latex{-}extra }\DataTypeTok{\textbackslash{}}
+\NormalTok{      texlive{-}latex{-}recommended }\DataTypeTok{\textbackslash{}}
+\NormalTok{      texlive{-}plain{-}generic }\DataTypeTok{\textbackslash{}}
+\NormalTok{      tk8.6{-}dev }\DataTypeTok{\textbackslash{}}
+\NormalTok{      x11proto{-}core{-}dev }\DataTypeTok{\textbackslash{}}
+\NormalTok{      xauth }\DataTypeTok{\textbackslash{}}
+\NormalTok{      xdg{-}utils }\DataTypeTok{\textbackslash{}}
+\NormalTok{      xfonts{-}base }\DataTypeTok{\textbackslash{}}
+\NormalTok{      xvfb }\DataTypeTok{\textbackslash{}}
+\NormalTok{      zlib1g{-}dev }
+\end{Highlighting}
+\end{Shaded}
 
-\hypertarget{windows}{%
-\subsection{Windows}\label{windows}}
+\hypertarget{building-r}{%
+\section{Building R}\label{building-r}}
 
-Install MSYS and rtools42
-
-\hypertarget{macos}{%
-\subsection{macOS}\label{macos}}
-
-\hypertarget{building-r-in-linux}{%
-\section{Building R in Linux}\label{building-r-in-linux}}
+\hypertarget{linux}{%
+\subsection{Linux}\label{linux}}
 
 Here are the basic steps intended as a checklist.
 For complete instructions please see the section in \href{https://cran.r-project.org/doc/manuals/r-devel/R-admin.html\#Installing-R-under-Unix_002dalikes}{R-admin}.
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{-1}
+\item
+  Retrieve R source code via into \texttt{TOP\_SRCDIR}, note that we retrieve the \texttt{r-devel} source code:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\BuiltInTok{export} \VariableTok{TOP\_SRCDIR}\OperatorTok{=}\StringTok{"}\VariableTok{$HOME}\StringTok{/Downloads/R"}
+\FunctionTok{svn}\NormalTok{ checkout https://svn.r{-}project.org/R/trunk/ }\StringTok{"}\VariableTok{$TOP\_SRCDIR}\StringTok{"}
+\end{Highlighting}
+\end{Shaded}
 \item
   Download the latest recommended packages\footnote{Recommended packages are not in the subversion repository.}:
 
-\begin{verbatim}
-$TOP_SRCDIR/tools/rsync-recommended
-\end{verbatim}
+\begin{Shaded}
+\begin{Highlighting}[]
+\StringTok{"}\VariableTok{$TOP\_SRCDIR}\StringTok{/tools/rsync{-}recommended"}
+\end{Highlighting}
+\end{Shaded}
 \item
   Create the build directory in the \texttt{BUILDDIR}:
 
-\begin{verbatim}
-export BUILDDIR="$HOME/bin/R"
-mkdir -p $BUILDDIR
-cd $BUILDDIR
-\end{verbatim}
+\begin{Shaded}
+\begin{Highlighting}[]
+\BuiltInTok{export} \VariableTok{BUILDDIR}\OperatorTok{=}\StringTok{"}\VariableTok{$HOME}\StringTok{/bin/R"}
+\FunctionTok{mkdir} \AttributeTok{{-}p} \StringTok{"}\VariableTok{$BUILDDIR}\StringTok{"}
+\BuiltInTok{cd} \StringTok{"}\VariableTok{$BUILDDIR}\StringTok{"}
+\end{Highlighting}
+\end{Shaded}
 \item
   Configure the R installation (with \texttt{-\/-enable-R-shlib} so that RStudio IDE can use it):
 
-\begin{verbatim}
-$TOP_SRCDIR/configure --enable-R-shlib
-\end{verbatim}
+\begin{Shaded}
+\begin{Highlighting}[]
+\StringTok{"}\VariableTok{$TOP\_SRCDIR}\StringTok{/configure"} \AttributeTok{{-}{-}enable{-}R{-}shlib}
+\end{Highlighting}
+\end{Shaded}
 \item
   Build R :
 
-\begin{verbatim}
-make 
-\end{verbatim}
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{make}
+\end{Highlighting}
+\end{Shaded}
 \item
   Check that R works as expected:
 
-\begin{verbatim}
-make check
-\end{verbatim}
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{make}\NormalTok{ check}
+\end{Highlighting}
+\end{Shaded}
 
   There are other checks you can run:
 
-\begin{verbatim}
-make check-devel
-make check-recommended
-\end{verbatim}
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{make}\NormalTok{ check{-}devel}
+\FunctionTok{make}\NormalTok{ check{-}recommended}
+\end{Highlighting}
+\end{Shaded}
 \end{enumerate}
 
 If we don't want to build R in a different directory than the source code we can simply use:
 
-\begin{verbatim}
-cd $TOP_SRCDIR 
-svn update
-tools/rsync-recommended
-$TOP_SRCDIR/configure  --enable-R-shlib
-make 
-make check
-\end{verbatim}
+\begin{Shaded}
+\begin{Highlighting}[]
+\BuiltInTok{cd} \StringTok{"}\VariableTok{$TOP\_SRCDIR}\StringTok{"}
+\FunctionTok{svn}\NormalTok{ update}
+\ExtensionTok{tools/rsync{-}recommended}
+\StringTok{"}\VariableTok{$TOP\_SRCDIR}\StringTok{/configure"}  \AttributeTok{{-}{-}enable{-}R{-}shlib}
+\FunctionTok{make} 
+\FunctionTok{make}\NormalTok{ check}
+\end{Highlighting}
+\end{Shaded}
 
 Once you successfully build R from source you can modify R source code to fix an issue: Prepare a patch (See \href{https://www.r-project.org/bugs.html\#how-to-submit-patches}{this guide}) and after checking that R works as intended (\texttt{make\ check-devel}) submit the patch for the R core consideration.
 (See the \protect\hyperlink{FixBug}{lifecycle of a patch} chapter).
 
-To use the r-devel version in RStudio to you can do the following:
+To use the \texttt{r-devel} version in RStudio to you can do the following:
 
-\begin{verbatim}
-export RSTUIDO_WHICH_R="$BUILDDIR/bin/R"
-cd $TOP_SRCDIR
-rstudio
-\end{verbatim}
+\begin{Shaded}
+\begin{Highlighting}[]
+\BuiltInTok{export} \VariableTok{RSTUIDO\_WHICH\_R}\OperatorTok{=}\StringTok{"}\VariableTok{$BUILDDIR}\StringTok{/bin/R"}
+\BuiltInTok{cd} \StringTok{"}\VariableTok{$TOP\_SRCDIR}\StringTok{"}
+\ExtensionTok{rstudio}
+\end{Highlighting}
+\end{Shaded}
 
-\hypertarget{windows-1}{%
-\section{Windows}\label{windows-1}}
+\hypertarget{windows}{%
+\subsection{Windows}\label{windows}}
 
-\hypertarget{installR}{%
-\subsection{Installing R}\label{installR}}
+\hypertarget{binaries}{%
+\subsubsection{Binaries}\label{binaries}}
+
+The binary builds of R for Windows can be downloaded and installed from \href{https://cran.r-project.org/bin/windows/base/}{here}.
+Along with the link to the latest stable release, this page also contains links to the binary builds of \texttt{r-patched} and \texttt{r-devel}.
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
-\item
-  The binary builds of R for Windows can be downloaded and installed from \href{https://cran.r-project.org/bin/windows/base/}{here}.
-  Along with the link to the latest stable release, this page also contains links to the binary builds of r-patched and r-devel.
 \item
   Click on the download links to download an executable installer.
 \item
   Select the language while installing, read the GNU general public license information, and select the destination location to start the installation.
-  You will be prompted to select components at this stage: \texttt{User\ installation}, \texttt{32-bit\ User\ installation}, \texttt{64-bit\ User\ installation}, or \texttt{Custom\ installation}.
+  You will be prompted to select components at this stage: \texttt{User\ installation}, \texttt{64-bit\ User\ installation}, or \texttt{Custom\ installation}.
   The default option may be chosen for the questions from this step onwards to complete the installation.
 \end{enumerate}
 
-\hypertarget{building-r-and-r-packages}{%
-\subsection{Building R and R packages}\label{building-r-and-r-packages}}
+Daily binaries for \texttt{r-devel} are made available for \href{https://cran.r-project.org/bin/windows/base/rdevel.html}{download and installation}.
 
-\hypertarget{what-tools-do-you-need-to-build-r-from-source-on-windows}{%
-\subsubsection{What tools do you need to build R from source on Windows?}\label{what-tools-do-you-need-to-build-r-from-source-on-windows}}
+\hypertarget{from-source}{%
+\subsubsection{From source}\label{from-source}}
 
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\item
-  \href{https://github.com/r-windows/docs/blob/master/faq.md\#what-is-rtools}{RTools} is the toolchain bundle that you can use to build R base and R packages containing compiled code, on Windows.
-\item
-  You also need a distribution of LaTeX installed for building R and checking packages.
-  The MiKTeX distribution of LaTeX that is used on CRAN can be downloaded from \url{https://miktex.org}.
-\end{enumerate}
-
-\hypertarget{how-to-setup-rtools}{%
-\subsubsection{\texorpdfstring{How to setup \texttt{RTools}?}{How to setup RTools?}}\label{how-to-setup-rtools}}
+Before installing R from source, some additional programs are needed, as per the \href{https://cran.r-project.org/bin/windows/base/howto-R-4.2.html}{latest documentation}:
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
 \item
-  The latest version of \texttt{RTools} can be downloaded from \url{https://cran.r-project.org/bin/windows/Rtools/} and run in the Windows-style installer.
-  You will need to know if you have a 32-bit or 64-bit Windows machine (right-click \texttt{This\ PC} in Windows Explorer and check the properties if you are unsure).
+  \href{https://cran.r-project.org/bin/windows/Rtools/}{Rtools} is the suggested toolchain bundle for building R base and R packages containing compiled code on Windows.
+  The latest \href{https://cran.r-project.org/bin/windows/Rtools/rtools42/rtools.html}{version of Rtools42} can be installed using the \href{https://cran.r-project.org/bin/windows/Rtools/rtools42/files/}{Rtools installer rtools42-XXXX-XXX.exe}.
 \item
-  Don't forget to add \texttt{RTools} to the path as documented on the download page.
+  A LaTeX compiler is needed to install and build R, check packages and build manuals.
+  On CRAN, MiKTeX is used, which can be downloaded from \url{https://miktex.org}.
+  Once installed open MiKTeX via the Windows start menu.
+  It might ask to check for updates and more importantly, to make it available in PATH. You can accept both.
+\item
+  Open the Rtools42 terminal to update and install subversion:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\ExtensionTok{pacman} \AttributeTok{{-}Syuu}
+\ExtensionTok{pacman} \AttributeTok{{-}Sy}\NormalTok{ wget subversion}
+\end{Highlighting}
+\end{Shaded}
+\item
+  Retrieve the latest source code via subversion:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\BuiltInTok{export} \VariableTok{TOP\_SRCDIR}\OperatorTok{=}\StringTok{"}\VariableTok{$HOME}\StringTok{/Downloads/R"}
+\FunctionTok{svn}\NormalTok{ checkout https://svn.r{-}project.org/R/trunk/ }\StringTok{"}\VariableTok{$TOP\_SRCDIR}\StringTok{"}
+\end{Highlighting}
+\end{Shaded}
+
+  If you already have the repository available you can update as:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\BuiltInTok{cd} \VariableTok{$TOP\_SRCDIR}
+\FunctionTok{svn}\NormalTok{ update}
+\end{Highlighting}
+\end{Shaded}
+
+  You can also use a SVN client such as TortoiseSVN (\url{https://tortoisesvn.net/}, command line tool, and Windows Explorer integration) or SlikSVN (\url{https://sliksvn.com/download/}, just the command line tool) so that it can be also found by other tools.
+\item
+  Download the latest tcl/tk and unzip it in \texttt{\$TOP\_SRCDIR}:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\BuiltInTok{cd} \StringTok{"}\VariableTok{$TOP\_SRCDIR}\StringTok{"}
+\FunctionTok{wget} \AttributeTok{{-}np} \AttributeTok{{-}nd} \AttributeTok{{-}r} \AttributeTok{{-}l1} \AttributeTok{{-}A} \StringTok{\textquotesingle{}tcltk{-}*.zip\textquotesingle{}}\NormalTok{ https://cran.r{-}project.org/bin/windows/Rtools/rtools42/files/}
+\FunctionTok{unzip} \StringTok{"tcltk{-}*.zip"}
+\end{Highlighting}
+\end{Shaded}
+\item
+  Add gcc, MiKTeX and tar to the PATH and set one tar option:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\BuiltInTok{export} \VariableTok{PATH}\OperatorTok{=}\StringTok{"/x86\_64{-}w64{-}mingw32.static.posix/bin:}\VariableTok{$PATH}\StringTok{"}
+\BuiltInTok{export} \VariableTok{PATH}\OperatorTok{=}\StringTok{"/c/Program\textbackslash{} Files/MiKTeX/miktex/bin/x64:}\VariableTok{$PATH}\StringTok{"}
+\BuiltInTok{export} \VariableTok{TAR}\OperatorTok{=}\StringTok{"/usr/bin/tar"}
+\BuiltInTok{export} \VariableTok{TAR\_OPTIONS}\OperatorTok{=}\StringTok{"{-}{-}force{-}local"}
+\end{Highlighting}
+\end{Shaded}
+
+  If MiKTeX was installed just for your user you might need to run:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\BuiltInTok{export} \VariableTok{PATH}\OperatorTok{=}\StringTok{"/c/Users/}\VariableTok{$USER}\StringTok{/AppData/Local/Programs/MiKTeX/miktex/bin/x64:}\VariableTok{$PATH}\StringTok{"}
+\end{Highlighting}
+\end{Shaded}
+\item
+  Check that all the programs can be found:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{which}\NormalTok{ make gcc pdflatex tar}
+\end{Highlighting}
+\end{Shaded}
+
+  If there is any error you'll need to find where the program is installed and add the corresponding path.
+\item
+  Download the latest recommended packages\footnote{Recommended packages are not in the subversion repository.}:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\BuiltInTok{cd} \StringTok{"}\VariableTok{$TOP\_SRCDIR}\StringTok{/src/gnuwin32/"}
+\StringTok{"}\VariableTok{$TOP\_SRCDIR}\StringTok{/tools/rsync{-}recommended"}
+\end{Highlighting}
+\end{Shaded}
+\item
+  Build R and the recommended packages:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{make}\NormalTok{ all recommended}
+\end{Highlighting}
+\end{Shaded}
+
+  The recently compiled version of R will be at \texttt{\$TOP\_SRCDIR/bin/}.
+  In RStudio you can select that folder and restart it to use the \texttt{r-devel} version.
+\item
+  Check that R works as expected:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{make}\NormalTok{ check}
+\end{Highlighting}
+\end{Shaded}
+
+  There are other checks you can run for testing the successful installation of the recommended packages:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{make}\NormalTok{ check{-}devel}
+\FunctionTok{make}\NormalTok{ check{-}recommended}
+\end{Highlighting}
+\end{Shaded}
 \end{enumerate}
 
-\hypertarget{how-to-build-r}{%
-\subsubsection{How to build R?}\label{how-to-build-r}}
-
-To build R for Windows using \texttt{RTools} follow the instructions in this \href{https://github.com/r-windows/r-base\#readme}{README} file.
-There are two options available to build R.
-One is the quick development build and the other option is the full installer build.
-
-For development and testing, you need only the quick development build.
-The quick build avoids building the manuals, which are generally not needed for development and testing.
-
-However, even for the quick build there are some \href{https://github.com/r-windows/r-base/blob/master/quick-build.sh}{default requirements}.
-For instance, MikTeX is to be installed in \texttt{C:/Program\ Files} and you have 64-bit R.
-If necessary, these defaults can be customised.
-The installation path of MikTex can be customised \href{https://github.com/r-windows/r-base/blob/50a229fc76c50a5fb42c0daa367466aaf2318171/quick-build.sh\#L13}{here} whereas the Windows bit can be customised \href{https://github.com/r-windows/r-base/blob/50a229fc76c50a5fb42c0daa367466aaf2318171/quick-build.sh\#L6}{here}.
-
-If you are a maintainer of the Windows CRAN releases then, the full installer build is available for building the complete installer as it appears on CRAN.
-It will build both the 32-bit and 64-bit R, the pdf manuals, and the installer program.
-You will use this to create the binary builds and not when building R from the source yourself.
-
-\hypertarget{how-to-download-the-r-sources-directly-or-from-the-svn-repository}{%
-\subsection{How to download the R sources directly or from the svn repository?}\label{how-to-download-the-r-sources-directly-or-from-the-svn-repository}}
-
-\begin{itemize}
-\item
-  To download the R sources on Windows, you can use \texttt{tar} from the RStudio terminal.
-\item
-  If you want to checkout the sources from svn, it is probably best to install an SVN client.
-  Either TortoiseSVN (\url{https://tortoisesvn.net/}, command line tool, and Windows Explorer integration) or SlikSVN (\url{https://sliksvn.com/download/}, just the command line tool) is recommended.
-  They have simple Windows installers and you can use svn straight-away from Windows cmd or RStudio terminal.
-\end{itemize}
+\hypertarget{macos}{%
+\subsection{macOS}\label{macos}}
 
 \hypertarget{see-also}{%
 \section{See also}\label{see-also}}
@@ -483,6 +568,12 @@ You will use this to create the binary builds and not when building R from the s
   \href{https://cran.r-project.org}{CRAN official website}
 \item
   \href{https://cran.r-project.org/doc/manuals/r-patched/R-admin.html}{R installation and administration manual}
+\item
+  \href{https://mac.r-project.org/}{R for macOS}
+\item
+  \href{https://mac.r-project.org/tools/}{Tools for R in macOS}
+\item
+  \href{https://mac.r-project.org/src/}{R for requirements in macOS}
 \item
   \href{https://cran.r-project.org/bin/windows/base/rw-FAQ.html}{R for Windows FAQ}
 \item

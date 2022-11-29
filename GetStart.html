@@ -160,17 +160,14 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="2.2" data-path="GetStart.html"><a href="GetStart.html#prerequisites"><i class="fa fa-check"></i><b>2.2</b> Prerequisites</a>
 <ul>
 <li class="chapter" data-level="2.2.1" data-path="GetStart.html"><a href="GetStart.html#ubuntu"><i class="fa fa-check"></i><b>2.2.1</b> Ubuntu</a></li>
-<li class="chapter" data-level="2.2.2" data-path="GetStart.html"><a href="GetStart.html#windows"><i class="fa fa-check"></i><b>2.2.2</b> Windows</a></li>
-<li class="chapter" data-level="2.2.3" data-path="GetStart.html"><a href="GetStart.html#macos"><i class="fa fa-check"></i><b>2.2.3</b> macOS</a></li>
 </ul></li>
-<li class="chapter" data-level="2.3" data-path="GetStart.html"><a href="GetStart.html#building-r-in-linux"><i class="fa fa-check"></i><b>2.3</b> Building R in Linux</a></li>
-<li class="chapter" data-level="2.4" data-path="GetStart.html"><a href="GetStart.html#windows-1"><i class="fa fa-check"></i><b>2.4</b> Windows</a>
+<li class="chapter" data-level="2.3" data-path="GetStart.html"><a href="GetStart.html#building-r"><i class="fa fa-check"></i><b>2.3</b> Building R</a>
 <ul>
-<li class="chapter" data-level="2.4.1" data-path="GetStart.html"><a href="GetStart.html#installR"><i class="fa fa-check"></i><b>2.4.1</b> Installing R</a></li>
-<li class="chapter" data-level="2.4.2" data-path="GetStart.html"><a href="GetStart.html#building-r-and-r-packages"><i class="fa fa-check"></i><b>2.4.2</b> Building R and R packages</a></li>
-<li class="chapter" data-level="2.4.3" data-path="GetStart.html"><a href="GetStart.html#how-to-download-the-r-sources-directly-or-from-the-svn-repository"><i class="fa fa-check"></i><b>2.4.3</b> How to download the R sources directly or from the svn repository?</a></li>
+<li class="chapter" data-level="2.3.1" data-path="GetStart.html"><a href="GetStart.html#linux"><i class="fa fa-check"></i><b>2.3.1</b> Linux</a></li>
+<li class="chapter" data-level="2.3.2" data-path="GetStart.html"><a href="GetStart.html#windows"><i class="fa fa-check"></i><b>2.3.2</b> Windows</a></li>
+<li class="chapter" data-level="2.3.3" data-path="GetStart.html"><a href="GetStart.html#macos"><i class="fa fa-check"></i><b>2.3.3</b> macOS</a></li>
 </ul></li>
-<li class="chapter" data-level="2.5" data-path="GetStart.html"><a href="GetStart.html#see-also"><i class="fa fa-check"></i><b>2.5</b> See also</a></li>
+<li class="chapter" data-level="2.4" data-path="GetStart.html"><a href="GetStart.html#see-also"><i class="fa fa-check"></i><b>2.4</b> See also</a></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="BugTrack.html"><a href="BugTrack.html"><i class="fa fa-check"></i><b>3</b> Bug Tracking</a>
 <ul>
@@ -321,166 +318,174 @@ For the most up to date and complete instructions you can check the <a href="htt
 Bug fixes and new features are introduced in <code>r-devel</code> first.
 If the change meets the <a href="https://developer.r-project.org/devel-guidelines.txt">development guidelines</a> R Core will also make the change in <code>r-patched</code>.</p>
 </div>
-<div id="prerequisites" class="section level2 tabset hasAnchor" number="2.2">
+<div id="prerequisites" class="section level2 hasAnchor" number="2.2">
 <h2><span class="header-section-number">2.2</span> Prerequisites<a href="GetStart.html#prerequisites" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>To install from the source code you will need the source code and the dependencies of R.</p>
-<p>Retrieve R source code via into <code>TOP_SRCDIR</code>, note that we retrieve the r-devel source code:</p>
-<pre><code>  export TOP_SRCDIR=&quot;$HOME/Downloads/R&quot;
-  svn checkout https://svn.r-project.org/R/trunk/ $TOP_SRCDIR</code></pre>
 <p>If you need to install svn you can use your distribution’s package manager to install it.</p>
 <div id="ubuntu" class="section level3 hasAnchor" number="2.2.1">
 <h3><span class="header-section-number">2.2.1</span> Ubuntu<a href="GetStart.html#ubuntu" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>In Ubuntu you can use :</p>
-<pre><code>  sudo apt-get install -y \
-      bash-completion \
-      bison \
-      debhelper-compat (= 11) \
-      default-jdk \
-      g++ (&gt;= 4:4.9.2-2) \
-      gcc (&gt;= 4:4.9.2-2) \
-      gfortran (&gt;= 4:4.9.2-2) \
-      groff-base \
-      libblas-dev \
-      libbz2-dev \
-      libcairo2-dev \
-      libcurl4-dev \
-      libcurl4-openssl-dev \
-      libjpeg-dev \
-      liblapack-dev \
-      liblzma-dev \
-      libncurses5-dev \
-      libpango1.0-dev \
-      libpcre2-dev \
-      libpcre3-dev \
-      libpng-dev \
-      libreadline-dev \
-      libtiff5-dev \
-      libx11-dev \
-      libxt-dev \
-      mpack \
-      tcl8.6-dev \
-      texinfo (&gt;= 4.1-2) \
-      texlive-base \
-      texlive-extra-utils \
-      texlive-fonts-extra \
-      texlive-fonts-recommended \
-      texlive-latex-base \
-      texlive-latex-extra \
-      texlive-latex-recommended \
-      texlive-plain-generic \
-      tk8.6-dev \
-      x11proto-core-dev \
-      xauth \
-      xdg-utils \
-      xfonts-base \
-      xvfb \
-      zlib1g-dev</code></pre>
-</div>
-<div id="windows" class="section level3 hasAnchor" number="2.2.2">
-<h3><span class="header-section-number">2.2.2</span> Windows<a href="GetStart.html#windows" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Install MSYS and rtools42</p>
-</div>
-<div id="macos" class="section level3 hasAnchor" number="2.2.3">
-<h3><span class="header-section-number">2.2.3</span> macOS<a href="GetStart.html#macos" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="sourceCode" id="cb1"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb1-1"><a href="GetStart.html#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> apt-get install <span class="at">-y</span> <span class="dt">\</span></span>
+<span id="cb1-2"><a href="GetStart.html#cb1-2" aria-hidden="true" tabindex="-1"></a>      bash-completion <span class="dt">\</span></span>
+<span id="cb1-3"><a href="GetStart.html#cb1-3" aria-hidden="true" tabindex="-1"></a>      bison <span class="dt">\</span></span>
+<span id="cb1-4"><a href="GetStart.html#cb1-4" aria-hidden="true" tabindex="-1"></a>      debhelper-compat <span class="dt">\</span></span>
+<span id="cb1-5"><a href="GetStart.html#cb1-5" aria-hidden="true" tabindex="-1"></a>      default-jdk <span class="dt">\</span></span>
+<span id="cb1-6"><a href="GetStart.html#cb1-6" aria-hidden="true" tabindex="-1"></a>      g++ <span class="dt">\</span></span>
+<span id="cb1-7"><a href="GetStart.html#cb1-7" aria-hidden="true" tabindex="-1"></a>      gcc <span class="dt">\</span></span>
+<span id="cb1-8"><a href="GetStart.html#cb1-8" aria-hidden="true" tabindex="-1"></a>      gfortran <span class="dt">\</span></span>
+<span id="cb1-9"><a href="GetStart.html#cb1-9" aria-hidden="true" tabindex="-1"></a>      groff-base <span class="dt">\</span></span>
+<span id="cb1-10"><a href="GetStart.html#cb1-10" aria-hidden="true" tabindex="-1"></a>      libblas-dev <span class="dt">\</span></span>
+<span id="cb1-11"><a href="GetStart.html#cb1-11" aria-hidden="true" tabindex="-1"></a>      libbz2-dev <span class="dt">\</span></span>
+<span id="cb1-12"><a href="GetStart.html#cb1-12" aria-hidden="true" tabindex="-1"></a>      libcairo2-dev <span class="dt">\</span></span>
+<span id="cb1-13"><a href="GetStart.html#cb1-13" aria-hidden="true" tabindex="-1"></a>      libcurl4-dev <span class="dt">\</span></span>
+<span id="cb1-14"><a href="GetStart.html#cb1-14" aria-hidden="true" tabindex="-1"></a>      libcurl4-openssl-dev <span class="dt">\</span></span>
+<span id="cb1-15"><a href="GetStart.html#cb1-15" aria-hidden="true" tabindex="-1"></a>      libjpeg-dev <span class="dt">\</span></span>
+<span id="cb1-16"><a href="GetStart.html#cb1-16" aria-hidden="true" tabindex="-1"></a>      liblapack-dev <span class="dt">\</span></span>
+<span id="cb1-17"><a href="GetStart.html#cb1-17" aria-hidden="true" tabindex="-1"></a>      liblzma-dev <span class="dt">\</span></span>
+<span id="cb1-18"><a href="GetStart.html#cb1-18" aria-hidden="true" tabindex="-1"></a>      libncurses5-dev <span class="dt">\</span></span>
+<span id="cb1-19"><a href="GetStart.html#cb1-19" aria-hidden="true" tabindex="-1"></a>      libpango1.0-dev <span class="dt">\</span></span>
+<span id="cb1-20"><a href="GetStart.html#cb1-20" aria-hidden="true" tabindex="-1"></a>      libpcre2-dev <span class="dt">\</span></span>
+<span id="cb1-21"><a href="GetStart.html#cb1-21" aria-hidden="true" tabindex="-1"></a>      libpcre3-dev <span class="dt">\</span></span>
+<span id="cb1-22"><a href="GetStart.html#cb1-22" aria-hidden="true" tabindex="-1"></a>      libpng-dev <span class="dt">\</span></span>
+<span id="cb1-23"><a href="GetStart.html#cb1-23" aria-hidden="true" tabindex="-1"></a>      libreadline-dev <span class="dt">\</span></span>
+<span id="cb1-24"><a href="GetStart.html#cb1-24" aria-hidden="true" tabindex="-1"></a>      libtiff5-dev <span class="dt">\</span></span>
+<span id="cb1-25"><a href="GetStart.html#cb1-25" aria-hidden="true" tabindex="-1"></a>      libx11-dev <span class="dt">\</span></span>
+<span id="cb1-26"><a href="GetStart.html#cb1-26" aria-hidden="true" tabindex="-1"></a>      libxt-dev <span class="dt">\</span></span>
+<span id="cb1-27"><a href="GetStart.html#cb1-27" aria-hidden="true" tabindex="-1"></a>      mpack <span class="dt">\</span></span>
+<span id="cb1-28"><a href="GetStart.html#cb1-28" aria-hidden="true" tabindex="-1"></a>      tcl8.6-dev <span class="dt">\</span></span>
+<span id="cb1-29"><a href="GetStart.html#cb1-29" aria-hidden="true" tabindex="-1"></a>      texinfo <span class="dt">\</span></span>
+<span id="cb1-30"><a href="GetStart.html#cb1-30" aria-hidden="true" tabindex="-1"></a>      texlive-base <span class="dt">\</span></span>
+<span id="cb1-31"><a href="GetStart.html#cb1-31" aria-hidden="true" tabindex="-1"></a>      texlive-extra-utils <span class="dt">\</span></span>
+<span id="cb1-32"><a href="GetStart.html#cb1-32" aria-hidden="true" tabindex="-1"></a>      texlive-fonts-extra <span class="dt">\</span></span>
+<span id="cb1-33"><a href="GetStart.html#cb1-33" aria-hidden="true" tabindex="-1"></a>      texlive-fonts-recommended <span class="dt">\</span></span>
+<span id="cb1-34"><a href="GetStart.html#cb1-34" aria-hidden="true" tabindex="-1"></a>      texlive-latex-base <span class="dt">\</span></span>
+<span id="cb1-35"><a href="GetStart.html#cb1-35" aria-hidden="true" tabindex="-1"></a>      texlive-latex-extra <span class="dt">\</span></span>
+<span id="cb1-36"><a href="GetStart.html#cb1-36" aria-hidden="true" tabindex="-1"></a>      texlive-latex-recommended <span class="dt">\</span></span>
+<span id="cb1-37"><a href="GetStart.html#cb1-37" aria-hidden="true" tabindex="-1"></a>      texlive-plain-generic <span class="dt">\</span></span>
+<span id="cb1-38"><a href="GetStart.html#cb1-38" aria-hidden="true" tabindex="-1"></a>      tk8.6-dev <span class="dt">\</span></span>
+<span id="cb1-39"><a href="GetStart.html#cb1-39" aria-hidden="true" tabindex="-1"></a>      x11proto-core-dev <span class="dt">\</span></span>
+<span id="cb1-40"><a href="GetStart.html#cb1-40" aria-hidden="true" tabindex="-1"></a>      xauth <span class="dt">\</span></span>
+<span id="cb1-41"><a href="GetStart.html#cb1-41" aria-hidden="true" tabindex="-1"></a>      xdg-utils <span class="dt">\</span></span>
+<span id="cb1-42"><a href="GetStart.html#cb1-42" aria-hidden="true" tabindex="-1"></a>      xfonts-base <span class="dt">\</span></span>
+<span id="cb1-43"><a href="GetStart.html#cb1-43" aria-hidden="true" tabindex="-1"></a>      xvfb <span class="dt">\</span></span>
+<span id="cb1-44"><a href="GetStart.html#cb1-44" aria-hidden="true" tabindex="-1"></a>      zlib1g-dev </span></code></pre></div>
 </div>
 </div>
-<div id="building-r-in-linux" class="section level2 hasAnchor" number="2.3">
-<h2><span class="header-section-number">2.3</span> Building R in Linux<a href="GetStart.html#building-r-in-linux" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="building-r" class="section level2 hasAnchor" number="2.3">
+<h2><span class="header-section-number">2.3</span> Building R<a href="GetStart.html#building-r" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="linux" class="section level3 hasAnchor" number="2.3.1">
+<h3><span class="header-section-number">2.3.1</span> Linux<a href="GetStart.html#linux" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Here are the basic steps intended as a checklist.
 For complete instructions please see the section in <a href="https://cran.r-project.org/doc/manuals/r-devel/R-admin.html#Installing-R-under-Unix_002dalikes">R-admin</a>.</p>
-<ol style="list-style-type: decimal">
+<ol start="0" style="list-style-type: decimal">
+<li><p>Retrieve R source code via into <code>TOP_SRCDIR</code>, note that we retrieve the <code>r-devel</code> source code:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb2-1"><a href="GetStart.html#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="bu">export</span> <span class="va">TOP_SRCDIR</span><span class="op">=</span><span class="st">&quot;</span><span class="va">$HOME</span><span class="st">/Downloads/R&quot;</span></span>
+<span id="cb2-2"><a href="GetStart.html#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">svn</span> checkout https://svn.r-project.org/R/trunk/ <span class="st">&quot;</span><span class="va">$TOP_SRCDIR</span><span class="st">&quot;</span></span></code></pre></div></li>
 <li><p>Download the latest recommended packages<a href="#fn3" class="footnote-ref" id="fnref3"><sup>3</sup></a>:</p>
-<pre><code>$TOP_SRCDIR/tools/rsync-recommended</code></pre></li>
+<div class="sourceCode" id="cb3"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb3-1"><a href="GetStart.html#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="st">&quot;</span><span class="va">$TOP_SRCDIR</span><span class="st">/tools/rsync-recommended&quot;</span></span></code></pre></div></li>
 <li><p>Create the build directory in the <code>BUILDDIR</code>:</p>
-<pre><code>export BUILDDIR=&quot;$HOME/bin/R&quot;
-mkdir -p $BUILDDIR
-cd $BUILDDIR</code></pre></li>
+<div class="sourceCode" id="cb4"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb4-1"><a href="GetStart.html#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="bu">export</span> <span class="va">BUILDDIR</span><span class="op">=</span><span class="st">&quot;</span><span class="va">$HOME</span><span class="st">/bin/R&quot;</span></span>
+<span id="cb4-2"><a href="GetStart.html#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="fu">mkdir</span> <span class="at">-p</span> <span class="st">&quot;</span><span class="va">$BUILDDIR</span><span class="st">&quot;</span></span>
+<span id="cb4-3"><a href="GetStart.html#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> <span class="st">&quot;</span><span class="va">$BUILDDIR</span><span class="st">&quot;</span></span></code></pre></div></li>
 <li><p>Configure the R installation (with <code>--enable-R-shlib</code> so that RStudio IDE can use it):</p>
-<pre><code>$TOP_SRCDIR/configure --enable-R-shlib</code></pre></li>
+<div class="sourceCode" id="cb5"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb5-1"><a href="GetStart.html#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="st">&quot;</span><span class="va">$TOP_SRCDIR</span><span class="st">/configure&quot;</span> <span class="at">--enable-R-shlib</span></span></code></pre></div></li>
 <li><p>Build R :</p>
-<pre><code>make </code></pre></li>
+<div class="sourceCode" id="cb6"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb6-1"><a href="GetStart.html#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">make</span></span></code></pre></div></li>
 <li><p>Check that R works as expected:</p>
-<pre><code>make check</code></pre>
+<div class="sourceCode" id="cb7"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb7-1"><a href="GetStart.html#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">make</span> check</span></code></pre></div>
 <p>There are other checks you can run:</p>
-<pre><code>make check-devel
-make check-recommended</code></pre></li>
+<div class="sourceCode" id="cb8"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb8-1"><a href="GetStart.html#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">make</span> check-devel</span>
+<span id="cb8-2"><a href="GetStart.html#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="fu">make</span> check-recommended</span></code></pre></div></li>
 </ol>
 <p>If we don’t want to build R in a different directory than the source code we can simply use:</p>
-<pre><code>cd $TOP_SRCDIR 
-svn update
-tools/rsync-recommended
-$TOP_SRCDIR/configure  --enable-R-shlib
-make 
-make check</code></pre>
+<div class="sourceCode" id="cb9"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb9-1"><a href="GetStart.html#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> <span class="st">&quot;</span><span class="va">$TOP_SRCDIR</span><span class="st">&quot;</span></span>
+<span id="cb9-2"><a href="GetStart.html#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="fu">svn</span> update</span>
+<span id="cb9-3"><a href="GetStart.html#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="ex">tools/rsync-recommended</span></span>
+<span id="cb9-4"><a href="GetStart.html#cb9-4" aria-hidden="true" tabindex="-1"></a><span class="st">&quot;</span><span class="va">$TOP_SRCDIR</span><span class="st">/configure&quot;</span>  <span class="at">--enable-R-shlib</span></span>
+<span id="cb9-5"><a href="GetStart.html#cb9-5" aria-hidden="true" tabindex="-1"></a><span class="fu">make</span> </span>
+<span id="cb9-6"><a href="GetStart.html#cb9-6" aria-hidden="true" tabindex="-1"></a><span class="fu">make</span> check</span></code></pre></div>
 <p>Once you successfully build R from source you can modify R source code to fix an issue: Prepare a patch (See <a href="https://www.r-project.org/bugs.html#how-to-submit-patches">this guide</a>) and after checking that R works as intended (<code>make check-devel</code>) submit the patch for the R core consideration.
 (See the <a href="FixBug.html#FixBug">lifecycle of a patch</a> chapter).</p>
-<p>To use the r-devel version in RStudio to you can do the following:</p>
-<pre><code>export RSTUIDO_WHICH_R=&quot;$BUILDDIR/bin/R&quot;
-cd $TOP_SRCDIR
-rstudio</code></pre>
+<p>To use the <code>r-devel</code> version in RStudio to you can do the following:</p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb10-1"><a href="GetStart.html#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="bu">export</span> <span class="va">RSTUIDO_WHICH_R</span><span class="op">=</span><span class="st">&quot;</span><span class="va">$BUILDDIR</span><span class="st">/bin/R&quot;</span></span>
+<span id="cb10-2"><a href="GetStart.html#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> <span class="st">&quot;</span><span class="va">$TOP_SRCDIR</span><span class="st">&quot;</span></span>
+<span id="cb10-3"><a href="GetStart.html#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="ex">rstudio</span></span></code></pre></div>
 </div>
-<div id="windows-1" class="section level2 hasAnchor" number="2.4">
-<h2><span class="header-section-number">2.4</span> Windows<a href="GetStart.html#windows-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<div id="installR" class="section level3 hasAnchor" number="2.4.1">
-<h3><span class="header-section-number">2.4.1</span> Installing R<a href="GetStart.html#installR" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="windows" class="section level3 hasAnchor" number="2.3.2">
+<h3><span class="header-section-number">2.3.2</span> Windows<a href="GetStart.html#windows" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="binaries" class="section level4 hasAnchor" number="2.3.2.1">
+<h4><span class="header-section-number">2.3.2.1</span> Binaries<a href="GetStart.html#binaries" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>The binary builds of R for Windows can be downloaded and installed from <a href="https://cran.r-project.org/bin/windows/base/">here</a>.
+Along with the link to the latest stable release, this page also contains links to the binary builds of <code>r-patched</code> and <code>r-devel</code>.</p>
 <ol style="list-style-type: decimal">
-<li><p>The binary builds of R for Windows can be downloaded and installed from <a href="https://cran.r-project.org/bin/windows/base/">here</a>.
-Along with the link to the latest stable release, this page also contains links to the binary builds of r-patched and r-devel.</p></li>
 <li><p>Click on the download links to download an executable installer.</p></li>
 <li><p>Select the language while installing, read the GNU general public license information, and select the destination location to start the installation.
-You will be prompted to select components at this stage: <code>User installation</code>, <code>32-bit User installation</code>, <code>64-bit User installation</code>, or <code>Custom installation</code>.
+You will be prompted to select components at this stage: <code>User installation</code>, <code>64-bit User installation</code>, or <code>Custom installation</code>.
 The default option may be chosen for the questions from this step onwards to complete the installation.</p></li>
 </ol>
+<p>Daily binaries for <code>r-devel</code> are made available for <a href="https://cran.r-project.org/bin/windows/base/rdevel.html">download and installation</a>.</p>
 </div>
-<div id="building-r-and-r-packages" class="section level3 hasAnchor" number="2.4.2">
-<h3><span class="header-section-number">2.4.2</span> Building R and R packages<a href="GetStart.html#building-r-and-r-packages" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<div id="what-tools-do-you-need-to-build-r-from-source-on-windows" class="section level4 hasAnchor" number="2.4.2.1">
-<h4><span class="header-section-number">2.4.2.1</span> What tools do you need to build R from source on Windows?<a href="GetStart.html#what-tools-do-you-need-to-build-r-from-source-on-windows" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div id="from-source" class="section level4 hasAnchor" number="2.3.2.2">
+<h4><span class="header-section-number">2.3.2.2</span> From source<a href="GetStart.html#from-source" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Before installing R from source, some additional programs are needed, as per the <a href="https://cran.r-project.org/bin/windows/base/howto-R-4.2.html">latest documentation</a>:</p>
 <ol style="list-style-type: decimal">
-<li><p><a href="https://github.com/r-windows/docs/blob/master/faq.md#what-is-rtools">RTools</a> is the toolchain bundle that you can use to build R base and R packages containing compiled code, on Windows.</p></li>
-<li><p>You also need a distribution of LaTeX installed for building R and checking packages.
-The MiKTeX distribution of LaTeX that is used on CRAN can be downloaded from <a href="https://miktex.org" class="uri">https://miktex.org</a>.</p></li>
+<li><p><a href="https://cran.r-project.org/bin/windows/Rtools/">Rtools</a> is the suggested toolchain bundle for building R base and R packages containing compiled code on Windows.
+The latest <a href="https://cran.r-project.org/bin/windows/Rtools/rtools42/rtools.html">version of Rtools42</a> can be installed using the <a href="https://cran.r-project.org/bin/windows/Rtools/rtools42/files/">Rtools installer rtools42-XXXX-XXX.exe</a>.</p></li>
+<li><p>A LaTeX compiler is needed to install and build R, check packages and build manuals.
+On CRAN, MiKTeX is used, which can be downloaded from <a href="https://miktex.org" class="uri">https://miktex.org</a>.
+Once installed open MiKTeX via the Windows start menu.
+It might ask to check for updates and more importantly, to make it available in PATH. You can accept both.</p></li>
+<li><p>Open the Rtools42 terminal to update and install subversion:</p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb11-1"><a href="GetStart.html#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="ex">pacman</span> <span class="at">-Syuu</span></span>
+<span id="cb11-2"><a href="GetStart.html#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="ex">pacman</span> <span class="at">-Sy</span> wget subversion</span></code></pre></div></li>
+<li><p>Retrieve the latest source code via subversion:</p>
+<div class="sourceCode" id="cb12"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb12-1"><a href="GetStart.html#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="bu">export</span> <span class="va">TOP_SRCDIR</span><span class="op">=</span><span class="st">&quot;</span><span class="va">$HOME</span><span class="st">/Downloads/R&quot;</span></span>
+<span id="cb12-2"><a href="GetStart.html#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="fu">svn</span> checkout https://svn.r-project.org/R/trunk/ <span class="st">&quot;</span><span class="va">$TOP_SRCDIR</span><span class="st">&quot;</span></span></code></pre></div>
+<p>If you already have the repository available you can update as:</p>
+<div class="sourceCode" id="cb13"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb13-1"><a href="GetStart.html#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> <span class="va">$TOP_SRCDIR</span></span>
+<span id="cb13-2"><a href="GetStart.html#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="fu">svn</span> update</span></code></pre></div>
+<p>You can also use a SVN client such as TortoiseSVN (<a href="https://tortoisesvn.net/" class="uri">https://tortoisesvn.net/</a>, command line tool, and Windows Explorer integration) or SlikSVN (<a href="https://sliksvn.com/download/" class="uri">https://sliksvn.com/download/</a>, just the command line tool) so that it can be also found by other tools.</p></li>
+<li><p>Download the latest tcl/tk and unzip it in <code>$TOP_SRCDIR</code>:</p>
+<div class="sourceCode" id="cb14"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb14-1"><a href="GetStart.html#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> <span class="st">&quot;</span><span class="va">$TOP_SRCDIR</span><span class="st">&quot;</span></span>
+<span id="cb14-2"><a href="GetStart.html#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="fu">wget</span> <span class="at">-np</span> <span class="at">-nd</span> <span class="at">-r</span> <span class="at">-l1</span> <span class="at">-A</span> <span class="st">&#39;tcltk-*.zip&#39;</span> https://cran.r-project.org/bin/windows/Rtools/rtools42/files/</span>
+<span id="cb14-3"><a href="GetStart.html#cb14-3" aria-hidden="true" tabindex="-1"></a><span class="fu">unzip</span> <span class="st">&quot;tcltk-*.zip&quot;</span></span></code></pre></div></li>
+<li><p>Add gcc, MiKTeX and tar to the PATH and set one tar option:</p>
+<div class="sourceCode" id="cb15"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb15-1"><a href="GetStart.html#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="bu">export</span> <span class="va">PATH</span><span class="op">=</span><span class="st">&quot;/x86_64-w64-mingw32.static.posix/bin:</span><span class="va">$PATH</span><span class="st">&quot;</span></span>
+<span id="cb15-2"><a href="GetStart.html#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="bu">export</span> <span class="va">PATH</span><span class="op">=</span><span class="st">&quot;/c/Program\ Files/MiKTeX/miktex/bin/x64:</span><span class="va">$PATH</span><span class="st">&quot;</span></span>
+<span id="cb15-3"><a href="GetStart.html#cb15-3" aria-hidden="true" tabindex="-1"></a><span class="bu">export</span> <span class="va">TAR</span><span class="op">=</span><span class="st">&quot;/usr/bin/tar&quot;</span></span>
+<span id="cb15-4"><a href="GetStart.html#cb15-4" aria-hidden="true" tabindex="-1"></a><span class="bu">export</span> <span class="va">TAR_OPTIONS</span><span class="op">=</span><span class="st">&quot;--force-local&quot;</span></span></code></pre></div>
+<p>If MiKTeX was installed just for your user you might need to run:</p>
+<div class="sourceCode" id="cb16"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb16-1"><a href="GetStart.html#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="bu">export</span> <span class="va">PATH</span><span class="op">=</span><span class="st">&quot;/c/Users/</span><span class="va">$USER</span><span class="st">/AppData/Local/Programs/MiKTeX/miktex/bin/x64:</span><span class="va">$PATH</span><span class="st">&quot;</span></span></code></pre></div></li>
+<li><p>Check that all the programs can be found:</p>
+<div class="sourceCode" id="cb17"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb17-1"><a href="GetStart.html#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="fu">which</span> make gcc pdflatex tar</span></code></pre></div>
+<p>If there is any error you’ll need to find where the program is installed and add the corresponding path.</p></li>
+<li><p>Download the latest recommended packages<a href="#fn4" class="footnote-ref" id="fnref4"><sup>4</sup></a>:</p>
+<div class="sourceCode" id="cb18"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb18-1"><a href="GetStart.html#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> <span class="st">&quot;</span><span class="va">$TOP_SRCDIR</span><span class="st">/src/gnuwin32/&quot;</span></span>
+<span id="cb18-2"><a href="GetStart.html#cb18-2" aria-hidden="true" tabindex="-1"></a><span class="st">&quot;</span><span class="va">$TOP_SRCDIR</span><span class="st">/tools/rsync-recommended&quot;</span></span></code></pre></div></li>
+<li><p>Build R and the recommended packages:</p>
+<div class="sourceCode" id="cb19"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb19-1"><a href="GetStart.html#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="fu">make</span> all recommended</span></code></pre></div>
+<p>The recently compiled version of R will be at <code>$TOP_SRCDIR/bin/</code>.
+In RStudio you can select that folder and restart it to use the <code>r-devel</code> version.</p></li>
+<li><p>Check that R works as expected:</p>
+<div class="sourceCode" id="cb20"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb20-1"><a href="GetStart.html#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="fu">make</span> check</span></code></pre></div>
+<p>There are other checks you can run for testing the successful installation of the recommended packages:</p>
+<div class="sourceCode" id="cb21"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb21-1"><a href="GetStart.html#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="fu">make</span> check-devel</span>
+<span id="cb21-2"><a href="GetStart.html#cb21-2" aria-hidden="true" tabindex="-1"></a><span class="fu">make</span> check-recommended</span></code></pre></div></li>
 </ol>
 </div>
-<div id="how-to-setup-rtools" class="section level4 hasAnchor" number="2.4.2.2">
-<h4><span class="header-section-number">2.4.2.2</span> How to setup <code>RTools</code>?<a href="GetStart.html#how-to-setup-rtools" class="anchor-section" aria-label="Anchor link to header"></a></h4>
-<ol style="list-style-type: decimal">
-<li><p>The latest version of <code>RTools</code> can be downloaded from <a href="https://cran.r-project.org/bin/windows/Rtools/" class="uri">https://cran.r-project.org/bin/windows/Rtools/</a> and run in the Windows-style installer.
-You will need to know if you have a 32-bit or 64-bit Windows machine (right-click <code>This PC</code> in Windows Explorer and check the properties if you are unsure).</p></li>
-<li><p>Don’t forget to add <code>RTools</code> to the path as documented on the download page.</p></li>
-</ol>
 </div>
-<div id="how-to-build-r" class="section level4 hasAnchor" number="2.4.2.3">
-<h4><span class="header-section-number">2.4.2.3</span> How to build R?<a href="GetStart.html#how-to-build-r" class="anchor-section" aria-label="Anchor link to header"></a></h4>
-<p>To build R for Windows using <code>RTools</code> follow the instructions in this <a href="https://github.com/r-windows/r-base#readme">README</a> file.
-There are two options available to build R.
-One is the quick development build and the other option is the full installer build.</p>
-<p>For development and testing, you need only the quick development build.
-The quick build avoids building the manuals, which are generally not needed for development and testing.</p>
-<p>However, even for the quick build there are some <a href="https://github.com/r-windows/r-base/blob/master/quick-build.sh">default requirements</a>.
-For instance, MikTeX is to be installed in <code>C:/Program Files</code> and you have 64-bit R.
-If necessary, these defaults can be customised.
-The installation path of MikTex can be customised <a href="https://github.com/r-windows/r-base/blob/50a229fc76c50a5fb42c0daa367466aaf2318171/quick-build.sh#L13">here</a> whereas the Windows bit can be customised <a href="https://github.com/r-windows/r-base/blob/50a229fc76c50a5fb42c0daa367466aaf2318171/quick-build.sh#L6">here</a>.</p>
-<p>If you are a maintainer of the Windows CRAN releases then, the full installer build is available for building the complete installer as it appears on CRAN.
-It will build both the 32-bit and 64-bit R, the pdf manuals, and the installer program.
-You will use this to create the binary builds and not when building R from the source yourself.</p>
+<div id="macos" class="section level3 hasAnchor" number="2.3.3">
+<h3><span class="header-section-number">2.3.3</span> macOS<a href="GetStart.html#macos" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 </div>
 </div>
-<div id="how-to-download-the-r-sources-directly-or-from-the-svn-repository" class="section level3 hasAnchor" number="2.4.3">
-<h3><span class="header-section-number">2.4.3</span> How to download the R sources directly or from the svn repository?<a href="GetStart.html#how-to-download-the-r-sources-directly-or-from-the-svn-repository" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<ul>
-<li><p>To download the R sources on Windows, you can use <code>tar</code> from the RStudio terminal.</p></li>
-<li><p>If you want to checkout the sources from svn, it is probably best to install an SVN client.
-Either TortoiseSVN (<a href="https://tortoisesvn.net/" class="uri">https://tortoisesvn.net/</a>, command line tool, and Windows Explorer integration) or SlikSVN (<a href="https://sliksvn.com/download/" class="uri">https://sliksvn.com/download/</a>, just the command line tool) is recommended.
-They have simple Windows installers and you can use svn straight-away from Windows cmd or RStudio terminal.</p></li>
-</ul>
-</div>
-</div>
-<div id="see-also" class="section level2 hasAnchor" number="2.5">
-<h2><span class="header-section-number">2.5</span> See also<a href="GetStart.html#see-also" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="see-also" class="section level2 hasAnchor" number="2.4">
+<h2><span class="header-section-number">2.4</span> See also<a href="GetStart.html#see-also" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <ol style="list-style-type: decimal">
 <li><p><a href="https://cran.r-project.org">CRAN official website</a></p></li>
 <li><p><a href="https://cran.r-project.org/doc/manuals/r-patched/R-admin.html">R installation and administration manual</a></p></li>
+<li><p><a href="https://mac.r-project.org/">R for macOS</a></p></li>
+<li><p><a href="https://mac.r-project.org/tools/">Tools for R in macOS</a></p></li>
+<li><p><a href="https://mac.r-project.org/src/">R for requirements in macOS</a></p></li>
 <li><p><a href="https://cran.r-project.org/bin/windows/base/rw-FAQ.html">R for Windows FAQ</a></p></li>
 <li><p><a href="https://cran.r-project.org/bin/windows/Rtools/">Rtools40 manual for Windows</a></p></li>
 <li><p><a href="https://cran.r-project.org/doc/FAQ/R-FAQ.html">R FAQ</a></p></li>
@@ -493,6 +498,7 @@ They have simple Windows installers and you can use svn straight-away from Windo
 <ol start="2">
 <li id="fn2"><p>Also known as <a href="https://en.wikipedia.org/wiki/Software_versioning#Semantic_versioning" title="Wikipedia explanation of semantic versioning">semantic versioning</a><a href="GetStart.html#fnref2" class="footnote-back">↩︎</a></p></li>
 <li id="fn3"><p>Recommended packages are not in the subversion repository.<a href="GetStart.html#fnref3" class="footnote-back">↩︎</a></p></li>
+<li id="fn4"><p>Recommended packages are not in the subversion repository.<a href="GetStart.html#fnref4" class="footnote-back">↩︎</a></p></li>
 </ol>
 </div>
             </section>
