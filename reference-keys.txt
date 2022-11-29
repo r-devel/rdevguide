@@ -59,7 +59,7 @@ examples-of-reviewing-a-patch
 see-also-4
 Doc
 introduction-2
-guidelines-for-writing-the-system-help-files-in-.rd-format
+guidelines-for-writing-r-help-files
 helping-with-documentation
 proofreading
 helping-with-the-developers-guide
