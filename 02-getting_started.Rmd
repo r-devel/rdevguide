@@ -35,103 +35,38 @@ If you need to install svn you can use your distribution's package manager to in
 
 ### Ubuntu
 
-In Ubuntu you can use :
-
-<!-- # Command to obtain it: apt-rdepends --build-depends --follow=DEPENDS r-base | grep " B" | sed -e "s/ Build-Depends: //" | sort -->
+In Ubuntu you can use this command to find all the dependencies of R:
 
 ```sh
-sudo apt-get install -y \
-      bash-completion \
-      bison \
-      debhelper-compat \
-      default-jdk \
-      g++ \
-      gcc \
-      gfortran \
-      groff-base \
-      libblas-dev \
-      libbz2-dev \
-      libcairo2-dev \
-      libcurl4-dev \
-      libcurl4-openssl-dev \
-      libjpeg-dev \
-      liblapack-dev \
-      liblzma-dev \
-      libncurses5-dev \
-      libpango1.0-dev \
-      libpcre2-dev \
-      libpcre3-dev \
-      libpng-dev \
-      libreadline-dev \
-      libtiff5-dev \
-      libx11-dev \
-      libxt-dev \
-      mpack \
-      rsync \
-      tcl8.6-dev \
-      texinfo \
-      texlive-base \
-      texlive-extra-utils \
-      texlive-fonts-extra \
-      texlive-fonts-recommended \
-      texlive-latex-base \
-      texlive-latex-extra \
-      texlive-latex-recommended \
-      texlive-plain-generic \
-      tk8.6-dev \
-      x11proto-core-dev \
-      xauth \
-      xdg-utils \
-      xfonts-base \
-      xvfb \
-      zlib1g-dev 
+apt-rdepends --build-depends --follow=DEPENDS r-base-dev | grep " B" | sed -e "s/  Build-Depends: //"
+```
+
+It might require installation of apt-rdepends which can be done from default repositories via `sudo apt-get install apt-rdepends`.
+
+To install all the R dependencies you can use:
+
+```sh
+sudo apt-get build-dep r-base-dev
 ```
 
 ### Fedora
 
-<!-- # Command to obtain it: dnf rq -q --repo=fedora-source --requires R -->
-<!-- # Plus the rsync package-->
-
-In Fedora you can use:
+In Fedora you can use this command to find all the dependencies of R:
 
 ```sh
-sudo dnf install -y \
-    autoconf \
-    automake \
-    bzip2-devel \
-    cairo-devel \
-    flexiblas-devel \
-    gcc-c++ \
-    gcc-gfortran \
-    java-devel \
-    less \
-    libICE-devel \
-    libSM-devel \
-    libX11-devel \
-    libXmu-devel \
-    libXt-devel \
-    libcurl-devel \
-    libicu-devel \
-    libjpeg-devel \
-    libpng-devel \
-    libtiff-devel \
-    libtool \
-    ncurses-devel \
-    pango-devel \
-    pcre2-devel \
-    readline-devel \
-    rsync \
-    tcl-devel \
-    'tex(inconsolata.sty)' \
-    'tex(latex)' \
-    'tex(upquote.sty)' \
-    texinfo-tex \
-    tk-devel \
-    tre-devel \
-    valgrind-devel \
-    xz-devel \
-    zlib-devel
+dnf rq -q --repo=fedora-source --requires R 
 ```
+
+You will also need the rsync package to download the recommended packages. 
+
+To install them you can use:
+
+```sh
+dnf install 'dnf-command(builddep)'
+dnf install rsync
+dnf builddep R
+```
+
 
 ## Building R 
 
