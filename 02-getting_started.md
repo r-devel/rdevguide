@@ -37,6 +37,7 @@ If you need to install svn you can use your distribution's package manager to in
 
 In Ubuntu you can use :
 
+<!-- # Command to obtain it: apt-rdepends --build-depends --follow=DEPENDS r-base | grep " B" | sed -e "s/ Build-Depends: //" | sort -->
 
 ```sh
 sudo apt-get install -y \
@@ -66,6 +67,7 @@ sudo apt-get install -y \
       libx11-dev \
       libxt-dev \
       mpack \
+      rsync \
       tcl8.6-dev \
       texinfo \
       texlive-base \
@@ -83,6 +85,52 @@ sudo apt-get install -y \
       xfonts-base \
       xvfb \
       zlib1g-dev 
+```
+
+### Fedora
+
+<!-- # Command to obtain it: dnf rq -q --repo=fedora-source --requires R -->
+<!-- # Plus the rsync package-->
+
+In Fedora you can use:
+
+```sh
+sudo dnf install -y \
+    autoconf \
+    automake \
+    bzip2-devel \
+    cairo-devel \
+    flexiblas-devel \
+    gcc-c++ \
+    gcc-gfortran \
+    java-devel \
+    less \
+    libICE-devel \
+    libSM-devel \
+    libX11-devel \
+    libXmu-devel \
+    libXt-devel \
+    libcurl-devel \
+    libicu-devel \
+    libjpeg-devel \
+    libpng-devel \
+    libtiff-devel \
+    libtool \
+    ncurses-devel \
+    pango-devel \
+    pcre2-devel \
+    readline-devel \
+    rsync \
+    tcl-devel \
+    'tex(inconsolata.sty)' \
+    'tex(latex)' \
+    'tex(upquote.sty)' \
+    texinfo-tex \
+    tk-devel \
+    tre-devel \
+    valgrind-devel \
+    xz-devel \
+    zlib-devel
 ```
 
 ## Building R 

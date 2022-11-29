@@ -6,6 +6,7 @@ GetStart
 the-r-source-code
 prerequisites
 ubuntu
+fedora
 building-r
 linux
 windows
