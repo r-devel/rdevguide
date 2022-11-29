@@ -1,7 +1,7 @@
 on:
   push:
      branches:
-       - master
+       - main
 
 
 name: renderbook
@@ -37,7 +37,7 @@ jobs:
    needs: bookdown
    steps:
      - name: Checkout
-       uses: actions/checkout@master
+       uses: actions/checkout@main
      - name: Download artifact
        uses: actions/download-artifact@v1.0.0
        with:
