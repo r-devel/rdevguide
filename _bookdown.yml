@@ -5,3 +5,4 @@ output_dir: docs
 clean: [packages.bib, bookdown.bbl]
 new_session: yes
 edit: https://github.com/r-devel/rdevguide/edit/main/%s
+delete_merged_file: true

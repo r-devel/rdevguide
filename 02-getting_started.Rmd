@@ -27,14 +27,9 @@ The `r-devel` at [R/trunk](https://svn.r-project.org/R/trunk "svn devel source c
 Bug fixes and new features are introduced in `r-devel` first. 
 If the change meets the [development guidelines](https://developer.r-project.org/devel-guidelines.txt) R Core will also make the change in `r-patched`.
 
-## Prerequisites  {.tabset}
+## Prerequisites
 
 To install from the source code you will need the source code and the dependencies of R.
-
-Retrieve R source code via into `TOP_SRCDIR`, note that we retrieve the r-devel source code:
-
-      export TOP_SRCDIR="$HOME/Downloads/R"
-      svn checkout https://svn.r-project.org/R/trunk/ $TOP_SRCDIR
 
 If you need to install svn you can use your distribution's package manager to install it.
 
@@ -42,174 +37,309 @@ If you need to install svn you can use your distribution's package manager to in
 
 In Ubuntu you can use :
 
-      sudo apt-get install -y \
-          bash-completion \
-          bison \
-          debhelper-compat (= 11) \
-          default-jdk \
-          g++ (>= 4:4.9.2-2) \
-          gcc (>= 4:4.9.2-2) \
-          gfortran (>= 4:4.9.2-2) \
-          groff-base \
-          libblas-dev \
-          libbz2-dev \
-          libcairo2-dev \
-          libcurl4-dev \
-          libcurl4-openssl-dev \
-          libjpeg-dev \
-          liblapack-dev \
-          liblzma-dev \
-          libncurses5-dev \
-          libpango1.0-dev \
-          libpcre2-dev \
-          libpcre3-dev \
-          libpng-dev \
-          libreadline-dev \
-          libtiff5-dev \
-          libx11-dev \
-          libxt-dev \
-          mpack \
-          tcl8.6-dev \
-          texinfo (>= 4.1-2) \
-          texlive-base \
-          texlive-extra-utils \
-          texlive-fonts-extra \
-          texlive-fonts-recommended \
-          texlive-latex-base \
-          texlive-latex-extra \
-          texlive-latex-recommended \
-          texlive-plain-generic \
-          tk8.6-dev \
-          x11proto-core-dev \
-          xauth \
-          xdg-utils \
-          xfonts-base \
-          xvfb \
-          zlib1g-dev
+<!-- # Command to obtain it: apt-rdepends --build-depends --follow=DEPENDS r-base | grep " B" | sed -e "s/ Build-Depends: //" | sort -->
 
+```sh
+sudo apt-get install -y \
+      bash-completion \
+      bison \
+      debhelper-compat \
+      default-jdk \
+      g++ \
+      gcc \
+      gfortran \
+      groff-base \
+      libblas-dev \
+      libbz2-dev \
+      libcairo2-dev \
+      libcurl4-dev \
+      libcurl4-openssl-dev \
+      libjpeg-dev \
+      liblapack-dev \
+      liblzma-dev \
+      libncurses5-dev \
+      libpango1.0-dev \
+      libpcre2-dev \
+      libpcre3-dev \
+      libpng-dev \
+      libreadline-dev \
+      libtiff5-dev \
+      libx11-dev \
+      libxt-dev \
+      mpack \
+      rsync \
+      tcl8.6-dev \
+      texinfo \
+      texlive-base \
+      texlive-extra-utils \
+      texlive-fonts-extra \
+      texlive-fonts-recommended \
+      texlive-latex-base \
+      texlive-latex-extra \
+      texlive-latex-recommended \
+      texlive-plain-generic \
+      tk8.6-dev \
+      x11proto-core-dev \
+      xauth \
+      xdg-utils \
+      xfonts-base \
+      xvfb \
+      zlib1g-dev 
+```
 
-### Windows
+### Fedora
 
-Install MSYS and rtools42
+<!-- # Command to obtain it: dnf rq -q --repo=fedora-source --requires R -->
+<!-- # Plus the rsync package-->
 
-### macOS
+In Fedora you can use:
 
+```sh
+sudo dnf install -y \
+    autoconf \
+    automake \
+    bzip2-devel \
+    cairo-devel \
+    flexiblas-devel \
+    gcc-c++ \
+    gcc-gfortran \
+    java-devel \
+    less \
+    libICE-devel \
+    libSM-devel \
+    libX11-devel \
+    libXmu-devel \
+    libXt-devel \
+    libcurl-devel \
+    libicu-devel \
+    libjpeg-devel \
+    libpng-devel \
+    libtiff-devel \
+    libtool \
+    ncurses-devel \
+    pango-devel \
+    pcre2-devel \
+    readline-devel \
+    rsync \
+    tcl-devel \
+    'tex(inconsolata.sty)' \
+    'tex(latex)' \
+    'tex(upquote.sty)' \
+    texinfo-tex \
+    tk-devel \
+    tre-devel \
+    valgrind-devel \
+    xz-devel \
+    zlib-devel
+```
 
-## Building R in Linux
+## Building R 
+
+### Linux
 
 Here are the basic steps intended as a checklist.
 For complete instructions please see the section in [R-admin](https://cran.r-project.org/doc/manuals/r-devel/R-admin.html#Installing-R-under-Unix_002dalikes).
 
+0. Retrieve R source code via into `TOP_SRCDIR`, note that we retrieve the `r-devel` source code:
+
+    ```sh
+    export TOP_SRCDIR="$HOME/Downloads/R"
+    svn checkout https://svn.r-project.org/R/trunk/ "$TOP_SRCDIR"
+    ```
+
 1.  Download the latest recommended packages[^02-getting_started-2]:
 
-        $TOP_SRCDIR/tools/rsync-recommended
+    ```sh
+    "$TOP_SRCDIR/tools/rsync-recommended"
+    ```
 
 3.  Create the build directory in the `BUILDDIR`:
 
-        export BUILDDIR="$HOME/bin/R"
-        mkdir -p $BUILDDIR
-        cd $BUILDDIR
+    ```sh
+    export BUILDDIR="$HOME/bin/R"
+    mkdir -p "$BUILDDIR"
+    cd "$BUILDDIR"
+    ```
         
 4.  Configure the R installation (with `--enable-R-shlib` so that RStudio IDE can use it):
         
-        $TOP_SRCDIR/configure --enable-R-shlib
+    ```sh
+    "$TOP_SRCDIR/configure" --enable-R-shlib
+    ```
         
 4.  Build R :
 
-        make 
+    ```sh
+    make
+    ```
 
 
 5.  Check that R works as expected:
 
-        make check
+    ```sh
+    make check
+    ```
 
     There are other checks you can run:
 
-        make check-devel
-        make check-recommended
+    ```sh
+    make check-devel
+    make check-recommended
+    ```
+
 
 [^02-getting_started-2]: Recommended packages are not in the subversion repository.
 
+
 If we don't want to build R in a different directory than the source code we can simply use:
 
-    cd $TOP_SRCDIR 
-    svn update
-    tools/rsync-recommended
-    $TOP_SRCDIR/configure  --enable-R-shlib
-    make 
-    make check
+```sh
+cd "$TOP_SRCDIR"
+svn update
+tools/rsync-recommended
+"$TOP_SRCDIR/configure"  --enable-R-shlib
+make 
+make check
+```
 
 Once you successfully build R from source you can modify R source code to fix an issue: Prepare a patch (See [this guide](https://www.r-project.org/bugs.html#how-to-submit-patches)) and after checking that R works as intended (`make check-devel`) submit the patch for the R core consideration.
 (See the [lifecycle of a patch](#FixBug) chapter).
 
 
-To use the r-devel version in RStudio to you can do the following:
+To use the `r-devel` version in RStudio to you can do the following:
 
-    export RSTUIDO_WHICH_R="$BUILDDIR/bin/R"
-    cd $TOP_SRCDIR
-    rstudio
+```sh
+export RSTUIDO_WHICH_R="$BUILDDIR/bin/R"
+cd "$TOP_SRCDIR"
+rstudio
+```
 
 
-## Windows
+### Windows
 
-### Installing R {#installR}
+#### Binaries
 
-1.  The binary builds of R for Windows can be downloaded and installed from [here](https://cran.r-project.org/bin/windows/base/).
-    Along with the link to the latest stable release, this page also contains links to the binary builds of r-patched and r-devel.
+The binary builds of R for Windows can be downloaded and installed from [here](https://cran.r-project.org/bin/windows/base/).
+Along with the link to the latest stable release, this page also contains links to the binary builds of `r-patched` and `r-devel`.
 
-2.  Click on the download links to download an executable installer.
+1.  Click on the download links to download an executable installer.
 
-3.  Select the language while installing, read the GNU general public license information, and select the destination location to start the installation.
-    You will be prompted to select components at this stage: `User installation`, `32-bit User installation`, `64-bit User installation`, or `Custom installation`.
+2.  Select the language while installing, read the GNU general public license information, and select the destination location to start the installation.
+    You will be prompted to select components at this stage: `User installation`, `64-bit User installation`, or `Custom installation`.
     The default option may be chosen for the questions from this step onwards to complete the installation.
+    
+Daily binaries for `r-devel` are made available for [download and installation](https://cran.r-project.org/bin/windows/base/rdevel.html). 
 
-### Building R and R packages
+#### From source
 
-#### What tools do you need to build R from source on Windows?
+Before installing R from source, some additional programs are needed, as per the [latest documentation](https://cran.r-project.org/bin/windows/base/howto-R-4.2.html):
 
-1.  [RTools](https://github.com/r-windows/docs/blob/master/faq.md#what-is-rtools) is the toolchain bundle that you can use to build R base and R packages containing compiled code, on Windows.
+1.  [Rtools](https://cran.r-project.org/bin/windows/Rtools/) is the suggested toolchain bundle for building R base and R packages containing compiled code on Windows. 
+  The latest [version of Rtools42](https://cran.r-project.org/bin/windows/Rtools/rtools42/rtools.html) can be installed using the [Rtools installer rtools42-XXXX-XXX.exe ](https://cran.r-project.org/bin/windows/Rtools/rtools42/files/).
 
-2.  You also need a distribution of LaTeX installed for building R and checking packages.
-    The MiKTeX distribution of LaTeX that is used on CRAN can be downloaded from <https://miktex.org>.
+2.  A LaTeX compiler is needed to install and build R, check packages and build  manuals. 
+    On CRAN, MiKTeX is used, which can be downloaded from <https://miktex.org>. 
+    Once installed open MiKTeX via the Windows start menu.
+    It might ask to check for updates and more importantly, to make it available in PATH. You can accept both.
 
-#### How to setup `RTools`?
+1.  Open the Rtools42 terminal to update and install subversion:
 
-1.  The latest version of `RTools` can be downloaded from <https://cran.r-project.org/bin/windows/Rtools/> and run in the Windows-style installer.
-    You will need to know if you have a 32-bit or 64-bit Windows machine (right-click `This PC` in Windows Explorer and check the properties if you are unsure).
+    ```sh
+    pacman -Syuu
+    pacman -Sy wget subversion
+    ```
+    
+3. Retrieve the latest source code via subversion:
 
-2.  Don't forget to add `RTools` to the path as documented on the download page.
+    ```sh
+    export TOP_SRCDIR="$HOME/Downloads/R"
+    svn checkout https://svn.r-project.org/R/trunk/ "$TOP_SRCDIR"
+    ```
 
-#### How to build R?
+    If you already have the repository available you can update as:
 
-To build R for Windows using `RTools` follow the instructions in this [README](https://github.com/r-windows/r-base#readme) file.
-There are two options available to build R.
-One is the quick development build and the other option is the full installer build.
+    ```sh
+    cd $TOP_SRCDIR
+    svn update
+    ```
 
-For development and testing, you need only the quick development build.
-The quick build avoids building the manuals, which are generally not needed for development and testing.
+    You can also use a SVN client such as TortoiseSVN (<https://tortoisesvn.net/>, command line tool, and Windows Explorer integration) or SlikSVN (<https://sliksvn.com/download/>, just the command line tool) so that it can be also found by other tools.
 
-However, even for the quick build there are some [default requirements](https://github.com/r-windows/r-base/blob/master/quick-build.sh).
-For instance, MikTeX is to be installed in `C:/Program Files` and you have 64-bit R.
-If necessary, these defaults can be customised.
-The installation path of MikTex can be customised [here](https://github.com/r-windows/r-base/blob/50a229fc76c50a5fb42c0daa367466aaf2318171/quick-build.sh#L13) whereas the Windows bit can be customised [here](https://github.com/r-windows/r-base/blob/50a229fc76c50a5fb42c0daa367466aaf2318171/quick-build.sh#L6).
+2. Download the latest tcl/tk and unzip it in `$TOP_SRCDIR`:
 
-If you are a maintainer of the Windows CRAN releases then, the full installer build is available for building the complete installer as it appears on CRAN.
-It will build both the 32-bit and 64-bit R, the pdf manuals, and the installer program.
-You will use this to create the binary builds and not when building R from the source yourself.
+    ```sh
+    cd "$TOP_SRCDIR"
+    wget -np -nd -r -l1 -A 'tcltk-*.zip' https://cran.r-project.org/bin/windows/Rtools/rtools42/files/
+    unzip "tcltk-*.zip"
+    ```
 
-### How to download the R sources directly or from the svn repository?
+3. Add gcc, MiKTeX and tar to the PATH and set one tar option:
 
--   To download the R sources on Windows, you can use `tar` from the RStudio terminal.
+    ```sh
+    export PATH="/x86_64-w64-mingw32.static.posix/bin:$PATH"
+    export PATH="/c/Program\ Files/MiKTeX/miktex/bin/x64:$PATH"
+    export TAR="/usr/bin/tar"
+    export TAR_OPTIONS="--force-local"
+    ```
 
--   If you want to checkout the sources from svn, it is probably best to install an SVN client.
-    Either TortoiseSVN (<https://tortoisesvn.net/>, command line tool, and Windows Explorer integration) or SlikSVN (<https://sliksvn.com/download/>, just the command line tool) is recommended.
-    They have simple Windows installers and you can use svn straight-away from Windows cmd or RStudio terminal.
+    If MiKTeX was installed just for your user you might need to run:
+
+    ```sh
+    export PATH="/c/Users/$USER/AppData/Local/Programs/MiKTeX/miktex/bin/x64:$PATH"
+    ```
+   
+4. Check that all the programs can be found:
+
+    ```sh
+    which make gcc pdflatex tar
+    ```
+
+    If there is any error you'll need to find where the program is installed and add the corresponding path.
+    
+5.  Download the latest recommended packages[^02-getting_started-2]:
+
+    ```sh
+    cd "$TOP_SRCDIR/src/gnuwin32/"
+    "$TOP_SRCDIR/tools/rsync-recommended"
+    ```
+
+6.  Build R and the recommended packages:
+
+    ```sh
+    make all recommended
+    ```
+
+    The recently compiled version of R will be at `$TOP_SRCDIR/bin/`.
+    In RStudio you can select that folder and restart it to use the `r-devel` version.
+
+7.  Check that R works as expected:
+
+    ```sh
+    make check
+    ```
+
+    There are other checks you can run for testing the successful installation of the recommended packages:
+
+    ```sh
+    make check-devel
+    make check-recommended
+    ```
+
+
+### macOS
+
 
 ## See also
 
 1.  [CRAN official website](https://cran.r-project.org)
 
 2.  [R installation and administration manual](https://cran.r-project.org/doc/manuals/r-patched/R-admin.html)
+
+3.  [R for macOS](https://mac.r-project.org/)
+
+3.  [Tools for R in macOS](https://mac.r-project.org/tools/)
+
+3.  [R for requirements in macOS](https://mac.r-project.org/src/)
 
 3.  [R for Windows FAQ](https://cran.r-project.org/bin/windows/base/rw-FAQ.html)
 
