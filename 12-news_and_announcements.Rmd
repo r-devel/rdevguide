@@ -4,7 +4,7 @@ Here are some resources that can be useful to keep up with the developments in R
 
 ## Blogs
 
-The [R project](https://www.r-project.org/) maintains a list of public [blogs](https://developer.r-project.org/Blog/public/) mainly written by the R Core Development Team. Daily news about R-devel can be found [here](https://developer.r-project.org/blosxom.cgi/R-devel).
+The [R project](https://www.r-project.org/) maintains a list of public [blogs](https://blog.r-project.org/) mainly written by the R Core Development Team. Daily news about R-devel can be found on the [Daily News about R-devel](https://developer.r-project.org/blosxom.cgi/R-devel) blog which is updated daily.
 
 ## Conferences
 
