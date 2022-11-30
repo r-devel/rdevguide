@@ -45,7 +45,7 @@ There is also a section for Common Queries on the home page which includes links
 
 ### Preparing to review bug reports 
 
-If you want to review bug reports on Bugzilla, you are required to have a Bugzilla account. To get a Bugzilla account send an e-mail to `bug-report-request@r-project.org` from the address you want to use as your Bugzilla login. Briefly explain why you want a Bugzilla account and a volunteer will add you to R's Bugzilla members. More details on how you can review a bug report are available on this [blog](https://developer.r-project.org/Blog/public/2019/10/09/r-can-use-your-help-reviewing-bug-reports/)
+If you want to review bug reports on Bugzilla, you are required to have a Bugzilla account. To get a Bugzilla account send an e-mail to `bug-report-request@r-project.org` from the address you want to use as your Bugzilla login. Briefly explain why you want a Bugzilla account and a volunteer will add you to R's Bugzilla members. More details on how you can review a bug report are available on this [blog](https://blog.r-project.org/2019/10/09/r-can-use-your-help-reviewing-bug-reports/index.html)
 
 ## Classifying bug reports
 
@@ -81,4 +81,4 @@ There is a `#bug-reporting` channel on the [R Contributors slack](https://r-cont
 
 ## See also
 
-1. [Reviewing bug reports: Blog](https://developer.r-project.org/Blog/public/2019/10/09/r-can-use-your-help-reviewing-bug-reports/)
+1. [Reviewing bug reports: Blog](https://blog.r-project.org/2019/10/09/r-can-use-your-help-reviewing-bug-reports/index.html)
