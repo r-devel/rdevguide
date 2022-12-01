@@ -4,7 +4,7 @@ Here are some resources that can be useful to keep up with the developments in R
 
 ## Blogs
 
-The [R project](https://www.r-project.org/) maintains a list of public [blogs](https://blog.r-project.org/) mainly written by the R Core Development Team. Daily news about R-devel can be found on the [Daily News about R-devel](https://developer.r-project.org/blosxom.cgi/R-devel) blog which is updated daily.
+The [R project](https://www.r-project.org/) maintains [The R Blog](https://blog.r-project.org/) with posts mainly written by the R Core Team. News of changes in the development version of R found on the [Daily News about R-devel](https://developer.r-project.org/blosxom.cgi/R-devel) blog which is updated daily.
 
 ## Conferences
 
@@ -14,7 +14,6 @@ Updates about conferences actively supported or endorsed by The R Foundation can
 
 [The R Journal](https://journal.r-project.org/) is an open access and refereed journal featuring short to medium length articles that should be of interest to users or developers of R. It also has a news section where information on, changes in R (new features of the latest release), changes on CRAN (new add-on packages, manuals, binary contributions, mirrors, etc.), upcoming conferences, and conference reports is provided.
 
-
 ## Mailing lists
 
   * [R-announce](https://stat.ethz.ch/mailman/listinfo/r-announce): A moderated mailing list used for announcements by the R Core Development Team. Major announcements about the development of R and the availability of new code are made here.
@@ -22,4 +21,4 @@ Updates about conferences actively supported or endorsed by The R Foundation can
 
 ## Twitter
 
-Follow [\@R_dev_news](https://twitter.com/R_dev_news) on Twitter for the [R development updates](https://developer.r-project.org/RSSfeeds.html) and [blog post](https://developer.r-project.org/Blog/public/) announcements.
+Follow [\@R_dev_news](https://twitter.com/R_dev_news) on Twitter for news of [changes in the development version of R](https://developer.r-project.org/RSSfeeds.html) and new posts on [The R Blog](https://blog.r-project.org/) announcements.
