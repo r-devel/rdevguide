@@ -19,4 +19,15 @@ These links can be shared through a pull request or by opening a new issue.
 - Translating content of this repository
 - Conducting literature review for the work on this project
 
+# How to add a contributor?
+
+1. To add a contributor to this repository, comment on the relevant Issue or Pull Request, asking `@all-contributors` to add a contributor:
+```sh
+@all-contributors please add @<github-username> for <contributions>
+```
+
+2. After this the bot will The bot create a Pull Request to add the contributor. Further it reply with the pull request details. 
+![Example of using the All Contributors bot]()
+
+3. Once the repository admins review and approve this Pull Request, the contributor will be listed on the repository.
 
