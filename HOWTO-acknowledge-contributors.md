@@ -60,4 +60,5 @@ Replace `<contribution>` with the appropriate keyword available in the `Type` co
 - The bot uses a [basic Natural Language Parsing](https://github.com/all-contributors/app/blob/master/lib/parse-comment.js) to determine the intent of your comment. Hence, your request to the bot doesn't need to be perfect. For example, the following will work too:
 ```sh
 Jane you have written excellent documentation and your infrastructure work has been great too. Let's add `@jane.doe23` for her contributions. cc `@all-contributors`
-``` If you precede the contributor's username with @ as shown above, then the bot will work best in parsing the comment correctly. Otherwise, the bot may not correctly identify the user.
+```
+If you precede the contributor's username with @ as shown above, then the bot will work best in parsing the comment correctly. Otherwise, the bot may not correctly identify the user.
