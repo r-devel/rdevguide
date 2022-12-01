@@ -61,4 +61,4 @@ Replace `<contribution>` with the appropriate keyword available in the `Type` co
 ```sh
 Jane you have written excellent documentation and your infrastructure work has been great too. Let's add `@jane.doe23` for her contributions. cc `@all-contributors`
 ```
-If you precede the contributor's username with @ as shown above, then the bot will work best in parsing the comment correctly. Otherwise, the bot may not correctly identify the user.
+If you precede the contributor's username with `@` as shown above, then the bot will work best in parsing the comment correctly. Otherwise, the bot may not correctly identify the user.
