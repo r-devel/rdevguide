@@ -19,15 +19,42 @@ These links can be shared through a pull request or by opening a new issue.
 - Translating content of this repository
 - Conducting literature review for the work on this project
 
-# How to add a contributor?
+# How to add Contributor(s)?
 
-1. To add a contributor to this repository, comment on the relevant Issue or Pull Request, asking `@all-contributors` to add a contributor:
-```sh
-@all-contributors please add @<github-username> for <contributions>
-```
+1. To add a Contributor to this repository, comment on the relevant Issue or Pull Request, asking `@all-contributors` to add a Contributor:
 
-2. After this the bot will The bot create a Pull Request to add the contributor. Further it reply with the pull request details. 
-![Example of using the All Contributors bot]()
+   ```sh
+   @all-contributors please add @<github-username> for <contribution>
+   ```
 
-3. Once the repository admins review and approve this Pull Request, the contributor will be listed on the repository.
+2. After this the bot will The bot create a Pull Request to add the Contributor. Further it reply with the pull request details. 
+![Example of using the All Contributors bot](img/bot-usage.png)
 
+3. Once the repository Admins review and approve this Pull Request, the Contributor will be listed on the repository.
+
+4. Multiple Contributors can also be added at the same time using a single line or multiple lines:
+
+  - Using single line
+    ```sh
+    @all-contributors please add @<github-username> for <contribution>. please add @<github-username> for <contribution>.
+    ```
+
+  - Using multiple lines
+    ```sh
+    @all-contributors
+    please add @<username> for <contribution>. 
+    please add @<username> for <contribution>.
+    ```
+
+5. Multiple contributions can be included separated by comma (,):
+
+    ```sh
+   @all-contributors please add @<github-username> for <contribution-1>, <contribution-2>, <contribution-3>
+   ```
+   
+## Note: 
+
+- A list of valid contribution types is available on the [Emoji Key (and Contribution Types)](https://allcontributors.org/docs/en/emoji-key) page.
+Replace `<contribution>` with the appropriate keyword available in the `Type` column of the Emoji Key table. 
+
+- 
