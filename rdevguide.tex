@@ -262,101 +262,44 @@ If you need to install svn you can use your distribution's package manager to in
 \hypertarget{ubuntu}{%
 \subsection{Ubuntu}\label{ubuntu}}
 
-In Ubuntu you can use :
+In Ubuntu you can use this command to find all the dependencies of R:
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\FunctionTok{sudo}\NormalTok{ apt{-}get install }\AttributeTok{{-}y} \DataTypeTok{\textbackslash{}}
-\NormalTok{      bash{-}completion }\DataTypeTok{\textbackslash{}}
-\NormalTok{      bison }\DataTypeTok{\textbackslash{}}
-\NormalTok{      debhelper{-}compat }\DataTypeTok{\textbackslash{}}
-\NormalTok{      default{-}jdk }\DataTypeTok{\textbackslash{}}
-\NormalTok{      g++ }\DataTypeTok{\textbackslash{}}
-\NormalTok{      gcc }\DataTypeTok{\textbackslash{}}
-\NormalTok{      gfortran }\DataTypeTok{\textbackslash{}}
-\NormalTok{      groff{-}base }\DataTypeTok{\textbackslash{}}
-\NormalTok{      libblas{-}dev }\DataTypeTok{\textbackslash{}}
-\NormalTok{      libbz2{-}dev }\DataTypeTok{\textbackslash{}}
-\NormalTok{      libcairo2{-}dev }\DataTypeTok{\textbackslash{}}
-\NormalTok{      libcurl4{-}dev }\DataTypeTok{\textbackslash{}}
-\NormalTok{      libcurl4{-}openssl{-}dev }\DataTypeTok{\textbackslash{}}
-\NormalTok{      libjpeg{-}dev }\DataTypeTok{\textbackslash{}}
-\NormalTok{      liblapack{-}dev }\DataTypeTok{\textbackslash{}}
-\NormalTok{      liblzma{-}dev }\DataTypeTok{\textbackslash{}}
-\NormalTok{      libncurses5{-}dev }\DataTypeTok{\textbackslash{}}
-\NormalTok{      libpango1.0{-}dev }\DataTypeTok{\textbackslash{}}
-\NormalTok{      libpcre2{-}dev }\DataTypeTok{\textbackslash{}}
-\NormalTok{      libpcre3{-}dev }\DataTypeTok{\textbackslash{}}
-\NormalTok{      libpng{-}dev }\DataTypeTok{\textbackslash{}}
-\NormalTok{      libreadline{-}dev }\DataTypeTok{\textbackslash{}}
-\NormalTok{      libtiff5{-}dev }\DataTypeTok{\textbackslash{}}
-\NormalTok{      libx11{-}dev }\DataTypeTok{\textbackslash{}}
-\NormalTok{      libxt{-}dev }\DataTypeTok{\textbackslash{}}
-\NormalTok{      mpack }\DataTypeTok{\textbackslash{}}
-\NormalTok{      rsync }\DataTypeTok{\textbackslash{}}
-\NormalTok{      tcl8.6{-}dev }\DataTypeTok{\textbackslash{}}
-\NormalTok{      texinfo }\DataTypeTok{\textbackslash{}}
-\NormalTok{      texlive{-}base }\DataTypeTok{\textbackslash{}}
-\NormalTok{      texlive{-}extra{-}utils }\DataTypeTok{\textbackslash{}}
-\NormalTok{      texlive{-}fonts{-}extra }\DataTypeTok{\textbackslash{}}
-\NormalTok{      texlive{-}fonts{-}recommended }\DataTypeTok{\textbackslash{}}
-\NormalTok{      texlive{-}latex{-}base }\DataTypeTok{\textbackslash{}}
-\NormalTok{      texlive{-}latex{-}extra }\DataTypeTok{\textbackslash{}}
-\NormalTok{      texlive{-}latex{-}recommended }\DataTypeTok{\textbackslash{}}
-\NormalTok{      texlive{-}plain{-}generic }\DataTypeTok{\textbackslash{}}
-\NormalTok{      tk8.6{-}dev }\DataTypeTok{\textbackslash{}}
-\NormalTok{      x11proto{-}core{-}dev }\DataTypeTok{\textbackslash{}}
-\NormalTok{      xauth }\DataTypeTok{\textbackslash{}}
-\NormalTok{      xdg{-}utils }\DataTypeTok{\textbackslash{}}
-\NormalTok{      xfonts{-}base }\DataTypeTok{\textbackslash{}}
-\NormalTok{      xvfb }\DataTypeTok{\textbackslash{}}
-\NormalTok{      zlib1g{-}dev }
+\ExtensionTok{apt{-}rdepends} \AttributeTok{{-}{-}build{-}depends} \AttributeTok{{-}{-}follow}\OperatorTok{=}\NormalTok{DEPENDS r{-}base{-}dev }\KeywordTok{|} \FunctionTok{grep} \StringTok{" B"} \KeywordTok{|} \FunctionTok{sed} \AttributeTok{{-}e} \StringTok{"s/  Build{-}Depends: //"}
+\end{Highlighting}
+\end{Shaded}
+
+It might require installation of apt-rdepends which can be done from default repositories via \texttt{sudo\ apt-get\ install\ apt-rdepends}.
+
+To install all the R dependencies you can use:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{sudo}\NormalTok{ apt{-}get build{-}dep r{-}base{-}dev}
 \end{Highlighting}
 \end{Shaded}
 
 \hypertarget{fedora}{%
 \subsection{Fedora}\label{fedora}}
 
-In Fedora you can use:
+In Fedora you can use this command to find all the dependencies of R:
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\FunctionTok{sudo}\NormalTok{ dnf install }\AttributeTok{{-}y} \DataTypeTok{\textbackslash{}}
-\NormalTok{    autoconf }\DataTypeTok{\textbackslash{}}
-\NormalTok{    automake }\DataTypeTok{\textbackslash{}}
-\NormalTok{    bzip2{-}devel }\DataTypeTok{\textbackslash{}}
-\NormalTok{    cairo{-}devel }\DataTypeTok{\textbackslash{}}
-\NormalTok{    flexiblas{-}devel }\DataTypeTok{\textbackslash{}}
-\NormalTok{    gcc{-}c++ }\DataTypeTok{\textbackslash{}}
-\NormalTok{    gcc{-}gfortran }\DataTypeTok{\textbackslash{}}
-\NormalTok{    java{-}devel }\DataTypeTok{\textbackslash{}}
-\NormalTok{    less }\DataTypeTok{\textbackslash{}}
-\NormalTok{    libICE{-}devel }\DataTypeTok{\textbackslash{}}
-\NormalTok{    libSM{-}devel }\DataTypeTok{\textbackslash{}}
-\NormalTok{    libX11{-}devel }\DataTypeTok{\textbackslash{}}
-\NormalTok{    libXmu{-}devel }\DataTypeTok{\textbackslash{}}
-\NormalTok{    libXt{-}devel }\DataTypeTok{\textbackslash{}}
-\NormalTok{    libcurl{-}devel }\DataTypeTok{\textbackslash{}}
-\NormalTok{    libicu{-}devel }\DataTypeTok{\textbackslash{}}
-\NormalTok{    libjpeg{-}devel }\DataTypeTok{\textbackslash{}}
-\NormalTok{    libpng{-}devel }\DataTypeTok{\textbackslash{}}
-\NormalTok{    libtiff{-}devel }\DataTypeTok{\textbackslash{}}
-\NormalTok{    libtool }\DataTypeTok{\textbackslash{}}
-\NormalTok{    ncurses{-}devel }\DataTypeTok{\textbackslash{}}
-\NormalTok{    pango{-}devel }\DataTypeTok{\textbackslash{}}
-\NormalTok{    pcre2{-}devel }\DataTypeTok{\textbackslash{}}
-\NormalTok{    readline{-}devel }\DataTypeTok{\textbackslash{}}
-\NormalTok{    rsync }\DataTypeTok{\textbackslash{}}
-\NormalTok{    tcl{-}devel }\DataTypeTok{\textbackslash{}}
-    \StringTok{\textquotesingle{}tex(inconsolata.sty)\textquotesingle{}} \DataTypeTok{\textbackslash{}}
-    \StringTok{\textquotesingle{}tex(latex)\textquotesingle{}} \DataTypeTok{\textbackslash{}}
-    \StringTok{\textquotesingle{}tex(upquote.sty)\textquotesingle{}} \DataTypeTok{\textbackslash{}}
-\NormalTok{    texinfo{-}tex }\DataTypeTok{\textbackslash{}}
-\NormalTok{    tk{-}devel }\DataTypeTok{\textbackslash{}}
-\NormalTok{    tre{-}devel }\DataTypeTok{\textbackslash{}}
-\NormalTok{    valgrind{-}devel }\DataTypeTok{\textbackslash{}}
-\NormalTok{    xz{-}devel }\DataTypeTok{\textbackslash{}}
-\NormalTok{    zlib{-}devel}
+\ExtensionTok{dnf}\NormalTok{ rq }\AttributeTok{{-}q} \AttributeTok{{-}{-}repo}\OperatorTok{=}\NormalTok{fedora{-}source }\AttributeTok{{-}{-}requires}\NormalTok{ R }
+\end{Highlighting}
+\end{Shaded}
+
+You will also need the rsync package to download the recommended packages.
+
+To install them you can use:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\ExtensionTok{dnf}\NormalTok{ install }\StringTok{\textquotesingle{}dnf{-}command(builddep)\textquotesingle{}}
+\ExtensionTok{dnf}\NormalTok{ install rsync}
+\ExtensionTok{dnf}\NormalTok{ builddep R}
 \end{Highlighting}
 \end{Shaded}
 
