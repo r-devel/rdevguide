@@ -12,7 +12,7 @@ If the new code requires GUI interaction or accesses the Internet, then it is es
 
 Writing tests for R is much like writing tests for your own code. Tests need to be thorough, fast, isolated, consistently repeatable, and as simple as possible. 
 
-When you are adding tests to an existing test file, it is also recommended that you study the other tests in that file; it will teach you which precautions you have to take to make your tests robust and portable. We try to have tests both for normal behaviour and for error conditions. Tests live in the `tests` directory.
+Tests live in the [`tests` directory of the R sources](https://svn.r-project.org/R/trunk/tests/).
 
 ## Benchmarks
 
