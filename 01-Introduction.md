@@ -2,7 +2,7 @@
 
 This guide is a comprehensive resource for contributing to base R^[The [set of packages](https://cran.r-project.org/doc/FAQ/R-FAQ.html#Add_002don-packages-in-R) in the base R distribution that are maintained by the R Core Team.] – for both new and experienced contributors. It is maintained by the [R Contribution Working Group](/working-group). We welcome your contributions to base R!
 
-## Overview of different ways of contributing to base R Project
+## Overview of different ways of contributing to the base R Project
 
 Contributions to base R are possible in a number of different ways. Some of them are listed below:
 
