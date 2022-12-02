@@ -210,10 +210,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="6.1" data-path="FixBug.html"><a href="FixBug.html#introduction-1"><i class="fa fa-check"></i><b>6.1</b> Introduction</a></li>
 <li class="chapter" data-level="6.2" data-path="FixBug.html"><a href="FixBug.html#when-do-you-submit-a-patch"><i class="fa fa-check"></i><b>6.2</b> When do you submit a patch?</a></li>
 <li class="chapter" data-level="6.3" data-path="FixBug.html"><a href="FixBug.html#what-tools-are-required-to-submit-a-patch"><i class="fa fa-check"></i><b>6.3</b> What tools are required to submit a patch?</a></li>
-<li class="chapter" data-level="6.4" data-path="FixBug.html"><a href="FixBug.html#how-to-prepare-a-patch"><i class="fa fa-check"></i><b>6.4</b> How to prepare a patch?</a></li>
+<li class="chapter" data-level="6.4" data-path="FixBug.html"><a href="FixBug.html#how-to-prepare-a-patch"><i class="fa fa-check"></i><b>6.4</b> How to prepare a patch?</a>
+<ul>
+<li class="chapter" data-level="6.4.1" data-path="FixBug.html"><a href="FixBug.html#using-a-git-mirror"><i class="fa fa-check"></i><b>6.4.1</b> Using a git mirror</a></li>
+</ul></li>
 <li class="chapter" data-level="6.5" data-path="FixBug.html"><a href="FixBug.html#GoodPatches"><i class="fa fa-check"></i><b>6.5</b> Making good patches</a></li>
-<li class="chapter" data-level="6.6" data-path="FixBug.html"><a href="FixBug.html#submitting-your-patch-for-review"><i class="fa fa-check"></i><b>6.6</b> Submitting your patch for review</a></li>
-<li class="chapter" data-level="6.7" data-path="FixBug.html"><a href="FixBug.html#getting-your-patch-reviewed"><i class="fa fa-check"></i><b>6.7</b> Getting your patch reviewed</a>
+<li class="chapter" data-level="6.6" data-path="FixBug.html"><a href="FixBug.html#SubmitPatches"><i class="fa fa-check"></i><b>6.6</b> Submitting your patch for review</a></li>
+<li class="chapter" data-level="6.7" data-path="FixBug.html"><a href="FixBug.html#PatchesReview"><i class="fa fa-check"></i><b>6.7</b> Getting your patch reviewed</a>
 <ul>
 <li class="chapter" data-level="6.7.1" data-path="FixBug.html"><a href="FixBug.html#how-to-review-a-patch"><i class="fa fa-check"></i><b>6.7.1</b> How to review a patch?</a></li>
 </ul></li>
@@ -314,12 +317,69 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>To submit a patch, you need:</p>
 <ol style="list-style-type: decimal">
 <li><p><a href="http://subversion.apache.org/">SVN</a> installed on your machine.</p></li>
-<li><p>The <a href="#installR">latest developer version of R</a>.</p></li>
+<li><p>The latest developer version of R.</p></li>
 </ol>
+<p>You can retrieve the latest source code of R via:</p>
+<div class="sourceCode" id="cb33"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb33-1"><a href="FixBug.html#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="bu">export</span> <span class="va">TOP_SRCDIR</span><span class="op">=</span><span class="st">&quot;</span><span class="va">$HOME</span><span class="st">/Downloads/R&quot;</span></span>
+<span id="cb33-2"><a href="FixBug.html#cb33-2" aria-hidden="true" tabindex="-1"></a><span class="fu">svn</span> checkout https://svn.r-project.org/R/trunk/ <span class="st">&quot;</span><span class="va">$TOP_SRCDIR</span><span class="st">&quot;</span></span></code></pre></div>
+<p>Depending on the operative system you might need to do some steps before that.
+The different steps required can be found in previous chapters of the book, for <a href="GetStart.html#windowsSource">Windows</a>, <a href="GetStart.html#macos">macOS</a> and <a href="GetStart.html#linux">Linux</a>.</p>
 </div>
 <div id="how-to-prepare-a-patch" class="section level2 hasAnchor" number="6.4">
 <h2><span class="header-section-number">6.4</span> How to prepare a patch?<a href="FixBug.html#how-to-prepare-a-patch" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Refer to the guidelines given <a href="https://www.r-project.org/bugs.html#how-to-submit-patches">here</a> for the process to prepare a patch against R-devel.</p>
+<p>If you have the source code in <code>$TOP_SRCDIR</code> you can edit the files, for example a documentation file such as <code>"$TOP_SRCDIR"/src/library/stats/man/Multinom.Rd</code>, to make your desired changes to that or more files.</p>
+<p>Then you should check that R still works as expected via:</p>
+<div class="sourceCode" id="cb34"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb34-1"><a href="FixBug.html#cb34-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> <span class="st">&quot;</span><span class="va">$TOP_SRCDIR</span><span class="st">&quot;</span></span>
+<span id="cb34-2"><a href="FixBug.html#cb34-2" aria-hidden="true" tabindex="-1"></a><span class="fu">make</span> check-devel</span></code></pre></div>
+<p>If there is no test for your proposed change you can add a new regression test, following <a href="#TestR">the guidelines</a>.</p>
+<p>Then you should bring changes from the repository into the working copy, in case any other change has been introduced, and create a path.diff file with just the changes you want to propose to the R core:</p>
+<div class="sourceCode" id="cb35"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb35-1"><a href="FixBug.html#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="fu">svn</span> update</span>
+<span id="cb35-2"><a href="FixBug.html#cb35-2" aria-hidden="true" tabindex="-1"></a><span class="fu">svn</span> diff <span class="op">&gt;</span> patch.diff</span></code></pre></div>
+<p>This <code>patch.diff</code> file is the one that can be proposed to the R core via <a href="FixBug.html#SubmitPatches">Bugzilla</a>. You can also <a href="FixBug.html#PatchesReview">ask for reviews</a> to the patch before proposing it to the R core via the <a href="https://stat.ethz.ch/mailman/listinfo/r-devel">r-devel mailing list</a> or the slack channel of the R-contributors space.</p>
+<div id="using-a-git-mirror" class="section level3 hasAnchor" number="6.4.1">
+<h3><span class="header-section-number">6.4.1</span> Using a git mirror<a href="FixBug.html#using-a-git-mirror" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Besides checking in your computer, you can use the Github mirror <a href="https://github.com/r-devel/r-svn" title="A github svn mirror">r-devel/r-svn</a> of the source code to check this patch with different configurations and OS.</p>
+<p>You should first find the file to edit, via the github interface for example:</p>
+<div class="figure">
+<img src="img/rsvn_file_to_edit.png" title="Opening the file to edit." alt="" />
+<p class="caption">Screenshot of the heading of the src/library/stats/man/Mulinom.Rd</p>
+</div>
+<p>Then you can edit it, directly in the interface or using the github interface:</p>
+<div class="figure">
+<img src="img/rsvn_edit_file.png" title="Editing a file via Github interface." alt="" />
+<p class="caption">Screenshot of the file src/library/stats/man/Mulinom.Rd being edited via the Github interface</p>
+</div>
+<p>Create a commit with a message describing the changes</p>
+<div class="figure">
+<img src="img/rsvn_commit_message.png" title="Commiting the change in the file." alt="" />
+<p class="caption">Screenshot of the commit message</p>
+</div>
+<p>And create a pull request from the branch created to check the changes.</p>
+<div class="figure">
+<img src="img/rsvn_commit_pre_PR.png" title="Starting a pull requests with the changes previously committed." alt="" />
+<p class="caption">Screenshot of the message when opening a pull requests from the branch</p>
+</div>
+<p>Add a message and description of the svn for other users and the R core to know what is the purpose of this modification:</p>
+<div class="figure">
+<img src="img/rsvn_PR_message.png" title="Describe the changes in the pull request." alt="" />
+<p class="caption">Screenshot of the message and content while opening a pull requests for the r-svn repository</p>
+</div>
+<div class="figure">
+<img src="img/rsvn_PR_created.png" title="The result of opening a pull requests with the changes." alt="" />
+<p class="caption">Screenshot of the pull requests opened</p>
+</div>
+<p>Once the PR is submitted, some automatic checks will be triggered (they might need to be approved by some other users as per Github rules):</p>
+<p><img src="img/rsvn_PR_automatic_checks.png" title="Automatic checks triggered in the r-devel/r-svn github repository." alt="Screenshot of the checks triggered by opening the pull request" />
+When the checks end you will need to explore the results and asses if the results indicate a problem or not.</p>
+<div class="figure">
+<img src="img/rsvn_checks_results.png" title="Summary of the results of the automatic checks triggered by opening the pull request." alt="" />
+<p class="caption">Screenshot of the results of the Github checks in the r-svn mirror</p>
+</div>
+<p>Once you are happy with the changes and the checks report that everything is okay you can retrieve the patch via:</p>
+<p><code>https://patch-diff.githubusercontent.com/raw/r-devel/r-svn/pull/&lt;pull_request_number&gt;.diff</code></p>
+<p>With that file you can <a href="FixBug.html#SubmitPatches">submit your patch</a>, remember to check if it meets the <a href="FixBug.html#GoodPatches">recommendations for good patches</a>.</p>
+<p>If you want to use <code>git</code> from the terminal to create the pull request (PR) to test the changes, you can use this <a href="https://about.gitlab.com/images/press/git-cheat-sheet.pdf" title="git cheat sheet">summary of the available git commands</a>.</p>
+</div>
 </div>
 <div id="GoodPatches" class="section level2 hasAnchor" number="6.5">
 <h2><span class="header-section-number">6.5</span> Making good patches<a href="FixBug.html#GoodPatches" class="anchor-section" aria-label="Anchor link to header"></a></h2>
@@ -333,15 +393,15 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li><p>Each bugfix should ideally be addressed by a single patch. In particular, do not fix more than one issue in the same patch (except, if one code change fixes all of them) and do not do cosmetic changes to unrelated code in the same patch as some bugfix.</p></li>
 </ol>
 </div>
-<div id="submitting-your-patch-for-review" class="section level2 hasAnchor" number="6.6">
-<h2><span class="header-section-number">6.6</span> Submitting your patch for review<a href="FixBug.html#submitting-your-patch-for-review" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="SubmitPatches" class="section level2 hasAnchor" number="6.6">
+<h2><span class="header-section-number">6.6</span> Submitting your patch for review<a href="FixBug.html#SubmitPatches" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <ol style="list-style-type: decimal">
 <li><p>Patch in response to a pre-existing issue or bug report: In this case, you should attach the patch to the existing issue or bug report on Bugzilla with a brief comment.</p></li>
 <li><p>Patch in response to an unreported issue or bug report: Assuming you already performed a search on Bugzilla for a pre-existing issue or bug and did not find the issue or bug reported, you need to create a new bug report and include your patch with it. Please fill in as much relevant detail as possible to prevent reviewers from having to delay reviewing your patch because of lack of information. Include (mostly as the first sentence), a to-the-point explanation of what the purpose of the patch is. This sentence should not be in the descriptive form, rather an imperative form will be more suitable here. If this is not enough detail for a patch, a new paragraphs(s) can be added to explain in proper depth what has happened. The details should be good enough that a core developer reading it understands the justification for the change.</p></li>
 </ol>
 </div>
-<div id="getting-your-patch-reviewed" class="section level2 hasAnchor" number="6.7">
-<h2><span class="header-section-number">6.7</span> Getting your patch reviewed<a href="FixBug.html#getting-your-patch-reviewed" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="PatchesReview" class="section level2 hasAnchor" number="6.7">
+<h2><span class="header-section-number">6.7</span> Getting your patch reviewed<a href="FixBug.html#PatchesReview" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>To begin with, please be patient. There are many more people submitting patches than there are people capable of reviewing your patches. Getting your patch reviewed requires a reviewer to have the spare time and motivation to look at your patch. We cannot force anyone to review patches and no one is employed to look at patches.</p>
 <p>There is a <code>#patches-for-review</code> channel on the <a href="https://r-contributors.slack.com/">R Contributors slack</a> where you can share your patch(es) for review/feedback before submitting to R-Core/Bugzilla. This can help with checking that you have included the important information and excluded redundant information.</p>
 <p>If your patch has not received any notice from reviewers (i.e., no comment made) after one month, comment/message on the <code>#patches-for-review</code> channel to remind the members that the patch needs a review.</p>

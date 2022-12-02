@@ -11,7 +11,7 @@ building-r
 linux
 windows
 binaries
-from-source
+windowsSource
 macos
 see-also
 BugTrack
@@ -44,9 +44,10 @@ introduction-1
 when-do-you-submit-a-patch
 what-tools-are-required-to-submit-a-patch
 how-to-prepare-a-patch
+using-a-git-mirror
 GoodPatches
-submitting-your-patch-for-review
-getting-your-patch-reviewed
+SubmitPatches
+PatchesReview
 how-to-review-a-patch
 leaving-a-patch-review-on-bugzilla
 dismissing-review-from-another-core-developer
