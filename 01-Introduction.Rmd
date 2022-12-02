@@ -1,15 +1,52 @@
 # Introduction
 
-This guide is heavily influenced by the [Python Developer Guide](https://devguide.python.org/), and is a comprehensive resource for contributing to R Core – for both new and experienced contributors. It is maintained by the [R Contribution Working Group](/working-group). We welcome your contributions to R Core!
+This guide is a comprehensive resource for contributing to base R^[The [set of packages](https://cran.r-project.org/doc/FAQ/R-FAQ.html#Add_002don-packages-in-R) in the base R distribution that are maintained by the R Core Team.] – for both new and experienced contributors. It is maintained by the [R Contribution Working Group](/working-group). We welcome your contributions to base R!
 
-## How to contribute to this guide? {#how-to-contribute-to-this-guide -}
+## Overview of different ways of contributing to base R Project
+
+Contributions to base R are possible in a number of different ways. Some of them are listed below:
+
+1. Contributing to bug fixing: Refer [Bug Tracking](#BugTrack) and [Reviewing Bugs](#ReviewBugs).
+2. Contributing to translations: Refer [Translations](#).
+3. Testing R before release: Refer [Testing Pre-release R Versions](#TestRVer).
+
+<!-- TODO(Saranjeet): Refer Contributing to R tutorial -->
+<!-- TODO(Saranjeet): Welcome to Bug BBQ slides -->
+<!-- TODO(Saranjeet): README on Bug BBQ repo -->
+
+## Quick start to the guide
+
+The guide is intended as a comprehensive resource for contributing to base R. The following chapter outline provides an overview with links to sections for getting started with contributing.
+
+1. The [Getting Started](#GetStart) covers the instructions on how to install R on the major operating systems (Windows, Linux and macOS), as well as the tools required to build R and R packages from source.  
+
+<!-- TODO(Saranjeet): Add other operating systems as they get included in the guide-->
+
+2. The [Bug Tracking](#BugTrack) and the [Reviewing Bugs](#ReviewBugs) chapters discuss how to find bugs in R and how to review bug reports that are submitted to Bugzilla.
+
+3. The [Finding the Source](#FindSource) chapter provides an overview of the R codebase and helps with finding source code of base functions written in R and/or C.
+
+4. The [Lifecycle of a Patch](#FixBug) chapter discusses how to create a patch to propose a bug fix.
+
+5. The [Documenting R](#Doc) chapter describes the format and style guide for help files in R, how to report and review issues in the existing documentation and how to propose changes.
+
+6. How to test pre-release versions of R is discussed in the chapter on [Testing Pre-release R Versions](#TestRVer).
+
+7. The [R Core Developers](#CoreDev) chapter contains a list of the former and current members of the R Core team who have write access to the R source.
+
+8. For more information on how to engage with to community and ask for help, refer to the [Where to Get Help](#WhereToGetHelp) chapter.
+
+9. To keep up with the developments in R refer to some of the resources available in the [News and Announcements](#News)
+
+10. Resources and tools that may be relevant for R developers are available in the [Developer Tools](#DevTools) chapter.
+
+## How to contribute to this guide itself? {#how-to-contribute-to-this-guide}
 
 This guide is built using bookdown which makes editing it easier, provided you have a GitHub account (sign-up at [github.com](https://github.com/)). After you log-in to GitHub, click on the ‘Edit’ icon highlighted with a red ellipse in the image below. This will take you to an editable version of the the source R Markdown file that generated the page you are on:
 
 ![Screenshot of the toolbar in the HTML version of the guide, with the Edit button (pencil and paper icon) circled in red.](img/edit_icon.png)
 
-Use the [issue tracker](https://github.com/forwards/rdevguide/issues) to raise an issue about the guide’s content or to make a feature request.
+Use the [issue tracker](https://github.com/r-devel/rdevguide/issues) to raise an issue about the guide’s content or to make a feature request.
 
-Maintainers and contributors are requested to follow this project's [code of conduct](https://github.com/forwards/rdevguide/blob/master/CONDUCT.md).
-
+Maintainers and contributors are requested to follow this project's [code of conduct](https://github.com/r-devel/rdevguide/blob/main/CONDUCT.md).
 

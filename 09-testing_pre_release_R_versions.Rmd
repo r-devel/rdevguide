@@ -1,6 +1,6 @@
-# Testing Pre-release R Versions
+# Testing Pre-release R Versions {#TestRVer}
 
-This chapter is inspired from the blog on [testing R before release](https://developer.r-project.org/Blog/public/2021/04/28/r-can-use-your-help-testing-r-before-release/index.html) and discusses how you can help with testing of pre-release versions of R. 
+This chapter is inspired from the blog on [testing R before release](https://blog.r-project.org/2021/04/28/r-can-use-your-help-testing-r-before-release/index.html) and discusses how you can help with testing of pre-release versions of R. 
 
 ## Where to test?
 
@@ -8,7 +8,7 @@ Whenever possible use a fresh package library for testing, even better would be 
 
 ### Virtual machine {#VM}
 
-A free Windows 10 virtual machine is provided by Microsoft (with a 90-day limit) for building, testing, and checking R packages and R itself. Package maintainers who work on Linux and MacOS can use it to test their packages on Windows. Read the [instructions](https://svn.r-project.org/R-dev-web/trunk/WindowsBuilds/winutf8/ucrt3/vm.html) on how to automatically set up the machine to check R packages. Tomas Kalibera describes the details of using virtual machine in the blog [Virtual Windows machine for checking R packages](https://developer.r-project.org/Blog/public/2021/03/18/virtual-windows-machine-for-checking-r-packages/index.html). 
+A free Windows 10 virtual machine is provided by Microsoft (with a 90-day limit) for building, testing, and checking R packages and R itself. Package maintainers who work on Linux and MacOS can use it to test their packages on Windows. Read the [instructions](https://svn.r-project.org/R-dev-web/trunk/WindowsBuilds/winutf8/ucrt3/vm.html) on how to automatically set up the machine to check R packages. Tomas Kalibera describes the details of using virtual machine in the blog [Virtual Windows machine for checking R packages](https://blog.r-project.org/2021/03/18/virtual-windows-machine-for-checking-r-packages/index.html). 
 
 ## What can you test?
 
@@ -26,13 +26,13 @@ You can test:
   
 Details of performing testing on various operating systems:
 
-  * [Windows](https://developer.r-project.org/Blog/public/2021/04/28/r-can-use-your-help-testing-r-before-release/index.html#on-windows)
+  * [Windows](https://blog.r-project.org/2021/04/28/r-can-use-your-help-testing-r-before-release/index.html#on-windows)
   
-  * [macOS](https://developer.r-project.org/Blog/public/2021/04/28/r-can-use-your-help-testing-r-before-release/index.html#on-macos)
+  * [macOS](https://blog.r-project.org/2021/04/28/r-can-use-your-help-testing-r-before-release/index.html#on-macos)
   
-  * [Linux](https://developer.r-project.org/Blog/public/2021/04/28/r-can-use-your-help-testing-r-before-release/index.html#on-linux)
+  * [Linux](https://blog.r-project.org/2021/04/28/r-can-use-your-help-testing-r-before-release/index.html#on-linux)
   
-  * [Solaris](https://developer.r-project.org/Blog/public/2021/04/28/r-can-use-your-help-testing-r-before-release/index.html#on-solaris)
+  * [Solaris](https://blog.r-project.org/2021/04/28/r-can-use-your-help-testing-r-before-release/index.html#on-solaris)
   
 ## Writing tests for R
 
