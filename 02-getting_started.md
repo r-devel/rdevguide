@@ -6,7 +6,7 @@ This chapter describes where the source code for these versions can be found and
 The tools required to build R and R packages are also discussed.
 For the most up to date and complete instructions you can check the [R installation and administration manual](https://cran.r-project.org/doc/manuals/r-devel/R-admin.html) .
 
-## The R Source Code
+## The R source code
 
 R uses [svn](https://subversion.apache.org/ "SVN official page") as a version control tool hosted at <https://svn.r-project.org/R/> and uses a 'major.minor.patchlevel' version numbering scheme[^02-getting_started-1].
 
