@@ -165,7 +165,7 @@ Along with the link to the latest stable release, this page also contains links 
     
 Daily binaries for `r-devel` are made available for [download and installation](https://cran.r-project.org/bin/windows/base/rdevel.html). 
 
-#### From source
+#### From source {#windowsSource}
 
 Before installing R from source, some additional programs are needed, as per the [latest documentation](https://cran.r-project.org/bin/windows/base/howto-R-4.2.html):
 

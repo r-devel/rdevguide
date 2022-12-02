@@ -16,11 +16,81 @@ To submit a patch, you need:
 
 1. [SVN](http://subversion.apache.org/) installed on your machine.
 
-2. The [latest developer version of R](#installR).
+2. The latest developer version of R.
+    
+  You can retrieve the latest source code of R via:
+
+  ```sh
+  export TOP_SRCDIR="$HOME/Downloads/R"
+  svn checkout https://svn.r-project.org/R/trunk/ "$TOP_SRCDIR"
+  ```
+  
+  Depending on the operative system you might need to do some steps before that. 
+  The different steps required can be found in previous chapters of the book, for [Windows](#windowsSource), [macOS](#macos) and [Linux](#linux).
 
 ## How to prepare a patch?
 
-Refer to the guidelines given [here](https://www.r-project.org/bugs.html#how-to-submit-patches) for the process to prepare a patch against R-devel.
+
+If you have the source code in `$TOP_SRCDIR` you can edit the files, for example a documentation file such as  `"$TOP_SRCDIR"/src/library/stats/man/Multinom.Rd`, to make your desired changes to that or more files.
+
+Then you should check that R still works as expected via:
+
+  ```sh
+  cd "$TOP_SRCDIR"
+  make check-devel
+  ```
+
+If there is no test for your proposed change you can add a new regression test, following [the guidelines](#TestR).
+
+Then you should bring changes from the repository into the working copy, in case any other change has been introduced, and create a path.diff file with just the changes you want to propose to the R core:
+
+  ```sh
+  svn update
+  svn diff > patch.diff
+  ```
+  
+This `patch.diff` file is the one that can be proposed to the R core via [Bugzilla](#SubmitPatches). You can also [ask for reviews](#PatchesReview) to the patch before proposing it to the R core via the [r-devel mailing list](https://stat.ethz.ch/mailman/listinfo/r-devel) or the slack channel of the R-contributors space.
+
+### Using a git mirror
+
+Besides checking in your computer, you can use the Github mirror  [r-devel/r-svn](https://github.com/r-devel/r-svn  "A github svn mirror") of the source code to check this patch with different configurations and OS.
+
+You should first find the file to edit, via the github interface for example:
+
+![Screenshot of the heading of the src/library/stats/man/Mulinom.Rd](img/rsvn_file_to_edit.png "Opening the file to edit.") 
+
+Then you can edit it, directly in the interface or using the github interface:
+
+![Screenshot of the file src/library/stats/man/Mulinom.Rd being edited via the Github interface](img/rsvn_edit_file.png "Editing a file via Github interface.")
+
+Create a commit with a message describing the changes
+
+![Screenshot of the commit message](img/rsvn_commit_message.png "Commiting the change in the file.")
+
+And create a pull request from the branch created to check the changes.
+
+![Screenshot of the message when opening a pull requests from the branch](img/rsvn_commit_pre_PR.png "Starting a pull requests with the changes previously committed.")
+
+Add a message and description of the svn for other users and the R core to know what is the purpose of this modification:
+
+![Screenshot of the message and content while opening a pull requests for the r-svn repository](img/rsvn_PR_message.png "Describe the changes in the pull request.")
+
+![Screenshot of the pull requests opened](img/rsvn_PR_created.png "The result of opening a pull requests with the changes.") 
+
+Once the PR is submitted, some automatic checks will be triggered (they might need to be approved by some other users as per Github rules):
+
+![Screenshot of the checks triggered by opening the pull request](img/rsvn_PR_automatic_checks.png "Automatic checks triggered in the r-devel/r-svn github repository.")
+When the checks end you will need to explore the results and asses if the results indicate a problem or not. 
+
+![Screenshot of the results of the Github checks in the r-svn mirror](img/rsvn_checks_results.png "Summary of the results of the automatic checks triggered by opening the pull request.")
+
+Once you are happy with the changes and the checks report that everything is okay you can retrieve the patch via:
+
+`https://patch-diff.githubusercontent.com/raw/r-devel/r-svn/pull/<pull_request_number>.diff`
+
+With that file you can [submit your patch](#SubmitPatches), remember to check if it meets the [recommendations for good patches](#GoodPatches).
+
+If you want to use `git` from the terminal to create the pull request (PR) to test the changes, you can use this [summary of the available git commands](https://about.gitlab.com/images/press/git-cheat-sheet.pdf "git cheat sheet").
 
 ## Making good patches {#GoodPatches} 
 
@@ -38,13 +108,13 @@ When creating a patch for submission, there are several things that you can do t
 
 6. Each bugfix should ideally be addressed by a single patch. In particular, do not fix more than one issue in the same patch (except, if one code change fixes all of them) and do not do cosmetic changes to unrelated code in the same patch as some bugfix.
 
-## Submitting your patch for review
+## Submitting your patch for review {#SubmitPatches}
 
 1. Patch in response to a pre-existing issue or bug report:  In this case, you should attach the patch to the existing issue or bug report on Bugzilla with a brief comment.
 
 2. Patch in response to an unreported issue or bug report: Assuming you already performed a search on Bugzilla for a pre-existing issue or bug and did not find the issue or bug reported, you need to create a new bug report and include your patch with it. Please fill in as much relevant detail as possible to prevent reviewers from having to delay reviewing your patch because of lack of information. Include (mostly as the first sentence), a to-the-point explanation of what the purpose of the patch is. This sentence should not be in the descriptive form, rather an imperative form will be more suitable here. If this is not enough detail for a patch, a new paragraphs(s) can be added to explain in proper depth what has happened. The details should be good enough that a core developer reading it understands the justification for the change.
  
-## Getting your patch reviewed
+## Getting your patch reviewed {#PatchesReview}
 
 To begin with, please be patient. There are many more people submitting patches than there are people capable of reviewing your patches. Getting your patch reviewed requires a reviewer to have the spare time and motivation to look at your patch. We cannot force anyone to review patches and no one is employed to look at patches. 
 
