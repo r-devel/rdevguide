@@ -137,11 +137,11 @@ make
 make check
 ```
 
-Once you successfully build R from source you can modify R source code to fix an issue: Prepare a patch (See [this guide](https://www.r-project.org/bugs.html#how-to-submit-patches)) and after checking that R works as intended (`make check-devel`) submit the patch for the R core consideration.
+Once you successfully built R from source you can modify the R source code to fix an issue: Prepare a patch (See [this guide](https://www.r-project.org/bugs.html#how-to-submit-patches)) and after checking that R works as intended (`make check-devel`) submit the patch for consideration by R Core.
 (See the [lifecycle of a patch](#FixBug) chapter).
 
 
-To use the `r-devel` version in RStudio to you can do the following:
+To use the `r-devel` version in RStudio, you can do the following:
 
 ```sh
 export RSTUIDO_WHICH_R="$BUILDDIR/bin/R"
