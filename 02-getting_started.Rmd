@@ -278,6 +278,6 @@ Before installing R from source, some additional programs are needed, as per the
 
 3.  [R for Windows FAQ](https://cran.r-project.org/bin/windows/base/rw-FAQ.html)
 
-4.  [Rtools40 manual for Windows](https://cran.r-project.org/bin/windows/Rtools/)
+4.  [RTools toolchains for Windows](https://cran.r-project.org/bin/windows/Rtools/)
 
 5.  [R FAQ](https://cran.r-project.org/doc/FAQ/R-FAQ.html)
