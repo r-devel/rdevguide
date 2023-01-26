@@ -1,7 +1,7 @@
 --- 
 title: "R Development Guide"
 author: "R Contribution Working Group"
-date: "2022-12-03"
+date: "2023-01-26"
 site: bookdown::bookdown_site
 output: bookdown::gitbook
 documentclass: book
