@@ -59,8 +59,8 @@ We know that it is in the stats package as we see that when we print complete.ca
 2. Once you have the entry point, search as for R code. In the case of searching on GitHub, restrict the search to files with the relevant extension
 
 ```
-compcases extension:c
-lowesw extension:f
+compcases path:*.c
+lowesw path:*.f
 ```
 
 similarly for grep
