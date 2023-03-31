@@ -144,7 +144,7 @@ Once you successfully built R from source you can modify the R source code to fi
 To use the `r-devel` version in RStudio, you can do the following:
 
 ```sh
-export RSTUIDO_WHICH_R="$BUILDDIR/bin/R"
+export RSTUDIO_WHICH_R="$BUILDDIR/bin/R"
 cd "$TOP_SRCDIR"
 rstudio
 ```
