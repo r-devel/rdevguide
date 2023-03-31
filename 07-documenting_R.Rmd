@@ -80,7 +80,7 @@ Maintaining the accuracy  of R's documentations and keeping a high level of qual
 
 Looking at pre-existing documentation source files can be very helpful when getting started.
 
-If you look at documentation issues on Bugzilla, you will find various documentation problems that may need work. Since "Documentation" is one of the possible components you can set in the metadata, you can browse by this [component](https://bugs.r-project.org/bugzilla/buglist.cgi?component=Documentation) to find the documentation bugs on Bugzilla. Issues vary from typos to unclear documentation and items lacking documentation.
+If you look at documentation issues on Bugzilla, you will find various documentation problems that may need work. Since "Documentation" is one of the possible components you can set in the metadata, you can browse by this [component](https://bugs.r-project.org/buglist.cgi?component=Documentation&list_id=22501&product=R&resolution=---) to find the documentation bugs on Bugzilla. Issues vary from typos to unclear documentation and items lacking documentation.
 
 If you see a documentation issue that you would like to tackle, you can leave a comment on the issue saying you are going to try to solve the issue and mention roughly how long you think you will take to do so (this allows others to take on the issue if you happen to forget or lose interest).
 
