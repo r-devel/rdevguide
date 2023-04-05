@@ -1,6 +1,6 @@
 To recognise the contributions made on this repository we use the [All Contributors](https://allcontributors.org/) Bot. 
 Our aim is to recognise all contributors including those that don't push code. 
-Some (but not limited to) possible contributions which the bot supports include:
+Types of contribution supported by the bot include:
 - Creating a new Pull Request or Issue on this repository
 - Giving talks based on this repository
 - Mentoring contributions to this repository
