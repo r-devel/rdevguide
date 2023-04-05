@@ -27,7 +27,7 @@ These links can be shared through a pull request or by opening a new issue.
    @all-contributors please add @<github-username> for <contribution>
    ```
 
-2. After this the bot will The bot create a Pull Request to add the Contributor. Further it reply with the pull request details. 
+2. After this the bot will create a Pull Request to add the Contributor and reply to your comment with the pull request details. 
 ![Example of using the All Contributors bot](img/bot-usage.png)
 
 3. Once the repository Admins review and approve this Pull Request, the Contributor will be listed on the repository.
