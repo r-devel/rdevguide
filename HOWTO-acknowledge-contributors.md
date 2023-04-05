@@ -57,7 +57,7 @@ These links can be shared through a pull request or by opening a new issue.
 - A list of valid contribution types is available on the [Emoji Key (and Contribution Types)](https://allcontributors.org/docs/en/emoji-key) page.
 Replace `<contribution>` with the appropriate keyword available in the `Type` column of the [Emoji Key table](https://allcontributors.org/docs/en/emoji-key#table). 
 
-- The bot uses a [basic Natural Language Parsing](https://github.com/all-contributors/app/blob/master/lib/parse-comment.js) to determine the intent of your comment. Hence, your request to the bot doesn't need to be perfect. For example, the following will work too:
+- The bot uses [basic Natural Language Parsing](https://github.com/all-contributors/app/blob/master/lib/parse-comment.js) to determine the intent of your comment. Hence, your request to the bot doesn't need to be perfect. For example, the following will work too:
 ```sh
 Jane you have written excellent documentation and your infrastructure work has been great too. Let's add `@jane.doe23` for her contributions. cc `@all-contributors`
 ```
