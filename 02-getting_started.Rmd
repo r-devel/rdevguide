@@ -211,8 +211,8 @@ Before installing R from source, some additional programs are needed, as per the
 3. Add gcc, MiKTeX and tar to the PATH and set one tar option:
 
     ```sh
-    export PATH=/x86_64-w64-mingw32.static.posix/bin:$PATH
-    export PATH=/c/Program\ Files/MiKTeX/miktex/bin/x64:$PATH
+    export PATH="/x86_64-w64-mingw32.static.posix/bin:$PATH"
+    export PATH="/c/Program Files/MiKTeX/miktex/bin/x64:$PATH"
     export TAR="/usr/bin/tar"
     export TAR_OPTIONS="--force-local"
     ```
@@ -220,7 +220,7 @@ Before installing R from source, some additional programs are needed, as per the
     If MiKTeX was installed just for your user you might need to run:
 
     ```sh
-    export PATH=/c/Users/$USER/AppData/Local/Programs/MiKTeX/miktex/bin/x64:$PATH
+    export PATH="/c/Users/$USER/AppData/Local/Programs/MiKTeX/miktex/bin/x64:$PATH"
     ```
    
 4. Check that all the programs can be found:
