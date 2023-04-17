@@ -263,7 +263,7 @@ Before installing R from source, some additional programs are needed, as per the
 
 ### macOS
 
-This section will be added after the official [installation instructions for macOS in the R installation and administration manual]([https://cran.r-project.org/doc/manuals/r-devel/R-admin.html](https://cran.r-project.org/doc/manuals/r-devel/R-admin.html#macOS) have been updated for R 4.3.0.
+This section will be added after the official [installation instructions for macOS in the R installation and administration manual](https://cran.r-project.org/doc/manuals/r-devel/R-admin.html#macOS) have been updated for R 4.3.0.
 
 
 ## See also
