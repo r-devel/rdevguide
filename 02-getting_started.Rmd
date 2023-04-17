@@ -204,7 +204,7 @@ Before installing R from source, some additional programs are needed, as per the
 
     ```sh
     cd "$TOP_SRCDIR"
-    wget -np -nd -r -l1 -A 'tcltk-*.zip' https://cran.r-project.org/bin/windows/Rtools/rtools42/files/
+    wget -np -nd -r -l1 -A 'tcltk-*.zip' https://cran.r-project.org/bin/windows/Rtools/rtools43/files/
     unzip "tcltk-*.zip"
     ```
 
@@ -212,7 +212,7 @@ Before installing R from source, some additional programs are needed, as per the
 
     ```sh
     export PATH="/x86_64-w64-mingw32.static.posix/bin:$PATH"
-    export PATH="/c/Program\ Files/MiKTeX/miktex/bin/x64:$PATH"
+    export PATH="/c/Program Files/MiKTeX/miktex/bin/x64:$PATH"
     export TAR="/usr/bin/tar"
     export TAR_OPTIONS="--force-local"
     ```
@@ -263,7 +263,7 @@ Before installing R from source, some additional programs are needed, as per the
 
 ### macOS
 
-This section will be added after the official [installation instructions for macOS in the R installation and administration manual]([https://cran.r-project.org/doc/manuals/r-devel/R-admin.html](https://cran.r-project.org/doc/manuals/r-devel/R-admin.html#macOS) have been updated for R 4.3.0.
+This section will be added after the official [installation instructions for macOS in the R installation and administration manual](https://cran.r-project.org/doc/manuals/r-devel/R-admin.html#macOS) have been updated for R 4.3.0.
 
 
 ## See also
