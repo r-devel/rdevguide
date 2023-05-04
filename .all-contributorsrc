@@ -216,6 +216,15 @@
         "research",
         "question"
       ]
+    },
+    {
+      "login": "itsdebartha",
+      "name": "Debartha Paul",
+      "avatar_url": "https://avatars.githubusercontent.com/u/53690728?v=4",
+      "profile": "https://github.com/itsdebartha",
+      "contributions": [
+        "content"
+      ]
     }
   ],
   "contributorsPerLine": 7,
