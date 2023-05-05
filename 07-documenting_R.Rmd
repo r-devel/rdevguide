@@ -87,7 +87,10 @@ The [R manuals](https://cran.r-project.org/manuals.html) are a part of the [R so
 | The R language definition | "R-lang"  |
 | R Internals | "R-ints" | 
 
-The [Texinfo manual](https://www.gnu.org/software/texinfo/) should be referred to for [how to mark up text](https://www.gnu.org/software/texinfo/manual/texinfo/texinfo.html).
+Note: 
+
+- Every manual is associated with a particular version of R, hence please consider the version of R when looking for the manuals.
+- The [Texinfo manual](https://www.gnu.org/software/texinfo/) should be referred to for [how to mark up text](https://www.gnu.org/software/texinfo/manual/texinfo/texinfo.html).
 
 ## Helping with documentation
 
