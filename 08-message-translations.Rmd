@@ -248,6 +248,18 @@ Click "Save and Continue" to save the translation and continue. The
 translation team will review and integrate it into the R interface if it
 meets the quality standards.
 
+- Note: If you're unsure about the translate, please check needs editing. This will ensure other reviewer will check and verify if your translations are correct.
+
+
+Some Tips to follow:
+
+- Be consistent: Use the same words and phrases throughout the translation to make it consistent and avoid confusion.
+
+- Use concise language: This will ensure the translated messages are short and easy to read
+
+- Review the translations: After finishing the translation, check if you have any alerts or warning in the weblate string status.
+
+
 Related links:
 
 <https://contributor.r-project.org/translating-r-to-your-language/>
