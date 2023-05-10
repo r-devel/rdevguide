@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Chapter 7 Documenting R | R Development Guide</title>
   <meta name="description" content="A guide to R development." />
-  <meta name="generator" content="bookdown 0.33 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.34 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Chapter 7 Documenting R | R Development Guide" />
   <meta property="og:type" content="book" />
@@ -23,7 +23,7 @@
 <meta name="author" content="R Contribution Working Group" />
 
 
-<meta name="date" content="2023-05-04" />
+<meta name="date" content="2023-05-10" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -129,6 +129,10 @@ code span.vs { color: #4070a0; } /* VerbatimString */
 code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
 
 <link rel="stylesheet" href="style.css" type="text/css" />
 </head>
@@ -313,7 +317,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 <div id="guidelines-for-writing-r-help-files" class="section level2 hasAnchor" number="7.2">
 <h2><span class="header-section-number">7.2</span> Guidelines for writing R help files<a href="Doc.html#guidelines-for-writing-r-help-files" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Following are the suggested guidelines while creating the system help files in the .Rd format. A example of the .Rd format is available for <a href="https://svn.r-project.org/R/trunk/src/library/base/man/mean.Rd">mean.Rd</a>. These are intended for writing the core documentations but may also be useful for package writers. Extensive details of writing R documentation files can be found in the <a href="https://cran.r-project.org/doc/manuals/r-release/R-exts.html#Writing-R-documentation-files">Writing R Extensions</a> manual.</p>
+<p>This section summarises the <a href="https://developer.r-project.org/Rds.html">recommended style for writing the R help files</a>. The R help files are written in “R documentation” (Rd) format, a markup language which resembles LaTeX. An example of the .Rd format is available for <a href="https://svn.r-project.org/R/trunk/src/library/base/man/mean.Rd">mean.Rd</a>. These are intended for writing the core documentations but may also be useful for package writers. Extensive details of writing R documentation files can be found in the <a href="https://cran.r-project.org/doc/manuals/r-release/R-exts.html#Writing-R-documentation-files">Writing R Extensions</a> manual.</p>
+<p>Note: Many R package authors use the R package <a href="https://cran.r-project.org/web/packages/roxygen2/index.html">roxygen2</a> to write documentation (which eventually creates the .Rd files), however, in this guide we focus on .Rd files only because the manual pages for the base distribution are written directly as .Rd files.</p>
 <p>There are three main parts of an .Rd file:</p>
 <ol style="list-style-type: decimal">
 <li><p><strong>Header</strong>: This part is for the basic information of the document/file. For instance, the name of the file, the topics documented, a title, a short textual description, and R usage information for the objects documented.</p></li>
@@ -357,7 +362,6 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li>For giving an address for a publisher use the format <code>New York: Springer-Verlag</code>.</li>
 </ul></li>
 </ol>
-<p>More guidelines for writing .Rd files can be found <a href="https://developer.r-project.org/Rds.html">here</a>.</p>
 <p>The language used in the documentations should follow these basic rules:</p>
 <ol style="list-style-type: decimal">
 <li><p>Affirmative tone should be used to describe what the function does and how to use it effectively. Rather than creating worry in the mind of a reader, it should establish confident knowledge about the effective use of the particular function/feature.</p></li>
