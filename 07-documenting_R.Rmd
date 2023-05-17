@@ -20,7 +20,7 @@ Note: Many R package authors use the R package [roxygen2](https://cran.r-project
 
 ## Guidelines for writing R help files
 
-This section summarises the [recommended style for writing the R help files](https://developer.r-project.org/Rds.html).  Extensive details of writing R documentation files can be found in the [Writing R Extensions](https://cran.r-project.org/doc/manuals/r-release/R-exts.html#Writing-R-documentation-files) manual.
+This section summarises the [recommended style for writing the R help files](https://developer.r-project.org/Rds.html). Extensive details of writing R documentation files can be found in the [Writing R Extensions](https://cran.r-project.org/doc/manuals/r-release/R-exts.html#Writing-R-documentation-files) manual.
 
 There are three main parts of an .Rd file:
 
