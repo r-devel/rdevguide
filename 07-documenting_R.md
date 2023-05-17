@@ -74,6 +74,25 @@ The language used in the documentations should follow these basic rules:
 
 Extensive details of writing R documentation files can be found [here](https://cran.r-project.org/doc/manuals/r-release/R-exts.html#Writing-R-documentation-files).
 
+## R manuals
+
+The [R manuals](https://cran.r-project.org/manuals.html) are a part of the [R sources](https://svn.r-project.org/R/trunk/doc/manual/). Hence, bug reports/patches can also be submitted via Bugzilla, e.g. [Bug 15221 - R-admin/'Installing R under Windows': Missing argument name](https://bugs.r-project.org/bugzilla/show_bug.cgi?id=15221). Note that they are typically referred to by their file names as listed below:
+
+| Manual | Nickname |
+| -- | -- |
+| An Introduction to R | "R-intro"  |
+| R Data Import/Export  | "R-data"  |
+| R Installation and Administration | "R-admin"  |
+| Writing R Extensions | "R-exts" |
+| The R language definition | "R-lang"  |
+| R Internals | "R-ints" | 
+
+Note: 
+
+- Every manual is associated with a particular version of R, so you should check the version before reporting a bug.
+- The [R manuals](https://cran.r-project.org/manuals.html) page has links for the [three types of release](https://contributor.r-project.org/rdevguide/GetStart.html#the-r-source-code): `r-release`, `r-patched` and `r-devel`.  These nicknames appear in the URLs, e.g. https://cran.r-project.org/doc/manuals/r-release/R-intro.html.
+- The [Texinfo manual](https://www.gnu.org/software/texinfo/) should be referred to for [how to mark up text](https://www.gnu.org/software/texinfo/manual/texinfo/texinfo.html).
+
 ## Helping with documentation
 
 Maintaining the accuracy  of R's documentations and keeping a high level of quality takes a lot of effort. Community members, like you, help with writing, editing, and updating content, and these contributions are appreciated and welcomed.

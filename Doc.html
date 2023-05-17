@@ -23,7 +23,7 @@
 <meta name="author" content="R Contribution Working Group" />
 
 
-<meta name="date" content="2023-05-10" />
+<meta name="date" content="2023-05-17" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -235,11 +235,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li class="chapter" data-level="7.1" data-path="Doc.html"><a href="Doc.html#introduction-2"><i class="fa fa-check"></i><b>7.1</b> Introduction</a></li>
 <li class="chapter" data-level="7.2" data-path="Doc.html"><a href="Doc.html#guidelines-for-writing-r-help-files"><i class="fa fa-check"></i><b>7.2</b> Guidelines for writing R help files</a></li>
-<li class="chapter" data-level="7.3" data-path="Doc.html"><a href="Doc.html#helping-with-documentation"><i class="fa fa-check"></i><b>7.3</b> Helping with documentation</a></li>
-<li class="chapter" data-level="7.4" data-path="Doc.html"><a href="Doc.html#proofreading"><i class="fa fa-check"></i><b>7.4</b> Proofreading</a></li>
-<li class="chapter" data-level="7.5" data-path="Doc.html"><a href="Doc.html#helping-with-the-developers-guide"><i class="fa fa-check"></i><b>7.5</b> Helping with the Developer’s Guide</a></li>
-<li class="chapter" data-level="7.6" data-path="Doc.html"><a href="Doc.html#instructions-for-reporting-the-cran-policy-bugs-discussion-in-slack-random-channel"><i class="fa fa-check"></i><b>7.6</b> Instructions for reporting the CRAN policy bugs – discussion in slack (random channel)</a></li>
-<li class="chapter" data-level="7.7" data-path="Doc.html"><a href="Doc.html#see-also-5"><i class="fa fa-check"></i><b>7.7</b> See also</a></li>
+<li class="chapter" data-level="7.3" data-path="Doc.html"><a href="Doc.html#r-manuals"><i class="fa fa-check"></i><b>7.3</b> R manuals</a></li>
+<li class="chapter" data-level="7.4" data-path="Doc.html"><a href="Doc.html#helping-with-documentation"><i class="fa fa-check"></i><b>7.4</b> Helping with documentation</a></li>
+<li class="chapter" data-level="7.5" data-path="Doc.html"><a href="Doc.html#proofreading"><i class="fa fa-check"></i><b>7.5</b> Proofreading</a></li>
+<li class="chapter" data-level="7.6" data-path="Doc.html"><a href="Doc.html#helping-with-the-developers-guide"><i class="fa fa-check"></i><b>7.6</b> Helping with the Developer’s Guide</a></li>
+<li class="chapter" data-level="7.7" data-path="Doc.html"><a href="Doc.html#instructions-for-reporting-the-cran-policy-bugs-discussion-in-slack-random-channel"><i class="fa fa-check"></i><b>7.7</b> Instructions for reporting the CRAN policy bugs – discussion in slack (random channel)</a></li>
+<li class="chapter" data-level="7.8" data-path="Doc.html"><a href="Doc.html#see-also-5"><i class="fa fa-check"></i><b>7.8</b> See also</a></li>
 </ul></li>
 <li class="chapter" data-level="8" data-path="message-translations.html"><a href="message-translations.html"><i class="fa fa-check"></i><b>8</b> Message Translations</a>
 <ul>
@@ -372,31 +373,75 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ol>
 <p>Extensive details of writing R documentation files can be found <a href="https://cran.r-project.org/doc/manuals/r-release/R-exts.html#Writing-R-documentation-files">here</a>.</p>
 </div>
-<div id="helping-with-documentation" class="section level2 hasAnchor" number="7.3">
-<h2><span class="header-section-number">7.3</span> Helping with documentation<a href="Doc.html#helping-with-documentation" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="r-manuals" class="section level2 hasAnchor" number="7.3">
+<h2><span class="header-section-number">7.3</span> R manuals<a href="Doc.html#r-manuals" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>The <a href="https://cran.r-project.org/manuals.html">R manuals</a> are a part of the <a href="https://svn.r-project.org/R/trunk/doc/manual/">R sources</a>. Hence, bug reports/patches can also be submitted via Bugzilla, e.g. <a href="https://bugs.r-project.org/bugzilla/show_bug.cgi?id=15221">Bug 15221 - R-admin/‘Installing R under Windows’: Missing argument name</a>. Note that they are typically referred to by their file names as listed below:</p>
+<table>
+<thead>
+<tr class="header">
+<th>Manual</th>
+<th>Nickname</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>An Introduction to R</td>
+<td>“R-intro”</td>
+</tr>
+<tr class="even">
+<td>R Data Import/Export</td>
+<td>“R-data”</td>
+</tr>
+<tr class="odd">
+<td>R Installation and Administration</td>
+<td>“R-admin”</td>
+</tr>
+<tr class="even">
+<td>Writing R Extensions</td>
+<td>“R-exts”</td>
+</tr>
+<tr class="odd">
+<td>The R language definition</td>
+<td>“R-lang”</td>
+</tr>
+<tr class="even">
+<td>R Internals</td>
+<td>“R-ints”</td>
+</tr>
+</tbody>
+</table>
+<p>Note:</p>
+<ul>
+<li>Every manual is associated with a particular version of R, so you should check the version before reporting a bug.</li>
+<li>The <a href="https://cran.r-project.org/manuals.html">R manuals</a> page has links for the <a href="https://contributor.r-project.org/rdevguide/GetStart.html#the-r-source-code">three types of release</a>: <code>r-release</code>, <code>r-patched</code> and <code>r-devel</code>. These nicknames appear in the URLs, e.g. <a href="https://cran.r-project.org/doc/manuals/r-release/R-intro.html" class="uri">https://cran.r-project.org/doc/manuals/r-release/R-intro.html</a>.</li>
+<li>The <a href="https://www.gnu.org/software/texinfo/">Texinfo manual</a> should be referred to for <a href="https://www.gnu.org/software/texinfo/manual/texinfo/texinfo.html">how to mark up text</a>.</li>
+</ul>
+</div>
+<div id="helping-with-documentation" class="section level2 hasAnchor" number="7.4">
+<h2><span class="header-section-number">7.4</span> Helping with documentation<a href="Doc.html#helping-with-documentation" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Maintaining the accuracy of R’s documentations and keeping a high level of quality takes a lot of effort. Community members, like you, help with writing, editing, and updating content, and these contributions are appreciated and welcomed.</p>
 <p>Looking at pre-existing documentation source files can be very helpful when getting started.</p>
 <p>If you look at documentation issues on Bugzilla, you will find various documentation problems that may need work. Since “Documentation” is one of the possible components you can set in the metadata, you can browse by this <a href="https://bugs.r-project.org/buglist.cgi?component=Documentation&amp;list_id=22501&amp;product=R&amp;resolution=---">component</a> to find the documentation bugs on Bugzilla. Issues vary from typos to unclear documentation and items lacking documentation.</p>
 <p>If you see a documentation issue that you would like to tackle, you can leave a comment on the issue saying you are going to try to solve the issue and mention roughly how long you think you will take to do so (this allows others to take on the issue if you happen to forget or lose interest).</p>
 <p>If you find some typo or problem on <a href="https://cran.r-project.org">CRAN</a> after checking the problem or typo you can write a polite email to <code>cran-sysadmin@r-project.org</code> and one of the R-core members working with CRAN. You’ll probably get a prompt reply about how the issue is going to be fixed.</p>
 </div>
-<div id="proofreading" class="section level2 hasAnchor" number="7.4">
-<h2><span class="header-section-number">7.4</span> Proofreading<a href="Doc.html#proofreading" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="proofreading" class="section level2 hasAnchor" number="7.5">
+<h2><span class="header-section-number">7.5</span> Proofreading<a href="Doc.html#proofreading" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>While an issue filed on Bugzilla means there is a known issue somewhere, that does not mean there are not other issues lurking about in the documentation. Proofreading a part of the documentation can often uncover problems.</p>
 <p>If you decide to proofread, read a section of the documentation from start to finish, filing issues in Bugzilla for each major type of problem you find. It is best to avoid filing a single issue for an entire section containing multiple problems; instead, file several issues so that it is easier to break the work up for multiple people and more efficient review.</p>
 </div>
-<div id="helping-with-the-developers-guide" class="section level2 hasAnchor" number="7.5">
-<h2><span class="header-section-number">7.5</span> Helping with the Developer’s Guide<a href="Doc.html#helping-with-the-developers-guide" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="helping-with-the-developers-guide" class="section level2 hasAnchor" number="7.6">
+<h2><span class="header-section-number">7.6</span> Helping with the Developer’s Guide<a href="Doc.html#helping-with-the-developers-guide" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>The Developer’s Guide (what you are reading now) uses the same process as the main R documentation, except for some small differences. The source lives in a <a href="https://github.com/r-devel/rdevguide/">GitHub repository</a> and bug reports should be submitted to the <a href="https://github.com/r-devel/rdevguide/issues">devguide GitHub tracker</a>.</p>
 <p>Our dev guide workflow uses continuous integration and deployment so changes to the dev guide are normally published when the pull request is merged. <a href="introduction.html#how-to-contribute-to-this-guide">How to contribute to this guide from the introduction.</a></p>
 </div>
-<div id="instructions-for-reporting-the-cran-policy-bugs-discussion-in-slack-random-channel" class="section level2 hasAnchor" number="7.6">
-<h2><span class="header-section-number">7.6</span> Instructions for reporting the CRAN policy bugs – discussion in slack (random channel)<a href="Doc.html#instructions-for-reporting-the-cran-policy-bugs-discussion-in-slack-random-channel" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="instructions-for-reporting-the-cran-policy-bugs-discussion-in-slack-random-channel" class="section level2 hasAnchor" number="7.7">
+<h2><span class="header-section-number">7.7</span> Instructions for reporting the CRAN policy bugs – discussion in slack (random channel)<a href="Doc.html#instructions-for-reporting-the-cran-policy-bugs-discussion-in-slack-random-channel" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p><strong>Note</strong>:</p>
 <p>There is a <code>#core-documentation</code> channel on the <a href="https://r-contributors.slack.com/">R Contributors slack</a> where you can discuss about the patches for improvements to R’s documentation.</p>
 </div>
-<div id="see-also-5" class="section level2 hasAnchor" number="7.7">
-<h2><span class="header-section-number">7.7</span> See also<a href="Doc.html#see-also-5" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="see-also-5" class="section level2 hasAnchor" number="7.8">
+<h2><span class="header-section-number">7.8</span> See also<a href="Doc.html#see-also-5" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <ol style="list-style-type: decimal">
 <li><a href="https://cran.r-project.org/doc/manuals/r-release/R-exts.html#Writing-R-documentation-files">Writing R documentation files</a></li>
 </ol>
