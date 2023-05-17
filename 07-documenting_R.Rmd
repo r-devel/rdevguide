@@ -99,8 +99,6 @@ Maintaining the accuracy  of R's documentations and keeping a high level of qual
 
 Looking at pre-existing documentation source files can be very helpful when getting started.
 
-The relevant info is: you can directly search for docs issues on Bugzilla + maybe a link to such a view. Using Bugzilla teminology such as "component" and explaining that this is a piece of metadata attached to each bug report is besides the point. Just my 2 ¢...
-
 You can directly search for [documentation issues/bugs on Bugzilla](https://bugs.r-project.org/buglist.cgi?component=Documentation&list_id=22501&product=R&resolution=---). Issues vary from typos to unclear documentation and items lacking documentation.
 
 If you see a documentation issue that you would like to tackle, you can leave a comment on the issue saying you are going to try to solve the issue and mention roughly how long you think you will take to do so (this allows others to take on the issue if you happen to forget or lose interest).
