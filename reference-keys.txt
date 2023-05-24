@@ -29,7 +29,6 @@ examples-of-bug-reports-submitted-on-bugzilla-or-r-devel-mailing-list
 see-also-1
 ReviewBugs
 how-you-can-help-to-review-bug-reports
-Bugzilla
 preparing-to-review-bug-reports
 classifying-bug-reports
 how-to-find-a-bug-report-or-an-issue-to-review
