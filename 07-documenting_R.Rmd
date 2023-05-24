@@ -1,6 +1,6 @@
 # Documenting R {#Doc}
 
-R’s documentation has long been considered to be good for a free programming language. The core developers have been committed to providing good documentation on the language and its packages. The continuing involvement of the user community in providing assistance for creating and maintaining documentation has also supported a lot.
+R has a substantial body of documentation, comprising help files for the core packages and a set of manuals aimed at users (An Introduction to R, R Data Import/Export), system administrators (R Installation and Administration) and developers (Writing R Extensions, The R language definition, and R Internals). This documentation was developed by the R Core Team with input from external contributors. The continuing involvement of the user community is important in maintaining this valuable documentation.
 
 The involvement of the community takes many forms, from authoring to making bug reports or raising an issue when the documentation could be more complete or easier to use.
 
