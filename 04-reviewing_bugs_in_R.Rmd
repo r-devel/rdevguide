@@ -8,7 +8,7 @@ Around the clock, new bug reports are being submitted on Bugzilla or the bug tra
 
 ### Preparing to review bug reports 
 
-If you want to review bug reports on Bugzilla, you are required to have a [Bugzilla account](#bugzilla-account). More details on how you can review a bug report are available on this [blog](https://blog.r-project.org/2019/10/09/r-can-use-your-help-reviewing-bug-reports/index.html)
+If you want to review bug reports on Bugzilla, you are required to have a [Bugzilla account](#bugzilla-account). More details on how you can review a bug report are available on this post on the R Blog: [R Can Use Your Help: Reviewing Bug Reports](https://blog.r-project.org/2019/10/09/r-can-use-your-help-reviewing-bug-reports/index.html)
 
 ## Classifying bug reports
 
