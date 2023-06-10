@@ -46,7 +46,7 @@ It might require installation of apt-rdepends which can be done from default rep
 To install all the R dependencies you can use:
 
 ```sh
-sudo apt-get build-dep r-base-dev
+sudo apt-get install build-dep r-base-dev
 ```
 
 ### Fedora
