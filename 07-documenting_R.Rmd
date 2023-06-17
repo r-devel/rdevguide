@@ -126,7 +126,7 @@ If you find some typo or problem on the [CRAN](https://cran.r-project.org) webpa
 
 For improvements of the R-manuals or reporting typos or bugs in the R-manuals, submit a bug report to R's Bugzilla.
 
-For reporting bugs or typos on the webpages or documentation about a particular packages, write to the corresponding package maintainer. To find the maintainer of a package, use the command ``maintainer("package-name").
+For reporting bugs or typos on the webpages or documentation about a particular package, write to the corresponding package maintainer. To find the maintainer of a package, use the command `maintainer("package-name")`.
 
 **Note**:
 
