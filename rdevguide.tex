@@ -117,7 +117,7 @@
 
 \title{R Development Guide}
 \author{R Contribution Working Group}
-\date{2023-05-24}
+\date{2023-06-17}
 
 \begin{document}
 \maketitle
@@ -1427,8 +1427,7 @@ new/updated translations.
 \section{How translations work}\label{how-translations-work}}
 
 Each of the default packages distributed with R (i.e., those found in \texttt{./src/library} such as \texttt{base}, \texttt{utils},
-and \texttt{stats} and which have priority base) contains a \texttt{po} directory that is the central location for cataloguing/translating each package's
-messages.
+and \texttt{stats} and which have priority base) contains a \texttt{po} directory. A \texttt{po} directory is the central location for cataloguing/translating each package's messages. It contains a template message file (\texttt{.pot}) for the corresponding package along with translated \texttt{.po} files (that are created using the template \texttt{.pot} file).
 
 \hypertarget{pot-files}{%
 \subsection{\texorpdfstring{\texttt{.pot} files}{.pot files}}\label{pot-files}}

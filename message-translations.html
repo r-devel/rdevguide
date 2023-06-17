@@ -23,7 +23,7 @@
 <meta name="author" content="R Contribution Working Group" />
 
 
-<meta name="date" content="2023-05-24" />
+<meta name="date" content="2023-06-17" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -322,8 +322,7 @@ new/updated translations.</p>
 <div id="how-translations-work" class="section level2 hasAnchor" number="8.1">
 <h2><span class="header-section-number">8.1</span> How translations work<a href="message-translations.html#how-translations-work" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Each of the default packages distributed with R (i.e., those found in <code>./src/library</code> such as <code>base</code>, <code>utils</code>,
-and <code>stats</code> and which have priority base) contains a <code>po</code> directory that is the central location for cataloguing/translating each package’s
-messages.</p>
+and <code>stats</code> and which have priority base) contains a <code>po</code> directory. A <code>po</code> directory is the central location for cataloguing/translating each package’s messages. It contains a template message file (<code>.pot</code>) for the corresponding package along with translated <code>.po</code> files (that are created using the template <code>.pot</code> file).</p>
 <div id="pot-files" class="section level3 hasAnchor" number="8.1.1">
 <h3><span class="header-section-number">8.1.1</span> <code>.pot</code> files<a href="message-translations.html#pot-files" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>The <code>.pot</code> file is a snapshot of the messages available in a given <strong>domain</strong>. A domain in R typically identifies

@@ -18,8 +18,7 @@ new/updated translations.
 ## How translations work
 
 Each of the default packages distributed with R (i.e., those found in `./src/library` such as `base`, `utils`,
-and `stats` and which have priority base) contains a `po` directory that is the central location for cataloguing/translating each package's
-messages.
+and `stats` and which have priority base) contains a `po` directory. A `po` directory is the central location for cataloguing/translating each package's messages. It contains a template message file (`.pot`) for the corresponding package along with translated `.po` files (that are created using the template `.pot` file).
 
 ### `.pot` files
 
