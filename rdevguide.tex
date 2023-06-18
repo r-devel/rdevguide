@@ -1438,10 +1438,11 @@ and \texttt{stats} and which have priority base) contains a \texttt{po} director
 \hypertarget{pot-files}{%
 \subsection{\texorpdfstring{\texttt{.pot} files}{.pot files}}\label{pot-files}}
 
-The \texttt{.pot} file is a snapshot of the messages available in a given \textbf{domain}. A domain in R typically identifies
+A \texttt{.pot} file is a template file found inside the \texttt{po} directory of an R package.
+This template file is a snapshot of the messages available in a given \textbf{domain}. A domain in R typically identifies
 a source package and a source language (either R or C/C++). For example, the file \texttt{R-stats.pot}
 (found in the R sources in \texttt{./src/library/stats/po}) is a catalogue of all messages produced by R code in the
-\texttt{base} package, while \texttt{stats.pot} is a catalogue of all messages produced by C code in the \texttt{stats} package.
+\texttt{stats} package, while \texttt{stats.pot} is a catalogue of all messages produced by C code in the \texttt{stats} package.
 
 There are two exceptions to the basic pattern described above. The first is the domain for messages produced by
 the C code which is the fundamental backing of R itself (especially, but not exclusively, the C code under

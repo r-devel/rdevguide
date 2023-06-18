@@ -325,10 +325,11 @@ new/updated translations.</p>
 and <code>stats</code> and which have priority base) contains a <code>po</code> directory. A <code>po</code> directory is the central location for cataloguing/translating each package’s messages. It contains a template message file (<code>.pot</code>) for the corresponding package along with translated <code>.po</code> files (that are created using the template <code>.pot</code> file).</p>
 <div id="pot-files" class="section level3 hasAnchor" number="8.1.1">
 <h3><span class="header-section-number">8.1.1</span> <code>.pot</code> files<a href="message-translations.html#pot-files" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>The <code>.pot</code> file is a snapshot of the messages available in a given <strong>domain</strong>. A domain in R typically identifies
+<p>A <code>.pot</code> file is a template file found inside the <code>po</code> directory of an R package.
+This template file is a snapshot of the messages available in a given <strong>domain</strong>. A domain in R typically identifies
 a source package and a source language (either R or C/C++). For example, the file <code>R-stats.pot</code>
 (found in the R sources in <code>./src/library/stats/po</code>) is a catalogue of all messages produced by R code in the
-<code>base</code> package, while <code>stats.pot</code> is a catalogue of all messages produced by C code in the <code>stats</code> package.</p>
+<code>stats</code> package, while <code>stats.pot</code> is a catalogue of all messages produced by C code in the <code>stats</code> package.</p>
 <p>There are two exceptions to the basic pattern described above. The first is the domain for messages produced by
 the C code which is the fundamental backing of R itself (especially, but not exclusively, the C code under
 ./src/main). The associated <code>.pot</code> file is <code>R.pot</code> and it is found in <code>./src/library/base/po</code>. <code>R-base.pot</code> is a
