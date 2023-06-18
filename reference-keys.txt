@@ -61,7 +61,7 @@ r-manuals
 helping-with-documentation
 proofreading
 helping-with-the-developers-guide
-instructions-for-reporting-the-cran-policy-bugs-discussion-in-slack-random-channel
+reporting-documentation-bugs
 see-also-5
 message-translations
 how-translations-work
