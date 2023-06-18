@@ -22,10 +22,11 @@ and `stats` and which have priority base) contains a `po` directory. A `po` dire
 
 ### `.pot` files
 
-The `.pot` file is a snapshot of the messages available in a given **domain**. A domain in R typically identifies
+A `.pot` file is a template file found inside the `po` directory of an R package. 
+This template file is a snapshot of the messages available in a given **domain**. A domain in R typically identifies
 a source package and a source language (either R or C/C++). For example, the file `R-stats.pot`
 (found in the R sources in `./src/library/stats/po`) is a catalogue of all messages produced by R code in the
-`base` package, while `stats.pot` is a catalogue of all messages produced by C code in the `stats` package.
+`stats` package, while `stats.pot` is a catalogue of all messages produced by C code in the `stats` package.
 
 There are two exceptions to the basic pattern described above. The first is the domain for messages produced by
 the C code which is the fundamental backing of R itself (especially, but not exclusively, the C code under
