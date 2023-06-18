@@ -117,7 +117,16 @@ The Developer’s Guide (what you are reading now) uses the same process as the 
 
 Our dev guide workflow uses continuous integration and deployment so changes to the dev guide are normally published when the pull request is merged. [How to contribute to this guide from the introduction.](#how-to-contribute-to-this-guide)
 
-## Instructions for reporting the CRAN policy bugs -- discussion in slack (random channel)
+## Reporting documentation bugs
+ <!---
+discussion in slack (random channel)
+-->
+
+If you find some typo or problem on the [CRAN](https://cran.r-project.org) webpages you can write a polite email to `CRAN@r-project.org` to report it. As an alternative, one can also write to the R-devel mailing list or submit a bug report via R's Bugzilla.
+
+For improvements of the R-manuals or reporting typos or bugs in the R-manuals, submit a bug report to R's Bugzilla.
+
+For reporting bugs or typos on the webpages or documentation about a particular package, write to the corresponding package maintainer. To find the maintainer of a package, use the command `maintainer("package-name")`.
 
 **Note**:
 
