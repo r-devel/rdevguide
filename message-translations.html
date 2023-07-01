@@ -328,7 +328,9 @@ new/updated translations.</p>
 <div id="how-translations-work" class="section level2 hasAnchor" number="9.1">
 <h2><span class="header-section-number">9.1</span> How translations work<a href="message-translations.html#how-translations-work" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Each of the default packages distributed with R (i.e., those found in <code>./src/library</code> such as <code>base</code>, <code>utils</code>,
-and <code>stats</code> and which have priority base) contains a <code>po</code> directory. A <code>po</code> directory is the central location for cataloguing/translating each package’s messages. It contains a template message file (<code>.pot</code>) for the corresponding package along with translated <code>.po</code> files (that are created using the template <code>.pot</code> file).</p>
+and <code>stats</code> and which have priority base) contains a <code>po</code> directory. A <code>po</code> directory is the central location for
+ataloguing/translating each package’s messages. It contains a template message file (<code>.pot</code>) for the corresponding
+ackage along with translated <code>.po</code> files (that are created using the template <code>.pot</code> file).</p>
 <div id="pot-files" class="section level3 hasAnchor" number="9.1.1">
 <h3><span class="header-section-number">9.1.1</span> <code>.pot</code> files<a href="message-translations.html#pot-files" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>A <code>.pot</code> file is a template file found inside the <code>po</code> directory of an R package.
@@ -336,15 +338,16 @@ This template file is a snapshot of the messages available in a given <strong>do
 a source package and a source language (either R or C/C++). For example, the file <code>R-stats.pot</code>
 (found in the R sources in <code>./src/library/stats/po</code>) is a catalogue of all messages produced by R code in the
 <code>stats</code> package, while <code>stats.pot</code> is a catalogue of all messages produced by C code in the <code>stats</code> package.</p>
-<p>There are two exceptions to the basic pattern described above. The first is the domain for messages produced by
+<p>The ‘base’ package has two exceptions to the basic pattern described above. The first is the domain for messages produced by
 the C code which is the fundamental backing of R itself (especially, but not exclusively, the C code under
-./src/main). The associated <code>.pot</code> file is <code>R.pot</code> and it is found in <code>./src/library/base/po</code>. <code>R-base.pot</code> is a
-normal <code>.pot</code> file because base has a normal <code>R</code> directory.</p>
+./src/main[^The file <code>./po/POTFILES</code> is the canonical source of files searched]). The associated <code>.pot</code> file is <code>R.pot</code> and
+it is found in <code>./src/library/base/po</code>. <code>R-base.pot</code> is a normal <code>.pot</code> file because base has a normal <code>R</code> directory.</p>
 <p>The second is the domain for the Windows R GUI, i.e., the text in the menus and elsewhere in the R GUI program
 available for running R on Windows. These messages are stored in the <code>RGui.pot</code> domain, also in the <code>po</code>
 directory for <code>base</code>, and are most commonly derived from C code found in <code>./src/gnuwin32</code>. One reason to keep
 this domain separate is that it is only relevant to one platform (Windows). In particular, Windows has historically
-different character encodings, so that it made more sense for Windows developers to produce translations specifically for Windows, since it is non-trivial for non-Windows users to test their translations for the Windows GUI.</p>
+different character encodings, so that it made more sense for Windows developers to produce translations specifically
+or Windows, since it is non-trivial for non-Windows users to test their translations for the Windows GUI.</p>
 <div id="generating-.pot-files" class="section level4 hasAnchor" number="9.1.1.1">
 <h4><span class="header-section-number">9.1.1.1</span> Generating <code>.pot</code> files<a href="message-translations.html#generating-.pot-files" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>For outside contributors, there’s no need to update .pot files – translators will typically take the R <code>.pot</code> files

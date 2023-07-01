@@ -1560,7 +1560,9 @@ new/updated translations.
 \section{How translations work}\label{how-translations-work}}
 
 Each of the default packages distributed with R (i.e., those found in \texttt{./src/library} such as \texttt{base}, \texttt{utils},
-and \texttt{stats} and which have priority base) contains a \texttt{po} directory. A \texttt{po} directory is the central location for cataloguing/translating each package's messages. It contains a template message file (\texttt{.pot}) for the corresponding package along with translated \texttt{.po} files (that are created using the template \texttt{.pot} file).
+and \texttt{stats} and which have priority base) contains a \texttt{po} directory. A \texttt{po} directory is the central location for
+ataloguing/translating each package's messages. It contains a template message file (\texttt{.pot}) for the corresponding
+ackage along with translated \texttt{.po} files (that are created using the template \texttt{.pot} file).
 
 \hypertarget{pot-files}{%
 \subsection{\texorpdfstring{\texttt{.pot} files}{.pot files}}\label{pot-files}}
@@ -1571,16 +1573,17 @@ a source package and a source language (either R or C/C++). For example, the fil
 (found in the R sources in \texttt{./src/library/stats/po}) is a catalogue of all messages produced by R code in the
 \texttt{stats} package, while \texttt{stats.pot} is a catalogue of all messages produced by C code in the \texttt{stats} package.
 
-There are two exceptions to the basic pattern described above. The first is the domain for messages produced by
+The `base' package has two exceptions to the basic pattern described above. The first is the domain for messages produced by
 the C code which is the fundamental backing of R itself (especially, but not exclusively, the C code under
-./src/main). The associated \texttt{.pot} file is \texttt{R.pot} and it is found in \texttt{./src/library/base/po}. \texttt{R-base.pot} is a
-normal \texttt{.pot} file because base has a normal \texttt{R} directory.
+./src/main{[}\^{}The file \texttt{./po/POTFILES} is the canonical source of files searched{]}). The associated \texttt{.pot} file is \texttt{R.pot} and
+it is found in \texttt{./src/library/base/po}. \texttt{R-base.pot} is a normal \texttt{.pot} file because base has a normal \texttt{R} directory.
 
 The second is the domain for the Windows R GUI, i.e., the text in the menus and elsewhere in the R GUI program
 available for running R on Windows. These messages are stored in the \texttt{RGui.pot} domain, also in the \texttt{po}
 directory for \texttt{base}, and are most commonly derived from C code found in \texttt{./src/gnuwin32}. One reason to keep
 this domain separate is that it is only relevant to one platform (Windows). In particular, Windows has historically
-different character encodings, so that it made more sense for Windows developers to produce translations specifically for Windows, since it is non-trivial for non-Windows users to test their translations for the Windows GUI.
+different character encodings, so that it made more sense for Windows developers to produce translations specifically
+or Windows, since it is non-trivial for non-Windows users to test their translations for the Windows GUI.
 
 \hypertarget{generating-.pot-files}{%
 \subsubsection{\texorpdfstring{Generating \texttt{.pot} files}{Generating .pot files}}\label{generating-.pot-files}}
