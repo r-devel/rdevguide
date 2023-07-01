@@ -1031,6 +1031,207 @@ Note:
 
 \href{https://blog.r-hub.io/2019/05/14/read-the-source/}{Read the R source} blogpost.
 
+\hypertarget{Doc}{%
+\chapter{Documenting R}\label{Doc}}
+
+R has a substantial body of documentation, comprising help files for the core packages and a set of manuals aimed at users (An Introduction to R, R Data Import/Export), system administrators (R Installation and Administration) and developers (Writing R Extensions, The R language definition, and R Internals). This documentation was developed by the R Core Team with input from external contributors. The continuing involvement of the user community is important in maintaining this valuable documentation.
+
+The involvement of the community takes many forms, from contributing content, to making bug reports or raising an issue when the documentation could be more complete or made easier to follow.
+
+This chapter is about the ways people can contribute to R's documentation, with guidance on how to do that. Any time you feel that you can clarify or fill gaps in existing documentation, your contribution is welcome and appreciated. If you find it difficult to deal with the markup used in the source files, you can ask for help with that part too. Please do not let the material in this chapter stand between the documentation and your desire to help out. However, not every good faith effort to change or extend the documentation will be accepted - sometimes the suggested changes may be incorrect; other times, while a change in wording may make some things clearer and easier to understand, the finer details of some corner case may become less clear, leading to the suggested changes being declined or modified by a member of R Core before applying them (if they agree the issue is important enough to fix).
+
+\hypertarget{guidelines-for-writing-r-help-files}{%
+\section{Guidelines for writing R help files}\label{guidelines-for-writing-r-help-files}}
+
+The help files for R functions are written in `R documentation' (\texttt{.Rd}) file format. It is a simple markup language with close resemblance to LaTeX. The \texttt{.Rd} file format can be further processed into a variety of formats, including LaTeX, HTML, and plain text. The \texttt{.Rd} files can be found in the \texttt{man} directory of the sources for the corresponding base package, for example \url{https://svn.r-project.org/R/trunk/src/library/base/man/mean.Rd}. Many authors of contributed R packages use the \href{https://cran.r-project.org/package=roxygen2}{roxygen2} package to write documentation, which generates \texttt{.Rd} files from comments in the package \texttt{.R} files. However, the help files in the base distribution are maintained by directly editing the \texttt{.Rd} files.
+
+This section gives an overview of the \texttt{.Rd} format and summarises the \href{https://developer.r-project.org/Rds.html}{guidelines for writing the R help files}. The guidelines are intended for contributors to base R, but may also be useful for authors of contributed packages. Full documentation on writing R documentation files can be found in the \href{https://cran.r-project.org/doc/manuals/r-release/R-exts.html\#Writing-R-documentation-files}{Writing R Extensions} manual.
+
+There are three main parts of an \texttt{.Rd} file:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  \textbf{Header}: This part is for the basic information of the document/file. For instance, the name of the file, the topics documented, a title, a short textual description, and R usage information for the objects documented.
+\item
+  \textbf{Body}: This part includes further information on the function's arguments and return value.
+\item
+  \textbf{Footer}: This part is optional. Usually the keyword information is included here.
+\end{enumerate}
+
+All the above information is included in a \texttt{.Rd} file within a series of sections with standard names (user-defined sections are also allowed). These sections are discussed below:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  \texttt{\textbackslash{}title} section:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Capitalize each word.
+  \item
+    Do not end in a period.
+  \item
+    Avoid use of markup language (because markup language need not be suitable for various hypertext search systems).
+  \end{itemize}
+\item
+  \texttt{\textbackslash{}usage} and \texttt{\textbackslash{}examples} sections:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Line length of 65 characters is advised.
+  \item
+    Use \texttt{TRUE} instead of \texttt{T} and \texttt{FALSE} instead of \texttt{F}.
+  \item
+    Add spaces around binary operators.
+  \item
+    Add spaces after commas in the argument lists.
+  \item
+    Use \texttt{\textless{}-} rather than \texttt{=} for assignments.
+  \item
+    Add spaces around the \texttt{\textless{}-} operator.
+  \item
+    Do not use tabs to indent (as these do not render correctly on all possible pagers).
+  \item
+    Use 4 spaces to indent the (example) code.
+  \item
+    Make sure the examples are directly executable.
+  \item
+    The examples should be system-independent.
+  \item
+    The examples should not require special facilities (for instance, Internet access or write permission to specific directories).
+  \item
+    Examples should also not take longer than necessary to run, as they are run when checking a build of R.
+  \end{itemize}
+\item
+  \texttt{\textbackslash{}synopsis} section: The \texttt{\textbackslash{}usage} section can have the function definition, or the actual definition can be included in the \texttt{\textbackslash{}synopsis} section. The full documentation for \href{https://cran.r-project.org/doc/manuals/r-release/R-exts.html\#Documenting-functions}{\texttt{\textbackslash{}usage}} says that the usage information specified should match the function definition exactly. Apparently, \texttt{\textbackslash{}synopsis} was removed in \href{https://github.com/r-devel/r-svn/blob/0d65935f30dcaccfeee1dd61991bf4b1444873bc/src/library/tools/R/RdConv2.R\#L918-L919}{R 3.1.0}, but it is still mentioned in \href{https://developer.r-project.org/Rds.html}{Rds}.
+\item
+  \texttt{\textbackslash{}source} and \texttt{\textbackslash{}references} sections:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Author(s) names should be written in the form \texttt{Author,\ A.\ B.}.
+  \item
+    Author(s) names should be separated by a comma or \texttt{and} (but not both).
+  \item
+    Separate paragraphs (separated by a blank line) should be used for each reference.
+  \item
+    Give a date immediately after the author(s) names.
+  \item
+    Do not put a period after the date.
+  \item
+    Titles of books and journals (not articles) should be enclosed in \texttt{\textbackslash{}emph\{...\}}.
+  \item
+    Volume numbers for journals are to be enclosed in \texttt{\textbackslash{}bold\{...\}} and followed by a comma.
+  \item
+    Use \texttt{-\/-} for page ranges.
+  \item
+    For giving an address for a publisher use the format \texttt{New\ York:\ Springer-Verlag}.
+  \end{itemize}
+\end{enumerate}
+
+The language used in the documentations should follow these basic rules:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  Affirmative tone should be used to describe what the function does and how to use it effectively. Rather than creating worry in the mind of a reader, it should establish confident knowledge about the effective use of the particular function/feature.
+\item
+  More documentation is not necessarily better documentation. Long descriptions full of corner cases and caveats can create the impression that a function is more complex or harder to use than it actually is. Be succinct but exhaustive.
+\item
+  Short code examples can help in understanding better. Readers can often grasp a simple example more quickly than they can digest a formal description. Usually people learn faster with concrete, motivating examples that match the context of a typical use case.
+\item
+  Giving a code equivalent (or approximate equivalent) can be a useful addition to the description provided. You should carefully weigh whether the code equivalent adds value to the document.
+\item
+  The tone of the documentation needs to be respectful of the reader's background. Lay out the relevant information, show motivating use cases, provide glossary links, and do your best to connect-the-dots. The documentation is meant for newcomers, many of whom will be using it to evaluate the R language as a whole. The experience needs to be positive and not leave the reader with worries that something bad will happen if they make a mistake.
+\end{enumerate}
+
+Extensive details of writing R documentation files can be found \href{https://cran.r-project.org/doc/manuals/r-release/R-exts.html\#Writing-R-documentation-files}{here}.
+
+\hypertarget{r-manuals}{%
+\section{R manuals}\label{r-manuals}}
+
+The \href{https://cran.r-project.org/manuals.html}{R manuals} are a part of the \href{https://svn.r-project.org/R/trunk/doc/manual/}{R sources}. Hence, bug reports/patches can also be submitted via Bugzilla, e.g.~\href{https://bugs.r-project.org/bugzilla/show_bug.cgi?id=15221}{Bug 15221 - R-admin/`Installing R under Windows': Missing argument name}. Note that they are typically referred to by their file names as listed below:
+
+\begin{longtable}[]{@{}ll@{}}
+\toprule()
+Manual & Nickname \\
+\midrule()
+\endhead
+An Introduction to R & ``R-intro'' \\
+R Data Import/Export & ``R-data'' \\
+R Installation and Administration & ``R-admin'' \\
+Writing R Extensions & ``R-exts'' \\
+The R language definition & ``R-lang'' \\
+R Internals & ``R-ints'' \\
+\bottomrule()
+\end{longtable}
+
+Note:
+
+\begin{itemize}
+\tightlist
+\item
+  Every manual is associated with a particular version of R, so you should check the version before reporting a bug.
+\item
+  The \href{https://cran.r-project.org/manuals.html}{R manuals} page has links for the \href{https://contributor.r-project.org/rdevguide/GetStart.html\#the-r-source-code}{three types of release}: \texttt{r-release}, \texttt{r-patched} and \texttt{r-devel}. These nicknames appear in the URLs, e.g.~\url{https://cran.r-project.org/doc/manuals/r-release/R-intro.html}.
+\item
+  The \href{https://www.gnu.org/software/texinfo/}{Texinfo manual} should be referred to for \href{https://www.gnu.org/software/texinfo/manual/texinfo/texinfo.html}{how to mark up text}.
+\end{itemize}
+
+\hypertarget{helping-with-documentation}{%
+\section{Helping with documentation}\label{helping-with-documentation}}
+
+Maintaining the accuracy of R's documentations and keeping a high level of quality takes a lot of effort. Community members, like you, help with writing, editing, and updating content, and these contributions are appreciated and welcomed.
+
+Looking at pre-existing documentation source files can be very helpful when getting started.
+
+You can directly search for \href{https://bugs.r-project.org/buglist.cgi?component=Documentation\&list_id=22501\&product=R\&resolution=---}{documentation issues/bugs on Bugzilla}. Issues vary from typos to unclear documentation and items lacking documentation.
+
+If you see a documentation issue that you would like to tackle, you can leave a comment on the issue saying you are going to try to solve the issue and mention roughly how long you think you will take to do so (this allows others to take on the issue if you happen to forget or lose interest).
+
+If you find some typo or problem on \href{https://cran.r-project.org}{CRAN} after checking the problem or typo you can write a polite email to \texttt{cran-sysadmin@r-project.org} and one of the R-core members working with CRAN. You'll probably get a prompt reply about how the issue is going to be fixed.
+
+\hypertarget{proofreading}{%
+\section{Proofreading}\label{proofreading}}
+
+While an issue filed on Bugzilla means there is a known issue somewhere, that does not mean there are not other issues lurking about in the documentation. Proofreading a part of the documentation can often uncover problems.
+
+If you decide to proofread, read a section of the documentation from start to finish, filing issues in Bugzilla for each major type of problem you find. It is best to avoid filing a single issue for an entire section containing multiple problems; instead, file several issues so that it is easier to break the work up for multiple people and more efficient review.
+
+\hypertarget{helping-with-the-developers-guide}{%
+\section{Helping with the Developer's Guide}\label{helping-with-the-developers-guide}}
+
+The Developer's Guide (what you are reading now) uses the same process as the main R documentation, except for some small differences. The source lives in a \href{https://github.com/r-devel/rdevguide/}{GitHub repository} and bug reports should be submitted to the \href{https://github.com/r-devel/rdevguide/issues}{devguide GitHub tracker}.
+
+Our dev guide workflow uses continuous integration and deployment so changes to the dev guide are normally published when the pull request is merged. \protect\hyperlink{how-to-contribute-to-this-guide}{How to contribute to this guide from the introduction.}
+
+\hypertarget{reporting-documentation-bugs}{%
+\section{Reporting documentation bugs}\label{reporting-documentation-bugs}}
+
+If you find some typo or problem on the \href{https://cran.r-project.org}{CRAN} webpages you can write a polite email to \texttt{CRAN@r-project.org} to report it. As an alternative, one can also write to the R-devel mailing list or submit a bug report via R's Bugzilla.
+
+For improvements of the R-manuals or reporting typos or bugs in the R-manuals, submit a bug report to R's Bugzilla.
+
+For reporting bugs or typos on the webpages or documentation about a particular package, write to the corresponding package maintainer. To find the maintainer of a package, use the command \texttt{maintainer("package-name")}.
+
+\textbf{Note}:
+
+There is a \texttt{\#core-documentation} channel on the \href{https://r-contributors.slack.com/}{R Contributors slack} where you can discuss about the patches for improvements to R's documentation.
+
+\hypertarget{see-also-4}{%
+\section{See also}\label{see-also-4}}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \href{https://cran.r-project.org/doc/manuals/r-release/R-exts.html\#Writing-R-documentation-files}{Writing R documentation files}
+\end{enumerate}
+
 \hypertarget{FixBug}{%
 \chapter{Lifecycle of a Patch}\label{FixBug}}
 
@@ -1266,207 +1467,6 @@ It may take longer before your patch is accepted and applied or rejected, someti
 \hypertarget{examples-of-reviewing-a-patch}{%
 \section{Examples of reviewing a patch}\label{examples-of-reviewing-a-patch}}
 
-\hypertarget{see-also-4}{%
-\section{See also}\label{see-also-4}}
-
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\tightlist
-\item
-  \href{https://www.r-project.org/bugs.html\#how-to-submit-patches}{Submitting patches}
-\end{enumerate}
-
-\hypertarget{Doc}{%
-\chapter{Documenting R}\label{Doc}}
-
-R has a substantial body of documentation, comprising help files for the core packages and a set of manuals aimed at users (An Introduction to R, R Data Import/Export), system administrators (R Installation and Administration) and developers (Writing R Extensions, The R language definition, and R Internals). This documentation was developed by the R Core Team with input from external contributors. The continuing involvement of the user community is important in maintaining this valuable documentation.
-
-The involvement of the community takes many forms, from contributing content, to making bug reports or raising an issue when the documentation could be more complete or made easier to follow.
-
-This chapter is about the ways people can contribute to R's documentation, with guidance on how to do that. Any time you feel that you can clarify or fill gaps in existing documentation, your contribution is welcome and appreciated. If you find it difficult to deal with the markup used in the source files, you can ask for help with that part too. Please do not let the material in this chapter stand between the documentation and your desire to help out. However, not every good faith effort to change or extend the documentation will be accepted - sometimes the suggested changes may be incorrect; other times, while a change in wording may make some things clearer and easier to understand, the finer details of some corner case may become less clear, leading to the suggested changes being declined or modified by a member of R Core before applying them (if they agree the issue is important enough to fix).
-
-\hypertarget{guidelines-for-writing-r-help-files}{%
-\section{Guidelines for writing R help files}\label{guidelines-for-writing-r-help-files}}
-
-The help files for R functions are written in `R documentation' (\texttt{.Rd}) file format. It is a simple markup language with close resemblance to LaTeX. The \texttt{.Rd} file format can be further processed into a variety of formats, including LaTeX, HTML, and plain text. The \texttt{.Rd} files can be found in the \texttt{man} directory of the sources for the corresponding base package, for example \url{https://svn.r-project.org/R/trunk/src/library/base/man/mean.Rd}. Many authors of contributed R packages use the \href{https://cran.r-project.org/package=roxygen2}{roxygen2} package to write documentation, which generates \texttt{.Rd} files from comments in the package \texttt{.R} files. However, the help files in the base distribution are maintained by directly editing the \texttt{.Rd} files.
-
-This section gives an overview of the \texttt{.Rd} format and summarises the \href{https://developer.r-project.org/Rds.html}{guidelines for writing the R help files}. The guidelines are intended for contributors to base R, but may also be useful for authors of contributed packages. Full documentation on writing R documentation files can be found in the \href{https://cran.r-project.org/doc/manuals/r-release/R-exts.html\#Writing-R-documentation-files}{Writing R Extensions} manual.
-
-There are three main parts of an \texttt{.Rd} file:
-
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\item
-  \textbf{Header}: This part is for the basic information of the document/file. For instance, the name of the file, the topics documented, a title, a short textual description, and R usage information for the objects documented.
-\item
-  \textbf{Body}: This part includes further information on the function's arguments and return value.
-\item
-  \textbf{Footer}: This part is optional. Usually the keyword information is included here.
-\end{enumerate}
-
-All the above information is included in a \texttt{.Rd} file within a series of sections with standard names (user-defined sections are also allowed). These sections are discussed below:
-
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\item
-  \texttt{\textbackslash{}title} section:
-
-  \begin{itemize}
-  \tightlist
-  \item
-    Capitalize each word.
-  \item
-    Do not end in a period.
-  \item
-    Avoid use of markup language (because markup language need not be suitable for various hypertext search systems).
-  \end{itemize}
-\item
-  \texttt{\textbackslash{}usage} and \texttt{\textbackslash{}examples} sections:
-
-  \begin{itemize}
-  \tightlist
-  \item
-    Line length of 65 characters is advised.
-  \item
-    Use \texttt{TRUE} instead of \texttt{T} and \texttt{FALSE} instead of \texttt{F}.
-  \item
-    Add spaces around binary operators.
-  \item
-    Add spaces after commas in the argument lists.
-  \item
-    Use \texttt{\textless{}-} rather than \texttt{=} for assignments.
-  \item
-    Add spaces around the \texttt{\textless{}-} operator.
-  \item
-    Do not use tabs to indent (as these do not render correctly on all possible pagers).
-  \item
-    Use 4 spaces to indent the (example) code.
-  \item
-    Make sure the examples are directly executable.
-  \item
-    The examples should be system-independent.
-  \item
-    The examples should not require special facilities (for instance, Internet access or write permission to specific directories).
-  \item
-    Examples should also not take longer than necessary to run, as they are run when checking a build of R.
-  \end{itemize}
-\item
-  \texttt{\textbackslash{}synopsis} section: The \texttt{\textbackslash{}usage} section can have the function definition, or the actual definition can be included in the \texttt{\textbackslash{}synopsis} section. The full documentation for \href{https://cran.r-project.org/doc/manuals/r-release/R-exts.html\#Documenting-functions}{\texttt{\textbackslash{}usage}} says that the usage information specified should match the function definition exactly. Apparently, \texttt{\textbackslash{}synopsis} was removed in \href{https://github.com/r-devel/r-svn/blob/0d65935f30dcaccfeee1dd61991bf4b1444873bc/src/library/tools/R/RdConv2.R\#L918-L919}{R 3.1.0}, but it is still mentioned in \href{https://developer.r-project.org/Rds.html}{Rds}.
-\item
-  \texttt{\textbackslash{}source} and \texttt{\textbackslash{}references} sections:
-
-  \begin{itemize}
-  \tightlist
-  \item
-    Author(s) names should be written in the form \texttt{Author,\ A.\ B.}.
-  \item
-    Author(s) names should be separated by a comma or \texttt{and} (but not both).
-  \item
-    Separate paragraphs (separated by a blank line) should be used for each reference.
-  \item
-    Give a date immediately after the author(s) names.
-  \item
-    Do not put a period after the date.
-  \item
-    Titles of books and journals (not articles) should be enclosed in \texttt{\textbackslash{}emph\{...\}}.
-  \item
-    Volume numbers for journals are to be enclosed in \texttt{\textbackslash{}bold\{...\}} and followed by a comma.
-  \item
-    Use \texttt{-\/-} for page ranges.
-  \item
-    For giving an address for a publisher use the format \texttt{New\ York:\ Springer-Verlag}.
-  \end{itemize}
-\end{enumerate}
-
-The language used in the documentations should follow these basic rules:
-
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\item
-  Affirmative tone should be used to describe what the function does and how to use it effectively. Rather than creating worry in the mind of a reader, it should establish confident knowledge about the effective use of the particular function/feature.
-\item
-  More documentation is not necessarily better documentation. Long descriptions full of corner cases and caveats can create the impression that a function is more complex or harder to use than it actually is. Be succinct but exhaustive.
-\item
-  Short code examples can help in understanding better. Readers can often grasp a simple example more quickly than they can digest a formal description. Usually people learn faster with concrete, motivating examples that match the context of a typical use case.
-\item
-  Giving a code equivalent (or approximate equivalent) can be a useful addition to the description provided. You should carefully weigh whether the code equivalent adds value to the document.
-\item
-  The tone of the documentation needs to be respectful of the reader's background. Lay out the relevant information, show motivating use cases, provide glossary links, and do your best to connect-the-dots. The documentation is meant for newcomers, many of whom will be using it to evaluate the R language as a whole. The experience needs to be positive and not leave the reader with worries that something bad will happen if they make a mistake.
-\end{enumerate}
-
-Extensive details of writing R documentation files can be found \href{https://cran.r-project.org/doc/manuals/r-release/R-exts.html\#Writing-R-documentation-files}{here}.
-
-\hypertarget{r-manuals}{%
-\section{R manuals}\label{r-manuals}}
-
-The \href{https://cran.r-project.org/manuals.html}{R manuals} are a part of the \href{https://svn.r-project.org/R/trunk/doc/manual/}{R sources}. Hence, bug reports/patches can also be submitted via Bugzilla, e.g.~\href{https://bugs.r-project.org/bugzilla/show_bug.cgi?id=15221}{Bug 15221 - R-admin/`Installing R under Windows': Missing argument name}. Note that they are typically referred to by their file names as listed below:
-
-\begin{longtable}[]{@{}ll@{}}
-\toprule()
-Manual & Nickname \\
-\midrule()
-\endhead
-An Introduction to R & ``R-intro'' \\
-R Data Import/Export & ``R-data'' \\
-R Installation and Administration & ``R-admin'' \\
-Writing R Extensions & ``R-exts'' \\
-The R language definition & ``R-lang'' \\
-R Internals & ``R-ints'' \\
-\bottomrule()
-\end{longtable}
-
-Note:
-
-\begin{itemize}
-\tightlist
-\item
-  Every manual is associated with a particular version of R, so you should check the version before reporting a bug.
-\item
-  The \href{https://cran.r-project.org/manuals.html}{R manuals} page has links for the \href{https://contributor.r-project.org/rdevguide/GetStart.html\#the-r-source-code}{three types of release}: \texttt{r-release}, \texttt{r-patched} and \texttt{r-devel}. These nicknames appear in the URLs, e.g.~\url{https://cran.r-project.org/doc/manuals/r-release/R-intro.html}.
-\item
-  The \href{https://www.gnu.org/software/texinfo/}{Texinfo manual} should be referred to for \href{https://www.gnu.org/software/texinfo/manual/texinfo/texinfo.html}{how to mark up text}.
-\end{itemize}
-
-\hypertarget{helping-with-documentation}{%
-\section{Helping with documentation}\label{helping-with-documentation}}
-
-Maintaining the accuracy of R's documentations and keeping a high level of quality takes a lot of effort. Community members, like you, help with writing, editing, and updating content, and these contributions are appreciated and welcomed.
-
-Looking at pre-existing documentation source files can be very helpful when getting started.
-
-You can directly search for \href{https://bugs.r-project.org/buglist.cgi?component=Documentation\&list_id=22501\&product=R\&resolution=---}{documentation issues/bugs on Bugzilla}. Issues vary from typos to unclear documentation and items lacking documentation.
-
-If you see a documentation issue that you would like to tackle, you can leave a comment on the issue saying you are going to try to solve the issue and mention roughly how long you think you will take to do so (this allows others to take on the issue if you happen to forget or lose interest).
-
-If you find some typo or problem on \href{https://cran.r-project.org}{CRAN} after checking the problem or typo you can write a polite email to \texttt{cran-sysadmin@r-project.org} and one of the R-core members working with CRAN. You'll probably get a prompt reply about how the issue is going to be fixed.
-
-\hypertarget{proofreading}{%
-\section{Proofreading}\label{proofreading}}
-
-While an issue filed on Bugzilla means there is a known issue somewhere, that does not mean there are not other issues lurking about in the documentation. Proofreading a part of the documentation can often uncover problems.
-
-If you decide to proofread, read a section of the documentation from start to finish, filing issues in Bugzilla for each major type of problem you find. It is best to avoid filing a single issue for an entire section containing multiple problems; instead, file several issues so that it is easier to break the work up for multiple people and more efficient review.
-
-\hypertarget{helping-with-the-developers-guide}{%
-\section{Helping with the Developer's Guide}\label{helping-with-the-developers-guide}}
-
-The Developer's Guide (what you are reading now) uses the same process as the main R documentation, except for some small differences. The source lives in a \href{https://github.com/r-devel/rdevguide/}{GitHub repository} and bug reports should be submitted to the \href{https://github.com/r-devel/rdevguide/issues}{devguide GitHub tracker}.
-
-Our dev guide workflow uses continuous integration and deployment so changes to the dev guide are normally published when the pull request is merged. \protect\hyperlink{how-to-contribute-to-this-guide}{How to contribute to this guide from the introduction.}
-
-\hypertarget{reporting-documentation-bugs}{%
-\section{Reporting documentation bugs}\label{reporting-documentation-bugs}}
-
-If you find some typo or problem on the \href{https://cran.r-project.org}{CRAN} webpages you can write a polite email to \texttt{CRAN@r-project.org} to report it. As an alternative, one can also write to the R-devel mailing list or submit a bug report via R's Bugzilla.
-
-For improvements of the R-manuals or reporting typos or bugs in the R-manuals, submit a bug report to R's Bugzilla.
-
-For reporting bugs or typos on the webpages or documentation about a particular package, write to the corresponding package maintainer. To find the maintainer of a package, use the command \texttt{maintainer("package-name")}.
-
-\textbf{Note}:
-
-There is a \texttt{\#core-documentation} channel on the \href{https://r-contributors.slack.com/}{R Contributors slack} where you can discuss about the patches for improvements to R's documentation.
-
 \hypertarget{see-also-5}{%
 \section{See also}\label{see-also-5}}
 
@@ -1474,7 +1474,7 @@ There is a \texttt{\#core-documentation} channel on the \href{https://r-contribu
 \def\labelenumi{\arabic{enumi}.}
 \tightlist
 \item
-  \href{https://cran.r-project.org/doc/manuals/r-release/R-exts.html\#Writing-R-documentation-files}{Writing R documentation files}
+  \href{https://www.r-project.org/bugs.html\#how-to-submit-patches}{Submitting patches}
 \end{enumerate}
 
 \hypertarget{message-translations}{%
