@@ -18,7 +18,9 @@ new/updated translations.
 ## How translations work
 
 Each of the default packages distributed with R (i.e., those found in `./src/library` such as `base`, `utils`,
-and `stats` and which have priority base) contains a `po` directory. A `po` directory is the central location for cataloguing/translating each package's messages. It contains a template message file (`.pot`) for the corresponding package along with translated `.po` files (that are created using the template `.pot` file).
+and `stats` and which have priority base) contains a `po` directory. A `po` directory is the central location for
+ataloguing/translating each package's messages. It contains a template message file (`.pot`) for the corresponding
+ackage along with translated `.po` files (that are created using the template `.pot` file).
 
 ### `.pot` files
 
@@ -28,16 +30,17 @@ a source package and a source language (either R or C/C++). For example, the fil
 (found in the R sources in `./src/library/stats/po`) is a catalogue of all messages produced by R code in the
 `stats` package, while `stats.pot` is a catalogue of all messages produced by C code in the `stats` package.
 
-There are two exceptions to the basic pattern described above. The first is the domain for messages produced by
+The 'base' package has two exceptions to the basic pattern described above. The first is the domain for messages produced by
 the C code which is the fundamental backing of R itself (especially, but not exclusively, the C code under
-./src/main). The associated `.pot` file is `R.pot` and it is found in `./src/library/base/po`. `R-base.pot` is a
-normal `.pot` file because base has a normal `R` directory.
+./src/main[^The file `./po/POTFILES` is the canonical source of files searched]). The associated `.pot` file is `R.pot` and
+it is found in `./src/library/base/po`. `R-base.pot` is a normal `.pot` file because base has a normal `R` directory.
 
 The second is the domain for the Windows R GUI, i.e., the text in the menus and elsewhere in the R GUI program
 available for running R on Windows. These messages are stored in the `RGui.pot` domain, also in the `po`
 directory for `base`, and are most commonly derived from C code found in `./src/gnuwin32`. One reason to keep
 this domain separate is that it is only relevant to one platform (Windows). In particular, Windows has historically
-different character encodings, so that it made more sense for Windows developers to produce translations specifically for Windows, since it is non-trivial for non-Windows users to test their translations for the Windows GUI.
+different character encodings, so that it made more sense for Windows developers to produce translations specifically
+or Windows, since it is non-trivial for non-Windows users to test their translations for the Windows GUI.
 
 #### Generating `.pot` files
 
