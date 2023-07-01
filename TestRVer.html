@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 10 Testing Pre-release R Versions | R Development Guide</title>
+  <title>Chapter 11 Testing Pre-release R Versions | R Development Guide</title>
   <meta name="description" content="A guide to R development." />
   <meta name="generator" content="bookdown 0.34 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 10 Testing Pre-release R Versions | R Development Guide" />
+  <meta property="og:title" content="Chapter 11 Testing Pre-release R Versions | R Development Guide" />
   <meta property="og:type" content="book" />
   <meta property="og:image" content="https://contributor.r-project.org/rdevguide/img/Rlogo.png" />
   <meta property="og:description" content="A guide to R development." />
   <meta name="github-repo" content="r-devel/rdevguide" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 10 Testing Pre-release R Versions | R Development Guide" />
+  <meta name="twitter:title" content="Chapter 11 Testing Pre-release R Versions | R Development Guide" />
   
   <meta name="twitter:description" content="A guide to R development." />
   <meta name="twitter:image" content="https://contributor.r-project.org/rdevguide/img/Rlogo.png" />
@@ -30,8 +30,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   <link rel="shortcut icon" href="img/Rlogo.svg" type="image/x-icon" />
-<link rel="prev" href="message-translations.html"/>
-<link rel="next" href="CoreDev.html"/>
+<link rel="prev" href="CoreDev.html"/>
+<link rel="next" href="WhereToGetHelp.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -259,17 +259,17 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="9.3" data-path="message-translations.html"><a href="message-translations.html#current-status-of-translations-in-r"><i class="fa fa-check"></i><b>9.3</b> Current status of translations in R</a></li>
 <li class="chapter" data-level="9.4" data-path="message-translations.html"><a href="message-translations.html#helpful-references"><i class="fa fa-check"></i><b>9.4</b> Helpful references</a></li>
 </ul></li>
-<li class="chapter" data-level="10" data-path="TestRVer.html"><a href="TestRVer.html"><i class="fa fa-check"></i><b>10</b> Testing Pre-release R Versions</a>
+<li class="chapter" data-level="10" data-path="CoreDev.html"><a href="CoreDev.html"><i class="fa fa-check"></i><b>10</b> R Core Developers</a></li>
+<li class="chapter" data-level="11" data-path="TestRVer.html"><a href="TestRVer.html"><i class="fa fa-check"></i><b>11</b> Testing Pre-release R Versions</a>
 <ul>
-<li class="chapter" data-level="10.1" data-path="TestRVer.html"><a href="TestRVer.html#where-to-test"><i class="fa fa-check"></i><b>10.1</b> Where to test?</a>
+<li class="chapter" data-level="11.1" data-path="TestRVer.html"><a href="TestRVer.html#where-to-test"><i class="fa fa-check"></i><b>11.1</b> Where to test?</a>
 <ul>
-<li class="chapter" data-level="10.1.1" data-path="TestRVer.html"><a href="TestRVer.html#VM"><i class="fa fa-check"></i><b>10.1.1</b> Virtual machine</a></li>
+<li class="chapter" data-level="11.1.1" data-path="TestRVer.html"><a href="TestRVer.html#VM"><i class="fa fa-check"></i><b>11.1.1</b> Virtual machine</a></li>
 </ul></li>
-<li class="chapter" data-level="10.2" data-path="TestRVer.html"><a href="TestRVer.html#what-can-you-test"><i class="fa fa-check"></i><b>10.2</b> What can you test?</a></li>
-<li class="chapter" data-level="10.3" data-path="TestRVer.html"><a href="TestRVer.html#writing-tests-for-r"><i class="fa fa-check"></i><b>10.3</b> Writing tests for R</a></li>
-<li class="chapter" data-level="10.4" data-path="TestRVer.html"><a href="TestRVer.html#benchmarks"><i class="fa fa-check"></i><b>10.4</b> Benchmarks</a></li>
+<li class="chapter" data-level="11.2" data-path="TestRVer.html"><a href="TestRVer.html#what-can-you-test"><i class="fa fa-check"></i><b>11.2</b> What can you test?</a></li>
+<li class="chapter" data-level="11.3" data-path="TestRVer.html"><a href="TestRVer.html#writing-tests-for-r"><i class="fa fa-check"></i><b>11.3</b> Writing tests for R</a></li>
+<li class="chapter" data-level="11.4" data-path="TestRVer.html"><a href="TestRVer.html#benchmarks"><i class="fa fa-check"></i><b>11.4</b> Benchmarks</a></li>
 </ul></li>
-<li class="chapter" data-level="11" data-path="CoreDev.html"><a href="CoreDev.html"><i class="fa fa-check"></i><b>11</b> R Core Developers</a></li>
 <li class="chapter" data-level="12" data-path="WhereToGetHelp.html"><a href="WhereToGetHelp.html"><i class="fa fa-check"></i><b>12</b> Where to Get Help</a>
 <ul>
 <li class="chapter" data-level="12.1" data-path="WhereToGetHelp.html"><a href="WhereToGetHelp.html#slack"><i class="fa fa-check"></i><b>12.1</b> Slack</a></li>
@@ -311,19 +311,19 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="TestRVer" class="section level1 hasAnchor" number="10">
-<h1><span class="header-section-number">Chapter 10</span> Testing Pre-release R Versions<a href="TestRVer.html#TestRVer" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="TestRVer" class="section level1 hasAnchor" number="11">
+<h1><span class="header-section-number">Chapter 11</span> Testing Pre-release R Versions<a href="TestRVer.html#TestRVer" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <p>This chapter is inspired from the blog on <a href="https://blog.r-project.org/2021/04/28/r-can-use-your-help-testing-r-before-release/index.html">testing R before release</a> and discusses how you can help with testing of pre-release versions of R.</p>
-<div id="where-to-test" class="section level2 hasAnchor" number="10.1">
-<h2><span class="header-section-number">10.1</span> Where to test?<a href="TestRVer.html#where-to-test" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="where-to-test" class="section level2 hasAnchor" number="11.1">
+<h2><span class="header-section-number">11.1</span> Where to test?<a href="TestRVer.html#where-to-test" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Whenever possible use a fresh package library for testing, even better would be to use <a href="TestRVer.html#VM">virtual machines</a> for the testing. This would ensure that you do not damage your existing R installation.</p>
-<div id="VM" class="section level3 hasAnchor" number="10.1.1">
-<h3><span class="header-section-number">10.1.1</span> Virtual machine<a href="TestRVer.html#VM" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="VM" class="section level3 hasAnchor" number="11.1.1">
+<h3><span class="header-section-number">11.1.1</span> Virtual machine<a href="TestRVer.html#VM" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>A free Windows 10 virtual machine is provided by Microsoft (with a 90-day limit) for building, testing, and checking R packages and R itself. Package maintainers who work on Linux and MacOS can use it to test their packages on Windows. Read the <a href="https://svn.r-project.org/R-dev-web/trunk/WindowsBuilds/winutf8/ucrt3/vm.html">instructions</a> on how to automatically set up the machine to check R packages. Tomas Kalibera describes the details of using virtual machine in the blog <a href="https://blog.r-project.org/2021/03/18/virtual-windows-machine-for-checking-r-packages/index.html">Virtual Windows machine for checking R packages</a>.</p>
 </div>
 </div>
-<div id="what-can-you-test" class="section level2 hasAnchor" number="10.2">
-<h2><span class="header-section-number">10.2</span> What can you test?<a href="TestRVer.html#what-can-you-test" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="what-can-you-test" class="section level2 hasAnchor" number="11.2">
+<h2><span class="header-section-number">11.2</span> What can you test?<a href="TestRVer.html#what-can-you-test" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>You can test:</p>
 <ul>
 <li><p>Your own programs.</p></li>
@@ -340,13 +340,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li><p><a href="https://blog.r-project.org/2021/04/28/r-can-use-your-help-testing-r-before-release/index.html#on-solaris">Solaris</a></p></li>
 </ul>
 </div>
-<div id="writing-tests-for-r" class="section level2 hasAnchor" number="10.3">
-<h2><span class="header-section-number">10.3</span> Writing tests for R<a href="TestRVer.html#writing-tests-for-r" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="writing-tests-for-r" class="section level2 hasAnchor" number="11.3">
+<h2><span class="header-section-number">11.3</span> Writing tests for R<a href="TestRVer.html#writing-tests-for-r" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Writing tests for R is much like writing tests for your own code. Tests need to be thorough, fast, isolated, consistently repeatable, and as simple as possible.</p>
 <p>When you are adding tests to an existing test file, it is also recommended that you study the other tests in that file; it will teach you which precautions you have to take to make your tests robust and portable. We try to have tests both for normal behaviour and for error conditions. Tests live in the <code>tests</code> directory.</p>
 </div>
-<div id="benchmarks" class="section level2 hasAnchor" number="10.4">
-<h2><span class="header-section-number">10.4</span> Benchmarks<a href="TestRVer.html#benchmarks" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="benchmarks" class="section level2 hasAnchor" number="11.4">
+<h2><span class="header-section-number">11.4</span> Benchmarks<a href="TestRVer.html#benchmarks" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Benchmarking is useful to test that a change does not degrade performance.</p>
 
 </div>
@@ -356,8 +356,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           </div>
         </div>
       </div>
-<a href="message-translations.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="CoreDev.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="CoreDev.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="WhereToGetHelp.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -388,7 +388,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/r-devel/rdevguide/edit/main/09-testing_pre_release_R_versions.Rmd",
+"link": "https://github.com/r-devel/rdevguide/edit/main/10-testing_pre_release_R_versions.Rmd",
 "text": "Edit"
 },
 "history": {

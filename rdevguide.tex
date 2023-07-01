@@ -1652,64 +1652,6 @@ They are stored in the R sources at \texttt{./src/library/translations/inst} in 
   Statistical terms glossary
 \end{itemize}
 
-\hypertarget{TestRVer}{%
-\chapter{Testing Pre-release R Versions}\label{TestRVer}}
-
-This chapter is inspired from the blog on \href{https://blog.r-project.org/2021/04/28/r-can-use-your-help-testing-r-before-release/index.html}{testing R before release} and discusses how you can help with testing of pre-release versions of R.
-
-\hypertarget{where-to-test}{%
-\section{Where to test?}\label{where-to-test}}
-
-Whenever possible use a fresh package library for testing, even better would be to use \protect\hyperlink{VM}{virtual machines} for the testing. This would ensure that you do not damage your existing R installation.
-
-\hypertarget{VM}{%
-\subsection{Virtual machine}\label{VM}}
-
-A free Windows 10 virtual machine is provided by Microsoft (with a 90-day limit) for building, testing, and checking R packages and R itself. Package maintainers who work on Linux and MacOS can use it to test their packages on Windows. Read the \href{https://svn.r-project.org/R-dev-web/trunk/WindowsBuilds/winutf8/ucrt3/vm.html}{instructions} on how to automatically set up the machine to check R packages. Tomas Kalibera describes the details of using virtual machine in the blog \href{https://blog.r-project.org/2021/03/18/virtual-windows-machine-for-checking-r-packages/index.html}{Virtual Windows machine for checking R packages}.
-
-\hypertarget{what-can-you-test}{%
-\section{What can you test?}\label{what-can-you-test}}
-
-You can test:
-
-\begin{itemize}
-\item
-  Your own programs.
-\item
-  Your own workflows.
-\item
-  Your special ways of installing or setting up R.
-\item
-  Things that interact with external libraries.
-\item
-  Interactive R packages.
-\end{itemize}
-
-Details of performing testing on various operating systems:
-
-\begin{itemize}
-\item
-  \href{https://blog.r-project.org/2021/04/28/r-can-use-your-help-testing-r-before-release/index.html\#on-windows}{Windows}
-\item
-  \href{https://blog.r-project.org/2021/04/28/r-can-use-your-help-testing-r-before-release/index.html\#on-macos}{macOS}
-\item
-  \href{https://blog.r-project.org/2021/04/28/r-can-use-your-help-testing-r-before-release/index.html\#on-linux}{Linux}
-\item
-  \href{https://blog.r-project.org/2021/04/28/r-can-use-your-help-testing-r-before-release/index.html\#on-solaris}{Solaris}
-\end{itemize}
-
-\hypertarget{writing-tests-for-r}{%
-\section{Writing tests for R}\label{writing-tests-for-r}}
-
-Writing tests for R is much like writing tests for your own code. Tests need to be thorough, fast, isolated, consistently repeatable, and as simple as possible.
-
-When you are adding tests to an existing test file, it is also recommended that you study the other tests in that file; it will teach you which precautions you have to take to make your tests robust and portable. We try to have tests both for normal behaviour and for error conditions. Tests live in the \texttt{tests} directory.
-
-\hypertarget{benchmarks}{%
-\section{Benchmarks}\label{benchmarks}}
-
-Benchmarking is useful to test that a change does not degrade performance.
-
 \hypertarget{CoreDev}{%
 \chapter{R Core Developers}\label{CoreDev}}
 
@@ -1774,6 +1716,64 @@ This page lists the former and current members of the R Core team who have write
 View the \href{}{affiliations of R Core members}. We've left it up to the individual core developers to list areas of expertise (or things they are willing to maintain) if they wish.
 
 The \href{https://www.r-project.org/contributors.html}{Contributors page on the R Project website} also lists contributors, outside the R Core team, who provided invaluable help by donating code, bug fixes, and documentation.
+
+\hypertarget{TestRVer}{%
+\chapter{Testing Pre-release R Versions}\label{TestRVer}}
+
+This chapter is inspired from the blog on \href{https://blog.r-project.org/2021/04/28/r-can-use-your-help-testing-r-before-release/index.html}{testing R before release} and discusses how you can help with testing of pre-release versions of R.
+
+\hypertarget{where-to-test}{%
+\section{Where to test?}\label{where-to-test}}
+
+Whenever possible use a fresh package library for testing, even better would be to use \protect\hyperlink{VM}{virtual machines} for the testing. This would ensure that you do not damage your existing R installation.
+
+\hypertarget{VM}{%
+\subsection{Virtual machine}\label{VM}}
+
+A free Windows 10 virtual machine is provided by Microsoft (with a 90-day limit) for building, testing, and checking R packages and R itself. Package maintainers who work on Linux and MacOS can use it to test their packages on Windows. Read the \href{https://svn.r-project.org/R-dev-web/trunk/WindowsBuilds/winutf8/ucrt3/vm.html}{instructions} on how to automatically set up the machine to check R packages. Tomas Kalibera describes the details of using virtual machine in the blog \href{https://blog.r-project.org/2021/03/18/virtual-windows-machine-for-checking-r-packages/index.html}{Virtual Windows machine for checking R packages}.
+
+\hypertarget{what-can-you-test}{%
+\section{What can you test?}\label{what-can-you-test}}
+
+You can test:
+
+\begin{itemize}
+\item
+  Your own programs.
+\item
+  Your own workflows.
+\item
+  Your special ways of installing or setting up R.
+\item
+  Things that interact with external libraries.
+\item
+  Interactive R packages.
+\end{itemize}
+
+Details of performing testing on various operating systems:
+
+\begin{itemize}
+\item
+  \href{https://blog.r-project.org/2021/04/28/r-can-use-your-help-testing-r-before-release/index.html\#on-windows}{Windows}
+\item
+  \href{https://blog.r-project.org/2021/04/28/r-can-use-your-help-testing-r-before-release/index.html\#on-macos}{macOS}
+\item
+  \href{https://blog.r-project.org/2021/04/28/r-can-use-your-help-testing-r-before-release/index.html\#on-linux}{Linux}
+\item
+  \href{https://blog.r-project.org/2021/04/28/r-can-use-your-help-testing-r-before-release/index.html\#on-solaris}{Solaris}
+\end{itemize}
+
+\hypertarget{writing-tests-for-r}{%
+\section{Writing tests for R}\label{writing-tests-for-r}}
+
+Writing tests for R is much like writing tests for your own code. Tests need to be thorough, fast, isolated, consistently repeatable, and as simple as possible.
+
+When you are adding tests to an existing test file, it is also recommended that you study the other tests in that file; it will teach you which precautions you have to take to make your tests robust and portable. We try to have tests both for normal behaviour and for error conditions. Tests live in the \texttt{tests} directory.
+
+\hypertarget{benchmarks}{%
+\section{Benchmarks}\label{benchmarks}}
+
+Benchmarking is useful to test that a change does not degrade performance.
 
 \hypertarget{WhereToGetHelp}{%
 \chapter{Where to Get Help}\label{WhereToGetHelp}}

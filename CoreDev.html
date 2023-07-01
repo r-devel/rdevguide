@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 11 R Core Developers | R Development Guide</title>
+  <title>Chapter 10 R Core Developers | R Development Guide</title>
   <meta name="description" content="A guide to R development." />
   <meta name="generator" content="bookdown 0.34 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 11 R Core Developers | R Development Guide" />
+  <meta property="og:title" content="Chapter 10 R Core Developers | R Development Guide" />
   <meta property="og:type" content="book" />
   <meta property="og:image" content="https://contributor.r-project.org/rdevguide/img/Rlogo.png" />
   <meta property="og:description" content="A guide to R development." />
   <meta name="github-repo" content="r-devel/rdevguide" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 11 R Core Developers | R Development Guide" />
+  <meta name="twitter:title" content="Chapter 10 R Core Developers | R Development Guide" />
   
   <meta name="twitter:description" content="A guide to R development." />
   <meta name="twitter:image" content="https://contributor.r-project.org/rdevguide/img/Rlogo.png" />
@@ -30,8 +30,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   <link rel="shortcut icon" href="img/Rlogo.svg" type="image/x-icon" />
-<link rel="prev" href="TestRVer.html"/>
-<link rel="next" href="WhereToGetHelp.html"/>
+<link rel="prev" href="message-translations.html"/>
+<link rel="next" href="TestRVer.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -259,17 +259,17 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="9.3" data-path="message-translations.html"><a href="message-translations.html#current-status-of-translations-in-r"><i class="fa fa-check"></i><b>9.3</b> Current status of translations in R</a></li>
 <li class="chapter" data-level="9.4" data-path="message-translations.html"><a href="message-translations.html#helpful-references"><i class="fa fa-check"></i><b>9.4</b> Helpful references</a></li>
 </ul></li>
-<li class="chapter" data-level="10" data-path="TestRVer.html"><a href="TestRVer.html"><i class="fa fa-check"></i><b>10</b> Testing Pre-release R Versions</a>
+<li class="chapter" data-level="10" data-path="CoreDev.html"><a href="CoreDev.html"><i class="fa fa-check"></i><b>10</b> R Core Developers</a></li>
+<li class="chapter" data-level="11" data-path="TestRVer.html"><a href="TestRVer.html"><i class="fa fa-check"></i><b>11</b> Testing Pre-release R Versions</a>
 <ul>
-<li class="chapter" data-level="10.1" data-path="TestRVer.html"><a href="TestRVer.html#where-to-test"><i class="fa fa-check"></i><b>10.1</b> Where to test?</a>
+<li class="chapter" data-level="11.1" data-path="TestRVer.html"><a href="TestRVer.html#where-to-test"><i class="fa fa-check"></i><b>11.1</b> Where to test?</a>
 <ul>
-<li class="chapter" data-level="10.1.1" data-path="TestRVer.html"><a href="TestRVer.html#VM"><i class="fa fa-check"></i><b>10.1.1</b> Virtual machine</a></li>
+<li class="chapter" data-level="11.1.1" data-path="TestRVer.html"><a href="TestRVer.html#VM"><i class="fa fa-check"></i><b>11.1.1</b> Virtual machine</a></li>
 </ul></li>
-<li class="chapter" data-level="10.2" data-path="TestRVer.html"><a href="TestRVer.html#what-can-you-test"><i class="fa fa-check"></i><b>10.2</b> What can you test?</a></li>
-<li class="chapter" data-level="10.3" data-path="TestRVer.html"><a href="TestRVer.html#writing-tests-for-r"><i class="fa fa-check"></i><b>10.3</b> Writing tests for R</a></li>
-<li class="chapter" data-level="10.4" data-path="TestRVer.html"><a href="TestRVer.html#benchmarks"><i class="fa fa-check"></i><b>10.4</b> Benchmarks</a></li>
+<li class="chapter" data-level="11.2" data-path="TestRVer.html"><a href="TestRVer.html#what-can-you-test"><i class="fa fa-check"></i><b>11.2</b> What can you test?</a></li>
+<li class="chapter" data-level="11.3" data-path="TestRVer.html"><a href="TestRVer.html#writing-tests-for-r"><i class="fa fa-check"></i><b>11.3</b> Writing tests for R</a></li>
+<li class="chapter" data-level="11.4" data-path="TestRVer.html"><a href="TestRVer.html#benchmarks"><i class="fa fa-check"></i><b>11.4</b> Benchmarks</a></li>
 </ul></li>
-<li class="chapter" data-level="11" data-path="CoreDev.html"><a href="CoreDev.html"><i class="fa fa-check"></i><b>11</b> R Core Developers</a></li>
 <li class="chapter" data-level="12" data-path="WhereToGetHelp.html"><a href="WhereToGetHelp.html"><i class="fa fa-check"></i><b>12</b> Where to Get Help</a>
 <ul>
 <li class="chapter" data-level="12.1" data-path="WhereToGetHelp.html"><a href="WhereToGetHelp.html#slack"><i class="fa fa-check"></i><b>12.1</b> Slack</a></li>
@@ -311,8 +311,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="CoreDev" class="section level1 hasAnchor" number="11">
-<h1><span class="header-section-number">Chapter 11</span> R Core Developers<a href="CoreDev.html#CoreDev" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="CoreDev" class="section level1 hasAnchor" number="10">
+<h1><span class="header-section-number">Chapter 10</span> R Core Developers<a href="CoreDev.html#CoreDev" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <p>This page lists the former and current members of the R Core team who have write access to the R source.</p>
 <ul>
 <li>Brian Ripley (present)</li>
@@ -352,8 +352,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           </div>
         </div>
       </div>
-<a href="TestRVer.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="WhereToGetHelp.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="message-translations.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="TestRVer.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
