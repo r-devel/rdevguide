@@ -1,6 +1,6 @@
 # Documenting R {#Doc}
 
-The R language has a substantial body of documentation, much of which is contributed by various authors. The help files for R functions are written in 'R documentation' (.Rd) file format. It is a simple markup language with close resemblance to LaTeX. The .Rd file format can be further processed into a variety of formats, including LaTeX, HTML, and plain text.
+The R language has a substantial body of documentation, much of which is contributed by various authors. The help files for R functions are written in 'R documentation' (`.Rd`) file format. It is a simple markup language with close resemblance to LaTeX. The `.Rd` file format can be further processed into a variety of formats, including LaTeX, HTML, and plain text.
 
 This chapter describes the styleguide for R's documentation, how to document for R, report and review bugs (and/or suggest corrections for them) in the existing documentation. If you are interested in contributing to R's documentation, your contributions are more than welcome. 
 
@@ -14,11 +14,11 @@ This chapter is aimed at authors and potential authors of R documentation provid
 
 ## Guidelines for writing R help files
 
-This section summarises the [recommended style for writing the R help files](https://developer.r-project.org/Rds.html). The R help files are written in “R documentation” (Rd) format, a markup language which resembles LaTeX. An example of the .Rd format is available for [mean.Rd](https://svn.r-project.org/R/trunk/src/library/base/man/mean.Rd). These are intended for writing the core documentations but may also be useful for package writers. Extensive details of writing R documentation files can be found in the [Writing R Extensions](https://cran.r-project.org/doc/manuals/r-release/R-exts.html#Writing-R-documentation-files) manual.
+This section summarises the [recommended style for writing the R help files](https://developer.r-project.org/Rds.html). The R help files are written in “R documentation” (Rd) format, a markup language which resembles LaTeX. An example of the `.Rd` format is available for [mean`.Rd`](https://svn.r-project.org/R/trunk/src/library/base/man/mean`.Rd`). These are intended for writing the core documentations but may also be useful for package writers. Extensive details of writing R documentation files can be found in the [Writing R Extensions](https://cran.r-project.org/doc/manuals/r-release/R-exts.html#Writing-R-documentation-files) manual.
 
-Note: Many R package authors use the R package [roxygen2](https://cran.r-project.org/web/packages/roxygen2/index.html) to write documentation (which eventually creates the .Rd files), however, in this guide we focus on .Rd files only because the manual pages for the base distribution are written directly as .Rd files.
+Note: Many R package authors use the R package [roxygen2](https://cran.r-project.org/web/packages/roxygen2/index.html) to write documentation (which eventually creates the `.Rd` files), however, in this guide we focus on `.Rd` files only because the manual pages for the base distribution are written directly as `.Rd` files.
 
-There are three main parts of an .Rd file:
+There are three main parts of an `.Rd` file:
 
 1. **Header**: This part is for the basic information of the document/file. For instance, the name of the file, the topics documented, a title, a short textual description, and R usage information for the objects documented.
 
@@ -26,7 +26,7 @@ There are three main parts of an .Rd file:
 
 3. **Footer**: This part is optional. Usually the keyword information is included here.
 
-All the above information is included in a .Rd file within a series of sections with standard names (user-defined sections are also allowed). These sections are discussed below:
+All the above information is included in a `.Rd` file within a series of sections with standard names (user-defined sections are also allowed). These sections are discussed below:
 
 1. `\title` section:
     * Capitalize each word.
