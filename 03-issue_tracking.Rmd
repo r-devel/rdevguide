@@ -1,3 +1,5 @@
+# Issue Tracking {#IssueTrack}
+
 Base R uses [Bugzilla](https://bugs.r-project.org/) for issue tracking and reporting bugs. 
 
 ## How to contribute to issue tracking
