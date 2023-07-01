@@ -574,6 +574,92 @@ This section will be added after the official \href{https://cran.r-project.org/d
   \href{https://cran.r-project.org/doc/FAQ/R-FAQ.html}{R FAQ}
 \end{enumerate}
 
+\hypertarget{IssueTrack}{%
+\chapter{Issue Tracking}\label{IssueTrack}}
+
+Base R uses \href{https://bugs.r-project.org/}{Bugzilla} for issue tracking and reporting bugs.
+
+\hypertarget{how-to-contribute-to-issue-tracking}{%
+\section{How to contribute to issue tracking}\label{how-to-contribute-to-issue-tracking}}
+
+Contributors can support issue tracking in R by
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  \href{https://contributor.r-project.org/rdevguide/ReportBugs.html}{Reporting bugs} or making feature requests (bug reports filed under the ``Wishlist'' component in Bugzilla),
+\item
+  \href{https://contributor.r-project.org/rdevguide/ReviewBugs.html}{Reviewing bug reports} to help close reports where no fix is needed or to help narrow down the problem and identify what needs to be fixed, or
+\item
+  \href{https://contributor.r-project.org/rdevguide/FixBug.html\#FixBug}{Proposing changes} to code or documentation that will close an issue.
+\end{enumerate}
+
+\hypertarget{bugzilla-account}{%
+\section{How to get a Bugzilla account}\label{bugzilla-account}}
+
+Anyone can browse the bug reports on Bugzilla, but you will need an account to file a bug report, to comment on an existing bug report, or to submit a proposed fix in the form of patch file.
+
+To get a Bugzilla account send an e-mail to \texttt{bug-report-request@r-project.org} from the address you want to use as your Bugzilla login. Briefly explain why you want a Bugzilla account and a volunteer will add you to R's Bugzilla members. After having successfully logged in to Bugzilla, you are good to go.
+
+\hypertarget{Bugzilla}{%
+\subsection{Navigating Bugzilla}\label{Bugzilla}}
+
+An image of the existing home page of Bugzilla is shared below:
+
+\begin{figure}
+\centering
+\includegraphics{img/bugzilla.png}
+\caption{Screenshot of the existing home page of Bugzilla.}
+\end{figure}
+
+On the home page of Bugzilla, there are various buttons and links. There are four square buttons called as:
+
+\begin{figure}
+\centering
+\includegraphics{img/squarebuttons.png}
+\caption{Screenshot of the four square buttons on the home page of Bugzilla.}
+\end{figure}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  \href{https://bugs.r-project.org/enter_bug.cgi}{File a bug}: You will have to log in to Bugzilla to file a bug using this button
+\item
+  \href{https://bugs.r-project.org/query.cgi}{Search}: When you click this button you will get a page with `Simple Search' and `Advanced Search' options. Either of the search options could be used depending on what you are looking for.
+\item
+  \href{https://bugs.r-project.org/?GoAheadAndLogIn=1}{Log In}: Provide the appropriate email address and password here to log in to Bugzilla.
+\item
+  \href{https://bugzilla.readthedocs.io/en/latest/using/index.html}{Documentation}: Provides a user guide for R\textquotesingle s Bugzilla.
+\end{enumerate}
+
+Several useful shortcuts are available from the landing page:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  \href{https://bugs.r-project.org/enter_bug.cgi}{Enter a new bug report}
+\item
+  \href{https://bugs.r-project.org/buglist.cgi?bug_file_loc_type=allwordssubstr\&bug_status=NEW\&bug_status=ASSIGNED\&bug_status=CONFIRMED\&bug_status=REOPENED\&bug_status=UNCONFIRMED\&bugidtype=include\&chfieldto=Now\&cmdtype=doit\&emailassigned_to1=1\&emailassigned_to2=1\&emailcc2=1\&emailreporter2=1\&emailtype1=substring\&emailtype2=substring\&field0-0-0=noop\&long_desc_type=substring\&order=bugs.delta_ts\%20desc\&query_format=advanced\&short_desc_type=allwordssubstr\&type0-0-0=noop}{Show open bugs new-to-old}
+\item
+  \href{https://bugs.r-project.org/query.cgi}{Search existing bug reports}
+\end{enumerate}
+
+A \href{https://bugs.r-project.org/page.cgi?id=quicksearch.html}{quick search} bar is available on the home page where you can enter a bug number to search or some search terms.
+
+\begin{figure}
+\centering
+\includegraphics{img/quicksearch.png}
+\caption{Screenshot of the quick search bar on the home page of Bugzilla.}
+\end{figure}
+
+There is also a section for Common Queries on the home page which includes links to bugs reported and changed in the last 24 hours and last 7 days.
+
+\begin{figure}
+\centering
+\includegraphics{img/commonquery.png}
+\caption{Screenshot of the Common Queries section on the home page of Bugzilla.}
+\end{figure}
+
 \hypertarget{ReportingBugs}{%
 \chapter{Reporting Bugs}\label{ReportingBugs}}
 
@@ -748,92 +834,6 @@ If you like to see how bugs are reported on Bugzilla, here are some examples:
 \item
   \href{https://bugs.r-project.org/bugzilla/page.cgi?id=bug-writing.html}{Bugzilla guidelines of reporting a bug}
 \end{enumerate}
-
-\hypertarget{IssueTrack}{%
-\chapter{Issue Tracking}\label{IssueTrack}}
-
-Base R uses \href{https://bugs.r-project.org/}{Bugzilla} for issue tracking and reporting bugs.
-
-\hypertarget{how-to-contribute-to-issue-tracking}{%
-\section{How to contribute to issue tracking}\label{how-to-contribute-to-issue-tracking}}
-
-Contributors can support issue tracking in R by
-
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\item
-  \href{https://contributor.r-project.org/rdevguide/ReportBugs.html}{Reporting bugs} or making feature requests (bug reports filed under the ``Wishlist'' component in Bugzilla),
-\item
-  \href{https://contributor.r-project.org/rdevguide/ReviewBugs.html}{Reviewing bug reports} to help close reports where no fix is needed or to help narrow down the problem and identify what needs to be fixed, or
-\item
-  \href{https://contributor.r-project.org/rdevguide/FixBug.html\#FixBug}{Proposing changes} to code or documentation that will close an issue.
-\end{enumerate}
-
-\hypertarget{bugzilla-account}{%
-\section{How to get a Bugzilla account}\label{bugzilla-account}}
-
-Anyone can browse the bug reports on Bugzilla, but you will need an account to file a bug report, to comment on an existing bug report, or to submit a proposed fix in the form of patch file.
-
-To get a Bugzilla account send an e-mail to \texttt{bug-report-request@r-project.org} from the address you want to use as your Bugzilla login. Briefly explain why you want a Bugzilla account and a volunteer will add you to R's Bugzilla members. After having successfully logged in to Bugzilla, you are good to go.
-
-\hypertarget{Bugzilla}{%
-\subsection{Navigating Bugzilla}\label{Bugzilla}}
-
-An image of the existing home page of Bugzilla is shared below:
-
-\begin{figure}
-\centering
-\includegraphics{img/bugzilla.png}
-\caption{Screenshot of the existing home page of Bugzilla.}
-\end{figure}
-
-On the home page of Bugzilla, there are various buttons and links. There are four square buttons called as:
-
-\begin{figure}
-\centering
-\includegraphics{img/squarebuttons.png}
-\caption{Screenshot of the four square buttons on the home page of Bugzilla.}
-\end{figure}
-
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\item
-  \href{https://bugs.r-project.org/enter_bug.cgi}{File a bug}: You will have to log in to Bugzilla to file a bug using this button
-\item
-  \href{https://bugs.r-project.org/query.cgi}{Search}: When you click this button you will get a page with `Simple Search' and `Advanced Search' options. Either of the search options could be used depending on what you are looking for.
-\item
-  \href{https://bugs.r-project.org/?GoAheadAndLogIn=1}{Log In}: Provide the appropriate email address and password here to log in to Bugzilla.
-\item
-  \href{https://bugzilla.readthedocs.io/en/latest/using/index.html}{Documentation}: Provides a user guide for R\textquotesingle s Bugzilla.
-\end{enumerate}
-
-Several useful shortcuts are available from the landing page:
-
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\item
-  \href{https://bugs.r-project.org/enter_bug.cgi}{Enter a new bug report}
-\item
-  \href{https://bugs.r-project.org/buglist.cgi?bug_file_loc_type=allwordssubstr\&bug_status=NEW\&bug_status=ASSIGNED\&bug_status=CONFIRMED\&bug_status=REOPENED\&bug_status=UNCONFIRMED\&bugidtype=include\&chfieldto=Now\&cmdtype=doit\&emailassigned_to1=1\&emailassigned_to2=1\&emailcc2=1\&emailreporter2=1\&emailtype1=substring\&emailtype2=substring\&field0-0-0=noop\&long_desc_type=substring\&order=bugs.delta_ts\%20desc\&query_format=advanced\&short_desc_type=allwordssubstr\&type0-0-0=noop}{Show open bugs new-to-old}
-\item
-  \href{https://bugs.r-project.org/query.cgi}{Search existing bug reports}
-\end{enumerate}
-
-A \href{https://bugs.r-project.org/page.cgi?id=quicksearch.html}{quick search} bar is available on the home page where you can enter a bug number to search or some search terms.
-
-\begin{figure}
-\centering
-\includegraphics{img/quicksearch.png}
-\caption{Screenshot of the quick search bar on the home page of Bugzilla.}
-\end{figure}
-
-There is also a section for Common Queries on the home page which includes links to bugs reported and changed in the last 24 hours and last 7 days.
-
-\begin{figure}
-\centering
-\includegraphics{img/commonquery.png}
-\caption{Screenshot of the Common Queries section on the home page of Bugzilla.}
-\end{figure}
 
 \hypertarget{ReviewBugs}{%
 \chapter{Reviewing Bugs}\label{ReviewBugs}}
