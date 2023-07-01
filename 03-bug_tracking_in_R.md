@@ -1,4 +1,4 @@
-# Bug Tracking {#BugTrack}
+# Reporting Bugs {#ReportingBugs}
 
 ## What is a bug in R?
 
@@ -48,14 +48,6 @@ The first step before filing a bug report is to see whether the problem has alre
 4. Determine if any additional information is needed.
 
 The sections that follow discuss where to check whether a bug is already reported.
-
-## Levels of contributing to bug / What do you do when you find a bug?
-
-1. [Report](#ReportBug) the bug (if it is not already reported).
-
-2. [Test]() the bug.
-
-3. [Fix](#FixBug) the bug: Fixing a bug might require relatively more time. You may start a conversation about it on [BugZilla](https://bugs.r-project.org/bugzilla/index.cgi). This would require engagement with the R Core Team.
 
 ## What are some places where you may find a bug?
 

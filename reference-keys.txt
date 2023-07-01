@@ -14,11 +14,10 @@ binaries
 windowsSource
 macos
 see-also
-BugTrack
+ReportingBugs
 what-is-a-bug-in-r
 what-condition-might-not-be-a-bug
 checking-if-a-bug-is-already-reported
-levels-of-contributing-to-bug-what-do-you-do-when-you-find-a-bug
 what-are-some-places-where-you-may-find-a-bug
 ReportBug
 RCorePkgBug
