@@ -12,7 +12,7 @@ The help files for R functions are written in 'R documentation' (`.Rd`) file for
 
 This section gives an overview of the `.Rd` format and summarises the [guidelines for writing the R help files](https://developer.r-project.org/Rds.html). The guidelines are intended for contributors to base R, but may also be useful for authors of contributed packages. Full documentation on writing R documentation files can be found in the [Writing R Extensions](https://cran.r-project.org/doc/manuals/r-release/R-exts.html#Writing-R-documentation-files) manual.
 
-There are three main parts of an .Rd file:
+There are three main parts of an `.Rd` file:
 
 1. **Header**: This part is for the basic information of the document/file. For instance, the name of the file, the topics documented, a title, a short textual description, and R usage information for the objects documented.
 
@@ -20,7 +20,7 @@ There are three main parts of an .Rd file:
 
 3. **Footer**: This part is optional. Usually the keyword information is included here.
 
-All the above information is included in a .Rd file within a series of sections with standard names (user-defined sections are also allowed). These sections are discussed below:
+All the above information is included in a `.Rd` file within a series of sections with standard names (user-defined sections are also allowed). These sections are discussed below:
 
 1. `\title` section:
     * Capitalize each word.
@@ -93,7 +93,7 @@ Maintaining the accuracy  of R's documentations and keeping a high level of qual
 
 Looking at pre-existing documentation source files can be very helpful when getting started.
 
-If you look at documentation issues on Bugzilla, you will find various documentation problems that may need work. Since "Documentation" is one of the possible components you can set in the metadata, you can browse by this [component](https://bugs.r-project.org/buglist.cgi?component=Documentation&list_id=22501&product=R&resolution=---) to find the documentation bugs on Bugzilla. Issues vary from typos to unclear documentation and items lacking documentation.
+You can directly search for [documentation issues/bugs on Bugzilla](https://bugs.r-project.org/buglist.cgi?component=Documentation&list_id=22501&product=R&resolution=---). Issues vary from typos to unclear documentation and items lacking documentation.
 
 If you see a documentation issue that you would like to tackle, you can leave a comment on the issue saying you are going to try to solve the issue and mention roughly how long you think you will take to do so (this allows others to take on the issue if you happen to forget or lose interest).
 
@@ -111,7 +111,16 @@ The Developer’s Guide (what you are reading now) uses the same process as the 
 
 Our dev guide workflow uses continuous integration and deployment so changes to the dev guide are normally published when the pull request is merged. [How to contribute to this guide from the introduction.](#how-to-contribute-to-this-guide)
 
-## Instructions for reporting the CRAN policy bugs -- discussion in slack (random channel)
+## Reporting documentation bugs
+ <!---
+discussion in slack (random channel)
+-->
+
+If you find some typo or problem on the [CRAN](https://cran.r-project.org) webpages you can write a polite email to `CRAN@r-project.org` to report it. As an alternative, one can also write to the R-devel mailing list or submit a bug report via R's Bugzilla.
+
+For improvements of the R-manuals or reporting typos or bugs in the R-manuals, submit a bug report to R's Bugzilla.
+
+For reporting bugs or typos on the webpages or documentation about a particular package, write to the corresponding package maintainer. To find the maintainer of a package, use the command `maintainer("package-name")`.
 
 **Note**:
 
