@@ -1288,7 +1288,68 @@ This chapter is about the ways people can contribute to R's documentation, with 
 \hypertarget{guidelines-for-writing-r-help-files}{%
 \section{Guidelines for writing R help files}\label{guidelines-for-writing-r-help-files}}
 
-The help files for R functions are written in `R documentation' (\texttt{.Rd}) file format. It is a simple markup language with close resemblance to LaTeX. The \texttt{.Rd} file format can be further processed into a variety of formats, including LaTeX, HTML, and plain text. The \texttt{.Rd} files can be found in the \texttt{man} directory of the sources for the corresponding base package, for example \url{https://svn.r-project.org/R/trunk/src/library/base/man/mean.Rd}. Many authors of contributed R packages use the \href{https://cran.r-project.org/package=roxygen2}{roxygen2} package to write documentation, which generates \texttt{.Rd} files from comments in the package \texttt{.R} files. However, the help files in the base distribution are maintained by directly editing the \texttt{.Rd} files.
+The help files for R functions are written in `R documentation' (\texttt{.Rd}) file format. It is a simple markup language with close resemblance to LaTeX. The \texttt{.Rd} file format can be further processed into a variety of formats, including LaTeX, HTML, and plain text. The \texttt{.Rd} files can be found in the \texttt{man} directory of the sources for the corresponding base package. For example, consider the \href{https://svn.r-project.org/R/trunk/src/library/base/man/mean.Rd}{mean.Rd} file.
+
+\begin{verbatim}
+% File src/library/base/man/mean.Rd
+% Part of the R package, https://www.R-project.org
+% Copyright 1995-2022 R Core Team
+% Distributed under GPL 2 or later
+
+\name{mean}
+\title{Arithmetic Mean}
+\usage{
+mean(x, \dots)
+
+\method{mean}{default}(x, trim = 0, na.rm = FALSE, \dots)
+}
+\alias{mean}
+\alias{mean.default}
+\arguments{
+  \item{x}{An \R object.  Currently there are methods for
+    numeric/logical vectors and \link[=Dates]{date},
+    \link{date-time} and \link{time interval} objects.  Complex vectors
+    are allowed for \code{trim = 0}, only.}
+  \item{trim}{the fraction (0 to 0.5) of observations to be
+    trimmed from each end of \code{x} before the mean is computed.
+    Values of trim outside that range are taken as the nearest endpoint.
+  }
+  \item{na.rm}{a logical evaluating to \code{TRUE} or \code{FALSE}
+    indicating whether \code{NA} values should be stripped before the
+    computation proceeds.} 
+  \item{\dots}{further arguments passed to or from other methods.}
+}
+\description{
+  Generic function for the (trimmed) arithmetic mean.
+}
+\value{
+  If \code{trim} is zero (the default), the arithmetic mean of the
+  values in \code{x} is computed, as a numeric or complex vector of
+  length one.  If \code{x} is not logical (coerced to numeric), numeric
+  (including integer) or complex, \code{NA_real_} is returned, with a warning.
+
+  If \code{trim} is non-zero, a symmetrically trimmed mean is computed
+  with a fraction of \code{trim} observations deleted from each end
+  before the mean is computed.
+}
+\references{
+  Becker, R. A., Chambers, J. M. and Wilks, A. R. (1988)
+  \emph{The New S Language}.
+  Wadsworth & Brooks/Cole.
+}
+\seealso{
+  \code{\link{weighted.mean}}, \code{\link{mean.POSIXct}},
+  \code{\link{colMeans}} for row and column means.
+}
+\examples{
+x <- c(0:10, 50)
+xm <- mean(x)
+c(xm, mean(x, trim = 0.10))
+}
+\keyword{univar}
+\end{verbatim}
+
+Many authors of contributed R packages use the \href{https://cran.r-project.org/package=roxygen2}{roxygen2} package to write documentation, which generates \texttt{.Rd} files from comments in the package \texttt{.R} files. However, the help files in the base distribution are maintained by directly editing the \texttt{.Rd} files.
 
 This section gives an overview of the \texttt{.Rd} format and summarises the \href{https://developer.r-project.org/Rds.html}{guidelines for writing the R help files}. The guidelines are intended for contributors to base R, but may also be useful for authors of contributed packages. Full documentation on writing R documentation files can be found in the \href{https://cran.r-project.org/doc/manuals/r-release/R-exts.html\#Writing-R-documentation-files}{Writing R Extensions} manual.
 
