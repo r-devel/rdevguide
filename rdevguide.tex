@@ -835,6 +835,78 @@ If you like to see how bugs are reported on Bugzilla, here are some examples:
   \href{https://bugs.r-project.org/bugzilla/page.cgi?id=bug-writing.html}{Bugzilla guidelines of reporting a bug}
 \end{enumerate}
 
+\hypertarget{ReviewBugs}{%
+\chapter{Reviewing Bugs}\label{ReviewBugs}}
+
+\hypertarget{how-you-can-help-to-review-bug-reports}{%
+\section{How you can help to review bug reports?}\label{how-you-can-help-to-review-bug-reports}}
+
+After understanding where bugs are reported in R (Bugzilla) or in other projects (GitHub/GitLab/R-Forge), a great way to contribute is reviewing bug reports.
+
+Around the clock, new bug reports are being submitted on Bugzilla or the bug trackers (for instance, GitHub issues) of R packages and existing bug reports are being updated. Every bug report needs to be reviewed to make sure various things are in proper order. You can help with this process of reviewing bugs.
+
+\hypertarget{preparing-to-review-bug-reports}{%
+\subsection{Preparing to review bug reports}\label{preparing-to-review-bug-reports}}
+
+If you want to review bug reports on Bugzilla, you are required to have a \protect\hyperlink{bugzilla-account}{Bugzilla account}. More details on how you can review a bug report are available on this post on the R Blog: \href{https://blog.r-project.org/2019/10/09/r-can-use-your-help-reviewing-bug-reports/index.html}{R Can Use Your Help: Reviewing Bug Reports}
+
+\hypertarget{classifying-bug-reports}{%
+\section{Classifying bug reports}\label{classifying-bug-reports}}
+
+A good bug report is the one which:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  Explains clearly how to reproduce the bug.
+\item
+  Includes the version of R, the machine architecture, and the operating system platform on which the bug occurred.
+\end{enumerate}
+
+Relevant details should be a part of a good bug report. You can help with the following tasks once you have some R programming experience:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  Reproducing the bug: If you see a bug report which does not clearly explain how to reproduce it, you can try reproducing the bug and eventually make things easier for the core developer(s) and/or package maintainer(s).
+\item
+  Checking different binary builds: Check whether the bug occurs on a different binary build of R. It is helpful to know whether the bug is affecting: \texttt{r-patched}, \texttt{r-devel}, or \texttt{r-release} binary builds of R.
+\item
+  Writing a unit test: If the bug report lacks a unit test that should be a part of R's test suite, then you can help with providing it.
+\end{enumerate}
+
+These helpful tasks allow the Core developers and/ or maintainers to classify a bug report properly, so that the bug can be handled in a timely fashion.
+
+\hypertarget{how-to-find-a-bug-report-or-an-issue-to-review}{%
+\section{How to find a bug report or an issue to review?}\label{how-to-find-a-bug-report-or-an-issue-to-review}}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  You may search old bug reports or issues that could be closed. Old bug reports may no longer be valid or may include a patch that is ready to be committed, but no one has had the time to review and commit.
+\item
+  You might also want to search for issues in topics in which you have a working knowledge. When on Bugzilla you can use the advanced search to find specific topics. Bug reports are by default public on Bugzilla (unless the defaults are changed to avoid security vulnerability).
+\end{enumerate}
+
+\hypertarget{example-of-a-bug-review-submitted-on-bugzilla}{%
+\section{Example of a bug review submitted on Bugzilla}\label{example-of-a-bug-review-submitted-on-bugzilla}}
+
+If you would like to see how bugs are reviewed on Bugzilla, \href{https://bugs.r-project.org/bugzilla/show_bug.cgi?id=16542}{here} is an example where an old bug report is being reviewed. It is tested to see if it was still an issue and a few ways are proposed to resolve the issue.
+
+\textbf{Note}:
+
+There is a \texttt{\#bug-reporting} channel on the \href{https://r-contributors.slack.com/}{R Contributors slack} where you can share your bug report(s) for review/feedback before submitting to Bugzilla. This can help with checking that it really is a bug, that you have included the important information and excluded redundant information.
+
+\hypertarget{see-also-2}{%
+\section{See also}\label{see-also-2}}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \href{https://blog.r-project.org/2019/10/09/r-can-use-your-help-reviewing-bug-reports/index.html}{Reviewing bug reports: Blog}
+\end{enumerate}
+
 \hypertarget{FindSource}{%
 \chapter{Finding the Source}\label{FindSource}}
 
@@ -954,82 +1026,10 @@ Note:
   GitHub has a code navigation feature via the library tree-sitter. Unfortunately, it does not have R support yet. An \href{https://github.com/r-lib/tree-sitter-r}{R driver for tree-sitter} made by Jim Hester is available.
 \end{enumerate}
 
-\hypertarget{see-also-2}{%
-\section{See also}\label{see-also-2}}
-
-\href{https://blog.r-hub.io/2019/05/14/read-the-source/}{Read the R source} blogpost.
-
-\hypertarget{ReviewBugs}{%
-\chapter{Reviewing Bugs}\label{ReviewBugs}}
-
-\hypertarget{how-you-can-help-to-review-bug-reports}{%
-\section{How you can help to review bug reports?}\label{how-you-can-help-to-review-bug-reports}}
-
-After understanding where bugs are reported in R (Bugzilla) or in other projects (GitHub/GitLab/R-Forge), a great way to contribute is reviewing bug reports.
-
-Around the clock, new bug reports are being submitted on Bugzilla or the bug trackers (for instance, GitHub issues) of R packages and existing bug reports are being updated. Every bug report needs to be reviewed to make sure various things are in proper order. You can help with this process of reviewing bugs.
-
-\hypertarget{preparing-to-review-bug-reports}{%
-\subsection{Preparing to review bug reports}\label{preparing-to-review-bug-reports}}
-
-If you want to review bug reports on Bugzilla, you are required to have a \protect\hyperlink{bugzilla-account}{Bugzilla account}. More details on how you can review a bug report are available on this post on the R Blog: \href{https://blog.r-project.org/2019/10/09/r-can-use-your-help-reviewing-bug-reports/index.html}{R Can Use Your Help: Reviewing Bug Reports}
-
-\hypertarget{classifying-bug-reports}{%
-\section{Classifying bug reports}\label{classifying-bug-reports}}
-
-A good bug report is the one which:
-
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\item
-  Explains clearly how to reproduce the bug.
-\item
-  Includes the version of R, the machine architecture, and the operating system platform on which the bug occurred.
-\end{enumerate}
-
-Relevant details should be a part of a good bug report. You can help with the following tasks once you have some R programming experience:
-
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\item
-  Reproducing the bug: If you see a bug report which does not clearly explain how to reproduce it, you can try reproducing the bug and eventually make things easier for the core developer(s) and/or package maintainer(s).
-\item
-  Checking different binary builds: Check whether the bug occurs on a different binary build of R. It is helpful to know whether the bug is affecting: \texttt{r-patched}, \texttt{r-devel}, or \texttt{r-release} binary builds of R.
-\item
-  Writing a unit test: If the bug report lacks a unit test that should be a part of R's test suite, then you can help with providing it.
-\end{enumerate}
-
-These helpful tasks allow the Core developers and/ or maintainers to classify a bug report properly, so that the bug can be handled in a timely fashion.
-
-\hypertarget{how-to-find-a-bug-report-or-an-issue-to-review}{%
-\section{How to find a bug report or an issue to review?}\label{how-to-find-a-bug-report-or-an-issue-to-review}}
-
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\item
-  You may search old bug reports or issues that could be closed. Old bug reports may no longer be valid or may include a patch that is ready to be committed, but no one has had the time to review and commit.
-\item
-  You might also want to search for issues in topics in which you have a working knowledge. When on Bugzilla you can use the advanced search to find specific topics. Bug reports are by default public on Bugzilla (unless the defaults are changed to avoid security vulnerability).
-\end{enumerate}
-
-\hypertarget{example-of-a-bug-review-submitted-on-bugzilla}{%
-\section{Example of a bug review submitted on Bugzilla}\label{example-of-a-bug-review-submitted-on-bugzilla}}
-
-If you would like to see how bugs are reviewed on Bugzilla, \href{https://bugs.r-project.org/bugzilla/show_bug.cgi?id=16542}{here} is an example where an old bug report is being reviewed. It is tested to see if it was still an issue and a few ways are proposed to resolve the issue.
-
-\textbf{Note}:
-
-There is a \texttt{\#bug-reporting} channel on the \href{https://r-contributors.slack.com/}{R Contributors slack} where you can share your bug report(s) for review/feedback before submitting to Bugzilla. This can help with checking that it really is a bug, that you have included the important information and excluded redundant information.
-
 \hypertarget{see-also-3}{%
 \section{See also}\label{see-also-3}}
 
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\tightlist
-\item
-  \href{https://blog.r-project.org/2019/10/09/r-can-use-your-help-reviewing-bug-reports/index.html}{Reviewing bug reports: Blog}
-\end{enumerate}
+\href{https://blog.r-hub.io/2019/05/14/read-the-source/}{Read the R source} blogpost.
 
 \hypertarget{FixBug}{%
 \chapter{Lifecycle of a Patch}\label{FixBug}}

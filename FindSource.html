@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 5 Finding the Source | R Development Guide</title>
+  <title>Chapter 6 Finding the Source | R Development Guide</title>
   <meta name="description" content="A guide to R development." />
   <meta name="generator" content="bookdown 0.34 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 5 Finding the Source | R Development Guide" />
+  <meta property="og:title" content="Chapter 6 Finding the Source | R Development Guide" />
   <meta property="og:type" content="book" />
   <meta property="og:image" content="https://contributor.r-project.org/rdevguide/img/Rlogo.png" />
   <meta property="og:description" content="A guide to R development." />
   <meta name="github-repo" content="r-devel/rdevguide" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 5 Finding the Source | R Development Guide" />
+  <meta name="twitter:title" content="Chapter 6 Finding the Source | R Development Guide" />
   
   <meta name="twitter:description" content="A guide to R development." />
   <meta name="twitter:image" content="https://contributor.r-project.org/rdevguide/img/Rlogo.png" />
@@ -30,8 +30,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   <link rel="shortcut icon" href="img/Rlogo.svg" type="image/x-icon" />
-<link rel="prev" href="ReportingBugs.html"/>
-<link rel="next" href="ReviewBugs.html"/>
+<link rel="prev" href="ReviewBugs.html"/>
+<link rel="next" href="FixBug.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -198,22 +198,22 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="4.8" data-path="ReportingBugs.html"><a href="ReportingBugs.html#examples-of-bug-reports-submitted-on-bugzilla-or-r-devel-mailing-list"><i class="fa fa-check"></i><b>4.8</b> Examples of Bug reports submitted on Bugzilla or R-devel mailing list</a></li>
 <li class="chapter" data-level="4.9" data-path="ReportingBugs.html"><a href="ReportingBugs.html#see-also-1"><i class="fa fa-check"></i><b>4.9</b> See also</a></li>
 </ul></li>
-<li class="chapter" data-level="5" data-path="FindSource.html"><a href="FindSource.html"><i class="fa fa-check"></i><b>5</b> Finding the Source</a>
+<li class="chapter" data-level="5" data-path="ReviewBugs.html"><a href="ReviewBugs.html"><i class="fa fa-check"></i><b>5</b> Reviewing Bugs</a>
 <ul>
-<li class="chapter" data-level="5.1" data-path="FindSource.html"><a href="FindSource.html#finding-r-source-code"><i class="fa fa-check"></i><b>5.1</b> Finding R source code</a></li>
-<li class="chapter" data-level="5.2" data-path="FindSource.html"><a href="FindSource.html#finding-c-source-code"><i class="fa fa-check"></i><b>5.2</b> Finding C source code</a></li>
-<li class="chapter" data-level="5.3" data-path="FindSource.html"><a href="FindSource.html#see-also-2"><i class="fa fa-check"></i><b>5.3</b> See also</a></li>
+<li class="chapter" data-level="5.1" data-path="ReviewBugs.html"><a href="ReviewBugs.html#how-you-can-help-to-review-bug-reports"><i class="fa fa-check"></i><b>5.1</b> How you can help to review bug reports?</a>
+<ul>
+<li class="chapter" data-level="5.1.1" data-path="ReviewBugs.html"><a href="ReviewBugs.html#preparing-to-review-bug-reports"><i class="fa fa-check"></i><b>5.1.1</b> Preparing to review bug reports</a></li>
 </ul></li>
-<li class="chapter" data-level="6" data-path="ReviewBugs.html"><a href="ReviewBugs.html"><i class="fa fa-check"></i><b>6</b> Reviewing Bugs</a>
-<ul>
-<li class="chapter" data-level="6.1" data-path="ReviewBugs.html"><a href="ReviewBugs.html#how-you-can-help-to-review-bug-reports"><i class="fa fa-check"></i><b>6.1</b> How you can help to review bug reports?</a>
-<ul>
-<li class="chapter" data-level="6.1.1" data-path="ReviewBugs.html"><a href="ReviewBugs.html#preparing-to-review-bug-reports"><i class="fa fa-check"></i><b>6.1.1</b> Preparing to review bug reports</a></li>
+<li class="chapter" data-level="5.2" data-path="ReviewBugs.html"><a href="ReviewBugs.html#classifying-bug-reports"><i class="fa fa-check"></i><b>5.2</b> Classifying bug reports</a></li>
+<li class="chapter" data-level="5.3" data-path="ReviewBugs.html"><a href="ReviewBugs.html#how-to-find-a-bug-report-or-an-issue-to-review"><i class="fa fa-check"></i><b>5.3</b> How to find a bug report or an issue to review?</a></li>
+<li class="chapter" data-level="5.4" data-path="ReviewBugs.html"><a href="ReviewBugs.html#example-of-a-bug-review-submitted-on-bugzilla"><i class="fa fa-check"></i><b>5.4</b> Example of a bug review submitted on Bugzilla</a></li>
+<li class="chapter" data-level="5.5" data-path="ReviewBugs.html"><a href="ReviewBugs.html#see-also-2"><i class="fa fa-check"></i><b>5.5</b> See also</a></li>
 </ul></li>
-<li class="chapter" data-level="6.2" data-path="ReviewBugs.html"><a href="ReviewBugs.html#classifying-bug-reports"><i class="fa fa-check"></i><b>6.2</b> Classifying bug reports</a></li>
-<li class="chapter" data-level="6.3" data-path="ReviewBugs.html"><a href="ReviewBugs.html#how-to-find-a-bug-report-or-an-issue-to-review"><i class="fa fa-check"></i><b>6.3</b> How to find a bug report or an issue to review?</a></li>
-<li class="chapter" data-level="6.4" data-path="ReviewBugs.html"><a href="ReviewBugs.html#example-of-a-bug-review-submitted-on-bugzilla"><i class="fa fa-check"></i><b>6.4</b> Example of a bug review submitted on Bugzilla</a></li>
-<li class="chapter" data-level="6.5" data-path="ReviewBugs.html"><a href="ReviewBugs.html#see-also-3"><i class="fa fa-check"></i><b>6.5</b> See also</a></li>
+<li class="chapter" data-level="6" data-path="FindSource.html"><a href="FindSource.html"><i class="fa fa-check"></i><b>6</b> Finding the Source</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="FindSource.html"><a href="FindSource.html#finding-r-source-code"><i class="fa fa-check"></i><b>6.1</b> Finding R source code</a></li>
+<li class="chapter" data-level="6.2" data-path="FindSource.html"><a href="FindSource.html#finding-c-source-code"><i class="fa fa-check"></i><b>6.2</b> Finding C source code</a></li>
+<li class="chapter" data-level="6.3" data-path="FindSource.html"><a href="FindSource.html#see-also-3"><i class="fa fa-check"></i><b>6.3</b> See also</a></li>
 </ul></li>
 <li class="chapter" data-level="7" data-path="FixBug.html"><a href="FixBug.html"><i class="fa fa-check"></i><b>7</b> Lifecycle of a Patch</a>
 <ul>
@@ -311,11 +311,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="FindSource" class="section level1 hasAnchor" number="5">
-<h1><span class="header-section-number">Chapter 5</span> Finding the Source<a href="FindSource.html#FindSource" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="FindSource" class="section level1 hasAnchor" number="6">
+<h1><span class="header-section-number">Chapter 6</span> Finding the Source<a href="FindSource.html#FindSource" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <p>This chapter discusses how you can have an overview of the R codebase. For instance, where to find the implementation of a base function written in R and where to find a primitive implementation written in C. You may want to find the source code of a function just out of curiosity or maybe to gain more insight into what a particular function is actually doing. Whatever be the case, reading the source code will help you to learn a lot about any function.</p>
-<div id="finding-r-source-code" class="section level2 hasAnchor" number="5.1">
-<h2><span class="header-section-number">5.1</span> Finding R source code<a href="FindSource.html#finding-r-source-code" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="finding-r-source-code" class="section level2 hasAnchor" number="6.1">
+<h2><span class="header-section-number">6.1</span> Finding R source code<a href="FindSource.html#finding-r-source-code" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <ol style="list-style-type: decimal">
 <li>Find the R function with the code of interest. You will always be able to print the top-level function (or use <code>View(function_name)</code> in RStudio). Looking at the code for the body of this function will reveal what you need to do next:</li>
 </ol>
@@ -343,8 +343,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 grep -R &quot;quantile &lt;- function&quot; ~/R-devel/src/library</code></pre>
 <p>Note: The above procedure does not cover S4, R6 or RC generics or methods. Refer <a href="https://github.com/jennybc/access-r-source">accessing R source</a> for further details.</p>
 </div>
-<div id="finding-c-source-code" class="section level2 hasAnchor" number="5.2">
-<h2><span class="header-section-number">5.2</span> Finding C source code<a href="FindSource.html#finding-c-source-code" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="finding-c-source-code" class="section level2 hasAnchor" number="6.2">
+<h2><span class="header-section-number">6.2</span> Finding C source code<a href="FindSource.html#finding-c-source-code" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <ol style="list-style-type: decimal">
 <li>If <code>.Internal()</code> or <code>.Primitive()</code>, find entry point in <code>names.c</code> as described in the Jenny Bryan’s post of <a href="https://github.com/jennybc/access-r-source">accessing R source</a>. For all other calls to compiled code, you can find the entry point from within R. For instance, the body of complete.cases() is</li>
 </ol>
@@ -367,8 +367,8 @@ finding all references (calls) to a function.</p></li>
 <li><p>GitHub has a code navigation feature via the library tree-sitter. Unfortunately, it does not have R support yet. An <a href="https://github.com/r-lib/tree-sitter-r">R driver for tree-sitter</a> made by Jim Hester is available.</p></li>
 </ol>
 </div>
-<div id="see-also-2" class="section level2 hasAnchor" number="5.3">
-<h2><span class="header-section-number">5.3</span> See also<a href="FindSource.html#see-also-2" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="see-also-3" class="section level2 hasAnchor" number="6.3">
+<h2><span class="header-section-number">6.3</span> See also<a href="FindSource.html#see-also-3" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p><a href="https://blog.r-hub.io/2019/05/14/read-the-source/">Read the R source</a> blogpost.</p>
 
 </div>
@@ -378,8 +378,8 @@ finding all references (calls) to a function.</p></li>
           </div>
         </div>
       </div>
-<a href="ReportingBugs.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="ReviewBugs.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="ReviewBugs.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="FixBug.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -410,7 +410,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/r-devel/rdevguide/edit/main/05-finding_the_source.Rmd",
+"link": "https://github.com/r-devel/rdevguide/edit/main/06-finding_the_source.Rmd",
 "text": "Edit"
 },
 "history": {
