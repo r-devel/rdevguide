@@ -23,7 +23,7 @@
 <meta name="author" content="R Contribution Working Group" />
 
 
-<meta name="date" content="2023-06-18" />
+<meta name="date" content="2023-07-01" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -307,7 +307,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="Doc" class="section level1 hasAnchor" number="7">
 <h1><span class="header-section-number">Chapter 7</span> Documenting R<a href="Doc.html#Doc" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p>The R language has a substantial body of documentation, much of which is contributed by various authors. The help files for R functions are written in ‘R documentation’ (.Rd) file format. It is a simple markup language with close resemblance to LaTeX. The .Rd file format can be further processed into a variety of formats, including LaTeX, HTML, and plain text.</p>
+<p>The R language has a substantial body of documentation, much of which is contributed by various authors. The help files for R functions are written in ‘R documentation’ (<code>.Rd</code>) file format. It is a simple markup language with close resemblance to LaTeX. The <code>.Rd</code> file format can be further processed into a variety of formats, including LaTeX, HTML, and plain text.</p>
 <p>This chapter describes the styleguide for R’s documentation, how to document for R, report and review bugs (and/or suggest corrections for them) in the existing documentation. If you are interested in contributing to R’s documentation, your contributions are more than welcome.</p>
 <div id="introduction-2" class="section level2 hasAnchor" number="7.1">
 <h2><span class="header-section-number">7.1</span> Introduction<a href="Doc.html#introduction-2" class="anchor-section" aria-label="Anchor link to header"></a></h2>
@@ -317,15 +317,15 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 <div id="guidelines-for-writing-r-help-files" class="section level2 hasAnchor" number="7.2">
 <h2><span class="header-section-number">7.2</span> Guidelines for writing R help files<a href="Doc.html#guidelines-for-writing-r-help-files" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>This section summarises the <a href="https://developer.r-project.org/Rds.html">recommended style for writing the R help files</a>. The R help files are written in “R documentation” (Rd) format, a markup language which resembles LaTeX. An example of the .Rd format is available for <a href="https://svn.r-project.org/R/trunk/src/library/base/man/mean.Rd">mean.Rd</a>. These are intended for writing the core documentations but may also be useful for package writers. Extensive details of writing R documentation files can be found in the <a href="https://cran.r-project.org/doc/manuals/r-release/R-exts.html#Writing-R-documentation-files">Writing R Extensions</a> manual.</p>
-<p>Note: Many R package authors use the R package <a href="https://cran.r-project.org/web/packages/roxygen2/index.html">roxygen2</a> to write documentation (which eventually creates the .Rd files), however, in this guide we focus on .Rd files only because the manual pages for the base distribution are written directly as .Rd files.</p>
-<p>There are three main parts of an .Rd file:</p>
+<p>This section summarises the <a href="https://developer.r-project.org/Rds.html">recommended style for writing the R help files</a>. The R help files are written in “R documentation” (Rd) format, a markup language which resembles LaTeX. An example of the <code>.Rd</code> format is available for <a href="https://svn.r-project.org/R/trunk/src/library/base/man/mean%60.Rd%60">mean<code>.Rd</code></a>. These are intended for writing the core documentations but may also be useful for package writers. Extensive details of writing R documentation files can be found in the <a href="https://cran.r-project.org/doc/manuals/r-release/R-exts.html#Writing-R-documentation-files">Writing R Extensions</a> manual.</p>
+<p>Note: Many R package authors use the R package <a href="https://cran.r-project.org/web/packages/roxygen2/index.html">roxygen2</a> to write documentation (which eventually creates the <code>.Rd</code> files), however, in this guide we focus on <code>.Rd</code> files only because the manual pages for the base distribution are written directly as <code>.Rd</code> files.</p>
+<p>There are three main parts of an <code>.Rd</code> file:</p>
 <ol style="list-style-type: decimal">
 <li><p><strong>Header</strong>: This part is for the basic information of the document/file. For instance, the name of the file, the topics documented, a title, a short textual description, and R usage information for the objects documented.</p></li>
 <li><p><strong>Body</strong>: This part includes further information on the function’s arguments and return value.</p></li>
 <li><p><strong>Footer</strong>: This part is optional. Usually the keyword information is included here.</p></li>
 </ol>
-<p>All the above information is included in a .Rd file within a series of sections with standard names (user-defined sections are also allowed). These sections are discussed below:</p>
+<p>All the above information is included in a <code>.Rd</code> file within a series of sections with standard names (user-defined sections are also allowed). These sections are discussed below:</p>
 <ol style="list-style-type: decimal">
 <li><p><code>\title</code> section:</p>
 <ul>
