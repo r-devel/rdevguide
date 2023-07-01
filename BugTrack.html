@@ -190,6 +190,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="3.8" data-path="BugTrack.html"><a href="BugTrack.html#disagreement-with-a-resolution-on-the-bug-tracker"><i class="fa fa-check"></i><b>3.8</b> Disagreement with a resolution on the bug tracker</a></li>
 <li class="chapter" data-level="3.9" data-path="BugTrack.html"><a href="BugTrack.html#examples-of-bug-reports-submitted-on-bugzilla-or-r-devel-mailing-list"><i class="fa fa-check"></i><b>3.9</b> Examples of Bug reports submitted on Bugzilla or R-devel mailing list</a></li>
 <li class="chapter" data-level="3.10" data-path="BugTrack.html"><a href="BugTrack.html#see-also-1"><i class="fa fa-check"></i><b>3.10</b> See also</a></li>
+<li class="chapter" data-level="3.11" data-path="BugTrack.html"><a href="BugTrack.html#how-to-contribute-to-issue-tracking"><i class="fa fa-check"></i><b>3.11</b> How to contribute to issue tracking</a></li>
+<li class="chapter" data-level="3.12" data-path="BugTrack.html"><a href="BugTrack.html#bugzilla-account"><i class="fa fa-check"></i><b>3.12</b> How to get a Bugzilla account</a>
+<ul>
+<li class="chapter" data-level="3.12.1" data-path="BugTrack.html"><a href="BugTrack.html#Bugzilla"><i class="fa fa-check"></i><b>3.12.1</b> Navigating Bugzilla</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="ReviewBugs.html"><a href="ReviewBugs.html"><i class="fa fa-check"></i><b>4</b> Reviewing Bugs</a>
 <ul>
@@ -370,7 +375,7 @@ When you are in doubt that there is a bug: (which should be the case most of the
 <ol style="list-style-type: decimal">
 <li><p>Packages that are supported by the R-Core are labelled with <code>Maintainer: R Core Team &lt;R-core@r-project.org&gt;</code>. One simple way to get the information from R is by running the <code>maintainer("package_name")</code> command.</p></li>
 <li><p>The bug report for R-Core supported packages, their documentations, and/ or a bug report for the R language itself can be submitted either to R-devel, <a href="https://www.r-project.org/posting-guide.html#which_list">see posting guide</a>, or to <a href="https://bugs.r-project.org/bugzilla/">Bugzilla</a>. In the future, we hope to have an option to report an issue to the <a href="https://github.com/r-devel/r-svn/issues">GitHub Mirror of the R svn server</a>.</p></li>
-<li><p>If you want to submit the bug report using <a href="#Bugzilla">Bugzilla</a>, please ensure that you have a Bugzilla account. To get a Bugzilla account, please send an e-mail to <code>bug-report-request@r-project.org</code> from the address that you want to use as your login. In this e-mail, briefly explain why you need an account. A volunteer shall then create a Bugzilla account and add you to R’s Bugzilla members.</p></li>
+<li><p>If you want to submit the bug report using <a href="BugTrack.html#Bugzilla">Bugzilla</a>, please ensure that you have a Bugzilla account. To get a Bugzilla account, please send an e-mail to <code>bug-report-request@r-project.org</code> from the address that you want to use as your login. In this e-mail, briefly explain why you need an account. A volunteer shall then create a Bugzilla account and add you to R’s Bugzilla members.</p></li>
 <li><p>Please ensure whether the bug is already fixed (in the upcoming changes in R) or reported (search for it from those already reported on Bugzilla, either on <a href="https://bugs.r-project.org/bugzilla/query.cgi">search existing bug reports</a>, using the <a href="https://bugs.r-project.org/bugzilla/query.cgi?format=advanced">advanced search</a> option here, or <a href="https://bugs.r-project.org/bugzilla/buglist.cgi?bug_file_loc_type=allwordssubstr&amp;bug_status=NEW&amp;bug_status=ASSIGNED&amp;bug_status=CONFIRMED&amp;bug_status=REOPENED&amp;bug_status=UNCONFIRMED&amp;bugidtype=include&amp;chfieldto=Now&amp;cmdtype=doit&amp;emailassigned_to1=1&amp;emailassigned_to2=1&amp;emailcc2=1&amp;emailreporter2=1&amp;emailtype1=substring&amp;emailtype2=substring&amp;field0-0-0=noop&amp;long_desc_type=substring&amp;order=bugs.delta_ts%20desc&amp;query_format=advanced&amp;short_desc_type=allwordssubstr&amp;type0-0-0=noop">show open bugs new-to-old</a>).</p></li>
 </ol>
 </div>
@@ -414,6 +419,57 @@ When you are in doubt that there is a bug: (which should be the case most of the
 <li><p><a href="https://bugs.r-project.org/bugzilla/page.cgi?id=bug-writing.html">Bugzilla guidelines of reporting a bug</a></p></li>
 </ol>
 
+<p>Base R uses <a href="https://bugs.r-project.org/">Bugzilla</a> for issue tracking and reporting bugs.</p>
+</div>
+<div id="how-to-contribute-to-issue-tracking" class="section level2 hasAnchor" number="3.11">
+<h2><span class="header-section-number">3.11</span> How to contribute to issue tracking<a href="BugTrack.html#how-to-contribute-to-issue-tracking" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Contributors can support issue tracking in R by</p>
+<ol style="list-style-type: decimal">
+<li><p><a href="https://contributor.r-project.org/rdevguide/ReportBugs.html">Reporting bugs</a> or making feature requests (bug reports filed under the “Wishlist” component in Bugzilla),</p></li>
+<li><p><a href="https://contributor.r-project.org/rdevguide/ReviewBugs.html">Reviewing bug reports</a> to help close reports where no fix is needed or to help narrow down the problem and identify what needs to be fixed, or</p></li>
+<li><p><a href="https://contributor.r-project.org/rdevguide/FixBug.html#FixBug">Proposing changes</a> to code or documentation that will close an issue.</p></li>
+</ol>
+</div>
+<div id="bugzilla-account" class="section level2 hasAnchor" number="3.12">
+<h2><span class="header-section-number">3.12</span> How to get a Bugzilla account<a href="BugTrack.html#bugzilla-account" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Anyone can browse the bug reports on Bugzilla, but you will need an account to file a bug report, to comment on an existing bug report, or to submit a proposed fix in the form of patch file.</p>
+<p>To get a Bugzilla account send an e-mail to <code>bug-report-request@r-project.org</code> from the address you want to use as your Bugzilla login. Briefly explain why you want a Bugzilla account and a volunteer will add you to R’s Bugzilla members. After having successfully logged in to Bugzilla, you are good to go.</p>
+<div id="Bugzilla" class="section level3 hasAnchor" number="3.12.1">
+<h3><span class="header-section-number">3.12.1</span> Navigating Bugzilla<a href="BugTrack.html#Bugzilla" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>An image of the existing home page of Bugzilla is shared below:</p>
+<div class="figure">
+<img src="img/bugzilla.png" alt="" />
+<p class="caption">Screenshot of the existing home page of Bugzilla.</p>
+</div>
+<p>On the home page of Bugzilla, there are various buttons and links. There are four square buttons called as:</p>
+<div class="figure">
+<img src="img/squarebuttons.png" alt="" />
+<p class="caption">Screenshot of the four square buttons on the home page of Bugzilla.</p>
+</div>
+<ol style="list-style-type: decimal">
+<li><p><a href="https://bugs.r-project.org/enter_bug.cgi">File a bug</a>: You will have to log in to Bugzilla to file a bug using this button</p></li>
+<li><p><a href="https://bugs.r-project.org/query.cgi">Search</a>: When you click this button you will get a page with ‘Simple Search’ and ‘Advanced Search’ options. Either of the search options could be used depending on what you are looking for.</p></li>
+<li><p><a href="https://bugs.r-project.org/?GoAheadAndLogIn=1">Log In</a>: Provide the appropriate email address and password here to log in to Bugzilla.</p></li>
+<li><p><a href="https://bugzilla.readthedocs.io/en/latest/using/index.html">Documentation</a>: Provides a user guide for R's Bugzilla.</p></li>
+</ol>
+<p>Several useful shortcuts are available from the landing page:</p>
+<ol style="list-style-type: decimal">
+<li><p><a href="https://bugs.r-project.org/enter_bug.cgi">Enter a new bug report</a></p></li>
+<li><p><a href="https://bugs.r-project.org/buglist.cgi?bug_file_loc_type=allwordssubstr&amp;bug_status=NEW&amp;bug_status=ASSIGNED&amp;bug_status=CONFIRMED&amp;bug_status=REOPENED&amp;bug_status=UNCONFIRMED&amp;bugidtype=include&amp;chfieldto=Now&amp;cmdtype=doit&amp;emailassigned_to1=1&amp;emailassigned_to2=1&amp;emailcc2=1&amp;emailreporter2=1&amp;emailtype1=substring&amp;emailtype2=substring&amp;field0-0-0=noop&amp;long_desc_type=substring&amp;order=bugs.delta_ts%20desc&amp;query_format=advanced&amp;short_desc_type=allwordssubstr&amp;type0-0-0=noop">Show open bugs new-to-old</a></p></li>
+<li><p><a href="https://bugs.r-project.org/query.cgi">Search existing bug reports</a></p></li>
+</ol>
+<p>A <a href="https://bugs.r-project.org/page.cgi?id=quicksearch.html">quick search</a> bar is available on the home page where you can enter a bug number to search or some search terms.</p>
+<div class="figure">
+<img src="img/quicksearch.png" alt="" />
+<p class="caption">Screenshot of the quick search bar on the home page of Bugzilla.</p>
+</div>
+<p>There is also a section for Common Queries on the home page which includes links to bugs reported and changed in the last 24 hours and last 7 days.</p>
+<div class="figure">
+<img src="img/commonquery.png" alt="" />
+<p class="caption">Screenshot of the Common Queries section on the home page of Bugzilla.</p>
+</div>
+
+</div>
 </div>
 </div>
             </section>
