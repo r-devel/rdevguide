@@ -76,13 +76,13 @@ mo-files
 how-to-contribute-new-translations
 current-status-of-translations-in-r
 helpful-references
-CoreDev
 TestRVer
 where-to-test
 VM
 what-can-you-test
 writing-tests-for-r
 benchmarks
+CoreDev
 WhereToGetHelp
 slack
 mailing-lists
