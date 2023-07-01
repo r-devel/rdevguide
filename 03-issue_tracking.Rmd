@@ -2,7 +2,7 @@
 
 Base R uses [Bugzilla](https://bugs.r-project.org/) for issue tracking and reporting bugs. 
 
-## How to contribute to issue tracking
+## How to contribute to issue tracking?
 
 Contributors can support issue tracking in R by
 
@@ -12,7 +12,7 @@ Contributors can support issue tracking in R by
 
 3. [Proposing changes](https://contributor.r-project.org/rdevguide/FixBug.html#FixBug) to code or documentation that will close an issue. 
 
-## How to get a Bugzilla account  {#bugzilla-account}
+## How to get a Bugzilla account?  {#bugzilla-account}
 
 Anyone can browse the bug reports on Bugzilla, but you will need an account to file a bug report, to comment on an existing bug report, or to submit a proposed fix in the form of patch file. 
 
