@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 8 Documenting R | R Development Guide</title>
+  <title>Chapter 4 Issue Tracking | R Development Guide</title>
   <meta name="description" content="A guide to R development." />
   <meta name="generator" content="bookdown 0.34 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 8 Documenting R | R Development Guide" />
+  <meta property="og:title" content="Chapter 4 Issue Tracking | R Development Guide" />
   <meta property="og:type" content="book" />
   <meta property="og:image" content="https://contributor.r-project.org/rdevguide/img/Rlogo.png" />
   <meta property="og:description" content="A guide to R development." />
   <meta name="github-repo" content="r-devel/rdevguide" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 8 Documenting R | R Development Guide" />
+  <meta name="twitter:title" content="Chapter 4 Issue Tracking | R Development Guide" />
   
   <meta name="twitter:description" content="A guide to R development." />
   <meta name="twitter:image" content="https://contributor.r-project.org/rdevguide/img/Rlogo.png" />
@@ -30,8 +30,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   <link rel="shortcut icon" href="img/Rlogo.svg" type="image/x-icon" />
-<link rel="prev" href="FixBug.html"/>
-<link rel="next" href="message-translations.html"/>
+<link rel="prev" href="BugTrack.html"/>
+<link rel="next" href="ReviewBugs.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -312,147 +312,58 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="Doc" class="section level1 hasAnchor" number="8">
-<h1><span class="header-section-number">Chapter 8</span> Documenting R<a href="Doc.html#Doc" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p>R has a substantial body of documentation, comprising help files for the core packages and a set of manuals aimed at users (An Introduction to R, R Data Import/Export), system administrators (R Installation and Administration) and developers (Writing R Extensions, The R language definition, and R Internals). This documentation was developed by the R Core Team with input from external contributors. The continuing involvement of the user community is important in maintaining this valuable documentation.</p>
-<p>The involvement of the community takes many forms, from contributing content, to making bug reports or raising an issue when the documentation could be more complete or made easier to follow.</p>
-<p>This chapter is about the ways people can contribute to R’s documentation, with guidance on how to do that. Any time you feel that you can clarify or fill gaps in existing documentation, your contribution is welcome and appreciated. If you find it difficult to deal with the markup used in the source files, you can ask for help with that part too. Please do not let the material in this chapter stand between the documentation and your desire to help out. However, not every good faith effort to change or extend the documentation will be accepted - sometimes the suggested changes may be incorrect; other times, while a change in wording may make some things clearer and easier to understand, the finer details of some corner case may become less clear, leading to the suggested changes being declined or modified by a member of R Core before applying them (if they agree the issue is important enough to fix).</p>
-<div id="guidelines-for-writing-r-help-files" class="section level2 hasAnchor" number="8.1">
-<h2><span class="header-section-number">8.1</span> Guidelines for writing R help files<a href="Doc.html#guidelines-for-writing-r-help-files" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>The help files for R functions are written in ‘R documentation’ (<code>.Rd</code>) file format. It is a simple markup language with close resemblance to LaTeX. The <code>.Rd</code> file format can be further processed into a variety of formats, including LaTeX, HTML, and plain text. The <code>.Rd</code> files can be found in the <code>man</code> directory of the sources for the corresponding base package, for example <a href="https://svn.r-project.org/R/trunk/src/library/base/man/mean.Rd" class="uri">https://svn.r-project.org/R/trunk/src/library/base/man/mean.Rd</a>. Many authors of contributed R packages use the <a href="https://cran.r-project.org/package=roxygen2">roxygen2</a> package to write documentation, which generates <code>.Rd</code> files from comments in the package <code>.R</code> files. However, the help files in the base distribution are maintained by directly editing the <code>.Rd</code> files.</p>
-<p>This section gives an overview of the <code>.Rd</code> format and summarises the <a href="https://developer.r-project.org/Rds.html">guidelines for writing the R help files</a>. The guidelines are intended for contributors to base R, but may also be useful for authors of contributed packages. Full documentation on writing R documentation files can be found in the <a href="https://cran.r-project.org/doc/manuals/r-release/R-exts.html#Writing-R-documentation-files">Writing R Extensions</a> manual.</p>
-<p>There are three main parts of an <code>.Rd</code> file:</p>
+<div id="IssueTrack" class="section level1 hasAnchor" number="4">
+<h1><span class="header-section-number">Chapter 4</span> Issue Tracking<a href="IssueTrack.html#IssueTrack" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>Base R uses <a href="https://bugs.r-project.org/">Bugzilla</a> for issue tracking and reporting bugs.</p>
+<div id="how-to-contribute-to-issue-tracking" class="section level2 hasAnchor" number="4.1">
+<h2><span class="header-section-number">4.1</span> How to contribute to issue tracking<a href="IssueTrack.html#how-to-contribute-to-issue-tracking" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Contributors can support issue tracking in R by</p>
 <ol style="list-style-type: decimal">
-<li><p><strong>Header</strong>: This part is for the basic information of the document/file. For instance, the name of the file, the topics documented, a title, a short textual description, and R usage information for the objects documented.</p></li>
-<li><p><strong>Body</strong>: This part includes further information on the function’s arguments and return value.</p></li>
-<li><p><strong>Footer</strong>: This part is optional. Usually the keyword information is included here.</p></li>
+<li><p><a href="https://contributor.r-project.org/rdevguide/ReportBugs.html">Reporting bugs</a> or making feature requests (bug reports filed under the “Wishlist” component in Bugzilla),</p></li>
+<li><p><a href="https://contributor.r-project.org/rdevguide/ReviewBugs.html">Reviewing bug reports</a> to help close reports where no fix is needed or to help narrow down the problem and identify what needs to be fixed, or</p></li>
+<li><p><a href="https://contributor.r-project.org/rdevguide/FixBug.html#FixBug">Proposing changes</a> to code or documentation that will close an issue.</p></li>
 </ol>
-<p>All the above information is included in a <code>.Rd</code> file within a series of sections with standard names (user-defined sections are also allowed). These sections are discussed below:</p>
+</div>
+<div id="bugzilla-account" class="section level2 hasAnchor" number="4.2">
+<h2><span class="header-section-number">4.2</span> How to get a Bugzilla account<a href="IssueTrack.html#bugzilla-account" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Anyone can browse the bug reports on Bugzilla, but you will need an account to file a bug report, to comment on an existing bug report, or to submit a proposed fix in the form of patch file.</p>
+<p>To get a Bugzilla account send an e-mail to <code>bug-report-request@r-project.org</code> from the address you want to use as your Bugzilla login. Briefly explain why you want a Bugzilla account and a volunteer will add you to R’s Bugzilla members. After having successfully logged in to Bugzilla, you are good to go.</p>
+<div id="Bugzilla" class="section level3 hasAnchor" number="4.2.1">
+<h3><span class="header-section-number">4.2.1</span> Navigating Bugzilla<a href="IssueTrack.html#Bugzilla" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>An image of the existing home page of Bugzilla is shared below:</p>
+<div class="figure">
+<img src="img/bugzilla.png" alt="" />
+<p class="caption">Screenshot of the existing home page of Bugzilla.</p>
+</div>
+<p>On the home page of Bugzilla, there are various buttons and links. There are four square buttons called as:</p>
+<div class="figure">
+<img src="img/squarebuttons.png" alt="" />
+<p class="caption">Screenshot of the four square buttons on the home page of Bugzilla.</p>
+</div>
 <ol style="list-style-type: decimal">
-<li><p><code>\title</code> section:</p>
-<ul>
-<li>Capitalize each word.</li>
-<li>Do not end in a period.</li>
-<li>Avoid use of markup language (because markup language need not be suitable for various hypertext search systems).</li>
-</ul></li>
-<li><p><code>\usage</code> and <code>\examples</code> sections:</p>
-<ul>
-<li>Line length of 65 characters is advised.</li>
-<li>Use <code>TRUE</code> instead of <code>T</code> and <code>FALSE</code> instead of <code>F</code>.</li>
-<li>Add spaces around binary operators.</li>
-<li>Add spaces after commas in the argument lists.</li>
-<li>Use <code>&lt;-</code> rather than <code>=</code> for assignments.</li>
-<li>Add spaces around the <code>&lt;-</code> operator.</li>
-<li>Do not use tabs to indent (as these do not render correctly on all possible pagers).</li>
-<li>Use 4 spaces to indent the (example) code.</li>
-<li>Make sure the examples are directly executable.</li>
-<li>The examples should be system-independent.</li>
-<li>The examples should not require special facilities (for instance, Internet access or write permission to specific directories).</li>
-<li>Examples should also not take longer than necessary to run, as they are run when checking a build of R.</li>
-</ul></li>
-<li><p><code>\synopsis</code> section: The <code>\usage</code> section can have the function definition, or the actual definition can be included in the <code>\synopsis</code> section. The full documentation for <a href="https://cran.r-project.org/doc/manuals/r-release/R-exts.html#Documenting-functions"><code>\usage</code></a> says that the usage information specified should match the function definition exactly. Apparently, <code>\synopsis</code> was removed in <a href="https://github.com/r-devel/r-svn/blob/0d65935f30dcaccfeee1dd61991bf4b1444873bc/src/library/tools/R/RdConv2.R#L918-L919">R 3.1.0</a>, but it is still mentioned in <a href="https://developer.r-project.org/Rds.html">Rds</a>.</p></li>
-<li><p><code>\source</code> and <code>\references</code> sections:</p>
-<ul>
-<li>Author(s) names should be written in the form <code>Author, A. B.</code>.</li>
-<li>Author(s) names should be separated by a comma or <code>and</code> (but not both).</li>
-<li>Separate paragraphs (separated by a blank line) should be used for each reference.</li>
-<li>Give a date immediately after the author(s) names.</li>
-<li>Do not put a period after the date.</li>
-<li>Titles of books and journals (not articles) should be enclosed in <code>\emph{...}</code>.</li>
-<li>Volume numbers for journals are to be enclosed in <code>\bold{...}</code> and followed by a comma.</li>
-<li>Use <code>--</code> for page ranges.</li>
-<li>For giving an address for a publisher use the format <code>New York: Springer-Verlag</code>.</li>
-</ul></li>
+<li><p><a href="https://bugs.r-project.org/enter_bug.cgi">File a bug</a>: You will have to log in to Bugzilla to file a bug using this button</p></li>
+<li><p><a href="https://bugs.r-project.org/query.cgi">Search</a>: When you click this button you will get a page with ‘Simple Search’ and ‘Advanced Search’ options. Either of the search options could be used depending on what you are looking for.</p></li>
+<li><p><a href="https://bugs.r-project.org/?GoAheadAndLogIn=1">Log In</a>: Provide the appropriate email address and password here to log in to Bugzilla.</p></li>
+<li><p><a href="https://bugzilla.readthedocs.io/en/latest/using/index.html">Documentation</a>: Provides a user guide for R's Bugzilla.</p></li>
 </ol>
-<p>The language used in the documentations should follow these basic rules:</p>
+<p>Several useful shortcuts are available from the landing page:</p>
 <ol style="list-style-type: decimal">
-<li><p>Affirmative tone should be used to describe what the function does and how to use it effectively. Rather than creating worry in the mind of a reader, it should establish confident knowledge about the effective use of the particular function/feature.</p></li>
-<li><p>More documentation is not necessarily better documentation. Long descriptions full of corner cases and caveats can create the impression that a function is more complex or harder to use than it actually is. Be succinct but exhaustive.</p></li>
-<li><p>Short code examples can help in understanding better. Readers can often grasp a simple example more quickly than they can digest a formal description. Usually people learn faster with concrete, motivating examples that match the context of a typical use case.</p></li>
-<li><p>Giving a code equivalent (or approximate equivalent) can be a useful addition to the description provided. You should carefully weigh whether the code equivalent adds value to the document.</p></li>
-<li><p>The tone of the documentation needs to be respectful of the reader’s background. Lay out the relevant information, show motivating use cases, provide glossary links, and do your best to connect-the-dots. The documentation is meant for newcomers, many of whom will be using it to evaluate the R language as a whole. The experience needs to be positive and not leave the reader with worries that something bad will happen if they make a mistake.</p></li>
+<li><p><a href="https://bugs.r-project.org/enter_bug.cgi">Enter a new bug report</a></p></li>
+<li><p><a href="https://bugs.r-project.org/buglist.cgi?bug_file_loc_type=allwordssubstr&amp;bug_status=NEW&amp;bug_status=ASSIGNED&amp;bug_status=CONFIRMED&amp;bug_status=REOPENED&amp;bug_status=UNCONFIRMED&amp;bugidtype=include&amp;chfieldto=Now&amp;cmdtype=doit&amp;emailassigned_to1=1&amp;emailassigned_to2=1&amp;emailcc2=1&amp;emailreporter2=1&amp;emailtype1=substring&amp;emailtype2=substring&amp;field0-0-0=noop&amp;long_desc_type=substring&amp;order=bugs.delta_ts%20desc&amp;query_format=advanced&amp;short_desc_type=allwordssubstr&amp;type0-0-0=noop">Show open bugs new-to-old</a></p></li>
+<li><p><a href="https://bugs.r-project.org/query.cgi">Search existing bug reports</a></p></li>
 </ol>
-<p>Extensive details of writing R documentation files can be found <a href="https://cran.r-project.org/doc/manuals/r-release/R-exts.html#Writing-R-documentation-files">here</a>.</p>
+<p>A <a href="https://bugs.r-project.org/page.cgi?id=quicksearch.html">quick search</a> bar is available on the home page where you can enter a bug number to search or some search terms.</p>
+<div class="figure">
+<img src="img/quicksearch.png" alt="" />
+<p class="caption">Screenshot of the quick search bar on the home page of Bugzilla.</p>
 </div>
-<div id="r-manuals" class="section level2 hasAnchor" number="8.2">
-<h2><span class="header-section-number">8.2</span> R manuals<a href="Doc.html#r-manuals" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>The <a href="https://cran.r-project.org/manuals.html">R manuals</a> are a part of the <a href="https://svn.r-project.org/R/trunk/doc/manual/">R sources</a>. Hence, bug reports/patches can also be submitted via Bugzilla, e.g. <a href="https://bugs.r-project.org/bugzilla/show_bug.cgi?id=15221">Bug 15221 - R-admin/‘Installing R under Windows’: Missing argument name</a>. Note that they are typically referred to by their file names as listed below:</p>
-<table>
-<thead>
-<tr class="header">
-<th>Manual</th>
-<th>Nickname</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>An Introduction to R</td>
-<td>“R-intro”</td>
-</tr>
-<tr class="even">
-<td>R Data Import/Export</td>
-<td>“R-data”</td>
-</tr>
-<tr class="odd">
-<td>R Installation and Administration</td>
-<td>“R-admin”</td>
-</tr>
-<tr class="even">
-<td>Writing R Extensions</td>
-<td>“R-exts”</td>
-</tr>
-<tr class="odd">
-<td>The R language definition</td>
-<td>“R-lang”</td>
-</tr>
-<tr class="even">
-<td>R Internals</td>
-<td>“R-ints”</td>
-</tr>
-</tbody>
-</table>
-<p>Note:</p>
-<ul>
-<li>Every manual is associated with a particular version of R, so you should check the version before reporting a bug.</li>
-<li>The <a href="https://cran.r-project.org/manuals.html">R manuals</a> page has links for the <a href="https://contributor.r-project.org/rdevguide/GetStart.html#the-r-source-code">three types of release</a>: <code>r-release</code>, <code>r-patched</code> and <code>r-devel</code>. These nicknames appear in the URLs, e.g. <a href="https://cran.r-project.org/doc/manuals/r-release/R-intro.html" class="uri">https://cran.r-project.org/doc/manuals/r-release/R-intro.html</a>.</li>
-<li>The <a href="https://www.gnu.org/software/texinfo/">Texinfo manual</a> should be referred to for <a href="https://www.gnu.org/software/texinfo/manual/texinfo/texinfo.html">how to mark up text</a>.</li>
-</ul>
+<p>There is also a section for Common Queries on the home page which includes links to bugs reported and changed in the last 24 hours and last 7 days.</p>
+<div class="figure">
+<img src="img/commonquery.png" alt="" />
+<p class="caption">Screenshot of the Common Queries section on the home page of Bugzilla.</p>
 </div>
-<div id="helping-with-documentation" class="section level2 hasAnchor" number="8.3">
-<h2><span class="header-section-number">8.3</span> Helping with documentation<a href="Doc.html#helping-with-documentation" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Maintaining the accuracy of R’s documentations and keeping a high level of quality takes a lot of effort. Community members, like you, help with writing, editing, and updating content, and these contributions are appreciated and welcomed.</p>
-<p>Looking at pre-existing documentation source files can be very helpful when getting started.</p>
-<p>You can directly search for <a href="https://bugs.r-project.org/buglist.cgi?component=Documentation&amp;list_id=22501&amp;product=R&amp;resolution=---">documentation issues/bugs on Bugzilla</a>. Issues vary from typos to unclear documentation and items lacking documentation.</p>
-<p>If you see a documentation issue that you would like to tackle, you can leave a comment on the issue saying you are going to try to solve the issue and mention roughly how long you think you will take to do so (this allows others to take on the issue if you happen to forget or lose interest).</p>
-<p>If you find some typo or problem on <a href="https://cran.r-project.org">CRAN</a> after checking the problem or typo you can write a polite email to <code>cran-sysadmin@r-project.org</code> and one of the R-core members working with CRAN. You’ll probably get a prompt reply about how the issue is going to be fixed.</p>
-</div>
-<div id="proofreading" class="section level2 hasAnchor" number="8.4">
-<h2><span class="header-section-number">8.4</span> Proofreading<a href="Doc.html#proofreading" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>While an issue filed on Bugzilla means there is a known issue somewhere, that does not mean there are not other issues lurking about in the documentation. Proofreading a part of the documentation can often uncover problems.</p>
-<p>If you decide to proofread, read a section of the documentation from start to finish, filing issues in Bugzilla for each major type of problem you find. It is best to avoid filing a single issue for an entire section containing multiple problems; instead, file several issues so that it is easier to break the work up for multiple people and more efficient review.</p>
-</div>
-<div id="helping-with-the-developers-guide" class="section level2 hasAnchor" number="8.5">
-<h2><span class="header-section-number">8.5</span> Helping with the Developer’s Guide<a href="Doc.html#helping-with-the-developers-guide" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>The Developer’s Guide (what you are reading now) uses the same process as the main R documentation, except for some small differences. The source lives in a <a href="https://github.com/r-devel/rdevguide/">GitHub repository</a> and bug reports should be submitted to the <a href="https://github.com/r-devel/rdevguide/issues">devguide GitHub tracker</a>.</p>
-<p>Our dev guide workflow uses continuous integration and deployment so changes to the dev guide are normally published when the pull request is merged. <a href="introduction.html#how-to-contribute-to-this-guide">How to contribute to this guide from the introduction.</a></p>
-</div>
-<div id="reporting-documentation-bugs" class="section level2 hasAnchor" number="8.6">
-<h2><span class="header-section-number">8.6</span> Reporting documentation bugs<a href="Doc.html#reporting-documentation-bugs" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p><!---
-discussion in slack (random channel)
---></p>
-<p>If you find some typo or problem on the <a href="https://cran.r-project.org">CRAN</a> webpages you can write a polite email to <code>CRAN@r-project.org</code> to report it. As an alternative, one can also write to the R-devel mailing list or submit a bug report via R’s Bugzilla.</p>
-<p>For improvements of the R-manuals or reporting typos or bugs in the R-manuals, submit a bug report to R’s Bugzilla.</p>
-<p>For reporting bugs or typos on the webpages or documentation about a particular package, write to the corresponding package maintainer. To find the maintainer of a package, use the command <code>maintainer("package-name")</code>.</p>
-<p><strong>Note</strong>:</p>
-<p>There is a <code>#core-documentation</code> channel on the <a href="https://r-contributors.slack.com/">R Contributors slack</a> where you can discuss about the patches for improvements to R’s documentation.</p>
-</div>
-<div id="see-also-5" class="section level2 hasAnchor" number="8.7">
-<h2><span class="header-section-number">8.7</span> See also<a href="Doc.html#see-also-5" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<ol style="list-style-type: decimal">
-<li><a href="https://cran.r-project.org/doc/manuals/r-release/R-exts.html#Writing-R-documentation-files">Writing R documentation files</a></li>
-</ol>
 
+</div>
 </div>
 </div>
             </section>
@@ -460,8 +371,8 @@ discussion in slack (random channel)
           </div>
         </div>
       </div>
-<a href="FixBug.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="message-translations.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="BugTrack.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="ReviewBugs.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -492,7 +403,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/r-devel/rdevguide/edit/main/07-documenting_R.Rmd",
+"link": "https://github.com/r-devel/rdevguide/edit/main/03-issue_tracking.Rmd",
 "text": "Edit"
 },
 "history": {
