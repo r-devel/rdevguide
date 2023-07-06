@@ -117,7 +117,7 @@
 
 \title{R Development Guide}
 \author{R Contribution Working Group}
-\date{2023-07-01}
+\date{2023-07-06}
 
 \begin{document}
 \maketitle
@@ -1575,8 +1575,10 @@ a source package and a source language (either R or C/C++). For example, the fil
 
 The `base' package has two exceptions to the basic pattern described above. The first is the domain for messages produced by
 the C code which is the fundamental backing of R itself (especially, but not exclusively, the C code under
-./src/main{[}\^{}The file \texttt{./po/POTFILES} is the canonical source of files searched{]}). The associated \texttt{.pot} file is \texttt{R.pot} and
-it is found in \texttt{./src/library/base/po}. \texttt{R-base.pot} is a normal \texttt{.pot} file because base has a normal \texttt{R} directory.
+./src/main{[}\^{}The file \texttt{./po/POTFILES} is the canonical source of files searched. Note that while, technically, it is possible
+to support translations in Fortran code, R does not currently do so. Only a handful of messages are produced by Fortran
+routines in the R sources.{]}). The associated \texttt{.pot} file is \texttt{R.pot} and is found in \texttt{./src/library/base/po}.
+R-base.pot\texttt{is\ a\ normal}.pot\texttt{file\ because\ base\ has\ a\ normal}R` directory.
 
 The second is the domain for the Windows R GUI, i.e., the text in the menus and elsewhere in the R GUI program
 available for running R on Windows. These messages are stored in the \texttt{RGui.pot} domain, also in the \texttt{po}

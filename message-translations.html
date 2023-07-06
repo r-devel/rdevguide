@@ -23,7 +23,7 @@
 <meta name="author" content="R Contribution Working Group" />
 
 
-<meta name="date" content="2023-07-01" />
+<meta name="date" content="2023-07-06" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -340,8 +340,10 @@ a source package and a source language (either R or C/C++). For example, the fil
 <code>stats</code> package, while <code>stats.pot</code> is a catalogue of all messages produced by C code in the <code>stats</code> package.</p>
 <p>The ‘base’ package has two exceptions to the basic pattern described above. The first is the domain for messages produced by
 the C code which is the fundamental backing of R itself (especially, but not exclusively, the C code under
-./src/main[^The file <code>./po/POTFILES</code> is the canonical source of files searched]). The associated <code>.pot</code> file is <code>R.pot</code> and
-it is found in <code>./src/library/base/po</code>. <code>R-base.pot</code> is a normal <code>.pot</code> file because base has a normal <code>R</code> directory.</p>
+./src/main[^The file <code>./po/POTFILES</code> is the canonical source of files searched. Note that while, technically, it is possible
+to support translations in Fortran code, R does not currently do so. Only a handful of messages are produced by Fortran
+routines in the R sources.]). The associated <code>.pot</code> file is <code>R.pot</code> and is found in <code>./src/library/base/po</code>.
+R-base.pot<code>is a normal</code>.pot<code>file because base has a normal</code>R` directory.</p>
 <p>The second is the domain for the Windows R GUI, i.e., the text in the menus and elsewhere in the R GUI program
 available for running R on Windows. These messages are stored in the <code>RGui.pot</code> domain, also in the <code>po</code>
 directory for <code>base</code>, and are most commonly derived from C code found in <code>./src/gnuwin32</code>. One reason to keep
