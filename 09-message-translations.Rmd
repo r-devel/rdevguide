@@ -32,8 +32,10 @@ a source package and a source language (either R or C/C++). For example, the fil
 
 The 'base' package has two exceptions to the basic pattern described above. The first is the domain for messages produced by
 the C code which is the fundamental backing of R itself (especially, but not exclusively, the C code under
-./src/main[^The file `./po/POTFILES` is the canonical source of files searched]). The associated `.pot` file is `R.pot` and
-it is found in `./src/library/base/po`. `R-base.pot` is a normal `.pot` file because base has a normal `R` directory.
+./src/main[^The file `./po/POTFILES` is the canonical source of files searched. Note that while, technically, it is possible
+to support translations in Fortran code, R does not currently do so. Only a handful of messages are produced by Fortran
+routines in the R sources.]). The associated `.pot` file is `R.pot` and is found in `./src/library/base/po`.
+R-base.pot` is a normal `.pot` file because base has a normal `R` directory.
 
 The second is the domain for the Windows R GUI, i.e., the text in the menus and elsewhere in the R GUI program
 available for running R on Windows. These messages are stored in the `RGui.pot` domain, also in the `po`
