@@ -91,7 +91,7 @@ Chinese typically does not alter the word itself in similar situations (一只�
 different ways to pluralize a quantity.
 
 In `.po` files, this shows up in the form of `msgid_plural` entries, followed by several ordered `msgstr` entries. Here's an example from
-[`R-de.po`](https://github.com/r-devel/r-svn/blob/c715d61cb74b3fee2d035faed9b258e86e420b75/src/library/base/po/R-de.po#L2015-L2018):
+[`R-de.po`](https://github.com/r-devel/r-svn/blob/c715d61cb74b3fee2d035faed9b258e86e420b75/src/library/base/po/R-de.po#L2015-L2018)[^1]:
 
 ```
 msgid "Warning message:\n"
@@ -162,3 +162,5 @@ https://contributor.r-project.org/translations/
 ## Helpful references
 
  - Statistical terms glossary
+
+[^1]: The GitHub mirror of the [actual svn repo](https://svn.r-project.org/R/trunk/) is linked in this chapter as it is a better interface for browsing the source files. 
