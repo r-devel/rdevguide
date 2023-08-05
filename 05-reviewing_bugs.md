@@ -36,7 +36,7 @@ These helpful tasks allow the Core developers and/ or maintainers to classify a 
 
 ## Example of a bug review submitted on Bugzilla
 
-If you would like to see how bugs are reviewed on Bugzilla, [here](https://bugs.r-project.org/bugzilla/show_bug.cgi?id=16542) is an example where an old bug report is being reviewed. It is tested to see if it was still an issue and a few ways are proposed to resolve the issue.
+If you would like to see how bugs are reviewed on Bugzilla, the [Bug 16542 - nlme:::summary.lmList with unequal outputs per group](https://bugs.r-project.org/bugzilla/show_bug.cgi?id=16542) is an example where an old bug report is being reviewed. It is tested to see if it was still an issue and a few ways are proposed to resolve the issue.
 
 **Note**:
 
