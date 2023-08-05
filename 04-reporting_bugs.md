@@ -101,13 +101,13 @@ As a reminder, issues closed by a core developer on Bugzilla have already been c
 
 If you like to see how bugs are reported on Bugzilla, here are some examples:
 
-1. A [bug report](https://bugs.r-project.org/bugzilla/show_bug.cgi?id=17767) with a reproducible example, a patch, and a review.
+1. [Bug 17767 - Warning about incomplete argument within nlme](https://bugs.r-project.org/bugzilla/show_bug.cgi?id=17767): A bug report with a reproducible example, a patch, and a review.
 
-2. A [bug report](https://stat.ethz.ch/pipermail/r-devel/2019-May/077855.html) submitted by Kara Woo which was promptly fixed via the R-devel mailing list. (More information about the R-devel mailing list can be found [here](https://stat.ethz.ch/mailman/listinfo/r-devel)).
+2. [Possible bug when finding shared libraries during staged installation](https://stat.ethz.ch/pipermail/r-devel/2019-May/077855.html): A bug report submitted by Kara Woo which was promptly fixed via the R-devel mailing list. (More information about the R-devel mailing list can be found [here](https://stat.ethz.ch/mailman/listinfo/r-devel)).
 
-3. A substring [bug reported](https://stat.ethz.ch/pipermail/r-devel/2019-February/077393.html) by Toby Dylan Hocking and fixed by Tomas Kalibera, Feb 2019 via the R-devel mailing list.
+3. [Bug: time complexity of substring is quadratic as string size and number of substrings increases](https://stat.ethz.ch/pipermail/r-devel/2019-February/077393.html): A substring reported by Toby Dylan Hocking and fixed by Tomas Kalibera, Feb 2019 via the R-devel mailing list.
 
-4. A gregexpr [bug report and patch](https://stat.ethz.ch/pipermail/r-devel/2019-February/077315.html) submitted by Toby Dylan Hocking and merged by Tomas Kalibera, Feb 2019 via the R-devel mailing list.
+4. [patch for gregexpr(perl=TRUE)](https://stat.ethz.ch/pipermail/r-devel/2019-February/077315.html): A gregexpr bug report and patch submitted by Toby Dylan Hocking and merged by Tomas Kalibera, Feb 2019 via the R-devel mailing list.
 
 ## See also
 
