@@ -1,0 +1,192 @@
+# Documenting {#Doc}
+
+R has a substantial body of documentation, comprising help files for the core packages and a set of manuals aimed at users (An Introduction to R, R Data Import/Export), system administrators (R Installation and Administration) and developers (Writing R Extensions, The R language definition, and R Internals). This documentation was developed by the R Core Team with input from external contributors. The continuing involvement of the user community is important in maintaining this valuable documentation.
+
+The involvement of the community takes many forms, from contributing content, to making bug reports or raising an issue when the documentation could be more complete or made easier to follow.
+
+This chapter is about the ways people can contribute to R's documentation, with guidance on how to do that. Any time you feel that you can clarify or fill gaps in existing documentation, your contribution is welcome and appreciated. If you find it difficult to deal with the markup used in the source files, you can ask for help with that part too. Please do not let the material in this chapter stand between the documentation and your desire to help out. However, not every good faith effort to change or extend the documentation will be accepted - sometimes the suggested changes may be incorrect; other times, while a change in wording may make some things clearer and easier to understand, the finer details of some corner case may become less clear, leading to the suggested changes being declined or modified by a member of R Core before applying them (if they agree the issue is important enough to fix).
+
+## Guidelines for writing R help files
+
+The help files for R functions are written in 'R documentation' (`.Rd`) file format. It is a simple markup language with close resemblance to LaTeX. The `.Rd` file format can be further processed into a variety of formats, including LaTeX, HTML, and plain text. The `.Rd` files can be found in the `man` directory of the sources for the corresponding base package. For example, consider the [mean.Rd](https://svn.r-project.org/R/trunk/src/library/base/man/mean.Rd) file. 
+
+```
+% File src/library/base/man/mean.Rd
+% Part of the R package, https://www.R-project.org
+% Copyright 1995-2022 R Core Team
+% Distributed under GPL 2 or later
+
+\name{mean}
+\title{Arithmetic Mean}
+\usage{
+mean(x, \dots)
+
+\method{mean}{default}(x, trim = 0, na.rm = FALSE, \dots)
+}
+\alias{mean}
+\alias{mean.default}
+\arguments{
+  \item{x}{An \R object.  Currently there are methods for
+    numeric/logical vectors and \link[=Dates]{date},
+    \link{date-time} and \link{time interval} objects.  Complex vectors
+    are allowed for \code{trim = 0}, only.}
+  \item{trim}{the fraction (0 to 0.5) of observations to be
+    trimmed from each end of \code{x} before the mean is computed.
+    Values of trim outside that range are taken as the nearest endpoint.
+  }
+  \item{na.rm}{a logical evaluating to \code{TRUE} or \code{FALSE}
+    indicating whether \code{NA} values should be stripped before the
+    computation proceeds.} 
+  \item{\dots}{further arguments passed to or from other methods.}
+}
+\description{
+  Generic function for the (trimmed) arithmetic mean.
+}
+\value{
+  If \code{trim} is zero (the default), the arithmetic mean of the
+  values in \code{x} is computed, as a numeric or complex vector of
+  length one.  If \code{x} is not logical (coerced to numeric), numeric
+  (including integer) or complex, \code{NA_real_} is returned, with a warning.
+
+  If \code{trim} is non-zero, a symmetrically trimmed mean is computed
+  with a fraction of \code{trim} observations deleted from each end
+  before the mean is computed.
+}
+\references{
+  Becker, R. A., Chambers, J. M. and Wilks, A. R. (1988)
+  \emph{The New S Language}.
+  Wadsworth & Brooks/Cole.
+}
+\seealso{
+  \code{\link{weighted.mean}}, \code{\link{mean.POSIXct}},
+  \code{\link{colMeans}} for row and column means.
+}
+\examples{
+x <- c(0:10, 50)
+xm <- mean(x)
+c(xm, mean(x, trim = 0.10))
+}
+\keyword{univar}
+```
+
+Many authors of contributed R packages use the [roxygen2](https://cran.r-project.org/package=roxygen2) package to write documentation, which generates `.Rd` files from comments in the package `.R` files. However, the help files in the base distribution are maintained by directly editing the `.Rd` files.
+
+This section gives an overview of the `.Rd` format and summarises the [guidelines for writing the R help files](https://developer.r-project.org/Rds.html). The guidelines are intended for contributors to base R, but may also be useful for authors of contributed packages. Full documentation on writing R documentation files can be found in the [Writing R Extensions](https://cran.r-project.org/doc/manuals/r-release/R-exts.html#Writing-R-documentation-files) manual.
+
+There are three main parts of an `.Rd` file:
+
+1. **Header**: This part is for the basic information of the document/file. For instance, the name of the file, the topics documented, a title, a short textual description, and R usage information for the objects documented.
+
+2. **Body**: This part includes further information on the function's arguments and return value.
+
+3. **Footer**: This part is optional. Usually the keyword information is included here.
+
+All the above information is included in a `.Rd` file within a series of sections with standard names (user-defined sections are also allowed). These sections are discussed below:
+
+1. `\title` section:
+    * Capitalize each word.
+    * Do not end in a period.
+    * Avoid use of markup language (because markup language need not be suitable for various hypertext search systems).
+    
+2. `\usage` and `\examples` sections:
+    * Line length of 65 characters is advised.
+    * Use `TRUE` instead of `T` and `FALSE` instead of `F`.
+    * Add spaces around binary operators.
+    * Add spaces after commas in the argument lists.
+    * Use `<-` rather than `=` for assignments.
+    * Add spaces around the `<-` operator.
+    * Do not use tabs to indent (as these do not render correctly on all possible pagers).
+    * Use 4 spaces to indent the (example) code.
+    * Make sure the examples are directly executable.
+    * The examples should be system-independent.
+    * The examples should not require special facilities (for instance, Internet access or write permission to specific directories).
+    * Examples should also not take longer than necessary to run, as they are run when checking a build of R.
+    
+3. `\synopsis` section: The `\usage` section can have the function definition, or the actual definition can be included in the `\synopsis` section. The full documentation for [`\usage`](https://cran.r-project.org/doc/manuals/r-release/R-exts.html#Documenting-functions) says that the usage information specified should match the function definition exactly. Apparently, `\synopsis` was removed in [R 3.1.0](https://github.com/r-devel/r-svn/blob/0d65935f30dcaccfeee1dd61991bf4b1444873bc/src/library/tools/R/RdConv2.R#L918-L919), but it is still mentioned in [Rds](https://developer.r-project.org/Rds.html). 
+
+4. `\source` and `\references` sections:
+    * Author(s) names should be written in the form `Author, A. B.`.
+    * Author(s) names should be separated by a comma or `and` (but not both).
+    * Separate paragraphs (separated by a blank line) should be used for each reference.
+    * Give a date immediately after the author(s) names.
+    * Do not put a period after the date.
+    * Titles of books and journals (not articles) should be enclosed in `\emph{...}`.
+    * Volume numbers for journals are to be enclosed in `\bold{...}` and followed by a comma.
+    * Use `--` for page ranges.
+    * For giving an address for a publisher use the format `New York: Springer-Verlag`.
+
+The language used in the documentations should follow these basic rules:
+
+1. Affirmative tone should be used to describe what the function does and how to use it effectively. Rather than creating worry in the mind of a reader, it should establish confident knowledge about the effective use of the particular function/feature.
+
+2. More documentation is not necessarily better documentation. Long descriptions full of corner cases and caveats can create the impression that a function is more complex or harder to use than it actually is. Be succinct but exhaustive. 
+
+3. Short code examples can help in understanding better. Readers can often grasp a simple example more quickly than they can digest a formal description. Usually people learn faster with concrete, motivating examples that match the context of a typical use case. 
+
+4. Giving a code equivalent (or approximate equivalent) can be a useful addition to the description provided. You should carefully weigh whether the code equivalent adds value to the document.
+
+5. The tone of the documentation needs to be respectful of the reader’s background. Lay out the relevant information, show motivating use cases, provide glossary links, and do your best to connect-the-dots. The documentation is meant for newcomers, many of whom will be using it to evaluate the R language as a whole. The experience needs to be positive and not leave the reader with worries that something bad will happen if they make a mistake. 
+
+Extensive details of writing R documentation files can be found [here](https://cran.r-project.org/doc/manuals/r-release/R-exts.html#Writing-R-documentation-files).
+
+## R manuals
+
+The [R manuals](https://cran.r-project.org/manuals.html) are a part of the [R sources](https://svn.r-project.org/R/trunk/doc/manual/). Hence, bug reports/patches can also be submitted via Bugzilla, e.g. [Bug 15221 - R-admin/'Installing R under Windows': Missing argument name](https://bugs.r-project.org/bugzilla/show_bug.cgi?id=15221). Note that they are typically referred to by their file names as listed below:
+
+| Manual | Nickname |
+| -- | -- |
+| An Introduction to R | "R-intro"  |
+| R Data Import/Export  | "R-data"  |
+| R Installation and Administration | "R-admin"  |
+| Writing R Extensions | "R-exts" |
+| The R language definition | "R-lang"  |
+| R Internals | "R-ints" | 
+
+Note: 
+
+- Every manual is associated with a particular version of R, so you should check the version before reporting a bug.
+- The [R manuals](https://cran.r-project.org/manuals.html) page has links for the [three types of release](https://contributor.r-project.org/rdevguide/GetStart.html#the-r-source-code): `r-release`, `r-patched` and `r-devel`.  These nicknames appear in the URLs, e.g. https://cran.r-project.org/doc/manuals/r-release/R-intro.html.
+- The [Texinfo manual](https://www.gnu.org/software/texinfo/) should be referred to for [how to mark up text](https://www.gnu.org/software/texinfo/manual/texinfo/texinfo.html).
+
+## Helping with documentation
+
+Maintaining the accuracy  of R's documentations and keeping a high level of quality takes a lot of effort. Community members, like you, help with writing, editing, and updating content, and these contributions are appreciated and welcomed.
+
+Looking at pre-existing documentation source files can be very helpful when getting started.
+
+You can directly search for [documentation issues/bugs on Bugzilla](https://bugs.r-project.org/buglist.cgi?component=Documentation&list_id=22501&product=R&resolution=---). Issues vary from typos to unclear documentation and items lacking documentation.
+
+If you see a documentation issue that you would like to tackle, you can leave a comment on the issue saying you are going to try to solve the issue and mention roughly how long you think you will take to do so (this allows others to take on the issue if you happen to forget or lose interest).
+
+If you find some typo or problem on [CRAN](https://cran.r-project.org) after checking the problem or typo you can write a polite email to `cran-sysadmin@r-project.org` and one of the R-core members working with CRAN. You'll probably get a prompt reply about how the issue is going to be fixed.
+
+## Proofreading
+
+While an issue filed on Bugzilla means there is a known issue somewhere, that does not mean there are not other issues lurking about in the documentation. Proofreading a part of the documentation can often uncover problems.
+
+If you decide to proofread, read a section of the documentation from start to finish, filing issues in Bugzilla for each major type of problem you find. It is best to avoid filing a single issue for an entire section containing multiple problems; instead, file several issues so that it is easier to break the work up for multiple people and more efficient review.
+
+## Helping with the Developer's Guide
+
+The Developer’s Guide (what you are reading now) uses the same process as the main R documentation, except for some small differences. The source lives in a [GitHub repository](https://github.com/r-devel/rdevguide/) and bug reports should be submitted to the [devguide GitHub tracker](https://github.com/r-devel/rdevguide/issues).
+
+Our dev guide workflow uses continuous integration and deployment so changes to the dev guide are normally published when the pull request is merged. [How to contribute to this guide from the introduction.](#how-to-contribute-to-this-guide)
+
+## Reporting documentation bugs
+ <!---
+discussion in slack (random channel)
+-->
+
+If you find some typo or problem on the [CRAN](https://cran.r-project.org) webpages you can write a polite email to `CRAN@r-project.org` to report it. As an alternative, one can also write to the R-devel mailing list or submit a bug report via R's Bugzilla.
+
+For improvements of the R-manuals or reporting typos or bugs in the R-manuals, submit a bug report to R's Bugzilla.
+
+For reporting bugs or typos on the webpages or documentation about a particular package, write to the corresponding package maintainer. To find the maintainer of a package, use the command `maintainer("package-name")`.
+
+**Note**:
+
+There is a `#core-documentation` channel on the [R Contributors slack](https://r-contributors.slack.com/) where you can discuss about the patches for improvements to R's documentation. 
+
+## See also
+
+1. [Writing R documentation files](https://cran.r-project.org/doc/manuals/r-release/R-exts.html#Writing-R-documentation-files)

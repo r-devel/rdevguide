@@ -47,7 +47,7 @@ By participating in this project you agree to abide by its terms.
 
 ## Acknowledgements
 
-This book was started using Sean Kross' [minimal bookdown example](https://github.com/seankross/bookdown-start) as described on their [blog](http://seankross.com/2016/11/17/How-to-Start-a-Bookdown-Book.html).
+This book started using Sean Kross' [minimal bookdown example](https://github.com/seankross/bookdown-start) as described on their [blog](http://seankross.com/2016/11/17/How-to-Start-a-Bookdown-Book.html).
 
 This README borowed ideas from [ropensci/dev_guide](https://github.com/ropensci/dev_guide).
 
