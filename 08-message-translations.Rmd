@@ -248,11 +248,11 @@ Translate the message by typing the translation in the text box.
 
 ![](img/translate_string_and_save.png)
 
-Click "Save and Continue" to save the translation and continue. The
-translation team will review and integrate it into the R interface if it
-meets the quality standards.
+If you are confident that the translation is correct, make sure the "Needs editing" box is unchecked.
 
-- Note: If you're unsure about the translate, please check needs editing. This will ensure other reviewer will check and verify if your translations are correct.
+If you are unsure, leave the "Needs editing" box checked. This marks the translation as "fuzzy" and although it may be added to the R source files, the translation will **not** be used. 
+
+Click "Save and Continue" to save the translation and continue. 
 
 
 Some Tips to follow:
