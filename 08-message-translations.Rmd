@@ -205,9 +205,9 @@ language-specific subdirectories.
 <!-- TODO(michaelchirico): Creating and editing .po files, testing the translations worked, **encoding**, translation teams, release schedule -->
 
 Translating R into different languages helps make it more user-friendly
-for non-English speakers and grow the R community. Also, read the blog
+for non-English speakers and helps to grow the R community. See the blog post on
 how [R can use your help: Translating R
-message](https://blog.r-project.org/2022/07/25/r-can-use-your-help-translating-r-messages).
+messages](https://blog.r-project.org/2022/07/25/r-can-use-your-help-translating-r-messages).
 
 To get started with new translation, please follow the steps below:
 
