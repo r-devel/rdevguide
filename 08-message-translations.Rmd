@@ -219,8 +219,12 @@ software projects. Register an account on R's Weblate server,
 
 Step 2: Choose a Component and Language
 
-Select a component of R with less than 100% translation. You can start
-with sections like utils, base (R files), or tools (R files). Then you
+Select a component of R with less than 100% translation. Each component corresponds 
+to the messages in either the R code or the C code of one of the packages in base R, e.g. 
+base (R files), or tools (C files). There is one special case: base (R GUI), which corresponds
+to the messages in the Windows Graphical User Interface. 
+
+After selecting a component, you
 can select your preferred language.
 
 ![](img/translate_component.png)
