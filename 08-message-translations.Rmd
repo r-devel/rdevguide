@@ -261,7 +261,7 @@ Some Tips to follow:
 
 - Use concise language: This will ensure the translated messages are short and easy to read
 
-- Review the translations: After finishing the translation, check if you have any alerts or warning in the weblate string status.
+- Check for technical issues: After finishing the translation, check if you have any alerts or warning in the weblate string status, e.g. double instead of single space.
 
 
 Related links:
