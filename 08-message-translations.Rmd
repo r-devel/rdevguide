@@ -214,8 +214,8 @@ To get started contributing to translations, please follow the steps below:
 Step 1: Register an Account at Weblate
 
 Weblate is an open-source platform for collaborative translation of
-software projects, including R. Register an account at
-<https://translate.rx.studio/> to start contributing.
+software projects. Register an account on R's Weblate server,
+<https://translate.rx.studio/>, to start contributing.
 
 Step 2: Choose a Component and Language
 
