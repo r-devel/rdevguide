@@ -177,7 +177,7 @@ Before installing R from source, some additional programs are needed, as per the
     Once installed open MiKTeX via the Windows start menu.
     It might ask to check for updates and more importantly, to make it available in PATH. You can accept both.
 
-1.  Open the Rtools42 terminal to update and install subversion:
+1.  Open the Rtools43 terminal to update and install subversion:
 
     ```sh
     pacman -Syuu
