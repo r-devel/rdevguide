@@ -225,17 +225,17 @@ messages](https://blog.r-project.org/2022/07/25/r-can-use-your-help-translating-
 To get started contributing to translations, please follow the steps
 below:
 
-#### Step 1: Register an Account at Weblate
+**Step 1: Register an Account at Weblate**
 
 Weblate is an open-source platform for collaborative translation of
 software projects. Register an account on R's Weblate server,
 <https://translate.rx.studio/>, to start contributing.
 
-**Note:** A detailed conventions and workflow for translation is given
-here:
-[Conventions-for-translations](https://github.com/r-devel/translations/wiki/Conventions-for-translations){.uri}
+> *Note: To get started follow the detailed workflow and convention for
+> translation which is given here:
+> <https://github.com/r-devel/translations/wiki/Conventions-for-translations>*
 
-#### Step 2: Choose a Component and Language
+**Step 2: Choose a Component and Language**
 
 Select a component of R with less than 100% translation. Each component
 corresponds to the messages in either the R code or the C code of one of
@@ -247,61 +247,67 @@ After selecting a component, you can select your preferred language.
 
 ![](img/translate_component.png)
 
-#### Step 3: Check String Status
+**Step 3: Check String Status**
 
 Click on "Unfinished strings" to see the strings of messages that need
 translation.
 
 Here:
 
--   Translated Strings: Already translated.
--   Review Pending Strings: Translated strings awaiting review.
--   Untranslated/Incomplete Strings: Strings requiring translation.
+-   **Translated Strings**: Already translated.
+-   **Strings waiting for review**: Translated strings awaiting for
+    reviewers. CHECK
+-   **Untranslated/Incomplete Strings**: Strings requiring translation.
 
 ![](img/unfinished_strings_translate.png)
 
-#### Step 4: Translate the Message
+**Step 4: Translate the Message**
 
 Translate the message by typing the translation in the text box.
 
 ![](img/translate_string_and_save.png)
 
-If you are confident that the translation is correct, make sure the
-"Needs editing" box is unchecked.
+-   If you are **confident** that the **translation is correct**, make
+    sure the "Needs editing" box is **unchecked**.
 
-If you are unsure, leave the "Needs editing" box checked. This marks the
-translation as "fuzzy" and although it may be added to the R source
-files, the translation will **not** be used.
+-   If you are **unsure**, leave the "Needs editing" box checked. This
+    marks the translation as "fuzzy" and although it may be added to the
+    R source files, the translation will **not** be used. CHECK
 
-Finally, Click "Save and Continue" to save the translation and continue.
+-   Finally, Click **"Save and Continue"** to save the translation and
+    continue.
 
-**Note:** Make sure to use Automatic Suggestions (machine translation)
-as a starting point.
+    ------------------------------------------------------------------------
 
-1.  Click on Automatic Suggestions
+> **Note:** Use Glossary feature within Weblate making translation easy
+> and consistent:
+> <https://translate.rx.studio/projects/r-project/glossary/>
+
+> **Note:** Make sure to use Automatic Suggestions as a starting point.
+
+1.  Click on Automatic Suggestions (machine translation)
 
 2.  Accept it if you think the automatic suggestion looks good
 
 ![](img/auto-suggestion.png)
 
+------------------------------------------------------------------------
+
 **Some Tips to follow:**
 
--   Be consistent: Use the same words and phrases throughout the
+-   **Be consistent:** Use the same words and phrases throughout the
     translation to make it consistent and avoid confusion.
 
--   Check for technical issues: After finishing the translation, check
-    if you have any alerts or warning in the Weblate string status, e.g.
-    double instead of single space.
+-   **Check for technical issues:** After finishing the translation,
+    check if you have any alerts or warning in the Weblate string
+    status, e.g. double instead of single space.
 
--   Follow langugage specific guidelines: Check how other languages have
-    translated the string. Even if you are not fluent in another
+-   **Follow language specific guidelines:** Check how other languages
+    have translated the string. Even if you are not fluent in another
     language it can give you an idea of how other translators have
     handled it, especially which parts are left verbatim. A detailed
     guide is given here :
     [Conventions-for-translations#languages-and-contributions](https://github.com/r-devel/translations/wiki/Conventions-for-translations#languages-and-contributions){.uri}
-
--   Use Glossary feature within Weblate:
-    <https://translate.rx.studio/projects/r-project/glossary/>
 
 Related links:
 <https://contributor.r-project.org/translating-r-to-your-language/>
