@@ -247,23 +247,25 @@ After selecting a component, you can select your preferred language.
 
 ![](img/translate_component.png)
 
-**Step 3: Check String Status**
+<!-- **Step 3: Check String Status** -->
 
-Click on "Unfinished strings" to see the strings of messages that need
-translation.
+<!-- Click on "Unfinished strings" to see the strings of messages that need -->
+<!-- translation. All translated strings appears as Strings waiting for -->
+<!-- review. For more information, please visit our Weblate FAQs information -->
+<!-- given here: https://github.com/r-devel/translations/wiki/Weblate-FAQ -->
 
-Here:
+<!-- ![](img/unfinished_strings_translate.png) -->
 
--   **Translated Strings**: Already translated.
--   **Strings waiting for review**: Translated strings awaiting for
-    reviewers. CHECK
--   **Untranslated/Incomplete Strings**: Strings requiring translation.
+**Step 3: Translate the Message**
 
-![](img/unfinished_strings_translate.png)
+Now, you can click on Translate button on your right.
 
-**Step 4: Translate the Message**
 
-Translate the message by typing the translation in the text box.
+![](img/translate_button.png)
+
+
+
+Then, start translating the message by typing the translation in the text box.
 
 ![](img/translate_string_and_save.png)
 
@@ -272,12 +274,12 @@ Translate the message by typing the translation in the text box.
 
 -   If you are **unsure**, leave the "Needs editing" box checked. This
     marks the translation as "fuzzy" and although it may be added to the
-    R source files, the translation will **not** be used. CHECK
+    R source files, the translation will **not** be used.
 
 -   Finally, Click **"Save and Continue"** to save the translation and
     continue.
 
-    ------------------------------------------------------------------------
+------------------------------------------------------------------------
 
 > **Note:** Use Glossary feature within Weblate making translation easy
 > and consistent:
