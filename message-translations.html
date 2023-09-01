@@ -23,7 +23,7 @@
 <meta name="author" content="R Contribution Working Group" />
 
 
-<meta name="date" content="2023-08-31" />
+<meta name="date" content="2023-09-01" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -313,64 +313,93 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="message-translations" class="section level1 hasAnchor" number="9">
 <h1><span class="header-section-number">Chapter 9</span> Message Translations<a href="message-translations.html#message-translations" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p>This chapter covers internationalization in R, i.e., the display of messages in languages other than English. All
-output in R (such as messages emitted by <code>stop()</code>, <code>warning()</code>, or <code>message()</code>) is eligible for translation, as
-are menu labels in the GUI. Depending on the version of R that you are using, some of the languages might already
-be available while others may need work. R leverages the <a href="https://www.gnu.org/software/gettext/"><code>gettext</code></a> program
-to handle the conversion from English to arbitrary target languages.</p>
-<p>Having messages available in other languages can be an important bridge for R learners not confident in English –
-rather than learning two things at once (coding in R and processing diagnostic information in English), they can
-focus on coding while getting more natural errors/warnings in their native tongue.</p>
-<p>The <a href="https://www.gnu.org/software/gettext/manual/index.html"><code>gettext</code> manual</a> is a more canonical reference for a
-deep understanding of how <code>gettext</code> works. This chapter will just give a broad overview, with particular focus on
-how things work for R, with the goal of making it as low-friction as possible for developers and users to contribute
+<p>This chapter covers internationalization in R, i.e., the display of
+messages in languages other than English. All output in R (such as
+messages emitted by <code>stop()</code>, <code>warning()</code>, or <code>message()</code>) is eligible
+for translation, as are menu labels in the GUI. Depending on the version
+of R that you are using, some of the languages might already be
+available while others may need work. R leverages the
+<a href="https://www.gnu.org/software/gettext/"><code>gettext</code></a> program to handle the
+conversion from English to arbitrary target languages.</p>
+<p>Having messages available in other languages can be an important bridge
+for R learners not confident in English – rather than learning two
+things at once (coding in R and processing diagnostic information in
+English), they can focus on coding while getting more natural
+errors/warnings in their native tongue.</p>
+<p>The <a href="https://www.gnu.org/software/gettext/manual/index.html"><code>gettext</code>
+manual</a> is a
+more canonical reference for a deep understanding of how <code>gettext</code>
+works. This chapter will just give a broad overview, with particular
+focus on how things work for R, with the goal of making it as
+low-friction as possible for developers and users to contribute
 new/updated translations.</p>
 <div id="how-translations-work" class="section level2 hasAnchor" number="9.1">
 <h2><span class="header-section-number">9.1</span> How translations work<a href="message-translations.html#how-translations-work" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Each of the default packages distributed with R (i.e., those found in <code>./src/library</code> such as <code>base</code>, <code>utils</code>,
-and <code>stats</code> and which have priority base) contains a <code>po</code> directory. A <code>po</code> directory is the central location for
-ataloguing/translating each package’s messages. It contains a template message file (<code>.pot</code>) for the corresponding
-ackage along with translated <code>.po</code> files (that are created using the template <code>.pot</code> file).</p>
+<p>Each of the default packages distributed with R (i.e., those found in
+<code>./src/library</code> such as <code>base</code>, <code>utils</code>, and <code>stats</code> and which have
+priority base) contains a <code>po</code> directory. A <code>po</code> directory is the
+central location for ataloguing/translating each package’s messages. It
+contains a template message file (<code>.pot</code>) for the corresponding ackage
+along with translated <code>.po</code> files (that are created using the template
+<code>.pot</code> file).</p>
 <div id="pot-files" class="section level3 hasAnchor" number="9.1.1">
 <h3><span class="header-section-number">9.1.1</span> <code>.pot</code> files<a href="message-translations.html#pot-files" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>A <code>.pot</code> file is a template file found inside the <code>po</code> directory of an R package.
-This template file is a snapshot of the messages available in a given <strong>domain</strong>. A domain in R typically identifies
-a source package and a source language (either R or C/C++). For example, the file <code>R-stats.pot</code>
-(found in the R sources in <code>./src/library/stats/po</code>) is a catalogue of all messages produced by R code in the
-<code>stats</code> package, while <code>stats.pot</code> is a catalogue of all messages produced by C code in the <code>stats</code> package.</p>
-<p>The ‘base’ package has two exceptions to the basic pattern described above. The first is the domain for messages produced by
-the C code which is the fundamental backing of R itself (especially, but not exclusively, the C code under
-./src/main[^The file <code>./po/POTFILES</code> is the canonical source of files searched. Note that while, technically, it is possible
-to support translations in Fortran code, R does not currently do so. Only a handful of messages are produced by Fortran
-routines in the R sources.]). The associated <code>.pot</code> file is <code>R.pot</code> and is found in <code>./src/library/base/po</code>.
-R-base.pot<code>is a normal</code>.pot<code>file because base has a normal</code>R` directory.</p>
-<p>The second is the domain for the Windows R GUI, i.e., the text in the menus and elsewhere in the R GUI program
-available for running R on Windows. These messages are stored in the <code>RGui.pot</code> domain, also in the <code>po</code>
-directory for <code>base</code>, and are most commonly derived from C code found in <code>./src/gnuwin32</code>. One reason to keep
-this domain separate is that it is only relevant to one platform (Windows). In particular, Windows has historically
-different character encodings, so that it made more sense for Windows developers to produce translations specifically
-or Windows, since it is non-trivial for non-Windows users to test their translations for the Windows GUI.</p>
+<p>A <code>.pot</code> file is a template file found inside the <code>po</code> directory of an R
+package. This template file is a snapshot of the messages available in a
+given <strong>domain</strong>. A domain in R typically identifies a source package
+and a source language (either R or C/C++). For example, the file
+<code>R-stats.pot</code> (found in the R sources in <code>./src/library/stats/po</code>) is a
+catalogue of all messages produced by R code in the <code>stats</code> package,
+while <code>stats.pot</code> is a catalogue of all messages produced by C code in
+the <code>stats</code> package.</p>
+<p>The ‘base’ package has two exceptions to the basic pattern described
+above. The first is the domain for messages produced by the C code which
+is the fundamental backing of R itself (especially, but not exclusively,
+the C code under ./src/main[^The file <code>./po/POTFILES</code> is the canonical
+source of files searched. Note that while, technically, it is possible
+to support translations in Fortran code, R does not currently do so.
+Only a handful of messages are produced by Fortran routines in the R
+sources.]). The associated <code>.pot</code> file is <code>R.pot</code> and is found in
+<code>./src/library/base/po</code>.
+R-base.pot<code>is a normal</code>.pot<code>file because base has a normal</code>R`
+directory.</p>
+<p>The second is the domain for the Windows R GUI, i.e., the text in the
+menus and elsewhere in the R GUI program available for running R on
+Windows. These messages are stored in the <code>RGui.pot</code> domain, also in the
+<code>po</code> directory for <code>base</code>, and are most commonly derived from C code
+found in <code>./src/gnuwin32</code>. One reason to keep this domain separate is
+that it is only relevant to one platform (Windows). In particular,
+Windows has historically different character encodings, so that it made
+more sense for Windows developers to produce translations specifically
+or Windows, since it is non-trivial for non-Windows users to test their
+translations for the Windows GUI.</p>
 <div id="generating-.pot-files" class="section level4 hasAnchor" number="9.1.1.1">
 <h4><span class="header-section-number">9.1.1.1</span> Generating <code>.pot</code> files<a href="message-translations.html#generating-.pot-files" class="anchor-section" aria-label="Anchor link to header"></a></h4>
-<p>For outside contributors, there’s no need to update .pot files – translators will typically take the R <code>.pot</code> files
-as given and generate <code>.po</code> files. These will be sent along to a language-specific translation maintainer, who then
-compiles them to send to the R Core developer responsible for translations, who finally applies them as a patch.</p>
-<p>To emphasize, this section is almost always not needed for contributing translations – it is here for
-completeness and edification.</p>
+<p>For outside contributors, there’s no need to update .pot files –
+translators will typically take the R <code>.pot</code> files as given and generate
+<code>.po</code> files. These will be sent along to a language-specific translation
+maintainer, who then compiles them to send to the R Core developer
+responsible for translations, who finally applies them as a patch.</p>
+<p>To emphasize, this section is almost always not needed for contributing
+translations – it is here for completeness and edification.</p>
 </div>
 </div>
 <div id="po-files" class="section level3 hasAnchor" number="9.1.2">
 <h3><span class="header-section-number">9.1.2</span> <code>.po</code> files<a href="message-translations.html#po-files" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>.po files are the most important artifacts for translators. They provide the (human-readable!) mapping between
-the messages as they appear in the source code and how the messages will appear to users in translated locales.</p>
+<p>.po files are the most important artifacts for translators. They provide
+the (human-readable!) mapping between the messages as they appear in the
+source code and how the messages will appear to users in translated
+locales.</p>
 <div id="singular-messages" class="section level4 hasAnchor" number="9.1.2.1">
 <h4><span class="header-section-number">9.1.2.1</span> Singular messages<a href="message-translations.html#singular-messages" class="anchor-section" aria-label="Anchor link to header"></a></h4>
-<p>Most messages appear as <code>msgid</code>/<code>msgstr</code> pairs. The former gives the message as it appears in the code, while the
-latter shows how it should appear in translation. For example, here is an error in German (locale: <code>de</code>) informing
-the user that their input must be of class <code>POSIXt</code></p>
+<p>Most messages appear as <code>msgid</code>/<code>msgstr</code> pairs. The former gives the
+message as it appears in the code, while the latter shows how it should
+appear in translation. For example, here is an error in German (locale:
+<code>de</code>) informing the user that their input must be of class <code>POSIXt</code></p>
 <pre><code>msgid &quot;&#39;to&#39; must be a \&quot;POSIXt\&quot; object&quot;
 msgstr &quot;&#39;to&#39; muss ein \&quot;POSIXt\&quot; Objekt sein&quot;</code></pre>
-<p>See this in context in the <a href="https://svn.r-project.org/R/trunk/src/library/base/po/R-de.po"><code>R-de.po</code> source file</a>.</p>
+<p>See this in context in the <a href="https://svn.r-project.org/R/trunk/src/library/base/po/R-de.po"><code>R-de.po</code> source
+file</a>.</p>
 <p>The same message can also be found in
 <a href="https://svn.r-project.org/R/trunk/src/library/base/po/R-it.po"><code>R-it.po</code></a>
 giving the translation to Italian:</p>
@@ -379,21 +408,28 @@ msgstr &quot;&#39;to&#39; dev&#39;essere un oggetto \&quot;POSIXt\&quot;&quot;</
 </div>
 <div id="plural-messages" class="section level4 hasAnchor" number="9.1.2.2">
 <h4><span class="header-section-number">9.1.2.2</span> Plural messages<a href="message-translations.html#plural-messages" class="anchor-section" aria-label="Anchor link to header"></a></h4>
-<p>Some messages will have different translations depending on some input determined at run time (e.g., the <code>length()</code> of
-an input object or the <code>nrow()</code> of a <code>data.frame</code>). This presents a challenge for translation, because different languages
-have different rules for how to pluralize different ordinal
-numbers[^See the <a href="https://www.gnu.org/software/gettext/manual/html_node/Plural-forms.html">relevant section</a> of the <code>gettext</code> manual].
-For example, English typically adds <code>s</code> to any quantity of items besides 1 (1 dog, 2 dog<code>s</code>, 100 dog<code>s</code>, even 0 dog<code>s</code>).
-Chinese typically does not alter the word itself in similar situations (一只狗, 两只狗, 一百只狗, 零只狗); Arabic has <em>six</em>
+<p>Some messages will have different translations depending on some input
+determined at run time (e.g., the <code>length()</code> of an input object or the
+<code>nrow()</code> of a <code>data.frame</code>). This presents a challenge for translation,
+because different languages have different rules for how to pluralize
+different ordinal numbers[^See the <a href="https://www.gnu.org/software/gettext/manual/html_node/Plural-forms.html">relevant
+section</a>
+of the <code>gettext</code> manual]. For example, English typically adds <code>s</code> to any
+quantity of items besides 1 (1 dog, 2 dog<code>s</code>, 100 dog<code>s</code>, even 0
+dog<code>s</code>). Chinese typically does not alter the word itself in similar
+situations (一只狗, 两只狗, 一百只狗, 零只狗); Arabic has <em>six</em>
 different ways to pluralize a quantity.</p>
-<p>In <code>.po</code> files, this shows up in the form of <code>msgid_plural</code> entries, followed by several ordered <code>msgstr</code> entries. Here’s an example from
+<p>In <code>.po</code> files, this shows up in the form of <code>msgid_plural</code> entries,
+followed by several ordered <code>msgstr</code> entries. Here’s an example from
 <a href="https://github.com/r-devel/r-svn/blob/c715d61cb74b3fee2d035faed9b258e86e420b75/src/library/base/po/R-de.po#L2015-L2018"><code>R-de.po</code></a><a href="#fn5" class="footnote-ref" id="fnref5"><sup>5</sup></a>:</p>
 <pre><code>msgid &quot;Warning message:\n&quot;
 msgid_plural &quot;Warning messages:\n&quot;
 msgstr[0] &quot;Warnmeldung:\n&quot;
 msgstr[1] &quot;Warnmeldungen:\n&quot;</code></pre>
-<p>The two entries in English correspond to the singular and plural messages; the two entries in German correspond similarly, because
-pluralization rules in German are similar to those in English. The situation in Lithuanian
+<p>The two entries in English correspond to the singular and plural
+messages; the two entries in German correspond similarly, because
+pluralization rules in German are similar to those in English. The
+situation in Lithuanian
 (<a href="https://github.com/r-devel/r-svn/blob/c715d61cb74b3fee2d035faed9b258e86e420b75/src/library/base/po/R-lt.po#L1999-L2003"><code>R-lt.po</code></a>)
 is more divergent:</p>
 <pre><code>msgid &quot;Warning message:\n&quot;
@@ -402,24 +438,34 @@ msgstr[0] &quot;Įspėjantis pranešimas:\n&quot;
 msgstr[1] &quot;Įspėjantys pranešimai:\n&quot;
 msgstr[2] &quot;Įspėjančių pranešimų:\n&quot;</code></pre>
 <p>This corresponds to the 3 different ways to pluralize words in Polish.</p>
-<p>What do <code>0</code>, <code>1</code>, and <code>2</code> correspond to, exactly? Ideally, this will be clear to native speakers of the language, but for
-clarity, it is the solution to a small arithmetic problem that can be found in the language’s metadata entry. Look for the
-<code>Plural-Forms</code> entry in the metadata at the top of the <code>.po</code> file;
-<a href="https://github.com/r-devel/r-svn/blob/c715d61cb74b3fee2d035faed9b258e86e420b75/src/library/base/po/R-lt.po#L18-L19">here it is for Lithuanian</a>:</p>
+<p>What do <code>0</code>, <code>1</code>, and <code>2</code> correspond to, exactly? Ideally, this will be
+clear to native speakers of the language, but for clarity, it is the
+solution to a small arithmetic problem that can be found in the
+language’s metadata entry. Look for the <code>Plural-Forms</code> entry in the
+metadata at the top of the <code>.po</code> file; <a href="https://github.com/r-devel/r-svn/blob/c715d61cb74b3fee2d035faed9b258e86e420b75/src/library/base/po/R-lt.po#L18-L19">here it is for
+Lithuanian</a>:</p>
 <pre><code>&quot;Plural-Forms: nplurals=3; plural=(n%10==1 &amp;&amp; n%100!=11 ? 0 : n%10&gt;=2 &amp;&amp; (n&quot;
 &quot;%100&lt;10 || n%100&gt;=20) ? 1 : 2);\n&quot;</code></pre>
-<p><code>nplurals</code> tells us how many entries correspond to each <code>msgid_plural</code> for this language. <code>plural</code> tells us, for the
-quantity <code>n</code>, which entry to use. The arithmetic is C code; most important if you really want to parse this and are only
-familiar with R code is C’s <a href="https://en.wikipedia.org/wiki/%3F:">ternary operator</a>: <code>test ? valueIfTrue : valueIfFalse</code>
-is a handy way to write R’s <code>if (test) valueIfTrue else valueIfFalse</code>.</p>
+<p><code>nplurals</code> tells us how many entries correspond to each <code>msgid_plural</code>
+for this language. <code>plural</code> tells us, for the quantity <code>n</code>, which entry
+to use. The arithmetic is C code; most important if you really want to
+parse this and are only familiar with R code is C’s <a href="https://en.wikipedia.org/wiki/%3F:">ternary
+operator</a>:
+<code>test ? valueIfTrue : valueIfFalse</code> is a handy way to write R’s
+<code>if (test) valueIfTrue else valueIfFalse</code>.</p>
 <p>Parsing, we get the following associations:</p>
 <ul>
-<li>the <code>0</code> entry corresponds to when a number equals 1 modulo 10 (i.e., 1, 11, 21, 31, …) <em>except</em> numbers equaling
-11 modulo 100 (i.e., 11, 111, 211, 311, …). Combining, that’s 1, 21, 31, …, 91, 101, 121, 131, …, 191, …</li>
-<li>the <code>1</code> entry corresponds to numbers at least 2 modulo 10 (2, 3, …, 8, 9, 12, 13, 14, …) and <em>either</em>
-below 10 modulo 100 (0, 1, …, 9, 100, 101, …, 109, …) <em>or</em> exceeding 20 modulo 100 (21, 22, …, 99). Combining,
-that’s 2, 3, …, 9, 22, 23, …, 29, 32, 33, … 39, …, 102, 103, …, 109, 122, 123, …</li>
-<li>The <code>2</code> entry corresponds to all other numbers, i.e. 0, 10, 11, 12, …, 19, 20, 30, …, 90, 100, 110, 111, 112, …</li>
+<li>the <code>0</code> entry corresponds to when a number equals 1 modulo 10 (i.e.,
+1, 11, 21, 31, …) <em>except</em> numbers equaling 11 modulo 100 (i.e.,
+11, 111, 211, 311, …). Combining, that’s 1, 21, 31, …, 91, 101,
+121, 131, …, 191, …</li>
+<li>the <code>1</code> entry corresponds to numbers at least 2 modulo 10 (2, 3,
+…, 8, 9, 12, 13, 14, …) and <em>either</em> below 10 modulo 100 (0, 1,
+…, 9, 100, 101, …, 109, …) <em>or</em> exceeding 20 modulo 100 (21,
+22, …, 99). Combining, that’s 2, 3, …, 9, 22, 23, …, 29, 32,
+33, … 39, …, 102, 103, …, 109, 122, 123, …</li>
+<li>The <code>2</code> entry corresponds to all other numbers, i.e. 0, 10, 11, 12,
+…, 19, 20, 30, …, 90, 100, 110, 111, 112, …</li>
 </ul>
 <!-- TODO(michaelchirico): How to discover a new `nplurals/plural`. -->
 <!-- TODO(michaelchirico): sprintf templates (`%s`) and redirections (`%1$s`) -->
@@ -428,15 +474,97 @@ that’s 2, 3, …, 9, 22, 23, …, 29, 32, 33, … 39, …, 102, 103, …, 109,
 </div>
 <div id="mo-files" class="section level3 hasAnchor" number="9.1.3">
 <h3><span class="header-section-number">9.1.3</span> <code>.mo</code> files<a href="message-translations.html#mo-files" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p><code>.po</code> files are plain text, but while helpful for human readers, this is inefficient for consumption by computers.
-The .mo format is a “compiled” version of the .po file optimized for retrieving messages when R is running.</p>
-<p>In R-devel, the conversion from .po to .mo is done by R Core – you don’t need to compile these files yourself.
-They are stored in the R sources at <code>./src/library/translations/inst</code> in various language-specific subdirectories.</p>
+<p><code>.po</code> files are plain text, but while helpful for human readers, this is
+inefficient for consumption by computers. The .mo format is a “compiled”
+version of the .po file optimized for retrieving messages when R is
+running.</p>
+<p>In R-devel, the conversion from .po to .mo is done by R Core – you
+don’t need to compile these files yourself. They are stored in the R
+sources at <code>./src/library/translations/inst</code> in various
+language-specific subdirectories.</p>
 </div>
 </div>
 <div id="how-to-contribute-new-translations" class="section level2 hasAnchor" number="9.2">
 <h2><span class="header-section-number">9.2</span> How to contribute new translations<a href="message-translations.html#how-to-contribute-new-translations" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <!-- TODO(michaelchirico): Creating and editing .po files, testing the translations worked, **encoding**, translation teams, release schedule -->
+<p>Translating R into different languages helps make it more user-friendly
+for non-English speakers and helps to grow the R community. See the blog
+post on how <a href="https://blog.r-project.org/2022/07/25/r-can-use-your-help-translating-r-messages">R can use your help: Translating R
+messages</a>.</p>
+<p>To get started contributing to translations, please follow the steps
+below:</p>
+<p><strong>Step 1: Register an Account at Weblate</strong></p>
+<p>Weblate is an open-source platform for collaborative translation of
+software projects. Register an account on R’s Weblate server,
+<a href="https://translate.rx.studio/" class="uri">https://translate.rx.studio/</a>, to start contributing.</p>
+<blockquote>
+<p><em>Note: To get started follow the detailed workflow and convention for
+translation which is given here:
+<a href="https://github.com/r-devel/translations/wiki/Conventions-for-translations" class="uri">https://github.com/r-devel/translations/wiki/Conventions-for-translations</a></em></p>
+</blockquote>
+<p><strong>Step 2: Choose a Component and Language</strong></p>
+<p>Select a component of R with less than 100% translation. Each component
+corresponds to the messages in either the R code or the C code of one of
+the packages in base R, e.g. base (R files), or tools (C files). There
+is one special case: base (R GUI), which corresponds to the messages in
+the Windows Graphical User Interface.</p>
+<p>After selecting a component, you can select your preferred language.</p>
+<p><img src="img/translate_component.png" /></p>
+<!-- **Step 3: Check String Status** -->
+<!-- Click on "Unfinished strings" to see the strings of messages that need -->
+<!-- translation. All translated strings appears as Strings waiting for -->
+<!-- review. For more information, please visit our Weblate FAQs information -->
+<!-- given here: https://github.com/r-devel/translations/wiki/Weblate-FAQ -->
+<!-- ![](img/unfinished_strings_translate.png) -->
+<p><strong>Step 3: Translate the Message</strong></p>
+<p>Now, you can click on Translate button on your right.</p>
+<blockquote>
+<p>Note: More information for String status visit:
+<a href="https://docs.weblate.org/en/latest/workflows.html#translation-states" class="uri">https://docs.weblate.org/en/latest/workflows.html#translation-states</a></p>
+</blockquote>
+<p><img src="img/translate_button.png" /></p>
+<p>Then, start translating the message by typing the translation in the
+text box.</p>
+<p><img src="img/translate_string_and_save.png" /></p>
+<ul>
+<li><p>If you are <strong>confident</strong> that the <strong>translation is correct</strong>, make
+sure the “Needs editing” box is <strong>unchecked</strong>.</p></li>
+<li><p>If you are <strong>unsure</strong> about how to translate, write the translation
+as a <strong>Suggest</strong> button instead.</p></li>
+<li><p>Finally, Click <strong>“Save and Continue”</strong> to save the translation and
+continue.</p></li>
+</ul>
+<hr />
+<blockquote>
+<p><strong>Note:</strong> Use Glossary feature within Weblate making translation easy
+and consistent:
+<a href="https://translate.rx.studio/projects/r-project/glossary/" class="uri">https://translate.rx.studio/projects/r-project/glossary/</a></p>
+</blockquote>
+<blockquote>
+<p><strong>Note:</strong> Make sure to use Automatic Suggestions as a starting point.</p>
+</blockquote>
+<ol style="list-style-type: decimal">
+<li><p>Click on Automatic Suggestions (machine translation)</p></li>
+<li><p>Accept it if you think the automatic suggestion looks good</p></li>
+</ol>
+<p><img src="img/auto-suggestion.png" /></p>
+<hr />
+<p><strong>Some Tips to follow:</strong></p>
+<ul>
+<li><p><strong>Be consistent:</strong> Use the same words and phrases throughout the
+translation to make it consistent and avoid confusion.</p></li>
+<li><p><strong>Check for technical issues:</strong> After finishing the translation,
+check if you have any alerts or warning in the Weblate string
+status, e.g. double instead of single space.</p></li>
+<li><p><strong>Follow language specific guidelines:</strong> Check how other languages
+have translated the string. Even if you are not fluent in another
+language it can give you an idea of how other translators have
+handled it, especially which parts are left verbatim. A detailed
+guide is given here :
+<a href="https://github.com/r-devel/translations/wiki/Conventions-for-translations#languages-and-contributions" class="uri">Conventions-for-translations#languages-and-contributions</a></p></li>
+</ul>
+<p>Related links:
+<a href="https://contributor.r-project.org/translating-r-to-your-language/" class="uri">https://contributor.r-project.org/translating-r-to-your-language/</a></p>
 </div>
 <div id="current-status-of-translations-in-r" class="section level2 hasAnchor" number="9.3">
 <h2><span class="header-section-number">9.3</span> Current status of translations in R<a href="message-translations.html#current-status-of-translations-in-r" class="anchor-section" aria-label="Anchor link to header"></a></h2>
@@ -453,7 +581,9 @@ They are stored in the R sources at <code>./src/library/translations/inst</code>
 <div class="footnotes">
 <hr />
 <ol start="5">
-<li id="fn5"><p>The GitHub mirror of the <a href="https://svn.r-project.org/R/trunk/">actual svn repo</a> is linked in this chapter as it is a better interface for browsing the source files.<a href="message-translations.html#fnref5" class="footnote-back">↩︎</a></p></li>
+<li id="fn5"><p>The GitHub mirror of the <a href="https://svn.r-project.org/R/trunk/">actual svn
+repo</a> is linked in this chapter
+as it is a better interface for browsing the source files.<a href="message-translations.html#fnref5" class="footnote-back">↩︎</a></p></li>
 </ol>
 </div>
             </section>
