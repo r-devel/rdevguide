@@ -276,9 +276,8 @@ text box.
 -   If you are **confident** that the **translation is correct**, make
     sure the "Needs editing" box is **unchecked**.
 
--   If you are **unsure**, leave the "Needs editing" box checked. This
-    marks the translation as "fuzzy" and although it may be added to the
-    R source files, the translation will **not** be used.
+-   If you are **unsure** about how to translate, write the translation
+    as a **Suggest** button instead.
 
 -   Finally, Click **"Save and Continue"** to save the translation and
     continue.
