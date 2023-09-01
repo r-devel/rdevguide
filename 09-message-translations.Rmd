@@ -250,8 +250,11 @@ After selecting a component, you can select your preferred language.
 <!-- **Step 3: Check String Status** -->
 
 <!-- Click on "Unfinished strings" to see the strings of messages that need -->
+
 <!-- translation. All translated strings appears as Strings waiting for -->
+
 <!-- review. For more information, please visit our Weblate FAQs information -->
+
 <!-- given here: https://github.com/r-devel/translations/wiki/Weblate-FAQ -->
 
 <!-- ![](img/unfinished_strings_translate.png) -->
@@ -260,12 +263,13 @@ After selecting a component, you can select your preferred language.
 
 Now, you can click on Translate button on your right.
 
+> Note: More information for String status visit:
+> <https://docs.weblate.org/en/latest/workflows.html#translation-states>
 
 ![](img/translate_button.png)
 
-
-
-Then, start translating the message by typing the translation in the text box.
+Then, start translating the message by typing the translation in the
+text box.
 
 ![](img/translate_string_and_save.png)
 
