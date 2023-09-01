@@ -385,13 +385,13 @@ c(xm, mean(x, trim = 0.10))
 </ol>
 <p>All the above information is included in a <code>.Rd</code> file within a series of sections with standard names (user-defined sections are also allowed). These sections are discussed below:</p>
 <ol style="list-style-type: decimal">
-<li><p><code>\title</code> section:</p>
+<li><code>\title</code> section:
 <ul>
 <li>Capitalize each word.</li>
 <li>Do not end in a period.</li>
 <li>Avoid use of markup language (because markup language need not be suitable for various hypertext search systems).</li>
 </ul></li>
-<li><p><code>\usage</code> and <code>\examples</code> sections:</p>
+<li><code>\usage</code> and <code>\examples</code> sections:
 <ul>
 <li>Line length of 65 characters is advised.</li>
 <li>Use <code>TRUE</code> instead of <code>T</code> and <code>FALSE</code> instead of <code>F</code>.</li>
@@ -406,8 +406,7 @@ c(xm, mean(x, trim = 0.10))
 <li>The examples should not require special facilities (for instance, Internet access or write permission to specific directories).</li>
 <li>Examples should also not take longer than necessary to run, as they are run when checking a build of R.</li>
 </ul></li>
-<li><p><code>\synopsis</code> section: The <code>\usage</code> section can have the function definition, or the actual definition can be included in the <code>\synopsis</code> section. The full documentation for <a href="https://cran.r-project.org/doc/manuals/r-release/R-exts.html#Documenting-functions"><code>\usage</code></a> says that the usage information specified should match the function definition exactly. Apparently, <code>\synopsis</code> was removed in <a href="https://github.com/r-devel/r-svn/blob/0d65935f30dcaccfeee1dd61991bf4b1444873bc/src/library/tools/R/RdConv2.R#L918-L919">R 3.1.0</a>, but it is still mentioned in <a href="https://developer.r-project.org/Rds.html">Rds</a>.</p></li>
-<li><p><code>\source</code> and <code>\references</code> sections:</p>
+<li><code>\source</code> and <code>\references</code> sections:
 <ul>
 <li>Author(s) names should be written in the form <code>Author, A. B.</code>.</li>
 <li>Author(s) names should be separated by a comma or <code>and</code> (but not both).</li>

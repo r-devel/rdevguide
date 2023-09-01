@@ -1369,6 +1369,7 @@ All the above information is included in a \texttt{.Rd} file within a series of 
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
+\tightlist
 \item
   \texttt{\textbackslash{}title} section:
 
@@ -1411,8 +1412,6 @@ All the above information is included in a \texttt{.Rd} file within a series of 
   \item
     Examples should also not take longer than necessary to run, as they are run when checking a build of R.
   \end{itemize}
-\item
-  \texttt{\textbackslash{}synopsis} section: The \texttt{\textbackslash{}usage} section can have the function definition, or the actual definition can be included in the \texttt{\textbackslash{}synopsis} section. The full documentation for \href{https://cran.r-project.org/doc/manuals/r-release/R-exts.html\#Documenting-functions}{\texttt{\textbackslash{}usage}} says that the usage information specified should match the function definition exactly. Apparently, \texttt{\textbackslash{}synopsis} was removed in \href{https://github.com/r-devel/r-svn/blob/0d65935f30dcaccfeee1dd61991bf4b1444873bc/src/library/tools/R/RdConv2.R\#L918-L919}{R 3.1.0}, but it is still mentioned in \href{https://developer.r-project.org/Rds.html}{Rds}.
 \item
   \texttt{\textbackslash{}source} and \texttt{\textbackslash{}references} sections:
 
