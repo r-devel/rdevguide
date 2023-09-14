@@ -315,7 +315,7 @@ text box.
     [Conventions-for-translations#languages-and-contributions](https://github.com/r-devel/translations/wiki/Conventions-for-translations#languages-and-contributions){.uri}
 
 Related links:
-<https://contributor.r-project.org/translating-r-to-your-language/>
+<https://contributor.r-project.org/tutorials/translating-r-to-your-language/>
 
 ## Current status of translations in R
 
