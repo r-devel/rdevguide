@@ -233,7 +233,7 @@ software projects. Register an account on R's Weblate server,
 
 > *Note: To get started follow the detailed workflow and convention for
 > translation which is given here:
-> <https://github.com/r-devel/translations/wiki/Conventions-for-translations>*
+> <https://contributor.r-project.org/translations/>*
 
 **Step 2: Choose a Component and Language**
 
@@ -312,14 +312,14 @@ text box.
     language it can give you an idea of how other translators have
     handled it, especially which parts are left verbatim. A detailed
     guide is given here :
-    [Conventions-for-translations#languages-and-contributions](https://github.com/r-devel/translations/wiki/Conventions-for-translations#languages-and-contributions){.uri}
+    [Conventions-for-translations#languages-and-contributions](https://contributor.r-project.org/translations/Conventions_for_Languages/#languages-and-contributions){.uri}
 
 Related links:
 <https://contributor.r-project.org/tutorials/translating-r-to-your-language/>
 
 ## Current status of translations in R
 
-<https://contributor.r-project.org/translations/>
+<https://contributor.r-project.org/translations-dashboard/>
 
 ## Helpful references
 
