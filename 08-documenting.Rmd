@@ -6,9 +6,9 @@ The involvement of the community takes many forms, from contributing content, to
 
 This chapter is about the ways people can contribute to R's documentation, with guidance on how to do that. Any time you feel that you can clarify or fill gaps in existing documentation, your contribution is welcome and appreciated. If you find it difficult to deal with the markup used in the source files, you can ask for help with that part too. Please do not let the material in this chapter stand between the documentation and your desire to help out. However, not every good faith effort to change or extend the documentation will be accepted - sometimes the suggested changes may be incorrect; other times, while a change in wording may make some things clearer and easier to understand, the finer details of some corner case may become less clear, leading to the suggested changes being declined or modified by a member of R Core before applying them (if they agree the issue is important enough to fix).
 
-## Guidelines for writing R help files
+## Introduction to `.Rd` files
 
-The help files for R functions are written in 'R documentation' (`.Rd`) file format. It is a simple markup language with close resemblance to LaTeX. The `.Rd` file format can be further processed into a variety of formats, including LaTeX, HTML, and plain text. The `.Rd` files can be found in the `man` directory of the sources for the corresponding base package. For example, consider the [mean.Rd](https://svn.r-project.org/R/trunk/src/library/base/man/mean.Rd) file. 
+The R help files are written in “R documentation” (Rd) format, a markup language which resembles LaTeX. The `.Rd` file format can be further processed into a variety of formats, including LaTeX, HTML, and plain text. An example of the `.Rd` format is available for [mean`.Rd`](https://svn.r-project.org/R/trunk/src/library/base/man/mean`.Rd`). These are intended for writing the core documentations but may also be useful for package writers.
 
 ```
 % File src/library/base/man/mean.Rd
@@ -69,9 +69,11 @@ c(xm, mean(x, trim = 0.10))
 \keyword{univar}
 ```
 
-Many authors of contributed R packages use the [roxygen2](https://cran.r-project.org/package=roxygen2) package to write documentation, which generates `.Rd` files from comments in the package `.R` files. However, the help files in the base distribution are maintained by directly editing the `.Rd` files.
+Note: Many R package authors use the R package [roxygen2](https://cran.r-project.org/web/packages/roxygen2/index.html) to write documentation (which eventually creates the `.Rd` files), however, in this guide we focus on `.Rd` files only because the manual pages for the base distribution are written directly as `.Rd` files.
 
-This section gives an overview of the `.Rd` format and summarises the [guidelines for writing the R help files](https://developer.r-project.org/Rds.html). The guidelines are intended for contributors to base R, but may also be useful for authors of contributed packages. Full documentation on writing R documentation files can be found in the [Writing R Extensions](https://cran.r-project.org/doc/manuals/r-release/R-exts.html#Writing-R-documentation-files) manual.
+## Guidelines for writing R help files
+
+This section summarises the [recommended style for writing the R help files](https://developer.r-project.org/Rds.html). Extensive details of writing R documentation files can be found in the [Writing R Extensions](https://cran.r-project.org/doc/manuals/r-release/R-exts.html#Writing-R-documentation-files) manual.
 
 There are three main parts of an `.Rd` file:
 
