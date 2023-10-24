@@ -10,9 +10,10 @@ biblio-style: apalike
 link-citations: yes
 github-repo: r-devel/rdevguide
 url: https://contributor.r-project.org/rdevguide
-cover-image: "img/Rlogo.png"
+cover-image: "img/cover_page.png"
 favicon: "img/Rlogo.svg"
-description: "A guide to R development."
+description: "
+This guide is a comprehensive resource for contributing to base R for both new and experienced contributors."
 ---
 
 # {-}
