@@ -69,7 +69,7 @@ c(xm, mean(x, trim = 0.10))
 \keyword{univar}
 ```
 
-Note: Many R package authors use the R package [roxygen2](https://cran.r-project.org/web/packages/roxygen2/index.html) to write documentation (which eventually creates the `.Rd` files), however, in this guide we focus on `.Rd` files only because the manual pages for the base distribution are written directly as `.Rd` files.
+Many R package developers write help files using the R package [roxygen2](https://cran.r-project.org/package=roxygen2), which generates `.Rd` files from comments in the corresponding `.R` files. However, in this guide we only consider `.Rd` files, because the help files for the base distribution are written and edited directly in `.Rd` format.
 
 ## Guidelines for writing R help files
 
