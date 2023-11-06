@@ -8,7 +8,7 @@ This chapter is about the ways people can contribute to R's documentation, with 
 
 ## Introduction to `.Rd` files
 
-The R help files are written in “R documentation” (Rd) format, a markup language which resembles LaTeX. The `.Rd` file format can be further processed into a variety of formats, including LaTeX, HTML, and plain text. An example of the `.Rd` format is available for [mean`.Rd`](https://svn.r-project.org/R/trunk/src/library/base/man/mean`.Rd`). These are intended for writing the core documentations but may also be useful for package writers.
+The R help files are written in “R documentation” (Rd) format, a markup language which resembles LaTeX. The `.Rd` file format can be further processed into a variety of formats, including LaTeX, HTML, and plain text. The `.Rd` files can be found in the `man` directory of the source code for the corresponding package. For example, the help file for `base::mean()` is found at <https://svn.r-project.org/R/trunk/src/library/base/man/mean.Rd>. The file`mean.Rd` has the content shown below:
 
 ```
 % File src/library/base/man/mean.Rd
