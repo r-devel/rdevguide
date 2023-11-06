@@ -127,8 +127,6 @@ The language used in the documentations should follow these basic rules:
 
 5. The tone of the documentation needs to be respectful of the reader’s background. Lay out the relevant information, show motivating use cases, provide glossary links, and do your best to connect-the-dots. The documentation is meant for newcomers, many of whom will be using it to evaluate the R language as a whole. The experience needs to be positive and not leave the reader with worries that something bad will happen if they make a mistake. 
 
-Extensive details of writing R documentation files can be found [here](https://cran.r-project.org/doc/manuals/r-release/R-exts.html#Writing-R-documentation-files).
-
 ## R manuals
 
 The [R manuals](https://cran.r-project.org/manuals.html) are a part of the [R sources](https://svn.r-project.org/R/trunk/doc/manual/). Hence, bug reports/patches can also be submitted via Bugzilla, e.g. [Bug 15221 - R-admin/'Installing R under Windows': Missing argument name](https://bugs.r-project.org/bugzilla/show_bug.cgi?id=15221). Note that they are typically referred to by their file names as listed below:
