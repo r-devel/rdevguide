@@ -23,7 +23,7 @@
 <meta name="author" content="R Contribution Working Group" />
 
 
-<meta name="date" content="2023-10-24" />
+<meta name="date" content="2023-11-06" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -239,13 +239,14 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="8" data-path="Doc.html"><a href="Doc.html"><i class="fa fa-check"></i><b>8</b> Documenting</a>
 <ul>
-<li class="chapter" data-level="8.1" data-path="Doc.html"><a href="Doc.html#guidelines-for-writing-r-help-files"><i class="fa fa-check"></i><b>8.1</b> Guidelines for writing R help files</a></li>
-<li class="chapter" data-level="8.2" data-path="Doc.html"><a href="Doc.html#r-manuals"><i class="fa fa-check"></i><b>8.2</b> R manuals</a></li>
-<li class="chapter" data-level="8.3" data-path="Doc.html"><a href="Doc.html#helping-with-documentation"><i class="fa fa-check"></i><b>8.3</b> Helping with documentation</a></li>
-<li class="chapter" data-level="8.4" data-path="Doc.html"><a href="Doc.html#proofreading"><i class="fa fa-check"></i><b>8.4</b> Proofreading</a></li>
-<li class="chapter" data-level="8.5" data-path="Doc.html"><a href="Doc.html#helping-with-the-developers-guide"><i class="fa fa-check"></i><b>8.5</b> Helping with the Developer’s Guide</a></li>
-<li class="chapter" data-level="8.6" data-path="Doc.html"><a href="Doc.html#reporting-documentation-bugs"><i class="fa fa-check"></i><b>8.6</b> Reporting documentation bugs</a></li>
-<li class="chapter" data-level="8.7" data-path="Doc.html"><a href="Doc.html#see-also-5"><i class="fa fa-check"></i><b>8.7</b> See also</a></li>
+<li class="chapter" data-level="8.1" data-path="Doc.html"><a href="Doc.html#introduction-to-.rd-files"><i class="fa fa-check"></i><b>8.1</b> Introduction to <code>.Rd</code> files</a></li>
+<li class="chapter" data-level="8.2" data-path="Doc.html"><a href="Doc.html#guidelines-for-writing-r-help-files"><i class="fa fa-check"></i><b>8.2</b> Guidelines for writing R help files</a></li>
+<li class="chapter" data-level="8.3" data-path="Doc.html"><a href="Doc.html#r-manuals"><i class="fa fa-check"></i><b>8.3</b> R manuals</a></li>
+<li class="chapter" data-level="8.4" data-path="Doc.html"><a href="Doc.html#helping-with-documentation"><i class="fa fa-check"></i><b>8.4</b> Helping with documentation</a></li>
+<li class="chapter" data-level="8.5" data-path="Doc.html"><a href="Doc.html#proofreading"><i class="fa fa-check"></i><b>8.5</b> Proofreading</a></li>
+<li class="chapter" data-level="8.6" data-path="Doc.html"><a href="Doc.html#helping-with-the-developers-guide"><i class="fa fa-check"></i><b>8.6</b> Helping with the Developer’s Guide</a></li>
+<li class="chapter" data-level="8.7" data-path="Doc.html"><a href="Doc.html#reporting-documentation-bugs"><i class="fa fa-check"></i><b>8.7</b> Reporting documentation bugs</a></li>
+<li class="chapter" data-level="8.8" data-path="Doc.html"><a href="Doc.html#see-also-5"><i class="fa fa-check"></i><b>8.8</b> See also</a></li>
 </ul></li>
 <li class="chapter" data-level="9" data-path="message-translations.html"><a href="message-translations.html"><i class="fa fa-check"></i><b>9</b> Message Translations</a>
 <ul>
@@ -316,9 +317,52 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>R has a substantial body of documentation, comprising help files for the core packages and a set of manuals aimed at users (An Introduction to R, R Data Import/Export), system administrators (R Installation and Administration) and developers (Writing R Extensions, The R language definition, and R Internals). This documentation was developed by the R Core Team with input from external contributors. The continuing involvement of the user community is important in maintaining this valuable documentation.</p>
 <p>The involvement of the community takes many forms, from contributing content, to making bug reports or raising an issue when the documentation could be more complete or made easier to follow.</p>
 <p>This chapter is about the ways people can contribute to R’s documentation, with guidance on how to do that. Any time you feel that you can clarify or fill gaps in existing documentation, your contribution is welcome and appreciated. If you find it difficult to deal with the markup used in the source files, you can ask for help with that part too. Please do not let the material in this chapter stand between the documentation and your desire to help out. However, not every good faith effort to change or extend the documentation will be accepted - sometimes the suggested changes may be incorrect; other times, while a change in wording may make some things clearer and easier to understand, the finer details of some corner case may become less clear, leading to the suggested changes being declined or modified by a member of R Core before applying them (if they agree the issue is important enough to fix).</p>
-<div id="guidelines-for-writing-r-help-files" class="section level2 hasAnchor" number="8.1">
-<h2><span class="header-section-number">8.1</span> Guidelines for writing R help files<a href="Doc.html#guidelines-for-writing-r-help-files" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>The help files for R functions are written in ‘R documentation’ (<code>.Rd</code>) file format. It is a simple markup language with close resemblance to LaTeX. The <code>.Rd</code> file format can be further processed into a variety of formats, including LaTeX, HTML, and plain text. The <code>.Rd</code> files can be found in the <code>man</code> directory of the sources for the corresponding base package. For example, consider the <a href="https://svn.r-project.org/R/trunk/src/library/base/man/mean.Rd">mean.Rd</a> file.</p>
+<div id="introduction-to-.rd-files" class="section level2 hasAnchor" number="8.1">
+<h2><span class="header-section-number">8.1</span> Introduction to <code>.Rd</code> files<a href="Doc.html#introduction-to-.rd-files" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>The R help files are written in “R documentation” (Rd) format, a markup language which resembles LaTeX. The <code>.Rd</code> file format can be further processed into a variety of formats, including LaTeX, HTML, and plain text. The <code>.Rd</code> files can be found in the <code>man</code> directory of the source code for the corresponding package.</p>
+<p>There are three main parts of an <code>.Rd</code> file:</p>
+<ol style="list-style-type: decimal">
+<li><p><strong>Header</strong>: This part is for the basic information of the document/file. For instance, the name of the file, the topics documented, a title, a short textual description, and R usage information for the objects documented.</p></li>
+<li><p><strong>Body</strong>: This part includes further information on the function’s arguments and return value.</p></li>
+<li><p><strong>Footer</strong>: This part is optional. Usually the keyword information is included here.</p></li>
+</ol>
+<p>All the above information is included in a <code>.Rd</code> file within a series of sections with standard names (user-defined sections are also allowed). These sections are discussed below:</p>
+<ol style="list-style-type: decimal">
+<li><code>\title</code> section:
+<ul>
+<li>Capitalize each word.</li>
+<li>Do not end in a period.</li>
+<li>Avoid use of markup language (because markup language need not be suitable for various hypertext search systems).</li>
+</ul></li>
+<li><code>\usage</code> and <code>\examples</code> sections:
+<ul>
+<li>Line length of 65 characters is advised.</li>
+<li>Use <code>TRUE</code> instead of <code>T</code> and <code>FALSE</code> instead of <code>F</code>.</li>
+<li>Add spaces around binary operators.</li>
+<li>Add spaces after commas in the argument lists.</li>
+<li>Use <code>&lt;-</code> rather than <code>=</code> for assignments.</li>
+<li>Add spaces around the <code>&lt;-</code> operator.</li>
+<li>Do not use tabs to indent (as these do not render correctly on all possible pagers).</li>
+<li>Use 4 spaces to indent the (example) code.</li>
+<li>Make sure the examples are directly executable.</li>
+<li>The examples should be system-independent.</li>
+<li>The examples should not require special facilities (for instance, Internet access or write permission to specific directories).</li>
+<li>Examples should also not take longer than necessary to run, as they are run when checking a build of R.</li>
+</ul></li>
+<li><code>\source</code> and <code>\references</code> sections:
+<ul>
+<li>Author(s) names should be written in the form <code>Author, A. B.</code>.</li>
+<li>Author(s) names should be separated by a comma or <code>and</code> (but not both).</li>
+<li>Separate paragraphs (separated by a blank line) should be used for each reference.</li>
+<li>Give a date immediately after the author(s) names.</li>
+<li>Do not put a period after the date.</li>
+<li>Titles of books and journals (not articles) should be enclosed in <code>\emph{...}</code>.</li>
+<li>Volume numbers for journals are to be enclosed in <code>\bold{...}</code> and followed by a comma.</li>
+<li>Use <code>--</code> for page ranges.</li>
+<li>For giving an address for a publisher use the format <code>New York: Springer-Verlag</code>.</li>
+</ul></li>
+</ol>
+<p>For example, the help file for <code>base::mean()</code> is found at <a href="https://svn.r-project.org/R/trunk/src/library/base/man/mean.Rd" class="uri">https://svn.r-project.org/R/trunk/src/library/base/man/mean.Rd</a>. The file<code>mean.Rd</code> has the content shown below:</p>
 <pre><code>% File src/library/base/man/mean.Rd
 % Part of the R package, https://www.R-project.org
 % Copyright 1995-2022 R Core Team
@@ -375,50 +419,11 @@ xm &lt;- mean(x)
 c(xm, mean(x, trim = 0.10))
 }
 \keyword{univar}</code></pre>
-<p>Many authors of contributed R packages use the <a href="https://cran.r-project.org/package=roxygen2">roxygen2</a> package to write documentation, which generates <code>.Rd</code> files from comments in the package <code>.R</code> files. However, the help files in the base distribution are maintained by directly editing the <code>.Rd</code> files.</p>
-<p>This section gives an overview of the <code>.Rd</code> format and summarises the <a href="https://developer.r-project.org/Rds.html">guidelines for writing the R help files</a>. The guidelines are intended for contributors to base R, but may also be useful for authors of contributed packages. Full documentation on writing R documentation files can be found in the <a href="https://cran.r-project.org/doc/manuals/r-release/R-exts.html#Writing-R-documentation-files">Writing R Extensions</a> manual.</p>
-<p>There are three main parts of an <code>.Rd</code> file:</p>
-<ol style="list-style-type: decimal">
-<li><p><strong>Header</strong>: This part is for the basic information of the document/file. For instance, the name of the file, the topics documented, a title, a short textual description, and R usage information for the objects documented.</p></li>
-<li><p><strong>Body</strong>: This part includes further information on the function’s arguments and return value.</p></li>
-<li><p><strong>Footer</strong>: This part is optional. Usually the keyword information is included here.</p></li>
-</ol>
-<p>All the above information is included in a <code>.Rd</code> file within a series of sections with standard names (user-defined sections are also allowed). These sections are discussed below:</p>
-<ol style="list-style-type: decimal">
-<li><code>\title</code> section:
-<ul>
-<li>Capitalize each word.</li>
-<li>Do not end in a period.</li>
-<li>Avoid use of markup language (because markup language need not be suitable for various hypertext search systems).</li>
-</ul></li>
-<li><code>\usage</code> and <code>\examples</code> sections:
-<ul>
-<li>Line length of 65 characters is advised.</li>
-<li>Use <code>TRUE</code> instead of <code>T</code> and <code>FALSE</code> instead of <code>F</code>.</li>
-<li>Add spaces around binary operators.</li>
-<li>Add spaces after commas in the argument lists.</li>
-<li>Use <code>&lt;-</code> rather than <code>=</code> for assignments.</li>
-<li>Add spaces around the <code>&lt;-</code> operator.</li>
-<li>Do not use tabs to indent (as these do not render correctly on all possible pagers).</li>
-<li>Use 4 spaces to indent the (example) code.</li>
-<li>Make sure the examples are directly executable.</li>
-<li>The examples should be system-independent.</li>
-<li>The examples should not require special facilities (for instance, Internet access or write permission to specific directories).</li>
-<li>Examples should also not take longer than necessary to run, as they are run when checking a build of R.</li>
-</ul></li>
-<li><code>\source</code> and <code>\references</code> sections:
-<ul>
-<li>Author(s) names should be written in the form <code>Author, A. B.</code>.</li>
-<li>Author(s) names should be separated by a comma or <code>and</code> (but not both).</li>
-<li>Separate paragraphs (separated by a blank line) should be used for each reference.</li>
-<li>Give a date immediately after the author(s) names.</li>
-<li>Do not put a period after the date.</li>
-<li>Titles of books and journals (not articles) should be enclosed in <code>\emph{...}</code>.</li>
-<li>Volume numbers for journals are to be enclosed in <code>\bold{...}</code> and followed by a comma.</li>
-<li>Use <code>--</code> for page ranges.</li>
-<li>For giving an address for a publisher use the format <code>New York: Springer-Verlag</code>.</li>
-</ul></li>
-</ol>
+<p>Many R package developers write help files using the R package <a href="https://cran.r-project.org/package=roxygen2">roxygen2</a>, which generates <code>.Rd</code> files from comments in the corresponding <code>.R</code> files. However, in this guide we only consider <code>.Rd</code> files, because the help files for the base distribution are written and edited directly in <code>.Rd</code> format.</p>
+</div>
+<div id="guidelines-for-writing-r-help-files" class="section level2 hasAnchor" number="8.2">
+<h2><span class="header-section-number">8.2</span> Guidelines for writing R help files<a href="Doc.html#guidelines-for-writing-r-help-files" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>This section is based on the <a href="https://developer.r-project.org/Rds.html">guidelines used by R Core developers for writing R help files</a>. Extensive details of writing R documentation files can be found in the <a href="https://cran.r-project.org/doc/manuals/r-release/R-exts.html#Writing-R-documentation-files">Writing R Extensions</a> manual.</p>
 <p>The language used in the documentations should follow these basic rules:</p>
 <ol style="list-style-type: decimal">
 <li><p>Affirmative tone should be used to describe what the function does and how to use it effectively. Rather than creating worry in the mind of a reader, it should establish confident knowledge about the effective use of the particular function/feature.</p></li>
@@ -427,10 +432,9 @@ c(xm, mean(x, trim = 0.10))
 <li><p>Giving a code equivalent (or approximate equivalent) can be a useful addition to the description provided. You should carefully weigh whether the code equivalent adds value to the document.</p></li>
 <li><p>The tone of the documentation needs to be respectful of the reader’s background. Lay out the relevant information, show motivating use cases, provide glossary links, and do your best to connect-the-dots. The documentation is meant for newcomers, many of whom will be using it to evaluate the R language as a whole. The experience needs to be positive and not leave the reader with worries that something bad will happen if they make a mistake.</p></li>
 </ol>
-<p>Extensive details of writing R documentation files can be found <a href="https://cran.r-project.org/doc/manuals/r-release/R-exts.html#Writing-R-documentation-files">here</a>.</p>
 </div>
-<div id="r-manuals" class="section level2 hasAnchor" number="8.2">
-<h2><span class="header-section-number">8.2</span> R manuals<a href="Doc.html#r-manuals" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="r-manuals" class="section level2 hasAnchor" number="8.3">
+<h2><span class="header-section-number">8.3</span> R manuals<a href="Doc.html#r-manuals" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>The <a href="https://cran.r-project.org/manuals.html">R manuals</a> are a part of the <a href="https://svn.r-project.org/R/trunk/doc/manual/">R sources</a>. Hence, bug reports/patches can also be submitted via Bugzilla, e.g. <a href="https://bugs.r-project.org/bugzilla/show_bug.cgi?id=15221">Bug 15221 - R-admin/‘Installing R under Windows’: Missing argument name</a>. Note that they are typically referred to by their file names as listed below:</p>
 <table>
 <thead>
@@ -473,26 +477,26 @@ c(xm, mean(x, trim = 0.10))
 <li>The <a href="https://www.gnu.org/software/texinfo/">Texinfo manual</a> should be referred to for <a href="https://www.gnu.org/software/texinfo/manual/texinfo/texinfo.html">how to mark up text</a>.</li>
 </ul>
 </div>
-<div id="helping-with-documentation" class="section level2 hasAnchor" number="8.3">
-<h2><span class="header-section-number">8.3</span> Helping with documentation<a href="Doc.html#helping-with-documentation" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="helping-with-documentation" class="section level2 hasAnchor" number="8.4">
+<h2><span class="header-section-number">8.4</span> Helping with documentation<a href="Doc.html#helping-with-documentation" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Maintaining the accuracy of R’s documentations and keeping a high level of quality takes a lot of effort. Community members, like you, help with writing, editing, and updating content, and these contributions are appreciated and welcomed.</p>
 <p>Looking at pre-existing documentation source files can be very helpful when getting started.</p>
 <p>You can directly search for <a href="https://bugs.r-project.org/buglist.cgi?component=Documentation&amp;list_id=22501&amp;product=R&amp;resolution=---">documentation issues/bugs on Bugzilla</a>. Issues vary from typos to unclear documentation and items lacking documentation.</p>
 <p>If you see a documentation issue that you would like to tackle, you can leave a comment on the issue saying you are going to try to solve the issue and mention roughly how long you think you will take to do so (this allows others to take on the issue if you happen to forget or lose interest).</p>
 <p>If you find some typo or problem on <a href="https://cran.r-project.org">CRAN</a> after checking the problem or typo you can write a polite email to <code>cran-sysadmin@r-project.org</code> and one of the R-core members working with CRAN. You’ll probably get a prompt reply about how the issue is going to be fixed.</p>
 </div>
-<div id="proofreading" class="section level2 hasAnchor" number="8.4">
-<h2><span class="header-section-number">8.4</span> Proofreading<a href="Doc.html#proofreading" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="proofreading" class="section level2 hasAnchor" number="8.5">
+<h2><span class="header-section-number">8.5</span> Proofreading<a href="Doc.html#proofreading" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>While an issue filed on Bugzilla means there is a known issue somewhere, that does not mean there are not other issues lurking about in the documentation. Proofreading a part of the documentation can often uncover problems.</p>
 <p>If you decide to proofread, read a section of the documentation from start to finish, filing issues in Bugzilla for each major type of problem you find. It is best to avoid filing a single issue for an entire section containing multiple problems; instead, file several issues so that it is easier to break the work up for multiple people and more efficient review.</p>
 </div>
-<div id="helping-with-the-developers-guide" class="section level2 hasAnchor" number="8.5">
-<h2><span class="header-section-number">8.5</span> Helping with the Developer’s Guide<a href="Doc.html#helping-with-the-developers-guide" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="helping-with-the-developers-guide" class="section level2 hasAnchor" number="8.6">
+<h2><span class="header-section-number">8.6</span> Helping with the Developer’s Guide<a href="Doc.html#helping-with-the-developers-guide" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>The Developer’s Guide (what you are reading now) uses the same process as the main R documentation, except for some small differences. The source lives in a <a href="https://github.com/r-devel/rdevguide/">GitHub repository</a> and bug reports should be submitted to the <a href="https://github.com/r-devel/rdevguide/issues">devguide GitHub tracker</a>.</p>
 <p>Our dev guide workflow uses continuous integration and deployment so changes to the dev guide are normally published when the pull request is merged. <a href="introduction.html#how-to-contribute-to-this-guide">How to contribute to this guide from the introduction.</a></p>
 </div>
-<div id="reporting-documentation-bugs" class="section level2 hasAnchor" number="8.6">
-<h2><span class="header-section-number">8.6</span> Reporting documentation bugs<a href="Doc.html#reporting-documentation-bugs" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="reporting-documentation-bugs" class="section level2 hasAnchor" number="8.7">
+<h2><span class="header-section-number">8.7</span> Reporting documentation bugs<a href="Doc.html#reporting-documentation-bugs" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p><!---
 discussion in slack (random channel)
 --></p>
@@ -502,8 +506,8 @@ discussion in slack (random channel)
 <p><strong>Note</strong>:</p>
 <p>There is a <code>#core-documentation</code> channel on the <a href="https://r-contributors.slack.com/">R Contributors slack</a> where you can discuss about the patches for improvements to R’s documentation.</p>
 </div>
-<div id="see-also-5" class="section level2 hasAnchor" number="8.7">
-<h2><span class="header-section-number">8.7</span> See also<a href="Doc.html#see-also-5" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="see-also-5" class="section level2 hasAnchor" number="8.8">
+<h2><span class="header-section-number">8.8</span> See also<a href="Doc.html#see-also-5" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <ol style="list-style-type: decimal">
 <li><a href="https://cran.r-project.org/doc/manuals/r-release/R-exts.html#Writing-R-documentation-files">Writing R documentation files</a></li>
 </ol>

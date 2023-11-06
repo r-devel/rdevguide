@@ -58,6 +58,7 @@ examples-of-patch-reports-on-bugzilla
 examples-of-reviewing-a-patch
 see-also-4
 Doc
+introduction-to-.rd-files
 guidelines-for-writing-r-help-files
 r-manuals
 helping-with-documentation
