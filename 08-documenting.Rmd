@@ -6,9 +6,51 @@ The involvement of the community takes many forms, from contributing content, to
 
 This chapter is about the ways people can contribute to R's documentation, with guidance on how to do that. Any time you feel that you can clarify or fill gaps in existing documentation, your contribution is welcome and appreciated. If you find it difficult to deal with the markup used in the source files, you can ask for help with that part too. Please do not let the material in this chapter stand between the documentation and your desire to help out. However, not every good faith effort to change or extend the documentation will be accepted - sometimes the suggested changes may be incorrect; other times, while a change in wording may make some things clearer and easier to understand, the finer details of some corner case may become less clear, leading to the suggested changes being declined or modified by a member of R Core before applying them (if they agree the issue is important enough to fix).
 
-## Guidelines for writing R help files
+## Introduction to `.Rd` files
 
-The help files for R functions are written in 'R documentation' (`.Rd`) file format. It is a simple markup language with close resemblance to LaTeX. The `.Rd` file format can be further processed into a variety of formats, including LaTeX, HTML, and plain text. The `.Rd` files can be found in the `man` directory of the sources for the corresponding base package. For example, consider the [mean.Rd](https://svn.r-project.org/R/trunk/src/library/base/man/mean.Rd) file. 
+The R help files are written in “R documentation” (Rd) format, a markup language which resembles LaTeX. The `.Rd` file format can be further processed into a variety of formats, including LaTeX, HTML, and plain text. The `.Rd` files can be found in the `man` directory of the source code for the corresponding package. 
+
+There are three main parts of an `.Rd` file:
+
+1. **Header**: This part is for the basic information of the document/file. For instance, the name of the file, the topics documented, a title, a short textual description, and R usage information for the objects documented.
+
+2. **Body**: This part includes further information on the function's arguments and return value.
+
+3. **Footer**: This part is optional. Usually the keyword information is included here.
+
+All the above information is included in a `.Rd` file within a series of sections with standard names (user-defined sections are also allowed). These sections are discussed below:
+
+1. `\title` section:
+    * Capitalize each word.
+    * Do not end in a period.
+    * Avoid use of markup language (because markup language need not be suitable for various hypertext search systems).
+    
+2. `\usage` and `\examples` sections:
+    * Line length of 65 characters is advised.
+    * Use `TRUE` instead of `T` and `FALSE` instead of `F`.
+    * Add spaces around binary operators.
+    * Add spaces after commas in the argument lists.
+    * Use `<-` rather than `=` for assignments.
+    * Add spaces around the `<-` operator.
+    * Do not use tabs to indent (as these do not render correctly on all possible pagers).
+    * Use 4 spaces to indent the (example) code.
+    * Make sure the examples are directly executable.
+    * The examples should be system-independent.
+    * The examples should not require special facilities (for instance, Internet access or write permission to specific directories).
+    * Examples should also not take longer than necessary to run, as they are run when checking a build of R.
+    
+3. `\source` and `\references` sections:
+    * Author(s) names should be written in the form `Author, A. B.`.
+    * Author(s) names should be separated by a comma or `and` (but not both).
+    * Separate paragraphs (separated by a blank line) should be used for each reference.
+    * Give a date immediately after the author(s) names.
+    * Do not put a period after the date.
+    * Titles of books and journals (not articles) should be enclosed in `\emph{...}`.
+    * Volume numbers for journals are to be enclosed in `\bold{...}` and followed by a comma.
+    * Use `--` for page ranges.
+    * For giving an address for a publisher use the format `New York: Springer-Verlag`.
+
+For example, the help file for `base::mean()` is found at <https://svn.r-project.org/R/trunk/src/library/base/man/mean.Rd>. The file`mean.Rd` has the content shown below:
 
 ```
 % File src/library/base/man/mean.Rd
@@ -69,49 +111,11 @@ c(xm, mean(x, trim = 0.10))
 \keyword{univar}
 ```
 
-Many authors of contributed R packages use the [roxygen2](https://cran.r-project.org/package=roxygen2) package to write documentation, which generates `.Rd` files from comments in the package `.R` files. However, the help files in the base distribution are maintained by directly editing the `.Rd` files.
+Many R package developers write help files using the R package [roxygen2](https://cran.r-project.org/package=roxygen2), which generates `.Rd` files from comments in the corresponding `.R` files. However, in this guide we only consider `.Rd` files, because the help files for the base distribution are written and edited directly in `.Rd` format.
 
-This section gives an overview of the `.Rd` format and summarises the [guidelines for writing the R help files](https://developer.r-project.org/Rds.html). The guidelines are intended for contributors to base R, but may also be useful for authors of contributed packages. Full documentation on writing R documentation files can be found in the [Writing R Extensions](https://cran.r-project.org/doc/manuals/r-release/R-exts.html#Writing-R-documentation-files) manual.
+## Guidelines for writing R help files
 
-There are three main parts of an `.Rd` file:
-
-1. **Header**: This part is for the basic information of the document/file. For instance, the name of the file, the topics documented, a title, a short textual description, and R usage information for the objects documented.
-
-2. **Body**: This part includes further information on the function's arguments and return value.
-
-3. **Footer**: This part is optional. Usually the keyword information is included here.
-
-All the above information is included in a `.Rd` file within a series of sections with standard names (user-defined sections are also allowed). These sections are discussed below:
-
-1. `\title` section:
-    * Capitalize each word.
-    * Do not end in a period.
-    * Avoid use of markup language (because markup language need not be suitable for various hypertext search systems).
-    
-2. `\usage` and `\examples` sections:
-    * Line length of 65 characters is advised.
-    * Use `TRUE` instead of `T` and `FALSE` instead of `F`.
-    * Add spaces around binary operators.
-    * Add spaces after commas in the argument lists.
-    * Use `<-` rather than `=` for assignments.
-    * Add spaces around the `<-` operator.
-    * Do not use tabs to indent (as these do not render correctly on all possible pagers).
-    * Use 4 spaces to indent the (example) code.
-    * Make sure the examples are directly executable.
-    * The examples should be system-independent.
-    * The examples should not require special facilities (for instance, Internet access or write permission to specific directories).
-    * Examples should also not take longer than necessary to run, as they are run when checking a build of R.
-    
-3. `\source` and `\references` sections:
-    * Author(s) names should be written in the form `Author, A. B.`.
-    * Author(s) names should be separated by a comma or `and` (but not both).
-    * Separate paragraphs (separated by a blank line) should be used for each reference.
-    * Give a date immediately after the author(s) names.
-    * Do not put a period after the date.
-    * Titles of books and journals (not articles) should be enclosed in `\emph{...}`.
-    * Volume numbers for journals are to be enclosed in `\bold{...}` and followed by a comma.
-    * Use `--` for page ranges.
-    * For giving an address for a publisher use the format `New York: Springer-Verlag`.
+This section is based on the [guidelines used by R Core developers for writing R help files](https://developer.r-project.org/Rds.html). Extensive details of writing R documentation files can be found in the [Writing R Extensions](https://cran.r-project.org/doc/manuals/r-release/R-exts.html#Writing-R-documentation-files) manual.
 
 The language used in the documentations should follow these basic rules:
 
@@ -124,8 +128,6 @@ The language used in the documentations should follow these basic rules:
 4. Giving a code equivalent (or approximate equivalent) can be a useful addition to the description provided. You should carefully weigh whether the code equivalent adds value to the document.
 
 5. The tone of the documentation needs to be respectful of the reader’s background. Lay out the relevant information, show motivating use cases, provide glossary links, and do your best to connect-the-dots. The documentation is meant for newcomers, many of whom will be using it to evaluate the R language as a whole. The experience needs to be positive and not leave the reader with worries that something bad will happen if they make a mistake. 
-
-Extensive details of writing R documentation files can be found [here](https://cran.r-project.org/doc/manuals/r-release/R-exts.html#Writing-R-documentation-files).
 
 ## R manuals
 
