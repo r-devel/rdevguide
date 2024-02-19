@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Chapter 7 Lifecycle of a Patch | R Development Guide</title>
   <meta name="description" content="This guide is a comprehensive resource for contributing to base R for both new and experienced contributors." />
-  <meta name="generator" content="bookdown 0.36 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.37 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Chapter 7 Lifecycle of a Patch | R Development Guide" />
   <meta property="og:type" content="book" />
@@ -23,7 +23,7 @@
 <meta name="author" content="R Contribution Working Group" />
 
 
-<meta name="date" content="2023-11-06" />
+<meta name="date" content="2024-02-19" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -343,9 +343,10 @@ The different steps required can be found in previous chapters of the book, for 
 <div class="sourceCode" id="cb34"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb34-1"><a href="FixBug.html#cb34-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> <span class="st">&quot;</span><span class="va">$TOP_SRCDIR</span><span class="st">&quot;</span></span>
 <span id="cb34-2"><a href="FixBug.html#cb34-2" aria-hidden="true" tabindex="-1"></a><span class="fu">make</span> check-devel</span></code></pre></div>
 <p>If there is no test for your proposed change you can add a new regression test, following <a href="#TestR">the guidelines</a>.</p>
-<p>Then you should bring changes from the repository into the working copy, in case any other change has been introduced, and create a path.diff file with just the changes you want to propose to the R core:</p>
+<p>Then you should bring changes from the repository into the working copy, in case any other change has been introduced, and create a patch.diff file with just the changes you want to propose to the R core:</p>
 <div class="sourceCode" id="cb35"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb35-1"><a href="FixBug.html#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="fu">svn</span> update</span>
 <span id="cb35-2"><a href="FixBug.html#cb35-2" aria-hidden="true" tabindex="-1"></a><span class="fu">svn</span> diff <span class="op">&gt;</span> patch.diff</span></code></pre></div>
+<p>Most often, changes are made to existing files, but if you happen to be adding a new file in your change, you’ll need to run <code>svn add path/to/file1 ...</code> before running <code>svn diff</code> to mark those files for inclusion.</p>
 <p>This <code>patch.diff</code> file is the one that can be proposed to the R core via <a href="FixBug.html#SubmitPatches">Bugzilla</a>. You can also <a href="FixBug.html#PatchesReview">ask for reviews</a> to the patch before proposing it to the R core via the <a href="https://stat.ethz.ch/mailman/listinfo/r-devel">r-devel mailing list</a> or the slack channel of the R-contributors space.</p>
 <div id="using-a-git-mirror" class="section level3 hasAnchor" number="7.4.1">
 <h3><span class="header-section-number">7.4.1</span> Using a git mirror<a href="FixBug.html#using-a-git-mirror" class="anchor-section" aria-label="Anchor link to header"></a></h3>

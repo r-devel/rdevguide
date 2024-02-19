@@ -42,13 +42,15 @@ Then you should check that R still works as expected via:
 
 If there is no test for your proposed change you can add a new regression test, following [the guidelines](#TestR).
 
-Then you should bring changes from the repository into the working copy, in case any other change has been introduced, and create a path.diff file with just the changes you want to propose to the R core:
+Then you should bring changes from the repository into the working copy, in case any other change has been introduced, and create a patch.diff file with just the changes you want to propose to the R core:
 
   ```sh
   svn update
   svn diff > patch.diff
   ```
   
+Most often, changes are made to existing files, but if you happen to be adding a new file in your change, you'll need to run `svn add path/to/file1 ...` before running `svn diff` to mark those files for inclusion.
+
 This `patch.diff` file is the one that can be proposed to the R core via [Bugzilla](#SubmitPatches). You can also [ask for reviews](#PatchesReview) to the patch before proposing it to the R core via the [r-devel mailing list](https://stat.ethz.ch/mailman/listinfo/r-devel) or the slack channel of the R-contributors space.
 
 ### Using a git mirror
