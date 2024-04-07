@@ -18,6 +18,10 @@ IssueTrack
 how-to-contribute-to-issue-tracking
 bugzilla-account
 Bugzilla
+searching
+searching-dbi
+searching-sbp
+searching-sbch
 ReportingBugs
 what-is-a-bug-in-r
 what-condition-might-not-be-a-bug

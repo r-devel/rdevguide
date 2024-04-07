@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Chapter 2 R Patched and Development Versions | R Development Guide</title>
   <meta name="description" content="This guide is a comprehensive resource for contributing to base R for both new and experienced contributors." />
-  <meta name="generator" content="bookdown 0.37 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.38 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Chapter 2 R Patched and Development Versions | R Development Guide" />
   <meta property="og:type" content="book" />
@@ -23,7 +23,7 @@
 <meta name="author" content="R Contribution Working Group" />
 
 
-<meta name="date" content="2024-02-19" />
+<meta name="date" content="2024-04-07" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -66,7 +66,7 @@ $( document ).ready(function() {
 
 <style type="text/css">
 pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span { line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -180,6 +180,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="3.2" data-path="IssueTrack.html"><a href="IssueTrack.html#bugzilla-account"><i class="fa fa-check"></i><b>3.2</b> How to get a Bugzilla account?</a>
 <ul>
 <li class="chapter" data-level="3.2.1" data-path="IssueTrack.html"><a href="IssueTrack.html#Bugzilla"><i class="fa fa-check"></i><b>3.2.1</b> Navigating Bugzilla</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="IssueTrack.html"><a href="IssueTrack.html#searching"><i class="fa fa-check"></i><b>3.3</b> Searching for Bugs to Contribute to</a>
+<ul>
+<li class="chapter" data-level="3.3.1" data-path="IssueTrack.html"><a href="IssueTrack.html#searching-dbi"><i class="fa fa-check"></i><b>3.3.1</b> Detailed Bug Information</a></li>
+<li class="chapter" data-level="3.3.2" data-path="IssueTrack.html"><a href="IssueTrack.html#searching-sbp"><i class="fa fa-check"></i><b>3.3.2</b> Search By People</a></li>
+<li class="chapter" data-level="3.3.3" data-path="IssueTrack.html"><a href="IssueTrack.html#searching-sbch"><i class="fa fa-check"></i><b>3.3.3</b> Search By Change History</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="ReportingBugs.html"><a href="ReportingBugs.html"><i class="fa fa-check"></i><b>4</b> Reporting Bugs</a>
@@ -340,20 +346,20 @@ If the change meets the <a href="https://developer.r-project.org/devel-guideline
 <div id="ubuntu" class="section level3 hasAnchor" number="2.2.1">
 <h3><span class="header-section-number">2.2.1</span> Ubuntu<a href="GetStart.html#ubuntu" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>In Ubuntu you can use this command to find all the dependencies of R:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb1-1"><a href="GetStart.html#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">apt-rdepends</span> <span class="at">--build-depends</span> <span class="at">--follow</span><span class="op">=</span>DEPENDS r-base-dev <span class="kw">|</span> <span class="fu">grep</span> <span class="st">&quot; B&quot;</span> <span class="kw">|</span> <span class="fu">sed</span> <span class="at">-e</span> <span class="st">&quot;s/  Build-Depends: //&quot;</span></span></code></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb1-1"><a href="GetStart.html#cb1-1" tabindex="-1"></a><span class="ex">apt-rdepends</span> <span class="at">--build-depends</span> <span class="at">--follow</span><span class="op">=</span>DEPENDS r-base-dev <span class="kw">|</span> <span class="fu">grep</span> <span class="st">&quot; B&quot;</span> <span class="kw">|</span> <span class="fu">sed</span> <span class="at">-e</span> <span class="st">&quot;s/  Build-Depends: //&quot;</span></span></code></pre></div>
 <p>It might require installation of apt-rdepends which can be done from default repositories via <code>sudo apt-get install apt-rdepends</code>.</p>
 <p>To install all the R dependencies you can use:</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb2-1"><a href="GetStart.html#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> apt-get build-dep r-base-dev</span></code></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb2-1"><a href="GetStart.html#cb2-1" tabindex="-1"></a><span class="fu">sudo</span> apt-get build-dep r-base-dev</span></code></pre></div>
 </div>
 <div id="fedora" class="section level3 hasAnchor" number="2.2.2">
 <h3><span class="header-section-number">2.2.2</span> Fedora<a href="GetStart.html#fedora" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>In Fedora you can use this command to find all the dependencies of R:</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb3-1"><a href="GetStart.html#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">dnf</span> rq <span class="at">-q</span> <span class="at">--repo</span><span class="op">=</span>fedora-source <span class="at">--requires</span> R </span></code></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb3-1"><a href="GetStart.html#cb3-1" tabindex="-1"></a><span class="ex">dnf</span> rq <span class="at">-q</span> <span class="at">--repo</span><span class="op">=</span>fedora-source <span class="at">--requires</span> R </span></code></pre></div>
 <p>You will also need the rsync package to download the recommended packages.</p>
 <p>To install them you can use:</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb4-1"><a href="GetStart.html#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ex">dnf</span> install <span class="st">&#39;dnf-command(builddep)&#39;</span></span>
-<span id="cb4-2"><a href="GetStart.html#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="ex">dnf</span> install rsync</span>
-<span id="cb4-3"><a href="GetStart.html#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="ex">dnf</span> builddep R</span></code></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb4-1"><a href="GetStart.html#cb4-1" tabindex="-1"></a><span class="ex">dnf</span> install <span class="st">&#39;dnf-command(builddep)&#39;</span></span>
+<span id="cb4-2"><a href="GetStart.html#cb4-2" tabindex="-1"></a><span class="ex">dnf</span> install rsync</span>
+<span id="cb4-3"><a href="GetStart.html#cb4-3" tabindex="-1"></a><span class="ex">dnf</span> builddep R</span></code></pre></div>
 </div>
 </div>
 <div id="building-r" class="section level2 hasAnchor" number="2.3">
@@ -364,37 +370,37 @@ If the change meets the <a href="https://developer.r-project.org/devel-guideline
 For complete instructions please see the section in <a href="https://cran.r-project.org/doc/manuals/r-devel/R-admin.html#Installing-R-under-Unix_002dalikes">R-admin</a>.</p>
 <ol start="0" style="list-style-type: decimal">
 <li><p>Retrieve R source code via into <code>TOP_SRCDIR</code>, note that we retrieve the <code>r-devel</code> source code:</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb5-1"><a href="GetStart.html#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="bu">export</span> <span class="va">TOP_SRCDIR</span><span class="op">=</span><span class="st">&quot;</span><span class="va">$HOME</span><span class="st">/Downloads/R&quot;</span></span>
-<span id="cb5-2"><a href="GetStart.html#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="fu">svn</span> checkout https://svn.r-project.org/R/trunk/ <span class="st">&quot;</span><span class="va">$TOP_SRCDIR</span><span class="st">&quot;</span></span></code></pre></div></li>
+<div class="sourceCode" id="cb5"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb5-1"><a href="GetStart.html#cb5-1" tabindex="-1"></a><span class="bu">export</span> <span class="va">TOP_SRCDIR</span><span class="op">=</span><span class="st">&quot;</span><span class="va">$HOME</span><span class="st">/Downloads/R&quot;</span></span>
+<span id="cb5-2"><a href="GetStart.html#cb5-2" tabindex="-1"></a><span class="fu">svn</span> checkout https://svn.r-project.org/R/trunk/ <span class="st">&quot;</span><span class="va">$TOP_SRCDIR</span><span class="st">&quot;</span></span></code></pre></div></li>
 <li><p>Download the latest recommended packages<a href="#fn3" class="footnote-ref" id="fnref3"><sup>3</sup></a>:</p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb6-1"><a href="GetStart.html#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="st">&quot;</span><span class="va">$TOP_SRCDIR</span><span class="st">/tools/rsync-recommended&quot;</span></span></code></pre></div></li>
+<div class="sourceCode" id="cb6"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb6-1"><a href="GetStart.html#cb6-1" tabindex="-1"></a><span class="st">&quot;</span><span class="va">$TOP_SRCDIR</span><span class="st">/tools/rsync-recommended&quot;</span></span></code></pre></div></li>
 <li><p>Create the build directory in the <code>BUILDDIR</code>:</p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb7-1"><a href="GetStart.html#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="bu">export</span> <span class="va">BUILDDIR</span><span class="op">=</span><span class="st">&quot;</span><span class="va">$HOME</span><span class="st">/bin/R&quot;</span></span>
-<span id="cb7-2"><a href="GetStart.html#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="fu">mkdir</span> <span class="at">-p</span> <span class="st">&quot;</span><span class="va">$BUILDDIR</span><span class="st">&quot;</span></span>
-<span id="cb7-3"><a href="GetStart.html#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> <span class="st">&quot;</span><span class="va">$BUILDDIR</span><span class="st">&quot;</span></span></code></pre></div></li>
+<div class="sourceCode" id="cb7"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb7-1"><a href="GetStart.html#cb7-1" tabindex="-1"></a><span class="bu">export</span> <span class="va">BUILDDIR</span><span class="op">=</span><span class="st">&quot;</span><span class="va">$HOME</span><span class="st">/bin/R&quot;</span></span>
+<span id="cb7-2"><a href="GetStart.html#cb7-2" tabindex="-1"></a><span class="fu">mkdir</span> <span class="at">-p</span> <span class="st">&quot;</span><span class="va">$BUILDDIR</span><span class="st">&quot;</span></span>
+<span id="cb7-3"><a href="GetStart.html#cb7-3" tabindex="-1"></a><span class="bu">cd</span> <span class="st">&quot;</span><span class="va">$BUILDDIR</span><span class="st">&quot;</span></span></code></pre></div></li>
 <li><p>Configure the R installation (with <code>--enable-R-shlib</code> so that RStudio IDE can use it):</p>
-<div class="sourceCode" id="cb8"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb8-1"><a href="GetStart.html#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="st">&quot;</span><span class="va">$TOP_SRCDIR</span><span class="st">/configure&quot;</span> <span class="at">--enable-R-shlib</span></span></code></pre></div></li>
+<div class="sourceCode" id="cb8"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb8-1"><a href="GetStart.html#cb8-1" tabindex="-1"></a><span class="st">&quot;</span><span class="va">$TOP_SRCDIR</span><span class="st">/configure&quot;</span> <span class="at">--enable-R-shlib</span></span></code></pre></div></li>
 <li><p>Build R :</p>
-<div class="sourceCode" id="cb9"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb9-1"><a href="GetStart.html#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">make</span></span></code></pre></div></li>
+<div class="sourceCode" id="cb9"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb9-1"><a href="GetStart.html#cb9-1" tabindex="-1"></a><span class="fu">make</span></span></code></pre></div></li>
 <li><p>Check that R works as expected:</p>
-<div class="sourceCode" id="cb10"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb10-1"><a href="GetStart.html#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">make</span> check</span></code></pre></div>
+<div class="sourceCode" id="cb10"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb10-1"><a href="GetStart.html#cb10-1" tabindex="-1"></a><span class="fu">make</span> check</span></code></pre></div>
 <p>There are other checks you can run:</p>
-<div class="sourceCode" id="cb11"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb11-1"><a href="GetStart.html#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">make</span> check-devel</span>
-<span id="cb11-2"><a href="GetStart.html#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="fu">make</span> check-recommended</span></code></pre></div></li>
+<div class="sourceCode" id="cb11"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb11-1"><a href="GetStart.html#cb11-1" tabindex="-1"></a><span class="fu">make</span> check-devel</span>
+<span id="cb11-2"><a href="GetStart.html#cb11-2" tabindex="-1"></a><span class="fu">make</span> check-recommended</span></code></pre></div></li>
 </ol>
 <p>If we don’t want to build R in a different directory than the source code we can simply use:</p>
-<div class="sourceCode" id="cb12"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb12-1"><a href="GetStart.html#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> <span class="st">&quot;</span><span class="va">$TOP_SRCDIR</span><span class="st">&quot;</span></span>
-<span id="cb12-2"><a href="GetStart.html#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="fu">svn</span> update</span>
-<span id="cb12-3"><a href="GetStart.html#cb12-3" aria-hidden="true" tabindex="-1"></a><span class="ex">tools/rsync-recommended</span></span>
-<span id="cb12-4"><a href="GetStart.html#cb12-4" aria-hidden="true" tabindex="-1"></a><span class="st">&quot;</span><span class="va">$TOP_SRCDIR</span><span class="st">/configure&quot;</span>  <span class="at">--enable-R-shlib</span></span>
-<span id="cb12-5"><a href="GetStart.html#cb12-5" aria-hidden="true" tabindex="-1"></a><span class="fu">make</span> </span>
-<span id="cb12-6"><a href="GetStart.html#cb12-6" aria-hidden="true" tabindex="-1"></a><span class="fu">make</span> check</span></code></pre></div>
+<div class="sourceCode" id="cb12"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb12-1"><a href="GetStart.html#cb12-1" tabindex="-1"></a><span class="bu">cd</span> <span class="st">&quot;</span><span class="va">$TOP_SRCDIR</span><span class="st">&quot;</span></span>
+<span id="cb12-2"><a href="GetStart.html#cb12-2" tabindex="-1"></a><span class="fu">svn</span> update</span>
+<span id="cb12-3"><a href="GetStart.html#cb12-3" tabindex="-1"></a><span class="ex">tools/rsync-recommended</span></span>
+<span id="cb12-4"><a href="GetStart.html#cb12-4" tabindex="-1"></a><span class="st">&quot;</span><span class="va">$TOP_SRCDIR</span><span class="st">/configure&quot;</span>  <span class="at">--enable-R-shlib</span></span>
+<span id="cb12-5"><a href="GetStart.html#cb12-5" tabindex="-1"></a><span class="fu">make</span> </span>
+<span id="cb12-6"><a href="GetStart.html#cb12-6" tabindex="-1"></a><span class="fu">make</span> check</span></code></pre></div>
 <p>Once you successfully built R from source you can modify the R source code to fix an issue: Prepare a patch (See <a href="https://www.r-project.org/bugs.html#how-to-submit-patches">this guide</a>) and after checking that R works as intended (<code>make check-devel</code>) submit the patch for consideration by R Core.
 (See the <a href="FixBug.html#FixBug">lifecycle of a patch</a> chapter).</p>
 <p>To use the <code>r-devel</code> version in RStudio, you can do the following:</p>
-<div class="sourceCode" id="cb13"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb13-1"><a href="GetStart.html#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="bu">export</span> <span class="va">RSTUDIO_WHICH_R</span><span class="op">=</span><span class="st">&quot;</span><span class="va">$BUILDDIR</span><span class="st">/bin/R&quot;</span></span>
-<span id="cb13-2"><a href="GetStart.html#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> <span class="st">&quot;</span><span class="va">$TOP_SRCDIR</span><span class="st">&quot;</span></span>
-<span id="cb13-3"><a href="GetStart.html#cb13-3" aria-hidden="true" tabindex="-1"></a><span class="ex">rstudio</span></span></code></pre></div>
+<div class="sourceCode" id="cb13"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb13-1"><a href="GetStart.html#cb13-1" tabindex="-1"></a><span class="bu">export</span> <span class="va">RSTUDIO_WHICH_R</span><span class="op">=</span><span class="st">&quot;</span><span class="va">$BUILDDIR</span><span class="st">/bin/R&quot;</span></span>
+<span id="cb13-2"><a href="GetStart.html#cb13-2" tabindex="-1"></a><span class="bu">cd</span> <span class="st">&quot;</span><span class="va">$TOP_SRCDIR</span><span class="st">&quot;</span></span>
+<span id="cb13-3"><a href="GetStart.html#cb13-3" tabindex="-1"></a><span class="ex">rstudio</span></span></code></pre></div>
 </div>
 <div id="windows" class="section level3 hasAnchor" number="2.3.2">
 <h3><span class="header-section-number">2.3.2</span> Windows<a href="GetStart.html#windows" class="anchor-section" aria-label="Anchor link to header"></a></h3>
@@ -421,41 +427,41 @@ On CRAN, MiKTeX is used, which can be downloaded from <a href="https://miktex.or
 Once installed open MiKTeX via the Windows start menu.
 It might ask to check for updates and more importantly, to make it available in PATH. You can accept both.</p></li>
 <li><p>Open the Rtools43 terminal to update and install subversion:</p>
-<div class="sourceCode" id="cb14"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb14-1"><a href="GetStart.html#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="ex">pacman</span> <span class="at">-Syuu</span></span>
-<span id="cb14-2"><a href="GetStart.html#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="ex">pacman</span> <span class="at">-Sy</span> wget subversion</span></code></pre></div></li>
+<div class="sourceCode" id="cb14"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb14-1"><a href="GetStart.html#cb14-1" tabindex="-1"></a><span class="ex">pacman</span> <span class="at">-Syuu</span></span>
+<span id="cb14-2"><a href="GetStart.html#cb14-2" tabindex="-1"></a><span class="ex">pacman</span> <span class="at">-Sy</span> wget subversion</span></code></pre></div></li>
 <li><p>Retrieve the latest source code via subversion:</p>
-<div class="sourceCode" id="cb15"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb15-1"><a href="GetStart.html#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="bu">export</span> <span class="va">TOP_SRCDIR</span><span class="op">=</span><span class="st">&quot;</span><span class="va">$HOME</span><span class="st">/Downloads/R&quot;</span></span>
-<span id="cb15-2"><a href="GetStart.html#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="fu">svn</span> checkout https://svn.r-project.org/R/trunk/ <span class="st">&quot;</span><span class="va">$TOP_SRCDIR</span><span class="st">&quot;</span></span></code></pre></div>
+<div class="sourceCode" id="cb15"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb15-1"><a href="GetStart.html#cb15-1" tabindex="-1"></a><span class="bu">export</span> <span class="va">TOP_SRCDIR</span><span class="op">=</span><span class="st">&quot;</span><span class="va">$HOME</span><span class="st">/Downloads/R&quot;</span></span>
+<span id="cb15-2"><a href="GetStart.html#cb15-2" tabindex="-1"></a><span class="fu">svn</span> checkout https://svn.r-project.org/R/trunk/ <span class="st">&quot;</span><span class="va">$TOP_SRCDIR</span><span class="st">&quot;</span></span></code></pre></div>
 <p>If you already have the repository available you can update as:</p>
-<div class="sourceCode" id="cb16"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb16-1"><a href="GetStart.html#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> <span class="va">$TOP_SRCDIR</span></span>
-<span id="cb16-2"><a href="GetStart.html#cb16-2" aria-hidden="true" tabindex="-1"></a><span class="fu">svn</span> update</span></code></pre></div>
+<div class="sourceCode" id="cb16"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb16-1"><a href="GetStart.html#cb16-1" tabindex="-1"></a><span class="bu">cd</span> <span class="va">$TOP_SRCDIR</span></span>
+<span id="cb16-2"><a href="GetStart.html#cb16-2" tabindex="-1"></a><span class="fu">svn</span> update</span></code></pre></div>
 <p>You can also use a SVN client such as TortoiseSVN (<a href="https://tortoisesvn.net/" class="uri">https://tortoisesvn.net/</a>, command line tool, and Windows Explorer integration) or SlikSVN (<a href="https://sliksvn.com/download/" class="uri">https://sliksvn.com/download/</a>, just the command line tool) so that it can be also found by other tools.</p></li>
 <li><p>Download the latest tcl/tk and unzip it in <code>$TOP_SRCDIR</code>:</p>
-<div class="sourceCode" id="cb17"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb17-1"><a href="GetStart.html#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> <span class="st">&quot;</span><span class="va">$TOP_SRCDIR</span><span class="st">&quot;</span></span>
-<span id="cb17-2"><a href="GetStart.html#cb17-2" aria-hidden="true" tabindex="-1"></a><span class="fu">wget</span> <span class="at">-np</span> <span class="at">-nd</span> <span class="at">-r</span> <span class="at">-l1</span> <span class="at">-A</span> <span class="st">&#39;tcltk-*.zip&#39;</span> https://cran.r-project.org/bin/windows/Rtools/rtools43/files/</span>
-<span id="cb17-3"><a href="GetStart.html#cb17-3" aria-hidden="true" tabindex="-1"></a><span class="fu">unzip</span> <span class="st">&quot;tcltk-*.zip&quot;</span></span></code></pre></div></li>
+<div class="sourceCode" id="cb17"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb17-1"><a href="GetStart.html#cb17-1" tabindex="-1"></a><span class="bu">cd</span> <span class="st">&quot;</span><span class="va">$TOP_SRCDIR</span><span class="st">&quot;</span></span>
+<span id="cb17-2"><a href="GetStart.html#cb17-2" tabindex="-1"></a><span class="fu">wget</span> <span class="at">-np</span> <span class="at">-nd</span> <span class="at">-r</span> <span class="at">-l1</span> <span class="at">-A</span> <span class="st">&#39;tcltk-*.zip&#39;</span> https://cran.r-project.org/bin/windows/Rtools/rtools43/files/</span>
+<span id="cb17-3"><a href="GetStart.html#cb17-3" tabindex="-1"></a><span class="fu">unzip</span> <span class="st">&quot;tcltk-*.zip&quot;</span></span></code></pre></div></li>
 <li><p>Add gcc, MiKTeX and tar to the PATH and set one tar option:</p>
-<div class="sourceCode" id="cb18"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb18-1"><a href="GetStart.html#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="bu">export</span> <span class="va">PATH</span><span class="op">=</span><span class="st">&quot;/x86_64-w64-mingw32.static.posix/bin:</span><span class="va">$PATH</span><span class="st">&quot;</span></span>
-<span id="cb18-2"><a href="GetStart.html#cb18-2" aria-hidden="true" tabindex="-1"></a><span class="bu">export</span> <span class="va">PATH</span><span class="op">=</span><span class="st">&quot;/c/Program Files/MiKTeX/miktex/bin/x64:</span><span class="va">$PATH</span><span class="st">&quot;</span></span>
-<span id="cb18-3"><a href="GetStart.html#cb18-3" aria-hidden="true" tabindex="-1"></a><span class="bu">export</span> <span class="va">TAR</span><span class="op">=</span><span class="st">&quot;/usr/bin/tar&quot;</span></span>
-<span id="cb18-4"><a href="GetStart.html#cb18-4" aria-hidden="true" tabindex="-1"></a><span class="bu">export</span> <span class="va">TAR_OPTIONS</span><span class="op">=</span><span class="st">&quot;--force-local&quot;</span></span></code></pre></div>
+<div class="sourceCode" id="cb18"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb18-1"><a href="GetStart.html#cb18-1" tabindex="-1"></a><span class="bu">export</span> <span class="va">PATH</span><span class="op">=</span><span class="st">&quot;/x86_64-w64-mingw32.static.posix/bin:</span><span class="va">$PATH</span><span class="st">&quot;</span></span>
+<span id="cb18-2"><a href="GetStart.html#cb18-2" tabindex="-1"></a><span class="bu">export</span> <span class="va">PATH</span><span class="op">=</span><span class="st">&quot;/c/Program Files/MiKTeX/miktex/bin/x64:</span><span class="va">$PATH</span><span class="st">&quot;</span></span>
+<span id="cb18-3"><a href="GetStart.html#cb18-3" tabindex="-1"></a><span class="bu">export</span> <span class="va">TAR</span><span class="op">=</span><span class="st">&quot;/usr/bin/tar&quot;</span></span>
+<span id="cb18-4"><a href="GetStart.html#cb18-4" tabindex="-1"></a><span class="bu">export</span> <span class="va">TAR_OPTIONS</span><span class="op">=</span><span class="st">&quot;--force-local&quot;</span></span></code></pre></div>
 <p>If MiKTeX was installed just for your user you might need to run:</p>
-<div class="sourceCode" id="cb19"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb19-1"><a href="GetStart.html#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="bu">export</span> <span class="va">PATH</span><span class="op">=</span><span class="st">&quot;/c/Users/</span><span class="va">$USER</span><span class="st">/AppData/Local/Programs/MiKTeX/miktex/bin/x64:</span><span class="va">$PATH</span><span class="st">&quot;</span></span></code></pre></div></li>
+<div class="sourceCode" id="cb19"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb19-1"><a href="GetStart.html#cb19-1" tabindex="-1"></a><span class="bu">export</span> <span class="va">PATH</span><span class="op">=</span><span class="st">&quot;/c/Users/</span><span class="va">$USER</span><span class="st">/AppData/Local/Programs/MiKTeX/miktex/bin/x64:</span><span class="va">$PATH</span><span class="st">&quot;</span></span></code></pre></div></li>
 <li><p>Check that all the programs can be found:</p>
-<div class="sourceCode" id="cb20"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb20-1"><a href="GetStart.html#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="fu">which</span> make gcc pdflatex tar</span></code></pre></div>
+<div class="sourceCode" id="cb20"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb20-1"><a href="GetStart.html#cb20-1" tabindex="-1"></a><span class="fu">which</span> make gcc pdflatex tar</span></code></pre></div>
 <p>If there is any error you’ll need to find where the program is installed and add the corresponding path.</p></li>
 <li><p>Download the latest recommended packages<a href="#fn4" class="footnote-ref" id="fnref4"><sup>4</sup></a>:</p>
-<div class="sourceCode" id="cb21"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb21-1"><a href="GetStart.html#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> <span class="st">&quot;</span><span class="va">$TOP_SRCDIR</span><span class="st">/src/gnuwin32/&quot;</span></span>
-<span id="cb21-2"><a href="GetStart.html#cb21-2" aria-hidden="true" tabindex="-1"></a><span class="st">&quot;</span><span class="va">$TOP_SRCDIR</span><span class="st">/tools/rsync-recommended&quot;</span></span></code></pre></div></li>
+<div class="sourceCode" id="cb21"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb21-1"><a href="GetStart.html#cb21-1" tabindex="-1"></a><span class="bu">cd</span> <span class="st">&quot;</span><span class="va">$TOP_SRCDIR</span><span class="st">/src/gnuwin32/&quot;</span></span>
+<span id="cb21-2"><a href="GetStart.html#cb21-2" tabindex="-1"></a><span class="st">&quot;</span><span class="va">$TOP_SRCDIR</span><span class="st">/tools/rsync-recommended&quot;</span></span></code></pre></div></li>
 <li><p>Build R and the recommended packages:</p>
-<div class="sourceCode" id="cb22"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb22-1"><a href="GetStart.html#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="fu">make</span> all recommended</span></code></pre></div>
+<div class="sourceCode" id="cb22"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb22-1"><a href="GetStart.html#cb22-1" tabindex="-1"></a><span class="fu">make</span> all recommended</span></code></pre></div>
 <p>The recently compiled version of R will be at <code>$TOP_SRCDIR/bin/</code>.
 In RStudio you can select that folder and restart it to use the <code>r-devel</code> version.</p></li>
 <li><p>Check that R works as expected:</p>
-<div class="sourceCode" id="cb23"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb23-1"><a href="GetStart.html#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="fu">make</span> check</span></code></pre></div>
+<div class="sourceCode" id="cb23"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb23-1"><a href="GetStart.html#cb23-1" tabindex="-1"></a><span class="fu">make</span> check</span></code></pre></div>
 <p>There are other checks you can run for testing the successful installation of the recommended packages:</p>
-<div class="sourceCode" id="cb24"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb24-1"><a href="GetStart.html#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="fu">make</span> check-devel</span>
-<span id="cb24-2"><a href="GetStart.html#cb24-2" aria-hidden="true" tabindex="-1"></a><span class="fu">make</span> check-recommended</span></code></pre></div></li>
+<div class="sourceCode" id="cb24"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb24-1"><a href="GetStart.html#cb24-1" tabindex="-1"></a><span class="fu">make</span> check-devel</span>
+<span id="cb24-2"><a href="GetStart.html#cb24-2" tabindex="-1"></a><span class="fu">make</span> check-recommended</span></code></pre></div></li>
 </ol>
 </div>
 </div>

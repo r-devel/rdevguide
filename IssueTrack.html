@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Chapter 3 Issue Tracking | R Development Guide</title>
   <meta name="description" content="This guide is a comprehensive resource for contributing to base R for both new and experienced contributors." />
-  <meta name="generator" content="bookdown 0.37 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.38 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Chapter 3 Issue Tracking | R Development Guide" />
   <meta property="og:type" content="book" />
@@ -23,7 +23,7 @@
 <meta name="author" content="R Contribution Working Group" />
 
 
-<meta name="date" content="2024-02-19" />
+<meta name="date" content="2024-04-07" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -66,7 +66,7 @@ $( document ).ready(function() {
 
 <style type="text/css">
 pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span { line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -180,6 +180,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="3.2" data-path="IssueTrack.html"><a href="IssueTrack.html#bugzilla-account"><i class="fa fa-check"></i><b>3.2</b> How to get a Bugzilla account?</a>
 <ul>
 <li class="chapter" data-level="3.2.1" data-path="IssueTrack.html"><a href="IssueTrack.html#Bugzilla"><i class="fa fa-check"></i><b>3.2.1</b> Navigating Bugzilla</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="IssueTrack.html"><a href="IssueTrack.html#searching"><i class="fa fa-check"></i><b>3.3</b> Searching for Bugs to Contribute to</a>
+<ul>
+<li class="chapter" data-level="3.3.1" data-path="IssueTrack.html"><a href="IssueTrack.html#searching-dbi"><i class="fa fa-check"></i><b>3.3.1</b> Detailed Bug Information</a></li>
+<li class="chapter" data-level="3.3.2" data-path="IssueTrack.html"><a href="IssueTrack.html#searching-sbp"><i class="fa fa-check"></i><b>3.3.2</b> Search By People</a></li>
+<li class="chapter" data-level="3.3.3" data-path="IssueTrack.html"><a href="IssueTrack.html#searching-sbch"><i class="fa fa-check"></i><b>3.3.3</b> Search By Change History</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="ReportingBugs.html"><a href="ReportingBugs.html"><i class="fa fa-check"></i><b>4</b> Reporting Bugs</a>
@@ -331,14 +337,14 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="Bugzilla" class="section level3 hasAnchor" number="3.2.1">
 <h3><span class="header-section-number">3.2.1</span> Navigating Bugzilla<a href="IssueTrack.html#Bugzilla" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>An image of the existing home page of Bugzilla is shared below:</p>
-<div class="figure">
-<img src="img/bugzilla.png" alt="" />
-<p class="caption">Screenshot of the existing home page of Bugzilla.</p>
+<div class="float">
+<img src="img/bugzilla.png" alt="Screenshot of the existing home page of Bugzilla." />
+<div class="figcaption">Screenshot of the existing home page of Bugzilla.</div>
 </div>
 <p>On the home page of Bugzilla, there are various buttons and links. There are four square buttons called as:</p>
-<div class="figure">
-<img src="img/squarebuttons.png" alt="" />
-<p class="caption">Screenshot of the four square buttons on the home page of Bugzilla.</p>
+<div class="float">
+<img src="img/squarebuttons.png" alt="Screenshot of the four square buttons on the home page of Bugzilla." />
+<div class="figcaption">Screenshot of the four square buttons on the home page of Bugzilla.</div>
 </div>
 <ol style="list-style-type: decimal">
 <li><p><a href="https://bugs.r-project.org/enter_bug.cgi">File a bug</a>: You will have to log in to Bugzilla to file a bug using this button</p></li>
@@ -353,14 +359,81 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li><p><a href="https://bugs.r-project.org/query.cgi">Search existing bug reports</a></p></li>
 </ol>
 <p>A <a href="https://bugs.r-project.org/page.cgi?id=quicksearch.html">quick search</a> bar is available on the home page where you can enter a bug number to search or some search terms.</p>
-<div class="figure">
-<img src="img/quicksearch.png" alt="" />
-<p class="caption">Screenshot of the quick search bar on the home page of Bugzilla.</p>
+<div class="float">
+<img src="img/quicksearch.png" alt="Screenshot of the quick search bar on the home page of Bugzilla." />
+<div class="figcaption">Screenshot of the quick search bar on the home page of Bugzilla.</div>
 </div>
 <p>There is also a section for Common Queries on the home page which includes links to bugs reported and changed in the last 24 hours and last 7 days.</p>
-<div class="figure">
-<img src="img/commonquery.png" alt="" />
-<p class="caption">Screenshot of the Common Queries section on the home page of Bugzilla.</p>
+<div class="float">
+<img src="img/commonquery.png" alt="Screenshot of the Common Queries section on the home page of Bugzilla." />
+<div class="figcaption">Screenshot of the Common Queries section on the home page of Bugzilla.</div>
+</div>
+</div>
+</div>
+<div id="searching" class="section level2 hasAnchor" number="3.3">
+<h2><span class="header-section-number">3.3</span> Searching for Bugs to Contribute to<a href="IssueTrack.html#searching" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>When presented with a long list of bugs, it can often be a bit demotivating when it’s not clear where to start.
+To help with this, you can use the <a href="https://bugs.r-project.org/query.cgi?format=advanced"><strong>Advanced Search</strong></a>.</p>
+<div class="float">
+<img src="img/bugzilla-adv-search-home.png" alt="Screenshot of Advanced Search page showing the following fields: Summary, Product, Component, Status, Resolution" />
+<div class="figcaption">Screenshot of Advanced Search page showing the following fields: Summary, Product, Component, Status, Resolution</div>
+</div>
+<p>This presents several fields that you can use to narrow down your search.
+You can find out what a particular field is by clicking on the header, which will take you to that section in the <a href="https://bugs.r-project.org/page.cgi?id=fields.html"><strong>Bug Fields Information Page</strong></a>.</p>
+<p>The default fields are:</p>
+<ul>
+<li><a href="https://bugs.r-project.org/page.cgi?id=fields.html#short_desc">Summary</a>: a short description of the bug</li>
+<li><a href="https://bugs.r-project.org/page.cgi?id=fields.html#product">Product</a>: either R or RTools.</li>
+<li><a href="https://bugs.r-project.org/page.cgi?id=fields.html#component">Component</a>: A specific component of the R toolchain such as Graphics, Documentation, and Models</li>
+<li><a href="https://bugs.r-project.org/page.cgi?id=fields.html#bug_status">Status</a>: The status of open or closed bugs. This will always default to showing open bugs (UNCONFIRMED, CONFIRMED, and IN_PROGRESS)</li>
+<li><a href="https://bugs.r-project.org/page.cgi?id=fields.html#resolution">Resolution</a>: The resolution for closed bugs.</li>
+</ul>
+<p>You can select multiple items for each field as well.
+Both <strong>Product</strong> and <strong>Component</strong> are what you navigate through when you go to <a href="https://bugs.r-project.org/describecomponents.cgi"><strong>Browse Issues</strong></a>.</p>
+<p>Below that are further filters that can help you find bugs you might want to work on:</p>
+<dl>
+<dt>Detailed Bug Information: Narrow results by the following fields</dt>
+<dd>
+Comments, URL, Keywords, Deadline, Bug Numbers, Version, Severity, Priority, Hardware, OS
+Search By People
+</dd>
+<dd>
+Narrow results to a role (i.e. Assignee, Reporter, Commenter, etc.) a person has on a bug
+Search By Change History
+</dd>
+<dd>
+Narrow results to how fields have changed during a specific time period
+Custom Search
+</dd>
+<dd>
+Didn’t find what you’re looking for above? This area allows for ANDs, ORs, and other more complex searches.
+</dd>
+</dl>
+<p>These will be detailed in the subsections below</p>
+<div id="searching-dbi" class="section level3 hasAnchor" number="3.3.1">
+<h3><span class="header-section-number">3.3.1</span> Detailed Bug Information<a href="IssueTrack.html#searching-dbi" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>You can use this section to narrow down your search further to filter by things like OS type, R version, Keywords, and Priority.</p>
+<p>It can be helpful, for example, to search for bugs labelled with <code>HELPWANTED</code>, which indicates bugs that may be suitable for anyone to work on regardless of expertise.</p>
+<div class="float">
+<img src="img/bugzilla-adv-search-detailed-bug-info.png" alt="Screenshot of expanded Detailed Bug Information section showing the following fields: Comment, URL, Keywords (with HELPWANTED entered), Deadline, inclusion/exclusion of bug numbers, Version, Severity, Priority, Hardware, and OS" />
+<div class="figcaption">Screenshot of expanded Detailed Bug Information section showing the following fields: Comment, URL, Keywords (with HELPWANTED entered), Deadline, inclusion/exclusion of bug numbers, Version, Severity, Priority, Hardware, and OS</div>
+</div>
+</div>
+<div id="searching-sbp" class="section level3 hasAnchor" number="3.3.2">
+<h3><span class="header-section-number">3.3.2</span> Search By People<a href="IssueTrack.html#searching-sbp" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>You can use this to narrow down your search to only include results of a specific person or up to three people who have participated in any component of the bug’s discusson.</p>
+<div class="float">
+<img src="img/bugzilla-adv-search-search-by-people.png" alt="Screenshot of expanded Search By People section showing three fields allowing you to enter a person’s name who can be any of the bug assignee, the reporter, a CC list member, or a commenter" />
+<div class="figcaption">Screenshot of expanded Search By People section showing three fields allowing you to enter a person’s name who can be any of the bug assignee, the reporter, a CC list member, or a commenter</div>
+</div>
+</div>
+<div id="searching-sbch" class="section level3 hasAnchor" number="3.3.3">
+<h3><span class="header-section-number">3.3.3</span> Search By Change History<a href="IssueTrack.html#searching-sbch" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Use this to search for bugs where any of the status fields has been changed (which, depending on the change, could indicate that someone from R-Core has given some attention to the bug).
+This also provides a date range to narrow your search.</p>
+<div class="float">
+<img src="img/bugzilla-adv-search-search-by-change-history.png" alt="Screenshot of expanded Search by Change History section showing three fields: where ANY of the fields (multi-select list), changed to, and between (dates in YYYY-MM-DD format)" />
+<div class="figcaption">Screenshot of expanded Search by Change History section showing three fields: where ANY of the fields (multi-select list), changed to, and between (dates in YYYY-MM-DD format)</div>
 </div>
 
 </div>
