@@ -170,7 +170,7 @@ Daily binaries for `r-devel` are made available for [download and installation](
 Before installing R from source, some additional programs are needed, as per the [latest documentation](https://cran.r-project.org/bin/windows/base/howto-R-4.2.html):
 
 1.  [Rtools](https://cran.r-project.org/bin/windows/Rtools/) is the suggested toolchain bundle for building R base and R packages containing compiled code on Windows. 
-  The latest [version of Rtools](https://cran.r-project.org/bin/windows/Rtools/rtools43/rtools.html) can be installed using the [Rtools installer rtools43-XXXX-XXX.exe ](https://cran.r-project.org/bin/windows/Rtools/rtools43/files/).
+  The latest [version of Rtools](https://cran.r-project.org/bin/windows/Rtools/rtools44/rtools.html) can be installed using the [Rtools installer rtools44-XXXX-XXX.exe ](https://cran.r-project.org/bin/windows/Rtools/rtools44/files/).
 
 2.  A LaTeX compiler is needed to install and build R, check packages and build  manuals. 
     On CRAN, MiKTeX is used, which can be downloaded from <https://miktex.org>. 
