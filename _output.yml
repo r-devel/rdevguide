@@ -14,6 +14,9 @@ bookdown::gitbook:
       after: |
         <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
     download: ["pdf", "epub"]
+    edit: https://github.com/r-devel/rdevguide/edit/main/%s
+    view: https://github.com/r-devel/rdevguide/blob/main/%s
+    history: https://github.com/r-devel/rdevguide/commits/main/%s
 bookdown::pdf_book:
   includes:
     in_header: preamble.tex
