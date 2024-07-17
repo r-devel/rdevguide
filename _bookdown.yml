@@ -1,6 +1,8 @@
 book_filename: "rdevguide"
 chapter_name: "Chapter "
 repo: https://github.com/r-devel/rdevguide
+url: 'https\://contributor.r-project.org/rdevguide/'
+github-repo: "r-devel/rdevguide"
 output_dir: docs
 clean: [packages.bib, bookdown.bbl]
 new_session: yes
