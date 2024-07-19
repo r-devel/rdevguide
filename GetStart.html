@@ -364,6 +364,8 @@ If the change meets the <a href="https://developer.r-project.org/devel-guideline
 </div>
 <div id="building-r" class="section level2 hasAnchor" number="2.3">
 <h2><span class="header-section-number">2.3</span> Building R<a href="GetStart.html#building-r" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>It is recommended to build R in a different path than the source.
+For this reason we have a <code>TOP_SRCDIR</code> variable where the source code goes and the variable <code>BUILDDIR</code> where the built R version will go.</p>
 <div id="linux" class="section level3 hasAnchor" number="2.3.1">
 <h3><span class="header-section-number">2.3.1</span> Linux<a href="GetStart.html#linux" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Here are the basic steps intended as a checklist.
@@ -426,7 +428,7 @@ The latest <a href="https://cran.r-project.org/bin/windows/Rtools/rtools44/rtool
 On CRAN, MiKTeX is used, which can be downloaded from <a href="https://miktex.org" class="uri">https://miktex.org</a>.
 Once installed open MiKTeX via the Windows start menu.
 It might ask to check for updates and more importantly, to make it available in PATH. You can accept both.</p></li>
-<li><p>Open the Rtools43 terminal to update and install subversion:</p>
+<li><p>Open the Rtools44 terminal to update and install subversion:</p>
 <div class="sourceCode" id="cb14"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb14-1"><a href="GetStart.html#cb14-1" tabindex="-1"></a><span class="ex">pacman</span> <span class="at">-Syuu</span></span>
 <span id="cb14-2"><a href="GetStart.html#cb14-2" tabindex="-1"></a><span class="ex">pacman</span> <span class="at">-Sy</span> wget subversion</span></code></pre></div></li>
 <li><p>Retrieve the latest source code via subversion:</p>
@@ -438,7 +440,7 @@ It might ask to check for updates and more importantly, to make it available in 
 <p>You can also use a SVN client such as TortoiseSVN (<a href="https://tortoisesvn.net/" class="uri">https://tortoisesvn.net/</a>, command line tool, and Windows Explorer integration) or SlikSVN (<a href="https://sliksvn.com/download/" class="uri">https://sliksvn.com/download/</a>, just the command line tool) so that it can be also found by other tools.</p></li>
 <li><p>Download the latest tcl/tk and unzip it in <code>$TOP_SRCDIR</code>:</p>
 <div class="sourceCode" id="cb17"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb17-1"><a href="GetStart.html#cb17-1" tabindex="-1"></a><span class="bu">cd</span> <span class="st">&quot;</span><span class="va">$TOP_SRCDIR</span><span class="st">&quot;</span></span>
-<span id="cb17-2"><a href="GetStart.html#cb17-2" tabindex="-1"></a><span class="fu">wget</span> <span class="at">-np</span> <span class="at">-nd</span> <span class="at">-r</span> <span class="at">-l1</span> <span class="at">-A</span> <span class="st">&#39;tcltk-*.zip&#39;</span> https://cran.r-project.org/bin/windows/Rtools/rtools43/files/</span>
+<span id="cb17-2"><a href="GetStart.html#cb17-2" tabindex="-1"></a><span class="fu">wget</span> <span class="at">-np</span> <span class="at">-nd</span> <span class="at">-r</span> <span class="at">-l1</span> <span class="at">-A</span> <span class="st">&#39;tcltk-*.zip&#39;</span> https://cran.r-project.org/bin/windows/Rtools/rtools44/files/</span>
 <span id="cb17-3"><a href="GetStart.html#cb17-3" tabindex="-1"></a><span class="fu">unzip</span> <span class="st">&quot;tcltk-*.zip&quot;</span></span></code></pre></div></li>
 <li><p>Add gcc, MiKTeX and tar to the PATH and set one tar option:</p>
 <div class="sourceCode" id="cb18"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb18-1"><a href="GetStart.html#cb18-1" tabindex="-1"></a><span class="bu">export</span> <span class="va">PATH</span><span class="op">=</span><span class="st">&quot;/x86_64-w64-mingw32.static.posix/bin:</span><span class="va">$PATH</span><span class="st">&quot;</span></span>
@@ -467,7 +469,7 @@ In RStudio you can select that folder and restart it to use the <code>r-devel</c
 </div>
 <div id="macos" class="section level3 hasAnchor" number="2.3.3">
 <h3><span class="header-section-number">2.3.3</span> macOS<a href="GetStart.html#macos" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>This section will be added after the official <a href="https://cran.r-project.org/doc/manuals/r-devel/R-admin.html#macOS">installation instructions for macOS in the R installation and administration manual</a> have been updated for R 4.3.0.</p>
+<p>This section will be added after the official <a href="https://cran.r-project.org/doc/manuals/r-devel/R-admin.html#macOS">installation instructions for macOS in the R installation and administration manual</a> have been updated for R 4.4.0.</p>
 </div>
 </div>
 <div id="see-also" class="section level2 hasAnchor" number="2.4">

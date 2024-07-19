@@ -70,6 +70,9 @@ dnf builddep R
 
 ## Building R 
 
+It is recommended to build R in a different path than the source. 
+For this reason we have a `TOP_SRCDIR` variable where the source code goes and the variable `BUILDDIR` where the built R version will go. 
+
 ### Linux
 
 Here are the basic steps intended as a checklist.
@@ -177,7 +180,7 @@ Before installing R from source, some additional programs are needed, as per the
     Once installed open MiKTeX via the Windows start menu.
     It might ask to check for updates and more importantly, to make it available in PATH. You can accept both.
 
-1.  Open the Rtools43 terminal to update and install subversion:
+1.  Open the Rtools44 terminal to update and install subversion:
 
     ```sh
     pacman -Syuu
@@ -204,7 +207,7 @@ Before installing R from source, some additional programs are needed, as per the
 
     ```sh
     cd "$TOP_SRCDIR"
-    wget -np -nd -r -l1 -A 'tcltk-*.zip' https://cran.r-project.org/bin/windows/Rtools/rtools43/files/
+    wget -np -nd -r -l1 -A 'tcltk-*.zip' https://cran.r-project.org/bin/windows/Rtools/rtools44/files/
     unzip "tcltk-*.zip"
     ```
 
@@ -263,7 +266,7 @@ Before installing R from source, some additional programs are needed, as per the
 
 ### macOS
 
-This section will be added after the official [installation instructions for macOS in the R installation and administration manual](https://cran.r-project.org/doc/manuals/r-devel/R-admin.html#macOS) have been updated for R 4.3.0.
+This section will be added after the official [installation instructions for macOS in the R installation and administration manual](https://cran.r-project.org/doc/manuals/r-devel/R-admin.html#macOS) have been updated for R 4.4.0.
 
 
 ## See also

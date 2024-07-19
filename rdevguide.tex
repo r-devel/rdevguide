@@ -297,6 +297,9 @@ To install them you can use:
 
 \section{Building R}\label{building-r}
 
+It is recommended to build R in a different path than the source.
+For this reason we have a \texttt{TOP\_SRCDIR} variable where the source code goes and the variable \texttt{BUILDDIR} where the built R version will go.
+
 \subsection{Linux}\label{linux}
 
 Here are the basic steps intended as a checklist.
@@ -427,7 +430,7 @@ Before installing R from source, some additional programs are needed, as per the
   Once installed open MiKTeX via the Windows start menu.
   It might ask to check for updates and more importantly, to make it available in PATH. You can accept both.
 \item
-  Open the Rtools43 terminal to update and install subversion:
+  Open the Rtools44 terminal to update and install subversion:
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -461,7 +464,7 @@ Before installing R from source, some additional programs are needed, as per the
 \begin{Shaded}
 \begin{Highlighting}[]
 \BuiltInTok{cd} \StringTok{"}\VariableTok{$TOP\_SRCDIR}\StringTok{"}
-\FunctionTok{wget} \AttributeTok{{-}np} \AttributeTok{{-}nd} \AttributeTok{{-}r} \AttributeTok{{-}l1} \AttributeTok{{-}A} \StringTok{\textquotesingle{}tcltk{-}*.zip\textquotesingle{}}\NormalTok{ https://cran.r{-}project.org/bin/windows/Rtools/rtools43/files/}
+\FunctionTok{wget} \AttributeTok{{-}np} \AttributeTok{{-}nd} \AttributeTok{{-}r} \AttributeTok{{-}l1} \AttributeTok{{-}A} \StringTok{\textquotesingle{}tcltk{-}*.zip\textquotesingle{}}\NormalTok{ https://cran.r{-}project.org/bin/windows/Rtools/rtools44/files/}
 \FunctionTok{unzip} \StringTok{"tcltk{-}*.zip"}
 \end{Highlighting}
 \end{Shaded}
@@ -535,7 +538,7 @@ Before installing R from source, some additional programs are needed, as per the
 
 \subsection{macOS}\label{macos}
 
-This section will be added after the official \href{https://cran.r-project.org/doc/manuals/r-devel/R-admin.html\#macOS}{installation instructions for macOS in the R installation and administration manual} have been updated for R 4.3.0.
+This section will be added after the official \href{https://cran.r-project.org/doc/manuals/r-devel/R-admin.html\#macOS}{installation instructions for macOS in the R installation and administration manual} have been updated for R 4.4.0.
 
 \section{See also}\label{see-also}
 
