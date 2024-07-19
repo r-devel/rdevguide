@@ -70,6 +70,9 @@ dnf builddep R
 
 ## Building R 
 
+It is recommended to build R in a different path than the source. 
+For this reason we have a `TOP_SRCDIR` variable where the source code goes and the variable `BUILDDIR` where the built R version will go. 
+
 ### Linux
 
 Here are the basic steps intended as a checklist.
