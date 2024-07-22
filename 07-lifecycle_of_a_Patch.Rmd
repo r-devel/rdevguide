@@ -53,7 +53,7 @@ Most often, changes are made to existing files, but if you happen to be adding a
 
 This `patch.diff` file is the one that can be proposed to the R core via [Bugzilla](#SubmitPatches). You can also [ask for reviews](#PatchesReview) to the patch before proposing it to the R core via the [r-devel mailing list](https://stat.ethz.ch/mailman/listinfo/r-devel) or the slack channel of the R-contributors space.
 
-### Using a git mirror
+### Using a git mirror 
 
 Besides checking in your computer, you can use the Github mirror  [r-devel/r-svn](https://github.com/r-devel/r-svn  "A github svn mirror") of the source code to check this patch with different configurations and OS.
 
@@ -112,9 +112,24 @@ When creating a patch for submission, there are several things that you can do t
 
 ## Submitting your patch for review {#SubmitPatches}
 
-1. Patch in response to a pre-existing issue or bug report:  In this case, you should attach the patch to the existing issue or bug report on Bugzilla with a brief comment.
+### Patch in response to a pre-existing issue or bug report
 
-2. Patch in response to an unreported issue or bug report: Assuming you already performed a search on Bugzilla for a pre-existing issue or bug and did not find the issue or bug reported, you need to create a new bug report and include your patch with it. Please fill in as much relevant detail as possible to prevent reviewers from having to delay reviewing your patch because of lack of information. Include (mostly as the first sentence), a to-the-point explanation of what the purpose of the patch is. This sentence should not be in the descriptive form, rather an imperative form will be more suitable here. If this is not enough detail for a patch, a new paragraphs(s) can be added to explain in proper depth what has happened. The details should be good enough that a core developer reading it understands the justification for the change.
+In this case, you should attach the patch to the existing issue or bug report on Bugzilla with a brief comment.
+
+1. Use the Attachments option to add the `*.diff` file as attachment.
+
+2. On the new Create New Attachment web page, add a Brief Decription.
+
+3. Select Content Type as `patch`.
+
+4. Add comments (often prose text) in this page rather than in the original bugzilla page for the PR.
+
+5. Press Submit. This will give you a bugzilla submission that sends one e-mail to all of R-core plus the PR author.
+
+
+### Patch in response to an unreported issue or bug report
+
+Assuming you already performed a search on Bugzilla for a pre-existing issue or bug and did not find the issue or bug reported, you need to create a new bug report and include your patch with it. Please fill in as much relevant detail as possible to prevent reviewers from having to delay reviewing your patch because of lack of information. Include (mostly as the first sentence), a to-the-point explanation of what the purpose of the patch is. This sentence should not be in the descriptive form, rather an imperative form will be more suitable here. If this is not enough detail for a patch, a new paragraphs(s) can be added to explain in proper depth what has happened. The details should be good enough that a core developer reading it understands the justification for the change.
  
 ## Getting your patch reviewed {#PatchesReview}
 
