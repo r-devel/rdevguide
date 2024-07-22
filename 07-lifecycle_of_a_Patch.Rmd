@@ -90,7 +90,7 @@ Once you are happy with the changes and the checks report that everything is oka
 
 `https://patch-diff.githubusercontent.com/raw/r-devel/r-svn/pull/<pull_request_number>.diff`
 
-With that file you can [submit your patch](#SubmitPatches), remember to check if it meets the [recommendations for good patches](#GoodPatches).
+Save `<pull_request_number>.diff` as a plain text file to [submit your patch](#SubmitPatches), remember to check if it meets the [recommendations for good patches](#GoodPatches).
 
 If you want to use `git` from the terminal to create the pull request (PR) to test the changes, you can use this [summary of the available git commands](https://about.gitlab.com/images/press/git-cheat-sheet.pdf "git cheat sheet").
 
