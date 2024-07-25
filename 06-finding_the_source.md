@@ -12,7 +12,7 @@ This chapter discusses how you can have an overview of the R codebase. For insta
 
   * Top-level function is an S3 generic, identified by a call to `UseMethod()`. Use `methods(function_name)` to see available methods, then go to step 2.
   
-  * Code of interest is in compiled code, identified by a call to `.C()`, `.Call()`, `.Fortran()`, and `.External()`, or `.Internal()` and `.Primitive()`: go to section on compiled code.
+  * Code of interest is in compiled code, identified by a call to `.C()`, `.Call()`, `.Fortran()`, `.External()`, and `.External.graphics()`, or `.Internal()` and `.Primitive()`: go to section on compiled code.
  
 2. Nested functions or S3 methods may not be exported by the package they are in. If this is the case, the simplest way to view the code is to use `getAnywhere()` or `getS3method()`. Now you can keep looking at nested R functions till you find the code of interest or hit a call to compiled code.
 
@@ -54,7 +54,7 @@ Note: The above procedure does not cover S4, R6 or RC generics or methods. Refer
 stats:::C_compcases$name
 ```
 
-We know that it is in the stats package as we see that when we print complete.cases or look at the help file. This shows us that the entry point is simply "compcases" and in fact that is the general convention in R code, that you simply remove the `C_` prefix (sometimes `.F_` for Fortran code) in the name of the object passed to the first argument of the call.
+We know that it is in the stats package as we see that when we print complete.cases or look at the help file. This shows us that the entry point is simply "compcases" and in fact that is the general convention in R code, that you simply remove the `C_` prefix (sometimes `.F_` for Fortran code^[Other variations are also possible.  For example, `.External.graphics()` calls to C functions in the grid package have a `C_` prefix in the R code, but an `L_` prefix in the C code.]) in the name of the object passed to the first argument of the call.
 
 2. Once you have the entry point, search as for R code. In the case of searching on GitHub, restrict the search to files with the relevant extension
 

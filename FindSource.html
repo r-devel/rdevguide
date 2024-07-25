@@ -23,7 +23,7 @@
 <meta name="author" content="R Contribution Working Group" />
 
 
-<meta name="date" content="2024-07-23" />
+<meta name="date" content="2024-07-25" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -330,7 +330,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li><p>Can already see code of interest: stop here or skip to step 3 to find the corresponding file in the R sources.</p></li>
 <li><p>Code of interest is in nested R function: go to step 2.</p></li>
 <li><p>Top-level function is an S3 generic, identified by a call to <code>UseMethod()</code>. Use <code>methods(function_name)</code> to see available methods, then go to step 2.</p></li>
-<li><p>Code of interest is in compiled code, identified by a call to <code>.C()</code>, <code>.Call()</code>, <code>.Fortran()</code>, and <code>.External()</code>, or <code>.Internal()</code> and <code>.Primitive()</code>: go to section on compiled code.</p></li>
+<li><p>Code of interest is in compiled code, identified by a call to <code>.C()</code>, <code>.Call()</code>, <code>.Fortran()</code>, <code>.External()</code>, and <code>.External.graphics()</code>, or <code>.Internal()</code> and <code>.Primitive()</code>: go to section on compiled code.</p></li>
 </ul>
 <ol start="2" style="list-style-type: decimal">
 <li><p>Nested functions or S3 methods may not be exported by the package they are in. If this is the case, the simplest way to view the code is to use <code>getAnywhere()</code> or <code>getS3method()</code>. Now you can keep looking at nested R functions till you find the code of interest or hit a call to compiled code.</p></li>
@@ -358,7 +358,7 @@ grep -R &quot;quantile &lt;- function&quot; ~/R-devel/src/library</code></pre>
 <pre><code>.External(C_compcases, ...)</code></pre>
 <p><code>C_compcases</code> inherits from class “NativeSymbolInfo” and we can extract the name of the entry point via</p>
 <pre><code>stats:::C_compcases$name</code></pre>
-<p>We know that it is in the stats package as we see that when we print complete.cases or look at the help file. This shows us that the entry point is simply “compcases” and in fact that is the general convention in R code, that you simply remove the <code>C_</code> prefix (sometimes <code>.F_</code> for Fortran code) in the name of the object passed to the first argument of the call.</p>
+<p>We know that it is in the stats package as we see that when we print complete.cases or look at the help file. This shows us that the entry point is simply “compcases” and in fact that is the general convention in R code, that you simply remove the <code>C_</code> prefix (sometimes <code>.F_</code> for Fortran code<a href="#fn5" class="footnote-ref" id="fnref5"><sup>5</sup></a>) in the name of the object passed to the first argument of the call.</p>
 <ol start="2" style="list-style-type: decimal">
 <li>Once you have the entry point, search as for R code. In the case of searching on GitHub, restrict the search to files with the relevant extension</li>
 </ol>
@@ -379,6 +379,12 @@ finding all references (calls) to a function.</p></li>
 <p><a href="https://blog.r-hub.io/2019/05/14/read-the-source/">Read the R source</a> blogpost.</p>
 
 </div>
+</div>
+<div class="footnotes">
+<hr />
+<ol start="5">
+<li id="fn5"><p>Other variations are also possible. For example, <code>.External.graphics()</code> calls to C functions in the grid package have a <code>C_</code> prefix in the R code, but an <code>L_</code> prefix in the C code.<a href="FindSource.html#fnref5" class="footnote-back">↩︎</a></p></li>
+</ol>
 </div>
             </section>
 

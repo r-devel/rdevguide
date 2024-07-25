@@ -120,7 +120,7 @@
 
 \title{R Development Guide}
 \author{R Contribution Working Group}
-\date{2024-07-23}
+\date{2024-07-25}
 
 \begin{document}
 \maketitle
@@ -978,7 +978,7 @@ This chapter discusses how you can have an overview of the R codebase. For insta
 \item
   Top-level function is an S3 generic, identified by a call to \texttt{UseMethod()}. Use \texttt{methods(function\_name)} to see available methods, then go to step 2.
 \item
-  Code of interest is in compiled code, identified by a call to \texttt{.C()}, \texttt{.Call()}, \texttt{.Fortran()}, and \texttt{.External()}, or \texttt{.Internal()} and \texttt{.Primitive()}: go to section on compiled code.
+  Code of interest is in compiled code, identified by a call to \texttt{.C()}, \texttt{.Call()}, \texttt{.Fortran()}, \texttt{.External()}, and \texttt{.External.graphics()}, or \texttt{.Internal()} and \texttt{.Primitive()}: go to section on compiled code.
 \end{itemize}
 
 \begin{enumerate}
@@ -1039,7 +1039,7 @@ Note: The above procedure does not cover S4, R6 or RC generics or methods. Refer
 stats:::C_compcases$name
 \end{verbatim}
 
-We know that it is in the stats package as we see that when we print complete.cases or look at the help file. This shows us that the entry point is simply ``compcases'' and in fact that is the general convention in R code, that you simply remove the \texttt{C\_} prefix (sometimes \texttt{.F\_} for Fortran code) in the name of the object passed to the first argument of the call.
+We know that it is in the stats package as we see that when we print complete.cases or look at the help file. This shows us that the entry point is simply ``compcases'' and in fact that is the general convention in R code, that you simply remove the \texttt{C\_} prefix (sometimes \texttt{.F\_} for Fortran code\footnote{Other variations are also possible. For example, \texttt{.External.graphics()} calls to C functions in the grid package have a \texttt{C\_} prefix in the R code, but an \texttt{L\_} prefix in the C code.}) in the name of the object passed to the first argument of the call.
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
