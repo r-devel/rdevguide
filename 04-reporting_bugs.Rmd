@@ -76,6 +76,9 @@ For packages that are not maintained by the R-Core, the bug reports can be submi
 
 ### Bug in a documentation website managed by the R-Core team {#docWebsRCoreBug}
 
+The R-Core team manages a list of website connected to the R project. If you noticed a bug or an issue which you would like to report, please [see posting guide](https://www.r-project.org/posting-guide.html#which_list) and then submit the issue report by sending an email to R-devel@R-project.org
+
+The list of websites managed by the R-Core team: 
 - [R FAQ](https://cran.r-project.org/doc/FAQ/R-FAQ.html)
 - [R for Windows FAQ](https://cran.r-project.org/bin/windows/base/rw-FAQ.html)
 - [R for macOS FAQ](https://cran.r-project.org/bin/macosx/RMacOSX-FAQ.html)
