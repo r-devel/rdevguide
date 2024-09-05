@@ -8,7 +8,7 @@ This chapter is about the ways people can contribute to R's documentation, with 
 
 ## Helping with documentation
 
-Maintaining the accuracy  of R's documentations and keeping a high level of quality takes a lot of effort. Community members, like you, help with writing, editing, and updating content, and these contributions are appreciated and welcomed.
+Maintaining the accuracy of R's documentations and keeping a high level of quality takes a lot of effort. Community members, like you, help with writing, editing, and updating content, and these contributions are appreciated and welcomed.
 
 Looking at pre-existing documentation source files can be very helpful when getting started.
 
@@ -185,7 +185,7 @@ If you decide to proofread, read a section of the documentation from start to fi
 
 The Developer’s Guide (what you are reading now) uses the same process as the main R documentation, except for some small differences. The source lives in a [GitHub repository](https://github.com/r-devel/rdevguide/) and bug reports should be submitted to the [devguide GitHub tracker](https://github.com/r-devel/rdevguide/issues).
 
-Our dev guide workflow uses continuous integration and deployment so changes to the dev guide are normally published when the pull request is merged. [How to contribute to this guide from the introduction.](#how-to-contribute-to-this-guide)
+Our Developer’s Guide workflow uses continuous integration and deployment so changes to the Developer’s Guide are normally published when the pull request is merged. [How to contribute to this guide from the introduction.](#how-to-contribute-to-this-guide)
 
 ## See also
 
