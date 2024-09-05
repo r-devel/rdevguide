@@ -9,8 +9,8 @@ Contributions to base R are possible in a number of different ways. Some of them
 1. Contributing to bug fixing: Refer [Bug Tracking](#BugTrack) and [Reviewing Bugs](#ReviewBugs).
 2. Contributing to translations: Refer [Translations](#).
 3. Testing R before release: Refer [Testing Pre-release R Versions](#TestRVer).
+4. Contributing to documentation and tutorials: Refer [Documenting R](#Doc).
 
-<!-- TODO(Saranjeet): Refer Contributing to R tutorial -->
 <!-- TODO(Saranjeet): Welcome to Bug BBQ slides -->
 <!-- TODO(Saranjeet): README on Bug BBQ repo -->
 
