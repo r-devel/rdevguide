@@ -14,6 +14,8 @@ Contributions to base R are possible in a number of different ways. Some of them
 <!-- TODO(Saranjeet): Welcome to Bug BBQ slides -->
 <!-- TODO(Saranjeet): README on Bug BBQ repo -->
 
+Maintainers and contributors are requested to follow this project's [code of conduct](https://github.com/r-devel/rdevguide/blob/main/CONDUCT.md).
+
 ## Quick start to the guide
 
 The guide is intended as a comprehensive resource for contributing to base R. The following chapter outline provides an overview with links to sections for getting started with contributing.
@@ -47,6 +49,3 @@ This guide is built using bookdown which makes editing it easier, provided you h
 ![Screenshot of the toolbar in the HTML version of the guide, with the Edit button (pencil and paper icon) circled in red.](img/edit_icon.png)
 
 Use the [issue tracker](https://github.com/r-devel/rdevguide/issues) to raise an issue about the guide’s content or to make a feature request.
-
-Maintainers and contributors are requested to follow this project's [code of conduct](https://github.com/r-devel/rdevguide/blob/main/CONDUCT.md).
-
