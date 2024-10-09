@@ -4,7 +4,60 @@ R has a substantial body of documentation, comprising help files for the core pa
 
 The involvement of the community takes many forms, from contributing content, to making bug reports or raising an issue when the documentation could be more complete or made easier to follow.
 
-This chapter is about the ways people can contribute to R's documentation, with guidance on how to do that. Any time you feel that you can clarify or fill gaps in existing documentation, your contribution is welcome and appreciated. If you find it difficult to deal with the markup used in the source files, you can ask for help with that part too. Please do not let the material in this chapter stand between the documentation and your desire to help out. However, not every good faith effort to change or extend the documentation will be accepted - sometimes the suggested changes may be incorrect; other times, while a change in wording may make some things clearer and easier to understand, the finer details of some corner case may become less clear, leading to the suggested changes being declined or modified by a member of R Core before applying them (if they agree the issue is important enough to fix).
+This chapter is about the ways people can contribute to R's documentation, with guidance on how to do that. Any time you feel that you can clarify or fill gaps in existing documentation, your contribution is welcome and appreciated. If you find it difficult to deal with the markup formatting language used in the source files, you can ask for help with that part too. Please do not let the material in this chapter stand between the documentation and your desire to help out. However, not every good faith effort to change or extend the documentation will be accepted - sometimes the suggested changes may be incorrect; other times, while a change in wording may make some things clearer and easier to understand, the finer details of some corner case may become less clear, leading to the suggested changes being declined or modified by a member of R Core before applying them (if they agree the issue is important enough to fix).
+
+## Helping with documentation
+
+Maintaining the accuracy of R's documentations and keeping a high level of quality takes a lot of effort. Community members, like you, help with writing, editing, and updating content, and these contributions are appreciated and welcomed.
+
+Looking at pre-existing documentation source files can be very helpful when getting started.
+
+You can directly search for [documentation issues/bugs on Bugzilla](https://bugs.r-project.org/buglist.cgi?component=Documentation&list_id=22501&product=R&resolution=---). Issues vary from typos to unclear documentation and items lacking documentation.
+
+If you see a documentation issue that you would like to tackle, you can leave a comment on the issue saying you are going to try to solve the issue and mention roughly how long you think you will take to do so (this allows others to take on the issue if you happen to forget or lose interest).
+
+## Reporting documentation bugs
+ <!--
+discussion in slack (random channel)
+-->
+
+If you find some typo or problem on the [CRAN](https://cran.r-project.org) webpages you can write a polite email to `CRAN@r-project.org` to report it. As an alternative, one can also write to the R-devel mailing list or submit a bug report via R's Bugzilla.
+
+For improvements of the R-manuals or reporting typos or bugs in the R-manuals, submit a bug report to [R's Bugzilla](https://bugs.r-project.org/).
+
+For reporting bugs or typos on the webpages or documentation about a particular package, write to the corresponding package maintainer. To find the maintainer of a package, use the command `maintainer("package-name")`.
+
+**Note**:
+
+There is a `#core-documentation` channel on the [R Contributors slack](https://r-contributors.slack.com/) where you can discuss about the patches for improvements to R's documentation. 
+
+### Example documentation bugs
+
+Here are a couple of successfully resolved bugs as examples.
+
+1. [Bug 16003 - heatmap scale argument: description not complete](https://bugs.r-project.org/show_bug.cgi?id=16003)
+
+There was a question about the description in the documentation, where it wasn't technically incorrect, but was slightly unclear. This led to a discussion around the updates to the text and a couple of extra examples were added in for clarity too.
+
+2. [Bug 18781 - typo in texinfo](https://bugs.r-project.org/show_bug.cgi?id=18781)
+
+This is an example of a typo being spotted, raised and fixed within the same day.
+
+## Guidelines for writing R help files
+
+This section is based on the [guidelines used by R Core developers for writing R help files](https://developer.r-project.org/Rds.html). Extensive details of writing R documentation files can be found in the [Writing R Extensions](https://cran.r-project.org/doc/manuals/r-release/R-exts.html#Writing-R-documentation-files) manual.
+
+The language used in the documentations should follow these basic rules:
+
+1. Affirmative tone should be used to describe what the function does and how to use it effectively. Rather than creating worry in the mind of a reader, it should establish confident knowledge about the effective use of the particular function/feature.
+
+2. More documentation is not necessarily better documentation. Long descriptions full of corner cases and caveats can create the impression that a function is more complex or harder to use than it actually is. Be succinct but exhaustive. 
+
+3. Short code examples can help in understanding better. Readers can often grasp a simple example more quickly than they can digest a formal description. Usually people learn faster with concrete, motivating examples that match the context of a typical use case. 
+
+4. Giving a code equivalent (or approximate equivalent) can be a useful addition to the description provided. You should carefully weigh whether the code equivalent adds value to the document.
+
+5. The tone of the documentation needs to be respectful of the reader's background. Lay out the relevant information, show motivating use cases, provide glossary links, and do your best to connect-the-dots. The documentation is meant for newcomers, many of whom will be using it to evaluate the R language as a whole. The experience needs to be positive and not leave the reader with worries that something bad will happen if they make a mistake. 
 
 ## Introduction to `.Rd` files
 
@@ -113,22 +166,6 @@ c(xm, mean(x, trim = 0.10))
 
 Many R package developers write help files using the R package [roxygen2](https://cran.r-project.org/package=roxygen2), which generates `.Rd` files from comments in the corresponding `.R` files. However, in this guide we only consider `.Rd` files, because the help files for the base distribution are written and edited directly in `.Rd` format.
 
-## Guidelines for writing R help files
-
-This section is based on the [guidelines used by R Core developers for writing R help files](https://developer.r-project.org/Rds.html). Extensive details of writing R documentation files can be found in the [Writing R Extensions](https://cran.r-project.org/doc/manuals/r-release/R-exts.html#Writing-R-documentation-files) manual.
-
-The language used in the documentations should follow these basic rules:
-
-1. Affirmative tone should be used to describe what the function does and how to use it effectively. Rather than creating worry in the mind of a reader, it should establish confident knowledge about the effective use of the particular function/feature.
-
-2. More documentation is not necessarily better documentation. Long descriptions full of corner cases and caveats can create the impression that a function is more complex or harder to use than it actually is. Be succinct but exhaustive. 
-
-3. Short code examples can help in understanding better. Readers can often grasp a simple example more quickly than they can digest a formal description. Usually people learn faster with concrete, motivating examples that match the context of a typical use case. 
-
-4. Giving a code equivalent (or approximate equivalent) can be a useful addition to the description provided. You should carefully weigh whether the code equivalent adds value to the document.
-
-5. The tone of the documentation needs to be respectful of the reader’s background. Lay out the relevant information, show motivating use cases, provide glossary links, and do your best to connect-the-dots. The documentation is meant for newcomers, many of whom will be using it to evaluate the R language as a whole. The experience needs to be positive and not leave the reader with worries that something bad will happen if they make a mistake. 
-
 ## R manuals
 
 The [R manuals](https://cran.r-project.org/manuals.html) are a part of the [R sources](https://svn.r-project.org/R/trunk/doc/manual/). Hence, bug reports/patches can also be submitted via Bugzilla, e.g. [Bug 15221 - R-admin/'Installing R under Windows': Missing argument name](https://bugs.r-project.org/bugzilla/show_bug.cgi?id=15221). Note that they are typically referred to by their file names as listed below:
@@ -148,18 +185,6 @@ Note:
 - The [R manuals](https://cran.r-project.org/manuals.html) page has links for the [three types of release](https://contributor.r-project.org/rdevguide/GetStart.html#the-r-source-code): `r-release`, `r-patched` and `r-devel`.  These nicknames appear in the URLs, e.g. https://cran.r-project.org/doc/manuals/r-release/R-intro.html.
 - The [Texinfo manual](https://www.gnu.org/software/texinfo/) should be referred to for [how to mark up text](https://www.gnu.org/software/texinfo/manual/texinfo/texinfo.html).
 
-## Helping with documentation
-
-Maintaining the accuracy  of R's documentations and keeping a high level of quality takes a lot of effort. Community members, like you, help with writing, editing, and updating content, and these contributions are appreciated and welcomed.
-
-Looking at pre-existing documentation source files can be very helpful when getting started.
-
-You can directly search for [documentation issues/bugs on Bugzilla](https://bugs.r-project.org/buglist.cgi?component=Documentation&list_id=22501&product=R&resolution=---). Issues vary from typos to unclear documentation and items lacking documentation.
-
-If you see a documentation issue that you would like to tackle, you can leave a comment on the issue saying you are going to try to solve the issue and mention roughly how long you think you will take to do so (this allows others to take on the issue if you happen to forget or lose interest).
-
-If you find some typo or problem on [CRAN](https://cran.r-project.org) after checking the problem or typo you can write a polite email to `cran-sysadmin@r-project.org` and one of the R-core members working with CRAN. You'll probably get a prompt reply about how the issue is going to be fixed.
-
 ## Proofreading
 
 While an issue filed on Bugzilla means there is a known issue somewhere, that does not mean there are not other issues lurking about in the documentation. Proofreading a part of the documentation can often uncover problems.
@@ -168,24 +193,9 @@ If you decide to proofread, read a section of the documentation from start to fi
 
 ## Helping with the Developer's Guide
 
-The Developer’s Guide (what you are reading now) uses the same process as the main R documentation, except for some small differences. The source lives in a [GitHub repository](https://github.com/r-devel/rdevguide/) and bug reports should be submitted to the [devguide GitHub tracker](https://github.com/r-devel/rdevguide/issues).
+The Developer's Guide (what you are reading now) uses the same process as the main R documentation, except for some small differences. The source lives in a [GitHub repository](https://github.com/r-devel/rdevguide/) and bug reports should be submitted to the [devguide GitHub tracker](https://github.com/r-devel/rdevguide/issues).
 
-Our dev guide workflow uses continuous integration and deployment so changes to the dev guide are normally published when the pull request is merged. [How to contribute to this guide from the introduction.](#how-to-contribute-to-this-guide)
-
-## Reporting documentation bugs
- <!---
-discussion in slack (random channel)
--->
-
-If you find some typo or problem on the [CRAN](https://cran.r-project.org) webpages you can write a polite email to `CRAN@r-project.org` to report it. As an alternative, one can also write to the R-devel mailing list or submit a bug report via R's Bugzilla.
-
-For improvements of the R-manuals or reporting typos or bugs in the R-manuals, submit a bug report to R's Bugzilla.
-
-For reporting bugs or typos on the webpages or documentation about a particular package, write to the corresponding package maintainer. To find the maintainer of a package, use the command `maintainer("package-name")`.
-
-**Note**:
-
-There is a `#core-documentation` channel on the [R Contributors slack](https://r-contributors.slack.com/) where you can discuss about the patches for improvements to R's documentation. 
+Our Developer's Guide workflow uses continuous integration and deployment so changes to the Developer’s Guide are normally published when the pull request is merged. [How to contribute to this guide from the introduction.](#how-to-contribute-to-this-guide)
 
 ## See also
 
