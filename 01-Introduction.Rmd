@@ -10,8 +10,11 @@ Contributions to base R are possible in a number of different ways. Some of them
 2. Contributing to translations: Refer [Translations](#).
 3. Testing R before release: Refer [Testing Pre-release R Versions](#TestRVer).
 4. Contributing to documentation and tutorials, including this guide: Refer [Documenting R](#Doc) and [Contributing to this guide](#how-to-contribute-to-this-guide).
+
 <!-- TODO(Saranjeet): Welcome to Bug BBQ slides -->
 <!-- TODO(Saranjeet): README on Bug BBQ repo -->
+
+A common starting point for new contributors is to start with documentation, as this allows for an easier way into the ways of working and tools used.
 
 Maintainers and contributors are requested to follow this project's [code of conduct](https://github.com/r-devel/rdevguide/blob/main/CONDUCT.md).
 
