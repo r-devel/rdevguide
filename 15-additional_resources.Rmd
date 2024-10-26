@@ -6,6 +6,14 @@ There are a number of further resources to help with contributions to R.
 
 Contains information for people interested in contributing to R core, including details for the [R Contribution Working Group](https://contributor.r-project.org/working-group), the [R Contributors Slack workspace](https://contributor.r-project.org/slack) and upcoming [R Contributor events and meetups](https://contributor.r-project.org/events/). 
 
+## R developer page
+
+The [R developer page](https://developer.r-project.org/) contains details on the R release process, and the [R blog](https://blog.r-project.org/).
+
+## R developer mailing list
+
+You can find more information about, and subscribe to R development mailing list on the [R-devel site](https://stat.ethz.ch/mailman/listinfo/r-devel).
+
 ## R Translations site
 
 There are a number of translation projects already underway or completed, more information on how to offer your help with one of these, contact others involved in translations, and to find more detailed instructions for translating R Messages or R Manuals can be found on the [R Translations site](https://contributor.r-project.org/translations/).
