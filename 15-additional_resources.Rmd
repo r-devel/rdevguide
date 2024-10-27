@@ -1,25 +1,10 @@
 # Additional resources {#AdditionalResources}
 
-There are a number of further resources to help with contributions to R.
-
-## R Contributor site
-
-Contains information for people interested in contributing to R core, including details for the [R Contribution Working Group](https://contributor.r-project.org/working-group), the [R Contributors Slack workspace](https://contributor.r-project.org/slack) and upcoming [R Contributor events and meetups](https://contributor.r-project.org/events/). 
-
-## R developer page
-
-The [R developer page](https://developer.r-project.org/) contains details on the R release process, and the [R blog](https://blog.r-project.org/).
-
-## R developer mailing list
-
-You can find more information about, and subscribe to R development mailing list on the [R-devel site](https://stat.ethz.ch/mailman/listinfo/r-devel).
-
-## R Translations site
-
-There are a number of translation projects already underway or completed, more information on how to offer your help with one of these, contact others involved in translations, and to find more detailed instructions for translating R Messages or R Manuals can be found on the [R Translations site](https://contributor.r-project.org/translations/).
-
-## R manuals
-
-There are a number of manuals created and included with R installations. The original latest and development versions of these are available from the [R Manuals site](https://cran.r-project.org/manuals.html). Note that the versions included on the site are created with Debian Linux. While there may be some variation for Windows and Mac manuals,  most parts will be identical regardless of platform.
-
-There is a [new re-styled R manuals site built with Quarto](https://rstudio.github.io/r-manuals/) that has been produced to make searching and navigating the manuals easier in a web browser. This site is automatically built from the original manuals site using a number of scripts in the [r-manuals GitHub repo](https://github.com/rstudio/r-manuals).
+* [R contributor site](https://contributor.r-project.org)
+* [R developer page](https://developer.r-project.org/) 
+* [R blog](https://blog.r-project.org/)
+* [R-devel mailing list](https://stat.ethz.ch/mailman/listinfo/r-devel)
+* [R translations site](https://contributor.r-project.org/translations/)
+* [R manuals site (original)](https://cran.r-project.org/manuals.html)
+* [R manuals site (re-styled with Quarto)](https://rstudio.github.io/r-manuals/)
+* [r-manuals GitHub repo](https://github.com/rstudio/r-manuals)
