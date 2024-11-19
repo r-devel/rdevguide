@@ -25,7 +25,7 @@ There are quite a few [mailing lists](https://www.r-project.org/mail.html) for g
   * [R-devel](https://stat.ethz.ch/mailman/listinfo/r-devel): 
       * Questions and discussion about development _of_ R vs. _with_ R.
       * Getting help with technical programming issues, e.g. interfacing R with C/C++.
-      * Proposals of new functionality for R.
+      * Proposals of new functionality/feature requests for R.
       * Pre-testing of new versions of R.
       * Enhancements and patches to the R source code and the R documentation.
       * Posting examples and benchmarks.
