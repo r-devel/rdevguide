@@ -34,7 +34,7 @@ When you are in doubt that there is a bug: (which should be the case most of the
 
 4. If some function is working, but it is not defined in the best generalised way, then consult someone to look over the code. This may perhaps not be a bug; instead, it might be an alternative way of writing the function.
 
-## Checking if a bug is already reported
+## Checking if a bug is already reported {#already-reported-bugs}
 
 The first step before filing a bug report is to see whether the problem has already been reported. Checking if the bug is reported will:
 
@@ -74,7 +74,7 @@ Once you confirm a bug exists, you need to submit a bug report so that it gets f
 
 For packages that are not maintained by the R-Core, the bug reports can be submitted at, perhaps, an issues tracker url on GitHub/GitLab/R-Forge. To find if such an issues tracker is available, you can look at the package `DESCRIPTION` file first (e.g. using `packageDescription("package_name")`) to check if a url is provided in the `BugReports` field. If that is not available, then the package maintainer can be contacted (using `maintainer("package_name")`). In R running the function `bug.report(package = "package_name")` shall direct you to either the GitHub issue tracker of the package, or to the bug tracking web page, or towards composing an e-mail to the package maintainer. This function `bug.report` is disabled in RStudio, by default. However, if you use `utils::bug.report(package = "package_name")` then it works on RStudio as well. Please ensure that the bug is not already reported or fixed before reporting it in any of the ways suggested above.
 
-## Good practices in reporting bugs / Expectations of a good bug report
+## Good practices in reporting bugs / Expectations of a good bug report {#good-practices-bugs}
 
 If you follow the practices given below, you will come up with a good bug report which might make it easier for the maintainer(s) to fix the bug.
 
