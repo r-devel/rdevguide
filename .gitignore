@@ -5,6 +5,7 @@
 .DS_Store
 docs/
 rdevguide.rds
+rdevguide.log
 
 # temp files
 *~
