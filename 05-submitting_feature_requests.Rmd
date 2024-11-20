@@ -12,7 +12,7 @@ You can submit a feature request by [filing a bug](https://bugs.r-project.org/en
 
 ![The "Wishlist" component in Bugzilla's bug submission screen.](img/feature-requests.png)
 
-Similar to bugs, you should ensure that the feature request is [not already reported](https://contributor.r-project.org/rdevguide/ReportingBugs.html#checking-if-a-bug-is-already-reported) and [follow best practices](https://contributor.r-project.org/rdevguide/ReportingBugs.html#good-practices-in-reporting-bugs-expectations-of-a-good-bug-report) whenever possible.
+Similar to bugs, you should ensure that the feature request is [not already reported](#already-reported-bugs) and [follow best practices](#good-practices-bugs) whenever possible.
 
 ## Examples of feature requests submitted on Bugzilla
 
