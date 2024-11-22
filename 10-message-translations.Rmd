@@ -317,6 +317,35 @@ text box.
 Related links:
 <https://contributor.r-project.org/tutorials/translating-r-to-your-language/>
 
+
+## Bulk Translations
+
+Instead of translating one string at a time, it is possible to bulk translate a whole component of R at once:
+
+1. Navigate to the translations for a particular component in a particular language, e.g. https://translate.rx.studio/projects/r-project/base-c/ar/
+
+2. Select **'Tools > Automatic translation'**
+
+![](img/translate_automatic_translation.png)
+
+
+3. In the dialog,
+ - under **'Automatic translation mode'**, select **'Add as "needing edit"'**[^09-message-translations-2]:
+ 
+
+[^09-message-translations-2]: By selecting **'Add as "needing edit"'**, the autotranslated strings would be treated as "fuzzy" translations, i.e. they would be added to the component source files when a patch is made, but they would NOT be used. 
+ 
+ - under **'Search filter'**, select **'Untranslated strings'**
+ - under **'Source of automated translations'**, select **'Machine translation'**
+ - under **'Machine translation engines'**, select **'Microsoft Translator'**[^09-message-translations-3]:
+
+  
+[^09-message-translations-3]: Microsoft Translator is preferred for bulk translation as our free tier covers 2 million characters/month, where DeepL only allows 500k chars/month. If Microsoft Translator translations are much worse than DeepL, it may be useful to use it to translate one string at a time.
+
+![](img/translate_dialog.png)
+
+4.  Review the translations, edit as necessary and uncheck **"needing edit"**. 
+
 ## Current status of translations in R
 
 <https://contributor.r-project.org/translations-dashboard/>
