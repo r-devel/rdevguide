@@ -326,7 +326,7 @@ Instead of translating one string at a time, it is possible to bulk translate a 
 
 2. Select **'Tools > Automatic translation'**
 
-![](img/translate_automatic_translation.png)
+![Tools drop-down menu with "Automatic Translations" selected](img/translate_automatic_translation.png)
 
 
 3. In the dialog,
@@ -342,7 +342,7 @@ Instead of translating one string at a time, it is possible to bulk translate a 
   
 [^09-message-translations-3]: Microsoft Translator is preferred for bulk translation as our free tier covers 2 million characters/month, where DeepL only allows 500k chars/month. If Microsoft Translator translations are much worse than DeepL, it may be useful to use it to translate one string at a time.
 
-![](img/translate_dialog.png)
+![Automatic Translations dialog box](img/translate_dialog.png)
 
 4.  Review the translations, edit as necessary and uncheck **"needing edit"**. 
 
