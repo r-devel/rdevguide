@@ -308,6 +308,16 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "hfrick",
+      "name": "Hannah Frick",
+      "avatar_url": "https://avatars.githubusercontent.com/u/12950918?v=4",
+      "profile": "http://www.frick.ws",
+      "contributions": [
+        "doc",
+        "ideas"
+      ]
     }
   ],
   "contributorsPerLine": 7,
