@@ -268,6 +268,15 @@
       "contributions": [
         "infra"
       ]
+    },
+    {
+      "login": "pmur002",
+      "name": "Paul Murrell",
+      "avatar_url": "https://avatars.githubusercontent.com/u/2044052?v=4",
+      "profile": "https://github.com/pmur002",
+      "contributions": [
+        "content"
+      ]
     }
   ],
   "contributorsPerLine": 7,
