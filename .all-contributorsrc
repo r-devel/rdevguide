@@ -308,6 +308,25 @@
       "contributions": [
         "infra"
       ]
+    },
+    {
+      "login": "hanneoberman",
+      "name": "Hanne Oberman",
+      "avatar_url": "https://avatars.githubusercontent.com/u/38891540?v=4",
+      "profile": "http://hanneoberman.github.io",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "hfrick",
+      "name": "Hannah Frick",
+      "avatar_url": "https://avatars.githubusercontent.com/u/12950918?v=4",
+      "profile": "http://www.frick.ws",
+      "contributions": [
+        "doc",
+        "ideas"
+      ]
     }
   ],
   "contributorsPerLine": 7,
