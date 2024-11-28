@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 13 Where to Get Help | R Development Guide</title>
+  <title>Chapter 5 Submitting Feature Requests | R Development Guide</title>
   <meta name="description" content="This guide is a comprehensive resource for contributing to base R for both new and experienced contributors." />
   <meta name="generator" content="bookdown 0.41 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 13 Where to Get Help | R Development Guide" />
+  <meta property="og:title" content="Chapter 5 Submitting Feature Requests | R Development Guide" />
   <meta property="og:type" content="book" />
   <meta property="og:image" content="https://contributor.r-project.org/rdevguide/img/cover_page.png" />
   <meta property="og:description" content="This guide is a comprehensive resource for contributing to base R for both new and experienced contributors." />
   <meta name="github-repo" content="r-devel/rdevguide" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 13 Where to Get Help | R Development Guide" />
+  <meta name="twitter:title" content="Chapter 5 Submitting Feature Requests | R Development Guide" />
   
   <meta name="twitter:description" content="This guide is a comprehensive resource for contributing to base R for both new and experienced contributors." />
   <meta name="twitter:image" content="https://contributor.r-project.org/rdevguide/img/cover_page.png" />
@@ -30,8 +30,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   <link rel="shortcut icon" href="img/Rlogo.svg" type="image/x-icon" />
-<link rel="prev" href="CoreDev.html"/>
-<link rel="next" href="News.html"/>
+<link rel="prev" href="ReportingBugs.html"/>
+<link rel="next" href="ReviewBugs.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -329,50 +329,29 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="WhereToGetHelp" class="section level1 hasAnchor" number="13">
-<h1><span class="header-section-number">Chapter 13</span> Where to Get Help<a href="WhereToGetHelp.html#WhereToGetHelp" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p>If you are working on R it is possible that you will come across an issue where you would need some assistance to solve it. If you require help, there are options available to seek assistance or get some feedback which are discussed in this chapter. If the question involves process or tool usage then please check the rest of this guide first as it should answer your question. Please make sure to search the documentation and resources to see if your question has already been addressed. If not, then ask for assistance in the appropriate forum. Many developers are volunteers and please be polite, patient, and thoughtful when requesting for feedback or help.</p>
-<div id="slack" class="section level2 hasAnchor" number="13.1">
-<h2><span class="header-section-number">13.1</span> Slack<a href="WhereToGetHelp.html#slack" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>You can discuss issues related to the development of R and learn about the process of contributing to R on the <a href="https://r-contributors.slack.com/">R Contributors slack</a>. There are a number of experienced developers on this slack who can answer questions and/or provide feedback. The following channels are available on the R-devel slack for help and feedback with specific areas:</p>
-<ul>
-<li><p>#bugreports-for-review: Share bug reports for review/feedback before submitting to Bugzilla.</p></li>
-<li><p>#core-dev-help: Getting help on anything related to R Core contribution.</p></li>
-<li><p>#core-documentation: Discuss patches/improvements to R’s documentation.</p></li>
-<li><p>#core-translation: Discuss translating R messages, warnings, and errors into non-English languages.</p></li>
-<li><p>#patches-for-review: Share patches for peer review before submitting to R Core.</p></li>
-</ul>
-<p>Note: You may not be able to access the history of these channels, so it cannot be used as a knowledge base of sorts.</p>
+<div id="FeatureRequests" class="section level1 hasAnchor" number="5">
+<h1><span class="header-section-number">Chapter 5</span> Submitting Feature Requests<a href="FeatureRequests.html#FeatureRequests" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="what-is-a-feature-request" class="section level2 hasAnchor" number="5.1">
+<h2><span class="header-section-number">5.1</span> What is a feature request?<a href="FeatureRequests.html#what-is-a-feature-request" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>A feature request is a suggestion or proposal to add new functionality or improve an existing feature.</p>
+<p>We recommend sharing your feature request idea on the <a href="https://stat.ethz.ch/mailman/listinfo/r-devel">R-devel</a> mailing list and gaining support from R-Core members and other users to increase its likelihood of acceptance.</p>
 </div>
-<div id="mailing-lists" class="section level2 hasAnchor" number="13.2">
-<h2><span class="header-section-number">13.2</span> Mailing lists<a href="WhereToGetHelp.html#mailing-lists" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>There are quite a few <a href="https://www.r-project.org/mail.html">mailing lists</a> for getting help with R:</p>
-<ul>
-<li><a href="https://stat.ethz.ch/mailman/listinfo/r-devel">R-devel</a>:
-<ul>
-<li>Questions and discussion about development <em>of</em> R vs. <em>with</em> R.</li>
-<li>Getting help with technical programming issues, e.g. interfacing R with C/C++.</li>
-<li>Proposals of new functionality/feature requests for R.</li>
-<li>Pre-testing of new versions of R.</li>
-<li>Enhancements and patches to the R source code and the R documentation.</li>
-<li>Posting examples and benchmarks.</li>
-</ul></li>
-<li><a href="https://stat.ethz.ch/mailman/listinfo/r-help">R-help</a>:
-<ul>
-<li>Discussions about problems and solutions using R.</li>
-</ul></li>
-<li><a href="https://stat.ethz.ch/mailman/listinfo/r-package-devel">R-package-devel</a>:
-<ul>
-<li>Getting help about package development in R.</li>
-<li>Learning about the package development process.</li>
-<li>Discussing problems developing a package (or problem in passing the R CMD check).</li>
-</ul></li>
-</ul>
-<p>Please avoid cross-posting to both the R-package-devel and the R-devel mailing lists.</p>
+<div id="how-to-submit-a-feature-request" class="section level2 hasAnchor" number="5.2">
+<h2><span class="header-section-number">5.2</span> How to submit a feature request?<a href="FeatureRequests.html#how-to-submit-a-feature-request" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>You can submit a feature request by <a href="https://bugs.r-project.org/enter_bug.cgi">filing a bug</a> on Bugzilla. Under Component, select “Wishlist”, the designated label for feature requests.</p>
+<div class="float">
+<img src="img/feature-requests.png" alt="The “Wishlist” component in Bugzilla’s bug submission screen." />
+<div class="figcaption">The “Wishlist” component in Bugzilla’s bug submission screen.</div>
 </div>
-<div id="file-a-bug" class="section level2 hasAnchor" number="13.3">
-<h2><span class="header-section-number">13.3</span> File a bug<a href="WhereToGetHelp.html#file-a-bug" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>If you strongly suspect you have come across a bug (be it in the build process, or in other areas), then <a href="ReportingBugs.html#ReportBug">report it on Bugzilla</a>.</p>
+<p>Similar to bugs, you should ensure that the feature request is <a href="ReportingBugs.html#already-reported-bugs">not already reported</a> and <a href="ReportingBugs.html#good-practices-bugs">follow best practices</a> whenever possible.</p>
+</div>
+<div id="examples-of-feature-requests-submitted-on-bugzilla" class="section level2 hasAnchor" number="5.3">
+<h2><span class="header-section-number">5.3</span> Examples of feature requests submitted on Bugzilla<a href="FeatureRequests.html#examples-of-feature-requests-submitted-on-bugzilla" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>If you like to see how feature requests are reported on Bugzilla, here are some examples:</p>
+<ol style="list-style-type: decimal">
+<li><a href="https://bugs.r-project.org/show_bug.cgi?id=18690">Bug 18690 - Increase CONSOLE_BUFFER_SIZE and / or warn if input is truncated</a>: A feature request to ease the readability of long lines.</li>
+<li><a href="https://bugs.r-project.org/show_bug.cgi?id=17912">Bug 17912 - ordering elements in sessionInfo() by alphabetical order</a>: A feature request that was not accepted due to the prioritization of load time in session information.</li>
+</ol>
 
 </div>
 </div>
@@ -381,8 +360,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           </div>
         </div>
       </div>
-<a href="CoreDev.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="News.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="ReportingBugs.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="ReviewBugs.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -413,15 +392,15 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/r-devel/rdevguide/edit/main/13-where_to_get_help.Rmd",
+"link": "https://github.com/r-devel/rdevguide/edit/main/05-submitting_feature_requests.Rmd",
 "text": "Edit"
 },
 "history": {
-"link": "https://github.com/r-devel/rdevguide/commits/main/13-where_to_get_help.Rmd",
+"link": "https://github.com/r-devel/rdevguide/commits/main/05-submitting_feature_requests.Rmd",
 "text": null
 },
 "view": {
-"link": "https://github.com/r-devel/rdevguide/blob/main/13-where_to_get_help.Rmd",
+"link": "https://github.com/r-devel/rdevguide/blob/main/05-submitting_feature_requests.Rmd",
 "text": null
 },
 "download": ["rdevguide.pdf", "rdevguide.epub"],

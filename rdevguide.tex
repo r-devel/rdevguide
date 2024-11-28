@@ -120,7 +120,7 @@
 
 \title{R Development Guide}
 \author{R Contribution Working Group}
-\date{2024-07-25}
+\date{2024-11-28}
 
 \begin{document}
 \maketitle
@@ -573,7 +573,7 @@ Contributors can support issue tracking in R by
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
 \item
-  \href{https://contributor.r-project.org/rdevguide/ReportBugs.html}{Reporting bugs} or making feature requests (bug reports filed under the ``Wishlist'' component in Bugzilla),
+  \hyperref[ReportingBugs]{Reporting bugs} or \hyperref[FeatureRequests]{submitting feature requests} (bug reports filed under the ``Wishlist'' component in Bugzilla),
 \item
   \href{https://contributor.r-project.org/rdevguide/ReviewBugs.html}{Reviewing bug reports} to help close reports where no fix is needed or to help narrow down the problem and identify what needs to be fixed, or
 \item
@@ -786,7 +786,7 @@ When you are in doubt that there is a bug: (which should be the case most of the
   If some function is working, but it is not defined in the best generalised way, then consult someone to look over the code. This may perhaps not be a bug; instead, it might be an alternative way of writing the function.
 \end{enumerate}
 
-\section{Checking if a bug is already reported}\label{checking-if-a-bug-is-already-reported}
+\section{Checking if a bug is already reported}\label{already-reported-bugs}
 
 The first step before filing a bug report is to see whether the problem has already been reported. Checking if the bug is reported will:
 
@@ -838,7 +838,7 @@ Once you confirm a bug exists, you need to submit a bug report so that it gets f
 
 For packages that are not maintained by the R-Core, the bug reports can be submitted at, perhaps, an issues tracker url on GitHub/GitLab/R-Forge. To find if such an issues tracker is available, you can look at the package \texttt{DESCRIPTION} file first (e.g.~using \texttt{packageDescription("package\_name")}) to check if a url is provided in the \texttt{BugReports} field. If that is not available, then the package maintainer can be contacted (using \texttt{maintainer("package\_name")}). In R running the function \texttt{bug.report(package\ =\ "package\_name")} shall direct you to either the GitHub issue tracker of the package, or to the bug tracking web page, or towards composing an e-mail to the package maintainer. This function \texttt{bug.report} is disabled in RStudio, by default. However, if you use \texttt{utils::bug.report(package\ =\ "package\_name")} then it works on RStudio as well. Please ensure that the bug is not already reported or fixed before reporting it in any of the ways suggested above.
 
-\section{Good practices in reporting bugs / Expectations of a good bug report}\label{good-practices-in-reporting-bugs-expectations-of-a-good-bug-report}
+\section{Good practices in reporting bugs / Expectations of a good bug report}\label{good-practices-bugs}
 
 If you follow the practices given below, you will come up with a good bug report which might make it easier for the maintainer(s) to fix the bug.
 
@@ -890,6 +890,39 @@ If you like to see how bugs are reported on Bugzilla, here are some examples:
   \href{https://mac.r-project.org/man/R-FAQ.html\#R-Bugs}{R FAQ on bugs}
 \item
   \href{https://bugs.r-project.org/bugzilla/page.cgi?id=bug-writing.html}{Bugzilla guidelines of reporting a bug}
+\end{enumerate}
+
+\chapter{Submitting Feature Requests}\label{FeatureRequests}
+
+\section{What is a feature request?}\label{what-is-a-feature-request}
+
+A feature request is a suggestion or proposal to add new functionality or improve an existing feature.
+
+We recommend sharing your feature request idea on the \href{https://stat.ethz.ch/mailman/listinfo/r-devel}{R-devel} mailing list and gaining support from R-Core members and other users to increase its likelihood of acceptance.
+
+\section{How to submit a feature request?}\label{how-to-submit-a-feature-request}
+
+You can submit a feature request by \href{https://bugs.r-project.org/enter_bug.cgi}{filing a bug} on Bugzilla. Under Component, select ``Wishlist'', the designated label for feature requests.
+
+\begin{figure}
+\centering
+\includegraphics{img/feature-requests.png}
+\caption{The ``Wishlist'' component in Bugzilla's bug submission screen.}
+\end{figure}
+
+Similar to bugs, you should ensure that the feature request is \hyperref[already-reported-bugs]{not already reported} and \hyperref[good-practices-bugs]{follow best practices} whenever possible.
+
+\section{Examples of feature requests submitted on Bugzilla}\label{examples-of-feature-requests-submitted-on-bugzilla}
+
+If you like to see how feature requests are reported on Bugzilla, here are some examples:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \href{https://bugs.r-project.org/show_bug.cgi?id=18690}{Bug 18690 - Increase CONSOLE\_BUFFER\_SIZE and / or warn if input is truncated}: A feature request to ease the readability of long lines.
+\item
+  \href{https://bugs.r-project.org/show_bug.cgi?id=17912}{Bug 17912 - ordering elements in sessionInfo() by alphabetical order}: A feature request that was not accepted due to the prioritization of load time in session information.
 \end{enumerate}
 
 \chapter{Reviewing Bugs}\label{ReviewBugs}
@@ -1206,7 +1239,7 @@ Once you are happy with the changes and the checks report that everything is oka
 
 \texttt{https://patch-diff.githubusercontent.com/raw/r-devel/r-svn/pull/\textless{}pull\_request\_number\textgreater{}.diff}
 
-With that file you can \hyperref[SubmitPatches]{submit your patch}, remember to check if it meets the \hyperref[GoodPatches]{recommendations for good patches}.
+Save \texttt{\textless{}pull\_request\_number\textgreater{}.diff} as a plain text file to \hyperref[SubmitPatches]{submit your patch}, remember to check if it meets the \hyperref[GoodPatches]{recommendations for good patches}.
 
 If you want to use \texttt{git} from the terminal to create the pull request (PR) to test the changes, you can use this \href{https://about.gitlab.com/images/press/git-cheat-sheet.pdf}{summary of the available git commands}.
 
@@ -1232,13 +1265,27 @@ When creating a patch for submission, there are several things that you can do t
 
 \section{Submitting your patch for review}\label{SubmitPatches}
 
+\subsection{Patch in response to a pre-existing issue or bug report}\label{patch-in-response-to-a-pre-existing-issue-or-bug-report}
+
+In this case, you should attach the patch to the existing issue or bug report on Bugzilla with a brief comment.
+
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
 \item
-  Patch in response to a pre-existing issue or bug report: In this case, you should attach the patch to the existing issue or bug report on Bugzilla with a brief comment.
+  Use the Attachments option to add the \texttt{*.diff} file as attachment.
 \item
-  Patch in response to an unreported issue or bug report: Assuming you already performed a search on Bugzilla for a pre-existing issue or bug and did not find the issue or bug reported, you need to create a new bug report and include your patch with it. Please fill in as much relevant detail as possible to prevent reviewers from having to delay reviewing your patch because of lack of information. Include (mostly as the first sentence), a to-the-point explanation of what the purpose of the patch is. This sentence should not be in the descriptive form, rather an imperative form will be more suitable here. If this is not enough detail for a patch, a new paragraphs(s) can be added to explain in proper depth what has happened. The details should be good enough that a core developer reading it understands the justification for the change.
+  On the new Create New Attachment web page, add a Brief Decription.
+\item
+  Select Content Type as \texttt{patch}.
+\item
+  Add comments (often prose text) in this page rather than in the original bugzilla page for the PR.
+\item
+  Press Submit. This will give you a bugzilla submission that sends one e-mail to all of R-core plus the PR author.
 \end{enumerate}
+
+\subsection{Patch in response to an unreported issue or bug report}\label{patch-in-response-to-an-unreported-issue-or-bug-report}
+
+Assuming you already performed a search on Bugzilla for a pre-existing issue or bug and did not find the issue or bug reported, you need to create a new bug report and include your patch with it. Please fill in as much relevant detail as possible to prevent reviewers from having to delay reviewing your patch because of lack of information. Include (mostly as the first sentence), a to-the-point explanation of what the purpose of the patch is. This sentence should not be in the descriptive form, rather an imperative form will be more suitable here. If this is not enough detail for a patch, a new paragraphs(s) can be added to explain in proper depth what has happened. The details should be good enough that a core developer reading it understands the justification for the change.
 
 \section{Getting your patch reviewed}\label{PatchesReview}
 
@@ -1879,6 +1926,62 @@ and consistent:
 Related links:
 \url{https://contributor.r-project.org/tutorials/translating-r-to-your-language/}
 
+\section{Bulk Translations}\label{bulk-translations}
+
+Instead of translating one string at a time, it is possible to bulk translate a whole component of R at once:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  Navigate to the translations for a particular component in a particular language, e.g.~\url{https://translate.rx.studio/projects/r-project/base-c/ar/}
+\item
+  Select \textbf{`Tools \textgreater{} Automatic translation'}
+\end{enumerate}
+
+\begin{figure}
+\centering
+\includegraphics{img/translate_automatic_translation.png}
+\caption{Tools drop-down menu with ``Automatic Translations'' selected}
+\end{figure}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{2}
+\tightlist
+\item
+  In the dialog,
+\end{enumerate}
+
+\begin{itemize}
+\tightlist
+\item
+  under \textbf{`Automatic translation mode'}, select \textbf{`Add as ``needing edit''\,'}\footnote{By selecting \textbf{`Add as ``needing edit''\,'}, the autotranslated strings would be treated as ``fuzzy'' translations, i.e.~they would be added to the component source files when a patch is made, but they would NOT be used.}:
+\end{itemize}
+
+\begin{itemize}
+\tightlist
+\item
+  under \textbf{`Search filter'}, select \textbf{`Untranslated strings'}
+\item
+  under \textbf{`Source of automated translations'}, select \textbf{`Machine translation'}
+\item
+  under \textbf{`Machine translation engines'}, select \textbf{`Microsoft Translator'}\footnote{Microsoft Translator is preferred for bulk translation as our free tier covers 2 million characters/month, where DeepL only allows 500k chars/month. If Microsoft Translator translations are much worse than DeepL, it may be useful to use it to translate one string at a time.}:
+\end{itemize}
+
+\begin{figure}
+\centering
+\includegraphics{img/translate_dialog.png}
+\caption{Automatic Translations dialog box}
+\end{figure}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{3}
+\tightlist
+\item
+  Review the translations, edit as necessary and uncheck \textbf{``needing edit''}.
+\end{enumerate}
+
 \section{Current status of translations in R}\label{current-status-of-translations-in-r}
 
 \url{https://contributor.r-project.org/translations-dashboard/}
@@ -2046,7 +2149,7 @@ There are quite a few \href{https://www.r-project.org/mail.html}{mailing lists} 
   \item
     Getting help with technical programming issues, e.g.~interfacing R with C/C++.
   \item
-    Proposals of new functionality for R.
+    Proposals of new functionality/feature requests for R.
   \item
     Pre-testing of new versions of R.
   \item

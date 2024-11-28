@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 6 Finding the Source | R Development Guide</title>
+  <title>Chapter 7 Finding the Source | R Development Guide</title>
   <meta name="description" content="This guide is a comprehensive resource for contributing to base R for both new and experienced contributors." />
-  <meta name="generator" content="bookdown 0.40 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.41 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 6 Finding the Source | R Development Guide" />
+  <meta property="og:title" content="Chapter 7 Finding the Source | R Development Guide" />
   <meta property="og:type" content="book" />
   <meta property="og:image" content="https://contributor.r-project.org/rdevguide/img/cover_page.png" />
   <meta property="og:description" content="This guide is a comprehensive resource for contributing to base R for both new and experienced contributors." />
   <meta name="github-repo" content="r-devel/rdevguide" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 6 Finding the Source | R Development Guide" />
+  <meta name="twitter:title" content="Chapter 7 Finding the Source | R Development Guide" />
   
   <meta name="twitter:description" content="This guide is a comprehensive resource for contributing to base R for both new and experienced contributors." />
   <meta name="twitter:image" content="https://contributor.r-project.org/rdevguide/img/cover_page.png" />
@@ -23,7 +23,7 @@
 <meta name="author" content="R Contribution Working Group" />
 
 
-<meta name="date" content="2024-07-25" />
+<meta name="date" content="2024-11-28" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -192,111 +192,122 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li class="chapter" data-level="4.1" data-path="ReportingBugs.html"><a href="ReportingBugs.html#what-is-a-bug-in-r"><i class="fa fa-check"></i><b>4.1</b> What is a bug in R?</a></li>
 <li class="chapter" data-level="4.2" data-path="ReportingBugs.html"><a href="ReportingBugs.html#what-condition-might-not-be-a-bug"><i class="fa fa-check"></i><b>4.2</b> What condition might not be a bug?</a></li>
-<li class="chapter" data-level="4.3" data-path="ReportingBugs.html"><a href="ReportingBugs.html#checking-if-a-bug-is-already-reported"><i class="fa fa-check"></i><b>4.3</b> Checking if a bug is already reported</a></li>
+<li class="chapter" data-level="4.3" data-path="ReportingBugs.html"><a href="ReportingBugs.html#already-reported-bugs"><i class="fa fa-check"></i><b>4.3</b> Checking if a bug is already reported</a></li>
 <li class="chapter" data-level="4.4" data-path="ReportingBugs.html"><a href="ReportingBugs.html#what-are-some-places-where-you-may-find-a-bug"><i class="fa fa-check"></i><b>4.4</b> What are some places where you may find a bug?</a></li>
 <li class="chapter" data-level="4.5" data-path="ReportingBugs.html"><a href="ReportingBugs.html#ReportBug"><i class="fa fa-check"></i><b>4.5</b> How to report a bug?</a>
 <ul>
 <li class="chapter" data-level="4.5.1" data-path="ReportingBugs.html"><a href="ReportingBugs.html#RCorePkgBug"><i class="fa fa-check"></i><b>4.5.1</b> Bug in the R-Core supported packages, their documentations, and/ or in the R language</a></li>
 <li class="chapter" data-level="4.5.2" data-path="ReportingBugs.html"><a href="ReportingBugs.html#nonRCorePkgBug"><i class="fa fa-check"></i><b>4.5.2</b> Bug in the non R-Core supported packages and/or their documentations</a></li>
 </ul></li>
-<li class="chapter" data-level="4.6" data-path="ReportingBugs.html"><a href="ReportingBugs.html#good-practices-in-reporting-bugs-expectations-of-a-good-bug-report"><i class="fa fa-check"></i><b>4.6</b> Good practices in reporting bugs / Expectations of a good bug report</a></li>
+<li class="chapter" data-level="4.6" data-path="ReportingBugs.html"><a href="ReportingBugs.html#good-practices-bugs"><i class="fa fa-check"></i><b>4.6</b> Good practices in reporting bugs / Expectations of a good bug report</a></li>
 <li class="chapter" data-level="4.7" data-path="ReportingBugs.html"><a href="ReportingBugs.html#disagreement-with-a-resolution-on-the-bug-tracker"><i class="fa fa-check"></i><b>4.7</b> Disagreement with a resolution on the bug tracker</a></li>
 <li class="chapter" data-level="4.8" data-path="ReportingBugs.html"><a href="ReportingBugs.html#examples-of-bug-reports-submitted-on-bugzilla-or-r-devel-mailing-list"><i class="fa fa-check"></i><b>4.8</b> Examples of Bug reports submitted on Bugzilla or R-devel mailing list</a></li>
 <li class="chapter" data-level="4.9" data-path="ReportingBugs.html"><a href="ReportingBugs.html#see-also-1"><i class="fa fa-check"></i><b>4.9</b> See also</a></li>
 </ul></li>
-<li class="chapter" data-level="5" data-path="ReviewBugs.html"><a href="ReviewBugs.html"><i class="fa fa-check"></i><b>5</b> Reviewing Bugs</a>
+<li class="chapter" data-level="5" data-path="FeatureRequests.html"><a href="FeatureRequests.html"><i class="fa fa-check"></i><b>5</b> Submitting Feature Requests</a>
 <ul>
-<li class="chapter" data-level="5.1" data-path="ReviewBugs.html"><a href="ReviewBugs.html#how-you-can-help-to-review-bug-reports"><i class="fa fa-check"></i><b>5.1</b> How you can help to review bug reports?</a>
-<ul>
-<li class="chapter" data-level="5.1.1" data-path="ReviewBugs.html"><a href="ReviewBugs.html#preparing-to-review-bug-reports"><i class="fa fa-check"></i><b>5.1.1</b> Preparing to review bug reports</a></li>
+<li class="chapter" data-level="5.1" data-path="FeatureRequests.html"><a href="FeatureRequests.html#what-is-a-feature-request"><i class="fa fa-check"></i><b>5.1</b> What is a feature request?</a></li>
+<li class="chapter" data-level="5.2" data-path="FeatureRequests.html"><a href="FeatureRequests.html#how-to-submit-a-feature-request"><i class="fa fa-check"></i><b>5.2</b> How to submit a feature request?</a></li>
+<li class="chapter" data-level="5.3" data-path="FeatureRequests.html"><a href="FeatureRequests.html#examples-of-feature-requests-submitted-on-bugzilla"><i class="fa fa-check"></i><b>5.3</b> Examples of feature requests submitted on Bugzilla</a></li>
 </ul></li>
-<li class="chapter" data-level="5.2" data-path="ReviewBugs.html"><a href="ReviewBugs.html#classifying-bug-reports"><i class="fa fa-check"></i><b>5.2</b> Classifying bug reports</a></li>
-<li class="chapter" data-level="5.3" data-path="ReviewBugs.html"><a href="ReviewBugs.html#how-to-find-a-bug-report-or-an-issue-to-review"><i class="fa fa-check"></i><b>5.3</b> How to find a bug report or an issue to review?</a></li>
-<li class="chapter" data-level="5.4" data-path="ReviewBugs.html"><a href="ReviewBugs.html#example-of-a-bug-review-submitted-on-bugzilla"><i class="fa fa-check"></i><b>5.4</b> Example of a bug review submitted on Bugzilla</a></li>
-<li class="chapter" data-level="5.5" data-path="ReviewBugs.html"><a href="ReviewBugs.html#see-also-2"><i class="fa fa-check"></i><b>5.5</b> See also</a></li>
-</ul></li>
-<li class="chapter" data-level="6" data-path="FindSource.html"><a href="FindSource.html"><i class="fa fa-check"></i><b>6</b> Finding the Source</a>
+<li class="chapter" data-level="6" data-path="ReviewBugs.html"><a href="ReviewBugs.html"><i class="fa fa-check"></i><b>6</b> Reviewing Bugs</a>
 <ul>
-<li class="chapter" data-level="6.1" data-path="FindSource.html"><a href="FindSource.html#finding-r-source-code"><i class="fa fa-check"></i><b>6.1</b> Finding R source code</a></li>
-<li class="chapter" data-level="6.2" data-path="FindSource.html"><a href="FindSource.html#finding-c-source-code"><i class="fa fa-check"></i><b>6.2</b> Finding C source code</a></li>
-<li class="chapter" data-level="6.3" data-path="FindSource.html"><a href="FindSource.html#see-also-3"><i class="fa fa-check"></i><b>6.3</b> See also</a></li>
-</ul></li>
-<li class="chapter" data-level="7" data-path="FixBug.html"><a href="FixBug.html"><i class="fa fa-check"></i><b>7</b> Lifecycle of a Patch</a>
+<li class="chapter" data-level="6.1" data-path="ReviewBugs.html"><a href="ReviewBugs.html#how-you-can-help-to-review-bug-reports"><i class="fa fa-check"></i><b>6.1</b> How you can help to review bug reports?</a>
 <ul>
-<li class="chapter" data-level="7.1" data-path="FixBug.html"><a href="FixBug.html#introduction-1"><i class="fa fa-check"></i><b>7.1</b> Introduction</a></li>
-<li class="chapter" data-level="7.2" data-path="FixBug.html"><a href="FixBug.html#when-do-you-submit-a-patch"><i class="fa fa-check"></i><b>7.2</b> When do you submit a patch?</a></li>
-<li class="chapter" data-level="7.3" data-path="FixBug.html"><a href="FixBug.html#what-tools-are-required-to-submit-a-patch"><i class="fa fa-check"></i><b>7.3</b> What tools are required to submit a patch?</a></li>
-<li class="chapter" data-level="7.4" data-path="FixBug.html"><a href="FixBug.html#how-to-prepare-a-patch"><i class="fa fa-check"></i><b>7.4</b> How to prepare a patch?</a>
-<ul>
-<li class="chapter" data-level="7.4.1" data-path="FixBug.html"><a href="FixBug.html#using-a-git-mirror"><i class="fa fa-check"></i><b>7.4.1</b> Using a git mirror</a></li>
+<li class="chapter" data-level="6.1.1" data-path="ReviewBugs.html"><a href="ReviewBugs.html#preparing-to-review-bug-reports"><i class="fa fa-check"></i><b>6.1.1</b> Preparing to review bug reports</a></li>
 </ul></li>
-<li class="chapter" data-level="7.5" data-path="FixBug.html"><a href="FixBug.html#GoodPatches"><i class="fa fa-check"></i><b>7.5</b> Making good patches</a></li>
-<li class="chapter" data-level="7.6" data-path="FixBug.html"><a href="FixBug.html#SubmitPatches"><i class="fa fa-check"></i><b>7.6</b> Submitting your patch for review</a></li>
-<li class="chapter" data-level="7.7" data-path="FixBug.html"><a href="FixBug.html#PatchesReview"><i class="fa fa-check"></i><b>7.7</b> Getting your patch reviewed</a>
-<ul>
-<li class="chapter" data-level="7.7.1" data-path="FixBug.html"><a href="FixBug.html#how-to-review-a-patch"><i class="fa fa-check"></i><b>7.7.1</b> How to review a patch?</a></li>
+<li class="chapter" data-level="6.2" data-path="ReviewBugs.html"><a href="ReviewBugs.html#classifying-bug-reports"><i class="fa fa-check"></i><b>6.2</b> Classifying bug reports</a></li>
+<li class="chapter" data-level="6.3" data-path="ReviewBugs.html"><a href="ReviewBugs.html#how-to-find-a-bug-report-or-an-issue-to-review"><i class="fa fa-check"></i><b>6.3</b> How to find a bug report or an issue to review?</a></li>
+<li class="chapter" data-level="6.4" data-path="ReviewBugs.html"><a href="ReviewBugs.html#example-of-a-bug-review-submitted-on-bugzilla"><i class="fa fa-check"></i><b>6.4</b> Example of a bug review submitted on Bugzilla</a></li>
+<li class="chapter" data-level="6.5" data-path="ReviewBugs.html"><a href="ReviewBugs.html#see-also-2"><i class="fa fa-check"></i><b>6.5</b> See also</a></li>
 </ul></li>
-<li class="chapter" data-level="7.8" data-path="FixBug.html"><a href="FixBug.html#leaving-a-patch-review-on-bugzilla"><i class="fa fa-check"></i><b>7.8</b> Leaving a patch review on Bugzilla</a></li>
-<li class="chapter" data-level="7.9" data-path="FixBug.html"><a href="FixBug.html#dismissing-review-from-another-core-developer"><i class="fa fa-check"></i><b>7.9</b> Dismissing review from another core developer</a></li>
-<li class="chapter" data-level="7.10" data-path="FixBug.html"><a href="FixBug.html#acceptance-or-rejection-of-your-patch"><i class="fa fa-check"></i><b>7.10</b> Acceptance or rejection of your patch</a></li>
-<li class="chapter" data-level="7.11" data-path="FixBug.html"><a href="FixBug.html#examples-of-patch-reports-on-bugzilla"><i class="fa fa-check"></i><b>7.11</b> Examples of patch reports on Bugzilla</a></li>
-<li class="chapter" data-level="7.12" data-path="FixBug.html"><a href="FixBug.html#examples-of-reviewing-a-patch"><i class="fa fa-check"></i><b>7.12</b> Examples of reviewing a patch</a></li>
-<li class="chapter" data-level="7.13" data-path="FixBug.html"><a href="FixBug.html#see-also-4"><i class="fa fa-check"></i><b>7.13</b> See also</a></li>
-</ul></li>
-<li class="chapter" data-level="8" data-path="Doc.html"><a href="Doc.html"><i class="fa fa-check"></i><b>8</b> Documenting</a>
+<li class="chapter" data-level="7" data-path="FindSource.html"><a href="FindSource.html"><i class="fa fa-check"></i><b>7</b> Finding the Source</a>
 <ul>
-<li class="chapter" data-level="8.1" data-path="Doc.html"><a href="Doc.html#introduction-to-.rd-files"><i class="fa fa-check"></i><b>8.1</b> Introduction to <code>.Rd</code> files</a></li>
-<li class="chapter" data-level="8.2" data-path="Doc.html"><a href="Doc.html#guidelines-for-writing-r-help-files"><i class="fa fa-check"></i><b>8.2</b> Guidelines for writing R help files</a></li>
-<li class="chapter" data-level="8.3" data-path="Doc.html"><a href="Doc.html#r-manuals"><i class="fa fa-check"></i><b>8.3</b> R manuals</a></li>
-<li class="chapter" data-level="8.4" data-path="Doc.html"><a href="Doc.html#helping-with-documentation"><i class="fa fa-check"></i><b>8.4</b> Helping with documentation</a></li>
-<li class="chapter" data-level="8.5" data-path="Doc.html"><a href="Doc.html#proofreading"><i class="fa fa-check"></i><b>8.5</b> Proofreading</a></li>
-<li class="chapter" data-level="8.6" data-path="Doc.html"><a href="Doc.html#helping-with-the-developers-guide"><i class="fa fa-check"></i><b>8.6</b> Helping with the Developer’s Guide</a></li>
-<li class="chapter" data-level="8.7" data-path="Doc.html"><a href="Doc.html#reporting-documentation-bugs"><i class="fa fa-check"></i><b>8.7</b> Reporting documentation bugs</a></li>
-<li class="chapter" data-level="8.8" data-path="Doc.html"><a href="Doc.html#see-also-5"><i class="fa fa-check"></i><b>8.8</b> See also</a></li>
+<li class="chapter" data-level="7.1" data-path="FindSource.html"><a href="FindSource.html#finding-r-source-code"><i class="fa fa-check"></i><b>7.1</b> Finding R source code</a></li>
+<li class="chapter" data-level="7.2" data-path="FindSource.html"><a href="FindSource.html#finding-c-source-code"><i class="fa fa-check"></i><b>7.2</b> Finding C source code</a></li>
+<li class="chapter" data-level="7.3" data-path="FindSource.html"><a href="FindSource.html#see-also-3"><i class="fa fa-check"></i><b>7.3</b> See also</a></li>
 </ul></li>
-<li class="chapter" data-level="9" data-path="message-translations.html"><a href="message-translations.html"><i class="fa fa-check"></i><b>9</b> Message Translations</a>
+<li class="chapter" data-level="8" data-path="FixBug.html"><a href="FixBug.html"><i class="fa fa-check"></i><b>8</b> Lifecycle of a Patch</a>
 <ul>
-<li class="chapter" data-level="9.1" data-path="message-translations.html"><a href="message-translations.html#how-translations-work"><i class="fa fa-check"></i><b>9.1</b> How translations work</a>
+<li class="chapter" data-level="8.1" data-path="FixBug.html"><a href="FixBug.html#introduction-1"><i class="fa fa-check"></i><b>8.1</b> Introduction</a></li>
+<li class="chapter" data-level="8.2" data-path="FixBug.html"><a href="FixBug.html#when-do-you-submit-a-patch"><i class="fa fa-check"></i><b>8.2</b> When do you submit a patch?</a></li>
+<li class="chapter" data-level="8.3" data-path="FixBug.html"><a href="FixBug.html#what-tools-are-required-to-submit-a-patch"><i class="fa fa-check"></i><b>8.3</b> What tools are required to submit a patch?</a></li>
+<li class="chapter" data-level="8.4" data-path="FixBug.html"><a href="FixBug.html#how-to-prepare-a-patch"><i class="fa fa-check"></i><b>8.4</b> How to prepare a patch?</a>
 <ul>
-<li class="chapter" data-level="9.1.1" data-path="message-translations.html"><a href="message-translations.html#pot-files"><i class="fa fa-check"></i><b>9.1.1</b> <code>.pot</code> files</a></li>
-<li class="chapter" data-level="9.1.2" data-path="message-translations.html"><a href="message-translations.html#po-files"><i class="fa fa-check"></i><b>9.1.2</b> <code>.po</code> files</a></li>
-<li class="chapter" data-level="9.1.3" data-path="message-translations.html"><a href="message-translations.html#mo-files"><i class="fa fa-check"></i><b>9.1.3</b> <code>.mo</code> files</a></li>
+<li class="chapter" data-level="8.4.1" data-path="FixBug.html"><a href="FixBug.html#using-a-git-mirror"><i class="fa fa-check"></i><b>8.4.1</b> Using a git mirror</a></li>
 </ul></li>
-<li class="chapter" data-level="9.2" data-path="message-translations.html"><a href="message-translations.html#how-to-contribute-new-translations"><i class="fa fa-check"></i><b>9.2</b> How to contribute new translations</a></li>
-<li class="chapter" data-level="9.3" data-path="message-translations.html"><a href="message-translations.html#current-status-of-translations-in-r"><i class="fa fa-check"></i><b>9.3</b> Current status of translations in R</a></li>
-<li class="chapter" data-level="9.4" data-path="message-translations.html"><a href="message-translations.html#helpful-references"><i class="fa fa-check"></i><b>9.4</b> Helpful references</a></li>
-</ul></li>
-<li class="chapter" data-level="10" data-path="TestRVer.html"><a href="TestRVer.html"><i class="fa fa-check"></i><b>10</b> Testing Pre-release R Versions</a>
+<li class="chapter" data-level="8.5" data-path="FixBug.html"><a href="FixBug.html#GoodPatches"><i class="fa fa-check"></i><b>8.5</b> Making good patches</a></li>
+<li class="chapter" data-level="8.6" data-path="FixBug.html"><a href="FixBug.html#SubmitPatches"><i class="fa fa-check"></i><b>8.6</b> Submitting your patch for review</a>
 <ul>
-<li class="chapter" data-level="10.1" data-path="TestRVer.html"><a href="TestRVer.html#where-to-test"><i class="fa fa-check"></i><b>10.1</b> Where to test?</a>
-<ul>
-<li class="chapter" data-level="10.1.1" data-path="TestRVer.html"><a href="TestRVer.html#VM"><i class="fa fa-check"></i><b>10.1.1</b> Virtual machine</a></li>
+<li class="chapter" data-level="8.6.1" data-path="FixBug.html"><a href="FixBug.html#patch-in-response-to-a-pre-existing-issue-or-bug-report"><i class="fa fa-check"></i><b>8.6.1</b> Patch in response to a pre-existing issue or bug report</a></li>
+<li class="chapter" data-level="8.6.2" data-path="FixBug.html"><a href="FixBug.html#patch-in-response-to-an-unreported-issue-or-bug-report"><i class="fa fa-check"></i><b>8.6.2</b> Patch in response to an unreported issue or bug report</a></li>
 </ul></li>
-<li class="chapter" data-level="10.2" data-path="TestRVer.html"><a href="TestRVer.html#what-can-you-test"><i class="fa fa-check"></i><b>10.2</b> What can you test?</a></li>
-<li class="chapter" data-level="10.3" data-path="TestRVer.html"><a href="TestRVer.html#writing-tests-for-r"><i class="fa fa-check"></i><b>10.3</b> Writing tests for R</a></li>
-<li class="chapter" data-level="10.4" data-path="TestRVer.html"><a href="TestRVer.html#benchmarks"><i class="fa fa-check"></i><b>10.4</b> Benchmarks</a></li>
-</ul></li>
-<li class="chapter" data-level="11" data-path="CoreDev.html"><a href="CoreDev.html"><i class="fa fa-check"></i><b>11</b> R Core Developers</a></li>
-<li class="chapter" data-level="12" data-path="WhereToGetHelp.html"><a href="WhereToGetHelp.html"><i class="fa fa-check"></i><b>12</b> Where to Get Help</a>
+<li class="chapter" data-level="8.7" data-path="FixBug.html"><a href="FixBug.html#PatchesReview"><i class="fa fa-check"></i><b>8.7</b> Getting your patch reviewed</a>
 <ul>
-<li class="chapter" data-level="12.1" data-path="WhereToGetHelp.html"><a href="WhereToGetHelp.html#slack"><i class="fa fa-check"></i><b>12.1</b> Slack</a></li>
-<li class="chapter" data-level="12.2" data-path="WhereToGetHelp.html"><a href="WhereToGetHelp.html#mailing-lists"><i class="fa fa-check"></i><b>12.2</b> Mailing lists</a></li>
-<li class="chapter" data-level="12.3" data-path="WhereToGetHelp.html"><a href="WhereToGetHelp.html#file-a-bug"><i class="fa fa-check"></i><b>12.3</b> File a bug</a></li>
+<li class="chapter" data-level="8.7.1" data-path="FixBug.html"><a href="FixBug.html#how-to-review-a-patch"><i class="fa fa-check"></i><b>8.7.1</b> How to review a patch?</a></li>
 </ul></li>
-<li class="chapter" data-level="13" data-path="News.html"><a href="News.html"><i class="fa fa-check"></i><b>13</b> News and Announcements</a>
-<ul>
-<li class="chapter" data-level="13.1" data-path="News.html"><a href="News.html#blogs"><i class="fa fa-check"></i><b>13.1</b> Blogs</a></li>
-<li class="chapter" data-level="13.2" data-path="News.html"><a href="News.html#conferences"><i class="fa fa-check"></i><b>13.2</b> Conferences</a></li>
-<li class="chapter" data-level="13.3" data-path="News.html"><a href="News.html#journal"><i class="fa fa-check"></i><b>13.3</b> Journal</a></li>
-<li class="chapter" data-level="13.4" data-path="News.html"><a href="News.html#mailing-lists-1"><i class="fa fa-check"></i><b>13.4</b> Mailing lists</a></li>
-<li class="chapter" data-level="13.5" data-path="News.html"><a href="News.html#twitter"><i class="fa fa-check"></i><b>13.5</b> Twitter</a></li>
+<li class="chapter" data-level="8.8" data-path="FixBug.html"><a href="FixBug.html#leaving-a-patch-review-on-bugzilla"><i class="fa fa-check"></i><b>8.8</b> Leaving a patch review on Bugzilla</a></li>
+<li class="chapter" data-level="8.9" data-path="FixBug.html"><a href="FixBug.html#dismissing-review-from-another-core-developer"><i class="fa fa-check"></i><b>8.9</b> Dismissing review from another core developer</a></li>
+<li class="chapter" data-level="8.10" data-path="FixBug.html"><a href="FixBug.html#acceptance-or-rejection-of-your-patch"><i class="fa fa-check"></i><b>8.10</b> Acceptance or rejection of your patch</a></li>
+<li class="chapter" data-level="8.11" data-path="FixBug.html"><a href="FixBug.html#examples-of-patch-reports-on-bugzilla"><i class="fa fa-check"></i><b>8.11</b> Examples of patch reports on Bugzilla</a></li>
+<li class="chapter" data-level="8.12" data-path="FixBug.html"><a href="FixBug.html#examples-of-reviewing-a-patch"><i class="fa fa-check"></i><b>8.12</b> Examples of reviewing a patch</a></li>
+<li class="chapter" data-level="8.13" data-path="FixBug.html"><a href="FixBug.html#see-also-4"><i class="fa fa-check"></i><b>8.13</b> See also</a></li>
 </ul></li>
-<li class="chapter" data-level="14" data-path="DevTools.html"><a href="DevTools.html"><i class="fa fa-check"></i><b>14</b> Developer Tools</a>
+<li class="chapter" data-level="9" data-path="Doc.html"><a href="Doc.html"><i class="fa fa-check"></i><b>9</b> Documenting</a>
 <ul>
-<li class="chapter" data-level="14.1" data-path="DevTools.html"><a href="DevTools.html#subversion-svn-client"><i class="fa fa-check"></i><b>14.1</b> Subversion (svn) client</a></li>
-<li class="chapter" data-level="14.2" data-path="DevTools.html"><a href="DevTools.html#globally-search-for-a-regular-expression-and-print-matching-lines-grep"><i class="fa fa-check"></i><b>14.2</b> Globally search for a regular expression and print matching lines (grep)</a></li>
-<li class="chapter" data-level="14.3" data-path="DevTools.html"><a href="DevTools.html#git"><i class="fa fa-check"></i><b>14.3</b> Git</a></li>
-<li class="chapter" data-level="14.4" data-path="DevTools.html"><a href="DevTools.html#github"><i class="fa fa-check"></i><b>14.4</b> GitHub</a></li>
+<li class="chapter" data-level="9.1" data-path="Doc.html"><a href="Doc.html#introduction-to-.rd-files"><i class="fa fa-check"></i><b>9.1</b> Introduction to <code>.Rd</code> files</a></li>
+<li class="chapter" data-level="9.2" data-path="Doc.html"><a href="Doc.html#guidelines-for-writing-r-help-files"><i class="fa fa-check"></i><b>9.2</b> Guidelines for writing R help files</a></li>
+<li class="chapter" data-level="9.3" data-path="Doc.html"><a href="Doc.html#r-manuals"><i class="fa fa-check"></i><b>9.3</b> R manuals</a></li>
+<li class="chapter" data-level="9.4" data-path="Doc.html"><a href="Doc.html#helping-with-documentation"><i class="fa fa-check"></i><b>9.4</b> Helping with documentation</a></li>
+<li class="chapter" data-level="9.5" data-path="Doc.html"><a href="Doc.html#proofreading"><i class="fa fa-check"></i><b>9.5</b> Proofreading</a></li>
+<li class="chapter" data-level="9.6" data-path="Doc.html"><a href="Doc.html#helping-with-the-developers-guide"><i class="fa fa-check"></i><b>9.6</b> Helping with the Developer’s Guide</a></li>
+<li class="chapter" data-level="9.7" data-path="Doc.html"><a href="Doc.html#reporting-documentation-bugs"><i class="fa fa-check"></i><b>9.7</b> Reporting documentation bugs</a></li>
+<li class="chapter" data-level="9.8" data-path="Doc.html"><a href="Doc.html#see-also-5"><i class="fa fa-check"></i><b>9.8</b> See also</a></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="message-translations.html"><a href="message-translations.html"><i class="fa fa-check"></i><b>10</b> Message Translations</a>
+<ul>
+<li class="chapter" data-level="10.1" data-path="message-translations.html"><a href="message-translations.html#how-translations-work"><i class="fa fa-check"></i><b>10.1</b> How translations work</a>
+<ul>
+<li class="chapter" data-level="10.1.1" data-path="message-translations.html"><a href="message-translations.html#pot-files"><i class="fa fa-check"></i><b>10.1.1</b> <code>.pot</code> files</a></li>
+<li class="chapter" data-level="10.1.2" data-path="message-translations.html"><a href="message-translations.html#po-files"><i class="fa fa-check"></i><b>10.1.2</b> <code>.po</code> files</a></li>
+<li class="chapter" data-level="10.1.3" data-path="message-translations.html"><a href="message-translations.html#mo-files"><i class="fa fa-check"></i><b>10.1.3</b> <code>.mo</code> files</a></li>
+</ul></li>
+<li class="chapter" data-level="10.2" data-path="message-translations.html"><a href="message-translations.html#how-to-contribute-new-translations"><i class="fa fa-check"></i><b>10.2</b> How to contribute new translations</a></li>
+<li class="chapter" data-level="10.3" data-path="message-translations.html"><a href="message-translations.html#bulk-translations"><i class="fa fa-check"></i><b>10.3</b> Bulk Translations</a></li>
+<li class="chapter" data-level="10.4" data-path="message-translations.html"><a href="message-translations.html#current-status-of-translations-in-r"><i class="fa fa-check"></i><b>10.4</b> Current status of translations in R</a></li>
+<li class="chapter" data-level="10.5" data-path="message-translations.html"><a href="message-translations.html#helpful-references"><i class="fa fa-check"></i><b>10.5</b> Helpful references</a></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="TestRVer.html"><a href="TestRVer.html"><i class="fa fa-check"></i><b>11</b> Testing Pre-release R Versions</a>
+<ul>
+<li class="chapter" data-level="11.1" data-path="TestRVer.html"><a href="TestRVer.html#where-to-test"><i class="fa fa-check"></i><b>11.1</b> Where to test?</a>
+<ul>
+<li class="chapter" data-level="11.1.1" data-path="TestRVer.html"><a href="TestRVer.html#VM"><i class="fa fa-check"></i><b>11.1.1</b> Virtual machine</a></li>
+</ul></li>
+<li class="chapter" data-level="11.2" data-path="TestRVer.html"><a href="TestRVer.html#what-can-you-test"><i class="fa fa-check"></i><b>11.2</b> What can you test?</a></li>
+<li class="chapter" data-level="11.3" data-path="TestRVer.html"><a href="TestRVer.html#writing-tests-for-r"><i class="fa fa-check"></i><b>11.3</b> Writing tests for R</a></li>
+<li class="chapter" data-level="11.4" data-path="TestRVer.html"><a href="TestRVer.html#benchmarks"><i class="fa fa-check"></i><b>11.4</b> Benchmarks</a></li>
+</ul></li>
+<li class="chapter" data-level="12" data-path="CoreDev.html"><a href="CoreDev.html"><i class="fa fa-check"></i><b>12</b> R Core Developers</a></li>
+<li class="chapter" data-level="13" data-path="WhereToGetHelp.html"><a href="WhereToGetHelp.html"><i class="fa fa-check"></i><b>13</b> Where to Get Help</a>
+<ul>
+<li class="chapter" data-level="13.1" data-path="WhereToGetHelp.html"><a href="WhereToGetHelp.html#slack"><i class="fa fa-check"></i><b>13.1</b> Slack</a></li>
+<li class="chapter" data-level="13.2" data-path="WhereToGetHelp.html"><a href="WhereToGetHelp.html#mailing-lists"><i class="fa fa-check"></i><b>13.2</b> Mailing lists</a></li>
+<li class="chapter" data-level="13.3" data-path="WhereToGetHelp.html"><a href="WhereToGetHelp.html#file-a-bug"><i class="fa fa-check"></i><b>13.3</b> File a bug</a></li>
+</ul></li>
+<li class="chapter" data-level="14" data-path="News.html"><a href="News.html"><i class="fa fa-check"></i><b>14</b> News and Announcements</a>
+<ul>
+<li class="chapter" data-level="14.1" data-path="News.html"><a href="News.html#blogs"><i class="fa fa-check"></i><b>14.1</b> Blogs</a></li>
+<li class="chapter" data-level="14.2" data-path="News.html"><a href="News.html#conferences"><i class="fa fa-check"></i><b>14.2</b> Conferences</a></li>
+<li class="chapter" data-level="14.3" data-path="News.html"><a href="News.html#journal"><i class="fa fa-check"></i><b>14.3</b> Journal</a></li>
+<li class="chapter" data-level="14.4" data-path="News.html"><a href="News.html#mailing-lists-1"><i class="fa fa-check"></i><b>14.4</b> Mailing lists</a></li>
+<li class="chapter" data-level="14.5" data-path="News.html"><a href="News.html#twitter"><i class="fa fa-check"></i><b>14.5</b> Twitter</a></li>
+</ul></li>
+<li class="chapter" data-level="15" data-path="DevTools.html"><a href="DevTools.html"><i class="fa fa-check"></i><b>15</b> Developer Tools</a>
+<ul>
+<li class="chapter" data-level="15.1" data-path="DevTools.html"><a href="DevTools.html#subversion-svn-client"><i class="fa fa-check"></i><b>15.1</b> Subversion (svn) client</a></li>
+<li class="chapter" data-level="15.2" data-path="DevTools.html"><a href="DevTools.html#globally-search-for-a-regular-expression-and-print-matching-lines-grep"><i class="fa fa-check"></i><b>15.2</b> Globally search for a regular expression and print matching lines (grep)</a></li>
+<li class="chapter" data-level="15.3" data-path="DevTools.html"><a href="DevTools.html#git"><i class="fa fa-check"></i><b>15.3</b> Git</a></li>
+<li class="chapter" data-level="15.4" data-path="DevTools.html"><a href="DevTools.html#github"><i class="fa fa-check"></i><b>15.4</b> GitHub</a></li>
 </ul></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
@@ -318,11 +329,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="FindSource" class="section level1 hasAnchor" number="6">
-<h1><span class="header-section-number">Chapter 6</span> Finding the Source<a href="FindSource.html#FindSource" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="FindSource" class="section level1 hasAnchor" number="7">
+<h1><span class="header-section-number">Chapter 7</span> Finding the Source<a href="FindSource.html#FindSource" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <p>This chapter discusses how you can have an overview of the R codebase. For instance, where to find the implementation of a base function written in R and where to find a primitive implementation written in C. You may want to find the source code of a function just out of curiosity or maybe to gain more insight into what a particular function is actually doing. Whatever be the case, reading the source code will help you to learn a lot about any function.</p>
-<div id="finding-r-source-code" class="section level2 hasAnchor" number="6.1">
-<h2><span class="header-section-number">6.1</span> Finding R source code<a href="FindSource.html#finding-r-source-code" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="finding-r-source-code" class="section level2 hasAnchor" number="7.1">
+<h2><span class="header-section-number">7.1</span> Finding R source code<a href="FindSource.html#finding-r-source-code" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <ol style="list-style-type: decimal">
 <li>Find the R function with the code of interest. You will always be able to print the top-level function (or use <code>View(function_name)</code> in RStudio). Looking at the code for the body of this function will reveal what you need to do next:</li>
 </ol>
@@ -350,8 +361,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 grep -R &quot;quantile &lt;- function&quot; ~/R-devel/src/library</code></pre>
 <p>Note: The above procedure does not cover S4, R6 or RC generics or methods. Refer <a href="https://github.com/jennybc/access-r-source">accessing R source</a> for further details.</p>
 </div>
-<div id="finding-c-source-code" class="section level2 hasAnchor" number="6.2">
-<h2><span class="header-section-number">6.2</span> Finding C source code<a href="FindSource.html#finding-c-source-code" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="finding-c-source-code" class="section level2 hasAnchor" number="7.2">
+<h2><span class="header-section-number">7.2</span> Finding C source code<a href="FindSource.html#finding-c-source-code" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <ol style="list-style-type: decimal">
 <li>If <code>.Internal()</code> or <code>.Primitive()</code>, find entry point in <code>names.c</code> as described in the Jenny Bryan’s post of <a href="https://github.com/jennybc/access-r-source">accessing R source</a>. For all other calls to compiled code, you can find the entry point from within R. For instance, the body of complete.cases() is</li>
 </ol>
@@ -374,8 +385,8 @@ finding all references (calls) to a function.</p></li>
 <li><p>GitHub has a code navigation feature via the library tree-sitter. Unfortunately, it does not have R support yet. An <a href="https://github.com/r-lib/tree-sitter-r">R driver for tree-sitter</a> made by Jim Hester is available.</p></li>
 </ol>
 </div>
-<div id="see-also-3" class="section level2 hasAnchor" number="6.3">
-<h2><span class="header-section-number">6.3</span> See also<a href="FindSource.html#see-also-3" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="see-also-3" class="section level2 hasAnchor" number="7.3">
+<h2><span class="header-section-number">7.3</span> See also<a href="FindSource.html#see-also-3" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p><a href="https://blog.r-hub.io/2019/05/14/read-the-source/">Read the R source</a> blogpost.</p>
 
 </div>
@@ -423,15 +434,15 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/r-devel/rdevguide/edit/main/06-finding_the_source.Rmd",
+"link": "https://github.com/r-devel/rdevguide/edit/main/07-finding_the_source.Rmd",
 "text": "Edit"
 },
 "history": {
-"link": "https://github.com/r-devel/rdevguide/commits/main/06-finding_the_source.Rmd",
+"link": "https://github.com/r-devel/rdevguide/commits/main/07-finding_the_source.Rmd",
 "text": null
 },
 "view": {
-"link": "https://github.com/r-devel/rdevguide/blob/main/06-finding_the_source.Rmd",
+"link": "https://github.com/r-devel/rdevguide/blob/main/07-finding_the_source.Rmd",
 "text": null
 },
 "download": ["rdevguide.pdf", "rdevguide.epub"],
