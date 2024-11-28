@@ -2,7 +2,7 @@
 
 # A Guide for Contributing to R Core
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-20-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-21-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 This guide is a work in progress, inspired by http://devguide.python.org/. It is deployed at https://contributor.r-project.org/rdevguide/.
@@ -85,6 +85,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/nbenn"><img src="https://avatars.githubusercontent.com/u/3158446?v=4?s=100" width="100px;" alt="nbenn"/><br /><sub><b>nbenn</b></sub></a><br /><a href="https://github.com/r-devel/rdevguide/pulls?q=is%3Apr+reviewed-by%3Anbenn" title="Reviewed Pull Requests">👀</a> <a href="#research-nbenn" title="Research">🔬</a> <a href="#question-nbenn" title="Answering Questions">💬</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/benubah"><img src="https://avatars.githubusercontent.com/u/11357251?v=4?s=100" width="100px;" alt="Ben"/><br /><sub><b>Ben</b></sub></a><br /><a href="#content-benubah" title="Content">🖋</a> <a href="https://github.com/r-devel/rdevguide/pulls?q=is%3Apr+reviewed-by%3Abenubah" title="Reviewed Pull Requests">👀</a> <a href="#research-benubah" title="Research">🔬</a> <a href="#question-benubah" title="Answering Questions">💬</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/itsdebartha"><img src="https://avatars.githubusercontent.com/u/53690728?v=4?s=100" width="100px;" alt="Debartha Paul"/><br /><sub><b>Debartha Paul</b></sub></a><br /><a href="#content-itsdebartha" title="Content">🖋</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/lgibson7"><img src="https://avatars.githubusercontent.com/u/87203716?v=4?s=100" width="100px;" alt="Lydia Gibson, MS, GStat"/><br /><sub><b>Lydia Gibson, MS, GStat</b></sub></a><br /><a href="#content-lgibson7" title="Content">🖋</a> <a href="https://github.com/r-devel/rdevguide/commits?author=lgibson7" title="Documentation">📖</a> <a href="#ideas-lgibson7" title="Ideas, Planning, & Feedback">🤔</a></td>
     </tr>
   </tbody>
 </table>
