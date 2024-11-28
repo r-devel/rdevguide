@@ -301,6 +301,15 @@
       ]
     },
     {
+      "login": "jmaspons",
+      "name": "Joan Maspons",
+      "avatar_url": "https://avatars.githubusercontent.com/u/102644?v=4",
+      "profile": "https://github.com/jmaspons",
+      "contributions": [
+        "infra"
+      ]
+    },
+    {
       "login": "hanneoberman",
       "name": "Hanne Oberman",
       "avatar_url": "https://avatars.githubusercontent.com/u/38891540?v=4",
@@ -318,6 +327,16 @@
         "ideas",
         "research",
         "question"
+      ]
+    },
+    {
+      "login": "hfrick",
+      "name": "Hannah Frick",
+      "avatar_url": "https://avatars.githubusercontent.com/u/12950918?v=4",
+      "profile": "http://www.frick.ws",
+      "contributions": [
+        "doc",
+        "ideas"
       ]
     }
   ],
