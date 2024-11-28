@@ -299,6 +299,15 @@
         "doc",
         "ideas"
       ]
+    },
+    {
+      "login": "hanneoberman",
+      "name": "Hanne Oberman",
+      "avatar_url": "https://avatars.githubusercontent.com/u/38891540?v=4",
+      "profile": "http://hanneoberman.github.io",
+      "contributions": [
+        "content"
+      ]
     }
   ],
   "contributorsPerLine": 7,
