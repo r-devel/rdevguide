@@ -236,6 +236,17 @@
         "doc",
         "ideas"
       ]
+    },
+    {
+      "login": "PatriLoto",
+      "name": "Patricia A. Loto",
+      "avatar_url": "https://avatars.githubusercontent.com/u/39300655?v=4",
+      "profile": "https://patricia-loto.netlify.app/",
+      "contributions": [
+        "content",
+        "doc",
+        "ideas"
+      ]
     }
   ],
   "contributorsPerLine": 7,
