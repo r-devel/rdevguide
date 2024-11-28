@@ -308,6 +308,17 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "bastistician",
+      "name": "Sebastian Meyer",
+      "avatar_url": "https://avatars.githubusercontent.com/u/4366501?v=4",
+      "profile": "https://www.imbe.med.fau.de/person/sebastian-meyer/",
+      "contributions": [
+        "ideas",
+        "research",
+        "question"
+      ]
     }
   ],
   "contributorsPerLine": 7,
