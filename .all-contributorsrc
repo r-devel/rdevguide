@@ -299,6 +299,15 @@
         "doc",
         "ideas"
       ]
+    },
+    {
+      "login": "jmaspons",
+      "name": "Joan Maspons",
+      "avatar_url": "https://avatars.githubusercontent.com/u/102644?v=4",
+      "profile": "https://github.com/jmaspons",
+      "contributions": [
+        "infra"
+      ]
     }
   ],
   "contributorsPerLine": 7,
