@@ -258,6 +258,15 @@
         "doc",
         "ideas"
       ]
+    },
+    {
+      "login": "cjrace",
+      "name": "Cam Race",
+      "avatar_url": "https://avatars.githubusercontent.com/u/52536248?v=4",
+      "profile": "https://github.com/cjrace",
+      "contributions": [
+        "infra"
+      ]
     }
   ],
   "contributorsPerLine": 7,
