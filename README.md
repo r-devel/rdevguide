@@ -2,7 +2,7 @@
 
 # A Guide for Contributing to R Core
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-25-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-27-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 This guide is a work in progress, inspired by http://devguide.python.org/. It is deployed at https://contributor.r-project.org/rdevguide/.
@@ -93,6 +93,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/cjrace"><img src="https://avatars.githubusercontent.com/u/52536248?v=4?s=100" width="100px;" alt="Cam Race"/><br /><sub><b>Cam Race</b></sub></a><br /><a href="#infra-cjrace" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://www.pipinghotdata.com/"><img src="https://avatars.githubusercontent.com/u/17747575?v=4?s=100" width="100px;" alt="Shannon Pileggi"/><br /><sub><b>Shannon Pileggi</b></sub></a><br /><a href="#content-shannonpileggi" title="Content">🖋</a> <a href="https://github.com/r-devel/rdevguide/commits?author=shannonpileggi" title="Documentation">📖</a> <a href="#ideas-shannonpileggi" title="Ideas, Planning, & Feedback">🤔</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/pmur002"><img src="https://avatars.githubusercontent.com/u/2044052?v=4?s=100" width="100px;" alt="Paul Murrell"/><br /><sub><b>Paul Murrell</b></sub></a><br /><a href="#content-pmur002" title="Content">🖋</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="http://zkamvar.netlify.app"><img src="https://avatars.githubusercontent.com/u/3639446?v=4?s=100" width="100px;" alt="Zhian N. Kamvar"/><br /><sub><b>Zhian N. Kamvar</b></sub></a><br /><a href="#content-zkamvar" title="Content">🖋</a> <a href="https://github.com/r-devel/rdevguide/commits?author=zkamvar" title="Documentation">📖</a> <a href="#ideas-zkamvar" title="Ideas, Planning, & Feedback">🤔</a></td>
     </tr>
   </tbody>
 </table>
