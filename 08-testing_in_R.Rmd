@@ -4,53 +4,42 @@ This chapter discusses about writing tests for R and extending the test suite fo
 
 ## When and why to write a test?
 
-Whenever you add new functionality to the core code or any of the packages distributed with R, it is beneficial to add test(s) corresponding to the new code. While doing so it is essential to check whether `make test-Specific` still works with the new code included. In particular, check whether `cd tests; make no-segfault.Rout` work on a standalone computer without the requirement of an interactive user intervention.
+Whenever you add new functionality to the core code or any of the packages distributed with R, you may be asked to add test(s) corresponding to the new code. 
 
 If the new code requires GUI interaction or accesses the Internet, then it is essential to add its name to the `stop list` in `tests/no-segfault.Rin`.
 
 ## Writing tests for R
 
-Writing tests for R is much like writing tests for your own code. Tests need to be thorough, fast, isolated, consistently repeatable, and as simple as possible. 
+Writing tests for R is much like writing tests for your own code. Tests need to be thorough, fast, isolated, consistently repeatable, and as simple as possible. When you are adding tests to an existing test file, it is also recommended that you study the other tests in that file; it will teach you which precautions you have to take to make your tests robust and portable. 
 
-Tests live in the [`tests` directory of the R sources](https://svn.r-project.org/R/trunk/tests/).
+Tests for base R live in the [`tests` directory of the R sources](https://svn.r-project.org/R/trunk/tests/). Contributors mainly contribute to the "regression tests" which are in the files `reg-tests-1a.R`, `reg-tests-1b.R`,  etc. These tests are added after fixing a bug, to ensure that future changes do not cause a regression that reintroduces the bug. If you have been asked to add tests for base functionality (something that is not in one of the add-on packages in the base distribution), you should add it to the latest regression test file, with the highest numbering (currently `reg-tests-3.R`). 
 
-## Benchmarks
-
-Benchmarking is useful to test that a change does not degrade performance.
  
-## The `tests` directory in a R package
+## Tests of add-on packages
 
-When one looks at the package structure of R or the sources of an R package, it consists of the directory called `tests` among other files and directories. The image below shows the structure of the R package `spatial` with the `tests` directory highlighted with yellow colour.
+The check commands (`make check` etc) run `R CMD check` on the add-on packages in the base distribution, so will run any package-specific tests. If a package has tests, they will be in the `tests` directory of the sources for that package.
 
 ![Screenshot of the structure of the R package `spatial` with the `tests` directory highlighted with yellow colour](img/structure-spatial.png)
 
-The `tests` directory consists of additional package-specific test code, similar to the specific tests that come with a R distribution. The `tests` directory contains test code in a `.R` file (or `.r` file from R 3.4.0) or `.Rin` file which contains code that in turn creates the corresponding `.R` file. The test code can be provided directly to the `tests` directory in `.R`, `.r`, or `.Rin` as may be appropriate.
+The base add-on packages use the same form of tests that are used for base R as described in the [Test files]{#test-files} section.
 
-Whenever the `.R` file from the `tests` directory is run, the results are written to a `.Rout` file. In some cases there exists a subdirectory called `Examples` within the `tests` directory, which contains a corresponding `packagename-Ex.Rout.save` file. The output of a new run of the `.R` file and/or from a new run of the examples is compared with the existing `.Rout` file or `packagename-Ex.Rout.save` file, respectively, with differences being reported but not causing an error. The `tests` directory is copied to the check area, and the tests are run with the copy as the working directory and with `R_LIBS` set. This ensures that the copy of the package installed during testing will be found by `library(packagename)`.
+When the package tests are run, the `tests` directory is copied to the check area, and the tests are run with the copy as the working directory and with `R_LIBS` set so that the copy of the package installed during testing will be found by `library(packagename)`.
 
-All the package-specific tests are run in a vanilla R session without setting the random-number seed. Hence, for tests which use random numbers one needs to set the seed to obtain reproducible results. Although it would be helpful to do so in all cases in order to avoid occasional failures whenever tests are run.
+All the package-specific tests are run in a vanilla R session without setting the random-number seed. Hence, for tests which use random numbers one needs to set the seed to obtain reproducible results.
 
 ## Checking R packages
 
-The R package checker `R CMD check` can be used to test whether the `source` R packages are working correctly. It can be run either on one or more directories, or on compressed package `tar` archives with extension `.tar.gz`, `.tgz`, `.tar.bz2`, or `.tar.xz`. The final checks of a R package should be run on a `tar` archive prepared by `R CMD build`. This results into running a series of [checks](https://cran.r-project.org/doc/manuals/r-release/R-exts.html#Checking-and-building-packages), including running the `tests` directory, if it is available:
-
-- The examples provided by the package’s documentation are also run. If there is a file `tests/Examples/packagename-Ex.Rout.save`, the output of running the examples is compared to that file. Released packages are able to run their own examples. Each example is run in a clean environment. Hence, earlier examples cannot be assumed to have been run. The variables T and F are also redefined to generate an error unless they are set in the example.
-
-- If there are other tests specified in the `tests` directory then they are also run. Typically they will be a set of `.R` (or `.r` or `.Rin`) source files and target output files `.Rout.save`.
-
-The comparison between the existing file and that generated newly is in the end user\’s locale, hence, the target output files should be ASCII, if at all possible. To specify tests in a non-standard location, the command line option `--test-dir=foo` may be used. For example, unusually slow tests could be placed in `inst/slowTests` and can be run using `R CMD check --test-dir=inst/slowTests`. Similarly tests that require Oracle to be installed could be placed in `inst/testWithOracle`, tests which use random values and may occasionally fail by chance could be placed in `inst/randomTests`, etc..
-
-While performing these checks, the code in package vignettes is also executed, and the vignette PDFs re-made from their sources as a check of completeness of the sources, unless the `BuildVignettes` field in the package’s `DESCRIPTION` file has a false value. If there is a target output file `.Rout.save` in the vignette source directory, the output from running the code in that vignette is compared with the target output file and any differences are reported, but not recorded in the log file. 
+For more detail on the package checker `R CMD check` see the [Checking packages](https://cran.r-project.org/doc/manuals/r-devel/R-exts.html#Checking-packages-1) section of the Writing R Extensions manual.
 
 ## Testing practices
 
-One must be careful of what their tests (and examples) actually test. Some bad practice seen in distributed packages include:
+Tests for R should follow the general good practice documented in the [Writing R Extensions](https://cran.r-project.org/doc/manuals/r-devel/R-exts.html) manual. In particular:
 
-- Testing the time taken by a command is not reasonable. This is because, one cannot know how fast or how heavily loaded an R platform might be. At best one can test a ratio of times, however even that is difficulty and not advisable.
+- Testing the time taken by a command is not reasonable. This is because, one cannot know how fast or how heavily loaded an R platform might be. At best one can test a ratio of times, however even that is difficult and not advisable.
 
-- The exact format of R messages (from R itself or from other packages) change and can be translated. Hence, it is not a good idea to test their exact format.
+- The exact format of messages from R or from add-on packages can change and may be translated. Hence, it is not a good idea to test their exact format.
 
-- For automated checking systems, it is not worthwhile for tests to use `options(warn = 1)` for reporting.
+- For tests comparing against reference output, use `options(warn = 1)` to print warnings as they occur or `options(warn = 2)` to turn off warnings. In the latter case `tools::assertWarning()` may be used to assert when a warning is expected, see for example [tests/d-p-q-r-tst-2.R](https://svn.r-project.org/R/trunk/tests/d-p-q-r-tests.R)
 
 ## See also
 
