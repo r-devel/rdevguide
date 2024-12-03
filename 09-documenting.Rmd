@@ -166,11 +166,11 @@ While an issue filed on Bugzilla means there is a known issue somewhere, that do
 
 If you decide to proofread, read a section of the documentation from start to finish, filing issues in Bugzilla for each major type of problem you find. It is best to avoid filing a single issue for an entire section containing multiple problems; instead, file several issues so that it is easier to break the work up for multiple people and more efficient review.
 
-## Helping with the R Dev Guide
+## Helping with the R Development Guide
 
-The R Dev Guide (what you are reading now) uses the same process as the main R documentation, except for some small differences. The source lives in a [GitHub repository](https://github.com/r-devel/rdevguide/) and bug reports should be submitted to the [devguide GitHub tracker](https://github.com/r-devel/rdevguide/issues).
+The R Development Guide (what you are reading now) uses the same process as the main R documentation, except for some small differences. The source lives in a [GitHub repository](https://github.com/r-devel/rdevguide/) and bug reports should be submitted to the [devguide GitHub tracker](https://github.com/r-devel/rdevguide/issues).
 
-Our dev guide workflow uses continuous integration and deployment so changes to the dev guide are normally published when the pull request is merged. [How to contribute to this guide from the introduction.](#how-to-contribute-to-this-guide)
+Our development guide workflow uses continuous integration and deployment so changes to the development guide are normally published when the pull request is merged. [How to contribute to this guide from the introduction.](#how-to-contribute-to-this-guide)
 
 ## Reporting documentation bugs
  <!---
