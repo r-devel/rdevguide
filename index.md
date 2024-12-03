@@ -1,7 +1,7 @@
 --- 
 title: "R Development Guide"
 author: "R Contribution Working Group"
-date: "2024-11-28"
+date: "2024-12-03"
 site: bookdown::bookdown_site
 output: bookdown::gitbook
 documentclass: book
@@ -10,14 +10,15 @@ biblio-style: apalike
 link-citations: yes
 github-repo: r-devel/rdevguide
 url: https://contributor.r-project.org/rdevguide
-cover-image: "img/cover_page.png"
+cover-image: "img/cover_page_scriberia.png"
 favicon: "img/Rlogo.svg"
-description: "This guide is a comprehensive resource for contributing to base R for both new and experienced contributors."
+description: "This guide is a comprehensive resource for contributors (from all levels, beginners, intermediate, and seasoned) to the R project, facilitating their onboarding and helping them navigate the contribution process."
+
 ---
 
 # {-}
 
-![R Logo](img/Rlogo.png){height=400px width=500px}
+![R Development Guide. This illustration is created by Scriberia with The Turing Way community, used under a CC-BY 4.0 licence. DOI:= https://zenodo.org/records/13882307](img/r-development-guide.jpg){height=400px width=550px}
 
 # Acknowledgement {-}
 

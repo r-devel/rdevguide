@@ -104,6 +104,16 @@
   \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
 \setcounter{secnumdepth}{5}
 \usepackage{booktabs}
+\usepackage{pdfpages}
+\usepackage{amsthm}
+\makeatletter
+\def\thm@space@setup{%
+  \thm@preskip=8pt plus 2pt minus 4pt
+  \thm@postskip=\thm@preskip
+}
+\makeatother
+\let\oldmaketitle\maketitle
+\AtBeginDocument{\let\maketitle\relax}
 \ifLuaTeX
   \usepackage{selnolig}  % disable illegal ligatures
 \fi
@@ -120,9 +130,15 @@
 
 \title{R Development Guide}
 \author{R Contribution Working Group}
-\date{2024-11-28}
+\date{2024-12-03}
 
 \begin{document}
+\maketitle
+
+\includepdf[pages={1}, scale=1]{img/cover_page_scriberia.pdf}
+\newpage
+
+\let\maketitle\oldmaketitle
 \maketitle
 
 {
@@ -134,8 +150,8 @@
 
 \begin{figure}
 \centering
-\includegraphics[width=5.20833in,height=4.16667in]{img/Rlogo.png}
-\caption{R Logo}
+\includegraphics[width=5.72917in,height=4.16667in]{img/r-development-guide.jpg}
+\caption{R Development Guide. This illustration is created by Scriberia with The Turing Way community, used under a CC-BY 4.0 licence. \url{DOI:=} \url{https://zenodo.org/records/13882307}}
 \end{figure}
 
 \chapter*{Acknowledgement}\label{acknowledgement}
