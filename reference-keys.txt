@@ -73,7 +73,7 @@ guidelines-for-writing-r-help-files
 r-manuals
 helping-with-documentation
 proofreading
-helping-with-the-developers-guide
+helping-with-the-r-development-guide
 reporting-documentation-bugs
 see-also-5
 message-translations
