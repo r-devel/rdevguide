@@ -18,7 +18,7 @@ description: "This guide is a comprehensive resource for contributors (from all 
 
 # {-}
 
-![R Development Guide. This illustration is created by Scriberia with The Turing Way community, used under a CC-BY 4.0 licence. DOI: https://zenodo.org/records/13882307](img/r-development-guide.jpg){height=500px width=650px}
+![R Development Guide. This illustration is created by Scriberia with The Turing Way community, used under a CC-BY 4.0 licence. DOI:= https://zenodo.org/records/13882307](img/r-development-guide.jpg){height=400px width=550px}
 
 # Acknowledgement {-}
 
