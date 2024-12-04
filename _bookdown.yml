@@ -19,8 +19,8 @@ rmd_files:
   - patch-lifecycle.Rmd
   - documenting.Rmd
   - message-translations.Rmd
-  - testing-pre-release-R-versions.Rmd
-  - R-core-developers.Rmd
+  - testing-pre-release-r-versions.Rmd
+  - r-core-developers.Rmd
   - where-to-get-help.Rmd
   - news-announcements.Rmd
   - developer-tools.Rmd
