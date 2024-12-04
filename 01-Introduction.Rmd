@@ -6,7 +6,7 @@ This guide is a comprehensive resource for contributing to base R^[The [set of p
 
 Contributions to base R are possible in a number of different ways. Some of them are listed below:
 
-1. Contributing to bug fixing: Refer [Bug Tracking](#BugTrack) and [Reviewing Bugs](#ReviewBugs).
+1. Contributing to bug fixing: Refer [Issue Tracking](#IssueTrack) and [Reviewing Bugs](#ReviewBugs).
 2. Contributing to translations: Refer [Translations](#).
 3. Testing R before release: Refer [Testing Pre-release R Versions](#TestRVer).
 
@@ -22,7 +22,7 @@ The guide is intended as a comprehensive resource for contributing to base R. Th
 
 <!-- TODO(Saranjeet): Add other operating systems as they get included in the guide-->
 
-2. The [Bug Tracking](#BugTrack) and the [Reviewing Bugs](#ReviewBugs) chapters discuss how to find bugs in R and how to review bug reports that are submitted to Bugzilla.
+2. The [Issue Tracking](#IssueTrack) and the [Reviewing Bugs](#ReviewBugs) chapters discuss how to find bugs in R and how to review bug reports that are submitted to Bugzilla.
 
 3. The [Finding the Source](#FindSource) chapter provides an overview of the R codebase and helps with finding source code of base functions written in R and/or C.
 

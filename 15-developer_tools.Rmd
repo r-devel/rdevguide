@@ -4,7 +4,7 @@ This chapter lists resources and tools which R developers may use. Here we will 
 
 ## Subversion (svn) client
 
-Subversion (svn) is a version control system that tracks any changes made to files and directories. You can install either the TortoiseSVN (https://tortoisesvn.net/, command line tool, and Windows Explorer integration) or the SlikSVN (https://sliksvn.com/download/, just the command line tool) client. They have Windows installers and can be used from Windows cmd or RStudio terminal.
+Subversion (svn) is a version control system that tracks any changes made to files and directories. You can install either the [TortoiseSVN](https://tortoisesvn.net/) (command line tool, and Windows Explorer integration) or the [SlikSVN](https://sliksvn.com/download/) (just the command line tool) client. They have Windows installers and can be used from Windows cmd or RStudio terminal.
 
 Some resources for learning subversion commands:
 
