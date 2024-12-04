@@ -23,7 +23,7 @@
 <meta name="author" content="R Contribution Working Group" />
 
 
-<meta name="date" content="2024-12-03" />
+<meta name="date" content="2024-12-04" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -356,7 +356,7 @@ The different steps required can be found in previous chapters of the book, for 
 <p>Then you should check that R still works as expected via:</p>
 <div class="sourceCode" id="cb34"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb34-1"><a href="FixBug.html#cb34-1" tabindex="-1"></a><span class="bu">cd</span> <span class="st">&quot;</span><span class="va">$TOP_SRCDIR</span><span class="st">&quot;</span></span>
 <span id="cb34-2"><a href="FixBug.html#cb34-2" tabindex="-1"></a><span class="fu">make</span> check-devel</span></code></pre></div>
-<p>If there is no test for your proposed change you can add a new regression test, following <a href="#TestR">the guidelines</a>.</p>
+<p>If there is no test for your proposed change you can add a new regression test, following <a href="TestRVer.html#TestRVer">the guidelines</a>.</p>
 <p>Then you should bring changes from the repository into the working copy, in case any other change has been introduced, and create a patch.diff file with just the changes you want to propose to the R core:</p>
 <div class="sourceCode" id="cb35"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb35-1"><a href="FixBug.html#cb35-1" tabindex="-1"></a><span class="fu">svn</span> update</span>
 <span id="cb35-2"><a href="FixBug.html#cb35-2" tabindex="-1"></a><span class="fu">svn</span> diff <span class="op">&gt;</span> patch.diff</span></code></pre></div>

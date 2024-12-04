@@ -130,7 +130,7 @@
 
 \title{R Development Guide}
 \author{R Contribution Working Group}
-\date{2024-12-03}
+\date{2024-12-04}
 
 \begin{document}
 \maketitle
@@ -179,7 +179,7 @@ Contributions to base R are possible in a number of different ways. Some of them
 \def\labelenumi{\arabic{enumi}.}
 \tightlist
 \item
-  Contributing to bug fixing: Refer \hyperref[BugTrack]{Bug Tracking} and \hyperref[ReviewBugs]{Reviewing Bugs}.
+  Contributing to bug fixing: Refer \hyperref[IssueTrack]{Issue Tracking} and \hyperref[ReviewBugs]{Reviewing Bugs}.
 \item
   Contributing to translations: Refer \hyperref[]{Translations}.
 \item
@@ -201,7 +201,7 @@ The guide is intended as a comprehensive resource for contributing to base R. Th
 \def\labelenumi{\arabic{enumi}.}
 \setcounter{enumi}{1}
 \item
-  The \hyperref[BugTrack]{Bug Tracking} and the \hyperref[ReviewBugs]{Reviewing Bugs} chapters discuss how to find bugs in R and how to review bug reports that are submitted to Bugzilla.
+  The \hyperref[IssueTrack]{Issue Tracking} and the \hyperref[ReviewBugs]{Reviewing Bugs} chapters discuss how to find bugs in R and how to review bug reports that are submitted to Bugzilla.
 \item
   The \hyperref[FindSource]{Finding the Source} chapter provides an overview of the R codebase and helps with finding source code of base functions written in R and/or C.
 \item
@@ -1175,7 +1175,7 @@ Then you should check that R still works as expected via:
 \end{Highlighting}
 \end{Shaded}
 
-If there is no test for your proposed change you can add a new regression test, following \hyperref[TestR]{the guidelines}.
+If there is no test for your proposed change you can add a new regression test, following \hyperref[TestRVer]{the guidelines}.
 
 Then you should bring changes from the repository into the working copy, in case any other change has been introduced, and create a patch.diff file with just the changes you want to propose to the R core:
 
@@ -2237,7 +2237,7 @@ This chapter lists resources and tools which R developers may use. Here we will 
 
 \section{Subversion (svn) client}\label{subversion-svn-client}
 
-Subversion (svn) is a version control system that tracks any changes made to files and directories. You can install either the TortoiseSVN (\url{https://tortoisesvn.net/}, command line tool, and Windows Explorer integration) or the SlikSVN (\url{https://sliksvn.com/download/}, just the command line tool) client. They have Windows installers and can be used from Windows cmd or RStudio terminal.
+Subversion (svn) is a version control system that tracks any changes made to files and directories. You can install either the \href{https://tortoisesvn.net/}{TortoiseSVN} (command line tool, and Windows Explorer integration) or the \href{https://sliksvn.com/download/}{SlikSVN} (just the command line tool) client. They have Windows installers and can be used from Windows cmd or RStudio terminal.
 
 Some resources for learning subversion commands:
 
