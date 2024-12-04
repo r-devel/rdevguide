@@ -192,7 +192,7 @@ If you decide to proofread, read a section of the documentation from start to fi
 
 ## Helping with the Developer's Guide
 
-The Developer's Guide (what you are reading now) uses the same process as the main R documentation, except for some small differences. The source lives in a [GitHub repository](https://github.com/r-devel/rdevguide/) and bug reports should be submitted to the [devguide GitHub tracker](https://github.com/r-devel/rdevguide/issues).
+Contributions to the R Development Guide (what you are reading now) are also welcome. The source for this guide lives in a [GitHub repository](https://github.com/r-devel/rdevguide/) and bug reports should be submitted to the [issue tracker](https://github.com/r-devel/rdevguide/issues).
 
 Our Developer's Guide workflow uses continuous integration and deployment so changes to the Developer’s Guide are normally published when the pull request is merged. [How to contribute to this guide from the introduction.](#how-to-contribute-to-this-guide)
 
