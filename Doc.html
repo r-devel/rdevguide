@@ -252,13 +252,16 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="9" data-path="Doc.html"><a href="Doc.html"><i class="fa fa-check"></i><b>9</b> Documenting</a>
 <ul>
-<li class="chapter" data-level="9.1" data-path="Doc.html"><a href="Doc.html#introduction-to-.rd-files"><i class="fa fa-check"></i><b>9.1</b> Introduction to <code>.Rd</code> files</a></li>
-<li class="chapter" data-level="9.2" data-path="Doc.html"><a href="Doc.html#guidelines-for-writing-r-help-files"><i class="fa fa-check"></i><b>9.2</b> Guidelines for writing R help files</a></li>
-<li class="chapter" data-level="9.3" data-path="Doc.html"><a href="Doc.html#r-manuals"><i class="fa fa-check"></i><b>9.3</b> R manuals</a></li>
-<li class="chapter" data-level="9.4" data-path="Doc.html"><a href="Doc.html#helping-with-documentation"><i class="fa fa-check"></i><b>9.4</b> Helping with documentation</a></li>
-<li class="chapter" data-level="9.5" data-path="Doc.html"><a href="Doc.html#proofreading"><i class="fa fa-check"></i><b>9.5</b> Proofreading</a></li>
-<li class="chapter" data-level="9.6" data-path="Doc.html"><a href="Doc.html#helping-with-the-r-development-guide"><i class="fa fa-check"></i><b>9.6</b> Helping with the R Development Guide</a></li>
-<li class="chapter" data-level="9.7" data-path="Doc.html"><a href="Doc.html#reporting-documentation-bugs"><i class="fa fa-check"></i><b>9.7</b> Reporting documentation bugs</a></li>
+<li class="chapter" data-level="9.1" data-path="Doc.html"><a href="Doc.html#helping-with-documentation"><i class="fa fa-check"></i><b>9.1</b> Helping with documentation</a></li>
+<li class="chapter" data-level="9.2" data-path="Doc.html"><a href="Doc.html#reporting-documentation-bugs"><i class="fa fa-check"></i><b>9.2</b> Reporting documentation bugs</a>
+<ul>
+<li class="chapter" data-level="9.2.1" data-path="Doc.html"><a href="Doc.html#example-documentation-bugs"><i class="fa fa-check"></i><b>9.2.1</b> Example documentation bugs</a></li>
+</ul></li>
+<li class="chapter" data-level="9.3" data-path="Doc.html"><a href="Doc.html#guidelines-for-writing-r-help-files"><i class="fa fa-check"></i><b>9.3</b> Guidelines for writing R help files</a></li>
+<li class="chapter" data-level="9.4" data-path="Doc.html"><a href="Doc.html#introduction-to-.rd-files"><i class="fa fa-check"></i><b>9.4</b> Introduction to <code>.Rd</code> files</a></li>
+<li class="chapter" data-level="9.5" data-path="Doc.html"><a href="Doc.html#r-manuals"><i class="fa fa-check"></i><b>9.5</b> R manuals</a></li>
+<li class="chapter" data-level="9.6" data-path="Doc.html"><a href="Doc.html#proofreading"><i class="fa fa-check"></i><b>9.6</b> Proofreading</a></li>
+<li class="chapter" data-level="9.7" data-path="Doc.html"><a href="Doc.html#helping-with-the-r-development-guide"><i class="fa fa-check"></i><b>9.7</b> Helping with the R Development Guide</a></li>
 <li class="chapter" data-level="9.8" data-path="Doc.html"><a href="Doc.html#see-also-5"><i class="fa fa-check"></i><b>9.8</b> See also</a></li>
 </ul></li>
 <li class="chapter" data-level="10" data-path="message-translations.html"><a href="message-translations.html"><i class="fa fa-check"></i><b>10</b> Message Translations</a>
@@ -330,9 +333,50 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h1><span class="header-section-number">Chapter 9</span> Documenting<a href="Doc.html#Doc" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <p>R has a substantial body of documentation, comprising help files for the core packages and a set of manuals aimed at users (An Introduction to R, R Data Import/Export), system administrators (R Installation and Administration) and developers (Writing R Extensions, The R language definition, and R Internals). This documentation was developed by the R Core Team with input from external contributors. The continuing involvement of the user community is important in maintaining this valuable documentation.</p>
 <p>The involvement of the community takes many forms, from contributing content, to making bug reports or raising an issue when the documentation could be more complete or made easier to follow.</p>
-<p>This chapter is about the ways people can contribute to R’s documentation, with guidance on how to do that. Any time you feel that you can clarify or fill gaps in existing documentation, your contribution is welcome and appreciated. If you find it difficult to deal with the markup used in the source files, you can ask for help with that part too. Please do not let the material in this chapter stand between the documentation and your desire to help out. However, not every good faith effort to change or extend the documentation will be accepted - sometimes the suggested changes may be incorrect; other times, while a change in wording may make some things clearer and easier to understand, the finer details of some corner case may become less clear, leading to the suggested changes being declined or modified by a member of R Core before applying them (if they agree the issue is important enough to fix).</p>
-<div id="introduction-to-.rd-files" class="section level2 hasAnchor" number="9.1">
-<h2><span class="header-section-number">9.1</span> Introduction to <code>.Rd</code> files<a href="Doc.html#introduction-to-.rd-files" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>This chapter is about the ways people can contribute to R’s documentation, with guidance on how to do that. Any time you feel that you can clarify or fill gaps in existing documentation, your contribution is welcome and appreciated. If you find it difficult to deal with the markup formatting language used in the source files, you can ask for help with that part too. Please do not let the material in this chapter stand between the documentation and your desire to help out. However, not every good faith effort to change or extend the documentation will be accepted - sometimes the suggested changes may be incorrect; other times, while a change in wording may make some things clearer and easier to understand, the finer details of some corner case may become less clear, leading to the suggested changes being declined or modified by a member of R Core before applying them (if they agree the issue is important enough to fix).</p>
+<div id="helping-with-documentation" class="section level2 hasAnchor" number="9.1">
+<h2><span class="header-section-number">9.1</span> Helping with documentation<a href="Doc.html#helping-with-documentation" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Maintaining the accuracy of R’s documentation and keeping a high level of quality takes a lot of effort. Community members, like you, help with writing, editing, and updating content, and these contributions are appreciated and welcomed.</p>
+<p>Looking at pre-existing documentation source files can be very helpful when getting started.</p>
+<p>You can directly search for <a href="https://bugs.r-project.org/buglist.cgi?component=Documentation&amp;list_id=22501&amp;product=R&amp;resolution=---">documentation issues/bugs on Bugzilla</a>. Issues vary from typos to unclear documentation and items lacking documentation.</p>
+<p>If you see a documentation issue that you would like to tackle, you can leave a comment on the issue saying you are going to try to solve the issue and mention roughly how long you think you will take to do so (this allows others to take on the issue if you happen to forget or lose interest).</p>
+</div>
+<div id="reporting-documentation-bugs" class="section level2 hasAnchor" number="9.2">
+<h2><span class="header-section-number">9.2</span> Reporting documentation bugs<a href="Doc.html#reporting-documentation-bugs" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><!--
+discussion in slack (random channel)
+--></p>
+<p>To suggest improvements to the R manuals, report typos or bugs in the R manuals, or to raise issues related to documentation in packages maintained by the R Core Team, follow the usual guidance for <a href="ReportingBugs.html#RCorePkgBug">reporting bugs in R</a>.</p>
+<p>To report bugs or typos in the documentation of a package that is not maintained by the R Core Team, follow the guidance for <a href="ReportingBugs.html#nonRCorePkgBug">reporting bugs in contributed packages</a>.</p>
+<p><strong>Note</strong>:</p>
+<p>There is a <code>#core-documentation</code> channel on the <a href="https://r-contributors.slack.com/">R Contributors slack</a> where you can get feedback before reporting an issue or get feedback on proposed improvements.</p>
+<div id="example-documentation-bugs" class="section level3 hasAnchor" number="9.2.1">
+<h3><span class="header-section-number">9.2.1</span> Example documentation bugs<a href="Doc.html#example-documentation-bugs" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Here are a couple of successfully resolved bugs as examples.</p>
+<ol style="list-style-type: decimal">
+<li><a href="https://bugs.r-project.org/show_bug.cgi?id=16003">Bug 16003 - heatmap scale argument: description not complete</a></li>
+</ol>
+<p>There was a question about the description in the documentation, where it wasn’t technically incorrect, but was slightly unclear. This led to a discussion around the updates to the text and a couple of extra examples were added in for clarity too.</p>
+<ol start="2" style="list-style-type: decimal">
+<li><a href="https://bugs.r-project.org/show_bug.cgi?id=18781">Bug 18781 - typo in texinfo</a></li>
+</ol>
+<p>This is an example of a typo being spotted, raised and fixed within the same day.</p>
+</div>
+</div>
+<div id="guidelines-for-writing-r-help-files" class="section level2 hasAnchor" number="9.3">
+<h2><span class="header-section-number">9.3</span> Guidelines for writing R help files<a href="Doc.html#guidelines-for-writing-r-help-files" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>This section is based on the <a href="https://developer.r-project.org/Rds.html">guidelines used by R Core developers for writing R help files</a>. Extensive details of writing R documentation files can be found in the <a href="https://cran.r-project.org/doc/manuals/r-release/R-exts.html#Writing-R-documentation-files">Writing R Extensions</a> manual.</p>
+<p>The language used in the documentations should follow these basic rules:</p>
+<ol style="list-style-type: decimal">
+<li><p>Affirmative tone should be used to describe what the function does and how to use it effectively. Rather than creating worry in the mind of a reader, it should establish confident knowledge about the effective use of the particular function/feature.</p></li>
+<li><p>More documentation is not necessarily better documentation. Long descriptions full of corner cases and caveats can create the impression that a function is more complex or harder to use than it actually is. Be succinct but exhaustive.</p></li>
+<li><p>Short code examples can help in understanding better. Readers can often grasp a simple example more quickly than they can digest a formal description. Usually people learn faster with concrete, motivating examples that match the context of a typical use case.</p></li>
+<li><p>Giving a code equivalent (or approximate equivalent) can be a useful addition to the description provided. You should carefully weigh whether the code equivalent adds value to the document.</p></li>
+<li><p>The tone of the documentation needs to be respectful of the reader’s background. Lay out the relevant information, show motivating use cases, provide glossary links, and do your best to connect-the-dots. The documentation is meant for newcomers, many of whom will be using it to evaluate the R language as a whole. The experience needs to be positive and not leave the reader with worries that something bad will happen if they make a mistake.</p></li>
+</ol>
+</div>
+<div id="introduction-to-.rd-files" class="section level2 hasAnchor" number="9.4">
+<h2><span class="header-section-number">9.4</span> Introduction to <code>.Rd</code> files<a href="Doc.html#introduction-to-.rd-files" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>The R help files are written in “R documentation” (Rd) format, a markup language which resembles LaTeX. The <code>.Rd</code> file format can be further processed into a variety of formats, including LaTeX, HTML, and plain text. The <code>.Rd</code> files can be found in the <code>man</code> directory of the source code for the corresponding package.</p>
 <p>There are three main parts of an <code>.Rd</code> file:</p>
 <ol style="list-style-type: decimal">
@@ -435,20 +479,8 @@ c(xm, mean(x, trim = 0.10))
 \keyword{univar}</code></pre>
 <p>Many R package developers write help files using the R package <a href="https://cran.r-project.org/package=roxygen2">roxygen2</a>, which generates <code>.Rd</code> files from comments in the corresponding <code>.R</code> files. However, in this guide we only consider <code>.Rd</code> files, because the help files for the base distribution are written and edited directly in <code>.Rd</code> format.</p>
 </div>
-<div id="guidelines-for-writing-r-help-files" class="section level2 hasAnchor" number="9.2">
-<h2><span class="header-section-number">9.2</span> Guidelines for writing R help files<a href="Doc.html#guidelines-for-writing-r-help-files" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>This section is based on the <a href="https://developer.r-project.org/Rds.html">guidelines used by R Core developers for writing R help files</a>. Extensive details of writing R documentation files can be found in the <a href="https://cran.r-project.org/doc/manuals/r-release/R-exts.html#Writing-R-documentation-files">Writing R Extensions</a> manual.</p>
-<p>The language used in the documentations should follow these basic rules:</p>
-<ol style="list-style-type: decimal">
-<li><p>Affirmative tone should be used to describe what the function does and how to use it effectively. Rather than creating worry in the mind of a reader, it should establish confident knowledge about the effective use of the particular function/feature.</p></li>
-<li><p>More documentation is not necessarily better documentation. Long descriptions full of corner cases and caveats can create the impression that a function is more complex or harder to use than it actually is. Be succinct but exhaustive.</p></li>
-<li><p>Short code examples can help in understanding better. Readers can often grasp a simple example more quickly than they can digest a formal description. Usually people learn faster with concrete, motivating examples that match the context of a typical use case.</p></li>
-<li><p>Giving a code equivalent (or approximate equivalent) can be a useful addition to the description provided. You should carefully weigh whether the code equivalent adds value to the document.</p></li>
-<li><p>The tone of the documentation needs to be respectful of the reader’s background. Lay out the relevant information, show motivating use cases, provide glossary links, and do your best to connect-the-dots. The documentation is meant for newcomers, many of whom will be using it to evaluate the R language as a whole. The experience needs to be positive and not leave the reader with worries that something bad will happen if they make a mistake.</p></li>
-</ol>
-</div>
-<div id="r-manuals" class="section level2 hasAnchor" number="9.3">
-<h2><span class="header-section-number">9.3</span> R manuals<a href="Doc.html#r-manuals" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="r-manuals" class="section level2 hasAnchor" number="9.5">
+<h2><span class="header-section-number">9.5</span> R manuals<a href="Doc.html#r-manuals" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>The <a href="https://cran.r-project.org/manuals.html">R manuals</a> are a part of the <a href="https://svn.r-project.org/R/trunk/doc/manual/">R sources</a>. Hence, bug reports/patches can also be submitted via Bugzilla, e.g. <a href="https://bugs.r-project.org/bugzilla/show_bug.cgi?id=15221">Bug 15221 - R-admin/‘Installing R under Windows’: Missing argument name</a>. Note that they are typically referred to by their file names as listed below:</p>
 <table>
 <thead>
@@ -491,34 +523,16 @@ c(xm, mean(x, trim = 0.10))
 <li>The <a href="https://www.gnu.org/software/texinfo/">Texinfo manual</a> should be referred to for <a href="https://www.gnu.org/software/texinfo/manual/texinfo/texinfo.html">how to mark up text</a>.</li>
 </ul>
 </div>
-<div id="helping-with-documentation" class="section level2 hasAnchor" number="9.4">
-<h2><span class="header-section-number">9.4</span> Helping with documentation<a href="Doc.html#helping-with-documentation" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Maintaining the accuracy of R’s documentations and keeping a high level of quality takes a lot of effort. Community members, like you, help with writing, editing, and updating content, and these contributions are appreciated and welcomed.</p>
-<p>Looking at pre-existing documentation source files can be very helpful when getting started.</p>
-<p>You can directly search for <a href="https://bugs.r-project.org/buglist.cgi?component=Documentation&amp;list_id=22501&amp;product=R&amp;resolution=---">documentation issues/bugs on Bugzilla</a>. Issues vary from typos to unclear documentation and items lacking documentation.</p>
-<p>If you see a documentation issue that you would like to tackle, you can leave a comment on the issue saying you are going to try to solve the issue and mention roughly how long you think you will take to do so (this allows others to take on the issue if you happen to forget or lose interest).</p>
-<p>If you find some typo or problem on <a href="https://cran.r-project.org">CRAN</a> after checking the problem or typo you can write a polite email to <code>cran-sysadmin@r-project.org</code> and one of the R-core members working with CRAN. You’ll probably get a prompt reply about how the issue is going to be fixed.</p>
-</div>
-<div id="proofreading" class="section level2 hasAnchor" number="9.5">
-<h2><span class="header-section-number">9.5</span> Proofreading<a href="Doc.html#proofreading" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="proofreading" class="section level2 hasAnchor" number="9.6">
+<h2><span class="header-section-number">9.6</span> Proofreading<a href="Doc.html#proofreading" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>While an issue filed on Bugzilla means there is a known issue somewhere, that does not mean there are not other issues lurking about in the documentation. Proofreading a part of the documentation can often uncover problems.</p>
 <p>If you decide to proofread, read a section of the documentation from start to finish, filing issues in Bugzilla for each major type of problem you find. It is best to avoid filing a single issue for an entire section containing multiple problems; instead, file several issues so that it is easier to break the work up for multiple people and more efficient review.</p>
 </div>
-<div id="helping-with-the-r-development-guide" class="section level2 hasAnchor" number="9.6">
-<h2><span class="header-section-number">9.6</span> Helping with the R Development Guide<a href="Doc.html#helping-with-the-r-development-guide" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="helping-with-the-r-development-guide" class="section level2 hasAnchor" number="9.7">
+<h2><span class="header-section-number">9.7</span> Helping with the R Development Guide<a href="Doc.html#helping-with-the-r-development-guide" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>The R Development Guide (what you are reading now) uses the same process as the main R documentation, except for some small differences. The source lives in a <a href="https://github.com/r-devel/rdevguide/">GitHub repository</a> and bug reports should be submitted to the <a href="https://github.com/r-devel/rdevguide/issues">devguide GitHub tracker</a>.</p>
-<p>Our development guide workflow uses continuous integration and deployment so changes to the development guide are normally published when the pull request is merged. <a href="introduction.html#how-to-contribute-to-this-guide">How to contribute to this guide from the introduction.</a></p>
-</div>
-<div id="reporting-documentation-bugs" class="section level2 hasAnchor" number="9.7">
-<h2><span class="header-section-number">9.7</span> Reporting documentation bugs<a href="Doc.html#reporting-documentation-bugs" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p><!---
-discussion in slack (random channel)
---></p>
-<p>If you find some typo or problem on the <a href="https://cran.r-project.org">CRAN</a> webpages you can write a polite email to <code>CRAN@r-project.org</code> to report it. As an alternative, one can also write to the R-devel mailing list or submit a bug report via R’s Bugzilla.</p>
-<p>For improvements of the R-manuals or reporting typos or bugs in the R-manuals, submit a bug report to R’s Bugzilla.</p>
-<p>For reporting bugs or typos on the webpages or documentation about a particular package, write to the corresponding package maintainer. To find the maintainer of a package, use the command <code>maintainer("package-name")</code>.</p>
-<p><strong>Note</strong>:</p>
-<p>There is a <code>#core-documentation</code> channel on the <a href="https://r-contributors.slack.com/">R Contributors slack</a> where you can discuss about the patches for improvements to R’s documentation.</p>
+<p>There’s a section on the introduction page detailing <a href="introduction.html#how-to-contribute-to-this-guide">how to contribute to this guide</a>. Once you have made suggested changes you can raise them for someone else to review through a <a href="https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests">pull request</a> on GitHub. Examples of past pull requests can be found on the <a href="https://github.com/r-devel/rdevguide/pulls?q=is%3Apr+is%3Aclosed">pull request tab in this guide’s GitHub repository</a>.
+Our workflow for the R Development Guide uses continuous integration and deployment so changes to the live R Development Guide site are normally published once a pull request is merged.</p>
 </div>
 <div id="see-also-5" class="section level2 hasAnchor" number="9.8">
 <h2><span class="header-section-number">9.8</span> See also<a href="Doc.html#see-also-5" class="anchor-section" aria-label="Anchor link to header"></a></h2>

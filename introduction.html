@@ -252,13 +252,16 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="9" data-path="Doc.html"><a href="Doc.html"><i class="fa fa-check"></i><b>9</b> Documenting</a>
 <ul>
-<li class="chapter" data-level="9.1" data-path="Doc.html"><a href="Doc.html#introduction-to-.rd-files"><i class="fa fa-check"></i><b>9.1</b> Introduction to <code>.Rd</code> files</a></li>
-<li class="chapter" data-level="9.2" data-path="Doc.html"><a href="Doc.html#guidelines-for-writing-r-help-files"><i class="fa fa-check"></i><b>9.2</b> Guidelines for writing R help files</a></li>
-<li class="chapter" data-level="9.3" data-path="Doc.html"><a href="Doc.html#r-manuals"><i class="fa fa-check"></i><b>9.3</b> R manuals</a></li>
-<li class="chapter" data-level="9.4" data-path="Doc.html"><a href="Doc.html#helping-with-documentation"><i class="fa fa-check"></i><b>9.4</b> Helping with documentation</a></li>
-<li class="chapter" data-level="9.5" data-path="Doc.html"><a href="Doc.html#proofreading"><i class="fa fa-check"></i><b>9.5</b> Proofreading</a></li>
-<li class="chapter" data-level="9.6" data-path="Doc.html"><a href="Doc.html#helping-with-the-r-development-guide"><i class="fa fa-check"></i><b>9.6</b> Helping with the R Development Guide</a></li>
-<li class="chapter" data-level="9.7" data-path="Doc.html"><a href="Doc.html#reporting-documentation-bugs"><i class="fa fa-check"></i><b>9.7</b> Reporting documentation bugs</a></li>
+<li class="chapter" data-level="9.1" data-path="Doc.html"><a href="Doc.html#helping-with-documentation"><i class="fa fa-check"></i><b>9.1</b> Helping with documentation</a></li>
+<li class="chapter" data-level="9.2" data-path="Doc.html"><a href="Doc.html#reporting-documentation-bugs"><i class="fa fa-check"></i><b>9.2</b> Reporting documentation bugs</a>
+<ul>
+<li class="chapter" data-level="9.2.1" data-path="Doc.html"><a href="Doc.html#example-documentation-bugs"><i class="fa fa-check"></i><b>9.2.1</b> Example documentation bugs</a></li>
+</ul></li>
+<li class="chapter" data-level="9.3" data-path="Doc.html"><a href="Doc.html#guidelines-for-writing-r-help-files"><i class="fa fa-check"></i><b>9.3</b> Guidelines for writing R help files</a></li>
+<li class="chapter" data-level="9.4" data-path="Doc.html"><a href="Doc.html#introduction-to-.rd-files"><i class="fa fa-check"></i><b>9.4</b> Introduction to <code>.Rd</code> files</a></li>
+<li class="chapter" data-level="9.5" data-path="Doc.html"><a href="Doc.html#r-manuals"><i class="fa fa-check"></i><b>9.5</b> R manuals</a></li>
+<li class="chapter" data-level="9.6" data-path="Doc.html"><a href="Doc.html#proofreading"><i class="fa fa-check"></i><b>9.6</b> Proofreading</a></li>
+<li class="chapter" data-level="9.7" data-path="Doc.html"><a href="Doc.html#helping-with-the-r-development-guide"><i class="fa fa-check"></i><b>9.7</b> Helping with the R Development Guide</a></li>
 <li class="chapter" data-level="9.8" data-path="Doc.html"><a href="Doc.html#see-also-5"><i class="fa fa-check"></i><b>9.8</b> See also</a></li>
 </ul></li>
 <li class="chapter" data-level="10" data-path="message-translations.html"><a href="message-translations.html"><i class="fa fa-check"></i><b>10</b> Message Translations</a>
@@ -333,11 +336,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h2><span class="header-section-number">1.1</span> Overview of different ways of contributing to the base R Project<a href="introduction.html#overview-of-different-ways-of-contributing-to-the-base-r-project" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Contributions to base R are possible in a number of different ways. Some of them are listed below:</p>
 <ol style="list-style-type: decimal">
-<li>Contributing to bug fixing: Refer <a href="IssueTrack.html#IssueTrack">Issue Tracking</a> and <a href="ReviewBugs.html#ReviewBugs">Reviewing Bugs</a>.</li>
-<li>Contributing to translations: Refer <a href="#">Translations</a>.</li>
-<li>Testing R before release: Refer <a href="TestRVer.html#TestRVer">Testing Pre-release R Versions</a>.</li>
+<li>Contributing to bug fixing: Refer to <a href="IssueTrack.html#IssueTrack">Issue Tracking</a> and <a href="ReviewBugs.html#ReviewBugs">Reviewing Bugs</a>.</li>
+<li>Contributing to translations: Refer to <a href="message-translations.html#message-translations">Translations</a>.</li>
+<li>Testing R before release: Refer to <a href="TestRVer.html#TestRVer">Testing Pre-release R Versions</a>.</li>
+<li>Contributing to documentation, including this guide: Refer to <a href="Doc.html#Doc">Documenting R</a> and <a href="introduction.html#how-to-contribute-to-this-guide">Contributing to this guide</a>.</li>
 </ol>
-<!-- TODO(Saranjeet): Refer Contributing to R tutorial -->
 <!-- TODO(Saranjeet): Welcome to Bug BBQ slides -->
 <!-- TODO(Saranjeet): README on Bug BBQ repo -->
 </div>
@@ -362,13 +365,14 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 <div id="how-to-contribute-to-this-guide" class="section level2 hasAnchor" number="1.3">
 <h2><span class="header-section-number">1.3</span> How to contribute to this guide itself?<a href="introduction.html#how-to-contribute-to-this-guide" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>All contributors should start by reading the <a href="https://github.com/r-devel/rdevguide/blob/main/CONTRIBUTING.md">contributing page for this project</a>.</p>
+<p>Maintainers and contributors are also requested to follow <a href="https://github.com/r-devel/rdevguide/blob/main/CONDUCT.md">this guide’s code of conduct</a>.</p>
 <p>This guide is built using bookdown which makes editing it easier, provided you have a GitHub account (sign-up at <a href="https://github.com/">github.com</a>). After you log-in to GitHub, click on the ‘Edit’ icon highlighted with a red ellipse in the image below. This will take you to an editable version of the the source R Markdown file that generated the page you are on:</p>
 <div class="float">
 <img src="img/edit_icon.png" alt="Screenshot of the toolbar in the HTML version of the guide, with the Edit button (pencil and paper icon) circled in red." />
 <div class="figcaption">Screenshot of the toolbar in the HTML version of the guide, with the Edit button (pencil and paper icon) circled in red.</div>
 </div>
 <p>Use the <a href="https://github.com/r-devel/rdevguide/issues">issue tracker</a> to raise an issue about the guide’s content or to make a feature request.</p>
-<p>Maintainers and contributors are requested to follow this project’s <a href="https://github.com/r-devel/rdevguide/blob/main/CONDUCT.md">code of conduct</a>.</p>
 
 </div>
 </div>
