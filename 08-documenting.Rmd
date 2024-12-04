@@ -21,7 +21,6 @@ If you see a documentation issue that you would like to tackle, you can leave a 
 discussion in slack (random channel)
 -->
 
-If you find some typo or problem on the [CRAN](https://cran.r-project.org) webpages you can write a polite email to `CRAN@r-project.org` to report it. As an alternative, one can also write to the R-devel mailing list or submit a bug report via R's Bugzilla.
 
 For improvements of the R-manuals or reporting typos or bugs in the R-manuals, submit a bug report to [R's Bugzilla](https://bugs.r-project.org/).
 
