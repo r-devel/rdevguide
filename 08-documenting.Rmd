@@ -21,10 +21,9 @@ If you see a documentation issue that you would like to tackle, you can leave a 
 discussion in slack (random channel)
 -->
 
+For improvements of the R-manuals, reporting typos or bugs in the R-manuals, or issues related to packages maintained by the R core team, read the [reporting bugs guide](#ReportBug).
 
-For improvements of the R-manuals or reporting typos or bugs in the R-manuals, submit a bug report to [R's Bugzilla](https://bugs.r-project.org/).
-
-For reporting bugs or typos on the webpages or documentation about a particular package, write to the corresponding package maintainer. To find the maintainer of a package, use the command `maintainer("package-name")`.
+For reporting bugs or typos on webpages or documentation about a particular package where it is not maintained by the R core team, you can find the maintainer of a package by using the `maintainer("package-name")` function.
 
 **Note**:
 
@@ -194,7 +193,9 @@ If you decide to proofread, read a section of the documentation from start to fi
 
 Contributions to the R Development Guide (what you are reading now) are also welcome. The source for this guide lives in a [GitHub repository](https://github.com/r-devel/rdevguide/) and bug reports should be submitted to the [issue tracker](https://github.com/r-devel/rdevguide/issues).
 
-Our Developer's Guide workflow uses continuous integration and deployment so changes to the Developer’s Guide are normally published when the pull request is merged. [How to contribute to this guide from the introduction.](#how-to-contribute-to-this-guide)
+There's a section on the introduction page detailing [how to contribute to this guide](#how-to-contribute-to-this-guide). Once you have made suggested changes you can raise them for someone else to review through a [pull request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests) on GitHub. Examples of past pull requests can be found on the [pull request tab in this guide's GitHub repository](https://github.com/r-devel/rdevguide/pulls?q=is%3Apr+is%3Aclosed). 
+
+Our Developer's Guide workflow uses continuous integration and deployment so changes to the live Developer’s Guide site are normally published once a pull request is merged. 
 
 ## See also
 
