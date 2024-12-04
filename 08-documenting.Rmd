@@ -28,7 +28,7 @@ For reporting bugs or typos on the webpages or documentation about a particular 
 
 **Note**:
 
-There is a `#core-documentation` channel on the [R Contributors slack](https://r-contributors.slack.com/) where you can discuss about the patches for improvements to R's documentation. 
+There is a `#core-documentation` channel on the [R Contributors slack](https://r-contributors.slack.com/) where you can get feedback before reporting an issue or get feedback on proposed improvements.
 
 ### Example documentation bugs
 
