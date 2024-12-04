@@ -8,11 +8,8 @@ Contains information for people interested in contributing to R core, including 
 
 ## R developer page
 
-The [R developer page](https://developer.r-project.org/) contains details on the R release process, and the [R blog](https://blog.r-project.org/).
+The [R developer page](https://developer.r-project.org/) contains information about the plans of the R Core Team and details on the R release process, as well as pointers to technical write-ups including the [R blog](https://blog.r-project.org/).
 
-## R developer mailing list
-
-You can find more information about, and subscribe to R development mailing list on the [R-devel site](https://stat.ethz.ch/mailman/listinfo/r-devel).
 
 ## R Translations site
 
