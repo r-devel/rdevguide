@@ -2,7 +2,7 @@
 
 # A Guide for Contributing to R Core
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-32-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-33-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 This guide is a work in progress, inspired by http://devguide.python.org/. It is deployed at https://contributor.r-project.org/rdevguide/.
@@ -101,6 +101,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center" valign="top" width="14.28%"><a href="https://www.imbe.med.fau.de/person/sebastian-meyer/"><img src="https://avatars.githubusercontent.com/u/4366501?v=4?s=100" width="100px;" alt="Sebastian Meyer"/><br /><sub><b>Sebastian Meyer</b></sub></a><br /><a href="#ideas-bastistician" title="Ideas, Planning, & Feedback">🤔</a> <a href="#research-bastistician" title="Research">🔬</a> <a href="#question-bastistician" title="Answering Questions">💬</a></td>
       <td align="center" valign="top" width="14.28%"><a href="http://www.frick.ws"><img src="https://avatars.githubusercontent.com/u/12950918?v=4?s=100" width="100px;" alt="Hannah Frick"/><br /><sub><b>Hannah Frick</b></sub></a><br /><a href="https://github.com/r-devel/rdevguide/commits?author=hfrick" title="Documentation">📖</a> <a href="#ideas-hfrick" title="Ideas, Planning, & Feedback">🤔</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/SJaffa"><img src="https://avatars.githubusercontent.com/u/13678317?v=4?s=100" width="100px;" alt="S Jaffa"/><br /><sub><b>S Jaffa</b></sub></a><br /><a href="#content-SJaffa" title="Content">🖋</a> <a href="https://github.com/r-devel/rdevguide/commits?author=SJaffa" title="Documentation">📖</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="http://bjungbogati.com.np"><img src="https://avatars.githubusercontent.com/u/8600091?v=4?s=100" width="100px;" alt="Binod Jung Bogati"/><br /><sub><b>Binod Jung Bogati</b></sub></a><br /><a href="#content-bjungbogati" title="Content">🖋</a> <a href="https://github.com/r-devel/rdevguide/commits?author=bjungbogati" title="Documentation">📖</a></td>
     </tr>
   </tbody>
 </table>
