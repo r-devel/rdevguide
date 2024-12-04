@@ -11,22 +11,22 @@ Fixes #<NUM>
 
 ### List of changes proposed in this PR (pull-request)
 
-<!-- We suggest using bullets (indicated by * or -) and filled checkboxes [x] here -->
+<!-- We suggest using bullets and filled checkboxes [x] here -->
 
 * *Lorem ipsum dolor sit amet, consectetur adipiscing.*
 * *Lorem ipsum dolor sit amet, consectetur adipiscing.*
 
 ### Some housekeeping checks
 
-- [ ] If you have added a new chapter(s)/section(s) to the guide, have you update the [Quick start to the guide](https://contributor.r-project.org/rdevguide/introduction.html#quick-start-to-the-guide) accordingly?
+- [ ] If you have added a new chapter(s)/section(s) to the guide, have you updated the [Quick start to the guide](https://contributor.r-project.org/rdevguide/introduction.html#quick-start-to-the-guide) accordingly?
 - If you have added a new chapter(s) to the guide:
   - [ ] Have you listed it (them) in the `_bookdown.yml`?
-  - [ ] Is the filename(s) for the new chapter(s) in lower case (except for when the letter `R` is used in the filename for referring to the R programming language)?
-  - [ ] Are the words in the filename(s) for the new chapter(s) separated (if required) by `-`?
+  - [ ] Are the filename(s) for the new chapter(s) in lower case?
+  - [ ] Are the words in the filename(s) for the new chapter(s) separated by `-` (if required)?
 
 ### What should a reviewer concentrate their feedback on?
 
-<!-- This section is particularly useful if you have a pull request that is still in development. You can guide the reviews to focus on the parts that are ready for their comments. We suggest using bullets (indicated by * or -) and filled checkboxes [x] here -->
+<!-- This section is particularly useful if you have a pull request that is still in development. You can guide the reviews to focus on the parts that are ready for their comments. We suggest using bullets and filled checkboxes [x] here -->
 
 - [ ] *Lorem ipsum dolor sit amet, consectetur adipiscing.*
 - [ ] Everything looks ok?
