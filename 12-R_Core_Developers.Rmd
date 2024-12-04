@@ -4,24 +4,24 @@ This page lists the former and current members of the R Core team who have write
 
 Current members of the R Core team:
 
-  * John Chambers
-  * Peter Dalgaard
-  * Robert Gentleman
-  * Kurt Hornik
-  * Ross Ihaka
-  * Tomas Kalibera
-  * Michael Lawrence
-  * Uwe Ligges
-  * Thomas Lumley
-  * Martin Maechler
-  * Sebastian Meyer
-  * Paul Murrell
-  * Martyn Plummer
-  * Brian Ripley
-  * Deepayan Sarkar
-  * Duncan Temple Lang
-  * Luke Tierney
-  * Simon Urbanek
+  * [John Chambers](https://datascience.stanford.edu/people/john-chambers)
+  * [Peter Dalgaard](www.cbs.dk/en/staff/pdmes)
+  * [Robert Gentleman](https://en.wikipedia.org/wiki/Robert_Gentleman_(statistician))
+  * [Kurt Hornik](https://statmath.wu.ac.at/~hornik/software.html)
+  * [Ross Ihaka](https://www.researchgate.net/profile/Ross-Ihaka)
+  * [Tomas Kalibera](https://github.com/kalibera)
+  * [Michael Lawrence](https://github.com/lawremi)
+  * [Uwe Ligges](https://www.statistik.tu-dortmund.de/~ligges/)
+  * [Thomas Lumley](https://github.com/tslumley)
+  * [Martin Maechler](https://people.math.ethz.ch/~maechler/)
+  * [Sebastian Meyer](https://www.imbe.med.fau.de/lehrstuhl/sebastian-meyer/)
+  * [Paul Murrell](https://www.stat.auckland.ac.nz/~paul/)
+  * [Martyn Plummer](https://warwick.ac.uk/fac/sci/statistics/staff/academic-research/plummer/)
+  * [Brian Ripley](https://www.stats.ox.ac.uk/~ripley/)
+  * [Deepayan Sarkar](https://www.isid.ac.in/~deepayan/)
+  * [Duncan Temple Lang](https://www.stat.ucdavis.edu/~duncan/)
+  * [Luke Tierney](https://stat.uiowa.edu/people/luke-tierney)
+  * [Simon Urbanek](https://urbanek.info/)
 
 Former members of the R Core team:
 
@@ -33,8 +33,5 @@ Former members of the R Core team:
   * Stefano lacus (up to July 2014)
   * Guido Masarotto (up to June 2003)
   * Heiner Schwarte (up to October 1999)
-
-We've left it up to the individual core developers to list areas of expertise (or things they are willing to maintain) if they wish.
-<!-- TODO add URL to bios, perhaps on the R project website -->
 
 The [Contributors page on the R Project website](https://www.r-project.org/contributors.html) also lists contributors, outside the R Core team, who provided invaluable help by donating code, bug fixes, and documentation.
