@@ -323,4 +323,5 @@ Related links:
 
 ## Helpful references
 
--   Statistical terms glossary
+- Statistical terms glossary
+- The [R Translations site](https://contributor.r-project.org/translations/) contains more details on translating R messages and getting involved in existing projects.

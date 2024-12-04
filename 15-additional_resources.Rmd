@@ -10,13 +10,14 @@ Contains information for people interested in contributing to R core, including 
 
 The [R developer page](https://developer.r-project.org/) contains information about the plans of the R Core Team and details on the R release process, as well as pointers to technical write-ups including the [R blog](https://blog.r-project.org/).
 
-
-## R Translations site
-
-There are a number of translation projects already underway or completed, more information on how to offer your help with one of these, contact others involved in translations, and to find more detailed instructions for translating R Messages or R Manuals can be found on the [R Translations site](https://contributor.r-project.org/translations/).
-
 ## R manuals
 
 There are a number of manuals created and included with R installations. The original latest and development versions of these are available from the [R Manuals site](https://cran.r-project.org/manuals.html). Note that the versions included on the site are created with Debian Linux. While there may be some variation for Windows and Mac manuals,  most parts will be identical regardless of platform.
+
+Particular manuals that might be of interest to R contributors are:
+
+- [R installation and administration](https://cran.r-project.org/doc/manuals/r-release/R-admin.html) - gives more details on building R from source
+- [R internals](https://cran.r-project.org/doc/manuals/r-release/R-ints.html) - for those who want to read deeper into the internals R, for example, it contains chapters on special data types used in the C code, internal and primitive functions and details of graphics devices
+- [R language definition](https://cran.r-project.org/doc/manuals/r-release/R-lang.html) - an in depth overview of the R language, helpful for developing more advanced R knowledge from a user's perspective
 
 There is a [new re-styled R manuals site built with Quarto](https://rstudio.github.io/r-manuals/) that has been produced to make searching and navigating the manuals easier in a web browser. This site is automatically built from the original manuals site using a number of scripts in the [r-manuals GitHub repo](https://github.com/rstudio/r-manuals).
