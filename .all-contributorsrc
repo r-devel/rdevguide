@@ -340,6 +340,16 @@
         "doc",
         "ideas"
       ]
+    },
+    {
+      "login": "SJaffa",
+      "name": "S Jaffa",
+      "avatar_url": "https://avatars.githubusercontent.com/u/13678317?v=4",
+      "profile": "https://github.com/SJaffa",
+      "contributions": [
+        "content",
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
