@@ -8,7 +8,7 @@ This chapter is about the ways people can contribute to R's documentation, with 
 
 ## Helping with documentation
 
-Maintaining the accuracy of R's documentations and keeping a high level of quality takes a lot of effort. Community members, like you, help with writing, editing, and updating content, and these contributions are appreciated and welcomed.
+Maintaining the accuracy of R's documentation and keeping a high level of quality takes a lot of effort. Community members, like you, help with writing, editing, and updating content, and these contributions are appreciated and welcomed.
 
 Looking at pre-existing documentation source files can be very helpful when getting started.
 
