@@ -8,3 +8,19 @@ clean: [packages.bib, bookdown.bbl]
 new_session: yes
 edit: https://github.com/r-devel/rdevguide/edit/main/%s
 delete_merged_file: true
+rmd_files:
+  - introduction.Rmd
+  - getting-started.Rmd
+  - issue-tracking.Rmd
+  - reporting-bugs.Rmd
+  - submitting-feature-requests.Rmd
+  - reviewing-bugs.Rmd
+  - finding-source.Rmd
+  - patch-lifecycle.Rmd
+  - documenting.Rmd
+  - message-translations.Rmd
+  - testing-pre-release-R-versions.Rmd
+  - R-core-developers.Rmd
+  - where-to-get-help.Rmd
+  - news-announcements.Rmd
+  - developer-tools.Rmd

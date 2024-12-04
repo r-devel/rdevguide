@@ -3,7 +3,9 @@ title: "R Development Guide"
 author: "R Contribution Working Group"
 date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
-output: bookdown::gitbook
+output: 
+  bookdown::gitbook:
+    split_by: rmd
 documentclass: book
 bibliography: [book.bib]
 biblio-style: apalike
