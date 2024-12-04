@@ -2,34 +2,39 @@
 
 This page lists the former and current members of the R Core team who have write access to the R source.
 
-  * Brian Ripley (present) 
-  * Deepayan Sarkar (present) 
-  * Douglas Bates (present) 
+Current members of the R Core team:
+
+  * John Chambers
+  * Peter Dalgaard
+  * Robert Gentleman
+  * Kurt Hornik
+  * Ross Ihaka
+  * Tomas Kalibera
+  * Michael Lawrence
+  * Uwe Ligges
+  * Thomas Lumley
+  * Martin Maechler
+  * Sebastian Meyer
+  * Paul Murrell
+  * Martyn Plummer
+  * Brian Ripley
+  * Deepayan Sarkar
+  * Duncan Temple Lang
+  * Luke Tierney
+  * Simon Urbanek
+
+Former members of the R Core team:
+
+  * Friedrich Leisch (up to April 2024)
+  * Douglas Bates (up to March 2024)
+  * Martin Morgan (up to June 2021)
   * Duncan Murdoch (up to September 2017)
-  * Duncan Temple Lang (present) 
-  * Friedrich Leisch (present)
+  * Seth Falcon (up to August 2015)
+  * Stefano lacus (up to July 2014)
   * Guido Masarotto (up to June 2003)
   * Heiner Schwarte (up to October 1999)
-  * John Chambers (present)
-  * Kurt Hornik (present)
-  * Luke Tierney (present)
-  * Martin Maechler (present)
-  * Sebastian Meyer (present)
-  * Martin Morgan (up to June 2021)
-  * Martyn Plummer (present)
-  * Michael Lawrence (present)
-  * Paul Murrell (present)
-  * Peter Dalgaard (present)
-  * Robert Gentleman (present)
-  * Ross Ihaka (present)
-  * Seth Falcon (up to August 2015)
-  * Simon Urbanek (present)
-  * Stefano lacus (up to July 2014)
-  * Thomas Lumley (present)
-  * Tomas Kalibera (present)
-  * Uwe Ligges (present)
 
-View the [affiliations of R Core members](). We've left it up to the individual core developers to list areas of expertise (or things they are willing to maintain) if they wish.
+We've left it up to the individual core developers to list areas of expertise (or things they are willing to maintain) if they wish.
 <!-- TODO add URL to bios, perhaps on the R project website -->
 
 The [Contributors page on the R Project website](https://www.r-project.org/contributors.html) also lists contributors, outside the R Core team, who provided invaluable help by donating code, bug fixes, and documentation.
