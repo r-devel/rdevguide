@@ -352,5 +352,5 @@ Instead of translating one string at a time, it is possible to bulk translate a 
 
 ## Helpful references
 
-- Statistical terms glossary
+- [Statistical terms glossary](https://www.isi-web.org/glossary)
 - The [R Translations site](https://contributor.r-project.org/translations/) contains more details on translating R messages and getting involved in existing projects.
