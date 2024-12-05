@@ -38,7 +38,7 @@ format:
     include-in-header: preamble.tex
     include-before-body: frontpage.tex
   epub:
-    cover-image: img/cover_page_sciberia.png
+    cover-image: img/cover_page_scriberia.png
 
 # book_filename: "rdevguide"
 # chapter_name: "Chapter "
