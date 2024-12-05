@@ -10,6 +10,9 @@ book:
   repo-url: https://github.com/r-devel/rdevguide
   repo-branch: main
   repo-actions: [edit, issue]
+  sharing: [linkedin]
+  open-graph: true
+  image: img/cover_page_scriberia.png
   downloads: [pdf, epub]
   chapters:
     - index.qmd
