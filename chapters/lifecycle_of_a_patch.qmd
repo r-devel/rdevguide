@@ -59,32 +59,32 @@ Besides checking in your computer, you can use the Github mirror  [r-devel/r-svn
 
 You should first find the file to edit, via the github interface for example:
 
-![Screenshot of the heading of the src/library/stats/man/Mulinom.Rd](img/rsvn_file_to_edit.png "Opening the file to edit.") 
+![Screenshot of the heading of the src/library/stats/man/Mulinom.Rd](../img/rsvn_file_to_edit.png "Opening the file to edit.") 
 
 Then you can edit it, directly in the interface or using the github interface:
 
-![Screenshot of the file src/library/stats/man/Mulinom.Rd being edited via the Github interface](img/rsvn_edit_file.png "Editing a file via Github interface.")
+![Screenshot of the file src/library/stats/man/Mulinom.Rd being edited via the Github interface](../img/rsvn_edit_file.png "Editing a file via Github interface.")
 
 Create a commit with a message describing the changes
 
-![Screenshot of the commit message](img/rsvn_commit_message.png "Commiting the change in the file.")
+![Screenshot of the commit message](../img/rsvn_commit_message.png "Commiting the change in the file.")
 
 And create a pull request from the branch created to check the changes.
 
-![Screenshot of the message when opening a pull requests from the branch](img/rsvn_commit_pre_PR.png "Starting a pull requests with the changes previously committed.")
+![Screenshot of the message when opening a pull requests from the branch](../img/rsvn_commit_pre_PR.png "Starting a pull requests with the changes previously committed.")
 
 Add a message and description of the svn for other users and the R core to know what is the purpose of this modification:
 
-![Screenshot of the message and content while opening a pull requests for the r-svn repository](img/rsvn_PR_message.png "Describe the changes in the pull request.")
+![Screenshot of the message and content while opening a pull requests for the r-svn repository](../img/rsvn_PR_message.png "Describe the changes in the pull request.")
 
-![Screenshot of the pull requests opened](img/rsvn_PR_created.png "The result of opening a pull requests with the changes.") 
+![Screenshot of the pull requests opened](../img/rsvn_PR_created.png "The result of opening a pull requests with the changes.") 
 
 Once the PR is submitted, some automatic checks will be triggered (they might need to be approved by some other users as per Github rules):
 
-![Screenshot of the checks triggered by opening the pull request](img/rsvn_PR_automatic_checks.png "Automatic checks triggered in the r-devel/r-svn github repository.")
+![Screenshot of the checks triggered by opening the pull request](../img/rsvn_PR_automatic_checks.png "Automatic checks triggered in the r-devel/r-svn github repository.")
 When the checks end you will need to explore the results and asses if the results indicate a problem or not. 
 
-![Screenshot of the results of the Github checks in the r-svn mirror](img/rsvn_checks_results.png "Summary of the results of the automatic checks triggered by opening the pull request.")
+![Screenshot of the results of the Github checks in the r-svn mirror](../img/rsvn_checks_results.png "Summary of the results of the automatic checks triggered by opening the pull request.")
 
 Once you are happy with the changes and the checks report that everything is okay you can retrieve the patch via:
 

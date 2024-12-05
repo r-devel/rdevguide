@@ -10,7 +10,7 @@ We recommend sharing your feature request idea on the [R-devel](https://stat.eth
 
 You can submit a feature request by [filing a bug](https://bugs.r-project.org/enter_bug.cgi) on Bugzilla. Under Component, select "Wishlist", the designated label for feature requests.
 
-![The "Wishlist" component in Bugzilla's bug submission screen.](img/feature-requests.png)
+![The "Wishlist" component in Bugzilla's bug submission screen.](../img/feature-requests.png)
 
 Similar to bugs, you should ensure that the feature request is [not already reported](#already-reported-bugs) and [follow best practices](#good-practices-bugs) whenever possible.
 
