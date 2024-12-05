@@ -13,31 +13,33 @@ book:
   downloads: [pdf, epub]
   chapters:
     - index.qmd
-    - introduction.qmd
-    - getting_started.qmd
-    - issue_tracking.qmd
-    - reporting_bugs.qmd
-    - submitting_feature_requests.qmd
-    - reviewing_bugs.qmd                
-    - finding_the_source.qmd             
-    - lifecycle_of_a_patch.qmd
-    - documenting.qmd                    
-    - message_translations.qmd         
-    - testing_pre_release_r_versions.qmd
-    - r_core_developers.qmd
-    - where_to_get_help.qmd              
-    - news_and_announcements.qmd   
-    - developer_tools.qmd             
+    - chapters/introduction.qmd
+    - chapters/getting_started.qmd
+    - chapters/issue_tracking.qmd
+    - chapters/reporting_bugs.qmd
+    - chapters/submitting_feature_requests.qmd
+    - chapters/reviewing_bugs.qmd                
+    - chapters/finding_the_source.qmd             
+    - chapters/lifecycle_of_a_patch.qmd
+    - chapters/documenting.qmd                    
+    - chapters/message_translations.qmd         
+    - chapters/testing_pre_release_r_versions.qmd
+    - chapters/r_core_developers.qmd
+    - chapters/where_to_get_help.qmd              
+    - chapters/news_and_announcements.qmd   
+    - chapters/developer_tools.qmd             
 
 format:
   html:
-    theme: cosmo
-    include-in-header: header.html
+    theme:
+      light: cosmo
+      dark: [cosmo, css/theme-dark.scss]
+    include-in-header: html/header.html
     description-meta: "This guide is a comprehensive resource for contributors (from all levels, beginners, intermediate, and seasoned) to the R project, facilitating their onboarding and helping them navigate the contribution process."
   pdf:
     documentclass: scrreprt
-    include-in-header: preamble.tex
-    include-before-body: frontpage.tex
+    include-in-header: tex/preamble.tex
+    include-before-body: tex/frontpage.tex
   epub:
     cover-image: img/cover_page_scriberia.png
 
