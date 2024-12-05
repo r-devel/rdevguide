@@ -21,17 +21,18 @@ book:
     - chapters/issue_tracking.qmd
     - chapters/reporting_bugs.qmd
     - chapters/submitting_feature_requests.qmd
-    - chapters/reviewing_bugs.qmd                
-    - chapters/finding_the_source.qmd             
+    - chapters/reviewing_bugs.qmd
+    - chapters/finding_the_source.qmd
     - chapters/lifecycle_of_a_patch.qmd
-    - chapters/documenting.qmd                    
-    - chapters/message_translations.qmd         
+    - chapters/documenting.qmd
+    - chapters/message_translations.qmd
+    - chapters/testing_in_r.qmd
     - chapters/testing_pre_release_r_versions.qmd
-    - chapters/where_to_get_help.qmd              
-    - chapters/news_and_announcements.qmd  
-    - chapters/developer_tools.qmd    
-    - chapters/additional_resources.qmd 
-    - chapters/r_core_developers.qmd      
+    - chapters/where_to_get_help.qmd
+    - chapters/news_and_announcements.qmd
+    - chapters/developer_tools.qmd
+    - chapters/additional_resources.qmd
+    - chapters/r_core_developers.qmd
 
 format:
   html:
