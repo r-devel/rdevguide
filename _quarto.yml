@@ -10,6 +10,7 @@ book:
   repo-url: https://github.com/r-devel/rdevguide
   repo-branch: main
   repo-actions: [edit, issue]
+  downloads: [pdf, epub]
   chapters:
     - index.qmd
     - introduction.qmd
