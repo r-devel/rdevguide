@@ -16,6 +16,9 @@ jobs:
 
       - name: Set up Quarto
         uses: quarto-dev/quarto-actions/setup@v2
+        with:
+          # To install LaTeX to build PDF book
+          tinytex: true
   
       - name: Render and Publish
         uses: quarto-dev/quarto-actions/publish@v2
