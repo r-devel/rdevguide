@@ -6,7 +6,7 @@ You may find a bug in R if:
 
 1. The R session terminates unexpectedly, or there is a segmentation fault, it might be a bug in R, unless you have written your own call to compiled code or an internal function (via `.C` or `.Internal`). The error may look like this:
 
-```{r, results='hide'}
+```r
 ##  *** caught segfault ***
 ## address (nil), cause 'memory not mapped'
 ```
