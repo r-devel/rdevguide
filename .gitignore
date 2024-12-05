@@ -10,3 +10,6 @@ rdevguide.tex
 
 # temp files
 *~
+
+/.quarto/
+_book
