@@ -1,0 +1,52 @@
+project:
+  type: book
+
+book:
+  title: "R Development Guide"
+  author: "R Contribution Working Group"
+  date: today
+  favicon: img/favicon.png
+  site-url: https://contributor.r-project.org/rdevguide
+  repo-url: https://github.com/r-devel/rdevguide
+  repo-branch: main
+  repo-actions: [edit, issue]
+  chapters:
+    - index.qmd
+    - introduction.qmd
+    - getting_started.qmd
+    - issue_tracking.qmd
+    - reporting_bugs.qmd
+    - submitting_feature_requests.qmd
+    - reviewing_bugs.qmd                
+    - finding_the_source.qmd             
+    - lifecycle_of_a_patch.qmd
+    - documenting.qmd                    
+    - message_translations.qmd         
+    - testing_pre_release_r_versions.qmd
+    - r_core_developers.qmd
+    - where_to_get_help.qmd              
+    - news_and_announcements.qmd   
+    - developer_tools.qmd             
+
+format:
+  html:
+    theme: cosmo
+    include-in-header: header.html
+    description-meta: "This guide is a comprehensive resource for contributors (from all levels, beginners, intermediate, and seasoned) to the R project, facilitating their onboarding and helping them navigate the contribution process."
+  pdf:
+    documentclass: scrreprt
+    include-in-header: preamble.tex
+    include-before-body: frontpage.tex
+  epub:
+    cover-image: img/cover_page_scriberia.png
+
+# book_filename: "rdevguide"
+# chapter_name: "Chapter "
+# repo: https://github.com/r-devel/rdevguide
+# url: 'https\://contributor.r-project.org/rdevguide/'
+# github-repo: "r-devel/rdevguide"
+# output_dir: docs
+# clean: [packages.bib, bookdown.bbl]
+# new_session: yes
+# edit: https://github.com/r-devel/rdevguide/edit/main/%s
+# delete_merged_file: true

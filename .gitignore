@@ -5,3 +5,11 @@
 .DS_Store
 docs/
 rdevguide.rds
+rdevguide.log
+rdevguide.tex
+
+# temp files
+*~
+
+/.quarto/
+_book

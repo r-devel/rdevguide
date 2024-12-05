@@ -1,7 +1,0 @@
-book_filename: "rdevguide"
-chapter_name: "Chapter "
-repo: https://github.com/forwards/rdevguide
-output_dir: docs
-clean: [packages.bib, bookdown.bbl]
-new_session: yes
-edit: https://github.com/forwards/rdevguide/edit/master/%s
