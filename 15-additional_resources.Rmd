@@ -16,8 +16,8 @@ There are a number of manuals created and included with R installations. The ori
 
 Particular manuals that might be of interest to R contributors are:
 
-- [R installation and administration](https://cran.r-project.org/doc/manuals/r-release/R-admin.html) - gives more details on building R from source
-- [R internals](https://cran.r-project.org/doc/manuals/r-release/R-ints.html) - for those who want to read deeper into the internals R, for example, it contains chapters on special data types used in the C code, internal and primitive functions and details of graphics devices
-- [R language definition](https://cran.r-project.org/doc/manuals/r-release/R-lang.html) - an in depth overview of the R language, helpful for developing more advanced R knowledge from a user's perspective
+- [R installation and administration](https://cran.r-project.org/doc/manuals/r-release/R-admin.html) - gives more details on building R from source.
+- [R internals](https://cran.r-project.org/doc/manuals/r-release/R-ints.html) - for those who want to read deeper into the internals R, for example, it contains chapters on special data types used in the C code, internal and primitive functions and details of graphics devices.
+- [R language definition](https://cran.r-project.org/doc/manuals/r-release/R-lang.html) - an in depth overview of the R language, helpful for developing more advanced R knowledge from a user's perspective.
 
 There is a [new re-styled R manuals site built with Quarto](https://rstudio.github.io/r-manuals/) that has been produced to make searching and navigating the manuals easier in a web browser. This site is automatically built from the original manuals site using a number of scripts in the [r-manuals GitHub repo](https://github.com/rstudio/r-manuals).
