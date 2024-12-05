@@ -2,7 +2,7 @@
 
 # A Guide for Contributing to R Core
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-35-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-36-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 This guide is a work in progress, inspired by http://devguide.python.org/. It is deployed at https://contributor.r-project.org/rdevguide/.
@@ -104,6 +104,9 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center" valign="top" width="14.28%"><a href="http://bjungbogati.com.np"><img src="https://avatars.githubusercontent.com/u/8600091?v=4?s=100" width="100px;" alt="Binod Jung Bogati"/><br /><sub><b>Binod Jung Bogati</b></sub></a><br /><a href="#content-bjungbogati" title="Content">🖋</a> <a href="https://github.com/r-devel/rdevguide/commits?author=bjungbogati" title="Documentation">📖</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://daroczig.github.io"><img src="https://avatars.githubusercontent.com/u/495736?v=4?s=100" width="100px;" alt="Gergely Daróczi"/><br /><sub><b>Gergely Daróczi</b></sub></a><br /><a href="https://github.com/r-devel/rdevguide/pulls?q=is%3Apr+reviewed-by%3Adaroczig" title="Reviewed Pull Requests">👀</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/razekmh"><img src="https://avatars.githubusercontent.com/u/44040283?v=4?s=100" width="100px;" alt="Mahmoud Abdelrazek"/><br /><sub><b>Mahmoud Abdelrazek</b></sub></a><br /><a href="#content-razekmh" title="Content">🖋</a> <a href="https://github.com/r-devel/rdevguide/commits?author=razekmh" title="Documentation">📖</a></td>
+    </tr>
+    <tr>
+      <td align="center" valign="top" width="14.28%"><a href="https://ellakaye.co.uk"><img src="https://avatars.githubusercontent.com/u/7222491?v=4?s=100" width="100px;" alt="Ella Kaye"/><br /><sub><b>Ella Kaye</b></sub></a><br /><a href="https://github.com/r-devel/rdevguide/commits?author=EllaKaye" title="Code">💻</a> <a href="#infra-EllaKaye" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a></td>
     </tr>
   </tbody>
 </table>

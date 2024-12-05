@@ -245,7 +245,7 @@ the Windows Graphical User Interface.
 
 After selecting a component, you can select your preferred language.
 
-![](img/translate_component.png)
+![](../img/translate_component.png)
 
 <!-- **Step 3: Check String Status** -->
 
@@ -257,7 +257,7 @@ After selecting a component, you can select your preferred language.
 
 <!-- given here: https://github.com/r-devel/translations/wiki/Weblate-FAQ -->
 
-<!-- ![](img/unfinished_strings_translate.png) -->
+<!-- ![](../img/unfinished_strings_translate.png) -->
 
 **Step 3: Translate the Message**
 
@@ -266,12 +266,12 @@ Now, you can click on Translate button on your right.
 > Note: More information for String status visit:
 > <https://docs.weblate.org/en/latest/workflows.html#translation-states>
 
-![](img/translate_button.png)
+![](../img/translate_button.png)
 
 Then, start translating the message by typing the translation in the
 text box.
 
-![](img/translate_string_and_save.png)
+![](../img/translate_string_and_save.png)
 
 -   If you are **confident** that the **translation is correct**, make
     sure the "Needs editing" box is **unchecked**.
@@ -294,7 +294,7 @@ text box.
 
 2.  Accept it if you think the automatic suggestion looks good
 
-![](img/auto-suggestion.png)
+![](../img/auto-suggestion.png)
 
 ------------------------------------------------------------------------
 
@@ -326,7 +326,7 @@ Instead of translating one string at a time, it is possible to bulk translate a 
 
 2. Select **'Tools > Automatic translation'**
 
-![Tools drop-down menu with "Automatic Translations" selected](img/translate_automatic_translation.png)
+![Tools drop-down menu with "Automatic Translations" selected](../img/translate_automatic_translation.png)
 
 
 3. In the dialog,
@@ -342,7 +342,7 @@ Instead of translating one string at a time, it is possible to bulk translate a 
   
 [^09-message-translations-3]: Microsoft Translator is preferred for bulk translation as our free tier covers 2 million characters/month, where DeepL only allows 500k chars/month. If Microsoft Translator translations are much worse than DeepL, it may be useful to use it to translate one string at a time.
 
-![Automatic Translations dialog box](img/translate_dialog.png)
+![Automatic Translations dialog box](../img/translate_dialog.png)
 
 4.  Review the translations, edit as necessary and uncheck **"needing edit"**. 
 
@@ -352,4 +352,5 @@ Instead of translating one string at a time, it is possible to bulk translate a 
 
 ## Helpful references
 
--   Statistical terms glossary
+- [Statistical terms glossary](https://www.isi-web.org/glossary)
+- The [R Translations site](https://contributor.r-project.org/translations/) contains more details on translating R messages and getting involved in existing projects.
