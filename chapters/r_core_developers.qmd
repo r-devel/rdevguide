@@ -1,0 +1,37 @@
+# R Core Developers {#CoreDev}
+
+This page lists the current and former members of the R Core Team who have write access to the R source.
+
+Current members of the R Core Team:
+
+  * [John Chambers](https://datascience.stanford.edu/people/john-chambers)
+  * [Peter Dalgaard](www.cbs.dk/en/staff/pdmes)
+  * [Robert Gentleman](https://en.wikipedia.org/wiki/Robert_Gentleman_(statistician))
+  * [Kurt Hornik](https://statmath.wu.ac.at/~hornik/software.html)
+  * [Ross Ihaka](https://en.wikipedia.org/wiki/Ross_Ihaka)
+  * [Tomas Kalibera](https://github.com/kalibera)
+  * [Michael Lawrence](https://github.com/lawremi)
+  * [Uwe Ligges](https://www.statistik.tu-dortmund.de/~ligges/)
+  * [Thomas Lumley](https://github.com/tslumley)
+  * [Martin Maechler](https://people.math.ethz.ch/~maechler/)
+  * [Sebastian Meyer](https://www.imbe.med.fau.de/lehrstuhl/sebastian-meyer/)
+  * [Paul Murrell](https://www.stat.auckland.ac.nz/~paul/)
+  * [Martyn Plummer](https://warwick.ac.uk/fac/sci/statistics/staff/academic-research/plummer/)
+  * [Brian Ripley](https://www.stats.ox.ac.uk/~ripley/)
+  * [Deepayan Sarkar](https://www.isid.ac.in/~deepayan/)
+  * [Duncan Temple Lang](https://www.stat.ucdavis.edu/~duncan/)
+  * [Luke Tierney](https://stat.uiowa.edu/people/luke-tierney)
+  * [Simon Urbanek](https://urbanek.info/)
+
+Former members of the R Core team:
+
+  * Friedrich Leisch (up to April 2024)
+  * Douglas Bates (up to March 2024)
+  * Martin Morgan (up to June 2021)
+  * Duncan Murdoch (up to September 2017)
+  * Seth Falcon (up to August 2015)
+  * Stefano lacus (up to July 2014)
+  * Guido Masarotto (up to June 2003)
+  * Heiner Schwarte (up to October 1999)
+
+The [Contributors page on the R Project website](https://www.r-project.org/contributors.html) also lists specific contributors outside the R Core Team who have provided invaluable help by donating code, bug fixes, and documentation.
