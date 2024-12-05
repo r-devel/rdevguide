@@ -27,7 +27,7 @@ cd $TOP_SRCDIR/tests
 R CMD BATCH reg-tests-3.R
 ```
 
-will run `reg-tests-3.R` and create `reg-tests-3.Rout` in the same directory. If you have added a test or made a change that means you need to updated the reference output you can create or overwrite the reference output with, e.g. 
+will run `reg-tests-3.R` and create `reg-tests-3.Rout` in the same directory. If you have added a test or made a change that means you need to update the reference output. You can create or overwrite the reference output with, e.g. 
 
 ```sh
 mv reg-tests-3.Rout reg-tests-3.Rout.save
