@@ -1,0 +1,882 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "R Development Guide",
+    "section": "",
+    "text": "R Development Guide. This illustration is created by Scriberia with The Turing Way community, used under a CC-BY 4.0 licence. DOI:= https://zenodo.org/records/13882307\n\n\n\n\nAcknowledgement\nThis guide draws on documentation and articles written by the R Core Team. The first version of the guide was heavily influenced by the Python Developer’s Guide.\nInitial chapters of the guide were developed by Saranjeet Kaur Bhogal, in a project funded by the R Foundation, mentored by Heather Turner and Michael Lawrence. This initial version was upgraded in a Google Season of Docs 2022 project with Saranjeet Kaur Bhogal and Lluís Revilla Sancho working as technical writers managed by Nicolas Bennett and overseen by a Steering Committee including representatives from R Core and the wider R community.\nThis guide has benefited and continues to benefit from varied contributions by several contributors.\n\n\n\nLicense: CC BY 4.0\n\n\nThis project is licensed under a Creative Commons Attribution 4.0 International (CC BY 4.0). Some pages may contain materials that are subject to copyright, in which case you will see the copyright notice.",
+    "crumbs": [
+      "Acknowledgement"
+    ]
+  },
+  {
+    "objectID": "introduction.html",
+    "href": "introduction.html",
+    "title": "1  Introduction",
+    "section": "",
+    "text": "1.1 Overview of different ways of contributing to the base R Project\nThis guide is a comprehensive resource for contributing to base R1 – for both new and experienced contributors. It is maintained by the R Contribution Working Group. We welcome your contributions to base R!\nContributions to base R are possible in a number of different ways. Some of them are listed below:",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction</span>"
+    ]
+  },
+  {
+    "objectID": "introduction.html#overview-of-different-ways-of-contributing-to-the-base-r-project",
+    "href": "introduction.html#overview-of-different-ways-of-contributing-to-the-base-r-project",
+    "title": "1  Introduction",
+    "section": "",
+    "text": "Contributing to bug fixing: Refer to Issue Tracking and Reviewing Bugs.\nContributing to translations: Refer to Translations.\nTesting R before release: Refer to Testing Pre-release R Versions.\nContributing to documentation, including this guide: Refer to Documenting R and Contributing to this guide.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction</span>"
+    ]
+  },
+  {
+    "objectID": "introduction.html#quick-start-to-the-guide",
+    "href": "introduction.html#quick-start-to-the-guide",
+    "title": "1  Introduction",
+    "section": "1.2 Quick start to the guide",
+    "text": "1.2 Quick start to the guide\nThe guide is intended as a comprehensive resource for contributing to base R. The following chapter outline provides an overview with links to sections for getting started with contributing.\n\nThe Getting Started covers the instructions on how to install R on the major operating systems (Windows, Linux and macOS), as well as the tools required to build R and R packages from source.\n\n\n\nThe Issue Tracking and the Reviewing Bugs chapters discuss how to find bugs in R and how to review bug reports that are submitted to Bugzilla.\nThe Finding the Source chapter provides an overview of the R codebase and helps with finding source code of base functions written in R and/or C.\nThe Lifecycle of a Patch chapter discusses how to create a patch to propose a bug fix.\nThe Documenting R chapter describes the format and style guide for help files in R, how to report and review issues in the existing documentation and how to propose changes.\nHow to test pre-release versions of R is discussed in the chapter on Testing Pre-release R Versions.\nThe R Core Developers chapter contains a list of the former and current members of the R Core team who have write access to the R source.\nFor more information on how to engage with to community and ask for help, refer to the Where to Get Help chapter.\nTo keep up with the developments in R refer to some of the resources available in the News and Announcements\nResources and tools that may be relevant for R developers are available in the Developer Tools chapter.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction</span>"
+    ]
+  },
+  {
+    "objectID": "introduction.html#how-to-contribute-to-this-guide",
+    "href": "introduction.html#how-to-contribute-to-this-guide",
+    "title": "1  Introduction",
+    "section": "1.3 How to contribute to this guide itself?",
+    "text": "1.3 How to contribute to this guide itself?\nAll contributors should start by reading the contributing page for this project.\nMaintainers and contributors are also requested to follow this guide’s code of conduct.\nThis guide is built using bookdown which makes editing it easier, provided you have a GitHub account (sign-up at github.com). After you log-in to GitHub, click on the ‘Edit’ icon highlighted with a red ellipse in the image below. This will take you to an editable version of the the source R Markdown file that generated the page you are on:\n\n\n\nScreenshot of the toolbar in the HTML version of the guide, with the Edit button (pencil and paper icon) circled in red.\n\n\nUse the issue tracker to raise an issue about the guide’s content or to make a feature request.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction</span>"
+    ]
+  },
+  {
+    "objectID": "introduction.html#footnotes",
+    "href": "introduction.html#footnotes",
+    "title": "1  Introduction",
+    "section": "",
+    "text": "The set of packages in the base R distribution that are maintained by the R Core Team.↩︎",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction</span>"
+    ]
+  },
+  {
+    "objectID": "getting_started.html",
+    "href": "getting_started.html",
+    "title": "2  R Patched and Development Versions",
+    "section": "",
+    "text": "2.1 The R source code\nThese instructions cover how to install R from source or from binaries. Contributors will typically need to work with the patched or development versions of R. This chapter describes where the source code for these versions can be found and how to install these versions from the source or the binary builds (where available). The tools required to build R and R packages are also discussed. For the most up to date and complete instructions you can check the R installation and administration manual .\nR uses svn as a version control tool hosted at https://svn.r-project.org/R/ and uses a ‘major.minor.patchlevel’ version numbering scheme1.\nThere are three releases of R available to install:\nThe source code of released versions of R can be found at R/tags, the patched versions are at R/branch.\nThe r-devel at R/trunk is the next minor or eventual major release development version of R. Bug fixes and new features are introduced in r-devel first. If the change meets the development guidelines R Core will also make the change in r-patched.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>R Patched and Development Versions</span>"
+    ]
+  },
+  {
+    "objectID": "getting_started.html#the-r-source-code",
+    "href": "getting_started.html#the-r-source-code",
+    "title": "2  R Patched and Development Versions",
+    "section": "",
+    "text": "The latest official release (r-release), either major version x.0.0 or minor version x.y.0, for example: 3.0.0 or 3.2.0\nThe patched release (r-patched), for example 3.0.1 or 3.2.1 and\nThe development release (r-devel) : continually developed version moving from r-release to next major/minor version (x + 1).0.0 or x.(y + 1).0 a few weeks before release (at the start of the “GRAND FEATURE FREEZE”).",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>R Patched and Development Versions</span>"
+    ]
+  },
+  {
+    "objectID": "getting_started.html#prerequisites",
+    "href": "getting_started.html#prerequisites",
+    "title": "2  R Patched and Development Versions",
+    "section": "2.2 Prerequisites",
+    "text": "2.2 Prerequisites\nTo install from the source code you will need the source code and the dependencies of R.\nIf you need to install svn you can use your distribution’s package manager to install it.\n\n2.2.1 Ubuntu\nIn Ubuntu you can use this command to find all the dependencies of R:\napt-rdepends --build-depends --follow=DEPENDS r-base-dev | grep \" B\" | sed -e \"s/  Build-Depends: //\"\nIt might require installation of apt-rdepends which can be done from default repositories via sudo apt-get install apt-rdepends.\nTo install all the R dependencies you can use:\nsudo apt-get build-dep r-base-dev\n\n\n2.2.2 Fedora\nIn Fedora you can use this command to find all the dependencies of R:\ndnf rq -q --repo=fedora-source --requires R \nYou will also need the rsync package to download the recommended packages.\nTo install them you can use:\ndnf install 'dnf-command(builddep)'\ndnf install rsync\ndnf builddep R",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>R Patched and Development Versions</span>"
+    ]
+  },
+  {
+    "objectID": "getting_started.html#building-r",
+    "href": "getting_started.html#building-r",
+    "title": "2  R Patched and Development Versions",
+    "section": "2.3 Building R",
+    "text": "2.3 Building R\nIt is recommended to build R in a different path than the source. For this reason we have a TOP_SRCDIR variable where the source code goes and the variable BUILDDIR where the built R version will go.\n\n2.3.1 Linux\nHere are the basic steps intended as a checklist. For complete instructions please see the section in R-admin.\n\nRetrieve R source code via into TOP_SRCDIR, note that we retrieve the r-devel source code:\nexport TOP_SRCDIR=\"$HOME/Downloads/R\"\nsvn checkout https://svn.r-project.org/R/trunk/ \"$TOP_SRCDIR\"\nDownload the latest recommended packages2:\n\"$TOP_SRCDIR/tools/rsync-recommended\"\nCreate the build directory in the BUILDDIR:\nexport BUILDDIR=\"$HOME/bin/R\"\nmkdir -p \"$BUILDDIR\"\ncd \"$BUILDDIR\"\nConfigure the R installation (with --enable-R-shlib so that RStudio IDE can use it):\n\"$TOP_SRCDIR/configure\" --enable-R-shlib\nBuild R :\nmake\nCheck that R works as expected:\nmake check\nThere are other checks you can run:\nmake check-devel\nmake check-recommended\n\nIf we don’t want to build R in a different directory than the source code we can simply use:\ncd \"$TOP_SRCDIR\"\nsvn update\ntools/rsync-recommended\n\"$TOP_SRCDIR/configure\"  --enable-R-shlib\nmake \nmake check\nOnce you successfully built R from source you can modify the R source code to fix an issue: Prepare a patch (See this guide) and after checking that R works as intended (make check-devel) submit the patch for consideration by R Core. (See the lifecycle of a patch chapter).\nTo use the r-devel version in RStudio, you can do the following:\nexport RSTUDIO_WHICH_R=\"$BUILDDIR/bin/R\"\ncd \"$TOP_SRCDIR\"\nrstudio\n\n\n2.3.2 Windows\n\n2.3.2.1 Binaries\nThe binary builds of R for Windows can be downloaded and installed from here. Along with the link to the latest stable release, this page also contains links to the binary builds of r-patched and r-devel.\n\nClick on the download links to download an executable installer.\nSelect the language while installing, read the GNU general public license information, and select the destination location to start the installation. You will be prompted to select components at this stage: User installation, 64-bit User installation, or Custom installation. The default option may be chosen for the questions from this step onwards to complete the installation.\n\nDaily binaries for r-devel are made available for download and installation.\n\n\n2.3.2.2 From source\nBefore installing R from source, some additional programs are needed, as per the latest documentation:\n\nRtools is the suggested toolchain bundle for building R base and R packages containing compiled code on Windows. The latest version of Rtools can be installed using the Rtools installer rtools44-XXXX-XXX.exe.\nA LaTeX compiler is needed to install and build R, check packages and build manuals. On CRAN, MiKTeX is used, which can be downloaded from https://miktex.org. Once installed open MiKTeX via the Windows start menu. It might ask to check for updates and more importantly, to make it available in PATH. You can accept both.\nOpen the Rtools44 terminal to update and install subversion:\npacman -Syuu\npacman -Sy wget subversion\nRetrieve the latest source code via subversion:\nexport TOP_SRCDIR=\"$HOME/Downloads/R\"\nsvn checkout https://svn.r-project.org/R/trunk/ \"$TOP_SRCDIR\"\nIf you already have the repository available you can update as:\ncd $TOP_SRCDIR\nsvn update\nYou can also use a SVN client such as TortoiseSVN (https://tortoisesvn.net/, command line tool, and Windows Explorer integration) or SlikSVN (https://sliksvn.com/download/, just the command line tool) so that it can be also found by other tools.\nDownload the latest tcl/tk and unzip it in $TOP_SRCDIR:\ncd \"$TOP_SRCDIR\"\nwget -np -nd -r -l1 -A 'tcltk-*.zip' https://cran.r-project.org/bin/windows/Rtools/rtools44/files/\nunzip \"tcltk-*.zip\"\nAdd gcc, MiKTeX and tar to the PATH and set one tar option:\nexport PATH=\"/x86_64-w64-mingw32.static.posix/bin:$PATH\"\nexport PATH=\"/c/Program Files/MiKTeX/miktex/bin/x64:$PATH\"\nexport TAR=\"/usr/bin/tar\"\nexport TAR_OPTIONS=\"--force-local\"\nIf MiKTeX was installed just for your user you might need to run:\nexport PATH=\"/c/Users/$USER/AppData/Local/Programs/MiKTeX/miktex/bin/x64:$PATH\"\nCheck that all the programs can be found:\nwhich make gcc pdflatex tar\nIf there is any error you’ll need to find where the program is installed and add the corresponding path.\nDownload the latest recommended packages3:\ncd \"$TOP_SRCDIR/src/gnuwin32/\"\n\"$TOP_SRCDIR/tools/rsync-recommended\"\nBuild R and the recommended packages:\nmake all recommended\nThe recently compiled version of R will be at $TOP_SRCDIR/bin/. In RStudio you can select that folder and restart it to use the r-devel version.\nCheck that R works as expected:\nmake check\nThere are other checks you can run for testing the successful installation of the recommended packages:\nmake check-devel\nmake check-recommended\n\n\n\n\n2.3.3 macOS\nThis section will be added after the official installation instructions for macOS in the R installation and administration manual have been updated for R 4.4.0.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>R Patched and Development Versions</span>"
+    ]
+  },
+  {
+    "objectID": "getting_started.html#see-also",
+    "href": "getting_started.html#see-also",
+    "title": "2  R Patched and Development Versions",
+    "section": "2.4 See also",
+    "text": "2.4 See also\n\nCRAN official website\nR installation and administration manual\nR for macOS\nTools for R in macOS\nR for requirements in macOS\nR for Windows FAQ\nRTools toolchains for Windows\nR FAQ",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>R Patched and Development Versions</span>"
+    ]
+  },
+  {
+    "objectID": "getting_started.html#footnotes",
+    "href": "getting_started.html#footnotes",
+    "title": "2  R Patched and Development Versions",
+    "section": "",
+    "text": "Also known as semantic versioning↩︎\nRecommended packages are not in the subversion repository.↩︎\nRecommended packages are not in the subversion repository.↩︎",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>R Patched and Development Versions</span>"
+    ]
+  },
+  {
+    "objectID": "issue_tracking.html",
+    "href": "issue_tracking.html",
+    "title": "3  Issue Tracking",
+    "section": "",
+    "text": "3.1 How to contribute to issue tracking?\nBase R uses Bugzilla for issue tracking and reporting bugs.\nContributors can support issue tracking in R by",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Issue Tracking</span>"
+    ]
+  },
+  {
+    "objectID": "issue_tracking.html#how-to-contribute-to-issue-tracking",
+    "href": "issue_tracking.html#how-to-contribute-to-issue-tracking",
+    "title": "3  Issue Tracking",
+    "section": "",
+    "text": "Reporting bugs or submitting feature requests (bug reports filed under the “Wishlist” component in Bugzilla),\nReviewing bug reports to help close reports where no fix is needed or to help narrow down the problem and identify what needs to be fixed, or\nProposing changes to code or documentation that will close an issue.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Issue Tracking</span>"
+    ]
+  },
+  {
+    "objectID": "issue_tracking.html#bugzilla-account",
+    "href": "issue_tracking.html#bugzilla-account",
+    "title": "3  Issue Tracking",
+    "section": "3.2 How to get a Bugzilla account?",
+    "text": "3.2 How to get a Bugzilla account?\nAnyone can browse the bug reports on Bugzilla, but you will need an account to file a bug report, to comment on an existing bug report, or to submit a proposed fix in the form of patch file.\nTo get a Bugzilla account send an e-mail to bug-report-request@r-project.org from the address you want to use as your Bugzilla login. Briefly explain why you want a Bugzilla account and a volunteer will add you to R’s Bugzilla members. After having successfully logged in to Bugzilla, you are good to go.\n\n3.2.1 Navigating Bugzilla\nAn image of the existing home page of Bugzilla is shared below:\n\n\n\nScreenshot of the existing home page of Bugzilla.\n\n\nOn the home page of Bugzilla, there are various buttons and links. There are four square buttons called as:\n\n\n\nScreenshot of the four square buttons on the home page of Bugzilla.\n\n\n\nFile a bug: You will have to log in to Bugzilla to file a bug using this button\nSearch: When you click this button you will get a page with ‘Simple Search’ and ‘Advanced Search’ options. Either of the search options could be used depending on what you are looking for.\nLog In: Provide the appropriate email address and password here to log in to Bugzilla.\nDocumentation: Provides a user guide for R's Bugzilla.\n\nSeveral useful shortcuts are available from the landing page:\n\nEnter a new bug report\nShow open bugs new-to-old\nSearch existing bug reports\n\nA quick search bar is available on the home page where you can enter a bug number to search or some search terms.\n\n\n\nScreenshot of the quick search bar on the home page of Bugzilla.\n\n\nThere is also a section for Common Queries on the home page which includes links to bugs reported and changed in the last 24 hours and last 7 days.\n\n\n\nScreenshot of the Common Queries section on the home page of Bugzilla.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Issue Tracking</span>"
+    ]
+  },
+  {
+    "objectID": "issue_tracking.html#searching",
+    "href": "issue_tracking.html#searching",
+    "title": "3  Issue Tracking",
+    "section": "3.3 Searching for Bugs to Contribute to",
+    "text": "3.3 Searching for Bugs to Contribute to\nWhen presented with a long list of bugs, it can often be a bit demotivating when it’s not clear where to start. To help with this, you can use the Advanced Search.\n\n\n\nScreenshot of Advanced Search page showing the following fields: Summary, Product, Component, Status, Resolution\n\n\nThis presents several fields that you can use to narrow down your search. You can find out what a particular field is by clicking on the header, which will take you to that section in the Bug Fields Information Page.\nThe default fields are:\n\nSummary: a short description of the bug\nProduct: either R or RTools.\nComponent: A specific component of the R toolchain such as Graphics, Documentation, and Models\nStatus: The status of open or closed bugs. This will always default to showing open bugs (UNCONFIRMED, CONFIRMED, and IN_PROGRESS)\nResolution: The resolution for closed bugs.\n\nYou can select multiple items for each field as well. Both Product and Component are what you navigate through when you go to Browse Issues.\nBelow that are further filters that can help you find bugs you might want to work on:\n\nDetailed Bug Information: Narrow results by the following fields\n\nComments, URL, Keywords, Deadline, Bug Numbers, Version, Severity, Priority, Hardware, OS Search By People\n\n\nNarrow results to a role (i.e. Assignee, Reporter, Commenter, etc.) a person has on a bug Search By Change History\n\n\nNarrow results to how fields have changed during a specific time period Custom Search\n\n\nDidn’t find what you’re looking for above? This area allows for ANDs, ORs, and other more complex searches.\n\n\nThese will be detailed in the subsections below\n\n3.3.1 Detailed Bug Information\nYou can use this section to narrow down your search further to filter by things like OS type, R version, Keywords, and Priority.\nIt can be helpful, for example, to search for bugs labelled with HELPWANTED, which indicates bugs that may be suitable for anyone to work on regardless of expertise.\n\n\n\nScreenshot of expanded Detailed Bug Information section showing the following fields: Comment, URL, Keywords (with HELPWANTED entered), Deadline, inclusion/exclusion of bug numbers, Version, Severity, Priority, Hardware, and OS\n\n\n\n\n3.3.2 Search By People\nYou can use this to narrow down your search to only include results of a specific person or up to three people who have participated in any component of the bug’s discusson.\n\n\n\nScreenshot of expanded Search By People section showing three fields allowing you to enter a person’s name who can be any of the bug assignee, the reporter, a CC list member, or a commenter\n\n\n\n\n3.3.3 Search By Change History\nUse this to search for bugs where any of the status fields has been changed (which, depending on the change, could indicate that someone from R-Core has given some attention to the bug). This also provides a date range to narrow your search.\n\n\n\nScreenshot of expanded Search by Change History section showing three fields: where ANY of the fields (multi-select list), changed to, and between (dates in YYYY-MM-DD format)",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Issue Tracking</span>"
+    ]
+  },
+  {
+    "objectID": "reporting_bugs.html",
+    "href": "reporting_bugs.html",
+    "title": "4  Reporting Bugs",
+    "section": "",
+    "text": "4.1 What is a bug in R?\nYou may find a bug in R if:\n##  *** caught segfault ***\n## address (nil), cause 'memory not mapped'\nNote: When you are in doubt that there is a bug: (which should be the case most of the time!)",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Reporting Bugs</span>"
+    ]
+  },
+  {
+    "objectID": "reporting_bugs.html#what-is-a-bug-in-r",
+    "href": "reporting_bugs.html#what-is-a-bug-in-r",
+    "title": "4  Reporting Bugs",
+    "section": "",
+    "text": "The R session terminates unexpectedly, or there is a segmentation fault, it might be a bug in R, unless you have written your own call to compiled code or an internal function (via .C or .Internal). The error may look like this:\n\n\n\nIf the code does not do what the documentation says it should, then either the code or the documentation is wrong. Report either of which needs to be fixed.\n\n\n\nMake sure whether the bug appears in a clean session of R. Many times, there are variables/commands/functions stored in the workspace which might cause issues. Hence, check if the issue happens in a clean session. To do so, launch R from the command line with the --vanilla option.\nAt times the code that is written is very complicated, has numerous package and file dependencies, has many function calls, etc.. In such scenarios it is quite common that the code throws an error and you are not able to solve it. You may tend to think that there is a bug that needs to be reported. Before doing so, try to produce a minimum working example of the code for the section where the error occurred. Add only those packages and files which are required by that section, and see if the error still appears. Using this approach shall solve most of the errors.\nInstall R-devel, which is the most recent version of R from svn / git or daily Windows build, and see if your bug still exists in R-devel (it may have been fixed very recently).\nSearch on the R-devel mailing list for messages with keywords related to your possible bug. If you find some related messages then read them to see if they clarify whether or not it is a bug. If you do not find any related messages, then please post a new message to R-devel. Your message should include (1) a brief description of the bug including current and expected behavior, (2) a minimal reproducible example.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Reporting Bugs</span>"
+    ]
+  },
+  {
+    "objectID": "reporting_bugs.html#what-condition-might-not-be-a-bug",
+    "href": "reporting_bugs.html#what-condition-might-not-be-a-bug",
+    "title": "4  Reporting Bugs",
+    "section": "4.2 What condition might not be a bug?",
+    "text": "4.2 What condition might not be a bug?\n\nIn case the code is doing something unexpected, it may not necessarily be a bug. Carefully review the documentation of the function being called, and check whether the behaviour being exhibited on calling this function is the same as it was designed to do.\nIssues with seemingly identical numbers not being equal (especially floating point numbers) are usually not bugs.\nIf R is running slower than expected, then this also may not be a bug. Ask someone else to review your code in such a case.\nIf some function is working, but it is not defined in the best generalised way, then consult someone to look over the code. This may perhaps not be a bug; instead, it might be an alternative way of writing the function.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Reporting Bugs</span>"
+    ]
+  },
+  {
+    "objectID": "reporting_bugs.html#already-reported-bugs",
+    "href": "reporting_bugs.html#already-reported-bugs",
+    "title": "4  Reporting Bugs",
+    "section": "4.3 Checking if a bug is already reported",
+    "text": "4.3 Checking if a bug is already reported\nThe first step before filing a bug report is to see whether the problem has already been reported. Checking if the bug is reported will:\n\nSave time for you and the developers.\nHelp you see if the bug is already fixed for the next release.\nLead you to learn what needs to be done to fix it.\nDetermine if any additional information is needed.\n\nThe sections that follow discuss where to check whether a bug is already reported.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Reporting Bugs</span>"
+    ]
+  },
+  {
+    "objectID": "reporting_bugs.html#what-are-some-places-where-you-may-find-a-bug",
+    "href": "reporting_bugs.html#what-are-some-places-where-you-may-find-a-bug",
+    "title": "4  Reporting Bugs",
+    "section": "4.4 What are some places where you may find a bug?",
+    "text": "4.4 What are some places where you may find a bug?\nYou may find a bug in:\n\nIn the R-Core supported packages, their documentations, and/ or in the R language implementation.\nIn packages and/or their documentations which are not supported by the R-Core.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Reporting Bugs</span>"
+    ]
+  },
+  {
+    "objectID": "reporting_bugs.html#ReportBug",
+    "href": "reporting_bugs.html#ReportBug",
+    "title": "4  Reporting Bugs",
+    "section": "4.5 How to report a bug?",
+    "text": "4.5 How to report a bug?\nOnce you confirm a bug exists, you need to submit a bug report so that it gets fixed.\n\n4.5.1 Bug in the R-Core supported packages, their documentations, and/ or in the R language\n\nPackages that are supported by the R-Core are labelled with Maintainer: R Core Team &lt;R-core@r-project.org&gt;. One simple way to get the information from R is by running the maintainer(\"package_name\") command.\nThe bug report for R-Core supported packages, their documentations, and/ or a bug report for the R language itself can be submitted either to R-devel, see posting guide, or to Bugzilla. In the future, we hope to have an option to report an issue to the GitHub Mirror of the R svn server.\nIn order to report bugs, as well as fixes, using Bugzilla, please ensure that you have a Bugzilla account\nPlease ensure whether the bug is already fixed (in the upcoming changes in R) or reported (search for it from those already reported on Bugzilla, either on search existing bug reports, using the advanced search option here, or show open bugs new-to-old).\n\n\n\n4.5.2 Bug in the non R-Core supported packages and/or their documentations\nFor packages that are not maintained by the R-Core, the bug reports can be submitted at, perhaps, an issues tracker url on GitHub/GitLab/R-Forge. To find if such an issues tracker is available, you can look at the package DESCRIPTION file first (e.g. using packageDescription(\"package_name\")) to check if a url is provided in the BugReports field. If that is not available, then the package maintainer can be contacted (using maintainer(\"package_name\")). In R running the function bug.report(package = \"package_name\") shall direct you to either the GitHub issue tracker of the package, or to the bug tracking web page, or towards composing an e-mail to the package maintainer. This function bug.report is disabled in RStudio, by default. However, if you use utils::bug.report(package = \"package_name\") then it works on RStudio as well. Please ensure that the bug is not already reported or fixed before reporting it in any of the ways suggested above.\n\n\n4.5.3 Bug in a documentation website managed by the R Core Team\nThe R Core Team maintain a selection of websites that each have their own ways for reporting issues outside of Bugzilla. Have a read through the posting guide for R project mailing lists and then follow the instructions below to give feedback to the maintainers.\n\nR FAQ contains answers to some of the most frequently asked questions about R. Feedback on the R FAQ should be sent to the R-devel mailing list via R-devel@R-project.org.\nR for Windows FAQ contains answers specific to the Windows port of R. Feedback on the Windows FAQ should be sent to the R-SIG-windows mailing list (the Special Interest Group for Windows), via R-windows@R-project.org.\nR for macOS FAQ contains a user guide to the R.APP version of R and information on using R on macOS, supplementing the main R manuals. Feedback on the macOS FAQ should be sent to the R-SIG-Mac mailing list (the Special Interest Group for Mac ports of R), via r-sig-mac@r-project.org.\nFeedback on the R Project website should be sent to webmaster@r-project.org.\nFeedback on the website for The Comprehensive R Archive Network (CRAN) should be sent to cran-sysadmin@r-project.org.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Reporting Bugs</span>"
+    ]
+  },
+  {
+    "objectID": "reporting_bugs.html#good-practices-bugs",
+    "href": "reporting_bugs.html#good-practices-bugs",
+    "title": "4  Reporting Bugs",
+    "section": "4.6 Good practices in reporting bugs / Expectations of a good bug report",
+    "text": "4.6 Good practices in reporting bugs / Expectations of a good bug report\nIf you follow the practices given below, you will come up with a good bug report which might make it easier for the maintainer(s) to fix the bug.\n\nInclude a minimal reproducible example of the bug in your report. The maintainer should be able to quickly reproduce the bug using the minimal example that you provide. Here is a community wiki post on how to make a minimal reproducible example.\nMention the software architecture on which the bug occurred.\nUse inbuilt data sets as far as possible.\n\nIn addition to the above, here are the bug writing guidelines on Bugzilla. The bug reporting documentation in R also discusses practices to write a good bug report.\nOnce you have successfully reported a bug, you will likely receive an update each time an action is taken on the bug. On Bugzilla, the report may be given one of the following status: New, Assigned, Confirmed, Reopened, Unconfirmed.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Reporting Bugs</span>"
+    ]
+  },
+  {
+    "objectID": "reporting_bugs.html#disagreement-with-a-resolution-on-the-bug-tracker",
+    "href": "reporting_bugs.html#disagreement-with-a-resolution-on-the-bug-tracker",
+    "title": "4  Reporting Bugs",
+    "section": "4.7 Disagreement with a resolution on the bug tracker",
+    "text": "4.7 Disagreement with a resolution on the bug tracker\nAs humans, there might be differences of opinions from time to time. What needs to be considered here is to be respectful of the fact that care, thought, and volunteer time has gone into the resolution of the issue or bug.\nIf you take some time, then on reflection, the resolution steps may seem more reasonable than you initially thought. If you still feel that the resolution is incorrect, then raise a thoughtful question to the person who resolved it. If the issue was not carefully thought about in the first place then it is less likely to win any conversion of thought.\nAs a reminder, issues closed by a core developer on Bugzilla have already been carefully considered. Please do not reopen a closed issue. Although one can comment on a closed issue, if necessary. Every comment on an issue generates an email to every R-core member (unless they have the notifications disabled). So it would be best to be considerate while commenting on issues, especially in case of closed issues or when you are commenting in pure agreement without adding anything beyond that to a discussion (the +1 type posts which are perfectly acceptable in other contexts).",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Reporting Bugs</span>"
+    ]
+  },
+  {
+    "objectID": "reporting_bugs.html#examples-of-bug-reports-submitted-on-bugzilla-or-r-devel-mailing-list",
+    "href": "reporting_bugs.html#examples-of-bug-reports-submitted-on-bugzilla-or-r-devel-mailing-list",
+    "title": "4  Reporting Bugs",
+    "section": "4.8 Examples of Bug reports submitted on Bugzilla or R-devel mailing list",
+    "text": "4.8 Examples of Bug reports submitted on Bugzilla or R-devel mailing list\nIf you like to see how bugs are reported on Bugzilla, here are some examples:\n\nBug 17767 - Warning about incomplete argument within nlme: A bug report with a reproducible example, a patch, and a review.\nPossible bug when finding shared libraries during staged installation: A bug report submitted by Kara Woo which was promptly fixed via the R-devel mailing list. (More information about the R-devel mailing list can be found here).\nBug: time complexity of substring is quadratic as string size and number of substrings increases: A substring reported by Toby Dylan Hocking and fixed by Tomas Kalibera, Feb 2019 via the R-devel mailing list.\npatch for gregexpr(perl=TRUE): A gregexpr bug report and patch submitted by Toby Dylan Hocking and merged by Tomas Kalibera, Feb 2019 via the R-devel mailing list.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Reporting Bugs</span>"
+    ]
+  },
+  {
+    "objectID": "reporting_bugs.html#see-also",
+    "href": "reporting_bugs.html#see-also",
+    "title": "4  Reporting Bugs",
+    "section": "4.9 See also",
+    "text": "4.9 See also\n\nReporting a bug\nR FAQ on bugs\nBugzilla guidelines of reporting a bug",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Reporting Bugs</span>"
+    ]
+  },
+  {
+    "objectID": "submitting_feature_requests.html",
+    "href": "submitting_feature_requests.html",
+    "title": "5  Submitting Feature Requests",
+    "section": "",
+    "text": "5.1 What is a feature request?\nA feature request is a suggestion or proposal to add new functionality or improve an existing feature.\nWe recommend sharing your feature request idea on the R-devel mailing list and gaining support from R-Core members and other users to increase its likelihood of acceptance.",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Submitting Feature Requests</span>"
+    ]
+  },
+  {
+    "objectID": "submitting_feature_requests.html#how-to-submit-a-feature-request",
+    "href": "submitting_feature_requests.html#how-to-submit-a-feature-request",
+    "title": "5  Submitting Feature Requests",
+    "section": "5.2 How to submit a feature request?",
+    "text": "5.2 How to submit a feature request?\nYou can submit a feature request by filing a bug on Bugzilla. Under Component, select “Wishlist”, the designated label for feature requests.\n\n\n\nThe “Wishlist” component in Bugzilla’s bug submission screen.\n\n\nSimilar to bugs, you should ensure that the feature request is not already reported and follow best practices whenever possible.",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Submitting Feature Requests</span>"
+    ]
+  },
+  {
+    "objectID": "submitting_feature_requests.html#examples-of-feature-requests-submitted-on-bugzilla",
+    "href": "submitting_feature_requests.html#examples-of-feature-requests-submitted-on-bugzilla",
+    "title": "5  Submitting Feature Requests",
+    "section": "5.3 Examples of feature requests submitted on Bugzilla",
+    "text": "5.3 Examples of feature requests submitted on Bugzilla\nIf you like to see how feature requests are reported on Bugzilla, here are some examples:\n\nBug 18690 - Increase CONSOLE_BUFFER_SIZE and / or warn if input is truncated: A feature request to ease the readability of long lines.\nBug 17912 - ordering elements in sessionInfo() by alphabetical order: A feature request that was not accepted due to the prioritization of load time in session information.",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Submitting Feature Requests</span>"
+    ]
+  },
+  {
+    "objectID": "reviewing_bugs.html",
+    "href": "reviewing_bugs.html",
+    "title": "6  Reviewing Bugs",
+    "section": "",
+    "text": "6.1 How you can help to review bug reports?\nAfter understanding where bugs are reported in R (Bugzilla) or in other projects (GitHub/GitLab/R-Forge), a great way to contribute is reviewing bug reports.\nAround the clock, new bug reports are being submitted on Bugzilla or the bug trackers (for instance, GitHub issues) of R packages and existing bug reports are being updated. Every bug report needs to be reviewed to make sure various things are in proper order. You can help with this process of reviewing bugs.",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Reviewing Bugs</span>"
+    ]
+  },
+  {
+    "objectID": "reviewing_bugs.html#how-you-can-help-to-review-bug-reports",
+    "href": "reviewing_bugs.html#how-you-can-help-to-review-bug-reports",
+    "title": "6  Reviewing Bugs",
+    "section": "",
+    "text": "6.1.1 Preparing to review bug reports\nIf you want to review bug reports on Bugzilla, you are required to have a Bugzilla account. More details on how you can review a bug report are available on this post on the R Blog: R Can Use Your Help: Reviewing Bug Reports",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Reviewing Bugs</span>"
+    ]
+  },
+  {
+    "objectID": "reviewing_bugs.html#classifying-bug-reports",
+    "href": "reviewing_bugs.html#classifying-bug-reports",
+    "title": "6  Reviewing Bugs",
+    "section": "6.2 Classifying bug reports",
+    "text": "6.2 Classifying bug reports\nA good bug report is the one which:\n\nExplains clearly how to reproduce the bug.\nIncludes the version of R, the machine architecture, and the operating system platform on which the bug occurred.\n\nRelevant details should be a part of a good bug report. You can help with the following tasks once you have some R programming experience:\n\nReproducing the bug: If you see a bug report which does not clearly explain how to reproduce it, you can try reproducing the bug and eventually make things easier for the core developer(s) and/or package maintainer(s).\nChecking different binary builds: Check whether the bug occurs on a different binary build of R. It is helpful to know whether the bug is affecting: r-patched, r-devel, or r-release binary builds of R.\nWriting a unit test: If the bug report lacks a unit test that should be a part of R’s test suite, then you can help with providing it.\n\nThese helpful tasks allow the Core developers and/ or maintainers to classify a bug report properly, so that the bug can be handled in a timely fashion.",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Reviewing Bugs</span>"
+    ]
+  },
+  {
+    "objectID": "reviewing_bugs.html#how-to-find-a-bug-report-or-an-issue-to-review",
+    "href": "reviewing_bugs.html#how-to-find-a-bug-report-or-an-issue-to-review",
+    "title": "6  Reviewing Bugs",
+    "section": "6.3 How to find a bug report or an issue to review?",
+    "text": "6.3 How to find a bug report or an issue to review?\n\nYou may search old bug reports or issues that could be closed. Old bug reports may no longer be valid or may include a patch that is ready to be committed, but no one has had the time to review and commit.\nYou might also want to search for issues in topics in which you have a working knowledge. When on Bugzilla you can use the advanced search to find specific topics. Bug reports are by default public on Bugzilla (unless the defaults are changed to avoid security vulnerability).",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Reviewing Bugs</span>"
+    ]
+  },
+  {
+    "objectID": "reviewing_bugs.html#example-of-a-bug-review-submitted-on-bugzilla",
+    "href": "reviewing_bugs.html#example-of-a-bug-review-submitted-on-bugzilla",
+    "title": "6  Reviewing Bugs",
+    "section": "6.4 Example of a bug review submitted on Bugzilla",
+    "text": "6.4 Example of a bug review submitted on Bugzilla\nIf you would like to see how bugs are reviewed on Bugzilla, the Bug 16542 - nlme:::summary.lmList with unequal outputs per group is an example where an old bug report is being reviewed. It is tested to see if it was still an issue and a few ways are proposed to resolve the issue.\n\n\n\n\n\n\nNote\n\n\n\nThere is a #bug-reporting channel on the R Contributors slack where you can share your bug report(s) for review/feedback before submitting to Bugzilla. This can help with checking that it really is a bug, that you have included the important information and excluded redundant information.",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Reviewing Bugs</span>"
+    ]
+  },
+  {
+    "objectID": "reviewing_bugs.html#see-also",
+    "href": "reviewing_bugs.html#see-also",
+    "title": "6  Reviewing Bugs",
+    "section": "6.5 See also",
+    "text": "6.5 See also\n\nReviewing bug reports: Blog",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Reviewing Bugs</span>"
+    ]
+  },
+  {
+    "objectID": "finding_the_source.html",
+    "href": "finding_the_source.html",
+    "title": "7  Finding the Source",
+    "section": "",
+    "text": "7.1 Finding R source code\nThis chapter discusses how you can have an overview of the R codebase. For instance, where to find the implementation of a base function written in R and where to find a primitive implementation written in C. You may want to find the source code of a function just out of curiosity or maybe to gain more insight into what a particular function is actually doing. Whatever be the case, reading the source code will help you to learn a lot about any function.\nbut this does not include - so you can search for a function or S3 method as follows:\nNote: The above procedure does not cover S4, R6 or RC generics or methods. Refer accessing R source for further details.",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Finding the Source</span>"
+    ]
+  },
+  {
+    "objectID": "finding_the_source.html#finding-r-source-code",
+    "href": "finding_the_source.html#finding-r-source-code",
+    "title": "7  Finding the Source",
+    "section": "",
+    "text": "Find the R function with the code of interest. You will always be able to print the top-level function (or use View(function_name) in RStudio). Looking at the code for the body of this function will reveal what you need to do next:\n\n\nCan already see code of interest: stop here or skip to step 3 to find the corresponding file in the R sources.\nCode of interest is in nested R function: go to step 2.\nTop-level function is an S3 generic, identified by a call to UseMethod(). Use methods(function_name) to see available methods, then go to step 2.\nCode of interest is in compiled code, identified by a call to .C(), .Call(), .Fortran(), .External(), and .External.graphics(), or .Internal() and .Primitive(): go to section on compiled code.\n\n\nNested functions or S3 methods may not be exported by the package they are in. If this is the case, the simplest way to view the code is to use getAnywhere() or getS3method(). Now you can keep looking at nested R functions till you find the code of interest or hit a call to compiled code.\nFind an R function in the R sources. Two options here:\n\n\nSearch on the internet: For R Core packages, search on the GitHub mirror (https://github.com/r-devel/r-svn); for recommended packages, use the CRAN mirror (https://github.com/cran) - this will link to the source on GitHub if available, e.g. https://github.com/cran/survival. Note that GitHub search ignores wildcard characters\n\n . , : ; / \\ ` ' \" = * ! ? # $ & + ^ | ~ &lt; &gt; ( ) { } [ ]\n\n\"body &lt;- function\" extension:R\n\"quantile.ecdf &lt;- function\" extension:R\n\nSearch in the R sources using grep: The Getting Started chapter discusses how to download the R sources directly or from the svn repository. Now if the sources are in ~/R-devel, you can search as follows:\n\ngrep -R \"body &lt;- function\" ~/R-devel/src\ngrep -R \"quantile &lt;- function\" ~/R-devel/src/library",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Finding the Source</span>"
+    ]
+  },
+  {
+    "objectID": "finding_the_source.html#finding-c-source-code",
+    "href": "finding_the_source.html#finding-c-source-code",
+    "title": "7  Finding the Source",
+    "section": "7.2 Finding C source code",
+    "text": "7.2 Finding C source code\n\nIf .Internal() or .Primitive(), find entry point in names.c as described in the Jenny Bryan’s post of accessing R source. For all other calls to compiled code, you can find the entry point from within R. For instance, the body of complete.cases() is\n\n.External(C_compcases, ...)\nC_compcases inherits from class “NativeSymbolInfo” and we can extract the name of the entry point via\nstats:::C_compcases$name\nWe know that it is in the stats package as we see that when we print complete.cases or look at the help file. This shows us that the entry point is simply “compcases” and in fact that is the general convention in R code, that you simply remove the C_ prefix (sometimes .F_ for Fortran code1) in the name of the object passed to the first argument of the call.\n\nOnce you have the entry point, search as for R code. In the case of searching on GitHub, restrict the search to files with the relevant extension\n\ncompcases path:*.c\nlowesw path:*.f\nsimilarly for grep\ngrep -R --include=*.c \"compcases\" ~/R-devel/src/library/\nNote:\n\nMany editors (like RStudio, ESS) support ctags for code browsing, making it easy to jump to definitions of functions. R CMD rtags can generate ctags for any R code (Credit: Deepayan Sarkar).\nA more sophisticated system is called GNU GLOBAL, which also supports finding all references (calls) to a function.\nGitHub has a code navigation feature via the library tree-sitter. Unfortunately, it does not have R support yet. An R driver for tree-sitter made by Jim Hester is available.",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Finding the Source</span>"
+    ]
+  },
+  {
+    "objectID": "finding_the_source.html#see-also",
+    "href": "finding_the_source.html#see-also",
+    "title": "7  Finding the Source",
+    "section": "7.3 See also",
+    "text": "7.3 See also\nRead the R source blogpost.",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Finding the Source</span>"
+    ]
+  },
+  {
+    "objectID": "finding_the_source.html#footnotes",
+    "href": "finding_the_source.html#footnotes",
+    "title": "7  Finding the Source",
+    "section": "",
+    "text": "Other variations are also possible. For example, .External.graphics() calls to C functions in the grid package have a C_ prefix in the R code, but an L_ prefix in the C code.↩︎",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Finding the Source</span>"
+    ]
+  },
+  {
+    "objectID": "lifecycle_of_a_patch.html",
+    "href": "lifecycle_of_a_patch.html",
+    "title": "8  Lifecycle of a Patch",
+    "section": "",
+    "text": "8.1 Introduction\nR uses a workflow based on patches. A patch is the set of differences (additions and deletions) between two versions of code. So you can create a patch defining a bug fix or a proposed update to the R codebase and submit it through your official Bugzilla account to the core developer(s). Be clear in your communication as it is the key to contributing to any project, especially an open source project like R.",
+    "crumbs": [
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Lifecycle of a Patch</span>"
+    ]
+  },
+  {
+    "objectID": "lifecycle_of_a_patch.html#when-do-you-submit-a-patch",
+    "href": "lifecycle_of_a_patch.html#when-do-you-submit-a-patch",
+    "title": "8  Lifecycle of a Patch",
+    "section": "8.2 When do you submit a patch?",
+    "text": "8.2 When do you submit a patch?\nThere might be a situation where you come across a bug in R, which you may have an idea of how to fix. This can turn out to be an opportunity for you to submit a patch. By submitting a patch or a bug fix, you are helping to reduce the workload on the R developers in addition to yourself being a contributor to R!\nWhen you submit a patch, you are helping the developer(s) and maintainer(s) so that they do not have to write the entire code from scratch. Instead, they can test and tweak your patch, if necessary.",
+    "crumbs": [
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Lifecycle of a Patch</span>"
+    ]
+  },
+  {
+    "objectID": "lifecycle_of_a_patch.html#what-tools-are-required-to-submit-a-patch",
+    "href": "lifecycle_of_a_patch.html#what-tools-are-required-to-submit-a-patch",
+    "title": "8  Lifecycle of a Patch",
+    "section": "8.3 What tools are required to submit a patch?",
+    "text": "8.3 What tools are required to submit a patch?\nTo submit a patch, you need:\n\nSVN installed on your machine.\nThe latest developer version of R.\n\nYou can retrieve the latest source code of R via:\nexport TOP_SRCDIR=\"$HOME/Downloads/R\"\nsvn checkout https://svn.r-project.org/R/trunk/ \"$TOP_SRCDIR\"\nDepending on the operative system you might need to do some steps before that. The different steps required can be found in previous chapters of the book, for Windows, macOS and Linux.",
+    "crumbs": [
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Lifecycle of a Patch</span>"
+    ]
+  },
+  {
+    "objectID": "lifecycle_of_a_patch.html#how-to-prepare-a-patch",
+    "href": "lifecycle_of_a_patch.html#how-to-prepare-a-patch",
+    "title": "8  Lifecycle of a Patch",
+    "section": "8.4 How to prepare a patch?",
+    "text": "8.4 How to prepare a patch?\nIf you have the source code in $TOP_SRCDIR you can edit the files, for example a documentation file such as \"$TOP_SRCDIR\"/src/library/stats/man/Multinom.Rd, to make your desired changes to that or more files.\nThen you should check that R still works as expected via:\ncd \"$TOP_SRCDIR\"\nmake check-devel\nIf there is no test for your proposed change you can add a new regression test, following the guidelines.\nThen you should bring changes from the repository into the working copy, in case any other change has been introduced, and create a patch.diff file with just the changes you want to propose to the R core:\nsvn update\nsvn diff &gt; patch.diff\nMost often, changes are made to existing files, but if you happen to be adding a new file in your change, you’ll need to run svn add path/to/file1 ... before running svn diff to mark those files for inclusion.\nThis patch.diff file is the one that can be proposed to the R core via Bugzilla. You can also ask for reviews to the patch before proposing it to the R core via the r-devel mailing list or the slack channel of the R-contributors space.\n\n8.4.1 Using a git mirror\nBesides checking in your computer, you can use the Github mirror r-devel/r-svn of the source code to check this patch with different configurations and OS.\nYou should first find the file to edit, via the github interface for example:\n\n\n\nScreenshot of the heading of the src/library/stats/man/Mulinom.Rd\n\n\nThen you can edit it, directly in the interface or using the github interface:\n\n\n\nScreenshot of the file src/library/stats/man/Mulinom.Rd being edited via the Github interface\n\n\nCreate a commit with a message describing the changes\n\n\n\nScreenshot of the commit message\n\n\nAnd create a pull request from the branch created to check the changes.\n\n\n\nScreenshot of the message when opening a pull requests from the branch\n\n\nAdd a message and description of the svn for other users and the R core to know what is the purpose of this modification:\n\n\n\nScreenshot of the message and content while opening a pull requests for the r-svn repository\n\n\n\n\n\nScreenshot of the pull requests opened\n\n\nOnce the PR is submitted, some automatic checks will be triggered (they might need to be approved by some other users as per Github rules):\n When the checks end you will need to explore the results and asses if the results indicate a problem or not.\n\n\n\nScreenshot of the results of the Github checks in the r-svn mirror\n\n\nOnce you are happy with the changes and the checks report that everything is okay you can retrieve the patch via:\nhttps://patch-diff.githubusercontent.com/raw/r-devel/r-svn/pull/&lt;pull_request_number&gt;.diff\nSave &lt;pull_request_number&gt;.diff as a plain text file to submit your patch, remember to check if it meets the recommendations for good patches.\nIf you want to use git from the terminal to create the pull request (PR) to test the changes, you can use this summary of the available git commands.",
+    "crumbs": [
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Lifecycle of a Patch</span>"
+    ]
+  },
+  {
+    "objectID": "lifecycle_of_a_patch.html#GoodPatches",
+    "href": "lifecycle_of_a_patch.html#GoodPatches",
+    "title": "8  Lifecycle of a Patch",
+    "section": "8.5 Making good patches",
+    "text": "8.5 Making good patches\nWhen creating a patch for submission, there are several things that you can do to help ensure that your patch is accepted:\n\nMake sure to follow R’s coding standards (R is a GNU project and there are GNU coding standards). The coding style of the patch you submit should largely match with the codebase it is being applied to. If your patch has one or two minor discrepancies, then those may be fixed by the core developer who will eventually test your patch. However, if there are systematic deviations from the style guides your patch will be put on hold until you fix the formatting issues. There is no comprehensive official R style manual, however some nearly universal standards are summarised in this article.\nBe aware of backwards-compatibility considerations. While the core developer who eventually handles your patch will make the final call on whether something is acceptable, thinking about backwards-compatibility early will help prevent having your patch rejected on these grounds. Put yourself in the shoes of someone whose code will be broken by the change(s) introduced by the patch. It is quite likely that any change made will break someone’s code, so you need to have a good reason to make a change as you will be forcing someone to update their code. This obviously does not apply to new functions or new arguments. New arguments should be optional and have default values which maintain the existing behaviour. If in doubt, discuss the issue with experienced developers.\nMake sure you have proper tests to verify that your patch works as expected. Patches may not be accepted without the proper tests.\nMake sure the entire test suite runs without failure because of your changes. It is not sufficient to only run whichever test seems impacted by your changes, because there might be interactions unknown to you between your changes and some other part of the interpreter.\nProper documentation additions/changes should be included.\nEach bugfix should ideally be addressed by a single patch. In particular, do not fix more than one issue in the same patch (except, if one code change fixes all of them) and do not do cosmetic changes to unrelated code in the same patch as some bugfix.",
+    "crumbs": [
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Lifecycle of a Patch</span>"
+    ]
+  },
+  {
+    "objectID": "lifecycle_of_a_patch.html#SubmitPatches",
+    "href": "lifecycle_of_a_patch.html#SubmitPatches",
+    "title": "8  Lifecycle of a Patch",
+    "section": "8.6 Submitting your patch for review",
+    "text": "8.6 Submitting your patch for review\n\n8.6.1 Patch in response to a pre-existing issue or bug report\nIn this case, you should attach the patch to the existing issue or bug report on Bugzilla with a brief comment.\n\nUse the Attachments option to add the *.diff file as attachment.\nOn the new Create New Attachment web page, add a Brief Decription.\nSelect Content Type as patch.\nAdd comments (often prose text) in this page rather than in the original bugzilla page for the PR.\nPress Submit. This will give you a bugzilla submission that sends one e-mail to all of R-core plus the PR author.\n\n\n\n8.6.2 Patch in response to an unreported issue or bug report\nAssuming you already performed a search on Bugzilla for a pre-existing issue or bug and did not find the issue or bug reported, you need to create a new bug report and include your patch with it. Please fill in as much relevant detail as possible to prevent reviewers from having to delay reviewing your patch because of lack of information. Include (mostly as the first sentence), a to-the-point explanation of what the purpose of the patch is. This sentence should not be in the descriptive form, rather an imperative form will be more suitable here. If this is not enough detail for a patch, a new paragraphs(s) can be added to explain in proper depth what has happened. The details should be good enough that a core developer reading it understands the justification for the change.",
+    "crumbs": [
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Lifecycle of a Patch</span>"
+    ]
+  },
+  {
+    "objectID": "lifecycle_of_a_patch.html#PatchesReview",
+    "href": "lifecycle_of_a_patch.html#PatchesReview",
+    "title": "8  Lifecycle of a Patch",
+    "section": "8.7 Getting your patch reviewed",
+    "text": "8.7 Getting your patch reviewed\nTo begin with, please be patient. There are many more people submitting patches than there are people capable of reviewing your patches. Getting your patch reviewed requires a reviewer to have the spare time and motivation to look at your patch. We cannot force anyone to review patches and no one is employed to look at patches.\nThere is a #patches-for-review channel on the R Contributors slack where you can share your patch(es) for review/feedback before submitting to R-Core/Bugzilla. This can help with checking that you have included the important information and excluded redundant information.\nIf your patch has not received any notice from reviewers (i.e., no comment made) after one month, comment/message on the #patches-for-review channel to remind the members that the patch needs a review.\nWhen someone does manage to find the time to look at your patch they will most likely make comments about how it can be improved. It is then expected that you update your patch to address these comments, and the review process will thus iterate until a satisfactory solution has emerged.\n\n8.7.1 How to review a patch?\nOne of the bottlenecks in the R development process is the lack of code reviews. If you browse Bugzilla, you will see that numerous issues have a fix, but cannot be merged into the main source code repository, because no one has reviewed the proposed solution. Reviewing a patch can be just as informative as providing a patch and it will allow you to give constructive comments on another developer’s work. This guide provides a checklist for submitting a patch review. It is a common misconception that in order to be useful, a patch review has to be perfect. This is not the case at all. It is helpful to just test the patch and/or play around with the code and leave comments in the patch or on Bugzilla.\nIf a bug report or an issue has a patch attached that has not been reviewed, you can help by making sure that the patch:\n\nfollows the style guides;\nis a good solution to the problem it is trying to solve;\nincludes proper tests; and\nincludes proper documentation changes.\n\nAlso refer to Making good patches for more ideas. Doing all of this allows the core developer(s) and/ or maintainer(s) to more quickly look for subtle issues that only people with extensive experience working on R’s codebase will notice.",
+    "crumbs": [
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Lifecycle of a Patch</span>"
+    ]
+  },
+  {
+    "objectID": "lifecycle_of_a_patch.html#leaving-a-patch-review-on-bugzilla",
+    "href": "lifecycle_of_a_patch.html#leaving-a-patch-review-on-bugzilla",
+    "title": "8  Lifecycle of a Patch",
+    "section": "8.8 Leaving a patch review on Bugzilla",
+    "text": "8.8 Leaving a patch review on Bugzilla\nWhen you review a patch, you should provide additional details and context of your review process and leave comments. For example:\n\nIf you tested the patch, report the result and the system and version tested on, such as ‘Windows 10’, ‘Ubuntu 16.4’, or ‘Mac High Sierra’.\nIf you request changes, try to suggest how or attach an updated patch.\nComment on what is ‘good’ about the patch, not just the ‘bad’. Doing so will make it easier for the patch author to find the good in your comments.",
+    "crumbs": [
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Lifecycle of a Patch</span>"
+    ]
+  },
+  {
+    "objectID": "lifecycle_of_a_patch.html#dismissing-review-from-another-core-developer",
+    "href": "lifecycle_of_a_patch.html#dismissing-review-from-another-core-developer",
+    "title": "8  Lifecycle of a Patch",
+    "section": "8.9 Dismissing review from another core developer",
+    "text": "8.9 Dismissing review from another core developer\nA core developer can dismiss another core developer’s review if they confirmed that the requested changes have been made. When a core developer has assigned the patch to themselves, then it is a sign that they are actively looking after the patch, and their review should not be dismissed.",
+    "crumbs": [
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Lifecycle of a Patch</span>"
+    ]
+  },
+  {
+    "objectID": "lifecycle_of_a_patch.html#acceptance-or-rejection-of-your-patch",
+    "href": "lifecycle_of_a_patch.html#acceptance-or-rejection-of-your-patch",
+    "title": "8  Lifecycle of a Patch",
+    "section": "8.10 Acceptance or rejection of your patch",
+    "text": "8.10 Acceptance or rejection of your patch\nOnce your patch has reached an acceptable state, it will either be applied or rejected. If it is rejected, please do not take it personally. Your work is still appreciated regardless of whether your patch is applied. Balancing what does and does not go into R is tricky and everyone’s contributions cannot always be accepted.\nBut if your patch is accepted and applied it will then go on to be released with the next patched release and eventually the next major release of R. It may also be backported to older versions of R as a bugfix if the core developer doing the patch acceptance believes it is warranted.\nIt may take longer before your patch is accepted and applied or rejected, sometimes even months or years. Nonetheless, it is appreciated that you submitted a patch.",
+    "crumbs": [
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Lifecycle of a Patch</span>"
+    ]
+  },
+  {
+    "objectID": "lifecycle_of_a_patch.html#examples-of-patch-reports-on-bugzilla",
+    "href": "lifecycle_of_a_patch.html#examples-of-patch-reports-on-bugzilla",
+    "title": "8  Lifecycle of a Patch",
+    "section": "8.11 Examples of patch reports on Bugzilla",
+    "text": "8.11 Examples of patch reports on Bugzilla",
+    "crumbs": [
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Lifecycle of a Patch</span>"
+    ]
+  },
+  {
+    "objectID": "lifecycle_of_a_patch.html#examples-of-reviewing-a-patch",
+    "href": "lifecycle_of_a_patch.html#examples-of-reviewing-a-patch",
+    "title": "8  Lifecycle of a Patch",
+    "section": "8.12 Examples of reviewing a patch",
+    "text": "8.12 Examples of reviewing a patch",
+    "crumbs": [
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Lifecycle of a Patch</span>"
+    ]
+  },
+  {
+    "objectID": "lifecycle_of_a_patch.html#see-also",
+    "href": "lifecycle_of_a_patch.html#see-also",
+    "title": "8  Lifecycle of a Patch",
+    "section": "8.13 See also",
+    "text": "8.13 See also\n\nSubmitting patches",
+    "crumbs": [
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Lifecycle of a Patch</span>"
+    ]
+  },
+  {
+    "objectID": "documenting.html",
+    "href": "documenting.html",
+    "title": "9  Documenting",
+    "section": "",
+    "text": "9.1 Helping with documentation\nR has a substantial body of documentation, comprising help files for the core packages and a set of manuals aimed at users (An Introduction to R, R Data Import/Export), system administrators (R Installation and Administration) and developers (Writing R Extensions, The R language definition, and R Internals). This documentation was developed by the R Core Team with input from external contributors. The continuing involvement of the user community is important in maintaining this valuable documentation.\nThe involvement of the community takes many forms, from contributing content, to making bug reports or raising an issue when the documentation could be more complete or made easier to follow.\nThis chapter is about the ways people can contribute to R’s documentation, with guidance on how to do that. Any time you feel that you can clarify or fill gaps in existing documentation, your contribution is welcome and appreciated. If you find it difficult to deal with the markup formatting language used in the source files, you can ask for help with that part too. Please do not let the material in this chapter stand between the documentation and your desire to help out. However, not every good faith effort to change or extend the documentation will be accepted - sometimes the suggested changes may be incorrect; other times, while a change in wording may make some things clearer and easier to understand, the finer details of some corner case may become less clear, leading to the suggested changes being declined or modified by a member of R Core before applying them (if they agree the issue is important enough to fix).\nMaintaining the accuracy of R’s documentation and keeping a high level of quality takes a lot of effort. Community members, like you, help with writing, editing, and updating content, and these contributions are appreciated and welcomed.\nLooking at pre-existing documentation source files can be very helpful when getting started.\nYou can directly search for documentation issues/bugs on Bugzilla. Issues vary from typos to unclear documentation and items lacking documentation.\nIf you see a documentation issue that you would like to tackle, you can leave a comment on the issue saying you are going to try to solve the issue and mention roughly how long you think you will take to do so (this allows others to take on the issue if you happen to forget or lose interest).",
+    "crumbs": [
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Documenting</span>"
+    ]
+  },
+  {
+    "objectID": "documenting.html#reporting-documentation-bugs",
+    "href": "documenting.html#reporting-documentation-bugs",
+    "title": "9  Documenting",
+    "section": "9.2 Reporting documentation bugs",
+    "text": "9.2 Reporting documentation bugs\n\nTo suggest improvements to the R manuals, report typos or bugs in the R manuals, or to raise issues related to documentation in packages maintained by the R Core Team, follow the usual guidance for reporting bugs in R.\nTo report bugs or typos in the documentation of a package that is not maintained by the R Core Team, follow the guidance for reporting bugs in contributed packages.\nNote:\nThere is a #core-documentation channel on the R Contributors slack where you can get feedback before reporting an issue or get feedback on proposed improvements.\n\n9.2.1 Example documentation bugs\nHere are a couple of successfully resolved bugs as examples.\n\nBug 16003 - heatmap scale argument: description not complete\n\nThere was a question about the description in the documentation, where it wasn’t technically incorrect, but was slightly unclear. This led to a discussion around the updates to the text and a couple of extra examples were added in for clarity too.\n\nBug 18781 - typo in texinfo\n\nThis is an example of a typo being spotted, raised and fixed within the same day.",
+    "crumbs": [
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Documenting</span>"
+    ]
+  },
+  {
+    "objectID": "documenting.html#guidelines-for-writing-r-help-files",
+    "href": "documenting.html#guidelines-for-writing-r-help-files",
+    "title": "9  Documenting",
+    "section": "9.3 Guidelines for writing R help files",
+    "text": "9.3 Guidelines for writing R help files\nThis section is based on the guidelines used by R Core developers for writing R help files. Extensive details of writing R documentation files can be found in the Writing R Extensions manual.\nThe language used in the documentations should follow these basic rules:\n\nAffirmative tone should be used to describe what the function does and how to use it effectively. Rather than creating worry in the mind of a reader, it should establish confident knowledge about the effective use of the particular function/feature.\nMore documentation is not necessarily better documentation. Long descriptions full of corner cases and caveats can create the impression that a function is more complex or harder to use than it actually is. Be succinct but exhaustive.\nShort code examples can help in understanding better. Readers can often grasp a simple example more quickly than they can digest a formal description. Usually people learn faster with concrete, motivating examples that match the context of a typical use case.\nGiving a code equivalent (or approximate equivalent) can be a useful addition to the description provided. You should carefully weigh whether the code equivalent adds value to the document.\nThe tone of the documentation needs to be respectful of the reader’s background. Lay out the relevant information, show motivating use cases, provide glossary links, and do your best to connect-the-dots. The documentation is meant for newcomers, many of whom will be using it to evaluate the R language as a whole. The experience needs to be positive and not leave the reader with worries that something bad will happen if they make a mistake.",
+    "crumbs": [
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Documenting</span>"
+    ]
+  },
+  {
+    "objectID": "documenting.html#introduction-to-.rd-files",
+    "href": "documenting.html#introduction-to-.rd-files",
+    "title": "9  Documenting",
+    "section": "9.4 Introduction to .Rd files",
+    "text": "9.4 Introduction to .Rd files\nThe R help files are written in “R documentation” (Rd) format, a markup language which resembles LaTeX. The .Rd file format can be further processed into a variety of formats, including LaTeX, HTML, and plain text. The .Rd files can be found in the man directory of the source code for the corresponding package.\nThere are three main parts of an .Rd file:\n\nHeader: This part is for the basic information of the document/file. For instance, the name of the file, the topics documented, a title, a short textual description, and R usage information for the objects documented.\nBody: This part includes further information on the function’s arguments and return value.\nFooter: This part is optional. Usually the keyword information is included here.\n\nAll the above information is included in a .Rd file within a series of sections with standard names (user-defined sections are also allowed). These sections are discussed below:\n\n\\title section:\n\nCapitalize each word.\nDo not end in a period.\nAvoid use of markup language (because markup language need not be suitable for various hypertext search systems).\n\n\\usage and \\examples sections:\n\nLine length of 65 characters is advised.\nUse TRUE instead of T and FALSE instead of F.\nAdd spaces around binary operators.\nAdd spaces after commas in the argument lists.\nUse &lt;- rather than = for assignments.\nAdd spaces around the &lt;- operator.\nDo not use tabs to indent (as these do not render correctly on all possible pagers).\nUse 4 spaces to indent the (example) code.\nMake sure the examples are directly executable.\nThe examples should be system-independent.\nThe examples should not require special facilities (for instance, Internet access or write permission to specific directories).\nExamples should also not take longer than necessary to run, as they are run when checking a build of R.\n\n\\source and \\references sections:\n\nAuthor(s) names should be written in the form Author, A. B..\nAuthor(s) names should be separated by a comma or and (but not both).\nSeparate paragraphs (separated by a blank line) should be used for each reference.\nGive a date immediately after the author(s) names.\nDo not put a period after the date.\nTitles of books and journals (not articles) should be enclosed in \\emph{...}.\nVolume numbers for journals are to be enclosed in \\bold{...} and followed by a comma.\nUse -- for page ranges.\nFor giving an address for a publisher use the format New York: Springer-Verlag.\n\n\nFor example, the help file for base::mean() is found at https://svn.r-project.org/R/trunk/src/library/base/man/mean.Rd. The filemean.Rd has the content shown below:\n% File src/library/base/man/mean.Rd\n% Part of the R package, https://www.R-project.org\n% Copyright 1995-2022 R Core Team\n% Distributed under GPL 2 or later\n\n\\name{mean}\n\\title{Arithmetic Mean}\n\\usage{\nmean(x, \\dots)\n\n\\method{mean}{default}(x, trim = 0, na.rm = FALSE, \\dots)\n}\n\\alias{mean}\n\\alias{mean.default}\n\\arguments{\n  \\item{x}{An \\R object.  Currently there are methods for\n    numeric/logical vectors and \\link[=Dates]{date},\n    \\link{date-time} and \\link{time interval} objects.  Complex vectors\n    are allowed for \\code{trim = 0}, only.}\n  \\item{trim}{the fraction (0 to 0.5) of observations to be\n    trimmed from each end of \\code{x} before the mean is computed.\n    Values of trim outside that range are taken as the nearest endpoint.\n  }\n  \\item{na.rm}{a logical evaluating to \\code{TRUE} or \\code{FALSE}\n    indicating whether \\code{NA} values should be stripped before the\n    computation proceeds.} \n  \\item{\\dots}{further arguments passed to or from other methods.}\n}\n\\description{\n  Generic function for the (trimmed) arithmetic mean.\n}\n\\value{\n  If \\code{trim} is zero (the default), the arithmetic mean of the\n  values in \\code{x} is computed, as a numeric or complex vector of\n  length one.  If \\code{x} is not logical (coerced to numeric), numeric\n  (including integer) or complex, \\code{NA_real_} is returned, with a warning.\n\n  If \\code{trim} is non-zero, a symmetrically trimmed mean is computed\n  with a fraction of \\code{trim} observations deleted from each end\n  before the mean is computed.\n}\n\\references{\n  Becker, R. A., Chambers, J. M. and Wilks, A. R. (1988)\n  \\emph{The New S Language}.\n  Wadsworth & Brooks/Cole.\n}\n\\seealso{\n  \\code{\\link{weighted.mean}}, \\code{\\link{mean.POSIXct}},\n  \\code{\\link{colMeans}} for row and column means.\n}\n\\examples{\nx &lt;- c(0:10, 50)\nxm &lt;- mean(x)\nc(xm, mean(x, trim = 0.10))\n}\n\\keyword{univar}\nMany R package developers write help files using the R package roxygen2, which generates .Rd files from comments in the corresponding .R files. However, in this guide we only consider .Rd files, because the help files for the base distribution are written and edited directly in .Rd format.",
+    "crumbs": [
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Documenting</span>"
+    ]
+  },
+  {
+    "objectID": "documenting.html#r-manuals",
+    "href": "documenting.html#r-manuals",
+    "title": "9  Documenting",
+    "section": "9.5 R manuals",
+    "text": "9.5 R manuals\nThe R manuals are a part of the R sources. Hence, bug reports/patches can also be submitted via Bugzilla, e.g. Bug 15221 - R-admin/‘Installing R under Windows’: Missing argument name. Note that they are typically referred to by their file names as listed below:\n\n\n\nManual\nNickname\n\n\n\n\nAn Introduction to R\n“R-intro”\n\n\nR Data Import/Export\n“R-data”\n\n\nR Installation and Administration\n“R-admin”\n\n\nWriting R Extensions\n“R-exts”\n\n\nThe R language definition\n“R-lang”\n\n\nR Internals\n“R-ints”\n\n\n\nNote:\n\nEvery manual is associated with a particular version of R, so you should check the version before reporting a bug.\nThe R manuals page has links for the three types of release: r-release, r-patched and r-devel. These nicknames appear in the URLs, e.g. https://cran.r-project.org/doc/manuals/r-release/R-intro.html.\nThe Texinfo manual should be referred to for how to mark up text.",
+    "crumbs": [
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Documenting</span>"
+    ]
+  },
+  {
+    "objectID": "documenting.html#proofreading",
+    "href": "documenting.html#proofreading",
+    "title": "9  Documenting",
+    "section": "9.6 Proofreading",
+    "text": "9.6 Proofreading\nWhile an issue filed on Bugzilla means there is a known issue somewhere, that does not mean there are not other issues lurking about in the documentation. Proofreading a part of the documentation can often uncover problems.\nIf you decide to proofread, read a section of the documentation from start to finish, filing issues in Bugzilla for each major type of problem you find. It is best to avoid filing a single issue for an entire section containing multiple problems; instead, file several issues so that it is easier to break the work up for multiple people and more efficient review.",
+    "crumbs": [
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Documenting</span>"
+    ]
+  },
+  {
+    "objectID": "documenting.html#helping-with-the-r-development-guide",
+    "href": "documenting.html#helping-with-the-r-development-guide",
+    "title": "9  Documenting",
+    "section": "9.7 Helping with the R Development Guide",
+    "text": "9.7 Helping with the R Development Guide\nThe R Development Guide (what you are reading now) uses the same process as the main R documentation, except for some small differences. The source lives in a GitHub repository and bug reports should be submitted to the devguide GitHub tracker.\nThere’s a section on the introduction page detailing how to contribute to this guide. Once you have made suggested changes you can raise them for someone else to review through a pull request on GitHub. Examples of past pull requests can be found on the pull request tab in this guide’s GitHub repository. Our workflow for the R Development Guide uses continuous integration and deployment so changes to the live R Development Guide site are normally published once a pull request is merged.",
+    "crumbs": [
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Documenting</span>"
+    ]
+  },
+  {
+    "objectID": "documenting.html#see-also",
+    "href": "documenting.html#see-also",
+    "title": "9  Documenting",
+    "section": "9.8 See also",
+    "text": "9.8 See also\n\nWriting R documentation files",
+    "crumbs": [
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Documenting</span>"
+    ]
+  },
+  {
+    "objectID": "message_translations.html",
+    "href": "message_translations.html",
+    "title": "10  Message Translations",
+    "section": "",
+    "text": "10.1 How translations work\nThis chapter covers internationalization in R, i.e., the display of messages in languages other than English. All output in R (such as messages emitted by stop(), warning(), or message()) is eligible for translation, as are menu labels in the GUI. Depending on the version of R that you are using, some of the languages might already be available while others may need work. R leverages the gettext program to handle the conversion from English to arbitrary target languages.\nHaving messages available in other languages can be an important bridge for R learners not confident in English – rather than learning two things at once (coding in R and processing diagnostic information in English), they can focus on coding while getting more natural errors/warnings in their native tongue.\nThe gettext manual is a more canonical reference for a deep understanding of how gettext works. This chapter will just give a broad overview, with particular focus on how things work for R, with the goal of making it as low-friction as possible for developers and users to contribute new/updated translations.\nEach of the default packages distributed with R (i.e., those found in ./src/library such as base, utils, and stats and which have priority base) contains a po directory. A po directory is the central location for ataloguing/translating each package’s messages. It contains a template message file (.pot) for the corresponding ackage along with translated .po files (that are created using the template .pot file).",
+    "crumbs": [
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Message Translations</span>"
+    ]
+  },
+  {
+    "objectID": "message_translations.html#how-translations-work",
+    "href": "message_translations.html#how-translations-work",
+    "title": "10  Message Translations",
+    "section": "",
+    "text": "10.1.1 .pot files\nA .pot file is a template file found inside the po directory of an R package. This template file is a snapshot of the messages available in a given domain. A domain in R typically identifies a source package and a source language (either R or C/C++). For example, the file R-stats.pot (found in the R sources in ./src/library/stats/po) is a catalogue of all messages produced by R code in the stats package, while stats.pot is a catalogue of all messages produced by C code in the stats package.\nThe ‘base’ package has two exceptions to the basic pattern described above. The first is the domain for messages produced by the C code which is the fundamental backing of R itself (especially, but not exclusively, the C code under ./src/main[^The file ./po/POTFILES is the canonical source of files searched. Note that while, technically, it is possible to support translations in Fortran code, R does not currently do so. Only a handful of messages are produced by Fortran routines in the R sources.]). The associated .pot file is R.pot and is found in ./src/library/base/po. R-base.potis a normal.potfile because base has a normalR` directory.\nThe second is the domain for the Windows R GUI, i.e., the text in the menus and elsewhere in the R GUI program available for running R on Windows. These messages are stored in the RGui.pot domain, also in the po directory for base, and are most commonly derived from C code found in ./src/gnuwin32. One reason to keep this domain separate is that it is only relevant to one platform (Windows). In particular, Windows has historically different character encodings, so that it made more sense for Windows developers to produce translations specifically or Windows, since it is non-trivial for non-Windows users to test their translations for the Windows GUI.\n\n10.1.1.1 Generating .pot files\nFor outside contributors, there’s no need to update .pot files – translators will typically take the R .pot files as given and generate .po files. These will be sent along to a language-specific translation maintainer, who then compiles them to send to the R Core developer responsible for translations, who finally applies them as a patch.\nTo emphasize, this section is almost always not needed for contributing translations – it is here for completeness and edification.\n\n\n\n10.1.2 .po files\n.po files are the most important artifacts for translators. They provide the (human-readable!) mapping between the messages as they appear in the source code and how the messages will appear to users in translated locales.\n\n10.1.2.1 Singular messages\nMost messages appear as msgid/msgstr pairs. The former gives the message as it appears in the code, while the latter shows how it should appear in translation. For example, here is an error in German (locale: de) informing the user that their input must be of class POSIXt\nmsgid \"'to' must be a \\\"POSIXt\\\" object\"\nmsgstr \"'to' muss ein \\\"POSIXt\\\" Objekt sein\"\nSee this in context in the R-de.po source file.\nThe same message can also be found in R-it.po giving the translation to Italian:\nmsgid \"'to' must be a \\\"POSIXt\\\" object\"\nmsgstr \"'to' dev'essere un oggetto \\\"POSIXt\\\"\"\n\n\n10.1.2.2 Plural messages\nSome messages will have different translations depending on some input determined at run time (e.g., the length() of an input object or the nrow() of a data.frame). This presents a challenge for translation, because different languages have different rules for how to pluralize different ordinal numbers[^See the relevant section of the gettext manual]. For example, English typically adds s to any quantity of items besides 1 (1 dog, 2 dogs, 100 dogs, even 0 dogs). Chinese typically does not alter the word itself in similar situations (一只狗, 两只狗, 一百只狗, 零只狗); Arabic has six different ways to pluralize a quantity.\nIn .po files, this shows up in the form of msgid_plural entries, followed by several ordered msgstr entries. Here’s an example from R-de.po1:\nmsgid \"Warning message:\\n\"\nmsgid_plural \"Warning messages:\\n\"\nmsgstr[0] \"Warnmeldung:\\n\"\nmsgstr[1] \"Warnmeldungen:\\n\"\nThe two entries in English correspond to the singular and plural messages; the two entries in German correspond similarly, because pluralization rules in German are similar to those in English. The situation in Lithuanian (R-lt.po) is more divergent:\nmsgid \"Warning message:\\n\"\nmsgid_plural \"Warning messages:\\n\"\nmsgstr[0] \"Įspėjantis pranešimas:\\n\"\nmsgstr[1] \"Įspėjantys pranešimai:\\n\"\nmsgstr[2] \"Įspėjančių pranešimų:\\n\"\nThis corresponds to the 3 different ways to pluralize words in Polish.\nWhat do 0, 1, and 2 correspond to, exactly? Ideally, this will be clear to native speakers of the language, but for clarity, it is the solution to a small arithmetic problem that can be found in the language’s metadata entry. Look for the Plural-Forms entry in the metadata at the top of the .po file; here it is for Lithuanian:\n\"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10&gt;=2 && (n\"\n\"%100&lt;10 || n%100&gt;=20) ? 1 : 2);\\n\"\nnplurals tells us how many entries correspond to each msgid_plural for this language. plural tells us, for the quantity n, which entry to use. The arithmetic is C code; most important if you really want to parse this and are only familiar with R code is C’s ternary operator: test ? valueIfTrue : valueIfFalse is a handy way to write R’s if (test) valueIfTrue else valueIfFalse.\nParsing, we get the following associations:\n\nthe 0 entry corresponds to when a number equals 1 modulo 10 (i.e., 1, 11, 21, 31, …) except numbers equaling 11 modulo 100 (i.e., 11, 111, 211, 311, …). Combining, that’s 1, 21, 31, …, 91, 101, 121, 131, …, 191, …\nthe 1 entry corresponds to numbers at least 2 modulo 10 (2, 3, …, 8, 9, 12, 13, 14, …) and either below 10 modulo 100 (0, 1, …, 9, 100, 101, …, 109, …) or exceeding 20 modulo 100 (21, 22, …, 99). Combining, that’s 2, 3, …, 9, 22, 23, …, 29, 32, 33, … 39, …, 102, 103, …, 109, 122, 123, …\nThe 2 entry corresponds to all other numbers, i.e. 0, 10, 11, 12, …, 19, 20, 30, …, 90, 100, 110, 111, 112, …\n\n\n\n\n\n\n\n10.1.3 .mo files\n.po files are plain text, but while helpful for human readers, this is inefficient for consumption by computers. The .mo format is a “compiled” version of the .po file optimized for retrieving messages when R is running.\nIn R-devel, the conversion from .po to .mo is done by R Core – you don’t need to compile these files yourself. They are stored in the R sources at ./src/library/translations/inst in various language-specific subdirectories.",
+    "crumbs": [
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Message Translations</span>"
+    ]
+  },
+  {
+    "objectID": "message_translations.html#how-to-contribute-new-translations",
+    "href": "message_translations.html#how-to-contribute-new-translations",
+    "title": "10  Message Translations",
+    "section": "10.2 How to contribute new translations",
+    "text": "10.2 How to contribute new translations\n\nTranslating R into different languages helps make it more user-friendly for non-English speakers and helps to grow the R community. See the blog post on how R can use your help: Translating R messages.\nTo get started contributing to translations, please follow the steps below:\nStep 1: Register an Account at Weblate\nWeblate is an open-source platform for collaborative translation of software projects. Register an account on R’s Weblate server, https://translate.rx.studio/, to start contributing.\n\nNote: To get started follow the detailed workflow and convention for translation which is given here: https://contributor.r-project.org/translations/\n\nStep 2: Choose a Component and Language\nSelect a component of R with less than 100% translation. Each component corresponds to the messages in either the R code or the C code of one of the packages in base R, e.g. base (R files), or tools (C files). There is one special case: base (R GUI), which corresponds to the messages in the Windows Graphical User Interface.\nAfter selecting a component, you can select your preferred language.\n\n\n\n\n\n\n\nStep 3: Translate the Message\nNow, you can click on Translate button on your right.\n\nNote: More information for String status visit: https://docs.weblate.org/en/latest/workflows.html#translation-states\n\n\nThen, start translating the message by typing the translation in the text box.\n\n\nIf you are confident that the translation is correct, make sure the “Needs editing” box is unchecked.\nIf you are unsure about how to translate, write the translation as a Suggest button instead.\nFinally, Click “Save and Continue” to save the translation and continue.\n\n\n\nNote: Use Glossary feature within Weblate making translation easy and consistent: https://translate.rx.studio/projects/r-project/glossary/\n\n\nNote: Make sure to use Automatic Suggestions as a starting point.\n\n\nClick on Automatic Suggestions (machine translation)\nAccept it if you think the automatic suggestion looks good\n\n\n\nSome Tips to follow:\n\nBe consistent: Use the same words and phrases throughout the translation to make it consistent and avoid confusion.\nCheck for technical issues: After finishing the translation, check if you have any alerts or warning in the Weblate string status, e.g. double instead of single space.\nFollow language specific guidelines: Check how other languages have translated the string. Even if you are not fluent in another language it can give you an idea of how other translators have handled it, especially which parts are left verbatim. A detailed guide is given here : Conventions-for-translations#languages-and-contributions\n\nRelated links: https://contributor.r-project.org/tutorials/translating-r-to-your-language/",
+    "crumbs": [
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Message Translations</span>"
+    ]
+  },
+  {
+    "objectID": "message_translations.html#bulk-translations",
+    "href": "message_translations.html#bulk-translations",
+    "title": "10  Message Translations",
+    "section": "10.3 Bulk Translations",
+    "text": "10.3 Bulk Translations\nInstead of translating one string at a time, it is possible to bulk translate a whole component of R at once:\n\nNavigate to the translations for a particular component in a particular language, e.g. https://translate.rx.studio/projects/r-project/base-c/ar/\nSelect ‘Tools &gt; Automatic translation’\n\n\n\n\nTools drop-down menu with “Automatic Translations” selected\n\n\n\nIn the dialog,\n\n\nunder ‘Automatic translation mode’, select ‘Add as “needing edit”’2:\n\n\nunder ‘Search filter’, select ‘Untranslated strings’\nunder ‘Source of automated translations’, select ‘Machine translation’\nunder ‘Machine translation engines’, select ‘Microsoft Translator’3:\n\n\n\n\nAutomatic Translations dialog box\n\n\n\nReview the translations, edit as necessary and uncheck “needing edit”.",
+    "crumbs": [
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Message Translations</span>"
+    ]
+  },
+  {
+    "objectID": "message_translations.html#current-status-of-translations-in-r",
+    "href": "message_translations.html#current-status-of-translations-in-r",
+    "title": "10  Message Translations",
+    "section": "10.4 Current status of translations in R",
+    "text": "10.4 Current status of translations in R\nhttps://contributor.r-project.org/translations-dashboard/",
+    "crumbs": [
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Message Translations</span>"
+    ]
+  },
+  {
+    "objectID": "message_translations.html#helpful-references",
+    "href": "message_translations.html#helpful-references",
+    "title": "10  Message Translations",
+    "section": "10.5 Helpful references",
+    "text": "10.5 Helpful references\n\nStatistical terms glossary",
+    "crumbs": [
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Message Translations</span>"
+    ]
+  },
+  {
+    "objectID": "message_translations.html#footnotes",
+    "href": "message_translations.html#footnotes",
+    "title": "10  Message Translations",
+    "section": "",
+    "text": "The GitHub mirror of the actual svn repo is linked in this chapter as it is a better interface for browsing the source files.↩︎\nBy selecting ‘Add as “needing edit”’, the autotranslated strings would be treated as “fuzzy” translations, i.e. they would be added to the component source files when a patch is made, but they would NOT be used.↩︎\nMicrosoft Translator is preferred for bulk translation as our free tier covers 2 million characters/month, where DeepL only allows 500k chars/month. If Microsoft Translator translations are much worse than DeepL, it may be useful to use it to translate one string at a time.↩︎",
+    "crumbs": [
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Message Translations</span>"
+    ]
+  },
+  {
+    "objectID": "testing_pre_release_r_versions.html",
+    "href": "testing_pre_release_r_versions.html",
+    "title": "11  Testing Pre-release R Versions",
+    "section": "",
+    "text": "11.1 Where to test?\nThis chapter is inspired from the blog on testing R before release and discusses how you can help with testing of pre-release versions of R.\nWhenever possible use a fresh package library for testing, even better would be to use virtual machines for the testing. This would ensure that you do not damage your existing R installation.",
+    "crumbs": [
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Testing Pre-release R Versions</span>"
+    ]
+  },
+  {
+    "objectID": "testing_pre_release_r_versions.html#where-to-test",
+    "href": "testing_pre_release_r_versions.html#where-to-test",
+    "title": "11  Testing Pre-release R Versions",
+    "section": "",
+    "text": "11.1.1 Virtual machine\nA free Windows 10 virtual machine is provided by Microsoft (with a 90-day limit) for building, testing, and checking R packages and R itself. Package maintainers who work on Linux and MacOS can use it to test their packages on Windows. Read the instructions on how to automatically set up the machine to check R packages. Tomas Kalibera describes the details of using virtual machine in the blog Virtual Windows machine for checking R packages.",
+    "crumbs": [
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Testing Pre-release R Versions</span>"
+    ]
+  },
+  {
+    "objectID": "testing_pre_release_r_versions.html#what-can-you-test",
+    "href": "testing_pre_release_r_versions.html#what-can-you-test",
+    "title": "11  Testing Pre-release R Versions",
+    "section": "11.2 What can you test?",
+    "text": "11.2 What can you test?\nYou can test:\n\nYour own programs.\nYour own workflows.\nYour special ways of installing or setting up R.\nThings that interact with external libraries.\nInteractive R packages.\n\nDetails of performing testing on various operating systems:\n\nWindows\nmacOS\nLinux\nSolaris",
+    "crumbs": [
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Testing Pre-release R Versions</span>"
+    ]
+  },
+  {
+    "objectID": "testing_pre_release_r_versions.html#writing-tests-for-r",
+    "href": "testing_pre_release_r_versions.html#writing-tests-for-r",
+    "title": "11  Testing Pre-release R Versions",
+    "section": "11.3 Writing tests for R",
+    "text": "11.3 Writing tests for R\nWriting tests for R is much like writing tests for your own code. Tests need to be thorough, fast, isolated, consistently repeatable, and as simple as possible.\nWhen you are adding tests to an existing test file, it is also recommended that you study the other tests in that file; it will teach you which precautions you have to take to make your tests robust and portable. We try to have tests both for normal behaviour and for error conditions. Tests live in the tests directory.",
+    "crumbs": [
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Testing Pre-release R Versions</span>"
+    ]
+  },
+  {
+    "objectID": "testing_pre_release_r_versions.html#benchmarks",
+    "href": "testing_pre_release_r_versions.html#benchmarks",
+    "title": "11  Testing Pre-release R Versions",
+    "section": "11.4 Benchmarks",
+    "text": "11.4 Benchmarks\nBenchmarking is useful to test that a change does not degrade performance.",
+    "crumbs": [
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Testing Pre-release R Versions</span>"
+    ]
+  },
+  {
+    "objectID": "r_core_developers.html",
+    "href": "r_core_developers.html",
+    "title": "12  R Core Developers",
+    "section": "",
+    "text": "This page lists the former and current members of the R Core team who have write access to the R source.\n\nBrian Ripley (present)\nDeepayan Sarkar (present)\nDouglas Bates (present)\nDuncan Murdoch (up to September 2017)\nDuncan Temple Lang (present)\nFriedrich Leisch (present)\nGuido Masarotto (up to June 2003)\nHeiner Schwarte (up to October 1999)\nJohn Chambers (present)\nKurt Hornik (present)\nLuke Tierney (present)\nMartin Maechler (present)\nSebastian Meyer (present)\nMartin Morgan (up to June 2021)\nMartyn Plummer (present)\nMichael Lawrence (present)\nPaul Murrell (present)\nPeter Dalgaard (present)\nRobert Gentleman (present)\nRoss Ihaka (present)\nSeth Falcon (up to August 2015)\nSimon Urbanek (present)\nStefano lacus (up to July 2014)\nThomas Lumley (present)\nTomas Kalibera (present)\nUwe Ligges (present)\n\nView the affiliations of R Core members. We’ve left it up to the individual core developers to list areas of expertise (or things they are willing to maintain) if they wish. \nThe Contributors page on the R Project website also lists contributors, outside the R Core team, who provided invaluable help by donating code, bug fixes, and documentation.",
+    "crumbs": [
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>R Core Developers</span>"
+    ]
+  },
+  {
+    "objectID": "where_to_get_help.html",
+    "href": "where_to_get_help.html",
+    "title": "13  Where to Get Help",
+    "section": "",
+    "text": "13.1 Slack\nIf you are working on R it is possible that you will come across an issue where you would need some assistance to solve it. If you require help, there are options available to seek assistance or get some feedback which are discussed in this chapter. If the question involves process or tool usage then please check the rest of this guide first as it should answer your question. Please make sure to search the documentation and resources to see if your question has already been addressed. If not, then ask for assistance in the appropriate forum. Many developers are volunteers and please be polite, patient, and thoughtful when requesting for feedback or help.\nYou can discuss issues related to the development of R and learn about the process of contributing to R on the R Contributors slack. There are a number of experienced developers on this slack who can answer questions and/or provide feedback. The following channels are available on the R-devel slack for help and feedback with specific areas:\nNote: You may not be able to access the history of these channels, so it cannot be used as a knowledge base of sorts.",
+    "crumbs": [
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Where to Get Help</span>"
+    ]
+  },
+  {
+    "objectID": "where_to_get_help.html#slack",
+    "href": "where_to_get_help.html#slack",
+    "title": "13  Where to Get Help",
+    "section": "",
+    "text": "#bugreports-for-review: Share bug reports for review/feedback before submitting to Bugzilla.\n#core-dev-help: Getting help on anything related to R Core contribution.\n#core-documentation: Discuss patches/improvements to R’s documentation.\n#core-translation: Discuss translating R messages, warnings, and errors into non-English languages.\n#patches-for-review: Share patches for peer review before submitting to R Core.",
+    "crumbs": [
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Where to Get Help</span>"
+    ]
+  },
+  {
+    "objectID": "where_to_get_help.html#mailing-lists",
+    "href": "where_to_get_help.html#mailing-lists",
+    "title": "13  Where to Get Help",
+    "section": "13.2 Mailing lists",
+    "text": "13.2 Mailing lists\nThere are quite a few mailing lists for getting help with R:\n\nR-devel:\n\nQuestions and discussion about development of R vs. with R.\nGetting help with technical programming issues, e.g. interfacing R with C/C++.\nProposals of new functionality/feature requests for R.\nPre-testing of new versions of R.\nEnhancements and patches to the R source code and the R documentation.\nPosting examples and benchmarks.\n\nR-help:\n\nDiscussions about problems and solutions using R.\n\nR-package-devel:\n\nGetting help about package development in R.\nLearning about the package development process.\nDiscussing problems developing a package (or problem in passing the R CMD check).\n\n\nPlease avoid cross-posting to both the R-package-devel and the R-devel mailing lists.",
+    "crumbs": [
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Where to Get Help</span>"
+    ]
+  },
+  {
+    "objectID": "where_to_get_help.html#file-a-bug",
+    "href": "where_to_get_help.html#file-a-bug",
+    "title": "13  Where to Get Help",
+    "section": "13.3 File a bug",
+    "text": "13.3 File a bug\nIf you strongly suspect you have come across a bug (be it in the build process, or in other areas), then report it on Bugzilla.",
+    "crumbs": [
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Where to Get Help</span>"
+    ]
+  },
+  {
+    "objectID": "news_and_announcements.html",
+    "href": "news_and_announcements.html",
+    "title": "14  News and Announcements",
+    "section": "",
+    "text": "14.1 Blogs\nHere are some resources that can be useful to keep up with the developments in R:\nThe R project maintains The R Blog with posts mainly written by the R Core Team. News of changes in the development version of R found on the Daily News about R-devel blog which is updated daily.",
+    "crumbs": [
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>News and Announcements</span>"
+    ]
+  },
+  {
+    "objectID": "news_and_announcements.html#conferences",
+    "href": "news_and_announcements.html#conferences",
+    "title": "14  News and Announcements",
+    "section": "14.2 Conferences",
+    "text": "14.2 Conferences\nUpdates about conferences actively supported or endorsed by The R Foundation can be found here. These conferences are organised by members from the R community.",
+    "crumbs": [
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>News and Announcements</span>"
+    ]
+  },
+  {
+    "objectID": "news_and_announcements.html#journal",
+    "href": "news_and_announcements.html#journal",
+    "title": "14  News and Announcements",
+    "section": "14.3 Journal",
+    "text": "14.3 Journal\nThe R Journal is an open access and refereed journal featuring short to medium length articles that should be of interest to users or developers of R. It also has a news section where information on, changes in R (new features of the latest release), changes on CRAN (new add-on packages, manuals, binary contributions, mirrors, etc.), upcoming conferences, and conference reports is provided.",
+    "crumbs": [
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>News and Announcements</span>"
+    ]
+  },
+  {
+    "objectID": "news_and_announcements.html#mailing-lists",
+    "href": "news_and_announcements.html#mailing-lists",
+    "title": "14  News and Announcements",
+    "section": "14.4 Mailing lists",
+    "text": "14.4 Mailing lists\n\nR-announce: A moderated mailing list used for announcements by the R Core Development Team. Major announcements about the development of R and the availability of new code are made here.\nR-packages: A moderated mailing list for announcements about contributed R packages (typically on CRAN) and similar R project extensions.",
+    "crumbs": [
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>News and Announcements</span>"
+    ]
+  },
+  {
+    "objectID": "news_and_announcements.html#twitter",
+    "href": "news_and_announcements.html#twitter",
+    "title": "14  News and Announcements",
+    "section": "14.5 Twitter",
+    "text": "14.5 Twitter\nFollow @R_dev_news on Twitter for news of changes in the development version of R and new posts on The R Blog announcements.",
+    "crumbs": [
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>News and Announcements</span>"
+    ]
+  },
+  {
+    "objectID": "developer_tools.html",
+    "href": "developer_tools.html",
+    "title": "15  Developer Tools",
+    "section": "",
+    "text": "15.1 Subversion (svn) client\nThis chapter lists resources and tools which R developers may use. Here we will go over some commonly used tools that are relevant to R’s workflow. As there are several ways to accomplish these tasks, this chapter reflects methods suitable for new contributors. Experienced contributors may desire a different approach.\nSubversion (svn) is a version control system that tracks any changes made to files and directories. You can install either the TortoiseSVN (command line tool, and Windows Explorer integration) or the SlikSVN (just the command line tool) client. They have Windows installers and can be used from Windows cmd or RStudio terminal.\nSome resources for learning subversion commands:",
+    "crumbs": [
+      "<span class='chapter-number'>15</span>  <span class='chapter-title'>Developer Tools</span>"
+    ]
+  },
+  {
+    "objectID": "developer_tools.html#subversion-svn-client",
+    "href": "developer_tools.html#subversion-svn-client",
+    "title": "15  Developer Tools",
+    "section": "",
+    "text": "Apache Subversion quick start guide\nTortoiseSVN commands\nSlikSVN basics\nSubversion book",
+    "crumbs": [
+      "<span class='chapter-number'>15</span>  <span class='chapter-title'>Developer Tools</span>"
+    ]
+  },
+  {
+    "objectID": "developer_tools.html#globally-search-for-a-regular-expression-and-print-matching-lines-grep",
+    "href": "developer_tools.html#globally-search-for-a-regular-expression-and-print-matching-lines-grep",
+    "title": "15  Developer Tools",
+    "section": "15.2 Globally search for a regular expression and print matching lines (grep)",
+    "text": "15.2 Globally search for a regular expression and print matching lines (grep)\ngrep is a command line utility for searching plain text data sets for lines that match a regular expression. Refer the grep manual for more commands.",
+    "crumbs": [
+      "<span class='chapter-number'>15</span>  <span class='chapter-title'>Developer Tools</span>"
+    ]
+  },
+  {
+    "objectID": "developer_tools.html#git",
+    "href": "developer_tools.html#git",
+    "title": "15  Developer Tools",
+    "section": "15.3 Git",
+    "text": "15.3 Git\nGit is also a version control system for tracking changes in any files and directories. View git documentation for learning git commands.",
+    "crumbs": [
+      "<span class='chapter-number'>15</span>  <span class='chapter-title'>Developer Tools</span>"
+    ]
+  },
+  {
+    "objectID": "developer_tools.html#github",
+    "href": "developer_tools.html#github",
+    "title": "15  Developer Tools",
+    "section": "15.4 GitHub",
+    "text": "15.4 GitHub\nSome resources that are useful while using GitHub are:\n\nCreating a pull request\nOpening an issue from code\nResolving a merge conflict on GitHub",
+    "crumbs": [
+      "<span class='chapter-number'>15</span>  <span class='chapter-title'>Developer Tools</span>"
+    ]
+  }
+]
