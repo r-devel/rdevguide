@@ -350,6 +350,45 @@
         "content",
         "doc"
       ]
+    },
+    {
+      "login": "bjungbogati",
+      "name": "Binod Jung Bogati",
+      "avatar_url": "https://avatars.githubusercontent.com/u/8600091?v=4",
+      "profile": "http://bjungbogati.com.np",
+      "contributions": [
+        "content",
+        "doc"
+      ]
+    },
+    {
+      "login": "daroczig",
+      "name": "Gergely Daróczi",
+      "avatar_url": "https://avatars.githubusercontent.com/u/495736?v=4",
+      "profile": "https://daroczig.github.io",
+      "contributions": [
+        "review"
+      ]
+    },
+    {
+      "login": "razekmh",
+      "name": "Mahmoud Abdelrazek",
+      "avatar_url": "https://avatars.githubusercontent.com/u/44040283?v=4",
+      "profile": "https://github.com/razekmh",
+      "contributions": [
+        "content",
+        "doc"
+      ]
+    },
+    {
+      "login": "EllaKaye",
+      "name": "Ella Kaye",
+      "avatar_url": "https://avatars.githubusercontent.com/u/7222491?v=4",
+      "profile": "https://ellakaye.co.uk",
+      "contributions": [
+        "code",
+        "infra"
+      ]
     }
   ],
   "contributorsPerLine": 7,
