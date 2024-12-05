@@ -1,8 +1,8 @@
 # R Core Developers {#CoreDev}
 
-This page lists the former and current members of the R Core team who have write access to the R source.
+This page lists the current and former members of the R Core Team who have write access to the R source.
 
-Current members of the R Core team:
+Current members of the R Core Team:
 
   * [John Chambers](https://datascience.stanford.edu/people/john-chambers)
   * [Peter Dalgaard](www.cbs.dk/en/staff/pdmes)
@@ -34,4 +34,4 @@ Former members of the R Core team:
   * Guido Masarotto (up to June 2003)
   * Heiner Schwarte (up to October 1999)
 
-The [Contributors page on the R Project website](https://www.r-project.org/contributors.html) also lists contributors, outside the R Core team, who provided invaluable help by donating code, bug fixes, and documentation.
+The [Contributors page on the R Project website](https://www.r-project.org/contributors.html) also lists specific contributors outside the R Core Team who have provided invaluable help by donating code, bug fixes, and documentation.
