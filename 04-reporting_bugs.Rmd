@@ -34,7 +34,7 @@ When you are in doubt that there is a bug: (which should be the case most of the
 
 4. If some function is working, but it is not defined in the best generalised way, then consult someone to look over the code. This may perhaps not be a bug; instead, it might be an alternative way of writing the function.
 
-## Checking if a bug is already reported
+## Checking if a bug is already reported {#already-reported-bugs}
 
 The first step before filing a bug report is to see whether the problem has already been reported. Checking if the bug is reported will:
 
@@ -76,16 +76,15 @@ For packages that are not maintained by the R-Core, the bug reports can be submi
 
 ### Bug in a documentation website managed by the R-Core team {#docWebsRCoreBug}
 
-The R-Core team manages a list of website connected to the R project. If you noticed a bug or an issue which you would like to report, please [see posting guide](https://www.r-project.org/posting-guide.html#which_list) and then submit the issue report by sending an email to R-devel@R-project.org
+The R Core Team also maintain a selection of websites that each have their own ways for reporting issues outside of Bugzilla. Have a read through their [posting guide](https://www.r-project.org/posting-guide.html#which_list) and then follow the instructions below to give feedback to the maintainers.
 
-The list of websites managed by the R-Core team: 
-- [R FAQ](https://cran.r-project.org/doc/FAQ/R-FAQ.html)
-- [R for Windows FAQ](https://cran.r-project.org/bin/windows/base/rw-FAQ.html)
-- [R for macOS FAQ](https://cran.r-project.org/bin/macosx/RMacOSX-FAQ.html)
-- [The R Project website](https://www.r-project.org/)
-- [The Comprehensive R Archive Network](https://cran.r-project.org/)
+- [R FAQ](https://cran.r-project.org/doc/FAQ/R-FAQ.html) contains answers to some of the most frequently asked questions about R. Feedback on this site should be sent to the [R-devel mailing list](https://stat.ethz.ch/mailman/listinfo/r-devel) via [R-devel@R-project.org](mailto:R-devel@R-project.org).
+- [R for Windows FAQ](https://cran.r-project.org/bin/windows/base/rw-FAQ.html) contains answers specific to the Windows port of R. Feedback on this FAQ site should be sent to the [R-SIG-windows mailing list](https://stat.ethz.ch/mailman/listinfo/r-sig-windows) (the Special Interest Group for Windows), via [R-windows@R-project.org](mailto:R-windows@R-project.org).
+- [R for macOS FAQ](https://cran.r-project.org/bin/macosx/RMacOSX-FAQ.html) contains a user guide to the R.APP version of R and information on using R on macOS, supplementing the main R manuals. Feedback on this FAQ site should be sent to the [R-SIG-Mac mailing list](https://stat.ethz.ch/mailman/listinfo/r-sig-mac) (the Special Interest Group for Mac ports of R), via [r-sig-mac@r-project.org](mailto:r-sig-mac@r-project.org).
+- Feedback on the [R Project website](https://www.r-project.org/) should be sent to [webmaster@r-project.org](mailto:webmaster@r-project.org).
+- Feedback on the website for [The Comprehensive R Archive Network](https://cran.r-project.org/) should be sent to [cran-sysadmin@r-project.org](mailto:cran-sysadmin@r-project.org).
 
-## Good practices in reporting bugs / Expectations of a good bug report
+## Good practices in reporting bugs / Expectations of a good bug report {#good-practices-bugs}
 
 If you follow the practices given below, you will come up with a good bug report which might make it easier for the maintainer(s) to fix the bug.
 

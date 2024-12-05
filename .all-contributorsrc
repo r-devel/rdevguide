@@ -71,7 +71,8 @@
         "question",
         "research",
         "doc",
-        "example"
+        "example",
+        "maintenance"
       ]
     },
     {
@@ -225,6 +226,149 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "lgibson7",
+      "name": "Lydia Gibson, MS, GStat",
+      "avatar_url": "https://avatars.githubusercontent.com/u/87203716?v=4",
+      "profile": "https://github.com/lgibson7",
+      "contributions": [
+        "content",
+        "doc",
+        "ideas"
+      ]
+    },
+    {
+      "login": "PatriLoto",
+      "name": "Patricia A. Loto",
+      "avatar_url": "https://avatars.githubusercontent.com/u/39300655?v=4",
+      "profile": "https://patricia-loto.netlify.app/",
+      "contributions": [
+        "content",
+        "doc",
+        "ideas"
+      ]
+    },
+    {
+      "login": "ivelasq",
+      "name": "Isabella Velásquez",
+      "avatar_url": "https://avatars.githubusercontent.com/u/12236152?v=4",
+      "profile": "http://ivelasq.rbind.io",
+      "contributions": [
+        "content",
+        "doc",
+        "ideas"
+      ]
+    },
+    {
+      "login": "cjrace",
+      "name": "Cam Race",
+      "avatar_url": "https://avatars.githubusercontent.com/u/52536248?v=4",
+      "profile": "https://github.com/cjrace",
+      "contributions": [
+        "infra",
+        "content",
+        "doc"
+      ]
+    },
+    {
+      "login": "shannonpileggi",
+      "name": "Shannon Pileggi",
+      "avatar_url": "https://avatars.githubusercontent.com/u/17747575?v=4",
+      "profile": "https://www.pipinghotdata.com/",
+      "contributions": [
+        "content",
+        "doc",
+        "ideas"
+      ]
+    },
+    {
+      "login": "pmur002",
+      "name": "Paul Murrell",
+      "avatar_url": "https://avatars.githubusercontent.com/u/2044052?v=4",
+      "profile": "https://github.com/pmur002",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "zkamvar",
+      "name": "Zhian N. Kamvar",
+      "avatar_url": "https://avatars.githubusercontent.com/u/3639446?v=4",
+      "profile": "http://zkamvar.netlify.app",
+      "contributions": [
+        "content",
+        "doc",
+        "ideas"
+      ]
+    },
+    {
+      "login": "jmaspons",
+      "name": "Joan Maspons",
+      "avatar_url": "https://avatars.githubusercontent.com/u/102644?v=4",
+      "profile": "https://github.com/jmaspons",
+      "contributions": [
+        "infra"
+      ]
+    },
+    {
+      "login": "hanneoberman",
+      "name": "Hanne Oberman",
+      "avatar_url": "https://avatars.githubusercontent.com/u/38891540?v=4",
+      "profile": "http://hanneoberman.github.io",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "bastistician",
+      "name": "Sebastian Meyer",
+      "avatar_url": "https://avatars.githubusercontent.com/u/4366501?v=4",
+      "profile": "https://www.imbe.med.fau.de/person/sebastian-meyer/",
+      "contributions": [
+        "ideas",
+        "research",
+        "question"
+      ]
+    },
+    {
+      "login": "hfrick",
+      "name": "Hannah Frick",
+      "avatar_url": "https://avatars.githubusercontent.com/u/12950918?v=4",
+      "profile": "http://www.frick.ws",
+      "contributions": [
+        "doc",
+        "ideas"
+      ]
+    },
+    {
+      "login": "SJaffa",
+      "name": "S Jaffa",
+      "avatar_url": "https://avatars.githubusercontent.com/u/13678317?v=4",
+      "profile": "https://github.com/SJaffa",
+      "contributions": [
+        "content",
+        "doc"
+      ]
+    },
+    {
+      "login": "bjungbogati",
+      "name": "Binod Jung Bogati",
+      "avatar_url": "https://avatars.githubusercontent.com/u/8600091?v=4",
+      "profile": "http://bjungbogati.com.np",
+      "contributions": [
+        "content",
+        "doc"
+      ]
+    },
+    {
+      "login": "daroczig",
+      "name": "Gergely Daróczi",
+      "avatar_url": "https://avatars.githubusercontent.com/u/495736?v=4",
+      "profile": "https://daroczig.github.io",
+      "contributions": [
+        "review"
+      ]
     }
   ],
   "contributorsPerLine": 7,
@@ -233,5 +377,6 @@
   "repoType": "github",
   "repoHost": "https://github.com",
   "skipCi": true,
-  "commitConvention": "angular"
+  "commitConvention": "angular",
+  "commitType": "docs"
 }

@@ -11,7 +11,7 @@ jobs:
     name: Render-Book
     runs-on: macOS-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - uses: r-lib/actions/setup-r@v2
       - uses: r-lib/actions/setup-pandoc@v2
       - uses: r-lib/actions/setup-tinytex@v2
@@ -23,7 +23,7 @@ jobs:
         run: Rscript -e 'bookdown::render_book("index.Rmd", "bookdown::pdf_book")'
       - name: Render ePub
         run: Rscript -e 'bookdown::render_book("index.Rmd", "bookdown::epub_book")'
-      - uses: actions/upload-artifact@v3
+      - uses: actions/upload-artifact@v4
         with:
           name: docs
           path: docs/
@@ -33,13 +33,14 @@ jobs:
 # and also add secrets for a GH_PAT and EMAIL to the repository
 # gh-action from Cecilapp/GitHub-Pages-deploy
   checkout-and-deploy:
+   name: Check-out and deploy
    runs-on: ubuntu-latest
    needs: bookdown
    steps:
      - name: Checkout
-       uses: actions/checkout@main
+       uses: actions/checkout@v4
      - name: Download artifact
-       uses: actions/download-artifact@v1.0.0
+       uses: actions/download-artifact@v4
        with:
          # Artifact name
          name: docs # optional

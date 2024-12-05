@@ -6,7 +6,7 @@ Base R uses [Bugzilla](https://bugs.r-project.org/) for issue tracking and repor
 
 Contributors can support issue tracking in R by
 
-1. [Reporting bugs](https://contributor.r-project.org/rdevguide/ReportBugs.html) or making feature requests (bug reports filed under the "Wishlist" component in Bugzilla),
+1. [Reporting bugs](#ReportingBugs) or [submitting feature requests](#FeatureRequests) (bug reports filed under the "Wishlist" component in Bugzilla),
 
 2. [Reviewing bug reports](https://contributor.r-project.org/rdevguide/ReviewBugs.html) to help close reports where no fix is needed or to help narrow down the problem and identify what needs to be fixed, or
 
