@@ -30,6 +30,7 @@ what-are-some-places-where-you-may-find-a-bug
 ReportBug
 RCorePkgBug
 nonRCorePkgBug
+docWebsRCoreBug
 good-practices-bugs
 disagreement-with-a-resolution-on-the-bug-tracker
 examples-of-bug-reports-submitted-on-bugzilla-or-r-devel-mailing-list

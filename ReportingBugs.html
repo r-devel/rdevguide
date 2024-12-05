@@ -23,7 +23,7 @@
 <meta name="author" content="R Contribution Working Group" />
 
 
-<meta name="date" content="2024-12-04" />
+<meta name="date" content="2024-12-05" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -195,6 +195,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li class="chapter" data-level="4.5.1" data-path="ReportingBugs.html"><a href="ReportingBugs.html#RCorePkgBug"><i class="fa fa-check"></i><b>4.5.1</b> Bug in the R-Core supported packages, their documentations, and/ or in the R language</a></li>
 <li class="chapter" data-level="4.5.2" data-path="ReportingBugs.html"><a href="ReportingBugs.html#nonRCorePkgBug"><i class="fa fa-check"></i><b>4.5.2</b> Bug in the non R-Core supported packages and/or their documentations</a></li>
+<li class="chapter" data-level="4.5.3" data-path="ReportingBugs.html"><a href="ReportingBugs.html#docWebsRCoreBug"><i class="fa fa-check"></i><b>4.5.3</b> Bug in a documentation website managed by the R Core Team</a></li>
 </ul></li>
 <li class="chapter" data-level="4.6" data-path="ReportingBugs.html"><a href="ReportingBugs.html#good-practices-bugs"><i class="fa fa-check"></i><b>4.6</b> Good practices in reporting bugs / Expectations of a good bug report</a></li>
 <li class="chapter" data-level="4.7" data-path="ReportingBugs.html"><a href="ReportingBugs.html#disagreement-with-a-resolution-on-the-bug-tracker"><i class="fa fa-check"></i><b>4.7</b> Disagreement with a resolution on the bug tracker</a></li>
@@ -394,6 +395,17 @@ When you are in doubt that there is a bug: (which should be the case most of the
 <div id="nonRCorePkgBug" class="section level3 hasAnchor" number="4.5.2">
 <h3><span class="header-section-number">4.5.2</span> Bug in the non R-Core supported packages and/or their documentations<a href="ReportingBugs.html#nonRCorePkgBug" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>For packages that are not maintained by the R-Core, the bug reports can be submitted at, perhaps, an issues tracker url on GitHub/GitLab/R-Forge. To find if such an issues tracker is available, you can look at the package <code>DESCRIPTION</code> file first (e.g. using <code>packageDescription("package_name")</code>) to check if a url is provided in the <code>BugReports</code> field. If that is not available, then the package maintainer can be contacted (using <code>maintainer("package_name")</code>). In R running the function <code>bug.report(package = "package_name")</code> shall direct you to either the GitHub issue tracker of the package, or to the bug tracking web page, or towards composing an e-mail to the package maintainer. This function <code>bug.report</code> is disabled in RStudio, by default. However, if you use <code>utils::bug.report(package = "package_name")</code> then it works on RStudio as well. Please ensure that the bug is not already reported or fixed before reporting it in any of the ways suggested above.</p>
+</div>
+<div id="docWebsRCoreBug" class="section level3 hasAnchor" number="4.5.3">
+<h3><span class="header-section-number">4.5.3</span> Bug in a documentation website managed by the R Core Team<a href="ReportingBugs.html#docWebsRCoreBug" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>The R Core Team maintain a selection of websites that each have their own ways for reporting issues outside of Bugzilla. Have a read through the <a href="https://www.r-project.org/posting-guide.html">posting guide for R project mailing lists</a> and then follow the instructions below to give feedback to the maintainers.</p>
+<ul>
+<li><a href="https://cran.r-project.org/doc/FAQ/R-FAQ.html">R FAQ</a> contains answers to some of the most frequently asked questions about R. Feedback on the R FAQ should be sent to the <a href="https://stat.ethz.ch/mailman/listinfo/r-devel">R-devel mailing list</a> via <a href="mailto:R-devel@R-project.org">R-devel@R-project.org</a>.</li>
+<li><a href="https://cran.r-project.org/bin/windows/base/rw-FAQ.html">R for Windows FAQ</a> contains answers specific to the Windows port of R. Feedback on the Windows FAQ should be sent to the <a href="https://stat.ethz.ch/mailman/listinfo/r-sig-windows">R-SIG-windows mailing list</a> (the Special Interest Group for Windows), via <a href="mailto:R-windows@R-project.org">R-windows@R-project.org</a>.</li>
+<li><a href="https://cran.r-project.org/bin/macosx/RMacOSX-FAQ.html">R for macOS FAQ</a> contains a user guide to the R.APP version of R and information on using R on macOS, supplementing the main R manuals. Feedback on the macOS FAQ should be sent to the <a href="https://stat.ethz.ch/mailman/listinfo/r-sig-mac">R-SIG-Mac mailing list</a> (the Special Interest Group for Mac ports of R), via <a href="mailto:r-sig-mac@r-project.org">r-sig-mac@r-project.org</a>.</li>
+<li>Feedback on the <a href="https://www.r-project.org/">R Project website</a> should be sent to <a href="mailto:webmaster@r-project.org">webmaster@r-project.org</a>.</li>
+<li>Feedback on the website for <a href="https://cran.r-project.org/">The Comprehensive R Archive Network</a> (CRAN) should be sent to <a href="mailto:cran-sysadmin@r-project.org">cran-sysadmin@r-project.org</a>.</li>
+</ul>
 </div>
 </div>
 <div id="good-practices-bugs" class="section level2 hasAnchor" number="4.6">

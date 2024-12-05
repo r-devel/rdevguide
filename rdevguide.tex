@@ -130,7 +130,7 @@
 
 \title{R Development Guide}
 \author{R Contribution Working Group}
-\date{2024-12-04}
+\date{2024-12-05}
 
 \begin{document}
 \maketitle
@@ -857,6 +857,24 @@ Once you confirm a bug exists, you need to submit a bug report so that it gets f
 \subsection{Bug in the non R-Core supported packages and/or their documentations}\label{nonRCorePkgBug}
 
 For packages that are not maintained by the R-Core, the bug reports can be submitted at, perhaps, an issues tracker url on GitHub/GitLab/R-Forge. To find if such an issues tracker is available, you can look at the package \texttt{DESCRIPTION} file first (e.g.~using \texttt{packageDescription("package\_name")}) to check if a url is provided in the \texttt{BugReports} field. If that is not available, then the package maintainer can be contacted (using \texttt{maintainer("package\_name")}). In R running the function \texttt{bug.report(package\ =\ "package\_name")} shall direct you to either the GitHub issue tracker of the package, or to the bug tracking web page, or towards composing an e-mail to the package maintainer. This function \texttt{bug.report} is disabled in RStudio, by default. However, if you use \texttt{utils::bug.report(package\ =\ "package\_name")} then it works on RStudio as well. Please ensure that the bug is not already reported or fixed before reporting it in any of the ways suggested above.
+
+\subsection{Bug in a documentation website managed by the R Core Team}\label{docWebsRCoreBug}
+
+The R Core Team maintain a selection of websites that each have their own ways for reporting issues outside of Bugzilla. Have a read through the \href{https://www.r-project.org/posting-guide.html}{posting guide for R project mailing lists} and then follow the instructions below to give feedback to the maintainers.
+
+\begin{itemize}
+\tightlist
+\item
+  \href{https://cran.r-project.org/doc/FAQ/R-FAQ.html}{R FAQ} contains answers to some of the most frequently asked questions about R. Feedback on the R FAQ should be sent to the \href{https://stat.ethz.ch/mailman/listinfo/r-devel}{R-devel mailing list} via \href{mailto:R-devel@R-project.org}{\nolinkurl{R-devel@R-project.org}}.
+\item
+  \href{https://cran.r-project.org/bin/windows/base/rw-FAQ.html}{R for Windows FAQ} contains answers specific to the Windows port of R. Feedback on the Windows FAQ should be sent to the \href{https://stat.ethz.ch/mailman/listinfo/r-sig-windows}{R-SIG-windows mailing list} (the Special Interest Group for Windows), via \href{mailto:R-windows@R-project.org}{\nolinkurl{R-windows@R-project.org}}.
+\item
+  \href{https://cran.r-project.org/bin/macosx/RMacOSX-FAQ.html}{R for macOS FAQ} contains a user guide to the R.APP version of R and information on using R on macOS, supplementing the main R manuals. Feedback on the macOS FAQ should be sent to the \href{https://stat.ethz.ch/mailman/listinfo/r-sig-mac}{R-SIG-Mac mailing list} (the Special Interest Group for Mac ports of R), via \href{mailto:r-sig-mac@r-project.org}{\nolinkurl{r-sig-mac@r-project.org}}.
+\item
+  Feedback on the \href{https://www.r-project.org/}{R Project website} should be sent to \href{mailto:webmaster@r-project.org}{\nolinkurl{webmaster@r-project.org}}.
+\item
+  Feedback on the website for \href{https://cran.r-project.org/}{The Comprehensive R Archive Network} (CRAN) should be sent to \href{mailto:cran-sysadmin@r-project.org}{\nolinkurl{cran-sysadmin@r-project.org}}.
+\end{itemize}
 
 \section{Good practices in reporting bugs / Expectations of a good bug report}\label{good-practices-bugs}
 
