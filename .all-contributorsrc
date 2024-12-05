@@ -379,6 +379,16 @@
         "content",
         "doc"
       ]
+    },
+    {
+      "login": "EllaKaye",
+      "name": "Ella Kaye",
+      "avatar_url": "https://avatars.githubusercontent.com/u/7222491?v=4",
+      "profile": "https://ellakaye.co.uk",
+      "contributions": [
+        "code",
+        "infra"
+      ]
     }
   ],
   "contributorsPerLine": 7,
