@@ -20,9 +20,9 @@ Fixes #<NUM>
 
 - [ ] If you have added a new chapter(s)/section(s) to the guide, have you updated the [Quick start to the guide](https://contributor.r-project.org/rdevguide/introduction.html#quick-start-to-the-guide) accordingly?
 - If you have added a new chapter(s) to the guide:
-  - [ ] Have you listed it (them) in the `_bookdown.yml`?
+  - [ ] Have you listed it (them) in the `_quarto.yml`?
   - [ ] Are the filename(s) for the new chapter(s) in lower case?
-  - [ ] Are the words in the filename(s) for the new chapter(s) separated by `-` (if required)?
+  - [ ] Are the words in the filename(s) for the new chapter(s) separated by `_` (if required)?
 
 ### What should a reviewer concentrate their feedback on?
 
