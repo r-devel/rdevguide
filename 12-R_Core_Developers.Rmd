@@ -8,7 +8,7 @@ Current members of the R Core team:
   * [Peter Dalgaard](www.cbs.dk/en/staff/pdmes)
   * [Robert Gentleman](https://en.wikipedia.org/wiki/Robert_Gentleman_(statistician))
   * [Kurt Hornik](https://statmath.wu.ac.at/~hornik/software.html)
-  * [Ross Ihaka](https://www.researchgate.net/profile/Ross-Ihaka)
+  * [Ross Ihaka](https://en.wikipedia.org/wiki/Ross_Ihaka)
   * [Tomas Kalibera](https://github.com/kalibera)
   * [Michael Lawrence](https://github.com/lawremi)
   * [Uwe Ligges](https://www.statistik.tu-dortmund.de/~ligges/)
