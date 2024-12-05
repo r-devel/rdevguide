@@ -34,11 +34,15 @@ Deployment is done via Travis CI:
 
 - whenever there's a push to main, the book is built and its content is put in the `docs` directory.
 
-If you want to render the guide locally, you need to install `bookdown`. Then use 
+If you want to render the guide locally, you need to download and install `quarto-cli` as described [here](https://quarto.org/docs/get-started/) . Then, from the command line (not the R console), run
 
-```bookdown::render_book('index.Rmd', 'bookdown::gitbook')```
+```quarto preview``` 
 
-and the book will be generated in the `docs` folder. You can open the guide on the command line via `open docs/index.html`. To preview the PDF or EPUB versions locally, replace `'bookdown::gitbook'` with `'bookdown::pdf_book'` or `'bookdown::epub_book`' as appropriate.
+to preview changes on real time, or
+
+```quarto preview```  
+
+to generate the book in the `docs` folder. You can open the guide on the command line via `open docs/index.html`. 
 
 ## Code of Conduct
 
