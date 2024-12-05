@@ -369,6 +369,16 @@
       "contributions": [
         "review"
       ]
+    },
+    {
+      "login": "razekmh",
+      "name": "Mahmoud Abdelrazek",
+      "avatar_url": "https://avatars.githubusercontent.com/u/44040283?v=4",
+      "profile": "https://github.com/razekmh",
+      "contributions": [
+        "content",
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
