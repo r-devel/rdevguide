@@ -10,9 +10,10 @@ If the new code requires GUI interaction or accesses the Internet, then it is es
 
 ## Writing tests for R
 
-Writing tests for R is much like writing tests for your own code. Tests need to be thorough, fast, isolated, consistently repeatable, and as simple as possible. When you are adding tests to an existing test file, it is also recommended that you study the other tests in that file; it will teach you which precautions you have to take to make your tests robust and portable. 
+Writing tests for R is much like writing tests for your own code. Tests need to be thorough, fast, isolated, consistently repeatable, and as simple as possible. When you are adding tests to an existing test file, it is also recommended that you study the other tests in that file; it will give you an idea of which precautions you have to take to make your tests robust and portable. 
 
 Tests for base R live in the [`tests` directory of the R sources](https://svn.r-project.org/R/trunk/tests/). Contributors mainly contribute to the "regression tests" which are in the files `reg-tests-1a.R`, `reg-tests-1b.R`,  etc. These tests are added after fixing a bug, to ensure that future changes do not cause a regression that reintroduces the bug. If you have been asked to add tests for base functionality (something that is not in one of the add-on packages in the base distribution), you should add it to the latest regression test file, with the highest numbering (currently `reg-tests-3.R`). 
+
 ## Test files
 
 Most tests in base R are `.R` files with R code implementing one of two types of test:
@@ -20,7 +21,7 @@ Most tests in base R are `.R` files with R code implementing one of two types of
 1. Tests that produce an error on failure. These often involve a call to `stopifnot()`.
 2. Tests that produce output that is compared to reference output.
 
-If a test file `.R` includes tests that produce output for comparison, running the tests will create an `.Rout` file that should be compared to an `.Rout.save` file with the same name. The tests are usually run as part of the check commands `make check` (for a basic check of R) and `make check-all` or `make check-devel` (for a thorough check with/without the recommended packages). Alternatively you can run a test file directly, for example if you have set the environment variable `TOP_SRCDIR` as the path for the top source directory:
+If a test file `.R` includes tests that produce output for comparison, running the tests will create an `.Rout` file that should be compared to an `.Rout.save` file with the same name. The tests are usually run as part of the check commands `make check` (for a basic check of R) and `make check-all` or `make check-devel` (for a thorough check with/without the recommended packages). Alternatively, you can run a test file directly, for example if you have set the environment variable `TOP_SRCDIR` as the path for the top source directory:
 
 ```sh
 cd $TOP_SRCDIR/tests
@@ -34,15 +35,14 @@ mv reg-tests-3.Rout reg-tests-3.Rout.save
 ```
 
 Note that only substantive changes are important - the check will not fail due to differences in the version of R, the locale, or output from `proc.time()`, so if these are the only differences the `.Rout.save`  does not need to be updated.
-```
 
 Sometimes test `.R` files are generated from a `.Rin` file, for example `no-segfault.Rin` generates tests for functions in the base add-on packages, calling each function with a range of inputs (character, logical, `NULL`, etc).
  
-## Tests of add-on packages
+## Tests of base R packages
 
-The check commands (`make check` etc) run `R CMD check` on the add-on packages in the base distribution, so will run any package-specific tests. If a package has tests, they will be in the `tests` directory of the sources for that package.
+The check commands (`make check` etc) run `R CMD check` on the add-on packages in the base distribution, so they also will run any package-specific tests. If a package has tests, they will be in the `tests` directory of the sources for that package. Here is an example of the structure of the [R package `methods`](https://github.com/r-devel/r-svn/tree/main/src/library/methods) with the `tests` directory highlighted with yellow colour:
 
-![Screenshot of the structure of the R package `spatial` with the `tests` directory highlighted with yellow colour](img/structure-spatial.png)
+![Screenshot of the structure of the R package `methods` with the `tests` directory highlighted with yellow colour](img/structure-methods.png)
 
 The base add-on packages use the same form of tests that are used for base R as described in the [Test files]{#test-files} section.
 
