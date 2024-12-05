@@ -8,7 +8,7 @@
 
 <meta name="description" content="This guide is a comprehensive resource for contributors (from all levels, beginners, intermediate, and seasoned) to the R project, facilitating their onboarding and helping them navigate the contribution process.">
 
-<title>15&nbsp; Developer Tools – R Development Guide</title>
+<title>14&nbsp; Developer Tools – R Development Guide</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -31,6 +31,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
+<link href="../chapters/additional_resources.html" rel="next">
 <link href="../chapters/news_and_announcements.html" rel="prev">
 <link href="../img/favicon.png" rel="icon" type="image/png">
 <script src="../site_libs/quarto-html/quarto.js"></script>
@@ -76,7 +77,7 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<meta property="og:title" content="15&nbsp; Developer Tools – R Development Guide">
+<meta property="og:title" content="14&nbsp; Developer Tools – R Development Guide">
 <meta property="og:description" content="">
 <meta property="og:image" content="https://contributor.r-project.org/rdevguide/chapters/img/cover_page_scriberia.png">
 <meta property="og:site_name" content="R Development Guide">
@@ -91,7 +92,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/developer_tools.html"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Developer Tools</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/developer_tools.html"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Developer Tools</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -212,26 +213,32 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/r_core_developers.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">R Core Developers</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
   <a href="../chapters/where_to_get_help.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Where to Get Help</span></span></a>
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Where to Get Help</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/news_and_announcements.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">News and Announcements</span></span></a>
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">News and Announcements</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/developer_tools.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Developer Tools</span></span></a>
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Developer Tools</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/additional_resources.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Additional resources</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/r_core_developers.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">R Core Developers</span></span></a>
   </div>
 </li>
     </ul>
@@ -244,10 +251,10 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#subversion-svn-client" id="toc-subversion-svn-client" class="nav-link active" data-scroll-target="#subversion-svn-client"><span class="header-section-number">15.1</span> Subversion (svn) client</a></li>
-  <li><a href="#globally-search-for-a-regular-expression-and-print-matching-lines-grep" id="toc-globally-search-for-a-regular-expression-and-print-matching-lines-grep" class="nav-link" data-scroll-target="#globally-search-for-a-regular-expression-and-print-matching-lines-grep"><span class="header-section-number">15.2</span> Globally search for a regular expression and print matching lines (grep)</a></li>
-  <li><a href="#git" id="toc-git" class="nav-link" data-scroll-target="#git"><span class="header-section-number">15.3</span> Git</a></li>
-  <li><a href="#github" id="toc-github" class="nav-link" data-scroll-target="#github"><span class="header-section-number">15.4</span> GitHub</a></li>
+  <li><a href="#subversion-svn-client" id="toc-subversion-svn-client" class="nav-link active" data-scroll-target="#subversion-svn-client"><span class="header-section-number">14.1</span> Subversion (svn) client</a></li>
+  <li><a href="#globally-search-for-a-regular-expression-and-print-matching-lines-grep" id="toc-globally-search-for-a-regular-expression-and-print-matching-lines-grep" class="nav-link" data-scroll-target="#globally-search-for-a-regular-expression-and-print-matching-lines-grep"><span class="header-section-number">14.2</span> Globally search for a regular expression and print matching lines (grep)</a></li>
+  <li><a href="#git" id="toc-git" class="nav-link" data-scroll-target="#git"><span class="header-section-number">14.3</span> Git</a></li>
+  <li><a href="#github" id="toc-github" class="nav-link" data-scroll-target="#github"><span class="header-section-number">14.4</span> GitHub</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/r-devel/rdevguide/edit/main/chapters/developer_tools.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/r-devel/rdevguide/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
@@ -256,7 +263,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span id="DevTools" class="quarto-section-identifier"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Developer Tools</span></span></h1>
+<h1 class="title"><span id="DevTools" class="quarto-section-identifier"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Developer Tools</span></span></h1>
 </div>
 
 
@@ -274,8 +281,8 @@ ul.task-list li input[type="checkbox"] {
 
 
 <p>This chapter lists resources and tools which R developers may use. Here we will go over some commonly used tools that are relevant to R’s workflow. As there are several ways to accomplish these tasks, this chapter reflects methods suitable for new contributors. Experienced contributors may desire a different approach.</p>
-<section id="subversion-svn-client" class="level2" data-number="15.1">
-<h2 data-number="15.1" class="anchored" data-anchor-id="subversion-svn-client"><span class="header-section-number">15.1</span> Subversion (svn) client</h2>
+<section id="subversion-svn-client" class="level2" data-number="14.1">
+<h2 data-number="14.1" class="anchored" data-anchor-id="subversion-svn-client"><span class="header-section-number">14.1</span> Subversion (svn) client</h2>
 <p>Subversion (svn) is a version control system that tracks any changes made to files and directories. You can install either the <a href="https://tortoisesvn.net/">TortoiseSVN</a> (command line tool, and Windows Explorer integration) or the <a href="https://sliksvn.com/download/">SlikSVN</a> (just the command line tool) client. They have Windows installers and can be used from Windows cmd or RStudio terminal.</p>
 <p>Some resources for learning subversion commands:</p>
 <ol type="1">
@@ -285,16 +292,16 @@ ul.task-list li input[type="checkbox"] {
 <li><p><a href="http://svnbook.red-bean.com/">Subversion book</a></p></li>
 </ol>
 </section>
-<section id="globally-search-for-a-regular-expression-and-print-matching-lines-grep" class="level2" data-number="15.2">
-<h2 data-number="15.2" class="anchored" data-anchor-id="globally-search-for-a-regular-expression-and-print-matching-lines-grep"><span class="header-section-number">15.2</span> Globally search for a regular expression and print matching lines (grep)</h2>
+<section id="globally-search-for-a-regular-expression-and-print-matching-lines-grep" class="level2" data-number="14.2">
+<h2 data-number="14.2" class="anchored" data-anchor-id="globally-search-for-a-regular-expression-and-print-matching-lines-grep"><span class="header-section-number">14.2</span> Globally search for a regular expression and print matching lines (grep)</h2>
 <p><a href="https://en.wikipedia.org/wiki/Grep">grep</a> is a command line utility for searching plain text data sets for lines that match a regular expression. Refer the <a href="https://www.gnu.org/software/grep/manual/grep.html">grep manual</a> for more commands.</p>
 </section>
-<section id="git" class="level2" data-number="15.3">
-<h2 data-number="15.3" class="anchored" data-anchor-id="git"><span class="header-section-number">15.3</span> Git</h2>
+<section id="git" class="level2" data-number="14.3">
+<h2 data-number="14.3" class="anchored" data-anchor-id="git"><span class="header-section-number">14.3</span> Git</h2>
 <p><a href="https://en.wikipedia.org/wiki/Git">Git</a> is also a version control system for tracking changes in any files and directories. View <a href="https://git-scm.com/doc">git documentation</a> for learning git commands.</p>
 </section>
-<section id="github" class="level2" data-number="15.4">
-<h2 data-number="15.4" class="anchored" data-anchor-id="github"><span class="header-section-number">15.4</span> GitHub</h2>
+<section id="github" class="level2" data-number="14.4">
+<h2 data-number="14.4" class="anchored" data-anchor-id="github"><span class="header-section-number">14.4</span> GitHub</h2>
 <p>Some resources that are useful while using GitHub are:</p>
 <ol type="1">
 <li><p><a href="https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request">Creating a pull request</a></p></li>
@@ -870,10 +877,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
       <a href="../chapters/news_and_announcements.html" class="pagination-link" aria-label="News and Announcements">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">News and Announcements</span></span>
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">News and Announcements</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
+      <a href="../chapters/additional_resources.html" class="pagination-link" aria-label="Additional resources">
+        <span class="nav-page-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Additional resources</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
   </div>
 </nav>
 </div> <!-- /content -->

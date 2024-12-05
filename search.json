@@ -664,7 +664,7 @@
     "href": "chapters/message_translations.html#helpful-references",
     "title": "10  Message Translations",
     "section": "10.5 Helpful references",
-    "text": "10.5 Helpful references\n\nStatistical terms glossary",
+    "text": "10.5 Helpful references\n\nStatistical terms glossary\nThe R Translations site contains more details on translating R messages and getting involved in existing projects.",
     "crumbs": [
       "<span class='chapter-number'>10</span>  <span class='chapter-title'>Message Translations</span>"
     ]
@@ -730,153 +730,183 @@
     ]
   },
   {
-    "objectID": "chapters/r_core_developers.html",
-    "href": "chapters/r_core_developers.html",
-    "title": "12  R Core Developers",
-    "section": "",
-    "text": "This page lists the current and former members of the R Core Team who have write access to the R source.\nCurrent members of the R Core Team:\n\nJohn Chambers\nPeter Dalgaard\nRobert Gentleman\nKurt Hornik\nRoss Ihaka\nTomas Kalibera\nMichael Lawrence\nUwe Ligges\nThomas Lumley\nMartin Maechler\nSebastian Meyer\nPaul Murrell\nMartyn Plummer\nBrian Ripley\nDeepayan Sarkar\nDuncan Temple Lang\nLuke Tierney\nSimon Urbanek\n\nFormer members of the R Core team:\n\nFriedrich Leisch (up to April 2024)\nDouglas Bates (up to March 2024)\nMartin Morgan (up to June 2021)\nDuncan Murdoch (up to September 2017)\nSeth Falcon (up to August 2015)\nStefano lacus (up to July 2014)\nGuido Masarotto (up to June 2003)\nHeiner Schwarte (up to October 1999)\n\nThe Contributors page on the R Project website also lists specific contributors outside the R Core Team who have provided invaluable help by donating code, bug fixes, and documentation.",
-    "crumbs": [
-      "<span class='chapter-number'>12</span>  <span class='chapter-title'>R Core Developers</span>"
-    ]
-  },
-  {
     "objectID": "chapters/where_to_get_help.html",
     "href": "chapters/where_to_get_help.html",
-    "title": "13  Where to Get Help",
+    "title": "12  Where to Get Help",
     "section": "",
-    "text": "13.1 Slack\nIf you are working on R it is possible that you will come across an issue where you would need some assistance to solve it. If you require help, there are options available to seek assistance or get some feedback which are discussed in this chapter. If the question involves process or tool usage then please check the rest of this guide first as it should answer your question. Please make sure to search the documentation and resources to see if your question has already been addressed. If not, then ask for assistance in the appropriate forum. Many developers are volunteers and please be polite, patient, and thoughtful when requesting for feedback or help.\nYou can discuss issues related to the development of R and learn about the process of contributing to R on the R Contributors slack. There are a number of experienced developers on this slack who can answer questions and/or provide feedback. The following channels are available on the R-devel slack for help and feedback with specific areas:\nNote: You may not be able to access the history of these channels, so it cannot be used as a knowledge base of sorts.",
+    "text": "12.1 Slack\nIf you are working on R it is possible that you will come across an issue where you would need some assistance to solve it. If you require help, there are options available to seek assistance or get some feedback which are discussed in this chapter. If the question involves process or tool usage then please check the rest of this guide first as it should answer your question. Please make sure to search the documentation and resources to see if your question has already been addressed. If not, then ask for assistance in the appropriate forum. Many developers are volunteers and please be polite, patient, and thoughtful when requesting for feedback or help.\nYou can discuss issues related to the development of R and learn about the process of contributing to R on the R Contributors slack. There are a number of experienced developers on this slack who can answer questions and/or provide feedback. The following channels are available on the R-devel slack for help and feedback with specific areas:\nNote: You may not be able to access the history of these channels, so it cannot be used as a knowledge base of sorts.",
     "crumbs": [
-      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Where to Get Help</span>"
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Where to Get Help</span>"
     ]
   },
   {
     "objectID": "chapters/where_to_get_help.html#slack",
     "href": "chapters/where_to_get_help.html#slack",
-    "title": "13  Where to Get Help",
+    "title": "12  Where to Get Help",
     "section": "",
     "text": "#bugreports-for-review: Share bug reports for review/feedback before submitting to Bugzilla.\n#core-dev-help: Getting help on anything related to R Core contribution.\n#core-documentation: Discuss patches/improvements to R’s documentation.\n#core-translation: Discuss translating R messages, warnings, and errors into non-English languages.\n#patches-for-review: Share patches for peer review before submitting to R Core.",
     "crumbs": [
-      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Where to Get Help</span>"
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Where to Get Help</span>"
     ]
   },
   {
     "objectID": "chapters/where_to_get_help.html#mailing-lists",
     "href": "chapters/where_to_get_help.html#mailing-lists",
-    "title": "13  Where to Get Help",
-    "section": "13.2 Mailing lists",
-    "text": "13.2 Mailing lists\nThere are quite a few mailing lists for getting help with R:\n\nR-devel:\n\nQuestions and discussion about development of R vs. with R.\nGetting help with technical programming issues, e.g. interfacing R with C/C++.\nProposals of new functionality/feature requests for R.\nPre-testing of new versions of R.\nEnhancements and patches to the R source code and the R documentation.\nPosting examples and benchmarks.\n\nR-help:\n\nDiscussions about problems and solutions using R.\n\nR-package-devel:\n\nGetting help about package development in R.\nLearning about the package development process.\nDiscussing problems developing a package (or problem in passing the R CMD check).\n\n\nPlease avoid cross-posting to both the R-package-devel and the R-devel mailing lists.",
+    "title": "12  Where to Get Help",
+    "section": "12.2 Mailing lists",
+    "text": "12.2 Mailing lists\nThere are quite a few mailing lists for getting help with R:\n\nR-devel:\n\nQuestions and discussion about development of R vs. with R.\nGetting help with technical programming issues, e.g. interfacing R with C/C++.\nProposals of new functionality/feature requests for R.\nPre-testing of new versions of R.\nEnhancements and patches to the R source code and the R documentation.\nPosting examples and benchmarks.\n\nR-help:\n\nDiscussions about problems and solutions using R.\n\nR-package-devel:\n\nGetting help about package development in R.\nLearning about the package development process.\nDiscussing problems developing a package (or problem in passing the R CMD check).\n\n\nPlease avoid cross-posting to both the R-package-devel and the R-devel mailing lists.",
     "crumbs": [
-      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Where to Get Help</span>"
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Where to Get Help</span>"
     ]
   },
   {
     "objectID": "chapters/where_to_get_help.html#file-a-bug",
     "href": "chapters/where_to_get_help.html#file-a-bug",
-    "title": "13  Where to Get Help",
-    "section": "13.3 File a bug",
-    "text": "13.3 File a bug\nIf you strongly suspect you have come across a bug (be it in the build process, or in other areas), then report it on Bugzilla.",
+    "title": "12  Where to Get Help",
+    "section": "12.3 File a bug",
+    "text": "12.3 File a bug\nIf you strongly suspect you have come across a bug (be it in the build process, or in other areas), then report it on Bugzilla.",
     "crumbs": [
-      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Where to Get Help</span>"
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Where to Get Help</span>"
     ]
   },
   {
     "objectID": "chapters/news_and_announcements.html",
     "href": "chapters/news_and_announcements.html",
-    "title": "14  News and Announcements",
+    "title": "13  News and Announcements",
     "section": "",
-    "text": "14.1 Blogs\nHere are some resources that can be useful to keep up with the developments in R:\nThe R project maintains The R Blog with posts mainly written by the R Core Team. News of changes in the development version of R found on the Daily News about R-devel blog which is updated daily.",
+    "text": "13.1 Blogs\nHere are some resources that can be useful to keep up with the developments in R:\nThe R project maintains The R Blog with posts mainly written by the R Core Team. News of changes in the development version of R found on the Daily News about R-devel blog which is updated daily.",
     "crumbs": [
-      "<span class='chapter-number'>14</span>  <span class='chapter-title'>News and Announcements</span>"
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>News and Announcements</span>"
     ]
   },
   {
     "objectID": "chapters/news_and_announcements.html#conferences",
     "href": "chapters/news_and_announcements.html#conferences",
-    "title": "14  News and Announcements",
-    "section": "14.2 Conferences",
-    "text": "14.2 Conferences\nUpdates about conferences actively supported or endorsed by The R Foundation can be found here. These conferences are organised by members from the R community.",
+    "title": "13  News and Announcements",
+    "section": "13.2 Conferences",
+    "text": "13.2 Conferences\nUpdates about conferences actively supported or endorsed by The R Foundation can be found here. These conferences are organised by members from the R community.",
     "crumbs": [
-      "<span class='chapter-number'>14</span>  <span class='chapter-title'>News and Announcements</span>"
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>News and Announcements</span>"
     ]
   },
   {
     "objectID": "chapters/news_and_announcements.html#journal",
     "href": "chapters/news_and_announcements.html#journal",
-    "title": "14  News and Announcements",
-    "section": "14.3 Journal",
-    "text": "14.3 Journal\nThe R Journal is an open access and refereed journal featuring short to medium length articles that should be of interest to users or developers of R. It also has a news section where information on, changes in R (new features of the latest release), changes on CRAN (new add-on packages, manuals, binary contributions, mirrors, etc.), upcoming conferences, and conference reports is provided.",
+    "title": "13  News and Announcements",
+    "section": "13.3 Journal",
+    "text": "13.3 Journal\nThe R Journal is an open access and refereed journal featuring short to medium length articles that should be of interest to users or developers of R. It also has a news section where information on, changes in R (new features of the latest release), changes on CRAN (new add-on packages, manuals, binary contributions, mirrors, etc.), upcoming conferences, and conference reports is provided.",
     "crumbs": [
-      "<span class='chapter-number'>14</span>  <span class='chapter-title'>News and Announcements</span>"
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>News and Announcements</span>"
     ]
   },
   {
     "objectID": "chapters/news_and_announcements.html#mailing-lists",
     "href": "chapters/news_and_announcements.html#mailing-lists",
-    "title": "14  News and Announcements",
-    "section": "14.4 Mailing lists",
-    "text": "14.4 Mailing lists\n\nR-announce: A moderated mailing list used for announcements by the R Core Development Team. Major announcements about the development of R and the availability of new code are made here.\nR-packages: A moderated mailing list for announcements about contributed R packages (typically on CRAN) and similar R project extensions.",
+    "title": "13  News and Announcements",
+    "section": "13.4 Mailing lists",
+    "text": "13.4 Mailing lists\n\nR-announce: A moderated mailing list used for announcements by the R Core Development Team. Major announcements about the development of R and the availability of new code are made here.\nR-packages: A moderated mailing list for announcements about contributed R packages (typically on CRAN) and similar R project extensions.",
     "crumbs": [
-      "<span class='chapter-number'>14</span>  <span class='chapter-title'>News and Announcements</span>"
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>News and Announcements</span>"
     ]
   },
   {
     "objectID": "chapters/news_and_announcements.html#twitter",
     "href": "chapters/news_and_announcements.html#twitter",
-    "title": "14  News and Announcements",
-    "section": "14.5 Twitter",
-    "text": "14.5 Twitter\nFollow @R_dev_news on Twitter for news of changes in the development version of R and new posts on The R Blog announcements.",
+    "title": "13  News and Announcements",
+    "section": "13.5 Twitter",
+    "text": "13.5 Twitter\nFollow @R_dev_news on Twitter for news of changes in the development version of R and new posts on The R Blog announcements.",
     "crumbs": [
-      "<span class='chapter-number'>14</span>  <span class='chapter-title'>News and Announcements</span>"
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>News and Announcements</span>"
     ]
   },
   {
     "objectID": "chapters/developer_tools.html",
     "href": "chapters/developer_tools.html",
-    "title": "15  Developer Tools",
+    "title": "14  Developer Tools",
     "section": "",
-    "text": "15.1 Subversion (svn) client\nThis chapter lists resources and tools which R developers may use. Here we will go over some commonly used tools that are relevant to R’s workflow. As there are several ways to accomplish these tasks, this chapter reflects methods suitable for new contributors. Experienced contributors may desire a different approach.\nSubversion (svn) is a version control system that tracks any changes made to files and directories. You can install either the TortoiseSVN (command line tool, and Windows Explorer integration) or the SlikSVN (just the command line tool) client. They have Windows installers and can be used from Windows cmd or RStudio terminal.\nSome resources for learning subversion commands:",
+    "text": "14.1 Subversion (svn) client\nThis chapter lists resources and tools which R developers may use. Here we will go over some commonly used tools that are relevant to R’s workflow. As there are several ways to accomplish these tasks, this chapter reflects methods suitable for new contributors. Experienced contributors may desire a different approach.\nSubversion (svn) is a version control system that tracks any changes made to files and directories. You can install either the TortoiseSVN (command line tool, and Windows Explorer integration) or the SlikSVN (just the command line tool) client. They have Windows installers and can be used from Windows cmd or RStudio terminal.\nSome resources for learning subversion commands:",
     "crumbs": [
-      "<span class='chapter-number'>15</span>  <span class='chapter-title'>Developer Tools</span>"
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Developer Tools</span>"
     ]
   },
   {
     "objectID": "chapters/developer_tools.html#subversion-svn-client",
     "href": "chapters/developer_tools.html#subversion-svn-client",
-    "title": "15  Developer Tools",
+    "title": "14  Developer Tools",
     "section": "",
     "text": "Apache Subversion quick start guide\nTortoiseSVN commands\nSlikSVN basics\nSubversion book",
     "crumbs": [
-      "<span class='chapter-number'>15</span>  <span class='chapter-title'>Developer Tools</span>"
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Developer Tools</span>"
     ]
   },
   {
     "objectID": "chapters/developer_tools.html#globally-search-for-a-regular-expression-and-print-matching-lines-grep",
     "href": "chapters/developer_tools.html#globally-search-for-a-regular-expression-and-print-matching-lines-grep",
-    "title": "15  Developer Tools",
-    "section": "15.2 Globally search for a regular expression and print matching lines (grep)",
-    "text": "15.2 Globally search for a regular expression and print matching lines (grep)\ngrep is a command line utility for searching plain text data sets for lines that match a regular expression. Refer the grep manual for more commands.",
+    "title": "14  Developer Tools",
+    "section": "14.2 Globally search for a regular expression and print matching lines (grep)",
+    "text": "14.2 Globally search for a regular expression and print matching lines (grep)\ngrep is a command line utility for searching plain text data sets for lines that match a regular expression. Refer the grep manual for more commands.",
     "crumbs": [
-      "<span class='chapter-number'>15</span>  <span class='chapter-title'>Developer Tools</span>"
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Developer Tools</span>"
     ]
   },
   {
     "objectID": "chapters/developer_tools.html#git",
     "href": "chapters/developer_tools.html#git",
-    "title": "15  Developer Tools",
-    "section": "15.3 Git",
-    "text": "15.3 Git\nGit is also a version control system for tracking changes in any files and directories. View git documentation for learning git commands.",
+    "title": "14  Developer Tools",
+    "section": "14.3 Git",
+    "text": "14.3 Git\nGit is also a version control system for tracking changes in any files and directories. View git documentation for learning git commands.",
     "crumbs": [
-      "<span class='chapter-number'>15</span>  <span class='chapter-title'>Developer Tools</span>"
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Developer Tools</span>"
     ]
   },
   {
     "objectID": "chapters/developer_tools.html#github",
     "href": "chapters/developer_tools.html#github",
-    "title": "15  Developer Tools",
-    "section": "15.4 GitHub",
-    "text": "15.4 GitHub\nSome resources that are useful while using GitHub are:\n\nCreating a pull request\nOpening an issue from code\nResolving a merge conflict on GitHub",
+    "title": "14  Developer Tools",
+    "section": "14.4 GitHub",
+    "text": "14.4 GitHub\nSome resources that are useful while using GitHub are:\n\nCreating a pull request\nOpening an issue from code\nResolving a merge conflict on GitHub",
     "crumbs": [
-      "<span class='chapter-number'>15</span>  <span class='chapter-title'>Developer Tools</span>"
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Developer Tools</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/additional_resources.html",
+    "href": "chapters/additional_resources.html",
+    "title": "15  Additional resources",
+    "section": "",
+    "text": "15.1 R Contributor site\nThere are a number of further resources to help with contributions to R.\nContains information for people interested in contributing to R core, including details for the R Contribution Working Group, the R Contributors Slack workspace and upcoming R Contributor events and meetups.",
+    "crumbs": [
+      "<span class='chapter-number'>15</span>  <span class='chapter-title'>Additional resources</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/additional_resources.html#r-developer-page",
+    "href": "chapters/additional_resources.html#r-developer-page",
+    "title": "15  Additional resources",
+    "section": "15.2 R developer page",
+    "text": "15.2 R developer page\nThe R developer page contains information about the plans of the R Core Team and details on the R release process, as well as pointers to technical write-ups including the R blog.",
+    "crumbs": [
+      "<span class='chapter-number'>15</span>  <span class='chapter-title'>Additional resources</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/additional_resources.html#r-manuals",
+    "href": "chapters/additional_resources.html#r-manuals",
+    "title": "15  Additional resources",
+    "section": "15.3 R manuals",
+    "text": "15.3 R manuals\nThere are a number of manuals created and included with R installations. The original latest and development versions of these are available from the R Manuals site. Note that the versions included on the site are created with Debian Linux. While there may be some variation for Windows and Mac manuals, most parts will be identical regardless of platform.\nParticular manuals that might be of interest to R contributors are:\n\nR installation and administration - gives more details on building R from source.\nR internals - for those who want to read deeper into the internals R, for example, it contains chapters on special data types used in the C code, internal and primitive functions and details of graphics devices.\nR language definition - an in depth overview of the R language, helpful for developing more advanced R knowledge from a user’s perspective.\n\nThere is a new re-styled R manuals site built with Quarto that has been produced to make searching and navigating the manuals easier in a web browser. This site is automatically built from the original manuals site using a number of scripts in the r-manuals GitHub repo.",
+    "crumbs": [
+      "<span class='chapter-number'>15</span>  <span class='chapter-title'>Additional resources</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/r_core_developers.html",
+    "href": "chapters/r_core_developers.html",
+    "title": "16  R Core Developers",
+    "section": "",
+    "text": "This page lists the current and former members of the R Core Team who have write access to the R source.\nCurrent members of the R Core Team:\n\nJohn Chambers\nPeter Dalgaard\nRobert Gentleman\nKurt Hornik\nRoss Ihaka\nTomas Kalibera\nMichael Lawrence\nUwe Ligges\nThomas Lumley\nMartin Maechler\nSebastian Meyer\nPaul Murrell\nMartyn Plummer\nBrian Ripley\nDeepayan Sarkar\nDuncan Temple Lang\nLuke Tierney\nSimon Urbanek\n\nFormer members of the R Core team:\n\nFriedrich Leisch (up to April 2024)\nDouglas Bates (up to March 2024)\nMartin Morgan (up to June 2021)\nDuncan Murdoch (up to September 2017)\nSeth Falcon (up to August 2015)\nStefano lacus (up to July 2014)\nGuido Masarotto (up to June 2003)\nHeiner Schwarte (up to October 1999)\n\nThe Contributors page on the R Project website also lists specific contributors outside the R Core Team who have provided invaluable help by donating code, bug fixes, and documentation.",
+    "crumbs": [
+      "<span class='chapter-number'>16</span>  <span class='chapter-title'>R Core Developers</span>"
     ]
   }
 ]
