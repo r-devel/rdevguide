@@ -1,6 +1,6 @@
 # {-}
 
-![R Development Guide. This illustration is created by Scriberia with The Turing Way community, used under a CC-BY 4.0 licence. DOI:= https://zenodo.org/records/13882307](img/r-dev-guide-without-text.jpg){height=400px width=550px}
+![R Development Guide. This illustration is created by Scriberia with The Turing Way community, used under a CC-BY 4.0 licence. DOI: https://zenodo.org/records/13882307](img/r-dev-guide-without-text.jpg){height=400px width=550px}
 
 # Acknowledgement {-}
 
