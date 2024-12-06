@@ -40,13 +40,15 @@ The guide is intended as a comprehensive resource for contributing to base R. Th
 
 - The [Testing Pre-release R Versions](#TestRVer) discusses how you can help with testing of pre-release versions of R.
 
-- The [R Core Developers](#CoreDev) chapter contains a list of the former and current members of the R Core team who have write access to the R source.
-
 - For more information on how to engage with to community and ask for help, refer to the [Where to Get Help](#WhereToGetHelp) chapter.
 
 - To keep up with the developments in R refer to some of the resources available in the [News and Announcements](#News)
 
 - Resources and tools that may be relevant for R developers are available in the [Developer Tools](#DevTools) chapter.
+
+- Additional resources for contributing to R are available in the [Additional Resources](#AdditionalResources) chapter.
+
+- The [R Core Developers](#CoreDev) chapter contains a list of the former and current members of the R Core team who have write access to the R source.
 
 ## How to contribute to this guide itself? {#how-to-contribute-to-this-guide}
 
