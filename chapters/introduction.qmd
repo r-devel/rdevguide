@@ -18,27 +18,37 @@ Contributions to base R are possible in a number of different ways. Some of them
 
 The guide is intended as a comprehensive resource for contributing to base R. The following chapter outline provides an overview with links to sections for getting started with contributing.
 
-1. The [Getting Started](#GetStart) covers the instructions on how to install R on the major operating systems (Windows, Linux and macOS), as well as the tools required to build R and R packages from source.  
+- The [Introduction](#Introduction) chapter provides an overview of different ways of contributing to the R project, a quick start to the guide, and a section on how to contribute to the guide itself.
 
-<!-- TODO(Saranjeet): Add other operating systems as they get included in the guide-->
+- The [R Patched and Development Versions](##GetStart) chapter covers instructions on how to install R from source or from binaries and also discusses the tools required to build R. 
 
-2. The [Issue Tracking](#IssueTrack) and the [Reviewing Bugs](#ReviewBugs) chapters discuss how to find bugs in R and how to review bug reports that are submitted to Bugzilla.
+- The [Issue Tracking](#IssueTrack) chapter covers how contributors can support issue tracking in R, how to get an account on R's Bugzilla, how to navigate Bugzilla and search for bugs to contribute to.
 
-3. The [Finding the Source](#FindSource) chapter provides an overview of the R codebase and helps with finding source code of base functions written in R and/or C.
+- The [Reporting Bugs](#ReportingBugs) chapter discusses what condition may or may not be a bug and how to report bugs if you find them.
 
-4. The [Lifecycle of a Patch](#FixBug) chapter discusses how to create a patch to propose a bug fix.
+- The [Submitting Feature Requests](#FeatureRequests) chapter discusses how to submit feature requests and shares some examples submitted to Bugzilla.
 
-5. The [Documenting R](#Doc) chapter describes the format and style guide for help files in R, how to report and review issues in the existing documentation and how to propose changes.
+- The [Reviewing Bugs](#ReviewBugs) chapter discusses how you can make a contribution to reviewing bug reports.
 
-6. How to test pre-release versions of R is discussed in the chapter on [Testing Pre-release R Versions](#TestRVer).
+- The [Finding the Source](#FindSource) chapter provides an overview of the R codebase and helps with finding source code of base functions written in R and/or C.
 
-7. The [R Core Developers](#CoreDev) chapter contains a list of the former and current members of the R Core team who have write access to the R source.
+- The [Lifecycle of a Patch](#FixBug) chapter discusses how to create a patch to propose a bug fix.
 
-8. For more information on how to engage with to community and ask for help, refer to the [Where to Get Help](#WhereToGetHelp) chapter.
+- The [Documenting](#Doc) chapter describes the format and style guide for help files in R, how to report and review issues in the existing documentation, and how to propose changes.
 
-9. To keep up with the developments in R refer to some of the resources available in the [News and Announcements](#News)
+- The [Message Translations](#MessageTranslations) chapter covers internationalization in R, i.e., the display of messages in languages other than English.
 
-10. Resources and tools that may be relevant for R developers are available in the [Developer Tools](#DevTools) chapter.
+- The [Testing Pre-release R Versions](#TestRVer) chapter discusses how you can help with testing of pre-release versions of R.
+
+- For more information on how to engage with the community and ask for help, refer to the [Where to Get Help](#WhereToGetHelp) chapter.
+
+- To keep up with the developments in R refer to the resources available in the [News and Announcements](#News) chapter.
+
+- Tools that may be useful for R developers are available in the [Developer Tools](#DevTools) chapter.
+
+- Additional resources for contributing to R are available in the [Additional Resources](#AdditionalResources) chapter.
+
+- The [R Core Developers](#CoreDev) chapter contains a list of the former and current members of the R Core Team who have write access to the R source.
 
 ## How to contribute to this guide itself? {#how-to-contribute-to-this-guide}
 
