@@ -30,7 +30,7 @@ You can push directly to `main` for small fixes. Please use PRs to `main` for di
 
 ## Technical details
 
-Deployment is done via GitHub Actions (as defined [here](https://github.com/r-devel/rdevguide/tree/main/.github/workflows)):
+Deployment is done via GitHub Actions, as specified in the [publish.yml](https://github.com/r-devel/rdevguide/blob/main/.github/workflows/publish.yml) workflow:
 
 - whenever there's a push to main, the book is built and its content is put in the `docs` directory.
 
