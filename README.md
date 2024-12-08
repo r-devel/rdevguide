@@ -17,7 +17,7 @@ A list of existing resources on R core development that we can use for reference
 
 Corrections, suggestions and general improvements are welcome as [issue submissions](issues/new).
 
-You can also suggest changes by editing the .Rmd files that are at the root of this repository and submitting a pull request. Please target your pull requests to the `main` branch.
+You can also suggest changes by editing the `.qmd` files that are in the `chapters/` folder at the root of this repository and submitting a pull request. Please target your pull requests to the `main` branch.
 
 ### With write access
 
@@ -34,15 +34,17 @@ Deployment is done via Travis CI:
 
 - whenever there's a push to main, the book is built and its content is put in the `docs` directory.
 
-If you want to render the guide locally, you need to download and install `quarto-cli` as described [here](https://quarto.org/docs/get-started/) . Then, from the command line (not the R console), run
+If you want to render the guide locally, you need to download and install the Quarto CLI (command line interface) as documented on the [Quarto website](https://quarto.org/docs/get-started/). Then, from the command line (not the R console), run:
 
 ```quarto preview``` 
 
-to preview changes on real time, or
+to preview changes on real time, or:
 
-```quarto preview```  
+```quarto render```  
 
-to generate the book in the `docs` folder. You can open the guide on the command line via `open docs/index.html`. 
+to generate the book in the `_book/` folder. This will also generate the PDF and ePub versions of the book, so takes a little longer. You can open the HTML version of the guide from the command line via `open _book/index.html`.  
+
+If you are using RStudio, VS Code or Positron, you can use the Preview button (VS Code) or Render button (RStudio) instead.
 
 ## Code of Conduct
 
