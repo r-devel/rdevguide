@@ -17,6 +17,15 @@ For simple PRs, you can delete this list. -->
 
 Fixes #<NUM>
 
+### Checklist for adding a new chapter or chapters
+
+<!-- Please delete this section if you are not adding a new chapter.
+Otherwise fill the checkboxes to confirm you have followed all these steps. -->
+
+- [ ] Have you updated the [Quick start to the guide](https://contributor.r-project.org/rdevguide/introduction.html#quick-start-to-the-guide) accordingly?
+- [ ] Have you updated the `chapters` field of `_quarto.yml`? This determines the chapter ordering.
+- [ ] Have you named the new `.qmd` files using lower case, with words separated by `_` if required?
+
 ### What should a reviewer concentrate their feedback on?
 
 <!-- List any specific aspects for the reviewers to give feedback on, else leave the last bullet  -->
