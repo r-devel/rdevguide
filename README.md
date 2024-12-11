@@ -38,13 +38,13 @@ If you want to render the guide locally, you need to download and install the Qu
 
 ```quarto preview``` 
 
-to preview changes on real time, or:
+to preview changes in real time, or:
 
 ```quarto render```  
 
 to generate the book in the `_book/` folder. This will also generate the PDF and ePub versions of the book, so takes a little longer. You can open the HTML version of the guide from the command line via `open _book/index.html`.  
 
-If you are using RStudio, VS Code or Positron, you can use the Preview button (VS Code) or Render button (RStudio) instead.
+If you are using RStudio, VS Code or Positron, you can use the Preview button (VS Code/Positron) or Render button (RStudio) instead.
 
 ## Code of Conduct
 
