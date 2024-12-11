@@ -30,9 +30,9 @@ You can push directly to `main` for small fixes. Please use PRs to `main` for di
 
 ## Technical details
 
-Deployment is done via Travis CI:
+Deployment is done via GitHub Actions, as specified in the [publish.yml](https://github.com/r-devel/rdevguide/blob/main/.github/workflows/publish.yml) workflow:
 
-- whenever there's a push to main, the book is built and its content is put in the `docs` directory.
+- whenever there's a push to main, the book is built and its content is put on the `gh-pages` branch, triggering the github-pages bot to deploy to <https://contributor.r-project.org/rdevguide/> .
 
 If you want to render the guide locally, you need to install `bookdown`. Then use 
 
