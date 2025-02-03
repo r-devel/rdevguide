@@ -20,7 +20,7 @@ The guide is intended as a comprehensive resource for contributing to base R. Th
 
 - The [Introduction](#Introduction) chapter provides an overview of different ways of contributing to the R project, a quick start to the guide, and a section on how to contribute to the guide itself.
 
-- The [R Patched and Development Versions](##GetStart) chapter covers instructions on how to install R from source or from binaries and also discusses the tools required to build R. 
+- The [R Patched and Development Versions](#GetStart) chapter covers instructions on how to install R from source or from binaries and also discusses the tools required to build R. 
 
 - The [Issue Tracking](#IssueTrack) chapter covers how contributors can support issue tracking in R, how to get an account on R's Bugzilla, how to navigate Bugzilla and search for bugs to contribute to.
 

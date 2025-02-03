@@ -177,11 +177,12 @@ The [R manuals](https://cran.r-project.org/manuals.html) are a part of the [R so
 | The R language definition | "R-lang"  |
 | R Internals | "R-ints" | 
 
-Note: 
 
+:::{.callout-note}
 - Every manual is associated with a particular version of R, so you should check the version before reporting a bug.
-- The [R manuals](https://cran.r-project.org/manuals.html) page has links for the [three types of release](https://contributor.r-project.org/rdevguide/GetStart.html#the-r-source-code): `r-release`, `r-patched` and `r-devel`.  These nicknames appear in the URLs, e.g. https://cran.r-project.org/doc/manuals/r-release/R-intro.html.
+- The [R manuals](https://cran.r-project.org/manuals.html) page has links for the [three types of release](getting_started.qmd#the-r-source-code): `r-release`, `r-patched` and `r-devel`.  These nicknames appear in the URLs, e.g. https://cran.r-project.org/doc/manuals/r-release/R-intro.html.
 - The [Texinfo manual](https://www.gnu.org/software/texinfo/) should be referred to for [how to mark up text](https://www.gnu.org/software/texinfo/manual/texinfo/texinfo.html).
+:::
 
 ## Proofreading
 

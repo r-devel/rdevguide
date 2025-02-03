@@ -22,7 +22,7 @@ Fixes #<NUM>
 <!-- Please delete this section if you are not adding a new chapter.
 Otherwise fill the checkboxes to confirm you have followed all these steps. -->
 
-- [ ] Have you updated the [Quick start to the guide](https://contributor.r-project.org/rdevguide/introduction.html#quick-start-to-the-guide) accordingly?
+- [ ] Have you updated the [Quick start to the guide](introduction.qmd#quick-start-to-the-guide) accordingly?
 - [ ] Have you updated the `chapters` field of `_quarto.yml`? This determines the chapter ordering.
 - [ ] Have you named the new `.qmd` files using lower case, with words separated by `_` if required?
 

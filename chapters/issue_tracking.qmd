@@ -8,9 +8,9 @@ Contributors can support issue tracking in R by
 
 1. [Reporting bugs](#ReportingBugs) or [submitting feature requests](#FeatureRequests) (bug reports filed under the "Wishlist" component in Bugzilla),
 
-2. [Reviewing bug reports](https://contributor.r-project.org/rdevguide/ReviewBugs.html) to help close reports where no fix is needed or to help narrow down the problem and identify what needs to be fixed, or
+2. [Reviewing bug reports](reviewing_bugs.qmd) to help close reports where no fix is needed or to help narrow down the problem and identify what needs to be fixed, or
 
-3. [Proposing changes](https://contributor.r-project.org/rdevguide/FixBug.html#FixBug) to code or documentation that will close an issue. 
+3. [Proposing changes](lifecycle_of_a_patch.qmd) to code or documentation that will close an issue. 
 
 ## How to get a Bugzilla account?  {#bugzilla-account}
 
