@@ -31,7 +31,7 @@ but this does not include `-` so you can search for a function or S3 method as f
 "quantile.ecdf <- function" extension:R
 ```
 
-  * Search in the R sources using grep: The [Getting Started](#GetStart) chapter discusses how to download the R sources directly or from the svn repository. Now if the sources are in `~/R-devel`, you can search as follows:
+  * Search in the R sources using grep: The [R Patched and Development Versions](#GetStart) chapter discusses how to download the R sources directly or from the svn repository. Now if the sources are in `~/R-devel`, you can search as follows:
   
 ```  
 grep -R "body <- function" ~/R-devel/src
