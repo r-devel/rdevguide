@@ -98,7 +98,7 @@ It can be helpful, for example, to search for bugs labelled with `HELPWANTED`, w
 
 ### Search By People {#searching-sbp}
 
-You can use this to narrow down your search to only include results of a specific person or up to three people who have participated in any component of the bug's discusson.
+You can use this to narrow down your search to only include results of a specific person or up to three people who have participated in any component of the bug's discussion.
 
 ![Screenshot of expanded Search By People section showing three fields allowing you to enter a person's name who can be any of the bug assignee, the reporter, a CC list member, or a commenter](../img/bugzilla-adv-search-search-by-people.png)
 
