@@ -118,7 +118,7 @@ In this case, you should attach the patch to the existing issue or bug report on
 
 1. Use the Attachments option to add the `*.diff` file as attachment.
 
-2. On the new Create New Attachment web page, add a Brief Decription.
+2. On the new Create New Attachment web page, add a Brief Description.
 
 3. Select Content Type as `patch`.
 
