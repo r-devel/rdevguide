@@ -1,4 +1,4 @@
-# Reporting Bugs {#ReportingBugs}
+# Reporting Bugs {#sec-reporting-bugs}
 
 ## What is a bug in R?
 

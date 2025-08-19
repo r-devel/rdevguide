@@ -4,7 +4,7 @@ editor_options:
     wrap: 72
 ---
 
-# Message Translations
+# Message Translations {#sec-message-translations}
 
 This chapter covers internationalization in R, i.e., the display of
 messages in languages other than English. All output in R (such as

@@ -1,4 +1,4 @@
-# Lifecycle of a Patch {#FixBug}
+# Lifecycle of a Patch {#sec-fix-bug}
 
 ## Introduction
 
@@ -26,7 +26,7 @@ To submit a patch, you need:
   ```
   
   Depending on the operative system you might need to do some steps before that. 
-  The different steps required can be found in previous chapters of the book, for [Windows](#windowsSource), [macOS](#macos) and [Linux](#linux).
+  The different steps required can be found in previous chapters of the book, for [Windows](#windows), [macOS](#macos) and [Linux](#linux).
 
 ## How to prepare a patch?
 
@@ -40,7 +40,7 @@ Then you should check that R still works as expected via:
   make check-devel
   ```
 
-If there is no test for your proposed change you can add a new regression test, following [the guidelines](#TestRVer).
+If there is no test for your proposed change you can add a new regression test, following [the guidelines](#sec-test-Rver).
 
 Then you should bring changes from the repository into the working copy, in case any other change has been introduced, and create a patch.diff file with just the changes you want to propose to the R core:
 
@@ -100,7 +100,7 @@ When creating a patch for submission, there are several things that you can do t
 
 1. Make sure to follow [R's coding standards](https://cran.r-project.org/doc/manuals/r-release/R-ints.html#R-coding-standards) (R is a GNU project and there are GNU coding standards). The coding style of the patch you submit should largely match with the codebase it is being applied to. If your patch has one or two minor discrepancies, then those may be fixed by the core developer who will eventually test your patch. However, if there are systematic deviations from the style guides your patch will be put on hold until you fix the formatting issues. There is no comprehensive official R style manual, however some nearly universal standards are summarised in [this article](https://cran.r-project.org/web/packages/rockchalk/vignettes/Rstyle.pdf).
 
-2. Be aware of backwards-compatibility considerations. While the core developer who eventually handles your patch will make the final call on whether something is acceptable, thinking about backwards-compatibility early will help prevent having your patch rejected on these grounds. Put yourself in the shoes of someone whose code will be broken by the change(s) introduced by the patch. It is quite likely that any change made will break someone's code, so you need to have a good reason to make a change as you will be forcing someone to update their code. This obviously does not apply to new functions or new arguments. New arguments should be optional and have default values which maintain the existing behaviour. If in doubt, [discuss](#WhereToGetHelp) the issue with experienced developers.
+2. Be aware of backwards-compatibility considerations. While the core developer who eventually handles your patch will make the final call on whether something is acceptable, thinking about backwards-compatibility early will help prevent having your patch rejected on these grounds. Put yourself in the shoes of someone whose code will be broken by the change(s) introduced by the patch. It is quite likely that any change made will break someone's code, so you need to have a good reason to make a change as you will be forcing someone to update their code. This obviously does not apply to new functions or new arguments. New arguments should be optional and have default values which maintain the existing behaviour. If in doubt, [discuss](#sec-where-to-get-help) the issue with experienced developers.
 
 3. Make sure you have proper tests to verify that your patch works as expected. Patches may not be accepted without the proper tests.
 

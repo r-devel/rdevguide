@@ -1,4 +1,4 @@
-# Reviewing Bugs {#ReviewBugs}
+# Reviewing Bugs {#sec-review-bugs}
 
 ## How you can help to review bug reports?
 

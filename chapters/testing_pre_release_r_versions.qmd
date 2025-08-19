@@ -1,4 +1,4 @@
-# Testing Pre-release R Versions {#TestRVer}
+# Testing Pre-release R Versions {#sec-test-Rver}
 
 This chapter is inspired from the blog on [testing R before release](https://blog.r-project.org/2021/04/28/r-can-use-your-help-testing-r-before-release/index.html) and discusses how you can help with testing of pre-release versions of R. 
 

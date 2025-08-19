@@ -1,15 +1,15 @@
-# Introduction
+# Introduction {sec-introduction}
 
-This guide is a comprehensive resource for contributing to base R^[The [set of packages](https://cran.r-project.org/doc/FAQ/R-FAQ.html#Add_002don-packages-in-R) in the base R distribution that are maintained by the R Core Team.] – for both new and experienced contributors. It is maintained by the [R Contribution Working Group](/working-group). We welcome your contributions to base R!
+This guide is a comprehensive resource for contributing to base R^[The [set of packages](https://cran.r-project.org/doc/FAQ/R-FAQ.html#Add_002don-packages-in-R) in the base R distribution that are maintained by the R Core Team.] – for both new and experienced contributors. It is maintained by the [R Contribution Working Group](https://contributor.r-project.org/working-group). We welcome your contributions to base R!
 
 ## Overview of different ways of contributing to the base R Project
 
 Contributions to base R are possible in a number of different ways. Some of them are listed below:
 
-1. Contributing to bug fixing: Refer to [Issue Tracking](#IssueTrack) and [Reviewing Bugs](#ReviewBugs).
-2. Contributing to translations: Refer to [Translations](#MessageTranslations).
-3. Testing R before release: Refer to [Testing Pre-release R Versions](#TestRVer).
-4. Contributing to documentation, including this guide: Refer to [Documenting R](#Doc) and [Contributing to this guide](#how-to-contribute-to-this-guide).
+1. Contributing to bug fixing: Refer to [Issue Tracking](#sec-issue-track) and [Reviewing Bugs](#sec-review-bugs).
+2. Contributing to translations: Refer to [Translations](#sec-message-translations).
+3. Testing R before release: Refer to [Testing Pre-release R Versions](#sec-test-Rver).
+4. Contributing to documentation, including this guide: Refer to [Documenting R](#sec-doc) and [Contributing to this guide](#how-to-contribute-to-this-guide).
 
 <!-- TODO(Saranjeet): Welcome to Bug BBQ slides -->
 <!-- TODO(Saranjeet): README on Bug BBQ repo -->
@@ -18,37 +18,37 @@ Contributions to base R are possible in a number of different ways. Some of them
 
 The guide is intended as a comprehensive resource for contributing to base R. The following chapter outline provides an overview with links to sections for getting started with contributing.
 
-- The [Introduction](#Introduction) chapter provides an overview of different ways of contributing to the R project, a quick start to the guide, and a section on how to contribute to the guide itself.
+- The [Introduction](#sec-introduction) chapter provides an overview of different ways of contributing to the R project, a quick start to the guide, and a section on how to contribute to the guide itself.
 
-- The [R Patched and Development Versions](#GetStart) chapter covers instructions on how to install R from source or from binaries and also discusses the tools required to build R. 
+- The [R Patched and Development Versions](#sec-get-start) chapter covers instructions on how to install R from source or from binaries and also discusses the tools required to build R. 
 
-- The [Issue Tracking](#IssueTrack) chapter covers how contributors can support issue tracking in R, how to get an account on R's Bugzilla, how to navigate Bugzilla and search for bugs to contribute to.
+- The [Issue Tracking](#sec-issue-tracking) chapter covers how contributors can support issue tracking in R, how to get an account on R's Bugzilla, how to navigate Bugzilla and search for bugs to contribute to.
 
-- The [Reporting Bugs](#ReportingBugs) chapter discusses what condition may or may not be a bug and how to report bugs if you find them.
+- The [Reporting Bugs](#sec-reporting-bugs) chapter discusses what condition may or may not be a bug and how to report bugs if you find them.
 
-- The [Submitting Feature Requests](#FeatureRequests) chapter discusses how to submit feature requests and shares some examples submitted to Bugzilla.
+- The [Submitting Feature Requests](#sec-feature-requests) chapter discusses how to submit feature requests and shares some examples submitted to Bugzilla.
 
-- The [Reviewing Bugs](#ReviewBugs) chapter discusses how you can make a contribution to reviewing bug reports.
+- The [Reviewing Bugs](#sec-review-bugs) chapter discusses how you can make a contribution to reviewing bug reports.
 
-- The [Finding the Source](#FindSource) chapter provides an overview of the R codebase and helps with finding source code of base functions written in R and/or C.
+- The [Finding the Source](#sec-find-source) chapter provides an overview of the R codebase and helps with finding source code of base functions written in R and/or C.
 
-- The [Lifecycle of a Patch](#FixBug) chapter discusses how to create a patch to propose a bug fix.
+- The [Lifecycle of a Patch](#sec-fix-bug) chapter discusses how to create a patch to propose a bug fix.
 
-- The [Documenting](#Doc) chapter describes the format and style guide for help files in R, how to report and review issues in the existing documentation, and how to propose changes.
+- The [Documenting](#sec-doc) chapter describes the format and style guide for help files in R, how to report and review issues in the existing documentation, and how to propose changes.
 
-- The [Message Translations](#MessageTranslations) chapter covers internationalization in R, i.e., the display of messages in languages other than English.
+- The [Message Translations](#sec-message-translations) chapter covers internationalization in R, i.e., the display of messages in languages other than English.
 
-- The [Testing Pre-release R Versions](#TestRVer) chapter discusses how you can help with testing of pre-release versions of R.
+- The [Testing Pre-release R Versions](#sec-test-Rver) chapter discusses how you can help with testing of pre-release versions of R.
 
-- For more information on how to engage with the community and ask for help, refer to the [Where to Get Help](#WhereToGetHelp) chapter.
+- For more information on how to engage with the community and ask for help, refer to the [Where to Get Help](#sec-where-to-get-help) chapter.
 
-- To keep up with the developments in R refer to the resources available in the [News and Announcements](#News) chapter.
+- To keep up with the developments in R refer to the resources available in the [News and Announcements](#sec-news) chapter.
 
-- Tools that may be useful for R developers are available in the [Developer Tools](#DevTools) chapter.
+- Tools that may be useful for R developers are available in the [Developer Tools](#sec-dev-tools) chapter.
 
-- Additional resources for contributing to R are available in the [Additional Resources](#AdditionalResources) chapter.
+- Additional resources for contributing to R are available in the [Additional Resources](#sec-additional-resources) chapter.
 
-- The [R Core Developers](#CoreDev) chapter contains a list of the former and current members of the R Core Team who have write access to the R source.
+- The [R Core Developers](#sec-core-dev) chapter contains a list of the former and current members of the R Core Team who have write access to the R source.
 
 ## How to contribute to this guide itself? {#how-to-contribute-to-this-guide}
 

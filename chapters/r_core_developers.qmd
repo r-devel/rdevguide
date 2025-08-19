@@ -1,4 +1,4 @@
-# R Core Developers {#CoreDev}
+# R Core Developers {#sec-core-dev}
 
 This page lists the current and former members of the R Core Team who have write access to the R source.
 

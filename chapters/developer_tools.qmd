@@ -1,4 +1,4 @@
-# Developer Tools {#DevTools}
+# Developer Tools {#sec-dev-tools}
 
 This chapter lists resources and tools which R developers may use. Here we will go over some commonly used tools that are relevant to R’s workflow. As there are several ways to accomplish these tasks, this chapter reflects methods suitable for new contributors. Experienced contributors may desire a different approach.
 
