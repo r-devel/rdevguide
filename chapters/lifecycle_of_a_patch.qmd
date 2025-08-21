@@ -40,7 +40,7 @@ Then you should check that R still works as expected via:
   make check-devel
   ```
 
-If there is no test for your proposed change you can add a new regression test, following [the guidelines](#sec-test-Rver).
+If there is no test for your proposed change you can add a new regression test, following [the guidelines](#sec-testing-pre-releases).
 
 Then you should bring changes from the repository into the working copy, in case any other change has been introduced, and create a patch.diff file with just the changes you want to propose to the R core:
 

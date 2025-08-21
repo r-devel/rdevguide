@@ -1,4 +1,4 @@
-# Issue Tracking {#sec-issue-track}
+# Issue Tracking {#sec-issue-tracking}
 
 Base R uses [Bugzilla](https://bugs.r-project.org/) for issue tracking and reporting bugs. 
 
@@ -8,7 +8,7 @@ Contributors can support issue tracking in R by
 
 1. [Reporting bugs](#sec-reporting-bugs) or [submitting feature requests](#sec-feature-requests) (bug reports filed under the "Wishlist" component in Bugzilla),
 
-2. [Reviewing bug reports](#sec-review-bugs) to help close reports where no fix is needed or to help narrow down the problem and identify what needs to be fixed, or
+2. [Reviewing bug reports](#sec-reviewing-bugs) to help close reports where no fix is needed or to help narrow down the problem and identify what needs to be fixed, or
 
 3. [Proposing changes](#sec-lifecycle-of-a-patch) to code or documentation that will close an issue. 
 
