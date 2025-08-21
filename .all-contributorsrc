@@ -399,6 +399,16 @@
         "maintenance",
         "doc"
       ]
+    },
+    {
+      "login": "adit-0132",
+      "name": "Aditya bansal",
+      "avatar_url": "https://avatars.githubusercontent.com/u/64087159?v=4",
+      "profile": "https://github.com/adit-0132",
+      "contributions": [
+        "maintenance",
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
