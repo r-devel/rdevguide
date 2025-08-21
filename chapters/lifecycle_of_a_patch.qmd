@@ -1,4 +1,4 @@
-# Lifecycle of a Patch {#sec-fix-bug}
+# Lifecycle of a Patch {#sec-lifecycle-of-a-patch}
 
 ## Introduction
 

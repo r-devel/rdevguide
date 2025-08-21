@@ -7,7 +7,7 @@ This guide is a comprehensive resource for contributing to base R^[The [set of p
 Contributions to base R are possible in a number of different ways. Some of them are listed below:
 
 1. Contributing to bug fixing: Refer to [Issue Tracking](#sec-issue-track) and [Reviewing Bugs](#sec-review-bugs).
-2. Contributing to translations: Refer to [Translations](#sec-message-translations).
+2. Contributing to translations: Refer to [Message Translations](#sec-message-translations).
 3. Testing R before release: Refer to [Testing Pre-release R Versions](#sec-test-Rver).
 4. Contributing to documentation, including this guide: Refer to [Documenting R](#sec-doc) and [Contributing to this guide](#how-to-contribute-to-this-guide).
 
@@ -32,7 +32,7 @@ The guide is intended as a comprehensive resource for contributing to base R. Th
 
 - The [Finding the Source](#sec-find-source) chapter provides an overview of the R codebase and helps with finding source code of base functions written in R and/or C.
 
-- The [Lifecycle of a Patch](#sec-fix-bug) chapter discusses how to create a patch to propose a bug fix.
+- The [Lifecycle of a Patch](#sec-lifecycle-of-a-patch) chapter discusses how to create a patch to propose a bug fix.
 
 - The [Documenting](#sec-doc) chapter describes the format and style guide for help files in R, how to report and review issues in the existing documentation, and how to propose changes.
 
