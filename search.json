@@ -24,7 +24,7 @@
     "href": "chapters/introduction.html#overview-of-different-ways-of-contributing-to-the-base-r-project",
     "title": "1  Introduction",
     "section": "",
-    "text": "Contributing to bug fixing: Refer to Issue Tracking and Reviewing Bugs.\nContributing to translations: Refer to Translations.\nTesting R before release: Refer to Testing Pre-release R Versions.\nContributing to documentation, including this guide: Refer to Documenting R and Contributing to this guide.",
+    "text": "Contributing to bug fixing: Refer to Issue Tracking and Reviewing Bugs.\nContributing to translations: Refer to Message Translations.\nTesting R before release: Refer to Testing Pre-release R Versions.\nContributing to documentation, including this guide: Refer to Documenting R and Contributing to this guide.",
     "crumbs": [
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction</span>"
     ]
