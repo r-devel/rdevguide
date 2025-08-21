@@ -1,4 +1,4 @@
-# R Patched and Development Versions {#GetStart}
+# R Patched and Development Versions {#sec-get-start}
 
 These instructions cover how to install R from source or from binaries.
 Contributors will typically need to work with the patched or development versions of R.
@@ -141,7 +141,7 @@ make check
 ```
 
 Once you successfully built R from source you can modify the R source code to fix an issue: Prepare a patch (See [this guide](https://www.r-project.org/bugs.html#how-to-submit-patches)) and after checking that R works as intended (`make check-devel`) submit the patch for consideration by R Core.
-(See the [lifecycle of a patch](#FixBug) chapter).
+(See the [lifecycle of a patch](#sec-lifecycle-of-a-patch) chapter).
 
 
 To use the `r-devel` version in RStudio, you can do the following:

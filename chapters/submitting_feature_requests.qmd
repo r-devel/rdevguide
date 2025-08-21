@@ -1,4 +1,4 @@
-# Submitting Feature Requests {#FeatureRequests}
+# Submitting Feature Requests {#sec-feature-requests}
 
 ## What is a feature request?
 

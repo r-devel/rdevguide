@@ -1,4 +1,4 @@
-# Additional resources {#AdditionalResources}
+# Additional resources {#sec-additional-resources}
 
 There are a number of further resources to help with contributions to R.
 

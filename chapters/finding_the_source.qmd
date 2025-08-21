@@ -1,4 +1,4 @@
-# Finding the Source {#FindSource}
+# Finding the Source {#sec-find-source}
 
 This chapter discusses how you can have an overview of the R codebase. For instance, where to find the implementation of a base function written in R and where to find a primitive implementation written in C. You may want to find the source code of a function just out of curiosity or maybe to gain more insight into what a particular function is actually doing. Whatever be the case, reading the source code will help you to learn a lot about any function.
 
@@ -31,7 +31,7 @@ but this does not include `-` so you can search for a function or S3 method as f
 "quantile.ecdf <- function" extension:R
 ```
 
-  * Search in the R sources using grep: The [R Patched and Development Versions](#GetStart) chapter discusses how to download the R sources directly or from the svn repository. Now if the sources are in `~/R-devel`, you can search as follows:
+  * Search in the R sources using grep: The [R Patched and Development Versions](#sec-get-start) chapter discusses how to download the R sources directly or from the svn repository. Now if the sources are in `~/R-devel`, you can search as follows:
   
 ```  
 grep -R "body <- function" ~/R-devel/src
