@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.33">
+<meta name="generator" content="quarto-1.7.34">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -40,14 +40,14 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-bc185b5c5bdbcb35c2eb49d8a876ef70.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-c8ad9e5dbd60b7b70b38521ab19b7da4.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-befe23ebd2f54d8af2c8a89d1a1611f1.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-c8ad9e5dbd60b7b70b38521ab19b7da4.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-e8de9bd59ba156b9e4cb33cd6f01d621.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/bootstrap/bootstrap-dark-8c3b93322c737fc19287512ea645be5f.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../site_libs/bootstrap/bootstrap-e8de9bd59ba156b9e4cb33cd6f01d621.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-23102fe0f0b5b1a9f09cc09ebcc8fe5b.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-5f21c1d7e2acfebab32cc94c22e1b3f2.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-23102fe0f0b5b1a9f09cc09ebcc8fe5b.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -459,7 +459,7 @@ ul.task-list li input[type="checkbox"] {
 <p>The <a href="https://www.gnu.org/software/gettext/manual/index.html"><code>gettext</code> manual</a> is a more canonical reference for a deep understanding of how <code>gettext</code> works. This chapter will just give a broad overview, with particular focus on how things work for R, with the goal of making it as low-friction as possible for developers and users to contribute new/updated translations.</p>
 <section id="how-translations-work" class="level2" data-number="10.1">
 <h2 data-number="10.1" class="anchored" data-anchor-id="how-translations-work"><span class="header-section-number">10.1</span> How translations work</h2>
-<p>Each of the default packages distributed with R (i.e., those found in <code>./src/library</code> such as <code>base</code>, <code>utils</code>, and <code>stats</code> and which have priority base) contains a <code>po</code> directory. A <code>po</code> directory is the central location for ataloguing/translating each package’s messages. It contains a template message file (<code>.pot</code>) for the corresponding ackage along with translated <code>.po</code> files (that are created using the template <code>.pot</code> file).</p>
+<p>Each of the default packages distributed with R (i.e., those found in <code>./src/library</code> such as <code>base</code>, <code>utils</code>, and <code>stats</code> and which have priority base) contains a <code>po</code> directory. A <code>po</code> directory is the central location for cataloguing/translating each package’s messages. It contains a template message file (<code>.pot</code>) for the corresponding package along with translated <code>.po</code> files (that are created using the template <code>.pot</code> file).</p>
 <section id="pot-files" class="level3" data-number="10.1.1">
 <h3 data-number="10.1.1" class="anchored" data-anchor-id="pot-files"><span class="header-section-number">10.1.1</span> <code>.pot</code> files</h3>
 <p>A <code>.pot</code> file is a template file found inside the <code>po</code> directory of an R package. This template file is a snapshot of the messages available in a given <strong>domain</strong>. A domain in R typically identifies a source package and a source language (either R or C/C++). For example, the file <code>R-stats.pot</code> (found in the R sources in <code>./src/library/stats/po</code>) is a catalogue of all messages produced by R code in the <code>stats</code> package, while <code>stats.pot</code> is a catalogue of all messages produced by C code in the <code>stats</code> package.</p>
