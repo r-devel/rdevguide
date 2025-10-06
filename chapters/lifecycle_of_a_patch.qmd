@@ -29,7 +29,7 @@ To submit a patch, you need:
   The different steps required can be found in previous chapters of the book, for [Windows](#windows), [macOS](#macos) and [Linux](#linux).
 
 ## Preparing a patch using the Github mirror
-  ### How to prepare a patch?
+### How to prepare a patch?
 
 
   If you have the source code in `$TOP_SRCDIR` you can edit the files, for example a documentation file such as  `"$TOP_SRCDIR"/src/library/stats/man/Multinom.Rd`, to make your desired changes to that or more files.
@@ -54,7 +54,7 @@ To submit a patch, you need:
 
   This `patch.diff` file is the one that can be proposed to the R core via [Bugzilla](#SubmitPatches). You can also [ask for reviews](#PatchesReview) to the patch before proposing it to the R core via the [r-devel mailing list](https://stat.ethz.ch/mailman/listinfo/r-devel) or the slack channel of the R-contributors space.
 
-  ### Using a git mirror 
+### Using a git mirror 
 
   Besides checking in your computer, you can use the Github mirror  [r-devel/r-svn](https://github.com/r-devel/r-svn  "A github svn mirror") of the source code to check this patch with different configurations and OS.
 
