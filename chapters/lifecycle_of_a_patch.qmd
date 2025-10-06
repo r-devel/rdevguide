@@ -29,7 +29,7 @@ To submit a patch, you need:
   The different steps required can be found in previous chapters of the book, for [Windows](#windows), [macOS](#macos) and [Linux](#linux).
 
 ## Preparing a patch using the Github mirror
-### How to prepare a patch?
+  ### How to prepare a patch?
 
 
   If you have the source code in `$TOP_SRCDIR` you can edit the files, for example a documentation file such as  `"$TOP_SRCDIR"/src/library/stats/man/Multinom.Rd`, to make your desired changes to that or more files.
