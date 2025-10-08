@@ -15,7 +15,7 @@ A list of existing resources on R core development that we can use for reference
 
 ### Without write access
 
-Corrections, suggestions and general improvements are welcome as [issue submissions](issues/new).
+Corrections, suggestions and general improvements are welcome as [issue submissions](/issues/new).
 
 You can also suggest changes by editing the `.qmd` files that are in the `chapters/` folder at the root of this repository and submitting a pull request. Please target your pull requests to the `main` branch.
 
