@@ -2,7 +2,7 @@
 
 ## Without write access
 
-Corrections, suggestions and general improvements are welcome as [issue submissions](issues/new).
+Corrections, suggestions and general improvements are welcome as [issue submissions](/issues/new).
 
 You can also suggest changes by editing the .Rmd files that are at the root of this repository and submitting a pull request. Please target your pull requests to the `main` branch.
 
