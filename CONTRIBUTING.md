@@ -1,12 +1,7 @@
 # Contributing
 
 <!-- omit in toc -->
-# Contributing to the CURRENT_PROJECT
-
-<!--
-For a new project, search-and-replace
-- CURRENT_PROJECT
--->
+# Contributing to the R Development Guide
 
 First off, thanks for taking the time to contribute! ❤️
 
@@ -46,7 +41,7 @@ contributions. 🎉
 ## Code of Conduct
 
 This project and everyone participating in it is governed by the
-[CURRENT_PROJECT Code of Conduct](CODE_OF_CONDUCT.md).
+[R Development Guide Code of Conduct](CODE_OF_CONDUCT.md).
 By participating, you are expected to uphold this code. Please report
 unacceptable behavior to <MAINTAINER>.
 
@@ -153,7 +148,7 @@ included. If you do so, reference it here in the description. -->
 ### Suggesting Enhancements
 
 This section guides you through submitting an enhancement suggestion for the
-CURRENT_PROJECT, **including completely new features and minor improvements to
+R Development Guide, **including completely new features and minor improvements to
 existing functionality**. Following these guidelines will help maintainers and
 the community to understand your suggestion and find related suggestions.
 
@@ -190,7 +185,7 @@ Enhancement suggestions are tracked as
   macOS and Windows, and [this tool](https://github.com/colinkeenan/silentcast)
   or [this tool](https://github.com/GNOME/byzanz) on Linux. <!-- this should
   only be included if the project has a GUI -->
-- **Explain why this enhancement would be useful** to most CURRENT_PROJECT
+- **Explain why this enhancement would be useful** to most R Development Guide
   users. You may also want to point out the other projects that solved it better
   and which could serve as inspiration.
 
