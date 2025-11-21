@@ -42,6 +42,8 @@ The guide is intended as a comprehensive resource for contributing to base R. Th
 
 - For more information on how to engage with the community and ask for help, refer to the [Where to Get Help](#sec-where-to-get-help) chapter.
 
+- To see examples of small code changes to R and C code see the [Case Studies](#sec-case-studies) chapter.
+
 - To keep up with the developments in R refer to the resources available in the [News and Announcements](#sec-news) chapter.
 
 - Tools that may be useful for R developers are available in the [Developer Tools](#sec-dev-tools) chapter.
