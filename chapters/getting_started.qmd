@@ -4,11 +4,11 @@ These instructions cover how to install R from source or from binaries.
 Contributors will typically need to work with the patched or development versions of R.
 This chapter describes where the source code for these versions can be found and how to install these versions from the source or the binary builds (where available).
 The tools required to build R and R packages are also discussed.
-For the most up to date and complete instructions you can check the [R installation and administration manual](https://cran.r-project.org/doc/manuals/r-devel/R-admin.html) .
+For the most up-to-date and complete instructions you can check the [R installation and administration manual](https://cran.r-project.org/doc/manuals/r-devel/R-admin.html) .
 
 ## The R source code
 
-R uses [svn](https://subversion.apache.org/ "SVN official page") as a version control tool hosted at <https://svn.r-project.org/R/> and uses a 'major.minor.patchlevel' version numbering scheme[^02-getting_started-1].
+R uses [svn](https://subversion.apache.org/ "SVN official page") as a version-control tool hosted at <https://svn.r-project.org/R/> and uses a 'major.minor.patchlevel' version-numbering scheme[^02-getting_started-1].
 
 [^02-getting_started-1]: Also known as [semantic versioning](https://en.wikipedia.org/wiki/Software_versioning#Semantic_versioning "Wikipedia explanation of semantic versioning")
 
@@ -20,8 +20,7 @@ There are three releases of R available to install:
 
 -   The development release (`r-devel`) : continually developed version moving from r-release to next major/minor version (x + 1).0.0 or x.(y + 1).0 a few weeks before release (at the start of the "GRAND FEATURE FREEZE").
 
-The source code of released versions of R can be found at [R/tags](https://svn.r-project.org/R/tags/ "svn release source code folder"), the patched versions are at [R/branch](https://svn.r-project.org/R/branches/ "svn patched source code folder").
-
+The source code of released versions of R can be found at [R/tags](https://svn.r-project.org/R/tags/ "svn release source code folder"), and the patched versions are at [R/branch](https://svn.r-project.org/R/branches/ "svn patched source code folder").
 
 The `r-devel` at [R/trunk](https://svn.r-project.org/R/trunk "svn devel source code folder") is the next minor or eventual major release development version of R.
 Bug fixes and new features are introduced in `r-devel` first. 
@@ -78,7 +77,7 @@ For this reason we have a `TOP_SRCDIR` variable where the source code goes and t
 Here are the basic steps intended as a checklist.
 For complete instructions please see the section in [R-admin](https://cran.r-project.org/doc/manuals/r-devel/R-admin.html#Installing-R-under-Unix_002dalikes).
 
-0. Retrieve R source code via into `TOP_SRCDIR`, note that we retrieve the `r-devel` source code:
+0. Retrieve R source code via into `TOP_SRCDIR` (note that we retrieve the `r-devel` source code):
 
     ```sh
     export TOP_SRCDIR="$HOME/Downloads/R"
@@ -99,7 +98,7 @@ For complete instructions please see the section in [R-admin](https://cran.r-pro
     cd "$BUILDDIR"
     ```
         
-4.  Configure the R installation (with `--enable-R-shlib` so that RStudio IDE can use it):
+4.  Configure the R installation (with `--enable-R-shlib` so that the RStudio IDE can use it):
         
     ```sh
     "$TOP_SRCDIR/configure" --enable-R-shlib
@@ -110,7 +109,6 @@ For complete instructions please see the section in [R-admin](https://cran.r-pro
     ```sh
     make
     ```
-
 
 5.  Check that R works as expected:
 
@@ -142,7 +140,6 @@ make check
 
 Once you successfully built R from source you can modify the R source code to fix an issue: Prepare a patch (See [this guide](https://www.r-project.org/bugs.html#how-to-submit-patches)) and after checking that R works as intended (`make check-devel`) submit the patch for consideration by R Core.
 (See the [lifecycle of a patch](#sec-lifecycle-of-a-patch) chapter).
-
 
 To use the `r-devel` version in RStudio, you can do the following:
 
@@ -201,7 +198,7 @@ Before installing R from source, some additional programs are needed, as per the
     svn update
     ```
 
-    You can also use a SVN client such as TortoiseSVN (<https://tortoisesvn.net/>, command line tool, and Windows Explorer integration) or SlikSVN (<https://sliksvn.com/download/>, just the command line tool) so that it can be also found by other tools.
+    You can also use a SVN client such as TortoiseSVN (<https://tortoisesvn.net/>, command line tool and Windows Explorer integration) or SlikSVN (<https://sliksvn.com/download/>, just the command line tool) so that it can be also found by other tools.
 
 2. Download the latest tcl/tk and unzip it in `$TOP_SRCDIR`:
 
