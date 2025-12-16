@@ -77,7 +77,7 @@ For this reason we have a `TOP_SRCDIR` variable where the source code goes and t
 Here are the basic steps intended as a checklist.
 For complete instructions please see the section in [R-admin](https://cran.r-project.org/doc/manuals/r-devel/R-admin.html#Installing-R-under-Unix_002dalikes).
 
-0. Retrieve R source code via into `TOP_SRCDIR` (note that we retrieve the `r-devel` source code):
+0. Retrieve R source code into `TOP_SRCDIR` (note that we retrieve the `r-devel` source code):
 
     ```sh
     export TOP_SRCDIR="$HOME/Downloads/R"
