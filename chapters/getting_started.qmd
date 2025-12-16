@@ -198,7 +198,7 @@ Before installing R from source, some additional programs are needed, as per the
     svn update
     ```
 
-    You can also use a SVN client such as TortoiseSVN (<https://tortoisesvn.net/>, command line tool and Windows Explorer integration) or SlikSVN (<https://sliksvn.com/download/>, just the command line tool) so that it can be also found by other tools.
+    You can also use an SVN client such as TortoiseSVN (<https://tortoisesvn.net/>, a command line tool and Windows Explorer integration) or SlikSVN (<https://sliksvn.com/download/>, a command line tool) to check out and work with the SVN repository.
 
 2. Download the latest tcl/tk and unzip it in `$TOP_SRCDIR`:
 
