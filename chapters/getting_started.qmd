@@ -276,7 +276,7 @@ This section will be added after the official [installation instructions for mac
 
 3.  [Tools for R in macOS](https://mac.r-project.org/tools/)
 
-3.  [R for requirements in macOS](https://mac.r-project.org/src/)
+3.  [Requirements for R in macOS](https://mac.r-project.org/src/)
 
 3.  [R for Windows FAQ](https://cran.r-project.org/bin/windows/base/rw-FAQ.html)
 
