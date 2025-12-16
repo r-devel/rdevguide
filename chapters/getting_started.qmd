@@ -8,7 +8,7 @@ For the most up-to-date and complete instructions you can check the [R installat
 
 ## The R source code
 
-R uses [svn](https://subversion.apache.org/ "SVN official page") as a version-control tool hosted at <https://svn.r-project.org/R/> and uses a 'major.minor.patchlevel' version-numbering scheme[^02-getting_started-1].
+R uses [svn](https://subversion.apache.org/ "SVN official page") as a version control tool hosted at <https://svn.r-project.org/R/> and uses a 'major.minor.patchlevel' version numbering scheme[^02-getting_started-1].
 
 [^02-getting_started-1]: Also known as [semantic versioning](https://en.wikipedia.org/wiki/Software_versioning#Semantic_versioning "Wikipedia explanation of semantic versioning")
 
