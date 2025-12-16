@@ -104,7 +104,7 @@
     "href": "chapters/getting_started.html#see-also",
     "title": "2  R Patched and Development Versions",
     "section": "2.4 See also",
-    "text": "2.4 See also\n\nCRAN official website\nR installation and administration manual\nR for macOS\nTools for R in macOS\nR for requirements in macOS\nR for Windows FAQ\nRTools toolchains for Windows\nR FAQ",
+    "text": "2.4 See also\n\nCRAN official website\nR installation and administration manual\nR for macOS\nTools for R in macOS\nRequirements for R in macOS\nR for Windows FAQ\nRTools toolchains for Windows\nR FAQ",
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>R Patched and Development Versions</span>"
     ]
