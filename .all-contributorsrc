@@ -409,6 +409,15 @@
         "maintenance",
         "doc"
       ]
+    },
+    {
+      "login": "pauamma",
+      "name": "Pau Amma",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1141311?v=4",
+      "profile": "https://github.com/pauamma",
+      "contributions": [
+        "maintenance"
+      ]
     }
   ],
   "contributorsPerLine": 7,
