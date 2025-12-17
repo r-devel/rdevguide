@@ -56,7 +56,7 @@ All contributors should start by reading the [contributing page for this project
 
 Maintainers and contributors are also requested to follow [this guide's code of conduct](https://github.com/r-devel/rdevguide/blob/main/CONDUCT.md).
 
-This guide is built using Quarto which makes editing it easier, provided you have a GitHub account (sign-up at [github.com](https://github.com/)). After you log-in to GitHub, click on the ‘Edit this page’ (available in the left side column) link highlighted with a red ellipse in the image below. This will take you to an editable version of the the source R Markdown file that generated the page you are on:
+This guide is built using Quarto which makes editing it easier, provided you have a GitHub account (sign-up at [github.com](https://github.com/)). After you log-in to GitHub, click on the ‘Edit this page’ (available in the left side column) link highlighted with a red ellipse in the image below. This will take you to an editable version of the source R Markdown file that generated the page you are on:
 
 ![Screenshot of the toolbar in the HTML version of the guide, with the "Edit this page" link highlighted in red.](../img/edit_icon.png)
 
