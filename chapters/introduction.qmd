@@ -46,6 +46,8 @@ The guide is intended as a comprehensive resource for contributing to base R. Th
 
 - Tools that may be useful for R developers are available in the [Developer Tools](#sec-dev-tools) chapter.
 
+- Editor settings for common IDEs are suggested in the [IDE Setup](sec-ide-setup) chapter.
+
 - Additional resources for contributing to R are available in the [Additional Resources](#sec-additional-resources) chapter.
 
 - The [R Core Developers](#sec-core-dev) chapter contains a list of the former and current members of the R Core Team who have write access to the R source.
