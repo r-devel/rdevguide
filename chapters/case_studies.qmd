@@ -1,0 +1,159 @@
+---
+highlight-style: kate # A specific theme is used so that diffs render with reasonable colours e.g. added lines not being highlighted in red.
+---
+
+# Case Studies {#sec-case-studies}
+
+Below are some details of some past contributions.
+
+They are provided here to illustrate that even small changes can provide valuable solutions.
+
+[Lifecycle of a Patch](#sec-lifecycle-of-a-patch) describes the overall process of proposing a bug fix via a code change.  By constrast, each case study on this page includes only a description of the initial problem, the solution and the code changed - rather than the process of submitting a change, getting it reviewed and documenting it.
+
+## Example: a simple change to some R code and help files
+
+[Bug 18773 - grid::dataViewport() has minor bugs in error messages and help](https://bugs.r-project.org/show_bug.cgi?id=18773)
+
+The problem: both error messages and the help text for the function `grid::dataViewport()` had minor inaccuracies.
+
+The solution: the error message was corrected by modifying the relevant string in the relevant R file.  The help text was corrected by modifying the relevant Rd file.
+
+The code change:
+
+```diff
+Index: 
+===================================================================
+--- src/library/grid/R/viewport.R	(revision 87829)
++++ src/library/grid/R/viewport.R	(working copy)
+@@ -454,12 +454,12 @@
+     extension <- rep(extension, length.out = 2)
+     if (is.null(xscale)) {
+         if (is.null(xData))
+-            stop("must specify at least one of 'x' or 'xscale'")
++            stop("must specify at least one of 'xData' or 'xscale'")
+         xscale <- extendrange(xData, f = extension[1L])
+     }
+     if (is.null(yscale)) {
+         if (is.null(yData))
+-            stop("must specify at least one of 'y' or 'yscale'")
++            stop("must specify at least one of 'yData' or 'yscale'")
+         yscale <- extendrange(yData, f = extension[2L])
+     }
+     viewport(xscale = xscale, yscale = yscale, ...)
+Index: src/library/grid/man/dataViewport.Rd
+===================================================================
+--- src/library/grid/man/dataViewport.Rd	(revision 87829)
++++ src/library/grid/man/dataViewport.Rd	(working copy)
+@@ -27,8 +27,8 @@
+     the \code{viewport()} function. }
+ }
+ \details{
+-  If \code{xscale} is not specified then the values in \code{x} are
+-  used to generate an x-scale based on the range of \code{x}, extended
++  If \code{xscale} is not specified then the values in \code{xData} are
++  used to generate an x-scale based on the range of \code{xData}, extended
+   by the proportion specified in \code{extension}.  Similarly for the
+   y-scale.
+ }
+```
+
+## Example: a simple change to some C code and R test code
+
+[Bug 8934 - Irregularity in stem() display ](https://bugs.r-project.org/show_bug.cgi?id=8934)
+
+The problem: a minor problem in the way stem and leaf plots were displayed.
+
+The solution: modifying the C code that defined the way stem and leaf plots get displayed, and updating the relevant R file that tests the feature (as well as an output file defining the expected output of an interactive command).
+
+The code change:
+
+```diff
+--- src/library/graphics/src/stem.c	(revision 86890)
++++ src/library/graphics/src/stem.c	(working copy)
+@@ -47,6 +47,11 @@ 
+ 	Rprintf("  %*d | ", ndigits, close/10);
+ }
+ 
++static double rnd(double u, double c)
++{
++    return ((u < 0) ? (u*c - .5) : (u*c + .5));        
++}
++
+ static Rboolean
+ stem_leaf(double *x, int n, double scale, int width, double atom)
+ {
+@@ -82,15 +87,20 @@ 
+     }
+     
+     /* Find the print width of the stem. */
++    double
++      xlow  = rnd(x[0], c),
++      xhigh = rnd(x[n-1], c),
++      lo_nd = floor(xlow/mu)*mu,
++      hi_nd = floor(xhigh/mu)*mu;
++    
++    ldigits = (lo_nd < 0) ? (int) floor(log10(-lo_nd)) + 1 : 0;
++    hdigits = (hi_nd > 0) ? (int) floor(log10(hi_nd)): 0;
++    ndigits = (ldigits < hdigits) ? hdigits : ldigits;
+ 
++    /* Starting cell */
+     lo = floor(x[0]*c/mu)*mu;
+     hi = floor(x[n-1]*c/mu)*mu;
+-    ldigits = (lo < 0) ? (int) floor(log10(-(double)lo)) + 1 : 0;
+-    hdigits = (hi > 0) ? (int) floor(log10((double)hi)): 0;
+-    ndigits = (ldigits < hdigits) ? hdigits : ldigits;
+ 
+-    /* Starting cell */
+-
+     if(lo < 0 && floor(x[0]*c) == lo) lo = lo - mu;
+     hi = lo + mu;
+     if(floor(x[0]*c+0.5) > hi) {
+@@ -116,8 +126,7 @@ 
+ 	    stem_print((int)lo, (int)hi, ndigits);
+ 	j = 0;
+ 	do {
+-	    if(x[i] < 0)xi = (int) (x[i]*c - .5);
+-	    else	xi = (int) (x[i]*c + .5);
++	    xi = (int) rnd(x[i], c);
+ 
+ 	    if( (hi == 0 && x[i] >= 0)||
+ 		(lo <  0 && xi >  hi) ||
+--- tests/reg-tests-2.R	(revision 86890)
++++ tests/reg-tests-2.R	(working copy)
+@@ -1192,7 +1192,11 @@ 
+ stem(c(rep(1, 10), 1+1.e-10), atom=0) # integer-overflow is avoided.
+ ##  had integer overflows in 1.8.1, and silly shifts of decimal point
+ 
++## PR#8934 stem() with correct width
++stem(c(8.48, 9.58, 9.96))
++## had wrong indented '10 |'
+ 
++
+ ## PR#6633 warnings with vector op matrix, and more
+ set.seed(1)
+ x1 <- rnorm(3)
+--- tests/reg-tests-2.Rout.save	(revision 86890)
++++ tests/reg-tests-2.Rout.save	(working copy)
+@@ -3861,7 +3861,20 @@ 
+ 
+ > ##  had integer overflows in 1.8.1, and silly shifts of decimal point
+ > 
++> ## PR#8934 stem() with correct width
++> stem(c(8.48, 9.58, 9.96))
++
++  The decimal point is at the |
++
++   8 | 
++   8 | 5
++   9 | 
++   9 | 6
++  10 | 0
++
++> ## had wrong indented '10 |'
+ > 
++> 
+ > ## PR#6633 warnings with vector op matrix, and more
+ > set.seed(1)
+ > x1 <- rnorm(3)
+```
+
