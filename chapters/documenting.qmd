@@ -166,6 +166,14 @@ Many R package developers write help files using the R package [roxygen2](https:
 
 ## R manuals
 
+While R help files use the `.Rd` format, the official R manuals are written in [GNU Texinfo](https://www.gnu.org/software/texinfo/) (`.texi` files). 
+
+* **Editing:** Since `.texi` files are plain text, you can edit them with any text editor.
+* **Compiling:** To see how your changes look, you can "compile" them into PDF or HTML using tools like `makeinfo` or `texi2any` (both part of the [GNU Texinfo distribution](https://www.gnu.org/software/texinfo/manual/texinfo/)).
+* **Source:** You can find the source files for these manuals in the [doc/manual directory of the R project SVN](https://github.com/r-devel/r-svn/tree/master/doc/manual).
+
+Improvements can be suggested via the R-devel mailing list or the bug tracker even without a formal patch.
+
 The [R manuals](https://cran.r-project.org/manuals.html) are a part of the [R sources](https://svn.r-project.org/R/trunk/doc/manual/). Hence, bug reports/patches can also be submitted via Bugzilla, e.g. [Bug 15221 - R-admin/'Installing R under Windows': Missing argument name](https://bugs.r-project.org/bugzilla/show_bug.cgi?id=15221). Note that they are typically referred to by their file names as listed below:
 
 | Manual | Nickname |
