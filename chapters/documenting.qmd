@@ -169,7 +169,7 @@ Many R package developers write help files using the R package [roxygen2](https:
 While R help files use the `.Rd` format, the official R manuals are written in [GNU Texinfo](https://www.gnu.org/software/texinfo/) (`.texi` files). 
 
 * **Editing:** Since `.texi` files are plain text, you can edit them with any text editor.
-* **Compiling:** To see how your changes look, you can "compile" them into PDF or HTML using tools like `makeinfo` or `texi2any` (both part of the [GNU Texinfo distribution](https://www.gnu.org/software/texinfo/manual/texinfo/)).
+* **Compiling:** To see how your changes look, you can "compile" them into PDF or HTML using tools like `makeinfo` or `texi2any` (both part of the GNU Texinfo distribution).
 * **Source:** You can find the source files for these manuals in the [doc/manual directory of the R project SVN](https://github.com/r-devel/r-svn/tree/master/doc/manual).
 
 Improvements can be suggested via the R-devel mailing list or the bug tracker even without a formal patch.
