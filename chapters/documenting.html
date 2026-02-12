@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.26">
+<meta name="generator" content="quarto-1.8.27">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -41,9 +41,9 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-b758ccaa5987ceb1b75504551e579abf.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-4d9afe2b8d18ee9fa5d0d57b5ed4214d.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../site_libs/bootstrap/bootstrap-0dd2bd5de344125cf763a379ddc3eb04.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
@@ -604,6 +604,13 @@ c(xm, mean(x, trim = 0.10))
 </section>
 <section id="r-manuals" class="level2" data-number="9.5">
 <h2 data-number="9.5" class="anchored" data-anchor-id="r-manuals"><span class="header-section-number">9.5</span> R manuals</h2>
+<p>While R help files use the <code>.Rd</code> format, the official R manuals are written in <a href="https://www.gnu.org/software/texinfo/">GNU Texinfo</a> (<code>.texi</code> files).</p>
+<ul>
+<li><strong>Editing:</strong> Since <code>.texi</code> files are plain text, you can edit them with any text editor.</li>
+<li><strong>Compiling:</strong> To see how your changes look, you can “compile” them into PDF or HTML using tools like <code>makeinfo</code> or <code>texi2any</code> (both part of the GNU Texinfo distribution).</li>
+<li><strong>Source:</strong> You can find the source files for these manuals in the <code>doc/manual</code> directory of the R source code.</li>
+</ul>
+<p>Improvements can be suggested via the R-devel mailing list or the bug tracker even without a formal patch.</p>
 <p>The <a href="https://cran.r-project.org/manuals.html">R manuals</a> are a part of the <a href="https://svn.r-project.org/R/trunk/doc/manual/">R sources</a>. Hence, bug reports/patches can also be submitted via Bugzilla, e.g.&nbsp;<a href="https://bugs.r-project.org/bugzilla/show_bug.cgi?id=15221">Bug 15221 - R-admin/‘Installing R under Windows’: Missing argument name</a>. Note that they are typically referred to by their file names as listed below:</p>
 <table class="caption-top table">
 <thead>
