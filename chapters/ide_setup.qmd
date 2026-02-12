@@ -1,0 +1,84 @@
+# IDE Setup {sec-ide-setup}
+
+**Note:**
+
+Mention of these IDEs is not meant as a recommendation for either of them, just an acknowledgement that they're common choices.
+
+## For VSCode
+
+If you already have an `EditorConfig` set-up, merge the settings below into it. Otherwise, create it with the settings below.
+
+```
+{
+  // Editor settings for C files
+  // Cannot set to auto replace 8 spaces with tab (https://github.com/Microsoft/vscode/issues/ #42740, #5394)
+  "[c]": {
+    // An indent is 4 spaces
+    "editor.indentSize": 4,
+    // But display 8 spaces as a single tab
+    "editor.tabSize": 8,
+    // Need this to get indent size 4, else uses tabs to indent
+    "editor.insertSpaces": true,
+    // If set true, detects settings from the code in the file
+    "editor.detectIndentation": false,
+  },
+  // Editor settings for R files
+  "[r]": {
+    "editor.indentSize": 4,
+    "editor.tabSize": 8,
+    "editor.insertSpaces": true,
+    "editor.detectIndentation": false
+  },
+  // There isn't a formatter that works great with R itself
+  "editor.formatOnSave": false,
+  // Shows the difference between 4 spaces and 8 spaces (tab) visually
+  "editor.renderWhitespace": "all",
+  // Show whitespace changes in the diff editor to help us get it right
+  // Trim trailing whitespace after a line, or on a blank line.
+  // You may need to turn this off in some files where historically
+  // trailing whitespace has not been trimmed, but otherwise it is
+  // good practice to trim it.
+  "files.trimTrailingWhitespace": true,
+  // Turn off {languageserver} linting for R files
+  "r.lsp.diagnostics": false
+}
+```
+
+## For Positron
+
+If you already have an `EditorConfig` set-up, merge the settings below into it. Otherwise, create it with the settings below. These settings are the same as for VSCode, with the exception of `r.lsp.diagnostics` as Positron does not use a R language server.
+
+```
+{
+  // Editor settings for C files
+  // Cannot set to auto replace 8 spaces with tab (https://github.com/Microsoft/vscode/issues/ #42740, #5394)
+  "[c]": {
+    // An indent is 4 spaces
+    "editor.indentSize": 4,
+    // But display 8 spaces as a single tab
+    "editor.tabSize": 8,
+    // Need this to get indent size 4, else uses tabs to indent
+    "editor.insertSpaces": true,
+    // If set true, detects settings from the code in the file
+    "editor.detectIndentation": false,
+  },
+  // Editor settings for R files
+  "[r]": {
+    "editor.indentSize": 4,
+    "editor.tabSize": 8,
+    "editor.insertSpaces": true,
+    "editor.detectIndentation": false
+  },
+  // There isn't a formatter that works great with R itself
+  "editor.formatOnSave": false,
+  // Shows the difference between 4 spaces and 8 spaces (tab) visually
+  "editor.renderWhitespace": "all",
+  // Show whitespace changes in the diff editor to help us get it right
+  "diffEditor.ignoreTrimWhitespace": false,
+  // Trim trailing whitespace after a line, or on a blank line.
+  // You may need to turn this off in some files where historically
+  // trailing whitespace has not been trimmed, but otherwise it is
+  // good practice to trim it.
+  "files.trimTrailingWhitespace": true
+}
+```
