@@ -98,7 +98,7 @@ If you want to use `git` from the terminal to create the pull request (PR) to te
 
 When creating a patch for submission, there are several things that you can do to help ensure that your patch is accepted:
 
-1. Make sure to follow [R's coding standards](https://cran.r-project.org/doc/manuals/r-release/R-ints.html#R-coding-standards) (R is a GNU project and there are GNU coding standards). The coding style of the patch you submit should largely match with the codebase it is being applied to. If your patch has one or two minor discrepancies, then those may be fixed by the core developer who will eventually test your patch. However, if there are systematic deviations from the style guides your patch will be put on hold until you fix the formatting issues. There is no comprehensive official R style manual, however some nearly universal standards are summarised in [this article](https://cran.r-project.org/web/packages/rockchalk/vignettes/Rstyle.pdf).
+1. Make sure to follow [R's coding standards](https://cran.r-project.org/doc/manuals/r-release/R-ints.html#R-coding-standards) (R is a GNU project and there are GNU coding standards). The coding style of the patch you submit should largely match with the codebase it is being applied to. If your patch has one or two minor discrepancies, then those may be fixed by the core developer who will eventually test your patch. However, if there are systematic deviations from the style guides your patch will be put on hold until you fix the formatting issues. There is no comprehensive official R style manual, however some nearly universal standards are summarised in [this article](https://cran.r-project.org/web/packages/rockchalk/vignettes/Rstyle.pdf). A [short summary of these style resources](#CodingStyleSummary) is in the next subsection.
 
 2. Be aware of backwards-compatibility considerations. While the core developer who eventually handles your patch will make the final call on whether something is acceptable, thinking about backwards-compatibility early will help prevent having your patch rejected on these grounds. Put yourself in the shoes of someone whose code will be broken by the change(s) introduced by the patch. It is quite likely that any change made will break someone's code, so you need to have a good reason to make a change as you will be forcing someone to update their code. This obviously does not apply to new functions or new arguments. New arguments should be optional and have default values which maintain the existing behaviour. If in doubt, [discuss](#sec-where-to-get-help) the issue with experienced developers.
 
@@ -109,6 +109,30 @@ When creating a patch for submission, there are several things that you can do t
 5. Proper documentation additions/changes should be included.
 
 6. Each bugfix should ideally be addressed by a single patch. In particular, do not fix more than one issue in the same patch (except, if one code change fixes all of them) and do not do cosmetic changes to unrelated code in the same patch as some bugfix.
+
+### Coding style summary {#CodingStyleSummary}
+
+1. Use 4 spaces for indentation in R and C code.
+
+2. Use spaces after commas (not before) and on both sides of operators.
+
+3. Use `<-` rather than `=` for assignment.
+
+4. Use `"` instead of `'` for quoting text.
+
+5. Use `TRUE` and `FALSE`, not `T` and `F`.
+
+6. Keep lines no longer than 80 characters.
+
+7. Avoid using special characters in file names (numbers, letters, `-`, and `_` are acceptable).
+
+8. Put a space before and after `()` when used with `if`, `for`, or `while`.
+
+9. Place a space after `()` used for function arguments.
+
+10. Put a space before `|>` (the base R pipe operator).
+
+In general, try to make sure the code you write in an existing file has a style consistent with that file.
 
 ## Submitting your patch for review {#SubmitPatches}
 
