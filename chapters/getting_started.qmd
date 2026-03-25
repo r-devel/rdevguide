@@ -43,6 +43,8 @@ apt-rdepends --build-depends --follow=DEPENDS r-base-dev | grep " B" | sed -e "s
 
 It might require installation of apt-rdepends which can be done from default repositories via `sudo apt-get install apt-rdepends`.
 
+On Ubuntu Noble (24.04) and later, you may need to enable source repositories first. Edit `/etc/apt/sources.list.d/ubuntu.sources` and change `Types: deb` to `Types: deb deb-src`, then run `sudo apt update`.
+
 To install all the R dependencies you can use:
 
 ```sh
