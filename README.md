@@ -2,7 +2,7 @@
 
 # A Guide for Contributing to R Core
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-40-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-41-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 This guide is a work in progress, inspired by http://devguide.python.org/. It is deployed at https://contributor.r-project.org/rdevguide/.
@@ -117,6 +117,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/adit-0132"><img src="https://avatars.githubusercontent.com/u/64087159?v=4?s=100" width="100px;" alt="Aditya bansal"/><br /><sub><b>Aditya bansal</b></sub></a><br /><a href="#maintenance-adit-0132" title="Maintenance">🚧</a> <a href="https://github.com/r-devel/rdevguide/commits?author=adit-0132" title="Documentation">📖</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/pauamma"><img src="https://avatars.githubusercontent.com/u/1141311?v=4?s=100" width="100px;" alt="Pau Amma"/><br /><sub><b>Pau Amma</b></sub></a><br /><a href="#maintenance-pauamma" title="Maintenance">🚧</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/kushjchhajed15-creator"><img src="https://avatars.githubusercontent.com/u/250378302?v=4?s=100" width="100px;" alt="KUSHAL CHHAJED"/><br /><sub><b>KUSHAL CHHAJED</b></sub></a><br /><a href="#content-kushjchhajed15-creator" title="Content">🖋</a> <a href="https://github.com/r-devel/rdevguide/commits?author=kushjchhajed15-creator" title="Documentation">📖</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="http://niccrane.com"><img src="https://avatars.githubusercontent.com/u/13715823?v=4?s=100" width="100px;" alt="Nic Crane"/><br /><sub><b>Nic Crane</b></sub></a><br /><a href="#maintenance-thisisnic" title="Maintenance">🚧</a> <a href="https://github.com/r-devel/rdevguide/commits?author=thisisnic" title="Documentation">📖</a></td>
     </tr>
   </tbody>
 </table>

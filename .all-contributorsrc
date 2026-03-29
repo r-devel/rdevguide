@@ -428,6 +428,16 @@
         "content",
         "doc"
       ]
+    },
+    {
+      "login": "thisisnic",
+      "name": "Nic Crane",
+      "avatar_url": "https://avatars.githubusercontent.com/u/13715823?v=4",
+      "profile": "http://niccrane.com",
+      "contributions": [
+        "maintenance",
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
