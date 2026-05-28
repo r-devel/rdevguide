@@ -9,7 +9,7 @@ Current members of the R Core Team:
   * [Robert Gentleman](https://en.wikipedia.org/wiki/Robert_Gentleman_(statistician))
   * [Kurt Hornik](https://statmath.wu.ac.at/~hornik/software.html)
   * [Ross Ihaka](https://en.wikipedia.org/wiki/Ross_Ihaka)
-  * [Tomas Kalibera](https://github.com/kalibera)
+  * [Mikael Jagan](https://github.com/jaganmn/jaganmn)
   * [Michael Lawrence](https://github.com/lawremi)
   * [Uwe Ligges](https://www.statistik.tu-dortmund.de/~ligges/)
   * [Thomas Lumley](https://github.com/tslumley)
@@ -21,10 +21,11 @@ Current members of the R Core Team:
   * [Deepayan Sarkar](https://www.isid.ac.in/~deepayan/)
   * [Duncan Temple Lang](https://www.stat.ucdavis.edu/~duncan/)
   * [Luke Tierney](https://stat.uiowa.edu/people/luke-tierney)
+  * [Heather Turner](https://www.heatherturner.net/)
   * [Simon Urbanek](https://urbanek.info/)
 
 Former members of the R Core team:
-
+  * [Tomas Kalibera](https://github.com/kalibera) (up to March 2026)
   * Friedrich Leisch (up to April 2024)
   * Douglas Bates (up to March 2024)
   * Martin Morgan (up to June 2021)
