@@ -1,6 +1,6 @@
 # Accessibility check
 
-This folder holds the tooling used to audit the rendered R Development Guide for accessibility issues (missing alt text, color contrast, keyboard access, etc.) using [axe-core](https://github.com/dequelabs/axe-core). `check-a11y.mjs` renders the book, serves `_book/` locally, and crawls every rendered page with headless Chromium via [Playwright](https://playwright.dev/) — the browser automation tool [Quarto's own accessibility docs](https://quarto.org/docs/output-formats/html-accessibility.html) suggest for this — collecting the axe-core JSON output that Quarto's `axe: { output: json }` option logs to the browser console on each page.
+Quarto's built-in `axe-core` integration only supports [interactive accessibility checks](https://quarto.org/docs/output-formats/html-accessibility.html#interactive-accessibility-checks): opening one page at a time in a local preview and inspecting the results in the browser, with no way to check a whole book at once during `quarto render` or `quarto publish`. Until Quarto adds that natively (see [Future](#future) below), this folder fills the gap: it holds the tooling used to audit the rendered R Development Guide for accessibility issues (missing alt text, color contrast, keyboard access, etc.) using [axe-core](https://github.com/dequelabs/axe-core). `check-a11y.mjs` renders the book, serves `_book/` locally, and crawls every rendered page with headless Chromium via [Playwright](https://playwright.dev/), the browser automation tool [Quarto's own accessibility docs](https://quarto.org/docs/output-formats/html-accessibility.html) suggest for this — collecting the axe-core JSON output that Quarto's `axe: { output: json }` option logs to the browser console on each page.
 
 That option only lives in `../_quarto-debug.yml`, under the `debug` project profile — not in the main `../_quarto.yml`. Quarto's own docs recommend this (see the [site-wide accessibility checks](https://quarto.org/docs/output-formats/html-accessibility.html) docs) so a normal `quarto render` or `quarto publish` never ships the axe-core checker to real readers. `check-a11y.mjs` always renders with `quarto render --profile debug` itself, so you don't need to pass the profile flag by hand.
 
@@ -40,7 +40,7 @@ A summary also prints to the console after each run.
 
 `results.json` is large (roughly 10MB+ for this book) because axe-core logs every rule it checked per page, not just the failures — `passes` and `inapplicable` dwarf the `violations` array you actually care about. Two ways to turn that into something readable:
 
-**Option A: hand it to an LLM.** Point an LLM (e.g. Claude) at `reports/results.json` and ask it to summarize the `violations` across all pages, grouped by rule (`id`) and impact, with the specific elements/images/selectors affected. This is the easiest route given the file's size.
+**Option A: hand it to an LLM.** Point an LLM at `reports/results.json` and ask it to summarize the `violations` across all pages, grouped by rule (`id`) and impact, with the specific elements/images/selectors affected. This is the easiest route given the file's size.
 
 **Option B: filter it yourself.** Each entry in the top-level array is one page (`path`, `url`, `axe`). The only field worth reading is `axe.violations` — ignore `axe.passes` and `axe.inapplicable`, which are the bulk of the file. Each violation has:
 
@@ -61,3 +61,7 @@ jq -c '.[] | .path as $p | .axe.violations[] | select(.id == "image-alt") | {pag
 # only critical/serious violations
 jq -c '.[] | .path as $p | .axe.violations[] | select(.impact == "critical" or .impact == "serious") | {page: $p, id, impact}' reports/results.json
 ```
+
+## Future
+
+Quarto's own docs say they want ["a mode where every page of a website can be checked at the time of `quarto render` or `quarto publish`"](https://quarto.org/docs/output-formats/html-accessibility.html#site-wide-accessibility-checks), which would replace the crawling/serving/collecting this script does by hand. Once that ships, this tooling can be retired in favor of whatever built-in `quarto render`/`quarto publish` flag Quarto adds.
