@@ -1,0 +1,11 @@
+{
+  "name": "rdevguide-a11y-check",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "a11y": "node check-a11y.mjs"
+  },
+  "devDependencies": {
+    "playwright": "^1.47.0"
+  }
+}

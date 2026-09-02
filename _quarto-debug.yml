@@ -1,0 +1,4 @@
+format:
+  html:
+    axe:
+      output: json

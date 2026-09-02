@@ -13,3 +13,7 @@ rdevguide.tex
 
 /.quarto/
 _book
+
+node_modules/
+a11y/reports/
+**/*.quarto_ipynb
