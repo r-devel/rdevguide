@@ -4,6 +4,8 @@ Quarto's built-in `axe-core` integration only supports [interactive accessibilit
 
 That option only lives in `../_quarto-debug.yml`, under the `debug` project profile — not in the main `../_quarto.yml`. Quarto's own docs recommend this (see the [site-wide accessibility checks](https://quarto.org/docs/output-formats/html-accessibility.html) docs) so a normal `quarto render` or `quarto publish` never ships the axe-core checker to real readers. `check-a11y.mjs` always renders with `quarto render --profile debug` itself, so you don't need to pass the profile flag by hand.
 
+Each page is checked twice: once as rendered (light theme) and once reloaded with the dark theme requested (the book ships both, see `theme:` in `../_quarto.yml`). Dark mode is requested via `localStorage` (the same way the site's own toggle button persists it), followed by a page reload, so Quarto's own axe-core checker runs fresh against the dark-themed page.
+
 ## Setup (once)
 
 ```sh
@@ -31,8 +33,8 @@ node check-a11y.mjs --no-render
 
 Results are written to `reports/` inside this folder (gitignored — regenerate locally whenever you need current results):
 
-- `reports/results.json` — full axe-core output (violations, passes, incomplete, inapplicable) per page
-- `reports/summary.json` — aggregate violation counts by impact and per page
+- `reports/results.json` — full axe-core output (violations, passes, incomplete, inapplicable) per page, for both `axe` (light theme) and `axeDark` (dark theme)
+- `reports/summary.json` — aggregate violation counts by impact and per page, reported separately under `light` and `dark`
 
 A summary also prints to the console after each run.
 
@@ -42,7 +44,7 @@ A summary also prints to the console after each run.
 
 **Option A: hand it to an LLM.** Point an LLM at `reports/results.json` and ask it to summarize the `violations` across all pages, grouped by rule (`id`) and impact, with the specific elements/images/selectors affected. This is the easiest route given the file's size.
 
-**Option B: filter it yourself.** Each entry in the top-level array is one page (`path`, `url`, `axe`). The only field worth reading is `axe.violations` — ignore `axe.passes` and `axe.inapplicable`, which are the bulk of the file. Each violation has:
+**Option B: filter it yourself.** Each entry in the top-level array is one page (`path`, `url`, `axe`, `axeDark`) — `axe` is the light-theme result, `axeDark` the dark-theme one (`null` if the page had no dark-mode toggle to switch). The only fields worth reading are `axe.violations` / `axeDark.violations` — ignore `passes` and `inapplicable`, which are the bulk of the file. Each violation has:
 
 - `id` — the rule name (e.g. `image-alt`, `color-contrast`)
 - `impact` — `critical` / `serious` / `moderate` / `minor`
@@ -52,14 +54,17 @@ A summary also prints to the console after each run.
 Start with `reports/summary.json` for the aggregate counts (violations by impact, and by page), then use `jq` to drill into specific rules or pages in `results.json`, e.g. (run from this `a11y/` folder, same as above):
 
 ```sh
-# every violation, one line each: page, rule id, impact
+# every light-theme violation, one line each: page, rule id, impact
 jq -c '.[] | .path as $p | .axe.violations[] | {page: $p, id, impact}' reports/results.json
 
-# just image-alt violations, with the offending <img> markup
+# every dark-theme violation
+jq -c '.[] | .path as $p | (.axeDark.violations // [])[] | {page: $p, id, impact}' reports/results.json
+
+# just image-alt violations (light theme), with the offending <img> markup
 jq -c '.[] | .path as $p | .axe.violations[] | select(.id == "image-alt") | {page: $p, nodes: [.nodes[].html]}' reports/results.json
 
-# only critical/serious violations
-jq -c '.[] | .path as $p | .axe.violations[] | select(.impact == "critical" or .impact == "serious") | {page: $p, id, impact}' reports/results.json
+# only critical/serious violations, light and dark together
+jq -c '.[] | .path as $p | (.axe.violations + (.axeDark.violations // []))[] | select(.impact == "critical" or .impact == "serious") | {page: $p, id, impact}' reports/results.json
 ```
 
 ## Future

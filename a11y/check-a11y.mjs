@@ -1,7 +1,14 @@
 // Crawls the rendered Quarto book with a headless browser and collects the
 // axe-core JSON results that Quarto's `axe: { output: json }` option (set
 // only under the "debug" project profile, see ../_quarto-debug.yml) logs to
-// the browser console on each page load.
+// the browser console on each page load. Each page is then reloaded with
+// dark mode requested via localStorage (the same "quarto-color-scheme"
+// sentinel the site's own toggle button writes) and re-checked, so
+// dark-mode-only issues aren't missed. This has to be a real reload rather
+// than an in-page toggle: Chromium doesn't reliably re-apply a <link
+// rel="disabled-stylesheet"> that gets flipped back to "stylesheet" at
+// runtime, so a live toggle leaves the page visually unchanged even though
+// the toggle's own bookkeeping (body class, link rel) looks correct.
 //
 // Usage: npm run a11y  (runs `quarto render --profile debug` first; pass
 // --no-render to skip)
@@ -63,6 +70,24 @@ function serveSite() {
 // pages, and shouldn't be checked (vendored JS libs, search index assets).
 const SKIP_DIRS = new Set(["site_libs"]);
 
+// axe-core's JSON output is logged as a single console message containing
+// a JSON object with violations/passes/incomplete/inapplicable.
+function extractAxeJson(consoleMessages) {
+  for (const text of consoleMessages) {
+    const trimmed = text.trim();
+    if (!trimmed.startsWith("{")) continue;
+    try {
+      const parsed = JSON.parse(trimmed);
+      if (parsed && (parsed.violations || parsed.passes || parsed.incomplete)) {
+        return parsed;
+      }
+    } catch {
+      // not JSON, skip
+    }
+  }
+  return null;
+}
+
 async function listHtmlFiles(dir, base = dir) {
   const entries = await readdir(dir, { withFileTypes: true });
   let files = [];
@@ -84,7 +109,7 @@ async function crawl(baseUrl, pagePaths) {
 
   for (const pagePath of pagePaths) {
     const page = await browser.newPage();
-    const consoleMessages = [];
+    let consoleMessages = [];
     page.on("console", (msg) => consoleMessages.push(msg.text()));
 
     const url = new URL(pagePath, baseUrl).toString();
@@ -96,28 +121,33 @@ async function crawl(baseUrl, pagePaths) {
       continue;
     }
 
-    // axe-core's JSON output is logged as a single console message containing
-    // a JSON object with violations/passes/incomplete/inapplicable.
-    let axeResult = null;
-    for (const text of consoleMessages) {
-      const trimmed = text.trim();
-      if (!trimmed.startsWith("{")) continue;
+    const axeResult = extractAxeJson(consoleMessages);
+
+    // Reload with dark mode requested via the same localStorage sentinel the
+    // site's own toggle button writes, and re-scrape the axe-core JSON that
+    // logs again on this fresh load. See the file-level comment for why this
+    // has to be a reload rather than an in-page call to
+    // window.quartoToggleColorScheme.
+    let axeDarkResult = null;
+    const hasDarkToggle = await page.evaluate(
+      () => typeof window.quartoToggleColorScheme === "function"
+    );
+    if (hasDarkToggle) {
+      consoleMessages = [];
       try {
-        const parsed = JSON.parse(trimmed);
-        if (parsed && (parsed.violations || parsed.passes || parsed.incomplete)) {
-          axeResult = parsed;
-          break;
-        }
-      } catch {
-        // not JSON, skip
+        await page.evaluate(() => localStorage.setItem("quarto-color-scheme", "alternate"));
+        await page.reload({ waitUntil: "networkidle" });
+        axeDarkResult = extractAxeJson(consoleMessages);
+      } catch (err) {
+        console.warn(`  ! dark-mode reload failed for ${pagePath}: ${err.message}`);
       }
     }
 
     if (axeResult) {
-      results.push({ path: pagePath, url, axe: axeResult });
+      results.push({ path: pagePath, url, axe: axeResult, axeDark: axeDarkResult });
       console.log(
-        `  ${pagePath}: ${axeResult.violations?.length ?? 0} violations, ` +
-          `${axeResult.incomplete?.length ?? 0} incomplete`
+        `  ${pagePath}: light ${axeResult.violations?.length ?? 0} violations` +
+          (axeDarkResult ? `, dark ${axeDarkResult.violations?.length ?? 0} violations` : ", dark skipped")
       );
     } else {
       console.warn(`  ! no axe JSON found for ${pagePath}`);
@@ -130,12 +160,13 @@ async function crawl(baseUrl, pagePaths) {
   return results;
 }
 
-function summarize(results) {
+function summarizeTheme(results, axeKey) {
   const byImpact = {};
   let totalViolations = 0;
   const pagesWithViolations = [];
 
-  for (const { path: p, axe } of results) {
+  for (const { path: p, [axeKey]: axe } of results) {
+    if (!axe) continue;
     const violations = axe.violations ?? [];
     if (violations.length > 0) {
       pagesWithViolations.push({ path: p, count: violations.length });
@@ -146,7 +177,15 @@ function summarize(results) {
     }
   }
 
-  return { pagesChecked: results.length, totalViolations, byImpact, pagesWithViolations };
+  return { totalViolations, byImpact, pagesWithViolations };
+}
+
+function summarize(results) {
+  return {
+    pagesChecked: results.length,
+    light: summarizeTheme(results, "axe"),
+    dark: summarizeTheme(results, "axeDark"),
+  };
 }
 
 async function main() {
@@ -176,12 +215,15 @@ async function main() {
 
   console.log("\n--- Summary ---");
   console.log(`Pages checked: ${summary.pagesChecked}`);
-  console.log(`Total violations: ${summary.totalViolations}`);
-  console.log("By impact:", summary.byImpact);
-  if (summary.pagesWithViolations.length > 0) {
-    console.log("\nPages with violations:");
-    for (const { path: p, count } of summary.pagesWithViolations) {
-      console.log(`  ${p}: ${count}`);
+  for (const theme of ["light", "dark"]) {
+    const { totalViolations, byImpact, pagesWithViolations } = summary[theme];
+    console.log(`\n[${theme}] Total violations: ${totalViolations}`);
+    console.log(`[${theme}] By impact:`, byImpact);
+    if (pagesWithViolations.length > 0) {
+      console.log(`[${theme}] Pages with violations:`);
+      for (const { path: p, count } of pagesWithViolations) {
+        console.log(`  ${p}: ${count}`);
+      }
     }
   }
   console.log(`\nFull results: ${path.relative(ROOT, reportPath)}`);
