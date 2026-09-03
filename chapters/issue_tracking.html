@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.9.38">
+<meta name="generator" content="quarto-1.10.18">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -13,10 +13,13 @@
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
 */
-code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
-div.columns{display: flex; gap: min(4vw, 1.5em);}
-div.column{flex: auto; overflow-x: auto;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
@@ -43,14 +46,14 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-0a6b7249c26820e032cb0bd839ff02b1.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-b85bc7c33db8c58e0ec93c3465666fed.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-48abc47ddc2cbc14860ddec9e9fdb395.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/bootstrap/bootstrap-dark-25bdb277839b13e84e0318e07cbcf363.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../site_libs/bootstrap/bootstrap-48abc47ddc2cbc14860ddec9e9fdb395.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-3d497cff885f6278d37568d0ef0763f8.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-19da6ce02b3cfe85e184982761e71723.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-3d497cff885f6278d37568d0ef0763f8.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -87,6 +90,7 @@ ul.task-list li input[type="checkbox"] {
 <meta property="og:description" content="">
 <meta property="og:image" content="https://contributor.r-project.org/rdevguide/img/bugzilla.png">
 <meta property="og:site_name" content="R Development Guide">
+<meta property="og:image:alt" content="Screenshot of the existing home page of Bugzilla.">
 <meta property="og:image:height" content="888">
 <meta property="og:image:width" content="1372">
 </head>
@@ -475,19 +479,11 @@ ul.task-list li input[type="checkbox"] {
 <section id="Bugzilla" class="level3" data-number="3.2.1">
 <h3 data-number="3.2.1" class="anchored" data-anchor-id="Bugzilla"><span class="header-section-number">3.2.1</span> Navigating Bugzilla</h3>
 <p>An image of the existing home page of Bugzilla is shared below:</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="../img/bugzilla.png" class="img-fluid figure-img"></p>
-<figcaption>Screenshot of the existing home page of Bugzilla.</figcaption>
-</figure>
-</div>
+<p><img src="../img/bugzilla.png" class="img-fluid" alt="Screenshot of the existing home page of Bugzilla."><br>
+</p>
 <p>On the home page of Bugzilla, there are various buttons and links. There are four square buttons called as:</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="../img/squarebuttons.png" class="img-fluid figure-img"></p>
-<figcaption>Screenshot of the four square buttons on the home page of Bugzilla.</figcaption>
-</figure>
-</div>
+<p><img src="../img/squarebuttons.png" class="img-fluid" alt="Screenshot of the four square buttons on the home page of Bugzilla."><br>
+</p>
 <ol type="1">
 <li><p><a href="https://bugs.r-project.org/enter_bug.cgi">File a bug</a>: You will have to log in to Bugzilla to file a bug using this button</p></li>
 <li><p><a href="https://bugs.r-project.org/query.cgi">Search</a>: When you click this button you will get a page with ‘Simple Search’ and ‘Advanced Search’ options. Either of the search options could be used depending on what you are looking for.</p></li>
@@ -501,30 +497,18 @@ ul.task-list li input[type="checkbox"] {
 <li><p><a href="https://bugs.r-project.org/query.cgi">Search existing bug reports</a></p></li>
 </ol>
 <p>A <a href="https://bugs.r-project.org/page.cgi?id=quicksearch.html">quick search</a> bar is available on the home page where you can enter a bug number to search or some search terms.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="../img/quicksearch.png" class="img-fluid figure-img"></p>
-<figcaption>Screenshot of the quick search bar on the home page of Bugzilla.</figcaption>
-</figure>
-</div>
+<p><img src="../img/quicksearch.png" class="img-fluid" alt="Screenshot of the quick search bar on the home page of Bugzilla."><br>
+</p>
 <p>There is also a section for Common Queries on the home page which includes links to bugs reported and changed in the last 24 hours and last 7 days.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="../img/commonquery.png" class="img-fluid figure-img"></p>
-<figcaption>Screenshot of the Common Queries section on the home page of Bugzilla.</figcaption>
-</figure>
-</div>
+<p><img src="../img/commonquery.png" class="img-fluid" alt="Screenshot of the Common Queries section on the home page of Bugzilla."><br>
+</p>
 </section>
 </section>
 <section id="searching" class="level2" data-number="3.3">
 <h2 data-number="3.3" class="anchored" data-anchor-id="searching"><span class="header-section-number">3.3</span> Searching for Bugs to Contribute to</h2>
 <p>When presented with a long list of bugs, it can often be a bit demotivating when it’s not clear where to start. To help with this, you can use the <a href="https://bugs.r-project.org/query.cgi?format=advanced"><strong>Advanced Search</strong></a>.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="../img/bugzilla-adv-search-home.png" class="img-fluid figure-img"></p>
-<figcaption>Screenshot of Advanced Search page showing the following fields: Summary, Product, Component, Status, Resolution</figcaption>
-</figure>
-</div>
+<p><img src="../img/bugzilla-adv-search-home.png" class="img-fluid" alt="Screenshot of Advanced Search page showing the following fields: Summary, Product, Component, Status, Resolution"><br>
+</p>
 <p>This presents several fields that you can use to narrow down your search. You can find out what a particular field is by clicking on the header, which will take you to that section in the <a href="https://bugs.r-project.org/page.cgi?id=fields.html"><strong>Bug Fields Information Page</strong></a>.</p>
 <p>The default fields are:</p>
 <ul>
@@ -556,32 +540,20 @@ Didn’t find what you’re looking for above? This area allows for ANDs, ORs, a
 <h3 data-number="3.3.1" class="anchored" data-anchor-id="searching-dbi"><span class="header-section-number">3.3.1</span> Detailed Bug Information</h3>
 <p>You can use this section to narrow down your search further to filter by things like OS type, R version, Keywords, and Priority.</p>
 <p>It can be helpful, for example, to search for bugs labelled with <code>HELPWANTED</code>, which indicates bugs that may be suitable for anyone to work on regardless of expertise.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="../img/bugzilla-adv-search-detailed-bug-info.png" class="img-fluid figure-img"></p>
-<figcaption>Screenshot of expanded Detailed Bug Information section showing the following fields: Comment, URL, Keywords (with HELPWANTED entered), Deadline, inclusion/exclusion of bug numbers, Version, Severity, Priority, Hardware, and OS</figcaption>
-</figure>
-</div>
+<p><img src="../img/bugzilla-adv-search-detailed-bug-info.png" class="img-fluid" alt="Screenshot of expanded Detailed Bug Information section showing the following fields: Comment, URL, Keywords (with HELPWANTED entered), Deadline, inclusion/exclusion of bug numbers, Version, Severity, Priority, Hardware, and OS"><br>
+</p>
 </section>
 <section id="searching-sbp" class="level3" data-number="3.3.2">
 <h3 data-number="3.3.2" class="anchored" data-anchor-id="searching-sbp"><span class="header-section-number">3.3.2</span> Search By People</h3>
 <p>You can use this to narrow down your search to only include results of a specific person or up to three people who have participated in any component of the bug’s discussion.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="../img/bugzilla-adv-search-search-by-people.png" class="img-fluid figure-img"></p>
-<figcaption>Screenshot of expanded Search By People section showing three fields allowing you to enter a person’s name who can be any of the bug assignee, the reporter, a CC list member, or a commenter</figcaption>
-</figure>
-</div>
+<p><img src="../img/bugzilla-adv-search-search-by-people.png" class="img-fluid" alt="Screenshot of expanded Search By People section showing three fields allowing you to enter a person’s name who can be any of the bug assignee, the reporter, a CC list member, or a commenter"><br>
+</p>
 </section>
 <section id="searching-sbch" class="level3" data-number="3.3.3">
 <h3 data-number="3.3.3" class="anchored" data-anchor-id="searching-sbch"><span class="header-section-number">3.3.3</span> Search By Change History</h3>
 <p>Use this to search for bugs where any of the status fields has been changed (which, depending on the change, could indicate that someone from R-Core has given some attention to the bug). This also provides a date range to narrow your search.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="../img/bugzilla-adv-search-search-by-change-history.png" class="img-fluid figure-img"></p>
-<figcaption>Screenshot of expanded Search by Change History section showing three fields: where ANY of the fields (multi-select list), changed to, and between (dates in YYYY-MM-DD format)</figcaption>
-</figure>
-</div>
+<p><img src="../img/bugzilla-adv-search-search-by-change-history.png" class="img-fluid" alt="Screenshot of expanded Search by Change History section showing three fields: where ANY of the fields (multi-select list), changed to, and between (dates in YYYY-MM-DD format)"><br>
+</p>
 
 
 </section>

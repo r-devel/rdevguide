@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.9.38">
+<meta name="generator" content="quarto-1.10.18">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -13,10 +13,13 @@
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
 */
-code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
-div.columns{display: flex; gap: min(4vw, 1.5em);}
-div.column{flex: auto; overflow-x: auto;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
@@ -43,14 +46,14 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-0a6b7249c26820e032cb0bd839ff02b1.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-b85bc7c33db8c58e0ec93c3465666fed.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-48abc47ddc2cbc14860ddec9e9fdb395.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/bootstrap/bootstrap-dark-25bdb277839b13e84e0318e07cbcf363.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../site_libs/bootstrap/bootstrap-48abc47ddc2cbc14860ddec9e9fdb395.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-3d497cff885f6278d37568d0ef0763f8.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-19da6ce02b3cfe85e184982761e71723.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-3d497cff885f6278d37568d0ef0763f8.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -87,6 +90,7 @@ ul.task-list li input[type="checkbox"] {
 <meta property="og:description" content="">
 <meta property="og:image" content="https://contributor.r-project.org/rdevguide/img/translate_component.png">
 <meta property="og:site_name" content="R Development Guide">
+<meta property="og:image:alt" content="Weblate component and language selection screen for R translations.">
 <meta property="og:image:height" content="950">
 <meta property="og:image:width" content="1887">
 </head>
@@ -536,7 +540,7 @@ msgstr[2] "Įspėjančių pranešimų:\n"</code></pre>
 <p><strong>Step 2: Choose a Component and Language</strong></p>
 <p>Select a component of R with less than 100% translation. Each component corresponds to the messages in either the R code or the C code of one of the packages in base R, e.g.&nbsp;base (R files), or tools (C files). There is one special case: base (R GUI), which corresponds to the messages in the Windows Graphical User Interface.</p>
 <p>After selecting a component, you can select your preferred language.</p>
-<p><img src="../img/translate_component.png" class="img-fluid"></p>
+<p><img src="../img/translate_component.png" class="img-fluid" alt="Weblate component and language selection screen for R translations."></p>
 <!-- **Step 3: Check String Status** -->
 <!-- Click on "Unfinished strings" to see the strings of messages that need -->
 <!-- translation. All translated strings appears as Strings waiting for -->
@@ -548,9 +552,9 @@ msgstr[2] "Įspėjančių pranešimų:\n"</code></pre>
 <blockquote class="blockquote">
 <p>Note: More information for String status visit: <a href="https://docs.weblate.org/en/latest/workflows.html#translation-states" class="uri">https://docs.weblate.org/en/latest/workflows.html#translation-states</a></p>
 </blockquote>
-<p><img src="../img/translate_button.png" class="img-fluid"></p>
+<p><img src="../img/translate_button.png" class="img-fluid" alt="Weblate string list showing the Translate button."></p>
 <p>Then, start translating the message by typing the translation in the text box.</p>
-<p><img src="../img/translate_string_and_save.png" class="img-fluid"></p>
+<p><img src="../img/translate_string_and_save.png" class="img-fluid" alt="Weblate translation text box with Save and Continue button."></p>
 <ul>
 <li><p>If you are <strong>confident</strong> that the <strong>translation is correct</strong>, make sure the “Needs editing” box is <strong>unchecked</strong>.</p></li>
 <li><p>If you are <strong>unsure</strong> about how to translate, write the translation as a <strong>Suggest</strong> button instead.</p></li>
@@ -567,7 +571,7 @@ msgstr[2] "Įspėjančių pranešimų:\n"</code></pre>
 <li><p>Click on Automatic Suggestions (machine translation)</p></li>
 <li><p>Accept it if you think the automatic suggestion looks good</p></li>
 </ol>
-<p><img src="../img/auto-suggestion.png" class="img-fluid"></p>
+<p><img src="../img/auto-suggestion.png" class="img-fluid" alt="Weblate Automatic Suggestions panel with machine translation suggestions."></p>
 <hr>
 <p><strong>Some Tips to follow:</strong></p>
 <ul>
@@ -584,12 +588,8 @@ msgstr[2] "Įspėjančių pranešimų:\n"</code></pre>
 <li><p>Navigate to the translations for a particular component in a particular language, e.g.&nbsp;https://translate.rx.studio/projects/r-project/base-c/ar/</p></li>
 <li><p>Select <strong>‘Tools &gt; Automatic translation’</strong></p></li>
 </ol>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="../img/translate_automatic_translation.png" class="img-fluid figure-img"></p>
-<figcaption>Tools drop-down menu with “Automatic Translations” selected</figcaption>
-</figure>
-</div>
+<p><img src="../img/translate_automatic_translation.png" class="img-fluid" alt="Tools drop-down menu with “Automatic Translations” selected"><br>
+</p>
 <ol start="3" type="1">
 <li>In the dialog,</li>
 </ol>
@@ -601,12 +601,8 @@ msgstr[2] "Įspėjančių pranešimų:\n"</code></pre>
 <li>under <strong>‘Source of automated translations’</strong>, select <strong>‘Machine translation’</strong></li>
 <li>under <strong>‘Machine translation engines’</strong>, select <strong>‘Microsoft Translator’</strong><a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a>:</li>
 </ul>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="../img/translate_dialog.png" class="img-fluid figure-img"></p>
-<figcaption>Automatic Translations dialog box</figcaption>
-</figure>
-</div>
+<p><img src="../img/translate_dialog.png" class="img-fluid" alt="Automatic Translations dialog box"><br>
+</p>
 <ol start="4" type="1">
 <li>Review the translations, edit as necessary and uncheck <strong>“needing edit”</strong>.</li>
 </ol>
