@@ -27,6 +27,49 @@ The `r-devel` at [R/trunk](https://svn.r-project.org/R/trunk "svn devel source c
 Bug fixes and new features are introduced in `r-devel` first. 
 If the change meets the [development guidelines](https://developer.r-project.org/devel-guidelines.txt) R Core will also make the change in `r-patched`.
 
+### Managing R versions with rig (Alternative approach) {#sec-rig}
+
+[rig](https://github.com/r-lib/rig) is a popular cross-platform tool for installing and managing multiple R versions. While not required for R development work, it can simplify switching between `r-release` and `r-devel`, or between multiple development builds.
+
+#### When to use rig:
+
+`rig` is particularly useful when you:
+
+- Want quick access to binary builds of `r-devel` without compiling from source.
+
+- Need to frequently switch between multiple R versions.
+
+- Prefer a streamlined command-line interface for version management.
+
+#### When building from source may be preferred:
+
+Many R Core contributors maintain local `r-devel` builds in separate directories alongside their stable R installation. Building from source (as described in the sections below) offers several advantages:
+
+- Full control over build configuration and compiler flags.
+
+- Ability to modify R source code and test changes immediately.
+
+- No dependency on binary availability for your platform.
+
+- Understanding of the complete build process.
+
+#### Installing and using rig:
+
+If you choose to use `rig`, installation instructions and documentation are available at [rig](https://github.com/r-lib/rig). Basic usage includes:
+```sh
+# Install the latest r-devel
+rig add devel
+
+# Switch between versions
+rig default devel
+rig default release
+
+# List installed versions
+rig list
+```
+
+Note that when using `rig` binaries, you won't be able to modify the R source code directly. For contributing patches to R, you'll still need to work with a source build as described in the [Building R](#building-r) section below.
+
 ## Prerequisites
 
 To install from the source code you will need the source code and the dependencies of R.
