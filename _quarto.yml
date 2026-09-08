@@ -28,6 +28,7 @@ book:
     - chapters/message_translations.qmd         
     - chapters/testing_pre_release_r_versions.qmd
     - chapters/where_to_get_help.qmd              
+    - chapters/case_studies.qmd
     - chapters/news_and_announcements.qmd  
     - chapters/developer_tools.qmd    
     - chapters/additional_resources.qmd 
