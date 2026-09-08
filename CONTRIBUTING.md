@@ -9,3 +9,13 @@ You can also suggest changes by editing the .Rmd files that are at the root of t
 ## With write access
 
 You can push directly to `main` for small fixes. Please use PRs to `main` for discussing larger updates - try to limit to one section or at least one chapter in each PR, so that changes are easier to review.
+
+### Code Hyperlinks 
+
+When referencing code in documentation, issues, or pull requests:
+
+- If you need to show a code block or highlight specific lines, use a GitHub mirror permalink (with line highlighting).
+
+- For general references where highlighting is not needed, you may use the original source link.
+
+This helps reviewers and readers quickly see the relevant code in context.
