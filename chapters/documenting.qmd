@@ -101,6 +101,36 @@ All the above information is included in a `.Rd` file within a series of section
     * Use `--` for page ranges.
     * For giving an address for a publisher use the format `New York: Springer-Verlag`.
 
+## Checking Rd Files with tools::checkRd
+
+tools::checkRd is a utility function in R for checking the validity and consistency of Rd (R documentation) files. It helps catch common formatting errors, such as missing brackets and non-ASCII characters, by performing a number of sanity checks on the file.
+
+# Usage
+
+```r
+tools::checkRd("path/to/file.Rd") ```
+
+# What It Checks
+
+* Missing or mismatched brackets { }
+* Non-ASCII characters (when encoding is not declared)
+* Presence of required documentation sections
+* Section names and valid tag usage
+* Non-empty braces and unnecessary braces
+* Table formatting and section duplication issues
+
+# Notes
+
+Use this function when editing Rd files to ensure documentation quality and avoid CRAN submission errors.
+
+Always declare encoding if your documentation includes non-ASCII characters.
+
+# Reference
+
+Official documentation: https://cran.r-project.org/web/packages/tools/refman/tools.html
+
+Community example: https://rdrr.io/r/tools/checkRd.html
+
 For example, the help file for `base::mean()` is found at <https://svn.r-project.org/R/trunk/src/library/base/man/mean.Rd>. The file`mean.Rd` has the content shown below:
 
 ```
