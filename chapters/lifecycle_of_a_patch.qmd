@@ -8,7 +8,7 @@ R uses a workflow based on patches. A patch is the set of differences (additions
 
 There might be a situation where you come across a bug in R, which you may have an idea of how to fix. This can turn out to be an opportunity for you to submit a patch. By submitting a patch or a bug fix, you are helping to reduce the workload on the R developers in addition to yourself being a contributor to R!  
 
-When you submit a patch, you are helping the developer(s) and maintainer(s) so that they do not have to write the entire code from scratch. Instead, they can test and tweak your patch, if necessary.
+When you submit a patch, you are helping the developer(s) and maintainer(s) so that they do not have to write the entire code from scratch. Instead, they can test and tweak your patch, if necessary. At this point, it might also be useful to refer to the [R coding style](#R-coding-style) to ensure that your patch is in line with the coding standards of R.
 
 ## What tools are required to submit a patch?
 
