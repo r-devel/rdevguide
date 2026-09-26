@@ -86,9 +86,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-3d497cff885f6278d37568d0ef0763f8.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/bootstrap/bootstrap-dark-19da6ce02b3cfe85e184982761e71723.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../site_libs/bootstrap/bootstrap-3d497cff885f6278d37568d0ef0763f8.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-fd0503e23dce65854c81c5baaade3bdf.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-b8332284a13f2ac66e128c75679a6fb4.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-fd0503e23dce65854c81c5baaade3bdf.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -590,9 +590,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h4 data-number="2.3.2.2" class="anchored" data-anchor-id="windowsSource"><span class="header-section-number">2.3.2.2</span> From source</h4>
 <p>Before installing R from source, some additional programs are needed, as per the <a href="https://cran.r-project.org/bin/windows/base/howto-R-4.2.html">latest documentation</a>:</p>
 <ol type="1">
-<li><p><a href="https://cran.r-project.org/bin/windows/Rtools/">Rtools</a> is the suggested toolchain bundle for building R base and R packages containing compiled code on Windows. The latest <a href="https://cran.r-project.org/bin/windows/Rtools/rtools44/rtools.html">version of Rtools</a> can be installed using the <a href="https://cran.r-project.org/bin/windows/Rtools/rtools44/files/">Rtools installer rtools44-XXXX-XXX.exe</a>.</p></li>
+<li><p><a href="https://cran.r-project.org/bin/windows/Rtools/">Rtools</a> is the suggested toolchain bundle for building R base and R packages containing compiled code on Windows. The latest <a href="https://cran.r-project.org/bin/windows/Rtools/rtools45/rtools.html">version of Rtools</a> can be installed using the <a href="https://cran.r-project.org/bin/windows/Rtools/rtools45/files/">Rtools installer rtools45-XXXX-XXX.exe</a>.</p></li>
 <li><p>A LaTeX compiler is needed to install and build R, check packages and build manuals. On CRAN, MiKTeX is used, which can be downloaded from <a href="https://miktex.org" class="uri">https://miktex.org</a>. Once installed open MiKTeX via the Windows start menu. It might ask to check for updates and more importantly, to make it available in PATH. You can accept both.</p></li>
-<li><p>Open the Rtools44 terminal to update and install subversion:</p>
+<li><p>Open the Rtools45 terminal to update and install subversion:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb16"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="ex">pacman</span> <span class="at">-Syuu</span></span>
 <span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a><span class="ex">pacman</span> <span class="at">-Sy</span> wget subversion</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div></li>
 <li><p>Retrieve the latest source code via subversion:</p>
@@ -604,7 +604,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>You can also use a SVN client such as TortoiseSVN (<a href="https://tortoisesvn.net/" class="uri">https://tortoisesvn.net/</a>, command line tool, and Windows Explorer integration) or SlikSVN (<a href="https://sliksvn.com/download/" class="uri">https://sliksvn.com/download/</a>, just the command line tool) so that it can be also found by other tools.</p></li>
 <li><p>Download the latest tcl/tk and unzip it in <code>$TOP_SRCDIR</code>:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb19"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> <span class="st">"</span><span class="va">$TOP_SRCDIR</span><span class="st">"</span></span>
-<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a><span class="fu">wget</span> <span class="at">-np</span> <span class="at">-nd</span> <span class="at">-r</span> <span class="at">-l1</span> <span class="at">-A</span> <span class="st">'tcltk-*.zip'</span> https://cran.r-project.org/bin/windows/Rtools/rtools44/files/</span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a><span class="fu">wget</span> <span class="at">-np</span> <span class="at">-nd</span> <span class="at">-r</span> <span class="at">-l1</span> <span class="at">-A</span> <span class="st">'tcltk-*.zip'</span> https://cran.r-project.org/bin/windows/Rtools/rtools45/files/</span>
 <span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a><span class="fu">unzip</span> <span class="st">"tcltk-*.zip"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div></li>
 <li><p>Add gcc, MiKTeX and tar to the PATH and set one tar option:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb20"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="bu">export</span> <span class="va">PATH</span><span class="op">=</span><span class="st">"/x86_64-w64-mingw32.static.posix/bin:</span><span class="va">$PATH</span><span class="st">"</span></span>
