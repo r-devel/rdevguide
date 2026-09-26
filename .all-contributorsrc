@@ -438,6 +438,15 @@
         "maintenance",
         "doc"
       ]
+    },
+    {
+      "login": "thugge254",
+      "name": "Moses Kamau",
+      "avatar_url": "https://avatars.githubusercontent.com/u/205207057?v=4",
+      "profile": "http://datareveals.com/",
+      "contributions": [
+        "maintenance"
+      ]
     }
   ],
   "contributorsPerLine": 7,
