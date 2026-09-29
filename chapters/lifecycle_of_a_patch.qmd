@@ -141,6 +141,50 @@ If your patch has not received any notice from reviewers (i.e., no comment made)
 
 When someone does manage to find the time to look at your patch they will most likely make comments about how it can be improved. It is then expected that you update your patch to address these comments, and the review process will thus iterate until a satisfactory solution has emerged.
 
+### Applying a patch for review
+
+If you are reviewing a patch that was created against an older revision of R, first update your working copy to the revision against which the patch was created. For an SVN patch, this revision is usually shown in the patch header. For example:
+
+```text
+--- src/library/utils/R/debugcall.R     (revision 82512)
++++ src/library/utils/R/debugcall.R     (working copy)
+```
+In this example, the patch was created against revision `82512`. Update your working copy to that revision:
+
+```bash
+svn update -r 82512
+```
+Then apply the patch:
+
+```bash
+svn patch path/to/patch.diff
+```
+After applying the patch, update your working copy to the current revision:
+
+```bash
+svn update
+```
+If the patch overlaps with changes that have been made since the patch was created, SVN may report text conflicts. Run `svn status` to identify conflicted files (`C`). Inspect the conflicted files and manually merge the patch's intended changes with the current source. SVN may leave files such as `.mine`, `.rOLD`, and `.rNEW` alongside the conflicted file to help compare the different versions.
+
+After resolving a conflict, mark the file as resolved:
+
+```bash
+svn resolve path/to/conflicted-file
+```
+
+Repeat this for each conflicted file. Then inspect the resulting changes:
+
+```bash
+svn diff
+```
+
+Once the patch has been updated against the current source tree, create an updated patch with:
+
+```bash
+svn diff > updated.patch
+```
+This workflow allows an older patch to be applied to the revision for which it was created and then updated to the current source tree before review.
+
 ### How to review a patch?
 
 One of the bottlenecks in the R development process is the lack of code reviews. If you browse Bugzilla, you will see that numerous issues have a fix, but cannot be merged into the main source code repository, because no one has reviewed the proposed solution. Reviewing a patch can be just as informative as providing a patch and it will allow you to give constructive comments on another developer’s work. This guide provides a checklist for submitting a patch review. It is a common misconception that in order to be useful, a patch review has to be perfect. This is not the case at all. It is helpful to just test the patch and/or play around with the code and leave comments in the patch or on Bugzilla.
