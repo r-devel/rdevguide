@@ -1,0 +1,24 @@
+# R Coding Style {#R-coding-style}
+
+This chapter introduces contributors to the coding style typically used by R Core, so that R Core can focus on the code and not style issues when reviewing patches. 
+
+## General recommendations
+
+- Use 4 spaces for indentation in R and C code.
+- Use spaces after commas and either side of operators.
+- Use `<-` rather than `=` for assignment.
+- Use `"`, instead of `'`, for quoting text.
+- Use `TRUE` and `FALSE`, not `T` and `F`.
+- Keep lines no longer than 80 characters.
+- Avoid using special characters in file names (numbers, letters, `-`, and `_` are acceptable).
+- Put a space after (not before) a comma.
+- Put a space before and after `()` when used with `if`, `for`, or `while`.
+- Place a space after `()` used for function arguments.
+- Put a space before `|>` (the base R pipe operator).
+
+In general, try to make sure the code you write in an existing file has a style consistent with that file.
+
+## See also
+
+1. [R-internals manual](https://cran.r-project.org/doc/manuals/r-release/R-ints.html#R-coding-standards)
+2. [Tidyverse style guide](https://style.tidyverse.org/)
