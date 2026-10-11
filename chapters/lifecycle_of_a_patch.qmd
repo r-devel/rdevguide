@@ -180,10 +180,21 @@ But if your patch is accepted and applied it will then go on to be released with
 It may take longer before your patch is accepted and applied or rejected, sometimes even months or years. Nonetheless, it is appreciated that you submitted a patch.
 
 ## Examples of patch reports on Bugzilla
-<!-- TODO add links of examples -->
+
+This patch report updates both R code and includes translations: https://bugs.r-project.org/show_bug.cgi?id=18409
 
 ## Examples of reviewing a patch
-<!-- TODO add links of examples -->
+
+steps to apply the patch and test for the above patch: 
+
+1. download patch files from bugzilla
+2. open a codespace in the `devel` branch of https://github.com/r-devel/r-dev-env/tree/devel
+3. confirm that MWE produces the bug as described
+4. upload patch files into the patches folder
+5. follow the instructions at https://github.com/r-devel/r-dev-env/blob/main/docs/tutorials/building_r.md
+6. apply the patch with `svn patch $PATCHDIR/<patch-file-name>`. If you run into conflicts (you probably will with old patches), cry and then resolve the conflicts however you can.
+7. rebuild R
+8. confirm that the patch fixes the bug
 
 ## See also
 
