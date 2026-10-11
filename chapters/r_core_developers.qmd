@@ -5,7 +5,7 @@ This page lists the current and former members of the R Core Team who have write
 Current members of the R Core Team:
 
   * [John Chambers](https://datascience.stanford.edu/people/john-chambers)
-  * [Peter Dalgaard](www.cbs.dk/en/staff/pdmes)
+  * [Peter Dalgaard](https://www.cbs.dk/en/staff/pdmes)
   * [Robert Gentleman](https://en.wikipedia.org/wiki/Robert_Gentleman_(statistician))
   * [Kurt Hornik](https://statmath.wu.ac.at/~hornik/software.html)
   * [Ross Ihaka](https://en.wikipedia.org/wiki/Ross_Ihaka)
