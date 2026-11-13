@@ -4,5 +4,7 @@ $body-bg: #181818;
 $body-color: white;
 $link-color: #75AADB;
 
-// Code blocks
-$code-block-bg-alpha: -.8;
+/ Code blocks
+$code-bg: rgba(238, 238, 238, .2);
+$code-block-bg: $code-bg;
+$code-color: #DCDCCC;
